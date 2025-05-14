@@ -74,7 +74,7 @@ O = Monsoon (Significantly Wet Summers & Significantly Dry Winters)
 
 S = Semiarid
 
-D = Arid (Desert)
+D = Arid Desert
 
 Unfortunately, when I try to add monsoon or mediterranean zones, I crash the program, so I'm still working on that.
 
@@ -96,21 +96,74 @@ D = Very Cold Summer. 10 - 30
 
 Y = Frigid Summer. Below 10
 
-I may decide to futher differentiate the summer zones.
+Now that I tested 21 cities, I have realized that the summer zones are not differentiated enough.
+
+Portland, Oregon, and Las Angeles, California being put into the same category is one of the more egregious examples of this issue.
+
+I plan to change the summer zone system to X, A1, A2, B1, B2, C1, C2, D1, D2, and Y.
+
+They would be called Wasteland, Horribly Hot, Very Hot, Hot, Somewhat Hot, Warm Mild, Cool Mild, Somewhat Cold, Cold, Very Cold, Freezing Summer (literally, in this case), and Frigid Summer.
 
 After all, summers at the lower end of a zone such as Hot Summer (zone A) are relatively mild and summers at the higher end are quite dreadful.
 
 At this stage of development, map making is achieved by copy pasting each of the three computer programs into seperate Earth Engine Code Editor windows.
 
-For now, we only have a dataset for Mexico, the United States, and Canada working for our aridity zones.
+For now, we only have a dataset for Mexico, the United States, and Canada for our aridity zone computer program.
 
 However, all land masses are included in the climate zones and summer zones, even including a seperate lower resolution dataset for Antarctica that was available.
 
-Here are some examples of these zones from the united states.
+Here are 21 examples of these zones, mostly from the United States.
 
-Miami, Florida
+Miami, Florida. BHA = Tropical humid with hot summers.
+
+Jacksonville, Florida. CGZ = Subtropical semihumid with very hot summers.
+
+Atlanta, Georgia. CHA = Subtropical humid with hot summers.
+
+New York City, New York. On the edge of DGA (temperate semihumid with hot summers) and DHA (temperate humid with hot summers).
+
+Yarmouth, Nova Scotia. DHB = Temperate humid with mild summers.
+
+Cincinnati, Ohio. DHA = Temperate humid with hot summers.
+
+Carbondale, Illinois. DHA = Temperate humid with hot summers.
+
+Champaign, Illinois. DGA = Temperate semihumid with hot summers.
+
+Chicago, Illinois. DHA = On the edge of DGA (temperate humid with hot summers) and DHA (temperate humid with hot summers).
+
+Madison, Wisconsin. On the edge of EGA (continental semihumid with hot summers) and EHA (continental humid with hot summers).
+
+Winnepeg, Manitoba. FGA = Subarctic semihumid with hot summers.
+
+Calgary, Alberta. EOA = Continental Monsoon with hot summers.
+
+Rexburg, Idaho. EMA = Continental mediterranean with hot summers.
+
+Salt Lake City, Utah. DSZ = Temperate semiarid with very hot summers.
+
+Denver, Colorado. ESA = Continental semiarid with hot summers.
+
+Payson, Arizona. DMZ = Temperate mediterranean with very hot summers.
+
+Pheonix, Arizona. CDZ = Subtropical arid desert with very hot summers.
+
+Portland, Oregon. CMA = Subtropical mediterranean with hot summers.
+
+San Francisco, California. On the border of CMA (subtropical mediterranean with mild summers) and CMB (subtropical mediterranean with mild summers).
+
+Las Angeles, California. CMA = Subtropical mediterranean with hot summers.
+
+Furnace Creek, California. CDX = Subtropical arid desert wasteland.
 
 
 
-If I did this, I might change the summer zone system to X, A1, A2, B1, B2, C1, C2, D1, D2, and Y.
-Maybe I could do Wasteland, Horribly Hot, Very Hot, Hot, Somewhat Hot, Warm Mild, Cool Mild, Somewhat Cold, Cold, Very Cold, Freezing Summer (literally, in this case), and Frigid Summer.
+
+
+
+
+
+
+
+
+
