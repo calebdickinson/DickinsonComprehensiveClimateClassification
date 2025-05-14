@@ -84,7 +84,7 @@ The third letter measures the severity of the summers by measuring the average t
 
 X = Wasteland. 110+
 
-Z = Very Hot Summer. 90 - 110 (technically not an exotic zone, but a summer of this type is horrible and full of suffocating heat)
+Z = Very Hot Summer. 90 - 110 (technically not an exotic zone, but a summer of this type is horrible and full of suffocating heat especially if in a humid area)
 
 A = Hot Summer. 70 - 90
 
