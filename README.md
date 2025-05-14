@@ -102,7 +102,7 @@ Portland, Oregon, and Los Angeles, California being put into the same category i
 
 I plan to change the summer zone system to X, A1, A2, B1, B2, C1, C2, D1, D2, and Y.
 
-They would be called Wasteland, Horribly Hot, Very Hot, Hot, Somewhat Hot, Warm Mild, Cool Mild, Somewhat Cold, Cold, Very Cold, Freezing Summer (literally, in this case), and Frigid Summer.
+They would be called Wasteland, Very Hot, Hot, Very Warm, Warm, Warm Mild, Cool Mild, Cool, Very Cool, Cold, Very Cold, and Frigid Summer.
 
 After all, summers at the lower end of a zone such as Hot Summer (zone A) are relatively mild and summers at the higher end are quite dreadful.
 
