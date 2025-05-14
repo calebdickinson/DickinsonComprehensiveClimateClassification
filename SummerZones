@@ -12,7 +12,7 @@ var hottestF_global = worldClim
 function classifySummer(tempF) {
   return ee.Image.constant(12)  // default = No data (12)
     .where(tempF.gt(120),                                   1)  // Extreme Wasteland
-    .where(tempF.gt(110).and(tempF.lte(115)),               2)  // Wasteland
+    .where(tempF.gt(110).and(tempF.lte(120)),               2)  // Wasteland
     .where(tempF.gt(100).and(tempF.lte(110)),               3)  // Very Hot Summer
     .where(tempF.gt(90).and(tempF.lte(100)),                4)  // Hot Summer
     .where(tempF.gt(80).and(tempF.lte(90)),                 5)  // Very Warm Summer
@@ -23,7 +23,7 @@ function classifySummer(tempF) {
     .where(tempF.gt(30).and(tempF.lte(40)),                10)  // Freezing Summer
     .where(tempF.lte(30),                                   11)  // Frigid Summer
     .rename('hottest_month_zone');
-}  // ← make sure this closing brace is here, matching the function line
+}
 
 // 4. Classify the global data
 var zonesGlobal = classifySummer(hottestF_global);
