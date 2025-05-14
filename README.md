@@ -12,7 +12,7 @@ This system, being more granular in many ways than the Koppen, better illustrate
 
 This could even have importance in determining habitability in extreme (in other words, realistic) warming scenarios.
 
-This system also, because of it's edge cases, illustrates some intresting climate factors that may not be obvious on the Koppen.
+This system also, because of its edge cases, illustrates some intresting climate factors that may not be obvious on the Koppen.
 
 For example, why do people live in greenland when a place like Nuuk, Greenland is an ET or tundra climate on the Koppen scale?
 
@@ -22,7 +22,7 @@ This means that the average temperature of the coldest month is between 10 and 3
 
 The average temperature of the warmest month is between 50 and 70 degrees Fahrenheit.
 
-In the Koppen climate this would be included in the same climate (ET) as a Siberian wasteland that has average winter temperatures of negative 50 degrees F.
+In the Koppen climate this would be included in the same climate (ET) as a Siberian landscape that has average winter temperatures of negative 50 degrees F.
 
 Each climate is measured with 3 letters.
 
