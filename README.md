@@ -152,7 +152,7 @@ Pheonix, Arizona. CDZ2 = Subtropical arid desert with very hot summers.
 
 Portland, Oregon. On the border of CMA1 (subtropical mediterranean with warm summers) and CMA2 (subtropical mediterranean with very warm summers).
 
-San Francisco, California. CMA1 = subtropical mediterranean with warm summers.
+San Francisco, California. CMA1 = Subtropical mediterranean with warm summers.
 
 Los Angeles, California. CMA2 = Subtropical mediterranean with very warm summers.
 
