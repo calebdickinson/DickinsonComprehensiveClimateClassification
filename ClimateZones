@@ -81,7 +81,7 @@ Map.addLayer(
 var zoneNames = {
   2:  'ultratropical (Z)',
   3:  'supertropical (A)',
-  4:  'cool tropical (B)',
+  4:  'tropical (B)',
   5:  'subtropical (C)',
   6:  'temperate (D)',
   7:  'continental (E)',
