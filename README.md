@@ -28,9 +28,11 @@ Each climate is measured with 3 letters.
 
 Extreme zones are indicated by the letters X, Y, or Z.
 
+However, due the the way that the categories were constructed, Z zones for summer, while hot, are not truly extreme zones.
+
 The first letter measures climate zones by measuring the average temperature of the coldest month in Fahrenheit.
 
-Z = Ultratropical. 90+ (As far as I am aware, no climates currently exist within this zone... yet)
+Z = Ultratropical. 90+ (As far as we are aware, no climates currently exist within this zone... yet)
 
 A = Supertropical. 70 - 90
 
@@ -76,13 +78,13 @@ S = Semiarid
 
 D = Arid Desert
 
-Unfortunately, when I try to add monsoon or mediterranean zones, I crash the program, so I'm still working on that.
+Unfortunately, when we try to add monsoon or mediterranean zones, the program crashes, so we're still working on that.
 
-For now, my map of aridity zones only shows H, G, S, and D zones.
+For now, our map of aridity zones only shows H, G, S, and D zones.
 
 The third letter measures the severity of the summers by measuring the average temperature of the warmest month in Fahrenheit.
 
-X2 = Extreme Wasteland. 120+
+X2 = Extreme Wasteland. 120+ (As far as we are aware, no climates currently exist within this zone... yet)
 
 X1 = Wasteland. 110 - 120
 
@@ -110,58 +112,49 @@ For now, we only have a dataset for Mexico, the United States, and Canada for ou
 
 However, all land masses are included in the climate zones and summer zones, even including a seperate lower resolution dataset for Antarctica that was available.
 
-Here are 21 examples of these zones, mostly from the United States.
+Here are some examples of these zones; mostly from the United States.
 
 Miami, Florida. BHA2 = Tropical humid with very warm summers.
 
-Jacksonville, Florida. CGZ = Subtropical semihumid with very hot summers.
+Jacksonville, Florida. CGZ1 = Subtropical semihumid with hot summers.
 
-Atlanta, Georgia. CHA = Subtropical humid with hot summers.
+Atlanta, Georgia. CHA2 = Subtropical humid with very warm summers.
 
-New York City, New York. On the edge of DGA (temperate semihumid with hot summers) and DHA (temperate humid with hot summers).
+New York City, New York. On the edge of DGA2 (temperate semihumid with very warm summers) and DHA2 (temperate humid with very warm summers).
 
-Yarmouth, Nova Scotia. DHB = Temperate humid with mild summers.
+Yarmouth, Nova Scotia. DHB2 = Temperate humid with mild summers.
 
-Cincinnati, Ohio. DHA = Temperate humid with hot summers.
+Cincinnati, Ohio. DHA2 = Temperate humid with very warm summers.
 
-Carbondale, Illinois. DHA = Temperate humid with hot summers.
+Cape Girardeau Missouri = DHZ1 = Temperate humid with hot summers.
 
-Champaign, Illinois. DGA = Temperate semihumid with hot summers.
+Carbondale, Illinois. DHA2 = Temperate humid with very warm summers.
 
-Chicago, Illinois. DHA = On the edge of DGA (temperate humid with hot summers) and DHA (temperate humid with hot summers).
+Champaign, Illinois. DGA2 = Temperate semihumid with very warm summers.
 
-Madison, Wisconsin. On the edge of EGA (continental semihumid with hot summers) and EHA (continental humid with hot summers).
+Chicago, Illinois. On the edge of DGA2 (temperate semihumid with very warm summers) and DHA1 (temperate humid with very warm summers).
 
-Winnepeg, Manitoba. FGA = Subarctic semihumid with hot summers.
+Madison, Wisconsin. On the edge of EGA2 (continental semihumid with very warm summers) and EHA2 (continental humid with very warm summers).
 
-Calgary, Alberta. EOA = Continental Monsoon with hot summers.
+Winnepeg, Manitoba. FGA1 = Subarctic semihumid with warm summers.
 
-Rexburg, Idaho. EMA = Continental mediterranean with hot summers.
+Calgary, Alberta. EOA1 = Continental Monsoon with warm summers.
 
-Salt Lake City, Utah. DSZ = Temperate semiarid with very hot summers.
+Rexburg, Idaho. EMA2 = Continental mediterranean with very warm summers.
 
-Denver, Colorado. ESA = Continental semiarid with hot summers.
+Salt Lake City, Utah. DSZ1 = Temperate semiarid with very hot summers.
 
-Payson, Arizona. DMZ = Temperate mediterranean with very hot summers.
+Denver, Colorado. ESA2 = Continental semiarid with very warm summers.
 
-Pheonix, Arizona. CDZ = Subtropical arid desert with very hot summers.
+Payson, Arizona. DMZ1 = Temperate mediterranean with hot summers.
 
-Portland, Oregon. CMA = Subtropical mediterranean with hot summers.
+Pheonix, Arizona. CDZ2 = Subtropical arid desert with very hot summers.
 
-San Francisco, California. On the border of CMA (subtropical mediterranean with mild summers) and CMB (subtropical mediterranean with mild summers).
+Portland, Oregon. On the border of CMA1 (subtropical mediterranean with warm summers) and CMA2 (subtropical mediterranean with very warm summers).
 
-Los Angeles, California. CMA = Subtropical mediterranean with hot summers.
+San Francisco, California. CMA1 = subtropical mediterranean with warm summers.
 
-Furnace Creek, California. CDX = Subtropical arid desert wasteland.
+Los Angeles, California. CMA2 = Subtropical mediterranean with very warm summers.
 
-
-
-
-
-
-
-
-
-
-
+Furnace Creek, California. CDX1 = Subtropical arid desert wasteland.
 
