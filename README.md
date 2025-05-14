@@ -2,13 +2,13 @@ This is a new climate classification inspired by the Koppen system.
 
 It is generally more granular and includes more edge cases than the Koppen system.
 
-This system also has the advantage of including more exotic climates which might be useful in the future as humans continue to warm the earth with fossil fuels.
+This system also has the advantage of including more extreme climates which might be useful in the future as humans continue to warm the earth with fossil fuels.
 
-One of these exotic summer zones, wasteland, already exists in the sahara and in a sliver of the American southwest.
+One of these extreme summer zones, wasteland, already exists in the sahara and in a sliver of the American southwest.
 
 We expect to see many more areas to fall under this climate in the future as global warming continues.
 
-This system, being more granular in many ways than the Koppen, better illustrates the differences between each of the new exotic climates we will see in the future.
+This system, being more granular in many ways than the Koppen, better illustrates the differences between each of the new extreme climates we will see in the future.
 
 This could even have importance in determining habitability in extreme (in other words, realistic) warming scenarios.
 
@@ -16,7 +16,7 @@ This system also, because of its edge cases, illustrates some intresting climate
 
 For example, why do people live in greenland when a place like Nuuk, Greenland is an ET or tundra climate on the Koppen scale?
 
-In our system, Nuuk, Greenland, is considered temperate with mild summers.
+In our system, Nuuk, Greenland, is considered temperate with cold summers.
 
 This means that the average temperature of the coldest month is between 10 and 30 degrees Fahrenheit (sue me).
 
@@ -26,7 +26,7 @@ In the Koppen climate this would be included in the same climate (ET) as a Siber
 
 Each climate is measured with 3 letters.
 
-Exotic zones are indicated by the letters X, Y, or Z.
+Extreme zones are indicated by the letters X, Y, or Z.
 
 The first letter measures climate zones by measuring the average temperature of the coldest month in Fahrenheit.
 
@@ -46,7 +46,7 @@ F = Subarctic. -30 - -10
 
 G = Arctic. -50 - -30
 
-Y = Superarctic. Below -50 (This is currenly the most common exotic zone and is only found in parts of Siberia and throughout much of Antarctica)
+Y = Superarctic. Below -50
 
 The second letter measures aridity zones.
 
@@ -82,9 +82,11 @@ For now, my map of aridity zones only shows H, G, S, and D zones.
 
 The third letter measures the severity of the summers by measuring the average temperature of the warmest month in Fahrenheit.
 
-X = Wasteland. 110+
+X2 = Extreme Wasteland. 115+
 
-Z = Very Hot Summer. 90 - 110 (technically not an exotic zone, but a summer of this type is horrible and full of suffocating heat especially if in a humid area)
+X1 = Wasteland. 110 - 115
+
+Z = Very Hot Summer. 90 - 110
 
 A = Hot Summer. 70 - 90
 
