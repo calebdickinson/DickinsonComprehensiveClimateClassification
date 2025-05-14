@@ -1,3 +1,4 @@
+
 // 1. Load the WorldClim bioclimatic image (1970–2000 averages)
 var worldClim = ee.Image('WORLDCLIM/V1/BIO');
 
@@ -9,22 +10,28 @@ var hottestF_global = worldClim
   .add(32);
 
 // 3. Define a reusable classification function for summer zones:
-//    1 = Wasteland (X):        > 110°F
-//    2 = Very Hot Summer (Z):   90–110°F
-//    3 = Hot Summer (A):        70–90°F
-//    4 = Warm Summer (B):       50–70°F
-//    5 = Cold Summer (C):       30–50°F
-//    6 = Very Cold Summer (D):       10–30°F
-//    7 = Frigid Summer (Y):  < 10°F
+//    1 = Wasteland (X):            > 110°F
+//    2 = Very Hot Summer (Z1):      100–110°F
+//    3 = Hot Summer (Z2):           90–100°F
+//    4 = Very Warm Summer (A1):     80–90°F
+//    5 = Warm Summer (A2):          70–80°F
+//    6 = Mild Summer (B1):          60–70°F
+//    7 = Cold Summer (B2):          50–60°F
+//    8 = Very Cold Summer (C1):     40–50°F
+//    9 = Freezing Summer (C2):      30–40°F
+//   10 = Frigid Summer:             < 30°F
 function classifySummer(tempF) {
   return ee.Image(0)
-    .where(tempF.gt(110),                     1)
-    .where(tempF.gte(90).and(tempF.lte(110)), 2)
-    .where(tempF.gte(70).and(tempF.lt(90)),   3)
-    .where(tempF.gte(50).and(tempF.lt(70)),   4)
-    .where(tempF.gte(30).and(tempF.lt(50)),   5)
-    .where(tempF.gte(10).and(tempF.lt(30)),   6)
-    .where(tempF.lt(10),                      7)
+    .where(tempF.gt(110),                                   1)
+    .where(tempF.gt(100).and(tempF.lte(110)),               2)
+    .where(tempF.gt(90).and(tempF.lte(100)),                3)
+    .where(tempF.gt(80).and(tempF.lte(90)),                 4)
+    .where(tempF.gt(70).and(tempF.lte(80)),                 5)
+    .where(tempF.gt(60).and(tempF.lte(70)),                 6)
+    .where(tempF.gt(50).and(tempF.lte(60)),                 7)
+    .where(tempF.gt(40).and(tempF.lte(50)),                 8)
+    .where(tempF.gt(30).and(tempF.lte(40)),                 9)
+    .where(tempF.lte(30),                                   10)
     .rename('hottest_month_zone');
 }
 
@@ -64,48 +71,46 @@ var zonesAntMasked    = zonesAnt.updateMask(antarcticaMask.eq(1));
 var zonesCombined     = zonesGlobalMasked.blend(zonesAntMasked)
   .rename('hottest_month_zone');
 
-// 10. Display with 50% opacity using an 8-color palette:
-//    1: red          (Wasteland)
-//    2: orange       (Very Hot Summer)
-//    3: yellow       (Hot Summer)
-//    4: light green  (Mild Summer)
-//    5: dark green   (Cold Summer)
-//    6: blue         (Very Cold Summer)
-//    7: purple       (Frigid Summer)
-//    8: light blue   (No data)
+// 9. Display with 50% opacity using a 10-color palette
 var palette = [
-  '#FF0000', // 1
-  '#FFA500', // 2
-  '#FFFF00', // 3
-  '#90EE90', // 4
-  '#006400', // 5
-  '#0000FF', // 6
-  '#800080', // 7
-  '#ADD8E6'  // 8
+  '#8B0000', // 1 Wasteland (X)
+  '#FF4500', // 2 Very Hot Summer (Z1)
+  '#FF8C00', // 3 Hot Summer (Z2)
+  '#FFD700', // 4 Very Warm Summer (A1)
+  '#ADFF2F', // 5 Warm Summer (A2)
+  '#7FFF00', // 6 Mild Summer (B1)
+  '#00FA9A', // 7 Cold Summer (B2)
+  '#1E90FF', // 8 Very Cold Summer (C1)
+  '#4169E1', // 9 Freezing Summer (C2)
+  '#4B0082', // 10 Frigid Summer
+  '#ADD8E6'  // 11 No data
 ];
 
 Map.setCenter(0, 20, 2);
 Map.addLayer(
   zonesCombined,
-  {min: 1, max: 8, palette: palette},
+  {min: 1, max: 11, palette: palette},
   'Warmest‐Month Temp Zones',
-  true,  // visible
-  0.5    // opacity
+  true,
+  0.5
 );
 
-// 11. Map numeric codes to descriptive names
+// 10. Map numeric codes to descriptive names
 var zoneNames = {
-  1: 'Wasteland (X)',
-  2: 'Very Hot Summer (Z)',
-  3: 'Hot Summer (A)',
-  4: 'Mild Summer (B)',
-  5: 'Cold Summer (C)',
-  6: 'Very Cold Summer (D)',
-  7: 'Frigid Summer (Y)',
-  8: 'No data'
+   1: 'Wasteland (X)',
+   2: 'Very Hot Summer (Z1)',
+   3: 'Hot Summer (Z2)',
+   4: 'Very Warm Summer (A1)',
+   5: 'Warm Summer (A2)',
+   6: 'Mild Summer (B1)',
+   7: 'Cold Summer (B2)',
+   8: 'Very Cold Summer (C1)',
+   9: 'Freezing Summer (C2)',
+  10: 'Frigid Summer',
+  11: 'No data'
 };
 
-// 12. Build an info‐panel in the lower left
+// 11. Build an info‐panel in the lower left
 var infoPanel = ui.Panel({
   style: {
     position:        'bottom-left',
@@ -117,7 +122,7 @@ var infoLabel = ui.Label('Click on the map to identify summer zone');
 infoPanel.add(infoLabel);
 ui.root.add(infoPanel);
 
-// 13. On click, sample the combined zones and update the panel
+// 12. On click, sample the combined zones and update the panel
 Map.onClick(function(coords) {
   var pt = ee.Geometry.Point([coords.lon, coords.lat]);
   zonesCombined.reduceRegion({
