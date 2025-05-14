@@ -98,7 +98,7 @@ Y = Frigid Summer. Below 10
 
 Now that I tested 21 cities, I have realized that the summer zones are not differentiated enough.
 
-Portland, Oregon, and Las Angeles, California being put into the same category is one of the more egregious examples of this issue.
+Portland, Oregon, and Los Angeles, California being put into the same category is one of the more egregious examples of this issue.
 
 I plan to change the summer zone system to X, A1, A2, B1, B2, C1, C2, D1, D2, and Y.
 
@@ -152,7 +152,7 @@ Portland, Oregon. CMA = Subtropical mediterranean with hot summers.
 
 San Francisco, California. On the border of CMA (subtropical mediterranean with mild summers) and CMB (subtropical mediterranean with mild summers).
 
-Las Angeles, California. CMA = Subtropical mediterranean with hot summers.
+Los Angeles, California. CMA = Subtropical mediterranean with hot summers.
 
 Furnace Creek, California. CDX = Subtropical arid desert wasteland.
 
