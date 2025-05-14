@@ -1,14 +1,25 @@
 This is a new climate classification inspired by the Koppen system.
+
 It is generally more granular and includes more edge cases than the Koppen system.
+
 This system also has the advantage of including more exotic climates which might be useful in the future as humans continue to warm the earth with fossil fuels.
+
 One of these exotic summer zones, wasteland, already exists in the sahara and in a sliver of the American southwest.
+
 We expect to see many more areas to fall under this climate in the future as global warming continues.
+
 This system, being more granular in many ways than the Koppen, better illustrates the differences between each of the new exotic climates we will see in the future.
+
 This could even have importance in determining habitability in extreme (in other words, realistic) warming scenarios.
+
 This system also, because of it's edge cases, illustrates some intresting climate factors that may not be obvious on the Koppen.
+
 For example, why do people live in greenland when a place like Nuuk, Greenland is an ET or tundra climate on the Koppen scale?
+
 In our system, Nuuk, Greenland, is considered temperate with mild summers.
+
 This means that the average temperature of the coldest month is between 10 and 30 degrees Fahrenheit (sue me).
+
 The average temperature of the warmest month is between 50 and 70 degrees Fahrenheit.
 In the Koppen climate this would be included in the same climate (ET) as a Siberian wasteland that has average winter temperatures of negative 50 degrees F.
 Each climate is measured with 3 letters.
