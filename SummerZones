@@ -1,0 +1,137 @@
+// 1. Load the WorldClim bioclimatic image (1970–2000 averages)
+var worldClim = ee.Image('WORLDCLIM/V1/BIO');
+
+// 2. Compute “Max Temperature of Warmest Month” (bio05) in °F for global
+var hottestF_global = worldClim
+  .select('bio05')
+  .divide(10)              // tenths °C → °C
+  .multiply(9/5)
+  .add(32);
+
+// 3. Define a reusable classification function for summer zones:
+//    1 = Wasteland (X):        > 110°F
+//    2 = Very Hot Summer (Z):   90–110°F
+//    3 = Hot Summer (A):        70–90°F
+//    4 = Warm Summer (B):       50–70°F
+//    5 = Cold Summer (C):       30–50°F
+//    6 = Very Cold Summer (D):       10–30°F
+//    7 = Frigid Summer (Y):  < 10°F
+function classifySummer(tempF) {
+  return ee.Image(0)
+    .where(tempF.gt(110),                     1)
+    .where(tempF.gte(90).and(tempF.lte(110)), 2)
+    .where(tempF.gte(70).and(tempF.lt(90)),   3)
+    .where(tempF.gte(50).and(tempF.lt(70)),   4)
+    .where(tempF.gte(30).and(tempF.lt(50)),   5)
+    .where(tempF.gte(10).and(tempF.lt(30)),   6)
+    .where(tempF.lt(10),                      7)
+    .rename('hottest_month_zone');
+}
+
+// 4. Classify the global data
+var zonesGlobal = classifySummer(hottestF_global);
+
+// 5. Build an Antarctica mask from LSIB boundaries
+var antarcticaFC = ee.FeatureCollection('USDOS/LSIB_SIMPLE/2017')
+  .filter(ee.Filter.eq('country_na', 'Antarctica'));
+var antarcticaMask = ee.Image.constant(1)
+  .clip(antarcticaFC)
+  .unmask(0);
+
+// 6. Load ERA5 MONTHLY, convert mean 2 m air temperature to °F,
+//    then find each pixel’s warmest‐month temperature over Antarctica
+var era5Monthly = ee.ImageCollection('ECMWF/ERA5/MONTHLY')
+  .select('mean_2m_air_temperature')
+  .map(function(img) {
+    return img
+      .subtract(273.15)       // K → °C
+      .multiply(9/5)
+      .add(32)
+      .rename('tempF')
+      .set('system:time_start', img.get('system:time_start'));
+  });
+
+var hottestF_antarctica = era5Monthly
+  .reduce(ee.Reducer.max())
+  .rename('hottest_month_tempF');
+
+// 7. Classify the Antarctica‐only data
+var zonesAnt = classifySummer(hottestF_antarctica);
+
+// 8. Mask each classification to its domain and blend
+var zonesGlobalMasked = zonesGlobal.updateMask(antarcticaMask.eq(0));
+var zonesAntMasked    = zonesAnt.updateMask(antarcticaMask.eq(1));
+var zonesCombined     = zonesGlobalMasked.blend(zonesAntMasked)
+  .rename('hottest_month_zone');
+
+// 10. Display with 50% opacity using an 8-color palette:
+//    1: red          (Wasteland)
+//    2: orange       (Very Hot Summer)
+//    3: yellow       (Hot Summer)
+//    4: light green  (Mild Summer)
+//    5: dark green   (Cold Summer)
+//    6: blue         (Very Cold Summer)
+//    7: purple       (Frigid Summer)
+//    8: light blue   (No data)
+var palette = [
+  '#FF0000', // 1
+  '#FFA500', // 2
+  '#FFFF00', // 3
+  '#90EE90', // 4
+  '#006400', // 5
+  '#0000FF', // 6
+  '#800080', // 7
+  '#ADD8E6'  // 8
+];
+
+Map.setCenter(0, 20, 2);
+Map.addLayer(
+  zonesCombined,
+  {min: 1, max: 8, palette: palette},
+  'Warmest‐Month Temp Zones',
+  true,  // visible
+  0.5    // opacity
+);
+
+// 11. Map numeric codes to descriptive names
+var zoneNames = {
+  1: 'Wasteland (X)',
+  2: 'Very Hot Summer (Z)',
+  3: 'Hot Summer (A)',
+  4: 'Mild Summer (B)',
+  5: 'Cold Summer (C)',
+  6: 'Very Cold Summer (D)',
+  7: 'Frigid Summer (Y)',
+  8: 'No data'
+};
+
+// 12. Build an info‐panel in the lower left
+var infoPanel = ui.Panel({
+  style: {
+    position:        'bottom-left',
+    padding:         '8px',
+    backgroundColor: 'rgba(255,255,255,0.7)'
+  }
+});
+var infoLabel = ui.Label('Click on the map to identify summer zone');
+infoPanel.add(infoLabel);
+ui.root.add(infoPanel);
+
+// 13. On click, sample the combined zones and update the panel
+Map.onClick(function(coords) {
+  var pt = ee.Geometry.Point([coords.lon, coords.lat]);
+  zonesCombined.reduceRegion({
+    reducer:  ee.Reducer.first(),
+    geometry: pt,
+    scale:    10000
+  }).get('hottest_month_zone')
+    .evaluate(function(code) {
+      var name = zoneNames[code] || 'No data';
+      infoLabel.setValue(
+        'Coords [' +
+          coords.lon.toFixed(2) + ', ' +
+          coords.lat.toFixed(2) +
+        '] → ' + name
+      );
+    });
+});
