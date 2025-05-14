@@ -20,7 +20,7 @@ In our system, Nuuk, Greenland, is considered temperate with cold summers.
 
 This means that the average temperature of the coldest month is between 10 and 30 degrees Fahrenheit (sue me).
 
-The average temperature of the warmest month is between 50 and 70 degrees Fahrenheit.
+The average temperature of the warmest month is between 50 and 60 degrees Fahrenheit.
 
 In the Koppen climate this would be included in the same climate (ET) as a Siberian landscape that has average winter temperatures of negative 50 degrees F.
 
@@ -82,31 +82,27 @@ For now, my map of aridity zones only shows H, G, S, and D zones.
 
 The third letter measures the severity of the summers by measuring the average temperature of the warmest month in Fahrenheit.
 
-X2 = Extreme Wasteland. 115+
+X2 = Extreme Wasteland. 120+
 
-X1 = Wasteland. 110 - 115
+X1 = Wasteland. 110 - 120
 
-Z = Very Hot Summer. 90 - 110
+Z2 = Very Hot Summer. 100 - 110
 
-A = Hot Summer. 70 - 90
+Z1 = Hot Summer. 90 - 100
 
-B = Mild Summer. 50 - 70
+A2 = Very Warm Summer. 80 - 90
 
-C = Cold summer. 30 - 50
+A1 = Warm Summer. 70 - 80
 
-D = Very Cold Summer. 10 - 30
+B2 = Mild Summer. 60 - 70
 
-Y = Frigid Summer. Below 10
+B1 = Cold summer. 50 - 60
 
-Now that I tested 21 cities, I have realized that the summer zones are not differentiated enough.
+C2 = Very Cold Summer. 40 - 50
 
-Portland, Oregon, and Los Angeles, California being put into the same category is one of the more egregious examples of this issue.
+C1 = Freezing Summer. 30 - 40
 
-I plan to change the summer zone system to X, A1, A2, B1, B2, C1, C2, and Y.
-
-They would be called Wasteland, Very Hot, Hot, Warm, Mild, Cold, Very Cold, and Frigid Summer.
-
-After all, summers at the lower end of a zone such as Hot Summer (zone A) are relatively mild and summers at the higher end are quite dreadful.
+Y = Frigid Summer. Below 30
 
 At this stage of development, map making is achieved by copy pasting each of the three computer programs into seperate Earth Engine Code Editor windows.
 
@@ -116,7 +112,7 @@ However, all land masses are included in the climate zones and summer zones, eve
 
 Here are 21 examples of these zones, mostly from the United States.
 
-Miami, Florida. BHA = Tropical humid with hot summers.
+Miami, Florida. BHA2 = Tropical humid with very warm summers.
 
 Jacksonville, Florida. CGZ = Subtropical semihumid with very hot summers.
 
