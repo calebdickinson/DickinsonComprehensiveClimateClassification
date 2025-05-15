@@ -122,19 +122,19 @@ Out of 258 possible climates, we are certain that at least 52 do not currently e
 
 Here are some examples of these zones.
 
----------------------------------------
-Ultratropical ----------- Climates (Z):
----------------------------------------
+---------------------------
+Ultratropical Climates (Z):
+---------------------------
 
 As far as we are aware, no climates currently exist within this zone... yet.
 
----------------------------------------
-Supertropical ----------- Climates (A):
----------------------------------------
+---------------------------
+Supertropical Climates (A):
+---------------------------
 
----------------------------------------
-Tropical ---------------- Climates (B):
----------------------------------------
+----------------------
+Tropical Climates (B):
+----------------------
 
 Tropical ----------- Very Hot Summer climates (B-Z2):
 
@@ -166,9 +166,9 @@ Tropical ------ Warm Summer Climates (B-A1):
 Tropical Desert Warm Summer (BDA1):
 Antofagasta, Chile
 
-------------------------------------------
-Subtropical ---------------- Climates (C):
-------------------------------------------
+-------------------------
+Subtropical Climates (C):
+-------------------------
 
 Subtropical ------ Wasteland Climates (C-X1):
 
@@ -234,9 +234,9 @@ Moss Beach, California, USA
 Victoria, British Columbia, Canada.
 Bandon, Oregon, USA
 
----------------------------------------
-Temperate --------------- Climates (D):
----------------------------------------
+-----------------------
+Temperate Climates (D):
+-----------------------
 
 Temperate -------- Hot Summer Climates (D-Z1):
 
@@ -280,9 +280,9 @@ Yarmouth, Nova Scotia, Canada
 Temperate Monsoon Cool Summer (DWB2):
 La Paz, Bolivia
 
------------------------------------------
-Continental --------------- Climates (E):
------------------------------------------
+-------------------------
+Continental Climates (E):
+-------------------------
 
 Continental ----- Very Warm Summer Climates (E-A2):
 
@@ -323,9 +323,9 @@ Mt. Hood summit, Oregon, USA (uninhabited)
 Continental Very Cold Summer (EC2):
 Gambell, Alaska, USA
 
----------------------------------------
-Subarctic --------------- Climates (F):
----------------------------------------
+-----------------------
+Subarctic Climates (F):
+-----------------------
 
 Subarctic ----- Warm Summer Climates (F-A1):
 
@@ -347,9 +347,9 @@ Iqualuit, Nunavut, Canada
 Subarctic Very Cold Summer (FC2):
 Utquigvik, Alaska, USA
 
--------------------------------------
-Arctic ---------------- Climates (G):
--------------------------------------
+--------------------
+Arctic Climates (G):
+--------------------
 
 Arctic Cool Summer (GB2):
 Anaktuvuk Pass, Alaska
@@ -363,9 +363,9 @@ Eureka, Nunavut
 Arctic Freezing Summer (GC1):
 Mt. McKinley summit, Alaska, USA (uninhabited)
 
----------------------------------------------------
-Superarctic ------------------------- Climates (Y):
----------------------------------------------------
+-------------------------
+Superarctic Climates (Y):
+-------------------------
 
 Superarctic Freezing Summer (YZ2):
 Axel Heiberg Island glaciers, Nunavut, Canada (uninhabited)
