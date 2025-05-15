@@ -8,7 +8,7 @@ One of these extreme summer zones, wasteland, already exists in the sahara and i
 
 We expect to see many more areas to fall under this climate in the future as global warming continues.
 
-This system, being more granular in many ways than the Koppen, better illustrates the differences between each of the new extreme climates we will see in the future.
+This system, being more generally more granular in many ways than the Koppen, better illustrates the differences between each of the new extreme climates we will see in the future.
 
 This could even have importance in determining habitability in extreme (in other words, realistic) warming scenarios.
 
@@ -72,7 +72,7 @@ G = Semihumid
 
 M = Meditterranean (Significantly Dry Summers & Significantly Wet Winters)
 
-O = Monsoon (Significantly Wet Summers & Significantly Dry Winters)
+W = Monsoon (Significantly Wet Summers & Significantly Dry Winters)
 
 S = Semiarid
 
@@ -138,7 +138,7 @@ Madison, Wisconsin. On the edge of EGA2 (continental semihumid with very warm su
 
 Winnepeg, Manitoba. FGA1 = Subarctic semihumid with warm summers.
 
-Calgary, Alberta. EOA1 = Continental Monsoon with warm summers.
+Calgary, Alberta. EWA1 = Continental Monsoon with warm summers.
 
 Rexburg, Idaho. EMA2 = Continental mediterranean with very warm summers.
 
@@ -157,4 +157,9 @@ San Francisco, California. CMA1 = Subtropical mediterranean with warm summers.
 Los Angeles, California. CMA2 = Subtropical mediterranean with very warm summers.
 
 Furnace Creek, California. CDX1 = Subtropical arid desert wasteland.
+
+
+
+
+
 
