@@ -1,3 +1,4 @@
+
 // 1. Load the WorldClim bioclimatic image (1970–2000 averages)
 var worldClim = ee.Image('WORLDCLIM/V1/BIO');
 
