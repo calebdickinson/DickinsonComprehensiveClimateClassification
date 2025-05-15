@@ -122,18 +122,15 @@ Out of 258 possible climates, we are certain that at least 52 do not currently e
 
 Here are some examples of these zones.
 
-Ultratropical Climates (Z):
----------------------------
+## Ultratropical Climates (Z):
 
 As far as we are aware, no climates currently exist within this zone... yet.
 
-Supertropical Climates (A):
----------------------------
+## Supertropical Climates (A):
 
-Tropical Climates (B):
-----------------------
+## Tropical Climates (B):
 
-Tropical ----------- Very Hot Summer climates (B-Z2):
+### Tropical Very Hot Summer climates (B-Z2):
 
 Tropical Arid Desert Very Hot Summer (BDZ2):
 Jeddah, Saudi Arabia.
