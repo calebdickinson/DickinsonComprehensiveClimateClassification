@@ -63,7 +63,7 @@ var viz = {
   max: 3,
   palette: [
     '#d73027',  // 0 = Arid (red)
-    '#fee08b',  // 1 = Semi-arid (yellow)
+    '#ffa500',  // 1 = Semi-arid (orange)
     '#a6d96a',  // 2 = Semi-humid (light green)
     '#1a9850'   // 3 = Humid (dark green)
   ]
