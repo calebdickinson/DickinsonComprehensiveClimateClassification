@@ -127,11 +127,9 @@ Ultratropical Climates (Z):
 
 As far as we are aware, no climates currently exist within this zone... yet.
 
----------------------------
 Supertropical Climates (A):
 ---------------------------
 
-----------------------
 Tropical Climates (B):
 ----------------------
 
@@ -165,7 +163,6 @@ Tropical ------ Warm Summer Climates (B-A1):
 Tropical Desert Warm Summer (BDA1):
 Antofagasta, Chile
 
--------------------------
 Subtropical Climates (C):
 -------------------------
 
@@ -233,7 +230,6 @@ Moss Beach, California, USA
 Victoria, British Columbia, Canada.
 Bandon, Oregon, USA
 
------------------------
 Temperate Climates (D):
 -----------------------
 
@@ -279,7 +275,6 @@ Yarmouth, Nova Scotia, Canada
 Temperate Monsoon Cool Summer (DWB2):
 La Paz, Bolivia
 
--------------------------
 Continental Climates (E):
 -------------------------
 
@@ -322,7 +317,6 @@ Mt. Hood summit, Oregon, USA (uninhabited)
 Continental Very Cold Summer (EC2):
 Gambell, Alaska, USA
 
------------------------
 Subarctic Climates (F):
 -----------------------
 
@@ -346,7 +340,6 @@ Iqualuit, Nunavut, Canada
 Subarctic Very Cold Summer (FC2):
 Utquigvik, Alaska, USA
 
---------------------
 Arctic Climates (G):
 --------------------
 
@@ -362,7 +355,6 @@ Eureka, Nunavut
 Arctic Freezing Summer (GC1):
 Mt. McKinley summit, Alaska, USA (uninhabited)
 
--------------------------
 Superarctic Climates (Y):
 -------------------------
 
