@@ -114,8 +114,6 @@ However, all land masses are included in the climate zones and summer zones, eve
 
 Here are some examples of these zones.
 
-
-
 Tropical --------------------------- climates (B):
 
 Tropical ----------- Very Hot Summer climates (B-Z2):
@@ -139,8 +137,6 @@ Tropical Desert Very Warm Summer (BDA2): Lima, Peru.
 Tropical ------ Warm Summer Climates (B-A1):
 
 Tropical Desert Warm Summer (BDA1): Antofagasta, Chile.
-
-
 
 Subtropical ---------------- Climates (C):
 
@@ -166,8 +162,6 @@ Subtropical ----- Warm Summer Climates (C-A1):
 
 Subtropical ----- Cool Summer Climates (C-B2):
 
-
-
 Temperate --------------- Climates (D):
 
 Temperate ----- Very Hot Summer Climates (D-Z2):
@@ -183,8 +177,6 @@ Temperate ----- Warm Summer Climates (D-A1):
 Temperate ------- Cool Summer Climates (D-B2):
 
 Temperate Monsoon Cool Summer (DWB2): La Paz, Bolivia.
-
-
 
 Continental --------------- Climates (E):
 
@@ -202,8 +194,6 @@ Continental Monsoon Warm Summer (EWA1): Calgary, Alberta.
 
 Continental ----- Cool Summer Climates (E-B2):
 
-
-
 Subarctic --------------- Climates (F):
 
 Subarctic ----- Very Hot Summer Climates (F-Z2):
@@ -215,8 +205,6 @@ Subarctic ----- Very Warm Summer Climates (F-A2):
 Subarctic ----- Warm Summer Climates (F-A1):
 
 Subarctic ----- Cool Summer Climates (F-B2):
-
-
 
 Arctic --------------- Climates (G):
 
@@ -230,8 +218,6 @@ Arctic ----- Warm Summer Climates (G-A1):
 
 Arctic ----- Cool Summer Climates (G-B2):
 
-
-
 Superarctic --------------- Climates (Y):
 
 Superarctic --------- Freezing Summer Climates (Y-C1):
@@ -241,57 +227,6 @@ Superarctic Semihumid Freezing Summer (YGZ2): Axel Island glaciers, Nunavut, Can
 Superarctic --------- Frigid Summer Climates (Y-Y):
 
 Superarctic Semihumid Frigid Summer (YGY): Axel Island glaciers, Nunavut, Canada.
-
-
-
-
-
-Miami, Florida. BHA2 = Tropical humid with very warm summers.
-
-Jacksonville, Florida. CGZ1 = Subtropical semihumid with hot summers.
-
-Atlanta, Georgia. CHA2 = Subtropical humid with very warm summers.
-
-New York City, New York. On the edge of DGA2 (temperate semihumid with very warm summers) and DHA2 (temperate humid with very warm summers).
-
-Yarmouth, Nova Scotia. DHB2 = Temperate humid with mild summers.
-
-Cincinnati, Ohio. DHA2 = Temperate humid with very warm summers.
-
-Cape Girardeau Missouri = DHZ1 = Temperate humid with hot summers.
-
-Carbondale, Illinois. DHA2 = Temperate humid with very warm summers.
-
-Champaign, Illinois. DGA2 = Temperate semihumid with very warm summers.
-
-Chicago, Illinois. On the edge of DGA2 (temperate semihumid with very warm summers) and DHA1 (temperate humid with very warm summers).
-
-Madison, Wisconsin. On the edge of EGA2 (continental semihumid with very warm summers) and EHA2 (continental humid with very warm summers).
-
-Winnepeg, Manitoba. FGA1 = Subarctic semihumid with warm summers.
-
-Calgary, Alberta. EWA1 = Continental Monsoon with warm summers.
-
-Rexburg, Idaho. EMA2 = Continental mediterranean with very warm summers.
-
-Salt Lake City, Utah. DSZ1 = Temperate semiarid with very hot summers.
-
-Denver, Colorado. ESA2 = Continental semiarid with very warm summers.
-
-Payson, Arizona. DMZ1 = Temperate mediterranean with hot summers.
-
-Pheonix, Arizona. CDZ2 = Subtropical arid desert with very hot summers.
-
-Portland, Oregon. On the border of CMA1 (subtropical mediterranean with warm summers) and CMA2 (subtropical mediterranean with very warm summers).
-
-San Francisco, California. CMA1 = Subtropical mediterranean with warm summers.
-
-Los Angeles, California. CMA2 = Subtropical mediterranean with very warm summers.
-
-Furnace Creek, California. CDX1 = Subtropical arid desert wasteland.
-
-
-
 
 
 
