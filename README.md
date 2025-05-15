@@ -114,14 +114,133 @@ However, all land masses are included in the climate zones and summer zones, eve
 
 Here are some examples of these zones.
 
-Tropical climates:
-
-          Tropical jimijijij
 
 
+Tropical --------------------------- climates (B):
+
+Tropical ----------- Very Hot Summer climates (B-Z2):
+
+Tropical Arid Desert Very Hot Summer (BDZ2): Jeddah, Saudi Arabia. Abu Dhabi, UAE.
+
+Tropical ------- Hot Summer climates (B-Z1):
+
+Tropical Monsoon Hot Summer (BWZ1): Fort Myers, Florida, USA.
+
+Tropical Desert Hot Summer (BDZ1): La Paz, Baja California, Mexico.
+
+Tropical ----- Very Warm Summer Climates (B-A2):
+
+Tropical Humid Very Warm Summer (BHA2): Miami, Florida.
+
+Tropical Monsoon Very Warm Summer (BWA2): Key West, Florida.
+
+Tropical Desert Very Warm Summer (BDA2): Lima, Peru.
+
+Tropical ------ Warm Summer Climates (B-A1):
+
+Tropical Desert Warm Summer (BDA1): Antofagasta, Chile.
 
 
 
+Subtropical ---------------- Climates (C):
+
+Subtropical ------ Wasteland Climates (C-X1):
+
+Subtropical Desert Wasteland (CDX1): Furnace Creek, California, USA.
+
+Subtropical ------ Very Hot Summer Climates (C-Z2):
+
+Subtropical Desert Very Hot Summer (CDZ2): Pheonix, Arizona, USA.
+
+Subtropical ------ Hot Summer Climates (C-Z1):
+
+Subtropical Desert Hot Summer (CDZ1): Cairo, Egypt.
+
+Subtropical ------- Very Warm Summer Climates (C-A2):
+
+Subtropical Monsoon Very Warm Summer (CWA2): Mexico City, Mexico.
+
+Subtropical Semiarid Very Warm Summer (CSA2): Santiago, Chile.
+
+Subtropical ----- Warm Summer Climates (C-A1):
+
+Subtropical ----- Cool Summer Climates (C-B2):
+
+
+
+Temperate --------------- Climates (D):
+
+Temperate ----- Very Hot Summer Climates (D-Z2):
+
+Temperate -------- Hot Summer Climates (D-Z1):
+
+Temperate Semiarid Hot Summer (DSZ1): Salt Lake City, Utah, USA.
+
+Temperate ----- Very Warm Summer Climates (D-A2):
+
+Temperate ----- Warm Summer Climates (D-A1):
+
+Temperate ------- Cool Summer Climates (D-B2):
+
+Temperate Monsoon Cool Summer (DWB2): La Paz, Bolivia.
+
+
+
+Continental --------------- Climates (E):
+
+Continental ----- Very Hot Summer Climates (E-Z2):
+
+Continental ----- Hot Summer Climates (E-Z1):
+
+Continental ----- Very Warm Summer Climates (E-A2):
+
+Continental Semiarid Very Warm Summer (ESA2): Denver, Colorado, USA.
+
+Continental ------- Warm Summer Climates (E-A1):
+
+Continental Monsoon Warm Summer (EWA1): Calgary, Alberta.
+
+Continental ----- Cool Summer Climates (E-B2):
+
+
+
+Subarctic --------------- Climates (F):
+
+Subarctic ----- Very Hot Summer Climates (F-Z2):
+
+Subarctic ----- Hot Summer Climates (F-Z1):
+
+Subarctic ----- Very Warm Summer Climates (F-A2):
+
+Subarctic ----- Warm Summer Climates (F-A1):
+
+Subarctic ----- Cool Summer Climates (F-B2):
+
+
+
+Arctic --------------- Climates (G):
+
+Arctic ----- Very Hot Summer Climates (G-Z2):
+
+Arctic ----- Hot Summer Climates (G-Z1):
+
+Arctic ----- Very Warm Summer Climates (G-A2):
+
+Arctic ----- Warm Summer Climates (G-A1):
+
+Arctic ----- Cool Summer Climates (G-B2):
+
+
+
+Superarctic --------------- Climates (Y):
+
+Superarctic --------- Freezing Summer Climates (Y-C1):
+
+Superarctic Semihumid Freezing Summer (YGZ2): Axel Island glaciers, Nunavut, Canada.
+
+Superarctic --------- Frigid Summer Climates (Y-Y):
+
+Superarctic Semihumid Frigid Summer (YGY): Axel Island glaciers, Nunavut, Canada.
 
 
 
