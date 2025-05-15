@@ -112,7 +112,20 @@ For now, we only have a dataset for Mexico, the United States, and Canada for ou
 
 However, all land masses are included in the climate zones and summer zones, even including a seperate lower resolution dataset for Antarctica that was available.
 
-Here are some examples of these zones; mostly from the United States.
+Here are some examples of these zones.
+
+Tropical climates:
+
+          Tropical jimijijij
+
+
+
+
+
+
+
+
+
 
 Miami, Florida. BHA2 = Tropical humid with very warm summers.
 
