@@ -65,7 +65,7 @@ var zonesCombined     = zonesGlobalMasked.blend(zonesAntMasked)
 // 9. Display with 50% opacity using a 12-color palette
 var palette = [
   '#650000', // 1 Extreme Wasteland (>120°F)
-  '#8B0000', // 2 Wasteland (110–115°F)
+  '#8B0000', // 2 Wasteland (110–120°F)
   '#FF4500', // 3 Very Hot Summer (100–110°F)
   '#FF8C00', // 4 Hot Summer (90–100°F)
   '#FFD700', // 5 Very Warm Summer (80–90°F)
