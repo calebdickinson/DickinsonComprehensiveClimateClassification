@@ -122,7 +122,6 @@ Out of 258 possible climates, we are certain that at least 52 do not currently e
 
 Here are some examples of these zones.
 
----------------------------
 Ultratropical Climates (Z):
 ---------------------------
 
