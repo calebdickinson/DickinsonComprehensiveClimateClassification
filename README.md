@@ -136,21 +136,21 @@ Tropical Climates (B):
 Tropical ----------- Very Hot Summer climates (B-Z2):
 
 Tropical Arid Desert Very Hot Summer (BDZ2):
-Jeddah, Saudi Arabia
-Abu Dhabi, UAE
+Jeddah, Saudi Arabia.
+Abu Dhabi, UAE.
 
 Tropical ------- Hot Summer climates (B-Z1):
 
 Tropical Monsoon Hot Summer (BWZ1):
-Fort Myers, Florida, USA
+Fort Myers, Florida, USA.
 
 Tropical Desert Hot Summer (BDZ1):
-La Paz, Baja California, Mexico
+La Paz, Baja California, Mexico.
 
 Tropical ----- Very Warm Summer Climates (B-A2):
 
 Tropical Humid Very Warm Summer (BHA2):
-Miami, Florida
+Miami, Florida.
 
 Tropical Monsoon Very Warm Summer (BWA2):
 Key West, Florida
@@ -169,12 +169,12 @@ Subtropical Climates (C):
 Subtropical ------ Wasteland Climates (C-X1):
 
 Subtropical Desert Wasteland (CDX1): 
-Furnace Creek, California, USA
+Furnace Creek, California, USA.
 
 Subtropical ------ Very Hot Summer Climates (C-Z2):
 
 Subtropical Desert Very Hot Summer (CDZ2):
-Pheonix, Arizona, USA
+Pheonix, Arizona, USA.
 
 Subtropical ----- Hot Summer Climates (C-Z1):
 
@@ -182,10 +182,10 @@ Subtropical Humid Hot Summer (CHZ1):
 New Orleans, Louisiana, USA
 
 Subtropical Semihumid Hot Summer (CGZ1):
-Austin, Texas, USA
-Houstin, Texas, USA
-Dallas, Texas, USA
-JAcksonville, Florida, USA
+Austin, Texas, USA.
+Houstin, Texas, USA.
+Dallas, Texas, USA.
+JAcksonville, Florida, USA.
 
 Subtropical Meiterranean Hot Summer (CMZ1):
 Seville, Spain
