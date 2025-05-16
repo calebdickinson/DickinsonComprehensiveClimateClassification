@@ -229,6 +229,7 @@ parts of Portland, Oregon, USA (Portland falls exactly on the border with CMA2)
 
 Subtropical Humid Cool Summer (CHB2):  
 Adak, Alaska, USA
+Ireland (the entirety of Ireland is CHB2 climate)
 
 Subtropical Mediterranean Cool Summer (CMB2):  
 Moss Beach, California, USA  
