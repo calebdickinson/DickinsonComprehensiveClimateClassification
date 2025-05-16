@@ -138,21 +138,21 @@ Abu Dhabi, UAE.
 
 ### Tropical Hot Summer climates (B-Z1):
 
-Tropical Monsoon Hot Summer (BWZ1):
+Tropical Monsoon Hot Summer (BWZ1):  
 Fort Myers, Florida, USA.
 
-Tropical Desert Hot Summer (BDZ1):
+Tropical Desert Hot Summer (BDZ1):  
 La Paz, Baja California, Mexico.
 
 ### Tropical Very Warm Summer Climates (B-A2):
 
-Tropical Humid Very Warm Summer (BHA2):
+Tropical Humid Very Warm Summer (BHA2):  
 Miami, Florida.
 
-Tropical Monsoon Very Warm Summer (BWA2):
+Tropical Monsoon Very Warm Summer (BWA2):  
 Key West, Florida
 
-Tropical Desert Very Warm Summer (BDA2):
+Tropical Desert Very Warm Summer (BDA2):  
 Lima, Peru
 
 ### Tropical Warm Summer Climates (B-A1):
@@ -208,7 +208,7 @@ Santiago, Chile
 
 ### Subtropical Warm Summer Climates (C-A1):  
 
-Subtropical Humid Warm Summer (CHA1):
+Subtropical Humid Warm Summer (CHA1):  
 Vancouver, British Columbia, Canada
 
 Subtropical Meiterranean Warm Summer (CMA1):  
@@ -230,14 +230,14 @@ Bandon, Oregon, USA
 
 ### Temperate Hot Summer Climates (D-Z1):
 
-Temperate Humid Hot Summer (DHZ1):
-Cape Girareau, Missouri, USA
+Temperate Humid Hot Summer (DHZ1):  
+Cape Girareau, Missouri, USA  
 Memphis, Tennessee, USA
 
-Temperate Semihumid Hot Summer (DGZ1):
+Temperate Semihumid Hot Summer (DGZ1):  
 Oklahoma City, Oklahoma, USA
 
-Temperate Mediterranean Hot Summer (DMZ1):
+Temperate Mediterranean Hot Summer (DMZ1):  
 Payson, Arizona
 
 Temperate Semiarid Hot Summer (DSZ1):  
@@ -340,10 +340,10 @@ Utquigvik, Alaska, USA
 Anaktuvuk Pass, Alaska
 
 ### Arctic Cold Summer Climate (GB1):
-Cambridge Bay, Nunavut
+Cambridge Bay, Nunavut, Canada
 
 ### Arctic Very Cold Summer Climate (GC2):
-Eureka, Nunavut
+Eureka research base, Nunavut, Canada
 
 ### Arctic Freezing Summer Climate (GC1):
 Mt. McKinley summit, Alaska, USA (uninhabited)
