@@ -238,6 +238,9 @@ Bandon, Oregon, USA
 ### Subtropical Cold Summer Climate (CB1):
 Stanley, Falkland Islands
 
+### Subtropical Very Cold Summer Climate (CC2):
+Macquarie Island (A very unusual place, given that all of this island is included within this climate and virtually nowhere else on the planet is)
+
 # Temperate Climates (D):
 
 ### Temperate Hot Summer Climates (D-Z1):
@@ -327,12 +330,16 @@ Anchorage, Alaska, USA
 Nome, Alaska, USA  
 Toksook Bay, Alaska, USA  
 Mt. Hood summit, Oregon, USA (uninhabited)
+Nagqu, Tibet
 
 ### Continental Very Cold Summer Climate (EC2):
 Gambell, Alaska, USA
 
 ### Continental Freezing Summer Climate (EC1):
 Primavera Research Base, Antarctica
+
+### Continental Frigid Summer Climate (EY):
+Extremely rare and found only in uninhabited himalayan and coastal antarctica mountainous areas, such as in mountains near Primavera Research Base, Antarctica
 
 # Subarctic Climates (F):
 
@@ -360,11 +367,16 @@ Davis Research Station, Antarctia
 
 ### Subarctic Frigid Summer Climate (FY):
 Belgrano II Research Base, Antarctica
+Churen Himal summit, Nepal
 
 # Arctic Climates (G):
 
+### Arctic Warm Summer Climate (GA1):
+Yakutsk, Russia
+
 ### Arctic Cool Summer Climate (GB2):
 Anaktuvuk Pass, Alaska
+Verkhoyansk, Russia (if the average temperature of the coldest month was more than 1.5 Fahrenheit colder Verkhoyansk would be a YB2 climate, a climate that does not exist anywhere on earth)
 
 ### Arctic Cold Summer Climate (GB1):
 Cambridge Bay, Nunavut, Canada
@@ -377,14 +389,19 @@ Mt. McKinley summit, Alaska, USA (uninhabited)
 
 ### Arctic Frigid Summer Climate (GY):
 McMurdo Research Station, Antarctica
+Mt. Everest summit, Nepal (uninhabited)
 
 # Superarctic Climates (Y):
 
-### Superarctic Freezing Summer Climate (YZ2):
-Axel Heiberg Island glaciers, Nunavut, Canada (uninhabited)
+### Superarctic Very Cold Summer Climate (YC2):
+
+Only found high in the Verkhoyansk mountain range, Russia (uninhabited)
+
+### Superarctic Freezing Summer Climate (YC1):
+
+Only found high in the mountains of Ellsmore Island, Nunavut, Canada (uninhabited)
 
 ### Superarctic Frigid Summer Climate (YY):
-Axel Heiberg Island glaciers, Nunavut, Canada (uninhabited)  
 Concordia Research Station, Antarctia  
 Amundsen–Scott South Pole Research Station, Antarctica (If I had an ultraarctic category, this would be part of that category, as the average temperature of the coldest month is negative 76 degrees Fahrenheit)
 
