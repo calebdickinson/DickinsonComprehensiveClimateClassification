@@ -164,7 +164,7 @@ Antofagasta, Chile
 
 ### Subtropical Wasteland Climates (C-X1):
 
-Subtropical Desert Wasteland (CDX1): 
+Subtropical Desert Wasteland (CDX1):  
 Furnace Creek, California, USA.
 
 ### Subtropical Very Hot Summer Climates (C-Z2):
