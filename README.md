@@ -403,6 +403,8 @@ Only found high in the Verkhoyansk mountain range, Russia (uninhabited)
 
 ### Superarctic Very Cold Summer Climate (YC2):
 
+?????????
+
 ### Superarctic Freezing Summer Climate (YC1):
 
 Only found high in the mountains of Ellsmore Island, Nunavut, Canada (uninhabited)
