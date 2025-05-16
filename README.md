@@ -128,6 +128,12 @@ As far as we are aware, no climates currently exist within this zone... yet.
 
 # Supertropical Climates (A):
 
+### Supertropial Very Warm Summer climates (A-A2):
+
+Supertropical Humid Very Warm Summer (AHA2):  
+Victoria, Seychelles  
+Pepaeete, Tahiti
+
 # Tropical Climates (B):
 
 ### Tropical Very Hot Summer climates (B-Z2):
@@ -156,6 +162,9 @@ Tropical Desert Very Warm Summer (BDA2):
 Lima, Peru
 
 ### Tropical Warm Summer Climates (B-A1):
+
+Tropical Humid Warm Summer (BHA1):  
+Cilaos, Réunion
 
 Tropical Desert Warm Summer (BDA1):  
 Antofagasta, Chile
@@ -226,6 +235,9 @@ Moss Beach, California, USA
 Victoria, British Columbia, Canada.  
 Bandon, Oregon, USA
 
+### Subtropical Cold Summer Climate (CB1):
+Stanley, Falkland Islands
+
 # Temperate Climates (D):
 
 ### Temperate Hot Summer Climates (D-Z1):
@@ -272,6 +284,11 @@ La Paz, Bolivia
 
 ### Temperate Cold Summer Climate (DB1):
 Nuuk, Greenland
+Ushuaia, Argentina
+Reykjavík, Iceland
+
+### Temperate Very Cold Summer Climate (DC2):
+Bird Island Research Station, South Georgia
 
 # Continental Climates (E):
 
@@ -313,6 +330,9 @@ Mt. Hood summit, Oregon, USA (uninhabited)
 ### Continental Very Cold Summer Climate (EC2):
 Gambell, Alaska, USA
 
+### Continental Freezing Summer Climate (EC1):
+Primavera Research Base, Antarctica
+
 # Subarctic Climates (F):
 
 ### Subarctic Warm Summer Climates (F-A1):
@@ -334,6 +354,12 @@ Iqualuit, Nunavut, Canada
 ### Subarctic Very Cold Summer Climate (FC2):
 Utquigvik, Alaska, USA
 
+### Subarctic Freezing Summer Climate (FC1):
+Davis Research Station, Antarctia
+
+### Subarctic Frigid Summer Climate (FY):
+Belgrano II Research Base, Antarctica
+
 # Arctic Climates (G):
 
 ### Arctic Cool Summer Climate (GB2):
@@ -348,6 +374,9 @@ Eureka research base, Nunavut, Canada
 ### Arctic Freezing Summer Climate (GC1):
 Mt. McKinley summit, Alaska, USA (uninhabited)
 
+### Arctic Frigid Summer Climate (GY):
+McMurdo Research Station, Antarctica
+
 # Superarctic Climates (Y):
 
 ### Superarctic Freezing Summer Climate (YZ2):
@@ -355,6 +384,8 @@ Axel Heiberg Island glaciers, Nunavut, Canada (uninhabited)
 
 ### Superarctic Frigid Summer Climate (YY):
 Axel Heiberg Island glaciers, Nunavut, Canada (uninhabited)
+Concordia Research Station, Antarctia
+Amundsen–Scott South Pole Research Station, Antarctica (If I had an ultraarctic category, this would be part of that category, as the average temperature of the coldest month is negative 76 degrees Fahrenheit)
 
 
 
