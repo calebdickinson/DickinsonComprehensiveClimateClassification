@@ -310,8 +310,7 @@ Mt. Hood summit, Oregon, USA (uninhabited)
 ### Continental Very Cold Summer Climate (EC2):
 Gambell, Alaska, USA
 
-Subarctic Climates (F):
------------------------
+# Subarctic Climates (F):
 
 ### Subarctic Warm Summer Climates (F-A1):
 
@@ -326,35 +325,32 @@ Winnepeg, Manitoba, Canada
 Subarctic Humid Cool Summer (FHB2):
 Yellowknife, Northwest Territories, Canada
 
-----------------------------
-Subarctic Cold Summer (FB1):
+### Subarctic Cold Summer Climate (FB1):
 Iqualuit, Nunavut, Canada
 
-Subarctic Very Cold Summer (FC2):
+### Subarctic Very Cold Summer Climate (FC2):
 Utquigvik, Alaska, USA
 
-Arctic Climates (G):
---------------------
+# Arctic Climates (G):
 
-Arctic Cool Summer (GB2):
+### Arctic Cool Summer Climate (GB2):
 Anaktuvuk Pass, Alaska
 
-Arctic Cold Summer (GB1):
+### Arctic Cold Summer Climate (GB1):
 Cambridge Bay, Nunavut
 
-Arctic Very Cold Summer (GC2):
+### Arctic Very Cold Summer Climate (GC2):
 Eureka, Nunavut
 
-Arctic Freezing Summer (GC1):
+### Arctic Freezing Summer Climate (GC1):
 Mt. McKinley summit, Alaska, USA (uninhabited)
 
-Superarctic Climates (Y):
--------------------------
+# Superarctic Climates (Y):
 
-Superarctic Freezing Summer (YZ2):
+### Superarctic Freezing Summer Climate (YZ2):
 Axel Heiberg Island glaciers, Nunavut, Canada (uninhabited)
 
-Superarctic Frigid Summer (YY):
+### Superarctic Frigid Summer Climate (YY):
 Axel Heiberg Island glaciers, Nunavut, Canada (uninhabited)
 
 
