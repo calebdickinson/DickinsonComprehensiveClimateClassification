@@ -118,7 +118,7 @@ For now, we only have a dataset for Mexico, the United States, and Canada for ou
 
 However, all land masses are included in the climate zones and summer zones, even including a seperate lower resolution dataset for Antarctica that was available.
 
-Out of 258 possible climates, we are certain that at least 52 do not currently exist on earth, and we are certain that at least do exist on earth.
+Out of 258 possible climates, we are certain that at least 52 do not currently exist on earth, and we are certain that at 59 least do exist on earth.
 
 Here are some examples of these zones.
 
