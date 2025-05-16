@@ -289,6 +289,7 @@ Reykjavík, Iceland
 
 ### Temperate Very Cold Summer Climate (DC2):
 Bird Island Research Station, South Georgia
+Paamuit, Greenland
 
 # Continental Climates (E):
 
