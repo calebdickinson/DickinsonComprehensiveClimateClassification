@@ -369,7 +369,7 @@ Anaktuvuk Pass, Alaska
 Cambridge Bay, Nunavut, Canada
 
 ### Arctic Very Cold Summer Climate (GC2):
-Eureka research base, Nunavut, Canada
+Eureka Research Base, Nunavut, Canada
 
 ### Arctic Freezing Summer Climate (GC1):
 Mt. McKinley summit, Alaska, USA (uninhabited)
@@ -383,8 +383,8 @@ McMurdo Research Station, Antarctica
 Axel Heiberg Island glaciers, Nunavut, Canada (uninhabited)
 
 ### Superarctic Frigid Summer Climate (YY):
-Axel Heiberg Island glaciers, Nunavut, Canada (uninhabited)
-Concordia Research Station, Antarctia
+Axel Heiberg Island glaciers, Nunavut, Canada (uninhabited)  
+Concordia Research Station, Antarctia  
 Amundsen–Scott South Pole Research Station, Antarctica (If I had an ultraarctic category, this would be part of that category, as the average temperature of the coldest month is negative 76 degrees Fahrenheit)
 
 
