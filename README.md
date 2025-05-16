@@ -132,8 +132,8 @@ As far as we are aware, no climates currently exist within this zone... yet.
 
 ### Tropical Very Hot Summer climates (B-Z2):
 
-Tropical Arid Desert Very Hot Summer (BDZ2):
-Jeddah, Saudi Arabia.
+Tropical Arid Desert Very Hot Summer (BDZ2):  
+Jeddah, Saudi Arabia.  
 Abu Dhabi, UAE.
 
 ### Tropical Hot Summer climates (B-Z1):
