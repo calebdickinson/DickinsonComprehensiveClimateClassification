@@ -16,7 +16,7 @@ This system also, because of its edge cases, illustrates some intresting climate
 
 For example, why do people live in greenland when a place like Nuuk, Greenland is an ET or tundra climate on the Koppen scale?
 
-In our system, Nuuk, Greenland, is considered temperate with cold summers.
+In our system, Nuuk, Greenland, is considered temperate with cold summers (DB1).
 
 This means that the average temperature of the coldest month is between 10 and 30 degrees Fahrenheit (sue me).
 
@@ -269,6 +269,9 @@ Yarmouth, Nova Scotia, Canada
 
 Temperate Monsoon Cool Summer (DWB2):  
 La Paz, Bolivia
+
+### Temperate Cold Summer Climate (DB1):
+Nuuk, Greenland
 
 # Continental Climates (E):
 
