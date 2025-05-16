@@ -376,7 +376,7 @@ Yakutsk, Russia
 
 ### Arctic Cool Summer Climate (GB2):
 Anaktuvuk Pass, Alaska
-Verkhoyansk, Russia (if the average temperature of the coldest month was more than 1.5 Fahrenheit colder Verkhoyansk would be a YB2 climate, a climate that does not exist anywhere on earth)
+Verkhoyansk, Russia
 
 ### Arctic Cold Summer Climate (GB1):
 Cambridge Bay, Nunavut, Canada
@@ -393,9 +393,15 @@ Mt. Everest summit, Nepal (uninhabited)
 
 # Superarctic Climates (Y):
 
-### Superarctic Very Cold Summer Climate (YC2):
+### Superarctic Cool Summer Climate (YB2):
+
+Sebyan-Kyuyul, Russia
+
+### Superarctic Cold Summer Climate (YB1):
 
 Only found high in the Verkhoyansk mountain range, Russia (uninhabited)
+
+### Superarctic Very Cold Summer Climate (YC2):
 
 ### Superarctic Freezing Summer Climate (YC1):
 
