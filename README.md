@@ -2,7 +2,7 @@ This is a new climate classification inspired by the Koppen system.
 
 It is generally more granular and includes more edge cases than the Koppen system.
 
-This system also has the advantage of including more extreme climates which might be useful in the future as humans continue to warm the earth with fossil fuels.
+This system has the advantage of including more extreme climates which might be useful in the future as humans continue to warm the earth with fossil fuels.
 
 One of these extreme summer zones, wasteland, already exists in the sahara and in a sliver of the American southwest.
 
