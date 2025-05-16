@@ -122,13 +122,13 @@ Out of 258 possible climates, we are certain that at least 52 do not currently e
 
 Here are some examples of these zones.
 
-## Ultratropical Climates (Z):
+# Ultratropical Climates (Z):
 
 As far as we are aware, no climates currently exist within this zone... yet.
 
-## Supertropical Climates (A):
+# Supertropical Climates (A):
 
-## Tropical Climates (B):
+# Tropical Climates (B):
 
 ### Tropical Very Hot Summer climates (B-Z2):
 
@@ -136,7 +136,7 @@ Tropical Arid Desert Very Hot Summer (BDZ2):
 Jeddah, Saudi Arabia.
 Abu Dhabi, UAE.
 
-Tropical ------- Hot Summer climates (B-Z1):
+### Tropical Hot Summer climates (B-Z1):
 
 Tropical Monsoon Hot Summer (BWZ1):
 Fort Myers, Florida, USA.
@@ -144,7 +144,7 @@ Fort Myers, Florida, USA.
 Tropical Desert Hot Summer (BDZ1):
 La Paz, Baja California, Mexico.
 
-Tropical ----- Very Warm Summer Climates (B-A2):
+### Tropical Very Warm Summer Climates (B-A2):
 
 Tropical Humid Very Warm Summer (BHA2):
 Miami, Florida.
@@ -155,25 +155,24 @@ Key West, Florida
 Tropical Desert Very Warm Summer (BDA2):
 Lima, Peru
 
-Tropical ------ Warm Summer Climates (B-A1):
+### Tropical Warm Summer Climates (B-A1):
 
 Tropical Desert Warm Summer (BDA1):
 Antofagasta, Chile
 
-Subtropical Climates (C):
--------------------------
+# Subtropical Climates (C):
 
-Subtropical ------ Wasteland Climates (C-X1):
+### Subtropical Wasteland Climates (C-X1):
 
 Subtropical Desert Wasteland (CDX1): 
 Furnace Creek, California, USA.
 
-Subtropical ------ Very Hot Summer Climates (C-Z2):
+### Subtropical Very Hot Summer Climates (C-Z2):
 
 Subtropical Desert Very Hot Summer (CDZ2):
 Pheonix, Arizona, USA.
 
-Subtropical ----- Hot Summer Climates (C-Z1):
+### Subtropical Hot Summer Climates (C-Z1):
 
 Subtropical Humid Hot Summer (CHZ1):
 New Orleans, Louisiana, USA
@@ -190,7 +189,7 @@ Seville, Spain
 Subtropical Desert Hot Summer (CDZ1):
 Cairo, Egypt
 
-Subtropical ----- Very Warm Summer Climates (C-A2):
+### Subtropical Very Warm Summer Climates (C-A2):
 
 Subtropical Humid Very Warm Summer (CHA2):
 Atlanta, Georgia
@@ -207,7 +206,7 @@ parts of Portland, Oregon, USA (Portland falls exactly on the border with CMA1)
 Subtropical Semiarid Very Warm Summer (CSA2):
 Santiago, Chile
 
-Subtropical ----- Warm Summer Climates (C-A1):
+### Subtropical Warm Summer Climates (C-A1):
 
 Subtropical Humid Warm Summer (CHA1):
 Vancouver, British Columbia, Canada
@@ -217,7 +216,7 @@ San Francisco, California, USA
 Seattle, Washington, USA
 parts of Portland, Oregon, USA (Portland falls exactly on the border with CMA2)
 
-Subtropical ----- Cool Summer Climates (C-B2):
+### Subtropical Cool Summer Climates (C-B2):
 
 Subtropical Humid Cool Summer (CHB2):
 Adak, Alaska, USA
@@ -227,10 +226,9 @@ Moss Beach, California, USA
 Victoria, British Columbia, Canada.
 Bandon, Oregon, USA
 
-Temperate Climates (D):
------------------------
+# Temperate Climates (D):
 
-Temperate -------- Hot Summer Climates (D-Z1):
+### Temperate Hot Summer Climates (D-Z1):
 
 Temperate Humid Hot Summer (DHZ1):
 Cape Girareau, Missouri, USA
@@ -245,7 +243,7 @@ Payson, Arizona
 Temperate Semiarid Hot Summer (DSZ1):
 Salt Lake City, Utah, USA
 
-Temperate ----- Very Warm Summer Climates (D-A2):
+### Temperate Very Warm Summer Climates (D-A2):
 
 Temperate Humid Very Warm Summer (DHA2):
 Cincinnati, Ohio, USA
@@ -255,7 +253,7 @@ Carbondale, Illinois, USA
 Temperate Semihumid Very Warm Summer (DGA2):
 Champaign, Illinois, USA
 
-Temperate ----- Warm Summer Climates (D-A1):
+### Temperate Warm Summer Climates (D-A1):
 
 Temperate Humid Warm Summer (DHA1):
 Boone, North Carolina, USA
@@ -264,7 +262,7 @@ London, Ontario, Canada
 Temperate Mediterranean Warm Summer (DMA1):
 Government Camp, Oregon, USA
 
-Temperate ----- Cool Summer Climates (D-B2):
+### Temperate Cool Summer Climates (D-B2):
 
 Temperate Humid Cool Summer Climates (DHB2):
 Yarmouth, Nova Scotia, Canada
@@ -272,10 +270,9 @@ Yarmouth, Nova Scotia, Canada
 Temperate Monsoon Cool Summer (DWB2):
 La Paz, Bolivia
 
-Continental Climates (E):
--------------------------
+# Continental Climates (E):
 
-Continental ----- Very Warm Summer Climates (E-A2):
+### Continental Very Warm Summer Climates (E-A2):
 
 Continental Humid Very Warm Summer (EHA2):
 Montreal, Quebec, Canada
@@ -289,7 +286,7 @@ Rexburg, Idaho, USA
 Continental Semiarid Very Warm Summer (ESA2):
 Denver, Colorado, USA
 
-Continental ------- Warm Summer Climates (E-A1):
+### Continental Warm Summer Climates (E-A1):
 
 Continental Humid Warm Summer (EHA1):
 Ottawa, Ontario, Canada
@@ -297,7 +294,7 @@ Ottawa, Ontario, Canada
 Continental Monsoon Warm Summer (EWA1):
 Calgary, Alberta, Canada
 
-Continental ----- Cool Summer Climates (E-B2):
+### Continental Cool Summer Climates (E-B2):
 
 Continental Humid Cool Summer (EHB2):
 Chase, Alaska, USA
@@ -305,19 +302,18 @@ Chase, Alaska, USA
 Continental Semihumid Cool Summer (EGB2):
 Anchorage, Alaska, USA
 
-------------------------------
-Continental Cold Summer (EB1):
+### Continental Cold Summer Climate (EB1):
 Nome, Alaska, USA
 Toksook Bay, Alaska, USA
 Mt. Hood summit, Oregon, USA (uninhabited)
 
-Continental Very Cold Summer (EC2):
+### Continental Very Cold Summer Climate (EC2):
 Gambell, Alaska, USA
 
 Subarctic Climates (F):
 -----------------------
 
-Subarctic ----- Warm Summer Climates (F-A1):
+### Subarctic Warm Summer Climates (F-A1):
 
 Subarctic Humid Warm Summer (FHA1):
 Moosonee, Ontario, Canada
@@ -325,7 +321,7 @@ Moosonee, Ontario, Canada
 Subarctic Semihumid Warm Summer (FGA1):
 Winnepeg, Manitoba, Canada
 
-Subarctic ----- Cool Summer Climates (F-B2):
+### Subarctic Cool Summer Climates (F-B2):
 
 Subarctic Humid Cool Summer (FHB2):
 Yellowknife, Northwest Territories, Canada
