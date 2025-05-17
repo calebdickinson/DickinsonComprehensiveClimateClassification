@@ -15,12 +15,12 @@ var antarcticaMask = ee.Image.constant(1)
 var era5 = ee.ImageCollection('ECMWF/ERA5/MONTHLY')
   .select('mean_2m_air_temperature')
   .map(function(img){
-    return img.subtract(273.15)
-      .rename('tempCelsius')
+    return img.subtract(273.15).multiply(9/5).add(32)
+      .rename('tempF')
       .set('system:time_start', img.get('system:time_start'));
   });
-var hottestF_ant = era5.reduce(ee.Reducer.max()).rename('SummerZone');
-var coldestF_ant = era5.reduce(ee.Reducer.min()).rename('ClimateZone');
+var hottestF_ant = era5.reduce(ee.Reducer.max()).rename('hottestF');
+var coldestF_ant = era5.reduce(ee.Reducer.min()).rename('coldestF');
 
 
 // ===========================================
