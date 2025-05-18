@@ -4,127 +4,83 @@ It is generally more granular and includes more edge cases than the Koppen syste
 
 This system has the advantage of including more extreme climates which might be useful in the future as humans continue to warm the earth with fossil fuels.
 
-One of these extreme summer zones, wasteland, already exists in the sahara and in a sliver of the American southwest.
-
-We expect to see many more areas to fall under this climate in the future as global warming continues.
-
 This system, being more generally more granular in many ways than the Koppen, better illustrates the differences between each of the new extreme climates we will see in the future.
 
-This could even have importance in determining habitability in extreme (in other words, realistic) warming scenarios.
+This could even have importance in determining habitability in high emissions (in other words, realistic) warming scenarios.
 
 This system also, because of its edge cases, illustrates some intresting climate factors that may not be obvious on the Koppen.
 
-For example, why do people live in greenland when a place like Nuuk, Greenland is an ET or tundra climate on the Koppen scale?
-
-In our system, Nuuk, Greenland, is considered temperate with cold summers (DB1).
-
-This means that the average temperature of the coldest month is between 10 and 30 degrees Fahrenheit (sue me).
-
-The average temperature of the warmest month is between 50 and 60 degrees Fahrenheit.
-
-In the Koppen climate this would be included in the same climate (ET) as a Siberian landscape that has average winter temperatures of negative 50 degrees F.
-
 Each climate is measured with 3 letters.
 
-Extreme zones are indicated by the letters X, Y, or Z.
+The first letter measures climate zones by measuring the average temperature of the coldest month in Celsius.
 
-However, due the the way that the categories were constructed, Z zones for summer, while hot, are not truly extreme zones.
+Z = Ultratropical. 30+
 
-The first letter measures climate zones by measuring the average temperature of the coldest month in Fahrenheit.
+A = Supertropical. 20
 
-Z = Ultratropical. 90+ (As far as we are aware, no climates currently exist within this zone... yet)
+B = Tropical. 10 - 20
 
-A = Supertropical. 70 - 90
+C = Subtropical. 0 - 10
 
-B = Tropical. 50 - 70
+D = Temperate. -10 - 0
 
-C = Subtropical. 30 - 50
+E = Continental. -20 - -10
 
-D = Temperate. 10 - 30
+F = Subarctic. -30 - -20
 
-E = Continental. -10 - 10
+G = Arctic. -40 - -30
 
-F = Subarctic. -30 - -10
-
-G = Arctic. -50 - -30
-
-Y = Superarctic. Below -50
+Y = Superarctic. Below -40
 
 The second letter measures aridity zones.
 
-Aridity zones are measured in exactly the same way as in the Koppen climate, with one exception.
-
-From Wikipedia: "The precipitation threshold in millimeters is determined by multiplying the average annual temperature in Celsius by 20, then adding:
-280 if 70% or more of the total precipitation is in the spring and summer months (April–September in the Northern Hemisphere, or October–March in the Southern), or
-140 if 30%–70% of the total precipitation is received during the spring and summer, or 0 if less than 30% of the total precipitation is received during the spring and summer.
-If the annual precipitation is less than 50% of this threshold, the classification is BW (arid: desert climate); 
-if it is in the range of 50%–100% of the threshold, the classification is BS (semi-arid: steppe climate)."
-
-Due to significant vegetation differences that occur based on whether the aridity threshold is above or below 300%, I divided the humid zone into two zones.
-
-Semihumid is calculated as being in the range of between 100%-300% of the aridity threshold, and humid is calculated as exceeding 300% of the aridity threshold.
+My aridity index is the total annual percipitation divided by the total annual potential evapotranspiration.
 
 In my system, the lettering of the aridity zones is as follows:
 
-H = Humid
+H = Humid (aridity index of 0.105 or more)
 
-G = Semihumid
+G = Semihumid (aridity index between 0.105 and 0.04)
 
-M = Meditterranean (Significantly Dry Summers & Significantly Wet Winters)
+M = Meditterranean (If not arid desert and if < 35% of percipitation falls in the warm half of the year)
 
-W = Monsoon (Significantly Wet Summers & Significantly Dry Winters)
+W = Monsoon (If not arid desert and if ≥ 80% of percipitation falls in the warm half of the year)
 
-S = Semiarid
+S = Semiarid (aridity index between 0.04 and 0.02)
 
-D = Arid Desert
+D = Arid Desert (aridity index less than 0.02)
 
-Unfortunately, when we try to add monsoon or mediterranean zones, the program crashes, so we're still working on that.
+Aridity does not appear to be relevant to the classification of climates that fall withiin subarctic, arctic, superarctic, cold summer, very cold summer, freezing summer, or frigid summer zones.
 
-For now, our map of aridity zones only shows H, G, S, and D zones.
+Climate classifications that fall within these zones are not measured by aridity.
 
-The third letter measures the severity of the summers by measuring the average temperature of the warmest month in Fahrenheit.
+The third letter measures the severity of the summers by measuring the average temperature of the warmest month in Celsius.
 
-X2 = Extreme Wasteland. 120+ (As far as we are aware, no climates currently exist within this zone... yet)
+X2 = Extreme Wasteland. 45+
 
-X1 = Wasteland. 110 - 120
+X1 = Wasteland. 40 - 45
 
-Z2 = Very Hot Summer. 100 - 110
+Z2 = Very Hot Summer. 35 - 40
 
-Z1 = Hot Summer. 90 - 100
+Z1 = Hot Summer. 30 - 35
 
-A2 = Very Warm Summer. 80 - 90
+A2 = Very Warm Summer. 25 - 30
 
-A1 = Warm Summer. 70 - 80
+A1 = Warm Summer. 20 - 25
 
-B2 = Mild Summer. 60 - 70
+B2 = Cool Summer. 15 - 20
 
-B1 = Cold summer. 50 - 60
+B1 = Cold summer. 10 - 15
 
-C2 = Very Cold Summer. 40 - 50
+C2 = Very Cold Summer. 5 - 10
 
-C1 = Freezing Summer. 30 - 40
+C1 = Freezing Summer. 0 - 5
 
-Y = Frigid Summer. Below 30
-
-For cold summer zones, very cold summer zones, freezing summer zones, and frigid summer zones, differences in aridity do not seem to be relevant.
-
-Climates in these levels do not have aridity indicators.
-
-Arctic and superarctic climates are also not differentiated by aridity.
-
-At this stage of development, map making is achieved by copy pasting each of the three computer programs into seperate Earth Engine Code Editor windows.
-
-For now, we only have a dataset for Mexico, the United States, and Canada for our aridity zone computer program.
-
-However, all land masses are included in the climate zones and summer zones, even including a seperate lower resolution dataset for Antarctica that was available.
-
-Out of 258 possible climates, we are certain that at least 52 do not currently exist on earth, and we are certain that at least 59 do exist on earth.
+Y = Frigid Summer. Below 0
 
 Here are some examples of these zones.
 
 # Ultratropical Climates (Z):
-
-As far as we are aware, no climates currently exist within this zone... yet.
 
 # Supertropical Climates (A):
 
