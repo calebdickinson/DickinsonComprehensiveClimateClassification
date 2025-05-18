@@ -2,7 +2,11 @@ This is a new climate classification inspired by the Koppen system.
 
 It is generally more granular and includes more edge cases than the Koppen system.
 
-This system has the advantage of including more extreme climates which might be useful in the future as humans continue to warm the earth with fossil fuels.
+This method produces hundreds of possible climates; most of which are only hypothetical.
+
+This system has the advantage of the ability to accuratly describe hypothetical climates which may occur in the future due to climate change.
+
+This could be useful in the future as humans continue to warm the earth with fossil fuels.
 
 This system, being more generally more granular in many ways than the Koppen, better illustrates the differences between each of the new extreme climates we will see in the future.
 
