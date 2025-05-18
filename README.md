@@ -18,7 +18,9 @@ Each climate is measured with 3 letters.
 
 The first letter measures climate zones by measuring the average temperature of the coldest month in Celsius.
 
-Z = Ultratropical. 30+ (as far as I am aware, no climates currently exist within this zone... yet)
+X = Uninhabitable. 40+ (hypothetical)
+
+Z = Ultratropical. 30 - 40 (hypothetical)
 
 A = Supertropical. 20 - 30
 
@@ -58,7 +60,9 @@ Climate classifications that fall within these zones are not measured by aridity
 
 The third letter measures the severity of the summers by measuring the average temperature of the warmest month in Celsius.
 
-X2 = Extreme Wasteland. 45+
+X3, X4,... et cetera = Extreme Wasteland. 50+ (hypothetical)
+
+X2 = Extreme Wasteland. 45 - 50
 
 X1 = Wasteland. 40 - 45
 
