@@ -34,21 +34,19 @@ Y = Superarctic. Below -40
 
 The second letter measures aridity zones.
 
-My aridity index is the total annual percipitation divided by the total annual potential evapotranspiration.
-
 In my system, the lettering of the aridity zones is as follows:
 
-H = Humid (aridity index of 0.105 or more)
+H = Humid
 
-G = Semihumid (aridity index between 0.105 and 0.04)
+G = Semihumid
 
 M = Meditterranean (If not arid desert and if < 35% of percipitation falls in the warm half of the year)
 
 W = Monsoon (If not arid desert and if ≥ 80% of percipitation falls in the warm half of the year)
 
-S = Semiarid (aridity index between 0.04 and 0.02)
+S = Semiarid
 
-D = Arid Desert (aridity index less than 0.02)
+D = Arid Desert
 
 Aridity does not appear to be relevant to the classification of climates that fall withiin subarctic, arctic, superarctic, cold summer, very cold summer, freezing summer, or frigid summer zones.
 
