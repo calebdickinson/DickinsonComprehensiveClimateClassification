@@ -96,7 +96,15 @@ Saiken, Papua New Guinea (2100)
 
 # Supertropical Climates (A):
 
+### Supertropical Wasteland climates (A-X1):
+
+Supertropical Semiarid Wasteland (ASX1):
+Chennai, India (2100)
+
 ### Supertropical Very Hot Summer climates (A-Z2):
+
+Supertropical Monsoon Very Hot Summer (AWZ2):
+Mumbai, India (2100)
 
 Supertropical Semiarid Very Hot Summer (ASZ2):  
 Key West, Florida (2100)
@@ -112,19 +120,50 @@ Supertropical Humid Very Warm Summer (AHA2):
 
 # Tropical Climates (B):
 
+### Tropical Extreme Wasteland climates (B-X3):
+
+Tropical Arid Desert Extreme Wasteland (BDX3):  
+Baghdad, Iraq (2100)
+
+### Tropical Extreme Wasteland climates (B-X2):
+
+Tropical Arid Desert Extreme Wasteland (BDX2):   
+Abu Dhabi, UAE (2100)  
+Hyderabad, Pakistan (2100)  
+Lahore, Pakistan (2100)  
+Ahmedabad, India (2100)  
+Delhi, India (2100)
+
+### Tropical Wasteland climates (B-X1):  
+
+Tropical Semiarid Wasteland (BSX1):  
+Islamabad, Pakistan (2100)
+
+Tropical Arid Desert Wasteland (BDX1):  
+Abu Dhabi, UAE (today)  
+Hyderabad, Pakistan (today)
+Musat, Oman (2100)  
+Karachi, Pakistan (2100)  
+Cairo, Egypt (2100)
+Beruit, Lebanon (2100)
+
 ### Tropical Very Hot Summer climates (B-Z2):
 
 Tropical Semihumid Very Hot Summer (BGZ2):  
+Chennai, India (today)
 New Orleans, Louisiana (2100)  
 Miami, Florida (2100)  
 St. Augustine, Florida (2100)  
 Tampa, Florida (2100)
+
+Tropical Monsoon Very Hot Summer (BWZ2):
 
 Tropical Semiarid Very Hot Summer (BSZ2):  
 Houstin, Texas (2100)  
 Fort Myers, Florida (2100)
 
 Tropical Arid Desert Very Hot Summer (BDZ2):  
+Musat, Oman (today)
 
 ### Tropical Hot Summer climates (B-Z1):
 
@@ -134,14 +173,18 @@ Miami, Florida (today)
 Tropical Semihumid Hot Summer (BGZ1):  
 Fort Myers, Florida (today)  
 Key West, Florida (today)  
-Tampa, Florida (today)
+Tampa, Florida (today)  
+Bangaluru, India (today)
 
 Tropical Monsoon Hot Summer (BWZ1):  
+Mumbai, India (today)  
+Dhaka, Bangladesh (today)
 
 Tropical Mediterranean Hot Summer (BMZ1):  
 Los Angeles, California (2100)
 
 Tropical Desert Hot Summer (BDZ1):  
+Karachi, Pakistan (today)
 
 ### Tropical Very Warm Summer Climates (B-A2):
 
