@@ -216,7 +216,7 @@ Subtropical Humid Very Warm Summer (CHA2):
 Subtropical Monsoon Very Warm Summer (CWA2):  
 
 Subtropical Mediterranean Very Warm Summer (CMA2):   
-Los Angeles, California
+Los Angeles, California (today) 
 
 Subtropical Semiarid Very Warm Summer (CSA2):  
 
@@ -225,7 +225,7 @@ Subtropical Semiarid Very Warm Summer (CSA2):
 Subtropical Humid Warm Summer (CHA1):  
 
 Subtropical Meiterranean Warm Summer (CMA1):  
-Seattle, Washington
+Seattle, Washington (today)
 
 ### Subtropical Cool Summer Climates (C-B2):
 
