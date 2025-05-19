@@ -178,7 +178,9 @@ Oklahoma City, Oklahoma (2100)
 Dallas, Texas (2100)
 
 Subtropical Desert Wasteland (CDX1):  
-Pheonix, Arizona (today)
+Pheonix, Arizona (today)  
+Seville, Spain (2100)  
+Madrid, Spain (2100)
 
 ### Subtropical Very Hot Summer Climates (C-Z2):
 
@@ -192,20 +194,38 @@ Carbondale, Illinois (2100)
 Atlanta, Georgia (2100)  
 Nashville, Tennessee (2100)
 
+Subtropical Mediterranean Very Hot Summer (CMZ2):  
+Seville, Spain (today)
+Rome, Italy (2100)
+
+Subtropical Semiarid Very Hot Summer (CSZ2):  
+Venice, Italy (2100)
+
 Subtropical Desert Very Hot Summer (CDZ2):  
-Las Vegas, Nevada
+Las Vegas, Nevada (today)
+Valencia, Spain (2100)
+Athens, Greece (2100)
 
 ### Subtropical Hot Summer Climates (C-Z1):
 
 Subtropical Humid Hot Summer (CHZ1):  
-New Orleans, Louisiana (today)
+New Orleans, Louisiana (today)  
+Zürich, Switzerland (2100)
 
 Subtropical Semihumid Hot Summer (CGZ1):  
 Houstin, Texas (today)  
 St. Augustine, Florida (today)
 
 Subtropical Meiterranean Hot Summer (CMZ1):  
+Rome, Italy (today)  
+Athens, Greece (today)  
 Seattle, Washington (2100)
+
+Subtropical Semiarid Hot Summer (CSZ1):   
+Madrid, Spain (today)  
+Leipzig, Germany (2100)  
+Paris, France (2100)  
+Warsaw, Poland (2100)
 
 Subtropical Desert Hot Summer (CDZ1):  
 
@@ -213,23 +233,42 @@ Subtropical Desert Hot Summer (CDZ1):
 
 Subtropical Humid Very Warm Summer (CHA2):  
 
+Subtropical Semihumid Very Warm Summer (CGA2):  
+Venice, Italy (today)
+Amsterdam, the Netherlands (2100)
+London, England (2100)
+
 Subtropical Monsoon Very Warm Summer (CWA2):  
 
 Subtropical Mediterranean Very Warm Summer (CMA2):   
-Los Angeles, California (today) 
+Los Angeles, California (today)  
+Cardiff, Wales (2100)
 
 Subtropical Semiarid Very Warm Summer (CSA2):  
+Valencia, Spain (today)
 
 ### Subtropical Warm Summer Climates (C-A1):  
 
 Subtropical Humid Warm Summer (CHA1):  
+Cardiff, Wales (today)  
+Edinburgh, Scotland (2100)  
+Dublin, Ireland (2100)
+
+Subtropical Semihumid Warm Summer (CGA1):   
+London, England (today)  
+Paris, France (today)
 
 Subtropical Meiterranean Warm Summer (CMA1):  
-Seattle, Washington (today)
+Seattle, Washington (today)  
+Cork, Ireland (2100)  
+Haugesund, Norway (2100)
 
 ### Subtropical Cool Summer Climates (C-B2):
 
 Subtropical Humid Cool Summer (CHB2):  
+Cork, Ireland (today)  
+Dublin, Ireland (today)  
+Edinburgh, Scotland (today)
 
 Subtropical Mediterranean Cool Summer (CMB2):  
 
@@ -275,18 +314,27 @@ Temperate Semiarid Hot Summer (DSZ1):
 Temperate Humid Very Warm Summer (DHA2):  
 Chicago, Illinois (today)  
 Ashville, North Caroline (today)
+Oslo, Norway (2100)
 
 Temperate Semihumid Very Warm Summer (DGA2):  
 
 ### Temperate Warm Summer Climates (D-A1):
 
 Temperate Humid Warm Summer (DHA1):  
+Oslo, Norway (today)  
+Amsterdam, the Netherlands (today)  
+Zürich, Switzerland (today)
+
+Temperate Semihumid Warm Summer (DGA1):  
+Leipzig, Germany (today)  
+Warsaw, Poland (today)
 
 Temperate Mediterranean Warm Summer (DMA1):  
 
 ### Temperate Cool Summer Climates (D-B2):
 
-Temperate Humid Cool Summer Climates (DHB2):  
+Temperate Humid Cool Summer (DHB2):  
+Haugesund, Norway (today)
 
 Temperate Monsoon Cool Summer (DWB2):  
 
