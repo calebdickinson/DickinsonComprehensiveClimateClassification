@@ -52,7 +52,7 @@ W = Monsoon (If not arid desert and if ≥ 80% of percipitation falls in the war
 
 S = Semiarid
 
-D = Arid Desert
+D = Desert (Arid)
 
 Aridity does not appear to be relevant to the classification of climates that fall withiin subarctic, arctic, superarctic, cold summer, very cold summer, freezing summer, or frigid summer zones.
 
@@ -91,14 +91,14 @@ Here are some examples of these zones.
 
 ### Ultratropical Hot Summer climates (Z-Z1):
 
-Ultratropical Humid Hot Summer: (ZHZ1):
+Ultratropical Humid Hot Summer: (ZHZ1):  
 Saiken, Papua New Guinea (2100)
 
 # Supertropical Climates (A):
 
 ### Supertropical Hot Summer climates (A-Z1):
-Supertropical Humid Hot Summer (AHZ1):
-Saiken, Papua New Guinea
+Supertropical Humid Hot Summer (AHZ1):  
+Saiken, Papua New Guinea (today)
 
 ### Supertropial Very Warm Summer climates (A-A2):
 
@@ -113,6 +113,9 @@ Tropical Arid Desert Very Hot Summer (BDZ2):
 ### Tropical Hot Summer climates (B-Z1):
 
 Tropical Monsoon Hot Summer (BWZ1):  
+
+Tropical Mediterranean Hot Summer (BMZ1):
+Los Angeles, California (2100)
 
 Tropical Desert Hot Summer (BDZ1):  
 
@@ -132,16 +135,30 @@ Tropical Desert Warm Summer (BDA1):
 
 # Subtropical Climates (C):
 
+## Subtropical Extreme Wasteland Climates (C-X2):
+
+Subtropical Desert Extreme Wasteland (CDX2):
+Furnace Creek, California (today)
+Furnace Creek, California (2100)
+Las Vegas, Nevada (2100)
+Pheonix, Arizona (2100)
+
 ### Subtropical Wasteland Climates (C-X1):
 
-Subtropical Desert Wasteland (CDX1):  
+Subtropical Semiarid Wasteland (CSX1):
+Austin, Texas (2100)
+
+Subtropical Desert Wasteland (CDX1):
+Pheonix, Arizona (today)
 
 ### Subtropical Very Hot Summer Climates (C-Z2):
 
-Subtropical Semihumid Very Hot Summer (CGZ2):
+Subtropical Semihumid Very Hot Summer (CGZ2):  
+Austin, Texas
 Carbondale, Illinois (2100)
 
-Subtropical Desert Very Hot Summer (CDZ2):
+Subtropical Desert Very Hot Summer (CDZ2):  
+Las Vegas, Nevada
 
 ### Subtropical Hot Summer Climates (C-Z1):
 
@@ -150,6 +167,7 @@ Subtropical Humid Hot Summer (CHZ1):
 Subtropical Semihumid Hot Summer (CGZ1):  
 
 Subtropical Meiterranean Hot Summer (CMZ1):  
+Seattle, Washington (2100)
 
 Subtropical Desert Hot Summer (CDZ1):  
 
@@ -160,6 +178,7 @@ Subtropical Humid Very Warm Summer (CHA2):
 Subtropical Monsoon Very Warm Summer (CWA2):  
 
 Subtropical Mediterranean Very Warm Summer (CMA2):  
+Los Angeles, California
 
 Subtropical Semiarid Very Warm Summer (CSA2):  
 
@@ -168,6 +187,7 @@ Subtropical Semiarid Very Warm Summer (CSA2):
 Subtropical Humid Warm Summer (CHA1):  
 
 Subtropical Meiterranean Warm Summer (CMA1):  
+Seattle, Washington
 
 ### Subtropical Cool Summer Climates (C-B2):
 
@@ -181,21 +201,30 @@ Subtropical Mediterranean Cool Summer (CMB2):
 
 # Temperate Climates (D):
 
+### Temperate Very Hot Summer Climates (D-Z2):
+
+Temperate Semihumid Very Hot Summer (DGZ2):  
+Chicago, Illinois (2100)
+Minneapolis, Minnesota (2100)
+
+Temperate Semiarid Very Hot Summer (DSZ2):
+Rexburg, Idaho (2100)
+
 ### Temperate Hot Summer Climates (D-Z1):
 
-Temperate Humid Hot Summer (DHZ1):
-Carbondale, Illinois
+Temperate Humid Hot Summer (DHZ1):  
+Carbondale, Illinois (today)
 
 Temperate Semihumid Hot Summer (DGZ1):  
 
 Temperate Mediterranean Hot Summer (DMZ1):  
-Payson, Arizona
 
 Temperate Semiarid Hot Summer (DSZ1):  
 
 ### Temperate Very Warm Summer Climates (D-A2):
 
 Temperate Humid Very Warm Summer (DHA2):  
+Chicago, Illinois (today)
 
 Temperate Semihumid Very Warm Summer (DGA2):  
 
@@ -222,10 +251,12 @@ Temperate Monsoon Cool Summer (DWB2):
 Continental Humid Very Warm Summer (EHA2):  
 
 Continental Semihumid Very Warm Summer (EGA2):  
+Minneapolis, Minnesota (today)
 
 Continental Mediterranean Very Warm Summer (EMA2):  
 
 Continental Semiarid Very Warm Summer (ESA2):  
+Rexburg, Idaho (today)
 
 ### Continental Warm Summer Climates (E-A1):
 
