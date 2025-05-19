@@ -195,15 +195,15 @@ Atlanta, Georgia (2100)
 Nashville, Tennessee (2100)
 
 Subtropical Mediterranean Very Hot Summer (CMZ2):  
-Seville, Spain (today)
+Seville, Spain (today)  
 Rome, Italy (2100)
 
 Subtropical Semiarid Very Hot Summer (CSZ2):  
 Venice, Italy (2100)
 
 Subtropical Desert Very Hot Summer (CDZ2):  
-Las Vegas, Nevada (today)
-Valencia, Spain (2100)
+Las Vegas, Nevada (today)  
+Valencia, Spain (2100)  
 Athens, Greece (2100)
 
 ### Subtropical Hot Summer Climates (C-Z1):
@@ -233,9 +233,9 @@ Subtropical Desert Hot Summer (CDZ1):
 
 Subtropical Humid Very Warm Summer (CHA2):  
 
-Subtropical Semihumid Very Warm Summer (CGA2):  
-Venice, Italy (today)
-Amsterdam, the Netherlands (2100)
+Subtropical Semihumid Very Warm Summer (CGA2):   
+Venice, Italy (today)  
+Amsterdam, the Netherlands (2100)  
 London, England (2100)
 
 Subtropical Monsoon Very Warm Summer (CWA2):  
@@ -360,7 +360,7 @@ Rexburg, Idaho (today)
 ### Continental Warm Summer Climates (E-A1):
 
 Continental Humid Warm Summer (EHA1):  
-Duluth, Minnesota (today)
+Duluth, Minnesota (today)  
 Lutsen, Minnesota (today)
 
 Continental Monsoon Warm Summer (EWA1):  
