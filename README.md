@@ -114,10 +114,10 @@ Supertropical Humid Very Warm Summer (AHA2):
 
 ### Tropical Very Hot Summer climates (B-Z2):
 
-Tropical Semihumid Very Hot Summer (BGZ2):
+Tropical Semihumid Very Hot Summer (BGZ2):  
 New Orleans, Louisiana (2100)  
-Miami, Florida (2100)
-St. Augustine, Florida (2100)
+Miami, Florida (2100)  
+St. Augustine, Florida (2100)  
 Tampa, Florida (2100)
 
 Tropical Semiarid Very Hot Summer (BSZ2):  
@@ -138,7 +138,7 @@ Tampa, Florida (today)
 
 Tropical Monsoon Hot Summer (BWZ1):  
 
-Tropical Mediterranean Hot Summer (BMZ1):
+Tropical Mediterranean Hot Summer (BMZ1):  
 Los Angeles, California (2100)
 
 Tropical Desert Hot Summer (BDZ1):  
@@ -161,35 +161,35 @@ Tropical Desert Warm Summer (BDA1):
 
 ## Subtropical Extreme Wasteland Climates (C-X2):
 
-Subtropical Desert Extreme Wasteland (CDX2):
-Furnace Creek, California (today)
-Furnace Creek, California (2100)
-Las Vegas, Nevada (2100)
+Subtropical Desert Extreme Wasteland (CDX2):  
+Furnace Creek, California (today)  
+Furnace Creek, California (2100)  
+Las Vegas, Nevada (2100)  
 Pheonix, Arizona (2100)
 
 ### Subtropical Wasteland Climates (C-X1):
 
-Subtropical Semihumid Wasteland (CGX1):
+Subtropical Semihumid Wasteland (CGX1):  
 Cairo, Illinois (2100)
 
-Subtropical Semiarid Wasteland (CSX1):
-Austin, Texas (2100)
-Oklahoma City, Oklahoma (2100)
+Subtropical Semiarid Wasteland (CSX1):  
+Austin, Texas (2100)  
+Oklahoma City, Oklahoma (2100)  
 Dallas, Texas (2100)
 
-Subtropical Desert Wasteland (CDX1):
+Subtropical Desert Wasteland (CDX1):  
 Pheonix, Arizona (today)
 
 ### Subtropical Very Hot Summer Climates (C-Z2):
 
-Subtropical Humid Very Hot Summer (CHZ2):
+Subtropical Humid Very Hot Summer (CHZ2):  
 Chattanooga, Tennessee (2100)
 
 Subtropical Semihumid Very Hot Summer (CGZ2):  
-Austin, Texas (today)
-Memphis, Tennessee (2100)
-Carbondale, Illinois (2100)
-Atlanta, Georgia (2100)
+Austin, Texas (today)  
+Memphis, Tennessee (2100)  
+Carbondale, Illinois (2100)  
+Atlanta, Georgia (2100)  
 Nashville, Tennessee (2100)
 
 Subtropical Desert Very Hot Summer (CDZ2):  
@@ -200,8 +200,8 @@ Las Vegas, Nevada
 Subtropical Humid Hot Summer (CHZ1):  
 New Orleans, Louisiana (today)
 
-Subtropical Semihumid Hot Summer (CGZ1): 
-Houstin, Texas (today)
+Subtropical Semihumid Hot Summer (CGZ1):  
+Houstin, Texas (today)  
 St. Augustine, Florida (today)
 
 Subtropical Meiterranean Hot Summer (CMZ1):  
@@ -215,7 +215,7 @@ Subtropical Humid Very Warm Summer (CHA2):
 
 Subtropical Monsoon Very Warm Summer (CWA2):  
 
-Subtropical Mediterranean Very Warm Summer (CMA2):  
+Subtropical Mediterranean Very Warm Summer (CMA2):   
 Los Angeles, California
 
 Subtropical Semiarid Very Warm Summer (CSA2):  
@@ -242,28 +242,28 @@ Subtropical Mediterranean Cool Summer (CMB2):
 ### Temperate Very Hot Summer Climates (D-Z2):
 
 Temperate Semihumid Very Hot Summer (DGZ2):  
-Dallas, Texas (today)
-Chicago, Illinois (2100)
+Dallas, Texas (today)  
+Chicago, Illinois (2100)  
 Minneapolis, Minnesota (2100)
 
-Temperate Semiarid Very Hot Summer (DSZ2):
+Temperate Semiarid Very Hot Summer (DSZ2):  
 Rexburg, Idaho (2100)
 
 ### Temperate Hot Summer Climates (D-Z1):
 
 Temperate Humid Hot Summer (DHZ1):  
-Carbondale, Illinois (today)
-Memphis, Tennessee (today)
-Chattanooga, Tennessee (today)
-Atlanta, Georgia (today)
-Nashville, Tennessee (today)
-Cairo, Illinois (today)
+Carbondale, Illinois (today)  
+Memphis, Tennessee (today)  
+Chattanooga, Tennessee (today)  
+Atlanta, Georgia (today)  
+Nashville, Tennessee (today)  
+Cairo, Illinois (today)  
 Asheville, North Carolina (2100)
 
 Temperate Semihumid Hot Summer (DGZ1):  
-Oklahoma City, Oklahoma (today)
-Duluth, Minnesota (2100)
-Lutsen, Minnesota (2100)
+Oklahoma City, Oklahoma (today)  
+Duluth, Minnesota (2100)  
+Lutsen, Minnesota (2100)  
 Madison, Wisconsin (2100)
 
 Temperate Mediterranean Hot Summer (DMZ1):  
@@ -273,7 +273,7 @@ Temperate Semiarid Hot Summer (DSZ1):
 ### Temperate Very Warm Summer Climates (D-A2):
 
 Temperate Humid Very Warm Summer (DHA2):  
-Chicago, Illinois (today)
+Chicago, Illinois (today)  
 Ashville, North Caroline (today)
 
 Temperate Semihumid Very Warm Summer (DGA2):  
