@@ -138,7 +138,10 @@ Subtropical Desert Wasteland (CDX1):
 
 ### Subtropical Very Hot Summer Climates (C-Z2):
 
-Subtropical Desert Very Hot Summer (CDZ2):  
+Subtropical Semihumid Very Hot Summer (CGZ2):
+Carbondale, Illinois (2100)
+
+Subtropical Desert Very Hot Summer (CDZ2):
 
 ### Subtropical Hot Summer Climates (C-Z1):
 
@@ -180,7 +183,8 @@ Subtropical Mediterranean Cool Summer (CMB2):
 
 ### Temperate Hot Summer Climates (D-Z1):
 
-Temperate Humid Hot Summer (DHZ1):  
+Temperate Humid Hot Summer (DHZ1):
+Carbondale, Illinois
 
 Temperate Semihumid Hot Summer (DGZ1):  
 
