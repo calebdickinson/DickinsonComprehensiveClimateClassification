@@ -484,7 +484,8 @@ Continental Semihumid Cool Summer (EGB2):
 
 ### Continental Cold Summer Climate (EB1):
 
-### Continental Very Cold Summer Climate (EC2):
+### Continental Very Cold Summer Climate (EC2):  
+uninhabited areas of inland Antarctica between Concordia Research Station and Casey Research Station (2100)
 
 ### Continental Freezing Summer Climate (EC1):  
 Primavera Base, Antarctica (today)
