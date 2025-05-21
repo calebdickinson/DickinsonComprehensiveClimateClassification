@@ -103,7 +103,7 @@ Chennai, India (2100)
 
 ### Supertropical Very Hot Summer climates (A-Z2):
 
-Supertropical Monsoon Very Hot Summer (AWZ2):
+Supertropical Monsoon Very Hot Summer (AWZ2):  
 Mumbai, India (2100)
 
 Supertropical Semiarid Very Hot Summer (ASZ2):  
@@ -146,16 +146,16 @@ Islamabad, Pakistan (2100)
 
 Tropical Arid Desert Wasteland (BDX1):  
 Abu Dhabi, UAE (today)  
-Hyderabad, Pakistan (today)
+Hyderabad, Pakistan (today)  
 Musat, Oman (2100)  
 Karachi, Pakistan (2100)  
-Cairo, Egypt (2100)
+Cairo, Egypt (2100)  
 Beruit, Lebanon (2100)
 
 ### Tropical Very Hot Summer climates (B-Z2):
 
 Tropical Semihumid Very Hot Summer (BGZ2):  
-Chennai, India (today)
+Chennai, India (today)  
 New Orleans, Louisiana (2100)  
 Miami, Florida (2100)  
 St. Augustine, Florida (2100)  
@@ -242,7 +242,7 @@ Dallas, Texas (2100)
 Subtropical Desert Wasteland (CDX1):  
 Pheonix, Arizona (today)  
 Rawadi, Iraq (today)  
-Baghdad, Iraq (today)
+Baghdad, Iraq (today)  
 Seville, Spain (2100)  
 Madrid, Spain (2100)  
 Tehran, Iran (2100)  
@@ -315,7 +315,7 @@ Subtropical Monsoon Very Warm Summer (CWA2):
 
 Subtropical Mediterranean Very Warm Summer (CMA2):   
 Los Angeles, California (today)  
-Istanbul, Turkey (today)
+Istanbul, Turkey (today)  
 Cardiff, Wales (2100)
 
 Subtropical Semiarid Very Warm Summer (CSA2):  
@@ -391,10 +391,10 @@ Asheville, North Carolina (2100)
 
 Temperate Semihumid Hot Summer (DGZ1):  
 Oklahoma City, Oklahoma (today)  
-Bishkek, Kyrgyzstan (today)
+Bishkek, Kyrgyzstan (today)  
 Duluth, Minnesota (2100)  
 Lutsen, Minnesota (2100)  
-Madison, Wisconsin (2100)
+Madison, Wisconsin (2100)  
 Kyiv, Ukraine (2100)
 
 Temperate Mediterranean Hot Summer (DMZ1):  
@@ -407,11 +407,11 @@ Almaty, Kazakhstan (2100)
 
 Temperate Humid Very Warm Summer (DHA2):  
 Chicago, Illinois (today)  
-Ashville, North Caroline (today)
+Ashville, North Caroline (today)  
 Oslo, Norway (2100)
 
 Temperate Semihumid Very Warm Summer (DGA2):  
-St. Petersburg, Russia (2100)
+St. Petersburg, Russia (2100)  
 Moscow, Russia (2100)
 
 ### Temperate Warm Summer Climates (D-A1):
@@ -423,7 +423,7 @@ Zürich, Switzerland (today)
 
 Temperate Semihumid Warm Summer (DGA1):  
 Leipzig, Germany (today)  
-Warsaw, Poland (today)
+Warsaw, Poland (today)  
 Kyiv, Ukraine (today)
 
 Temperate Mediterranean Warm Summer (DMA1):  
@@ -469,9 +469,9 @@ Rexburg, Idaho (today)
 ### Continental Warm Summer Climates (E-A1):
 
 Continental Humid Warm Summer (EHA1):  
-Duluth, Minnesota (today)  
-Lutsen, Minnesota (today)
-St. Petersburg, Russia (today)
+Duluth, Minnesota (today)   
+Lutsen, Minnesota (today)  
+St. Petersburg, Russia (today)  
 Moscow, Russia (today)
 
 Continental Monsoon Warm Summer (EWA1):  
