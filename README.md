@@ -136,6 +136,11 @@ Delhi, India (2100)
 
 ### Tropical Wasteland climates (B-X1):  
 
+Tropical Monsoon Wasteland (BWX1):  
+Ahmedabad, India (today)  
+Kolkata, India (2100)  
+Hyderabad, India (2100)
+
 Tropical Semiarid Wasteland (BSX1):  
 Islamabad, Pakistan (2100)
 
@@ -156,11 +161,15 @@ Miami, Florida (2100)
 St. Augustine, Florida (2100)  
 Tampa, Florida (2100)
 
-Tropical Monsoon Very Hot Summer (BWZ2):
+Tropical Monsoon Very Hot Summer (BWZ2):  
+Kolkata, India (today)  
+Hyderabad, India (today)  
+Dhaka, Bangladesh (2100)
 
 Tropical Semiarid Very Hot Summer (BSZ2):  
 Houstin, Texas (2100)  
-Fort Myers, Florida (2100)
+Fort Myers, Florida (2100)  
+Bangaluru, India (2100)
 
 Tropical Arid Desert Very Hot Summer (BDZ2):  
 Musat, Oman (today)
@@ -180,7 +189,8 @@ Tropical Monsoon Hot Summer (BWZ1):
 Mumbai, India (today)  
 Dhaka, Bangladesh (today)
 
-Tropical Mediterranean Hot Summer (BMZ1):  
+Tropical Mediterranean Hot Summer (BMZ1):   
+Beruit, Lebanon (today)  
 Los Angeles, California (2100)
 
 Tropical Desert Hot Summer (BDZ1):  
@@ -202,7 +212,12 @@ Tropical Desert Warm Summer (BDA1):
 
 # Subtropical Climates (C):
 
-## Subtropical Extreme Wasteland Climates (C-X2):
+### Subtropical Extreme Wasteland Climates (C-X3):
+
+Subtropical Desert Extreme Wasteland (CDX3):  
+Rawadi, Iraq (2100)
+
+### Subtropical Extreme Wasteland Climates (C-X2):
 
 Subtropical Desert Extreme Wasteland (CDX2):  
 Furnace Creek, California (today)  
@@ -215,6 +230,10 @@ Pheonix, Arizona (2100)
 Subtropical Semihumid Wasteland (CGX1):  
 Cairo, Illinois (2100)
 
+Subtopical Monsoon Wasteland (CWX1):  
+Lahore, Pakistan (today)  
+Delhi, India (today)
+
 Subtropical Semiarid Wasteland (CSX1):  
 Austin, Texas (2100)  
 Oklahoma City, Oklahoma (2100)  
@@ -222,8 +241,12 @@ Dallas, Texas (2100)
 
 Subtropical Desert Wasteland (CDX1):  
 Pheonix, Arizona (today)  
+Rawadi, Iraq (today)  
+Baghdad, Iraq (today)
 Seville, Spain (2100)  
-Madrid, Spain (2100)
+Madrid, Spain (2100)  
+Tehran, Iran (2100)  
+Ashkabat, Turkmenistan (2100)
 
 ### Subtropical Very Hot Summer Climates (C-Z2):
 
@@ -232,6 +255,7 @@ Chattanooga, Tennessee (2100)
 
 Subtropical Semihumid Very Hot Summer (CGZ2):  
 Austin, Texas (today)  
+Islamabad, Pakistan (today)  
 Memphis, Tennessee (2100)  
 Carbondale, Illinois (2100)  
 Atlanta, Georgia (2100)  
@@ -239,6 +263,7 @@ Nashville, Tennessee (2100)
 
 Subtropical Mediterranean Very Hot Summer (CMZ2):  
 Seville, Spain (today)  
+Damascus, Syria (today)  
 Rome, Italy (2100)
 
 Subtropical Semiarid Very Hot Summer (CSZ2):  
@@ -247,7 +272,9 @@ Venice, Italy (2100)
 Subtropical Desert Very Hot Summer (CDZ2):  
 Las Vegas, Nevada (today)  
 Valencia, Spain (2100)  
-Athens, Greece (2100)
+Athens, Greece (2100)  
+Damascus, Syria (2100)  
+Jerusalem, Israel (2100)
 
 ### Subtropical Hot Summer Climates (C-Z1):
 
@@ -262,7 +289,9 @@ St. Augustine, Florida (today)
 Subtropical Meiterranean Hot Summer (CMZ1):  
 Rome, Italy (today)  
 Athens, Greece (today)  
-Seattle, Washington (2100)
+Jerusalem, Israel (today)  
+Seattle, Washington (2100)  
+Istanbul, Turkey (2100)
 
 Subtropical Semiarid Hot Summer (CSZ1):   
 Madrid, Spain (today)  
@@ -271,6 +300,7 @@ Paris, France (2100)
 Warsaw, Poland (2100)
 
 Subtropical Desert Hot Summer (CDZ1):  
+Cairo, Egypt (today)
 
 ### Subtropical Very Warm Summer Climates (C-A2):
 
@@ -285,6 +315,7 @@ Subtropical Monsoon Very Warm Summer (CWA2):
 
 Subtropical Mediterranean Very Warm Summer (CMA2):   
 Los Angeles, California (today)  
+Istanbul, Turkey (today)
 Cardiff, Wales (2100)
 
 Subtropical Semiarid Very Warm Summer (CSA2):  
@@ -321,6 +352,14 @@ Subtropical Mediterranean Cool Summer (CMB2):
 
 # Temperate Climates (D):
 
+### Temperate Wasteland Climates (D-X1):
+
+Temperate Semiarid Wasteland (DSX1):  
+Kabul, Afghanistan (2100)
+
+Temperate Arid Desert Wasteland (DDX1):  
+Tashkent, Uzbekistan (2100)
+
 ### Temperate Very Hot Summer Climates (D-Z2):
 
 Temperate Semihumid Very Hot Summer (DGZ2):  
@@ -328,8 +367,16 @@ Dallas, Texas (today)
 Chicago, Illinois (2100)  
 Minneapolis, Minnesota (2100)
 
+Temperate Mediterranean Very Hot Summer (DMZ2):  
+Tashkent, Uzbekistan (today)
+
 Temperate Semiarid Very Hot Summer (DSZ2):  
-Rexburg, Idaho (2100)
+Rexburg, Idaho (2100)  
+Bishkek, Kyrgyzstan (2100)
+
+Temperate Arid Desert Very Hot Summer (DDZ2):  
+Ashkabat, Turkmenistan (today)  
+Tehran, Iran (today)
 
 ### Temperate Hot Summer Climates (D-Z1):
 
@@ -344,13 +391,17 @@ Asheville, North Carolina (2100)
 
 Temperate Semihumid Hot Summer (DGZ1):  
 Oklahoma City, Oklahoma (today)  
+Bishkek, Kyrgyzstan (today)
 Duluth, Minnesota (2100)  
 Lutsen, Minnesota (2100)  
 Madison, Wisconsin (2100)
+Kyiv, Ukraine (2100)
 
 Temperate Mediterranean Hot Summer (DMZ1):  
+Kabul, Afghanistan (today)
 
 Temperate Semiarid Hot Summer (DSZ1):  
+Almaty, Kazakhstan (2100)
 
 ### Temperate Very Warm Summer Climates (D-A2):
 
@@ -360,6 +411,8 @@ Ashville, North Caroline (today)
 Oslo, Norway (2100)
 
 Temperate Semihumid Very Warm Summer (DGA2):  
+St. Petersburg, Russia (2100)
+Moscow, Russia (2100)
 
 ### Temperate Warm Summer Climates (D-A1):
 
@@ -371,6 +424,7 @@ Zürich, Switzerland (today)
 Temperate Semihumid Warm Summer (DGA1):  
 Leipzig, Germany (today)  
 Warsaw, Poland (today)
+Kyiv, Ukraine (today)
 
 Temperate Mediterranean Warm Summer (DMA1):  
 
@@ -383,9 +437,20 @@ Temperate Monsoon Cool Summer (DWB2):
 
 ### Temperate Cold Summer Climate (DB1):
 
-### Temperate Very Cold Summer Climate (DC2):
+### Temperate Very Cold Summer Climate (DC2):  
+
+### Temperate Freezing Summer Climate (DC1):  
+Primavera Base, Antarctica (2100)
 
 # Continental Climates (E):
+
+### Continental Hot Summer Climates (E-Z1):
+
+Continental Semihumid Hot Summer (EGZ1):  
+Novosibirsk, Russia (2100)
+
+Continental Semiarid Hot Summer (EGZ1):  
+Omsk, Russia (2100)
 
 ### Continental Very Warm Summer Climates (E-A2):
 
@@ -393,7 +458,8 @@ Continental Humid Very Warm Summer (EHA2):
 Madison, Wisconsin (today)
 
 Continental Semihumid Very Warm Summer (EGA2):  
-Minneapolis, Minnesota (today)
+Minneapolis, Minnesota (today)  
+Almaty, Kazakhstan (today)
 
 Continental Mediterranean Very Warm Summer (EMA2):  
 
@@ -405,6 +471,8 @@ Rexburg, Idaho (today)
 Continental Humid Warm Summer (EHA1):  
 Duluth, Minnesota (today)  
 Lutsen, Minnesota (today)
+St. Petersburg, Russia (today)
+Moscow, Russia (today)
 
 Continental Monsoon Warm Summer (EWA1):  
 
@@ -418,21 +486,29 @@ Continental Semihumid Cool Summer (EGB2):
 
 ### Continental Very Cold Summer Climate (EC2):
 
-### Continental Freezing Summer Climate (EC1):
+### Continental Freezing Summer Climate (EC1):  
+Primavera Base, Antarctica (today)
 
 ### Continental Frigid Summer Climate (EY):
 
 # Subarctic Climates (F):
 
-### Subarctic Warm Summer Climate (F-A1):
+### Subarctic Very Warm Summer Climate (FA2):  
+Novosibirsk, Russia  
+Omsk, Russia
 
-### Subarctic Cool Summer Climate (F-B2):
+### Subarctic Warm Summer Climate (FA1):
 
-### Subarctic Cold Summer Climate (FB1):
+### Subarctic Cool Summer Climate (FB2):
 
-### Subarctic Very Cold Summer Climate (FC2):
+### Subarctic Cold Summer Climate (FB1):  
+uninhabited areas of inland Antarctica between Concordia Research Station and Casey Research Station (2100)
 
-### Subarctic Freezing Summer Climate (FC1):
+### Subarctic Very Cold Summer Climate (FC2):  
+uninhabited areas of inland Antarctica between Concordia Research Station and Casey Research Station (2100)
+
+### Subarctic Freezing Summer Climate (FC1):  
+McMurdo Research Station, Antarctica (2100)
 
 ### Subarctic Frigid Summer Climate (FY):
 
@@ -442,13 +518,16 @@ Continental Semihumid Cool Summer (EGB2):
 
 ### Arctic Cool Summer Climate (GB2):
 
-### Arctic Cold Summer Climate (GB1):
+### Arctic Cold Summer Climate (GB1):  
+uninhabited areas of inland Antarctica between Concordia Research Station and Casey Research Station (2100)
 
-### Arctic Very Cold Summer Climate (GC2):
+### Arctic Very Cold Summer Climate (GC2):  
+uninhabited areas of inland Antarctica between Concordia Research Station and Casey Research Station (2100)
 
 ### Arctic Freezing Summer Climate (GC1):
 
-### Arctic Frigid Summer Climate (GY):
+### Arctic Frigid Summer Climate (GY):  
+McMurdo Research Station, Antarctica (today)
 
 # Superarctic Climates (Y):
 
@@ -456,11 +535,13 @@ Continental Semihumid Cool Summer (EGB2):
 
 ### Superarctic Cold Summer Climate (YB1):
 
-### Superarctic Very Cold Summer Climate (YC2):
+### Superarctic Very Cold Summer Climate (YC2):  
+Concordia Research Station, Antarctica (2100)
 
 ### Superarctic Freezing Summer Climate (YC1):
 
-### Superarctic Frigid Summer Climate (YY):
+### Superarctic Frigid Summer Climate (YY):  
+Concordia Research Station, Antarctica (today)
 
 
 
