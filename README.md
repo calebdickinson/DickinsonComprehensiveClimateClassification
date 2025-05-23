@@ -173,7 +173,8 @@ Delhi, India (2100)
 Tropical Monsoon Wasteland (BWX1):  
 Ahmedabad, India (today)  
 Kolkata, India (2100)  
-Hyderabad, India (2100)
+Hyderabad, India (2100)  
+Mandalay, Myanmar (2100)
 
 Tropical Semiarid Wasteland (BSX1):  
 Islamabad, Pakistan (2100)
@@ -190,6 +191,7 @@ Beruit, Lebanon (2100)
 
 Tropical Semihumid Very Hot Summer (BGZ2):  
 Chennai, India (today)  
+Mandalay, Myanmar (today)  
 New Orleans, Louisiana (2100)  
 Miami, Florida (2100)  
 St. Augustine, Florida (2100)  
@@ -198,7 +200,9 @@ Tampa, Florida (2100)
 Tropical Monsoon Very Hot Summer (BWZ2):  
 Kolkata, India (today)  
 Hyderabad, India (today)  
-Dhaka, Bangladesh (2100)
+Dhaka, Bangladesh (2100)  
+Hanoi, Vietnam (2100)  
+Shenzhen, China (2100)
 
 Tropical Semiarid Very Hot Summer (BSZ2):  
 Houstin, Texas (2100)  
@@ -211,7 +215,9 @@ Musat, Oman (today)
 ### Tropical Hot Summer climates (B-Z1):
 
 Tropical Humid Hot Summer (BHZ1):  
-Miami, Florida (today)
+Miami, Florida (today)  
+Taipei, Taiwan (today)  
+Taipei, Taiwan (2100)
 
 Tropical Semihumid Hot Summer (BGZ1):  
 Fort Myers, Florida (today)  
@@ -221,7 +227,9 @@ Bangaluru, India (today)
 
 Tropical Monsoon Hot Summer (BWZ1):  
 Mumbai, India (today)  
-Dhaka, Bangladesh (today)
+Dhaka, Bangladesh (today)  
+Hanoi, Vietnam (today)  
+Shenzhen, China (today)
 
 Tropical Mediterranean Hot Summer (BMZ1):   
 Beruit, Lebanon (today)  
@@ -317,7 +325,8 @@ Raleigh, North Carolina (2100)
 Richmond, Virginia (2100)  
 Louisville, Kentucky (2100)  
 Philadelphia, Pennslyvania (2100)  
-Washington D.C. (2100)
+Washington D.C. (2100)  
+Osaka, Japan (2100)
 
 Subtropical Mediterranean Very Hot Summer (CMZ2):  
 Seville, Spain (today)  
@@ -341,6 +350,9 @@ Jerusalem, Israel (2100)
 
 Subtropical Humid Hot Summer (CHZ1):  
 New Orleans, Louisiana (today)  
+Osaka, Japan (today)  
+Tokyo, Japan (today)  
+Tokyo, Japan (2100)  
 Zürich, Switzerland (2100)
 
 Subtropical Semihumid Hot Summer (CGZ1):  
