@@ -2,7 +2,7 @@ This is a new climate classification inspired by the Koppen system.
 
 It is generally more granular and includes more edge cases than the Koppen system.
 
-This method produces hundreds of possible climates; most of which are only hypothetical.
+This method produces hundreds of possible climates; many of which are hypothetical.
 
 This system has the advantage of the ability to accuratly describe hypothetical climates which may occur in the future due to climate change.
 
@@ -85,6 +85,7 @@ C1 = Freezing Summer. 0 - 5
 Y = Frigid Summer. Below 0
 
 
+
 Here are some examples of these zones.
 
 # Ultratropical Climates (Z):
@@ -98,21 +99,56 @@ Saiken, Papua New Guinea (2100)
 
 ### Supertropical Wasteland climates (A-X1):
 
+Supertropical Semihumid Wasteland (AGX1):  
+Phnom Penh, Cambodia (2100)
+
+Supertropical Monsoon Wasteland (AWX1):  
+Darwin, Australia (2100)
+
 Supertropical Semiarid Wasteland (ASX1):
-Chennai, India (2100)
+Chennai, India (2100)  
+Bangkok, Thailand (2100)
 
 ### Supertropical Very Hot Summer climates (A-Z2):
 
+Supertropical Humid Very Hot Summer (AHZ2):  
+Manila, the Philippines (2100)
+
+Supertropical Semihumid Very Hot Summer (AGZ2):  
+Ho Chi Minh City, Vietnam (2100)  
+Cebu City, the Philippines (2100)  
+Kuala Lumpur, Malaysia (2100)  
+Singapore (2100)
+
 Supertropical Monsoon Very Hot Summer (AWZ2):  
-Mumbai, India (2100)
+Mumbai, India (2100)  
+Jakarta, Indonesia (2100)  
+Kinshasa, Democratic Republic of the Congo (2100)
 
 Supertropical Semiarid Very Hot Summer (ASZ2):  
-Key West, Florida (2100)
+Key West, Florida (2100)  
+Lagos, Nigeria (2100)
+
+Supertropical Arid Desert Very Hot Summer (ADZ2):  
+Luanda, Angolda (2100)
 
 ### Supertropical Hot Summer climates (A-Z1):
 
 Supertropical Humid Hot Summer (AHZ1):  
-Saiken, Papua New Guinea (today)
+Saiken, Papua New Guinea (today)  
+Lagos, Nigeria (today)  
+Ho Chi Minh City, Vietnam (today)  
+Manila, the Philippines (today)  
+Cebu City, the Philippines (today)  
+Kuala Lumpur, Malaysia (today)  
+Singapore (today)
+
+Supertropical Semihumid Hot Summer (AGZ1):  
+Bangkok, Thailand (today)  
+Phnom Penh, Cambodia (today)
+
+Supertropical Monsoon Hot Summer (AWZ1):  
+Jakarta, Indonesia (today)
 
 ### Supertropial Very Warm Summer climates (A-A2):
 
