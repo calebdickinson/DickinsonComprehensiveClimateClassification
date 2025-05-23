@@ -143,7 +143,8 @@ Singapore (today)
 
 Supertropical Semihumid Hot Summer (AGZ1):  
 Bangkok, Thailand (today)  
-Phnom Penh, Cambodia (today)
+Phnom Penh, Cambodia (today)  
+San Juan, Puerto Rico (2100)
 
 Supertropical Monsoon Hot Summer (AWZ1):  
 Jakarta, Indonesia (today)
@@ -195,7 +196,8 @@ Mandalay, Myanmar (today)
 New Orleans, Louisiana (2100)  
 Miami, Florida (2100)  
 St. Augustine, Florida (2100)  
-Tampa, Florida (2100)
+Tampa, Florida (2100)  
+Orlando, Florida (2100)
 
 Tropical Monsoon Very Hot Summer (BWZ2):  
 Kolkata, India (today)  
@@ -217,13 +219,15 @@ Musat, Oman (today)
 Tropical Humid Hot Summer (BHZ1):  
 Miami, Florida (today)  
 Taipei, Taiwan (today)  
+San Juan, Puerto Rico (today)  
 Taipei, Taiwan (2100)
 
 Tropical Semihumid Hot Summer (BGZ1):  
 Fort Myers, Florida (today)  
 Key West, Florida (today)  
 Tampa, Florida (today)  
-Bangaluru, India (today)
+Bangaluru, India (today)  
+Luanda, Angola (today)
 
 Tropical Monsoon Hot Summer (BWZ1):  
 Mumbai, India (today)  
@@ -233,7 +237,8 @@ Shenzhen, China (today)
 
 Tropical Mediterranean Hot Summer (BMZ1):   
 Beruit, Lebanon (today)  
-Los Angeles, California (2100)
+Los Angeles, California (2100)  
+San Jose, California (2100)
 
 Tropical Desert Hot Summer (BDZ1):  
 Karachi, Pakistan (today)  
@@ -287,10 +292,12 @@ Lahore, Pakistan (today)
 Delhi, India (today)
 
 Subtropical Mediterranean Wasteland (CMX1):  
-Boise, Idaho (2100)
+Boise, Idaho (2100)  
+Sacramento, California (2100)
 
 Subtropical Semiarid Wasteland (CSX1):  
 Austin, Texas (2100)  
+San Antonio, Texas (2100)  
 Oklahoma City, Oklahoma (2100)  
 Dallas, Texas (2100)  
 Payson, Arizona (2100)
@@ -312,6 +319,7 @@ Chattanooga, Tennessee (2100)
 
 Subtropical Semihumid Very Hot Summer (CGZ2):  
 Austin, Texas (today)  
+San Antonio, Texas (today)  
 Islamabad, Pakistan (today)  
 New York City, New York (2100)  
 Memphis, Tennessee (2100)  
@@ -326,11 +334,14 @@ Richmond, Virginia (2100)
 Louisville, Kentucky (2100)  
 Philadelphia, Pennslyvania (2100)  
 Washington D.C. (2100)  
+Baltimore, Maryland (2100)  
+St, Louis, Missouri (2100)  
 Osaka, Japan (2100)
 
 Subtropical Mediterranean Very Hot Summer (CMZ2):  
 Seville, Spain (today)  
 Damascus, Syria (today)  
+Portland, Oregon (2100)  
 Rome, Italy (2100)  
 Spokane, Washington (2100)  
 Pendleton, Oregon (2100)
@@ -344,7 +355,8 @@ Las Vegas, Nevada (today)
 Valencia, Spain (2100)  
 Athens, Greece (2100)  
 Damascus, Syria (2100)  
-Jerusalem, Israel (2100)
+Jerusalem, Israel (2100)  
+Riverside, California (2100)
 
 ### Subtropical Hot Summer Climates (C-Z1):
 
@@ -365,10 +377,14 @@ Shanghai, China (today)
 Hartford, Connecticut (2100)  
 Canberra, Australia (2100)
 
+Subtropical Monsoon Hot Summer (CWZ1):  
+Katmandu, Nepal (2100)
+
 Subtropical Meiterranean Hot Summer (CMZ1):  
 Rome, Italy (today)  
 Athens, Greece (today)  
 Jerusalem, Israel (today)  
+Sacramento, California (today)  
 Seattle, Washington (2100)  
 Government Camp, Oregon (2100)  
 Istanbul, Turkey (2100)
@@ -380,7 +396,8 @@ Paris, France (2100)
 Warsaw, Poland (2100)
 
 Subtropical Desert Hot Summer (CDZ1):  
-Cairo, Egypt (today)
+Cairo, Egypt (today)  
+Riverside, California (today)
 
 ### Subtropical Very Warm Summer Climates (C-A2):
 
@@ -392,9 +409,12 @@ Amsterdam, the Netherlands (2100)
 London, England (2100)
 
 Subtropical Monsoon Very Warm Summer (CWA2):  
+Katmandu, Nepal (today)
 
 Subtropical Mediterranean Very Warm Summer (CMA2):   
 Los Angeles, California (today)  
+Portland, Oregon (today)  
+San Jose, California (today)  
 Istanbul, Turkey (today)  
 Cardiff, Wales (2100)  
 Vancouver, British Columbia (2100)
