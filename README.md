@@ -405,11 +405,16 @@ Subtropical Humid Very Warm Summer (CHA2):
 
 Subtropical Semihumid Very Warm Summer (CGA2):   
 Venice, Italy (today)  
+Sydney, Australia (today)  
+Melbourne, Australia (today)  
 Amsterdam, the Netherlands (2100)  
 London, England (2100)
 
 Subtropical Monsoon Very Warm Summer (CWA2):  
-Katmandu, Nepal (today)
+Katmandu, Nepal (today)  
+Chengdu, China (today)  
+Johannesberg, South Africa (today)  
+Brisbane, Australia (today)
 
 Subtropical Mediterranean Very Warm Summer (CMA2):   
 Los Angeles, California (today)  
@@ -429,6 +434,7 @@ San Diego, California (today)
 
 Subtropical Humid Warm Summer (CHA1):  
 Cardiff, Wales (today)  
+Aukland, New Zealand (today)  
 Edinburgh, Scotland (2100)  
 Dublin, Ireland (2100)  
 Adak, Alaska (2100)
@@ -448,14 +454,19 @@ Haugesund, Norway (2100)
 Subtropical Humid Cool Summer (CHB2):  
 Cork, Ireland (today)  
 Dublin, Ireland (today)  
-Edinburgh, Scotland (today)
+Edinburgh, Scotland (today)  
+
+Subtropical Semihumid Cool Summer (CGB2):  
+Stanley, Falkland Islands (2100)
 
 Subtropical Mediterranean Cool Summer (CMB2):  
 Vancouver, British Columbia, Canada (today)
 
-### Subtropical Cold Summer Climate (CB1):
+### Subtropical Cold Summer Climate (CB1):  
+Macquarie Island Research Station, Macquarie Island (2100)
 
-### Subtropical Very Cold Summer Climate (CC2):
+### Subtropical Very Cold Summer Climate (CC2):  
+Macquarie Island Research Station, Macquarie Island (today)
 
 # Temperate Climates (D):
 
@@ -592,7 +603,8 @@ Indianapolis, Indiana (today)
 Oslo, Norway (2100)
 
 Temperate Semihumid Very Warm Summer (DGA2):  
-Detroit, Michigan (today)
+Detroit, Michigan (today)  
+Canberra, Australia (today)  
 Anchorage, Alaska (2100)  
 St. Petersburg, Russia (2100)  
 Moscow, Russia (2100)
