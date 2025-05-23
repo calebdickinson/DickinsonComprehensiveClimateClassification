@@ -84,8 +84,6 @@ C1 = Freezing Summer. 0 - 5
 
 Y = Frigid Summer. Below 0
 
-
-
 Here are some examples of these zones.
 
 # Ultratropical Climates (Z):
@@ -105,7 +103,7 @@ Phnom Penh, Cambodia (2100)
 Supertropical Monsoon Wasteland (AWX1):  
 Darwin, Australia (2100)
 
-Supertropical Semiarid Wasteland (ASX1):
+Supertropical Semiarid Wasteland (ASX1):  
 Chennai, India (2100)  
 Bangkok, Thailand (2100)
 
@@ -480,27 +478,44 @@ Primavera Base, Antarctica (2100)
 
 # Continental Climates (E):
 
+### Continental Very Hot Summer Climates (E-Z2):
+
+Continental Semiarid Very Hot Summer (ESZ2):  
+Fargo, North Dakota (2100)
+
 ### Continental Hot Summer Climates (E-Z1):
 
 Continental Semihumid Hot Summer (EGZ1):  
+Des Moines, Iowa (today)  
+Omaha, Nebraska (today)  
 Novosibirsk, Russia (2100)
 
-Continental Semiarid Hot Summer (EGZ1):  
+Continental Semiarid Hot Summer (ESZ1):  
+Sakastoon, Saskatchwan (2100)  
 Omsk, Russia (2100)
 
 ### Continental Very Warm Summer Climates (E-A2):
 
 Continental Humid Very Warm Summer (EHA2):  
-Madison, Wisconsin (today)
+Madison, Wisconsin (today)  
+Ottawa, Ontario, Canada (today)  
+Montreal, Quebec, Canada (today)
 
 Continental Semihumid Very Warm Summer (EGA2):  
+Milwaukee, Wisconsin (today)  
 Minneapolis, Minnesota (today)  
+Sioux Falls, South Dakota (today)  
+Fargo, North Dakota (today)  
+Jackson, Wyoming (today)  
 Almaty, Kazakhstan (today)
 
-Continental Mediterranean Very Warm Summer (EMA2):  
+Continental Monsoon Very Warm Summer (EWA2):  
+Rapid City, South Dakota (today)  
+Fairbanks, Alaska (2100)
 
 Continental Semiarid Very Warm Summer (ESA2):  
-Rexburg, Idaho (today)
+Rexburg, Idaho (today)  
+Missoula, Montana (today)
 
 ### Continental Warm Summer Climates (E-A1):
 
@@ -510,72 +525,115 @@ Lutsen, Minnesota (today)
 St. Petersburg, Russia (today)  
 Moscow, Russia (today)
 
-Continental Monsoon Warm Summer (EWA1):  
+Continental Semihumid Warm Summer (EGA1):  
+Edmonton, Alberta, Canada (today)
 
-### Continental Cool Summer Climates (E-B2):
+Continental Monsoon Warm Summer (EWA1):  
+Calgary, Alberta, Canada (today)
+
+Continental Semiarid Warm Summer (ESA1):  
+Tuktoyatuk, Northwest Territories, Canada (2100)
+
+Continental Arid Desert Warm Summer (EDA1):  
+Prodhue Bay, Alaska (2100)
+
+### Continental Cool Summer Climates (E-B2):  
 
 Continental Humid Cool Summer (EHB2):  
+Anchorage, Alaska (today)
 
-Continental Semihumid Cool Summer (EGB2):  
+Continental Monsoon Cool Summer (EWB2):  
+Lhasa, Tibet (today)  
+Wainwright, Alaska (2100)
 
-### Continental Cold Summer Climate (EB1):
+### Continental Cold Summer Climate (EB1):  
+Nome, Alaska (today)  
+Utquigvik, Alaska (2100)
 
 ### Continental Very Cold Summer Climate (EC2):  
+Davis Research Station, Antarctica (2100)  
 uninhabited areas of inland Antarctica between Concordia Research Station and Casey Research Station (2100)
 
 ### Continental Freezing Summer Climate (EC1):  
-Primavera Base, Antarctica (today)
-
-### Continental Frigid Summer Climate (EY):
+Primavera Base, Antarctica (today)  
+Casey Station, Antarctica (2100)
 
 # Subarctic Climates (F):
 
-### Subarctic Very Warm Summer Climate (FA2):  
-Novosibirsk, Russia  
-Omsk, Russia
+### Subarctic Hot Summer Climate (FZ1):  
 
-### Subarctic Warm Summer Climate (FA1):
+### Subarctic Very Warm Summer Climate (FA2):  
+Novosibirsk, Russia (today)  
+Omsk, Russia (today)  
+Winnepeg, Manitoba, Canada (today)  
+Sakastoon, Saskatchwan, Canada (today)  
+Ulaanbaatar, Mongolia (2100)
+
+### Subarctic Warm Summer Climate (FA1):  
+Fairbanks, Alaska (today)  
+Thunder Bay, Ontario, Canada (today)  
+Ulaanbaatar, Mongolia (today)
 
 ### Subarctic Cool Summer Climate (FB2):
 
 ### Subarctic Cold Summer Climate (FB1):  
+Eureka Research Station, Nunavut, Alaska (2100)  
 uninhabited areas of inland Antarctica between Concordia Research Station and Casey Research Station (2100)
 
 ### Subarctic Very Cold Summer Climate (FC2):  
+Wainwright, Alaska (today)  
+Isachsen Research Station, Nunavut, Alaska (2100)  
 uninhabited areas of inland Antarctica between Concordia Research Station and Casey Research Station (2100)
 
 ### Subarctic Freezing Summer Climate (FC1):  
+Davis Station, Antarctica (today)  
 McMurdo Research Station, Antarctica (2100)
 
-### Subarctic Frigid Summer Climate (FY):
+### Subarctic Frigid Summer Climate (FY):  
+Casey Station, Antarctica (today)
 
 # Arctic Climates (G):
 
+### Arctic Hot Summer Cimate (GZ1):  
+Yakutsk, Russia (2100)
+
+### Arctic Very Warm Summer Climate (GA2):
+
 ### Arctic Warm Summer Climate (GA1):
 
-### Arctic Cool Summer Climate (GB2):
+### Arctic Cool Summer Climate (GB2):  
+Prodhue Bay, Alaska (today)
 
 ### Arctic Cold Summer Climate (GB1):  
+Tuktoyatuk, Northwest Territories, Canada (today)  
 uninhabited areas of inland Antarctica between Concordia Research Station and Casey Research Station (2100)
 
 ### Arctic Very Cold Summer Climate (GC2):  
+Utquigvik, Alaska (today)  
 uninhabited areas of inland Antarctica between Concordia Research Station and Casey Research Station (2100)
 
-### Arctic Freezing Summer Climate (GC1):
+### Arctic Freezing Summer Climate (GC1):  
 
 ### Arctic Frigid Summer Climate (GY):  
 McMurdo Research Station, Antarctica (today)
 
 # Superarctic Climates (Y):
 
+### Superarctic Very Warm Summer Climate (YA2):  
+Yakutsk, Russia (today)
+
+### Superarctic Warm Summer Climate (YA1):
+
 ### Superarctic Cool Summer Climate (YB2):
 
 ### Superarctic Cold Summer Climate (YB1):
 
 ### Superarctic Very Cold Summer Climate (YC2):  
+Eureka Research Station, Nunavut, Canada (today)  
 Concordia Research Station, Antarctica (2100)
 
-### Superarctic Freezing Summer Climate (YC1):
+### Superarctic Freezing Summer Climate (YC1):  
+Isachsen Research Station, Nunavut, Canada (today)
 
 ### Superarctic Frigid Summer Climate (YY):  
 Concordia Research Station, Antarctica (today)
