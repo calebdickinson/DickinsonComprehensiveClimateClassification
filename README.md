@@ -228,13 +228,17 @@ Beruit, Lebanon (today)
 Los Angeles, California (2100)
 
 Tropical Desert Hot Summer (BDZ1):  
-Karachi, Pakistan (today)
+Karachi, Pakistan (today)  
+San Diego, California (2100)
 
 ### Tropical Very Warm Summer Climates (B-A2):
 
 Tropical Humid Very Warm Summer (BHA2):  
 
 Tropical Monsoon Very Warm Summer (BWA2):  
+
+Tropical Mediterranean Very Warm Summer (BMA2):  
+San Francisco, California (2100)
 
 Tropical Desert Very Warm Summer (BDA2):  
 
@@ -270,19 +274,24 @@ Pheonix, Arizona (2100)
 Subtropical Semihumid Wasteland (CGX1):  
 Cairo, Illinois (2100)
 
-Subtopical Monsoon Wasteland (CWX1):  
+Subtropical Monsoon Wasteland (CWX1):  
 Lahore, Pakistan (today)  
 Delhi, India (today)
+
+Subtropical Mediterranean Wasteland (CMX1):  
+Boise, Idaho (2100)
 
 Subtropical Semiarid Wasteland (CSX1):  
 Austin, Texas (2100)  
 Oklahoma City, Oklahoma (2100)  
-Dallas, Texas (2100)
+Dallas, Texas (2100)  
+Payson, Arizona (2100)
 
 Subtropical Desert Wasteland (CDX1):  
 Pheonix, Arizona (today)  
 Rawadi, Iraq (today)  
 Baghdad, Iraq (today)  
+St. George, Utah (2100)  
 Seville, Spain (2100)  
 Madrid, Spain (2100)  
 Tehran, Iran (2100)  
@@ -296,18 +305,30 @@ Chattanooga, Tennessee (2100)
 Subtropical Semihumid Very Hot Summer (CGZ2):  
 Austin, Texas (today)  
 Islamabad, Pakistan (today)  
+New York City, New York (2100)  
 Memphis, Tennessee (2100)  
 Carbondale, Illinois (2100)  
 Atlanta, Georgia (2100)  
-Nashville, Tennessee (2100)
+Nashville, Tennessee (2100)  
+Virginia Beach, Virginia (2100)  
+Charlotte, North Carolina (2100)  
+Jacksonville, Florida (2100)  
+Raleigh, North Carolina (2100)  
+Richmond, Virginia (2100)  
+Louisville, Kentucky (2100)  
+Philadelphia, Pennslyvania (2100)  
+Washington D.C. (2100)
 
 Subtropical Mediterranean Very Hot Summer (CMZ2):  
 Seville, Spain (today)  
 Damascus, Syria (today)  
-Rome, Italy (2100)
+Rome, Italy (2100)  
+Spokane, Washington (2100)  
+Pendleton, Oregon (2100)
 
 Subtropical Semiarid Very Hot Summer (CSZ2):  
-Venice, Italy (2100)
+Venice, Italy (2100)  
+Salt Lake City, Utah (2100)
 
 Subtropical Desert Very Hot Summer (CDZ2):  
 Las Vegas, Nevada (today)  
@@ -324,13 +345,20 @@ Zürich, Switzerland (2100)
 
 Subtropical Semihumid Hot Summer (CGZ1):  
 Houstin, Texas (today)  
-St. Augustine, Florida (today)
+St. Augustine, Florida (today)  
+Virginia Beach, Virginia (today)  
+Jacksonville, Florida (today)  
+Orlando, Florida (today)  
+Shanghai, China (today)  
+Hartford, Connecticut (2100)  
+Canberra, Australia (2100)
 
 Subtropical Meiterranean Hot Summer (CMZ1):  
 Rome, Italy (today)  
 Athens, Greece (today)  
 Jerusalem, Israel (today)  
 Seattle, Washington (2100)  
+Government Camp, Oregon (2100)  
 Istanbul, Turkey (2100)
 
 Subtropical Semiarid Hot Summer (CSZ1):   
@@ -362,6 +390,9 @@ Vancouver, British Columbia (2100)
 Subtropical Semiarid Very Warm Summer (CSA2):  
 Valencia, Spain (today)
 
+Subtropical Arid Desert Very Warm Summer (CDA2):  
+San Diego, California (today)
+
 ### Subtropical Warm Summer Climates (C-A1):  
 
 Subtropical Humid Warm Summer (CHA1):  
@@ -376,6 +407,7 @@ Paris, France (today)
 
 Subtropical Meiterranean Warm Summer (CMA1):  
 Seattle, Washington (today)  
+San Francisco, California (today)  
 Cork, Ireland (2100)  
 Haugesund, Norway (2100)
 
@@ -403,39 +435,80 @@ Kabul, Afghanistan (2100)
 Temperate Arid Desert Wasteland (DDX1):  
 Tashkent, Uzbekistan (2100)
 
-### Temperate Very Hot Summer Climates (D-Z2):
+### Temperate Very Hot Summer Climates (D-Z2):  
+
+Temperate Humid Very Hot Summer (DHZ2):  
+Boston, Massachusetts (2100)
 
 Temperate Semihumid Very Hot Summer (DGZ2):  
 Dallas, Texas (today)  
 Chicago, Illinois (2100)  
-Minneapolis, Minnesota (2100)
+Minneapolis, Minnesota (2100)  
+Des Moines, Iowa (2100)  
+Champaign, Illinois (2100)  
+Omaha, Nebraska (2100)  
+Sioux Falls, South Dakota (2100)  
+Columbus, Ohio (2100)  
+Milwaukee, Wisconsin (2100)  
+Pittsburgh, Pennslyvania (2100)  
+Indianapolis, Indiana (2100)  
+Cincinnati, Ohio (2100)  
+Kansas City, Missouri (2100)
+
+Temperate Monsoon Very Hot Summer (DWZ2):  
+Beijing, China (2100)  
+Tianjin, China (2100)
 
 Temperate Mediterranean Very Hot Summer (DMZ2):  
-Tashkent, Uzbekistan (today)
+Tashkent, Uzbekistan (today)  
+Provo, Utah (2100)
 
 Temperate Semiarid Very Hot Summer (DSZ2):  
+Denver, Colorado (2100)  
 Rexburg, Idaho (2100)  
+Rapid City, South Dakota (2100)  
+Cheyenne, Wyoming (2100)  
+Albuquerque, New Mexico (2100)  
+Santa Fe, New Mexico (2100)  
+Missoula, Montana (2100)  
 Bishkek, Kyrgyzstan (2100)
 
 Temperate Arid Desert Very Hot Summer (DDZ2):  
 Ashkabat, Turkmenistan (today)  
-Tehran, Iran (today)
+Tehran, Iran (today)  
+St. George, Utah (today)
 
 ### Temperate Hot Summer Climates (D-Z1):
 
 Temperate Humid Hot Summer (DHZ1):  
 Carbondale, Illinois (today)  
+Cincinnati, Ohio (today)  
+Philadelphia, Pennslyvania (today)  
 Memphis, Tennessee (today)  
 Chattanooga, Tennessee (today)  
 Atlanta, Georgia (today)  
 Nashville, Tennessee (today)  
 Cairo, Illinois (today)  
+Raleigh, North Carolina (today)  
+Richmond, Virginia (today)  
+Louisville, Kentucky (today)  
+Baltimore, Maryland (today)  
+Providence, Rhode Island (2100)  
 Asheville, North Carolina (2100)  
 Montreal, Quebec, Canada (2100)
 
 Temperate Semihumid Hot Summer (DGZ1):  
+St. Louis, Missouri (today)  
+Kansas City, Missouri (today)  
+Washington D.C. (today)  
+Charlotte, North Carolina (today)  
 Oklahoma City, Oklahoma (today)  
 Bishkek, Kyrgyzstan (today)  
+Xi'an, China (today)  
+Buffalo, New York (2100)  
+Cleveland, Ohio (2100)
+Jackson, Wyoming (2100)  
+Detroit, Michigan (2100)  
 Madison, Wisconsin (2100)  
 Duluth, Minnesota (2100)  
 Lutsen, Minnesota (2100)  
@@ -446,24 +519,62 @@ Edmonton, Alberta, Canada (2100)
 Calgary, Alberta, Canada (2100)  
 Kyiv, Ukraine (2100)  
 
+Temperate Monsoon Hot Summer (DWZ1):  
+Beijing, China (today)  
+Zhengzhou, China (today)  
+Tianjin, China (today)  
+Seoul, South Korea (2100)
+
 Temperate Mediterranean Hot Summer (DMZ1):  
+Boise, Idaho (today)  
 Kabul, Afghanistan (today)
 
 Temperate Semiarid Hot Summer (DSZ1):  
+Salt Lake City, Utah (today)  
+Denver, Colorado (today)  
+Payson, Arizona (today)  
+Pendleton, Oregon (today)  
+Provo, Oregon (today)  
+Flagstaff, Arizona (2100)  
 Almaty, Kazakhstan (2100)
+
+Temperate Arid Desert Hot Summer (DDZ1):  
+Albuquerque, New Mexico (today)
 
 ### Temperate Very Warm Summer Climates (D-A2):
 
 Temperate Humid Very Warm Summer (DHA2):  
 Chicago, Illinois (today)  
+Champaign, Illinois (today)  
+New York City, New York (today)  
+Boston, Massachusetts (today)  
 Toronto, Ontario, Canada (today)  
 Ashville, North Caroline (today)  
+Columbus, Ohio (today)  
+Providence, Rhode Island (today)  
+Hartford, Connecticut (today)  
+Buffalo, New York (today)  
+Pittsburgh, Pennslyvania (today)  
+Cleveland, Ohio (today)  
+Indianapolis, Indiana (today)  
 Oslo, Norway (2100)
 
 Temperate Semihumid Very Warm Summer (DGA2):  
+Detroit, Michigan (today)
 Anchorage, Alaska (2100)  
 St. Petersburg, Russia (2100)  
 Moscow, Russia (2100)
+
+Temperate Monsoon Very Warm Summer (DWA2):  
+Seoul, South Korea (today)
+
+Temperate Mediterranean Very Warm Summer (DMA2):  
+Spokane, Washington (today)
+
+Temperate Semiarid Very Warm Summer (DSA2):  
+Flagstaff, Arizona (today)  
+Cheyenne, Wyoming (today)  
+Santa Fe, New Mexico (today)
 
 ### Temperate Warm Summer Climates (D-A1):
 
@@ -479,6 +590,10 @@ Kyiv, Ukraine (today)
 Nome, Alaska (2100)
 
 Temperate Mediterranean Warm Summer (DMA1):  
+Government Camp, Oregon (today)
+
+Temperate Monsoon Warm Summer (DWA1):  
+Lhasa, Tibet (2100)
 
 ### Temperate Cool Summer Climates (D-B2):
 
@@ -486,9 +601,12 @@ Temperate Humid Cool Summer (DHB2):
 Haugesund, Norway (today)
 
 Temperate Monsoon Cool Summer (DWB2):  
+La Paz, Bolivia (today)
 
 ### Temperate Cold Summer Climate (DB1):  
+Ushuaia, Argentina (today)  
 Adak, Alaska (today)  
+Stanley, Falkland Islands (today)  
 Bird Island Research Station, South Georgia (2100)
 
 ### Temperate Very Cold Summer Climate (DC2):  
