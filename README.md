@@ -241,8 +241,14 @@ Tropical Desert Very Warm Summer (BDA2):
 ### Tropical Warm Summer Climates (B-A1):
 
 Tropical Humid Warm Summer (BHA1):  
+Edinburgh of the Seven Seas, Tristan da Cunha (2100)
 
 Tropical Desert Warm Summer (BDA1):  
+
+### Tropical Cool Summer Climates (B-B2):
+
+Tropical Humid Cool Summer (BHB2):  
+Edinburgh of the Seven Seas, Tristan da Cunha (today)
 
 # Subtropical Climates (C):
 
@@ -350,7 +356,8 @@ Subtropical Monsoon Very Warm Summer (CWA2):
 Subtropical Mediterranean Very Warm Summer (CMA2):   
 Los Angeles, California (today)  
 Istanbul, Turkey (today)  
-Cardiff, Wales (2100)
+Cardiff, Wales (2100)  
+Vancouver, British Columbia (2100)
 
 Subtropical Semiarid Very Warm Summer (CSA2):  
 Valencia, Spain (today)
@@ -360,7 +367,8 @@ Valencia, Spain (today)
 Subtropical Humid Warm Summer (CHA1):  
 Cardiff, Wales (today)  
 Edinburgh, Scotland (2100)  
-Dublin, Ireland (2100)
+Dublin, Ireland (2100)  
+Adak, Alaska (2100)
 
 Subtropical Semihumid Warm Summer (CGA1):   
 London, England (today)  
@@ -379,6 +387,7 @@ Dublin, Ireland (today)
 Edinburgh, Scotland (today)
 
 Subtropical Mediterranean Cool Summer (CMB2):  
+Vancouver, British Columbia, Canada (today)
 
 ### Subtropical Cold Summer Climate (CB1):
 
@@ -421,15 +430,21 @@ Chattanooga, Tennessee (today)
 Atlanta, Georgia (today)  
 Nashville, Tennessee (today)  
 Cairo, Illinois (today)  
-Asheville, North Carolina (2100)
+Asheville, North Carolina (2100)  
+Montreal, Quebec, Canada (2100)
 
 Temperate Semihumid Hot Summer (DGZ1):  
 Oklahoma City, Oklahoma (today)  
 Bishkek, Kyrgyzstan (today)  
+Madison, Wisconsin (2100)  
 Duluth, Minnesota (2100)  
 Lutsen, Minnesota (2100)  
-Madison, Wisconsin (2100)  
-Kyiv, Ukraine (2100)
+Thunder Bay, Ontario, Canada (2100)  
+Toronto, Ontario, Canada (2100)  
+Ottawa, Ontario, Canada (2100)  
+Edmonton, Alberta, Canada (2100)  
+Calgary, Alberta, Canada (2100)  
+Kyiv, Ukraine (2100)  
 
 Temperate Mediterranean Hot Summer (DMZ1):  
 Kabul, Afghanistan (today)
@@ -441,10 +456,12 @@ Almaty, Kazakhstan (2100)
 
 Temperate Humid Very Warm Summer (DHA2):  
 Chicago, Illinois (today)  
+Toronto, Ontario, Canada (today)  
 Ashville, North Caroline (today)  
 Oslo, Norway (2100)
 
 Temperate Semihumid Very Warm Summer (DGA2):  
+Anchorage, Alaska (2100)  
 St. Petersburg, Russia (2100)  
 Moscow, Russia (2100)
 
@@ -458,7 +475,8 @@ Zürich, Switzerland (today)
 Temperate Semihumid Warm Summer (DGA1):  
 Leipzig, Germany (today)  
 Warsaw, Poland (today)  
-Kyiv, Ukraine (today)
+Kyiv, Ukraine (today)  
+Nome, Alaska (2100)
 
 Temperate Mediterranean Warm Summer (DMA1):  
 
@@ -469,9 +487,12 @@ Haugesund, Norway (today)
 
 Temperate Monsoon Cool Summer (DWB2):  
 
-### Temperate Cold Summer Climate (DB1):
+### Temperate Cold Summer Climate (DB1):  
+Adak, Alaska (today)  
+Bird Island Research Station, South Georgia (2100)
 
 ### Temperate Very Cold Summer Climate (DC2):  
+Bird Island Research Station, South Georgia (today)
 
 ### Temperate Freezing Summer Climate (DC1):  
 Primavera Base, Antarctica (2100)
@@ -488,6 +509,7 @@ Fargo, North Dakota (2100)
 Continental Semihumid Hot Summer (EGZ1):  
 Des Moines, Iowa (today)  
 Omaha, Nebraska (today)  
+Winnepeg, Manitoba, Canada (2100)  
 Novosibirsk, Russia (2100)
 
 Continental Semiarid Hot Summer (ESZ1):  
