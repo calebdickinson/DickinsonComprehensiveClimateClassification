@@ -125,7 +125,8 @@ Kinshasa, Democratic Republic of the Congo (2100)
 
 Supertropical Semiarid Very Hot Summer (ASZ2):  
 Key West, Florida (2100)  
-Lagos, Nigeria (2100)
+Lagos, Nigeria (2100)  
+Rio de Janeiro, Brazil (2100)
 
 Supertropical Arid Desert Very Hot Summer (ADZ2):  
 Luanda, Angolda (2100)
@@ -167,7 +168,8 @@ Abu Dhabi, UAE (2100)
 Hyderabad, Pakistan (2100)  
 Lahore, Pakistan (2100)  
 Ahmedabad, India (2100)  
-Delhi, India (2100)
+Delhi, India (2100)  
+Newman, Australia (2100)
 
 ### Tropical Wasteland climates (B-X1):  
 
@@ -186,7 +188,9 @@ Hyderabad, Pakistan (today)
 Musat, Oman (2100)  
 Karachi, Pakistan (2100)  
 Cairo, Egypt (2100)  
-Beruit, Lebanon (2100)
+Beruit, Lebanon (2100)  
+Alice Springs, Australia (2100)  
+Coober Pedy, Australia (2100)
 
 ### Tropical Very Hot Summer climates (B-Z2):
 
@@ -204,7 +208,9 @@ Kolkata, India (today)
 Hyderabad, India (today)  
 Dhaka, Bangladesh (2100)  
 Hanoi, Vietnam (2100)  
-Shenzhen, China (2100)
+Shenzhen, China (2100)  
+Hong Kong (2100)  
+Chongqing, China (2100)
 
 Tropical Semiarid Very Hot Summer (BSZ2):  
 Houstin, Texas (2100)  
@@ -212,7 +218,8 @@ Fort Myers, Florida (2100)
 Bangaluru, India (2100)
 
 Tropical Arid Desert Very Hot Summer (BDZ2):  
-Musat, Oman (today)
+Musat, Oman (today)  
+Perth, Australia (2100)
 
 ### Tropical Hot Summer climates (B-Z1):
 
@@ -227,13 +234,20 @@ Fort Myers, Florida (today)
 Key West, Florida (today)  
 Tampa, Florida (today)  
 Bangaluru, India (today)  
-Luanda, Angola (today)
+Luanda, Angola (today)  
+Sydney, Australia (2100)  
+Beunos, Aires, Argentina (2100)
 
 Tropical Monsoon Hot Summer (BWZ1):  
 Mumbai, India (today)  
 Dhaka, Bangladesh (today)  
 Hanoi, Vietnam (today)  
-Shenzhen, China (today)
+Shenzhen, China (today)  
+Hong Kong (today)  
+Kinshasa, Democratic Republic of the Congo (today)  
+Darwin, Australia (today)  
+Rio de Janeiro, Brazil (today)  
+Brisbane, Australia (2100)
 
 Tropical Mediterranean Hot Summer (BMZ1):   
 Beruit, Lebanon (today)  
@@ -242,25 +256,36 @@ San Jose, California (2100)
 
 Tropical Desert Hot Summer (BDZ1):  
 Karachi, Pakistan (today)  
-San Diego, California (2100)
+San Diego, California (2100)  
+Lima, Peru (2100)  
+Adelaide, Australia (2100)
 
 ### Tropical Very Warm Summer Climates (B-A2):
 
 Tropical Humid Very Warm Summer (BHA2):  
+Cilaos, Réunion (2100)
 
-Tropical Monsoon Very Warm Summer (BWA2):  
+Tropical Semihumid Very Warm Summer (BGA2):  
+Aukland, New Zealand (2100)
 
 Tropical Mediterranean Very Warm Summer (BMA2):  
 San Francisco, California (2100)
 
-Tropical Desert Very Warm Summer (BDA2):  
+Tropical Semiarid Very Warm Summer (BSA2):  
+Cape Town, South Africa (2100)
+
+Tropical Arid Desert Very Warm Summer (BDA2):  
+Lima, Peru (today)  
+Antofagasta, Chile (2100)
 
 ### Tropical Warm Summer Climates (B-A1):
 
 Tropical Humid Warm Summer (BHA1):  
-Edinburgh of the Seven Seas, Tristan da Cunha (2100)
+Bogota, Columbia (2100)
+Edinburgh of the Seven Seas, Tristan da Cunha (2100)  
 
-Tropical Desert Warm Summer (BDA1):  
+Tropical Monsoon Warm Summer (BWA1):  
+Cilaos, Réunion (today)
 
 ### Tropical Cool Summer Climates (B-B2):
 
@@ -336,7 +361,10 @@ Philadelphia, Pennslyvania (2100)
 Washington D.C. (2100)  
 Baltimore, Maryland (2100)  
 St, Louis, Missouri (2100)  
-Osaka, Japan (2100)
+Osaka, Japan (2100)  
+Shanghai, China (2100)  
+Wuhan, China (2100)  
+Hangzhou, China (2100)
 
 Subtropical Mediterranean Very Hot Summer (CMZ2):  
 Seville, Spain (today)  
@@ -346,12 +374,20 @@ Rome, Italy (2100)
 Spokane, Washington (2100)  
 Pendleton, Oregon (2100)
 
+Subtropical Monsoon Very Hot Summer (CWZ2):  
+Chengdu, China (2100)  
+Zhengzhou, China (2100)
+
 Subtropical Semiarid Very Hot Summer (CSZ2):  
 Venice, Italy (2100)  
-Salt Lake City, Utah (2100)
+Salt Lake City, Utah (2100)  
+Xi'an, China (2100)
 
 Subtropical Desert Very Hot Summer (CDZ2):  
 Las Vegas, Nevada (today)  
+Coober Pedy, Australia (today)  
+Alice Springs, Australia (today)  
+Newman, Australia (today)  
 Valencia, Spain (2100)  
 Athens, Greece (2100)  
 Damascus, Syria (2100)  
@@ -364,6 +400,9 @@ Subtropical Humid Hot Summer (CHZ1):
 New Orleans, Louisiana (today)  
 Osaka, Japan (today)  
 Tokyo, Japan (today)  
+Chongqing, China (today)  
+Wuhan, China (today)  
+Hangzhou, China (today)  
 Tokyo, Japan (2100)  
 Zürich, Switzerland (2100)
 
@@ -378,7 +417,9 @@ Hartford, Connecticut (2100)
 Canberra, Australia (2100)
 
 Subtropical Monsoon Hot Summer (CWZ1):  
-Katmandu, Nepal (2100)
+Katmandu, Nepal (2100)  
+Mexico City, Mexico (2100)  
+Johannesberg, South Africa (2100)
 
 Subtropical Meiterranean Hot Summer (CMZ1):  
 Rome, Italy (today)  
@@ -391,22 +432,24 @@ Istanbul, Turkey (2100)
 
 Subtropical Semiarid Hot Summer (CSZ1):   
 Madrid, Spain (today)  
+Perth, Australia (today)  
+Melbourne, Austrailia (2100)  
 Leipzig, Germany (2100)  
 Paris, France (2100)  
 Warsaw, Poland (2100)
 
 Subtropical Desert Hot Summer (CDZ1):  
 Cairo, Egypt (today)  
-Riverside, California (today)
+Riverside, California (today)  
+Santiago, Chile (2100)
 
 ### Subtropical Very Warm Summer Climates (C-A2):
-
-Subtropical Humid Very Warm Summer (CHA2):  
 
 Subtropical Semihumid Very Warm Summer (CGA2):   
 Venice, Italy (today)  
 Sydney, Australia (today)  
 Melbourne, Australia (today)  
+Beunos Aires, Argentina (today)  
 Amsterdam, the Netherlands (2100)  
 London, England (2100)
 
@@ -414,18 +457,23 @@ Subtropical Monsoon Very Warm Summer (CWA2):
 Katmandu, Nepal (today)  
 Chengdu, China (today)  
 Johannesberg, South Africa (today)  
-Brisbane, Australia (today)
+Brisbane, Australia (today)  
+Mexico City, Mexico (today)  
+La Paz, Bolivia (2100)
 
 Subtropical Mediterranean Very Warm Summer (CMA2):   
 Los Angeles, California (today)  
 Portland, Oregon (today)  
 San Jose, California (today)  
 Istanbul, Turkey (today)  
+Santiago, Chile (today)  
+Cape Town, South Africa (today)  
 Cardiff, Wales (2100)  
 Vancouver, British Columbia (2100)
 
 Subtropical Semiarid Very Warm Summer (CSA2):  
-Valencia, Spain (today)
+Valencia, Spain (today)  
+Adelaide, Australia (today)
 
 Subtropical Arid Desert Very Warm Summer (CDA2):  
 San Diego, California (today)
@@ -449,12 +497,17 @@ San Francisco, California (today)
 Cork, Ireland (2100)  
 Haugesund, Norway (2100)
 
+Subtropical Arid Desert Warm Summer (CDA1):  
+Antofagasta, Chile (today)
+
 ### Subtropical Cool Summer Climates (C-B2):
 
 Subtropical Humid Cool Summer (CHB2):  
 Cork, Ireland (today)  
 Dublin, Ireland (today)  
 Edinburgh, Scotland (today)  
+Bagota, Columbia (today)  
+Ushuaia, Argentina (2100)
 
 Subtropical Semihumid Cool Summer (CGB2):  
 Stanley, Falkland Islands (2100)
