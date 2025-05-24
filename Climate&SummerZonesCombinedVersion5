@@ -153,28 +153,6 @@ Map.addLayer(
   0.6
 );
 
-// ——— LEGEND ———
-function addLegend(palette, codes, title, position) {
-  var legend = ui.Panel();
-  legend.style().set({
-    position:        position,
-    padding:         '8px 15px',
-    backgroundColor: 'rgba(255,255,255,0.8)'
-  });
-  legend.add(ui.Label(title, {fontWeight:'bold'}));
-  codes.forEach(function(code, i) {
-    var box   = ui.Label('', {
-      backgroundColor: palette[i],
-      padding:         '8px',
-      margin:          '0 4px 0 0'
-    });
-    var label = ui.Label(code.toString(), {margin: '0 0 0 4px'});
-    legend.add(ui.Panel([box, label], ui.Panel.Layout.Flow('horizontal')));
-  });
-  ui.root.add(legend);
-}
-addLegend(palette, codes, 'w*10 + c code', 'bottom-right');
-
 // ——— INFO PANEL & CLICK ———
 var info = ui.Panel({
   style: {
@@ -183,9 +161,9 @@ var info = ui.Panel({
     backgroundColor: 'rgba(255,255,255,0.8)'
   }
 });
-info.add(ui.Label('Click map → warm & cold codes'));
+info.add(ui.Label('Click map for classification'));
 var wLbl = ui.Label(), cLbl = ui.Label(), combLbl = ui.Label();
-info.add(wLbl).add(cLbl).add(combLbl);
+info.add(cLbl).add(wLbl).add(combLbl);
 ui.root.add(info);
 
 var summerLetters = {
@@ -200,25 +178,18 @@ var coldLetters = {
 
 Map.onClick(function(coords) {
   var pt = ee.Geometry.Point([coords.lon, coords.lat]);
-  warmComb.reduceRegion({
-    reducer: ee.Reducer.first(),
-    geometry: pt,
-    scale: 10000
-  }).get('warmZone').evaluate(function(w) {
-    wLbl.setValue('Warm: ' + (summerLetters[w]||'') + ' (' + w + ')');
-  });
   coldComb.reduceRegion({
     reducer: ee.Reducer.first(),
     geometry: pt,
     scale: 10000
   }).get('coldZone').evaluate(function(c) {
-    cLbl.setValue('Cold: ' + (coldLetters[c]||'') + ' (' + c + ')');
+    cLbl.setValue('Climate: ' + (coldLetters[c]||''));
   });
-  combined.reduceRegion({
+  warmComb.reduceRegion({
     reducer: ee.Reducer.first(),
     geometry: pt,
     scale: 10000
-  }).get('combinedZone').evaluate(function(x) {
-    combLbl.setValue('Combined code: ' + x);
+  }).get('warmZone').evaluate(function(w) {
+    wLbl.setValue('Summer: ' + (summerLetters[w]||''));
   });
 });
