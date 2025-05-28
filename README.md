@@ -1,3 +1,7 @@
+DICKINSON COMPREHENSIVE CLIMATE CLASSIFICATION SYSTEM
+
+(Note: to run code, open two Earth Engine Code Editor windows and paste the most up to date versions, AllVersionsTogetherVersion_2, and 2100AllVersionsTogetherVersion_2 seperately in New Script boxes of each of the windows. Click the "run" button)
+
 This is a new climate classification inspired by the Koppen system.
 
 It is generally more granular and includes more edge cases than the Koppen system.
