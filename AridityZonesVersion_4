@@ -1,6 +1,7 @@
-// -----------------------------------
-// 1. LOAD & PREP 2000 HISTORICAL DATA
-// -----------------------------------
+// ----------------------------------------------------
+// 1. LOAD & PREP 2000 to 2005 RANGE OF HISTORICAL DATA
+// ----------------------------------------------------
+
 var hist2000 = ee.ImageCollection('NASA/NEX-GDDP')
     .filter(ee.Filter.eq('scenario', 'historical'))
     .filter(ee.Filter.eq('model',    'ACCESS1-0'))
