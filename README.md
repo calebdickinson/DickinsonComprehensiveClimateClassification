@@ -96,6 +96,12 @@ S = Semiarid
 
 D = Arid Desert
 
+The differences in ratios between mediterranean and monsoon may seem strange until you consider that evaporation rates are higher in the warmer months, therefore, the reason for a difference between these ratios (and their corresponding vegetation zones) is intuitive if you really think about it.
+
+It is possible that aridity zone ratios may be further refined in the future; a more scientific examination of vegatation may require fine tuning.
+
+On the other hand, climate zones and zummer zones are unlikely to be changed in the future; due to their root in Celsius and thus their categorizations being simple and intuitive percentages of the difference between the freezing and boiling temperatures of water.
+
 Aridity does not appear to be relevant to the classification of climates that fall withiin subarctic, arctic, superarctic, cold summer, very cold summer, freezing summer, or frigid summer zones.
 
 Climate classifications that fall within these zones are not measured by aridity.
