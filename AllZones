@@ -175,18 +175,30 @@ for(var w=1; w<=11; w++){
 // LABEL LOOKUPS
 // ————————————————————————
 var summerLetters = {
-  1:'X2 (Extreme Hyperthermal)',   2:'X1 (Extreme Hyperthermal)',
-  3:'Z2 (Hyperthermal)',          4:'Z1 (Scorching)',
-  5:'A2 (Very Hot)',              6:'A1 (Hot)',
-  7:'B2 (Mild)',                  8:'B1 (Cool)',
-  9:'C2 (Very Cool)',            10:'C1 (Freezing)',
-  11:'Y (Frigid)',                0:''
+  1:'X2 (Extreme Hyperthermal Summer)',
+  2:'X1 (Extreme Hyperthermal)',
+  3:'Z2 (Hyperthermal Summer)',
+  4:'Z1 (Scorching Hot Summer)',
+  5:'A2 (Very Hot Summer)',
+  6:'A1 (Hot Summer)',
+  7:'B2 (Mild Summer)',
+  8:'B1 (Cold Summer)',
+  9:'C2 (Very Cold Summer)',
+  10:'C1 (Freezing Summer)',
+  11:'Y (Frigid Summer)',
+  0:''
 };
 
 var coldLetters = {
-   2:'Z (Ultratropical)', 3:'A (Supertropical)',4:'B (Tropical)',
-   5:'C (Subtropical)',   6:'D (Temperate)',    7:'E (Continental)',
-   8:'F (Subarctic)',     9:'G (Arctic)',      10:'Y (Superarctic)',
+   2:'Z (Ultratropical)',
+   3:'A (Supertropical)',
+   4:'B (Tropical)',
+   5:'C (Subtropical)',
+   6:'D (Temperate)',
+   7:'E (Continental)',
+   8:'F (Subarctic)',
+   9:'G (Arctic)',
+   10:'Y (Superarctic)',
    0:''
 };
 
@@ -251,46 +263,59 @@ var info = ui.Panel({
 info.add(ui.Label('Click map for classification', {fontWeight: 'bold'}));
 
 // Create the three value labels
-var summerLbl  = ui.Label('Summer: —'),
-    winterLbl  = ui.Label('Winter: —'),
-    aridityLbl = ui.Label('Aridity: —');
+var summerLbl  = ui.Label(''),
+    winterLbl  = ui.Label(''),
+    aridityLbl = ui.Label('');
 
 // Add each to the panel in turn
 info.add(ui.Label(''));           // spacer
-info.add(summerLbl);
 info.add(winterLbl);
 info.add(aridityLbl);
+info.add(summerLbl);
 
 ui.root.add(info);
 
-// Patched click handler: write to those labels
+// Patched click handler: write to those labels, only lookup aridity where validMask is true
 Map.onClick(function(coords) {
   var pt = ee.Geometry.Point([coords.lon, coords.lat]);
 
-  // Summer
+  // 1) Summer lookup
   warmComb.reduceRegion({
     reducer: ee.Reducer.first(),
     geometry: pt,
     scale: 10000
   }).get('warmZone').evaluate(function(w) {
-    summerLbl.setValue('Summer: ' + (summerLetters[w] || ''));
+    summerLbl.setValue(summerLetters[w] || '');
   });
 
-  // Winter
+  // 2) Winter lookup
   coldComb.reduceRegion({
     reducer: ee.Reducer.first(),
     geometry: pt,
     scale: 10000
   }).get('coldZone').evaluate(function(c) {
-    winterLbl.setValue('Winter: ' + (coldLetters[c] || ''));
+    winterLbl.setValue(coldLetters[c] || '');
   });
 
-  // Aridity (only defined where validMask is true)
-  clim2000_flip.reduceRegion({
+  // 3) Aridity: first check validMask (renamed to "mask")
+  validMask.rename('mask').reduceRegion({
     reducer: ee.Reducer.first(),
     geometry: pt,
     scale: 10000
-  }).get('climateClass').evaluate(function(a) {
-    aridityLbl.setValue('Aridity: ' + (aridityLetters[a] || ''));
+  }).get('mask').evaluate(function(inZone) {
+    if (inZone) {
+      // a) inside aridity domain → fetch actual class
+      clim2000_flip.reduceRegion({
+        reducer: ee.Reducer.first(),
+        geometry: pt,
+        scale: 10000
+      }).get('climateClass').evaluate(function(a) {
+        aridityLbl.setValue(aridityLetters[a] || '');
+      });
+    } else {
+      // b) outside aridity domain → clear or mark N/A
+      aridityLbl.setValue('');
+    }
   });
 });
+
