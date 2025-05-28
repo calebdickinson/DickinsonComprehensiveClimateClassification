@@ -182,9 +182,9 @@ info.add(cLbl).add(wLbl).add(combLbl);
 ui.root.add(info);
 
 var summerLetters = {
-  1:'X2 (Extreme Hyperthermal Wasteland)',
-  2:'X1 (Extreme Hyperthermal Wasteland)',
-  3:'Z2 (Hyperthermal Wasteland)',
+  1:'X2 (Extreme Hyperthermal Summer)',
+  2:'X1 (Extreme Hyperthermal Summer)',
+  3:'Z2 (Hyperthermal Summer)',
   4:'Z1 (Scorching Hot Summer)',
   5:'A2 (Very Hot Summer)',
   6:'A1 (Hot Summer)',
