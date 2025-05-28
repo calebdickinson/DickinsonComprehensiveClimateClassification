@@ -60,21 +60,17 @@ Climate classifications that fall within these zones are not measured by aridity
 
 The third letter measures the severity of the summers by measuring the average temperature of the warmest month in Celsius.
 
-X3, X4,... et cetera = Extreme Wasteland. 50+ (hypothetical)
+X1, X2, X3,... et cetera = Extreme Hyperthermal Wasteland. 40+
 
-X2 = Extreme Wasteland. 45 - 50
+Z2 = Hyperthermal Wasteland. 35 - 40
 
-X1 = Wasteland. 40 - 45
+Z1 = Scorching Hot Summer. 30 - 35
 
-Z2 = Very Hot Summer. 35 - 40
+A2 = Very Hot Summer. 25 - 30
 
-Z1 = Hot Summer. 30 - 35
+A1 = Hot Summer. 20 - 25
 
-A2 = Very Warm Summer. 25 - 30
-
-A1 = Warm Summer. 20 - 25
-
-B2 = Cool Summer. 15 - 20
+B2 = Mild Summer. 15 - 20
 
 B1 = Cold summer. 10 - 15
 
