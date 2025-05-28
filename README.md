@@ -2,7 +2,7 @@
 
 # How to run the code
 
-To run code, open two Earth Engine Code Editor windows.
+To run the code, open two Earth Engine Code Editor windows.
 
 Paste the full code of the the most up to date versions, AllVersionsTogetherVersion_2, and 2100AllVersionsTogetherVersion_2 seperately in New Script boxes of each of the windows.
 
@@ -10,7 +10,7 @@ Click the "run" button.
 
 This will generate a current climate map and a map of the climate as it is projected to be in the year 2100 given NASA's RCP8.5 "business as usual" global warming/climate change projections.
 
-All locations on the maps are organized and color-coded according to the Dickinson Comprehensive Climate Classification System, which is explained below in the README.
+All locations on the maps are organized and color-coded according to the Dickinson Comprehensive Climate Classification System, which is explained below in this README.
 
 Clicking on any location of the map will result in the climate classification being shown directly below the "Click map for classification" on the bottom right.
 
@@ -18,7 +18,9 @@ Some of these functionalities and category displays may take some time to load.
 
 You can also filter by climate codes using the bottom right dropdown menu.
 
-Anyone with a basic knowledge of programming could make their own versions of the code by editing to add more cities to the cityList that is displayed in the graph to the top right.
+A graph to the top right displays selected cities, organized by climate classification.
+
+Anyone with a basic knowledge of programming could make their own versions of the code by editing to add more cities to the cityList that is displayed in this graph.
 
 As of this writing, the cityList begins on line 411 of 2100AllVersionsTogetherVersion_2 and line 365 of AllVersionsTogetherVersion_2.
 
@@ -109,8 +111,6 @@ C2 = Very Cold Summer. 5 - 10
 C1 = Freezing Summer. 0 - 5
 
 Y = Frigid Summer. Below 0
-
-
 
 
 
