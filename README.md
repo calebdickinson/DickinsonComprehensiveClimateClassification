@@ -1,4 +1,4 @@
-# DICKINSON COMPREHENSIVE CLIMATE CLASSIFICATION SYSTEM
+# DICKINSON CLIMATE CLASSIFICATION
 
 # How to run the code
 
@@ -28,7 +28,11 @@ Keep in mind that due to the limitations of the resolution of the data, some sma
 
 If a different range of years are desired, some simple editing of the first couple lines of the code will generate those years instead, if they are included in the NASA/NEX-GDDP or ECMWF/ERA5 datasets.
 
-# The Dickinson Comprehensive Climate Classification System explained
+Disclaimer: artificial intelligence (Chat-GPT) was used to help generate some of the code.
+
+However, the idea for the climate system and the methods of categorization, as far as they differ from the Koppen system, are entirely original.
+
+# The Dickinson Climate Classification explained
 
 This is a new climate classification inspired by the Koppen system.
 
@@ -72,6 +76,12 @@ Y = Superarctic. Below -40
 
 The second letter measures aridity zones.
 
+Aridity zones are measured using evapotraspiration, and thresholds had to be manually adjusted to match the boundaries of vegetation zones.
+
+In the future, a more scientifically and specifically defined aridity calculation may be available. 
+
+In the meantime, further information on the specifics of the aridity calculations may be found my examining my code and figuring out how it works.
+
 In my system, the lettering of the aridity zones is as follows:
 
 H = Humid
@@ -111,6 +121,8 @@ C2 = Very Cold Summer. 5 - 10
 C1 = Freezing Summer. 0 - 5
 
 Y = Frigid Summer. Below 0
+
+Programmers and others are encouraged to find uses for this system and to make their own software programs, visualisations, or spin offs of this one based on the Dickinson Climate Classification, as long as Caleb Dickinson is acknowledged as the creater of this system and the system is appropriately titled the Dickison Climate Classification.
 
 
 
