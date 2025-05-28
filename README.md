@@ -30,7 +30,7 @@ If a different range of years are desired, some simple editing of the first coup
 
 Disclaimer: artificial intelligence (Chat-GPT) was used to help generate some of the code.
 
-However, the idea for the climate system and the methods of categorization, as far as they differ from the Koppen system, are entirely original.
+However, the idea for the climate system, and the methods of categorization, as far as they differ from the Koppen system, are entirely original.
 
 # The Dickinson Climate Classification explained
 
