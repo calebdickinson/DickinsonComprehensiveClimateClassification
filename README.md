@@ -1,28 +1,32 @@
-DICKINSON COMPREHENSIVE CLIMATE CLASSIFICATION SYSTEM
+#DICKINSON COMPREHENSIVE CLIMATE CLASSIFICATION SYSTEM
 
-// Note: to run code, open two Earth Engine Code Editor windows.
+#How to run the code
 
-// Paste the full code of the the most up to date versions, AllVersionsTogetherVersion_2, and 2100AllVersionsTogetherVersion_2 seperately in New Script boxes of each of the windows.
+To run code, open two Earth Engine Code Editor windows.
 
-// Click the "run" button.
+Paste the full code of the the most up to date versions, AllVersionsTogetherVersion_2, and 2100AllVersionsTogetherVersion_2 seperately in New Script boxes of each of the windows.
 
-// This will generate a current climate map and a map of the climate as it is projected to be in the year 2100 given NASA's RCP8.5 "business as usual" global warming/climate change projections.
+Click the "run" button.
 
-// All locations on the maps are organized and color-coded according to the Dickinson Comprehensive Climate Classification System, which is explained below in the README.
+This will generate a current climate map and a map of the climate as it is projected to be in the year 2100 given NASA's RCP8.5 "business as usual" global warming/climate change projections.
 
-// Clicking on any location of the map will result in the climate classification being shown directly below the "Click map for classification" on the bottom right.
+All locations on the maps are organized and color-coded according to the Dickinson Comprehensive Climate Classification System, which is explained below in the README.
 
-// Some of these functionalities and category displays may take some time to load.
+Clicking on any location of the map will result in the climate classification being shown directly below the "Click map for classification" on the bottom right.
 
-// You can also filter by climate codes using the bottom right dropdown menu.
+Some of these functionalities and category displays may take some time to load.
 
-// Anyone with a basic knowledge of programming could make their own versions of the code by editing to add more cities to the cityList that is displayed in the graph to the top right.
+You can also filter by climate codes using the bottom right dropdown menu.
 
-// As of this writing, the cityList begins on line 411 of 2100AllVersionsTogetherVersion_2 and line 365 of AllVersionsTogetherVersion_2.
+Anyone with a basic knowledge of programming could make their own versions of the code by editing to add more cities to the cityList that is displayed in the graph to the top right.
 
-// Keep in mind that due to the limitations of the resolution of the data, some small remote islands and/or extremely mountainous areas may not be exactly rendered according to their true classification.
+As of this writing, the cityList begins on line 411 of 2100AllVersionsTogetherVersion_2 and line 365 of AllVersionsTogetherVersion_2.
 
-// If a different range of years are desired, some simple editing of the first couple lines of the code will generate those years instead, if they are included in the NASA/NEX-GDDP or ECMWF/ERA5 datasets.
+Keep in mind that due to the limitations of the resolution of the data, some small remote islands and/or extremely mountainous areas may not be exactly rendered according to their true classification.
+
+If a different range of years are desired, some simple editing of the first couple lines of the code will generate those years instead, if they are included in the NASA/NEX-GDDP or ECMWF/ERA5 datasets.
+
+#The Dickinson Comprehensive Climate Classification System explained
 
 This is a new climate classification inspired by the Koppen system.
 
