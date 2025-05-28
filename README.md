@@ -46,7 +46,7 @@ This could be useful in the future as humans continue to warm the earth with fos
 
 This system, being more generally more granular in many ways than the Koppen, better illustrates the differences between each of the new extreme climates we will see in the future.
 
-This could even have importance in determining habitability in high emissions (in other words, realistic) warming scenarios.
+This could even have importance in determining habitability in high emissions (business as usual) warming scenarios.
 
 This system also, because of its edge cases, illustrates some intresting climate factors that may not be obvious on the Koppen.
 
