@@ -1,68 +1,91 @@
-// ----------------------------------------------------
-// 1. LOAD & PREP 2000 to 2005 RANGE OF HISTORICAL DATA
-// ----------------------------------------------------
+// ======================================
+// 1. LOAD & PREP 2100 RCP8.5 GLOBAL DATA
+// ======================================
 
-// ERA5 Monthly Mean 2m Air Temps (°C), limited to 2000–2005 inclusive
-var era5 = ee.ImageCollection('ECMWF/ERA5/MONTHLY')
-  .filterDate('2000-01-01', '2005-12-31')
-  .select('mean_2m_air_temperature')
+var future = ee.ImageCollection('NASA/NEX-GDDP')
+  .filter(ee.Filter.eq('scenario', 'rcp85'))
+  .filter(ee.Filter.calendarRange(2100, 2100, 'year'));
+
+// Convert tasmax and tasmin from Kelvin to Celsius
+var tasmax = future.select('tasmax')
   .map(function(img) {
     return img
       .subtract(273.15)
-      .rename('tempC')
-      .set('system:time_start', img.get('system:time_start'));
+      .rename('tasmaxC')
+      .copyProperties(img, ['system:time_start']);
+  });
+var tasmin = future.select('tasmin')
+  .map(function(img) {
+    return img
+      .subtract(273.15)
+      .rename('tasminC')
+      .copyProperties(img, ['system:time_start']);
   });
 
-// Monthly climatology (12-month average per pixel)
+// ===========================================
+// 2. BUILD MONTHLY MEANS BY AVERAGING TASMAX/TASMIN
+// ===========================================
 var months = ee.List.sequence(1, 12);
 var monthlyMeans = ee.ImageCollection(
   months.map(function(m) {
-    var monthly = era5
+    var maxMean = tasmax
       .filter(ee.Filter.calendarRange(m, m, 'month'))
       .mean();
-    return monthly.set('month', m).rename('tempC');
+    var minMean = tasmin
+      .filter(ee.Filter.calendarRange(m, m, 'month'))
+      .mean();
+    // daily‐mean → monthly‐mean
+    return maxMean.add(minMean)
+                  .divide(2)
+                  .rename('monthlyMean')
+                  .set('month', m);
   })
 );
 
-// Warmest and coldest monthly mean temperature per pixel
-var hottestC_global = monthlyMeans
-  .qualityMosaic('tempC')
-  .select('tempC')
+// ==================================================
+// 3. EXTRACT HOTTEST‐MONTH AND COLDEST‐MONTH RASTERS
+// ==================================================
+
+// Hottest‐month: pick the image with the highest monthlyMean at each pixel
+var hottestC_future = monthlyMeans
+  .qualityMosaic('monthlyMean')
+  .select('monthlyMean')
   .rename('hottestC');
 
-var coldestC_global = monthlyMeans
+// Coldest‐month: invert, mosaic, then invert back
+var coldestC_future = monthlyMeans
   .map(function(img) {
     return img.multiply(-1).copyProperties(img);
   })
-  .qualityMosaic('tempC')
+  .qualityMosaic('monthlyMean')
   .multiply(-1)
-  .select('tempC')
+  .select('monthlyMean')
   .rename('coldestC');
 
-
-
-
 // ===========================================
-// 2. CLASSIFY WARM & COLD (Celsius bins)
+// 4. CLASSIFY WARM & COLD (Celsius bins)
 // ===========================================
 function classifySummer(tC) {
   return ee.Image.constant(0)
-    .where( tC.gte(45).and(tC.lte(50)), 1)  // X2: 45–50 °C
-    .where( tC.gte(40).and(tC.lt(45)),  2)  // X1: 40–45 °C
-    .where( tC.gte(35).and(tC.lt(40)),  3)  // Z2: 35–40 °C
-    .where( tC.gte(30).and(tC.lt(35)),  4)  // Z1: 30–35 °C
-    .where( tC.gte(25).and(tC.lt(30)),  5)  // A2: 25–30 °C
-    .where( tC.gte(20).and(tC.lt(25)),  6)  // A1: 20–25 °C
-    .where( tC.gte(15).and(tC.lt(20)),  7)  // B2: 15–20 °C
-    .where( tC.gte(10).and(tC.lt(15)),  8)  // B1: 10–15 °C
-    .where( tC.gte(5).and(tC.lt(10)),   9)  // C2: 5–10 °C
-    .where( tC.gte(0).and(tC.lt(5)),   10)  // C1: 0–5 °C
-    .where( tC.lt(0),                  11)  // Y:  < 0 °C
+    .where( tC.gte(55).and(tC.lte(60)), 1)  // X4: 55-60 °C
+    .where( tC.gte(50).and(tC.lte(55)), 2)  // X3: 50-55 °C
+    .where( tC.gte(45).and(tC.lte(50)), 3)  // X2: 45–50 °C
+    .where( tC.gte(40).and(tC.lt(45)),  4)  // X1: 40–45 °C
+    .where( tC.gte(35).and(tC.lt(40)),  5)  // Z2: 35–40 °C
+    .where( tC.gte(30).and(tC.lt(35)),  6)  // Z1: 30–35 °C
+    .where( tC.gte(25).and(tC.lt(30)),  7)  // A2: 25–30 °C
+    .where( tC.gte(20).and(tC.lt(25)),  8)  // A1: 20–25 °C
+    .where( tC.gte(15).and(tC.lt(20)),  9)  // B2: 15–20 °C
+    .where( tC.gte(10).and(tC.lt(15)), 10)  // B1: 10–15 °C
+    .where( tC.gte(5).and(tC.lt(10)),  11)  // C2: 5–10 °C
+    .where( tC.gte(0).and(tC.lt(5)),   12)  // C1: 0–5 °C
+    .where( tC.lt(0),                  13)  // Y:  < 0 °C
     .rename('warmZone');
 }
 
 function classifyCold(tC) {
   return ee.Image.constant(0)
+    .where(tC.gte(40).and(tC.lt(50)),   1)  // Z2: 40–50 °C
     .where(tC.gte(30).and(tC.lt(40)),   2)  // Z: 30–40 °C
     .where(tC.gte(20).and(tC.lt(30)),   3)  // A: 20–30 °C
     .where(tC.gte(10).and(tC.lt(20)),   4)  // B: 10–20 °C
@@ -75,13 +98,12 @@ function classifyCold(tC) {
     .rename('coldZone');
 }
 
-var warmComb = classifySummer(hottestC_global);
-var coldComb = classifyCold(coldestC_global);
-
+var warmComb = classifySummer(hottestC_future);
+var coldComb = classifyCold(coldestC_future);
 
 
 // ===========================================
-// 3. BUILD COMBINED CODE & RAINBOW PALETTE
+// 5. BUILD COMBINED CODE & RAINBOW PALETTE
 // ===========================================
 var combined = warmComb.multiply(10)
     .add(coldComb)
@@ -126,36 +148,9 @@ for (var w = 1; w <= 11; w++) {
 
 
 // ===========================================
-// 4. DISPLAY & UI
+// 6. DISPLAY & UI
 // ===========================================
 Map.setCenter(0, 20, 2);
-// ——— FILTER MENU ———
-var selectLabel = ui.Label('Show only one climate code:');
-var codeList = ['All'].concat(codes.map(String));
-var dropdown = ui.Select({
-  items: codeList,
-  value: 'All',
-  onChange: function(val) {
-    var layer = Map.layers().get(0);
-    if (val === 'All') {
-      layer.setOpacity(0.6);
-      layer.setEeObject(combined);
-    } else {
-      var selectedCode = parseInt(val, 10);
-      var filtered = combined.updateMask(combined.eq(selectedCode));
-      layer.setOpacity(0.9);
-      layer.setEeObject(filtered);
-    }
-  }
-});
-var menuPanel = ui.Panel([selectLabel, dropdown], ui.Panel.Layout.flow('vertical'));
-menuPanel.style().set({
-  position: 'top-right',
-  padding: '8px',
-  backgroundColor: 'rgba(255,255,255,0.8)'
-});
-ui.root.add(menuPanel);
-
 Map.addLayer(
   combined,
   {
@@ -178,24 +173,27 @@ var info = ui.Panel({
 });
 info.add(ui.Label('Click map for classification'));
 var wLbl = ui.Label(), cLbl = ui.Label(), combLbl = ui.Label();
-info.add(cLbl).add(wLbl).add(combLbl);
+info.add(wLbl).add(cLbl).add(combLbl);
 ui.root.add(info);
 
 var summerLetters = {
-  1:'X2 (Extreme Hyperthermal Summer)',
-  2:'X1 (Extreme Hyperthermal Summer)',
-  3:'Z2 (Hyperthermal Summer)',
-  4:'Z1 (Scorching Hot Summer)',
-  5:'A2 (Very Hot Summer)',
-  6:'A1 (Hot Summer)',
-  7:'B2 (Mild Summer)',
-  8:'B1 (Cold Summer)',
-  9:'C2 (Very Cold Summer)',
-  10:'C1 (Freezing Summer)',
-  11:'Y (Frigid Summer)',
-  12:''
+  1: 'X4 (Extreme Hyperthermal Summer)',
+  2: 'X3 (Extreme Hyperthermal Summer)',
+  3:'X2 (Extreme Hyperthermal Summer)',
+  4:'X1 (Extreme Hyperthermal Summer)',
+  5:'Z2 (Hyperthermal Summer)',
+  6:'Z1 (Scorching Hot Summer)',
+  7:'A2 (Very Hot Summer)',
+  8:'A1 (Hot Summer)',
+  9:'B2 (Mild Summer)',
+  10:'B1 (Cold Summer)',
+  11:'C2 (Very Cold Summer)',
+  12:'C1 (Freezing Summer)',
+  13:'Y (Frigid Summer)', 
+  14:''
 };
 var coldLetters = {
+  1: 'Z2 (Uninhabitable)',
   2:'Z (Ultratropical)',
   3:'A (Supertropical)',
   4:'B (Tropical)',
