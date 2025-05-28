@@ -84,7 +84,7 @@ var P_ann2000    = monthlyClim2000.select('pr' ).sum().rename('P_ann'),
                      .where(ee.Image.pixelLonLat().select('latitude').lt(0).and(clim2000.eq(5)),4);
 
 // --------------------------------------------------
-// 2. CLASSIFY WARM & COLD (exactly as before)
+// 2. CLASSIFY CLIMATE AND SUMMER ZONES
 // --------------------------------------------------
 function classifySummer(tC) {
   return ee.Image.constant(0)
