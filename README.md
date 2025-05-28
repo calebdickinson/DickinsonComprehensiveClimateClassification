@@ -60,7 +60,7 @@ Climate classifications that fall within these zones are not measured by aridity
 
 The third letter measures the severity of the summers by measuring the average temperature of the warmest month in Celsius.
 
-X1, X2, X3,... et cetera = Extreme Hyperthermal Summer. 40+
+X1, X2, X3,... et cetera = Extreme Hyperthermal Summer. 40+ (X3 and above are hypothetical climates)
 
 Z2 = Hyperthermal Summer. 35 - 40
 
