@@ -1,6 +1,6 @@
-// ————————————————————————
+// -------------------------------
 // 1. LOAD & PREP 2100 FUTURE DATA
-// ————————————————————————
+// -------------------------------
 var future2100 = ee.ImageCollection('NASA/NEX-GDDP')
     .filter(ee.Filter.eq('scenario','rcp85'))
     .filter(ee.Filter.calendarRange(2100,2100,'year'));
@@ -14,9 +14,9 @@ var tminDaily = future2100.select('tasmin');
 var months   = ee.List.sequence(1,12);
 var daysList = ee.List([31,28,31,30,31,30,31,31,30,31,30,31]);
 
-// ————————————————————————
+// -----------------------------------------------
 // 2. COMPUTE MONTHLY CLIMATOLOGY, PET & MEAN TEMP
-// ————————————————————————
+// -----------------------------------------------
 var monthlyClim2100 = ee.ImageCollection(
   months.map(function(m) {
     m = ee.Number(m);
@@ -44,15 +44,15 @@ var monthlyClim2100 = ee.ImageCollection(
   })
 );
 
-// ————————————————————————
+// ------------------------
 // 3. SUM TO ANNUAL P & PET
-// ————————————————————————
+// ------------------------
 var P_ann2100   = monthlyClim2100.select('pr' ).sum().rename('P_ann');
 var PET_ann2100 = monthlyClim2100.select('pet').sum().rename('PET_ann');
 
-// ————————————————————————
+// ------------------------------------------
 // 4. EXTRACT HOTTEST & COLDEST MONTHLY MEANS
-// ————————————————————————
+// ------------------------------------------
 var hottestC_global = monthlyClim2100
   .qualityMosaic('tmeanC')
   .select('tmeanC')
@@ -65,16 +65,16 @@ var coldestC_global = monthlyClim2100
   .multiply(-1)
   .rename('coldestC');
 
-// ————————————————————————
+// --------------------------------------------------
 // 5. BUILD VALIDITY MASK
 //    Only where coldest ≥ –20 °C AND hottest ≥ 15 °C
-// ————————————————————————
+// --------------------------------------------------
 var validMask = coldestC_global.gte(-20)
                   .and(hottestC_global.gte(15));
 
-// ————————————————————————
+// -----------------------------
 // 6. ARIDITY INDEX & BASE CLASS
-// ————————————————————————
+// -----------------------------
 var AI2100 = P_ann2100.divide(PET_ann2100).rename('AI');
 
 var arid2100 = ee.Image(3)
