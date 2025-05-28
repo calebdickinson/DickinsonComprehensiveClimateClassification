@@ -1,6 +1,6 @@
-#DICKINSON COMPREHENSIVE CLIMATE CLASSIFICATION SYSTEM
+# DICKINSON COMPREHENSIVE CLIMATE CLASSIFICATION SYSTEM
 
-#How to run the code
+# How to run the code
 
 To run code, open two Earth Engine Code Editor windows.
 
@@ -26,7 +26,7 @@ Keep in mind that due to the limitations of the resolution of the data, some sma
 
 If a different range of years are desired, some simple editing of the first couple lines of the code will generate those years instead, if they are included in the NASA/NEX-GDDP or ECMWF/ERA5 datasets.
 
-#The Dickinson Comprehensive Climate Classification System explained
+# The Dickinson Comprehensive Climate Classification System explained
 
 This is a new climate classification inspired by the Koppen system.
 
