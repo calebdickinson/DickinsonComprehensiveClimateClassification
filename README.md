@@ -132,54 +132,54 @@ Programmers and others are encouraged to find uses for this system and to make t
 
 # Ultratropical Climates (Z):
 
-## Ultratropical Scorching Hot Summer climates (Z-Z1):
+### Ultratropical Scorching Hot Summer climates (Z-Z1):
 
-### Ultratropical Humid Scorching Hot Summer: (ZHZ1):  
+Ultratropical Humid Scorching Hot Summer: (ZHZ1):  
 
 # Supertropical Climates (A):
 
-## Supertropical Extreme Hyperthermal Summer climates (A-X1):
+### Supertropical Extreme Hyperthermal Summer climates (A-X1):
 
-### Supertropical Semihumid Extreme Hyperthermal Summer (AGX1):  
+Supertropical Semihumid Extreme Hyperthermal Summer (AGX1):  
 
-### Supertropical Monsoon Extreme Hyperthermal Summer (AWX1):  
+Supertropical Monsoon Extreme Hyperthermal Summer (AWX1):  
 
-### Supertropical Semiarid Extreme Hyperthermal Summer (ASX1):  
+Supertropical Semiarid Extreme Hyperthermal Summer (ASX1):  
 
-## Supertropical Hyperthermal Summer climates (A-Z2):
+### Supertropical Hyperthermal Summer climates (A-Z2):
 
-### Supertropical Humid Hyperthermal Summer (AHZ2):  
+Supertropical Humid Hyperthermal Summer (AHZ2):  
 
-### Supertropical Semihumid Hyperthermal Summer (AGZ2):  
+Supertropical Semihumid Hyperthermal Summer (AGZ2):  
 
-### Supertropical Monsoon Hyperthermal Summer (AWZ2):  
+Supertropical Monsoon Hyperthermal Summer (AWZ2):  
 
-### Supertropical Semiarid Hyperthermal Summer (ASZ2):  
+Supertropical Semiarid Hyperthermal Summer (ASZ2):  
 
-### Supertropical Arid Desert Hyperthermal Summer (ADZ2):  
+Supertropical Arid Desert Hyperthermal Summer (ADZ2):  
 
-## Supertropical Scorching Hot Summer climates (A-Z1):
+### Supertropical Scorching Hot Summer climates (A-Z1):
 
-### Supertropical Humid Scorching Hot Summer (AHZ1):  
+Supertropical Humid Scorching Hot Summer (AHZ1):  
 
-### Supertropical Semihumid Scorching Hot Summer (AGZ1):  
+Supertropical Semihumid Scorching Hot Summer (AGZ1):  
 Bangkok, Thailand	(today)  
 Ho Chi Minh City, Vietnam	(today)  
 Chennai, India	(today)  
 Phnom Penh, Cambodia	(today)  
 Managua, Nicaragua	(today)  
 
-### Supertropical Monsoon Scorching Hot Summer (AWZ1):  
+Supertropical Monsoon Scorching Hot Summer (AWZ1):  
 Ouagadougou, Burkina Faso	(today)  
 Bamako, Mali	(today)  
 Naypyidaw, Myanmar	(today)  
 Abuja, Nigeria	(today)  
 
-### Supertropical Semiarid Scorching Hot Summer (ASZ1):  
+Supertropical Semiarid Scorching Hot Summer (ASZ1):  
 Hyderabad, India	(today)  
 Juba, South Sudan	(today)
 
-### Supertropical Arid Desert Scorching Hot Summer (ADZ1):  
+Supertropical Arid Desert Scorching Hot Summer (ADZ1):  
 N'Djamena, Chad	(today)  
 Djibouti, Djibouti	(today)  
 Niamey, Niger	(today)  
@@ -187,9 +187,9 @@ Muscat, Oman	(today)
 Khartoum, Sudan	(today)  
 Abu Dhabi, United Arab Emirates	(today)  
 
-## Supertropial Very Hot Summer climates (A-A2):
+### Supertropial Very Hot Summer climates (A-A2):
 
-### Supertropical Humid Very Hot Summer (AHA2):  
+Supertropical Humid Very Hot Summer (AHA2):  
 Manila, Philippines	(today)  
 Kuala Lumpur, Malaysia	(today)  
 San Juan, PR	(today)  
@@ -381,7 +381,7 @@ Austin, TX	(today)
 
 Tropical Arid Desert Very Hot Summer (BDA2):
 
-![pyramids](https://github.com/calebdickinson/DickinsonComprehensiveClimateClassification/blob/main/images/pyramids.jpg)
+<img src="images/pyramids.jpg" alt="Pyramids" style="width: 100%; max-width: 400px;"/>
 
 Cairo, Egypt	(today)  
 Amman, Jordan	(today)  
