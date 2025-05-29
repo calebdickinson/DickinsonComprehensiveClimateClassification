@@ -1,4 +1,4 @@
- ----------------------------------------------------
+// ----------------------------------------------------
 //1. LOAD & PREP 2100 RCP8.5 DATA
 // ----------------------------------------------------
 
@@ -846,7 +846,24 @@ var cityList = [
   { name: 'Rexburg, ID',                         lon: -111.78389,   lat:  43.82611 },
   { name: 'Carbondale, IL',                      lon:  -89.22030,   lat:  37.72640 },
   { name: 'Champaign, IL',                       lon:  -88.24361,   lat:  40.11639 },
-  { name: 'Ushuaia, Argentina',                  lon:  -68.30306,   lat: -54.80194 }
+  { name: 'Ushuaia, Argentina',                  lon:  -68.30306,   lat: -54.80194 },
+  { name: 'Macquarie Island Research Station', lon: 158.938889, lat: -54.498889 },
+  { name: 'Bird Island Research Station',      lon: -38.049722,  lat: -54.000000 },
+  { name: 'Duluth, MN', lon: -92.1065778, lat: 46.7832722 },
+  { name: 'Lutsen, MN', lon: -90.67472,   lat: 47.64722   },
+  { name: 'Edinburgh of the Seven Seas', lon: -12.3116, lat: -37.0676 },
+  { name: 'Adak, AK', lon: -176.636, lat: 51.872 },
+  { name: 'Davis Research Station, Antarctica', lon: 77.9688, lat: -68.5763 },
+  { name: 'Concordia Research Station, Antarctica', lon: 123.35,    lat: -75.10   },
+  { name: 'Casey Research Station, Antarctica',     lon: 110.52708, lat: -66.28258 },
+  { name: 'Ulaanbaatar, Mongolia',            lon: 106.918556,   lat: 47.921230 },
+  { name: 'Thunder Bay, ON',                  lon: -89.246109,   lat: 48.382221 },
+  { name: 'Isachsen Research Station, NU',    lon: -103.493163,  lat: 78.776497 },
+  { name: 'Tuktoyaktuk, NT',  lon: -133.02639,  lat:  69.43333 },
+  { name: 'Prudhoe Bay, AK',  lon: -148.46138,  lat:  70.200523 },
+  { name: 'Wainwright, AK',   lon: -160.0097,   lat:  70.6417 },
+  { name: 'Utqiagvik, AK',    lon: -156.788605, lat:  71.290558 },
+  { name: 'Yakutsk, Russia',  lon:  129.7331,   lat:  62.0339 }
 ];
 
 // (b) Build mapping of code → human-readable labels
@@ -955,7 +972,7 @@ var table = ui.Chart.feature.byFeature({
 .setChartType('Table')
 .setOptions({
   title:    'City Climate Classifications',
-  pageSize: 10,
+  pageSize: 455,
   hAxis:    { title: 'City' },
   vAxis:    { title: 'Classification' }
 });
