@@ -534,7 +534,7 @@ Reykjavík, Iceland  (2100)
 Ushuaia, Argentina (2100)
 
 ### Subtropical Very Cold Summer Climate (CC2):  
-<img src="images/MacquarieIsland.png"/>
+<img src="images/MacquarieIsland.jpg"/>
 
 Adak, AK (today)  
 Macquarie Island Research Station (today)  
