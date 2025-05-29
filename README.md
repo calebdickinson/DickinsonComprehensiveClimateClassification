@@ -4,7 +4,7 @@
 
 To run the code, open two Earth Engine Code Editor windows.
 
-Paste the full code of the the most up to date versions, AllVersionsTogetherVersion_2, and 2100AllVersionsTogetherVersion_2 seperately in New Script boxes of each of the windows.
+Paste the full code of the the most up to date versions, AllVersionsTogether.js and 2100AllVersionsTogether.js seperately in New Script boxes of each of the windows.
 
 Click the "run" button.
 
@@ -22,7 +22,7 @@ A graph to the top right displays selected cities, organized by climate classifi
 
 Anyone with a basic knowledge of programming could make their own versions of the code by editing to add more cities to the cityList that is displayed in this graph.
 
-As of this writing, the cityList begins on line 411 of 2100AllVersionsTogetherVersion_2 and line 365 of AllVersionsTogetherVersion_2.
+As of this writing, the cityList begins on line 411 of 2100AllVersionsTogether.js and line 372 of AllVersionsTogether.js.
 
 Keep in mind that due to the limitations of the resolution of the data, some small remote islands and/or extremely mountainous areas may not be exactly rendered according to their true classification.
 
