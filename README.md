@@ -584,30 +584,133 @@ Temperate Arid Desert Scorching Hot Summer (DDZ1):
 Temperate Humid Very Hot Summer (DHA2):  
 
 Temperate Semihumid Very Hot Summer (DGA2):  
+St. Louis, MO–IL	D (Temperate), G (Semihumid), A2 (Very Hot Summer)
+Kansas City, MO–KS	D (Temperate), G (Semihumid), A2 (Very Hot Summer)
+Salt Lake City, UT	D (Temperate), G (Semihumid), A2 (Very Hot Summer)
+Topeka, KS	D (Temperate), G (Semihumid), A2 (Very Hot Summer)
+Jefferson City, MO	D (Temperate), G (Semihumid), A2 (Very Hot Summer)
+Lincoln, NE	D (Temperate), G (Semihumid), A2 (Very Hot Summer)
 
 Temperate Monsoon Very Hot Summer (DWA2):  
-
-Temperate Mediterranean Very Hot Summer (DMA2):  
+Seoul–Incheon, South Korea	D (Temperate), W (Monsoon), A2 (Very Hot Summer)
+Beijing, China	D (Temperate), W (Monsoon), A2 (Very Hot Summer)
+Tianjin, China	D (Temperate), W (Monsoon), A2 (Very Hot Summer)
 
 Temperate Semiarid Very Hot Summer (DSA2):  
+Pierre, SD	D (Temperate), S (Semiarid), A2 (Very Hot Summer)
+
+Temperate Arid Desert Very Hot Summer (DDA2):  
+Tehran, Iran	D (Temperate), D (Arid Desert), A2 (Very Hot Summer)
 
 ### Temperate Hot Summer Climates (D-A1):
 
 Temperate Humid Hot Summer (DHA1):  
+New York, United States	D (Temperate), H (Humid), A1 (Hot Summer)
+Chicago, United States	D (Temperate), H (Humid), A1 (Hot Summer)
+Philadelphia, PA–NJ–DE–MD	D (Temperate), H (Humid), A1 (Hot Summer)
+Boston, MA–NH	D (Temperate), H (Humid), A1 (Hot Summer)
+Baltimore, MD	D (Temperate), H (Humid), A1 (Hot Summer)
+Pittsburgh, PA	D (Temperate), H (Humid), A1 (Hot Summer)
+Cleveland, OH	D (Temperate), H (Humid), A1 (Hot Summer)
+Indianapolis, IN	D (Temperate), H (Humid), A1 (Hot Summer)
+Cincinnati, OH–KY	D (Temperate), H (Humid), A1 (Hot Summer)
+Columbus, OH	D (Temperate), H (Humid), A1 (Hot Summer)
+Providence, RI–MA	D (Temperate), H (Humid), A1 (Hot Summer)
+Hartford, CT	D (Temperate), H (Humid), A1 (Hot Summer)
+Buffalo, NY	D (Temperate), H (Humid), A1 (Hot Summer)
+Augusta, ME	D (Temperate), H (Humid), A1 (Hot Summer)
+Concord, NH	D (Temperate), H (Humid), A1 (Hot Summer)
+Trenton, NJ	D (Temperate), H (Humid), A1 (Hot Summer)
+Albany, NY	D (Temperate), H (Humid), A1 (Hot Summer)
+Harrisburg, PA	D (Temperate), H (Humid), A1 (Hot Summer)
+Madison, WI	D (Temperate), H (Humid), A1 (Hot Summer)
+Zagreb, Croatia	D (Temperate), H (Humid), A1 (Hot Summer)
+Hamilton, ON	D (Temperate), H (Humid), A1 (Hot Summer)
+Champaign, IL	D (Temperate), H (Humid), A1 (Hot Summer)
 
 Temperate Semihumid Hot Summer (DGA1):  
-
-Temperate Mediterranean Hot Summer (DMA1):  
+Moscow, Russia	D (Temperate), G (Semihumid), A1 (Hot Summer)
+Detroit, MI	D (Temperate), G (Semihumid), A1 (Hot Summer)
+Minneapolis–St. Paul, MN	D (Temperate), G (Semihumid), A1 (Hot Summer)
+Milwaukee, WI	D (Temperate), G (Semihumid), A1 (Hot Summer)
+Springfield, IL	D (Temperate), G (Semihumid), A1 (Hot Summer)
+Des Moines, IA	D (Temperate), G (Semihumid), A1 (Hot Summer)
+Lansing, MI	D (Temperate), G (Semihumid), A1 (Hot Summer)
+Santa Fe, NM	D (Temperate), G (Semihumid), A1 (Hot Summer)
+Kabul, Afghanistan	D (Temperate), G (Semihumid), A1 (Hot Summer)
+Vienna, Austria	D (Temperate), G (Semihumid), A1 (Hot Summer)
+Budapest, Hungary	D (Temperate), G (Semihumid), A1 (Hot Summer)
+Pristina, Kosovo	D (Temperate), G (Semihumid), A1 (Hot Summer)
+Skopje, North Macedonia	D (Temperate), G (Semihumid), A1 (Hot Summer)
+Bratislava, Slovakia	D (Temperate), G (Semihumid), A1 (Hot Summer)
+Kyiv, Ukraine	D (Temperate), G (Semihumid), A1 (Hot Summer)
+Toronto, ON	D (Temperate), G (Semihumid), A1 (Hot Summer)
+Mississauga, ON	D (Temperate), G (Semihumid), A1 (Hot Summer)
+Brampton, ON	D (Temperate), G (Semihumid), A1 (Hot Summer)
 
 Temperate Monsoon Hot Summer (DWA1):  
+Pyongyang, North Korea	D (Temperate), W (Monsoon), A1 (Hot Summer)
+
+Temperate Mediterranean Hot Summer (DMA1):  
+Boise, ID	D (Temperate), M (Mediterranean), A1 (Hot Summer)
+Carson City, NV	D (Temperate), M (Mediterranean), A1 (Hot Summer)
+
+Temperate Semiarid Hot Summer (DSA1): 
+Denver–Aurora, CO	D (Temperate), S (Semiarid), A1 (Hot Summer)
+Cheyenne, WY	D (Temperate), S (Semiarid), A1 (Hot Summer)
+Yerevan, Armenia	D (Temperate), S (Semiarid), A1 (Hot Summer)
+Tbilisi, Georgia	D (Temperate), S (Semiarid), A1 (Hot Summer)
+Bishkek, Kyrgyzstan	D (Temperate), S (Semiarid), A1 (Hot Summer)
+Chișinău, Moldova	D (Temperate), S (Semiarid), A1 (Hot Summer)
+Bucharest, Romania	D (Temperate), S (Semiarid), A1 (Hot Summer)
+Ankara, Turkey	D (Temperate), S (Semiarid), A1 (Hot Summer)
+Rexburg, ID	D (Temperate), S (Semiarid), A1 (Hot Summer)
 
 ### Temperate Mild Summer Climates (D-B2):
 
-Temperate Mild Summer (DHB2):  
+Temperate Humid Mild Summer (DHB2):  
+Sarajevo, Bosnia and Herzegovina	D (Temperate), H (Humid), B2 (Mild Summer)
+Vaduz, Liechtenstein	D (Temperate), H (Humid), B2 (Mild Summer)
+Oslo, Norway	D (Temperate), H (Humid), B2 (Mild Summer)
+Ljubljana, Slovenia	D (Temperate), H (Humid), B2 (Mild Summer)
+Saint-Pierre, Saint-Pierre & Miquelon (FR)	D (Temperate), H (Humid), B2 (Mild Summer)
+Halifax, NS	D (Temperate), H (Humid), B2 (Mild Summer)
+Cape Breton Regional Municipality, NS	D (Temperate), H (Humid), B2 (Mild Summer)
+Truro, NS	D (Temperate), H (Humid), B2 (Mild Summer)
+New Glasgow, NS	D (Temperate), H (Humid), B2 (Mild Summer)
+Amherst, NS	D (Temperate), H (Humid), B2 (Mild Summer)
+Moncton, NB	D (Temperate), H (Humid), B2 (Mild Summer)
+Saint John, NB	D (Temperate), H (Humid), B2 (Mild Summer)
+Dieppe, NB	D (Temperate), H (Humid), B2 (Mild Summer)
+St. John's, NL	D (Temperate), H (Humid), B2 (Mild Summer)
+Conception Bay South, NL	D (Temperate), H (Humid), B2 (Mild Summer)
+Mount Pearl, NL	D (Temperate), H (Humid), B2 (Mild Summer)
+Paradise, NL	D (Temperate), H (Humid), B2 (Mild Summer)
+Corner Brook, NL	D (Temperate), H (Humid), B2 (Mild Summer)
+Charlottetown, PE	D (Temperate), H (Humid), B2 (Mild Summer)
+Andorra la Vella, Andorra (today)
 
-Temperate Monsoon Mild Summer (DWB2):  
+Temperate Semihumid Mild Summer (DGB2):  
+Minsk, Belarus	D (Temperate), G (Semihumid), B2 (Mild Summer)
+Sofia, Bulgaria	D (Temperate), G (Semihumid), B2 (Mild Summer)
+Prague, Czech Republic	D (Temperate), G (Semihumid), B2 (Mild Summer)
+Tallinn, Estonia	D (Temperate), G (Semihumid), B2 (Mild Summer)
+Helsinki, Finland	D (Temperate), G (Semihumid), B2 (Mild Summer)
+Riga, Latvia	D (Temperate), G (Semihumid), B2 (Mild Summer)
+Vilnius, Lithuania	D (Temperate), G (Semihumid), B2 (Mild Summer)
+Warsaw, Poland	D (Temperate), G (Semihumid), B2 (Mild Summer)
+Stockholm, Sweden	D (Temperate), G (Semihumid), B2 (Mild Summer)
+Calgary, AB	D (Temperate), G (Semihumid), B2 (Mild Summer)
+
+Temperate Mediterranean Mild Summer (DMB2):  
+Dushanbe, Tajikistan	D (Temperate), M (Mediterranean), B2 (Mild Summer)
+
+Temperate Semiarid Mild Summer (DSB2):  
+Helena, MT	D (Temperate), S (Semiarid), B2 (Mild Summer)
+Lethbridge, AB	D (Temperate), S (Semiarid), B2 (Mild Summer)
 
 ### Temperate Cold Summer Climate (DB1):  
+Anchorage, AK (today)  
 Thimphu, Bhutan (today)  
 Reykjavík, Iceland (today)  
 Kalifornsky, AK (today)  
@@ -631,43 +734,54 @@ Primavera Research Station, Antarctica (today)
 
 # Continental Climates (E):
 
-### Continental Hyperthermal Summer Climates (E-Z2):
-
-Continental Semiarid Hyperthermal Summer (ESZ2):  
-
-### Continental Scorching Hot Summer Climates (E-Z1):
-
-Continental Semihumid Scorching Hot Summer (EGZ1):  
-
-Continental Semiarid Scorching Hot Summer (ESZ1):  
-
-### Continental Very Hot Summer Climates (E-A2):
-
-Continental Humid Very Hot Summer (EHA2):  
-
-Continental Semihumid Very Hot Summer (EGA2):  
-
-Continental Monsoon Very Hot Summer (EWA2):  
-
-Continental Semiarid Very Hot Summer (ESA2):  
-
 ### Continental Hot Summer Climates (E-A1):
 
 Continental Humid Hot Summer (EHA1):  
-
-Continental Semihumid Hot Summer (EGA1):  
-
-Continental Monsoon Hot Summer (EWA1):  
-
-Continental Semiarid Hot Summer (ESA1):  
-
-Continental Arid Desert Hot Summer (EDA1):  
+Ottawa, Canada	(today)  
+Ottawa, ON	(today)  
+Montreal, QC	(today)  
+Laval, QC	(today)  
+Gatineau, QC	(today)  
+Longueuil, QC	(today)  
 
 ### Continental Mild Summer Climates (E-B2):  
 
 Continental Humid Mild Summer (EHB2):  
+Montpelier, VT	(today)  
+Quebec City, QC	(today)  
+Fredericton, NB	(today)  
+Miramichi, NB	(today)  
+Duluth, MN	(today)  
+Lutsen, MN	(today)  
+Thunder Bay, ON	(today)  
+
+Continental Semihumid Mild Summer (EGB2):  
+Edmonton, AB	(today)  
+Red Deer, AB	(today)  
+St. Albert, AB	(today)  
+Winnipeg, MB	(today)  
+Brandon, MB	(today)  
+Steinbach, MB	(today)  
+Portage la Prairie, MB	(today)  
+Saskatoon, SK	(today)  
+Regina, SK	(today)  
+Prince Albert, SK	(today)  
+Moose Jaw, SK	(today)  
+Swift Current, SK	(today)  
+Knik-Fairview, AK	(today)  
+Novosibirsk, Russia	(today)  
+Krasnoyarsk, Russia	(today)  
+Omsk, Russia	(today)  
 
 Continental Monsoon Mild Summer (EWB2):  
+Fairbanks, AK	(today)  
+Badger, AK	(today)  
+Steele Creek, AK	(today)  
+
+Continental Semiarid Mild Summer (ESB2):  
+Astana, Kazakhstan	(today)  
+College, AK	(today)  
+Chena Ridge, AK	(today)  
 
 ### Continental Cold Summer Climate (EB1):  
 BETHEL IN SUMMER
@@ -678,6 +792,11 @@ BETHEL IN WINTER
 
 Meadow Lakes, AK (today)  
 Bethel, AK (today)  
+North Lakes, AK	(today)  
+Wasilla, AK	(today)  
+Tanaina, AK	(today)  
+Palmer, AK	(today)  
+Gateway, AK	(today)  
 Iqaluit, NU (2100)  
 Igloolik, NU (2100)  
 Qikiqtarjuaq, NU (2100)  
