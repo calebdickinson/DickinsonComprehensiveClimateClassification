@@ -163,141 +163,30 @@ Supertropical Arid Desert Hyperthermal Summer (ADZ2):
 Supertropical Humid Scorching Hot Summer (AHZ1):  
 
 Supertropical Semihumid Scorching Hot Summer (AGZ1):  
-Bangkok, Thailand	(today)  
-Ho Chi Minh City, Vietnam	(today)  
-Chennai, India	(today)  
-Phnom Penh, Cambodia	(today)  
-Managua, Nicaragua	(today)  
 
 Supertropical Monsoon Scorching Hot Summer (AWZ1):  
-Ouagadougou, Burkina Faso	(today)  
-Bamako, Mali	(today)  
-Naypyidaw, Myanmar	(today)  
-Abuja, Nigeria	(today)  
 
 Supertropical Semiarid Scorching Hot Summer (ASZ1):  
-Hyderabad, India	(today)  
-Juba, South Sudan	(today)
 
 Supertropical Arid Desert Scorching Hot Summer (ADZ1):  
-N'Djamena, Chad	(today)  
-Djibouti, Djibouti	(today)  
-Niamey, Niger	(today)  
-Muscat, Oman	(today)  
-Khartoum, Sudan	(today)  
-Abu Dhabi, United Arab Emirates	(today)  
 
 ### Supertropial Very Hot Summer climates (A-A2):
 
 Supertropical Humid Very Hot Summer (AHA2):  
-Manila, Philippines	(today)  
-Kuala Lumpur, Malaysia	(today)  
-San Juan, PR	(today)  
-St. John's, Antigua and Barbuda	(today)  
-Bandar Seri Begawan, Brunei	(today)  
-Moroni, Comoros	(today)  
-Roseau, Dominica	(today)  
-Malabo, Equatorial Guinea	(today)  
-Palikir, Federated States of Micronesia	(today)  
-Georgetown, Guyana	(today)  
-Kingston, Jamaica	(today)  
-Monrovia, Liberia	(today)  
-Majuro, Marshall Islands	(today)  
-Ngerulmud, Palau	(today)  
-Port Moresby, Papua New Guinea	(today)  
-Basseterre, Saint Kitts and Nevis	(today)  
-Apia, Samoa	(today)  
-São Tomé, São Tomé and Príncipe	(today)  
-Honiara, Solomon Islands (today)  
-Sri Jayawardenepura Kotte, Sri Lanka	(today)  
-Nukuʻalofa, Tonga	(today)  
-Funafuti, Tuvalu	(today)  
-Port Vila, Vanuatu	(today)  
-Brades, Montserrat (UK)	(today)  
-Pago Pago, American Samoa (US)	(today)  
-Hagåtña, Guam (US)	(today)  
-Saipan, Northern Mariana Islands (US)	(today)  
-Charlotte Amalie, U.S. Virgin Islands (US)	(today)  
-San Juan, Puerto Rico (US)	(today)  
-Mata-Utu, Wallis & Futuna (FR)	(today)  
-Avarua, Cook Islands (NZ)	(today)  
-Alofi, Niue (NZ)	(today)  
-Nukunonu, Tokelau (NZ)	(today)  
 
 Supertropical Semihumid Very Hot Summer (AGA2):  
-Lagos, Nigeria	(today)  
-Honolulu, HI	(today)  
-Nassau, Bahamas	(today)  
-Bridgetown, Barbados	(today)  
-Belmopan, Belize	(today)  
-Yaoundé, Cameroon	(today)  
-Bangui, Central African Republic	(today)  
-Yamoussoukro, Côte d'Ivoire	(today)  
-Havana, Cuba	(today)  
-Santo Domingo, Dominican Republic	(today)  
-St. George's, Grenada	(today)  
-Port-au-Prince, Haiti	(today)  
-Tarawa, Kiribati	(today)  
-Malé, Maldives	(today)  
-Yaren, Nauru	(today)  
-Panama City, Panama	(today)  
-Kingstown, Saint Vincent and the Grenadines	(today)  
-Singapore, Singapore	(today)  
-Paramaribo, Suriname	(today)  
-Port of Spain, Trinidad and Tobago	(today)  
-The Valley, Anguilla (UK)	(today)  
-Road Town, British Virgin Islands (UK)	(today)  
-Adamstown, Pitcairn Islands (UK)	(today)  
-Philipsburg, Sint Maarten (NL)	(today)  
 
 Supertropical Monsoon Very Hot Summer (AWA2):  
-Jakarta, Indonesia	(today)  
-Mumbai, India	(today)  
-Kinshasa, DR Congo	(today)  
-Brazzaville, Congo	(today)  
-San Salvador, El Salvador	(today)  
-Suva, Fiji	(today)  
-Banjul, Gambia	(today)  
-Conakry, Guinea	(today)  
-Bissau, Guinea-Bissau	(today)  
-Vientiane, Laos	(today)  
-Port Louis, Mauritius	(today)  
-Dakar, Senegal	(today)  
-Victoria, Seychelles	(today)  
-Freetown, Sierra Leone	(today)  
-Dodoma, Tanzania	(today)  
-Dili, Timor-Leste	(today)  
-Papeete, French Polynesia (FR)	(today)  
-Libreville, Gabon	(today)  
 
 Supertropical Semiarid Very Hot Summer (ASA2):  
-Bangalore, India	(today)  
-Porto-Novo, Benin	(today)  
-Accra, Ghana	(today)  
-Castries, Saint Lucia	(today)  
-Lomé, Togo	(today)  
-Oranjestad, Aruba (NL)	(today)  
-Kralendijk, Bonaire (NL)	(today)  
-The Bottom, Saba (NL)	(today)  
-Oranjestad, Sint Eustatius (NL)	(today)  
 
 Supertropical Arid Desert Very Hot Summer (ADA2):  
-Karachi, Pakistan	(today)  
-Luanda, Angola	(today)  
-Praia, Cabo Verde	(today)  
-Nouakchott, Mauritania	(today)  
-Mogadishu, Somalia	(today)  
-George Town, Cayman Islands (UK)	(today)  
-Cockburn Town, Turks & Caicos (UK)	(today)  
-Willemstad, Curaçao (NL)	(today)  
 
 ### Supertropial Hot Summer climates (A-A1):
 
 Supertropical Semihumid Hot Summer (AGA1):  
-Caracas, Venezuela (today)
 
 Supertropical Monsoon Hot Summer (AWA1):  
-Brasília, Brazil (today)
 
 # Tropical Climates (B):
 
@@ -318,10 +207,6 @@ Tropical Monsoon Hyperthermal Summer (BWZ2):
 Tropical Semiarid Hyperthermal Summer (BSZ2):  
 
 Tropical Arid Desert Hyperthermal Summer (BDZ2):  
-Phoenix–Mesa–Scottsdale, AZ	(today)  
-Baghdad, Iraq	(today)  
-Kuwait City, Kuwait	(today)  
-Riyadh, Saudi Arabia	(today)  
 
 ### Tropical Scorching Hot Summer climates (B-Z1):
 
@@ -330,125 +215,49 @@ Tropical Humid Scorching Hot Summer (BHZ1):
 Tropical Semihumid Scorching Hot Summer (BGZ1):  
 
 Tropical Monsoon Scorching Hot Summer (BWZ1):  
-Delhi, India	(today)  
-Kolkata, India	(today)  
-Lahore, Pakistan	(today)  
 
 Tropical Mediterranean Scorching Hot Summer (BMZ1):   
 
 Tropical Desert Scorching Hot Summer (BDZ1):  
-Manama, Bahrain	(today)  
-Nicosia, Cyprus	(today)  
-Doha, Qatar	(today)  
 
 ### Tropical Very Hot Summer Climates (B-A2):
 
 Tropical Humid Very Hot Summer (BHA2):  
-Taipei, Taiwan	(today)  
-Nouméa, New Caledonia (FR)	(today)  
 
 Tropical Semihumid Very Hot Summer (BGA2):  
-Miami–Fort Lauderdale, FL	(today)  
-Houston, TX	(today)  
-Tampa–St. Petersburg, FL	(today)  
-Orlando, FL	(today)  
-Jacksonville, FL	(today)  
-New Orleans, LA	(today)  
-Tallahassee, FL	(today)  
-Baton Rouge, LA	(today)  
-Hamilton, Bermuda (UK)	(today)  
 
 Tropical Monsoon Very Hot Summer (BWA2):  
-Guangzhou–Foshan, China	(today)  
-Dhaka, Bangladesh	(today)  
-Shenzhen, China	(today)  
-Rio de Janeiro, Brazil	(today)  
-Dongguan, China	(today)  
-Gaborone, Botswana	(today)  
-Maputo, Mozambique	(today)  
-Asunción, Paraguay	(today)  
-Hanoi, Vietnam	(today)  
 
 Tropical Mediterranean Very Hot Summer (BMA2):  
-Algiers, Algeria	(today)  
-Jerusalem, Israel	(today)  
-Beirut, Lebanon	(today)  
-Tunis, Tunisia	(today)  
 
 Tropical Semiarid Very Hot Summer (BSA2):  
-San Antonio, TX	(today)  
-Austin, TX	(today)  
 
 Tropical Arid Desert Very Hot Summer (BDA2):
 
 <img src="images/pyramids.jpg"/>  
 
-Cairo, Egypt	(today)  
-Amman, Jordan	(today)  
-Tripoli, Libya	(today)  
-Valletta, Malta	(today)  
-Melilla, Melilla (ES)	(today)  
-
 ### Tropical Hot Summer Climates (B-A1):
 
 Tropical Humid Hot Summer (BHA1):  
-San José, Costa Rica	(today)  
-Kingston, Norfolk Island (AU)	(today)  
 
 Tropical Semihumid Hot Summer (BGA1):  
-Buenos Aires, Argentina	(today)  
-Tegucigalpa, Honduras	(today)  
-Nairobi, Kenya	(today)  
-Kampala, Uganda	(today)  
-Montevideo, Uruguay	(today)  
-Hanga Roa, Easter Island (CL)	(today)  
 
 Tropical Monsoon Hot Summer (BWA1):  
-São Paulo, Brazil	(today)  
-Gitega, Burundi	(today)  
-Asmara, Eritrea	(today)  
-Antananarivo, Madagascar	(today)  
-Lilongwe, Malawi	(today)  
-Sana'a, Yemen	(today)  
-Lusaka, Zambia	(today)  
-Harare, Zimbabwe	(today)  
 
 Tropical Mediterranean Hot Summer (BMA1):  
-Los Angeles, United States	(today)  
-Riverside–San Bernardino, CA	(today)  
-Rabat, Morocco	(today)  
-Lisbon, Portugal	(today)  
-Gibraltar, Gibraltar (UK)	(today)  
-Ceuta, Ceuta (ES)	(today)  
-Ponta Delgada, Azores (PT)	(today)  
-Funchal, Madeira (PT)	(today)  
 
 Tropical Semiarid Hot Summer (BSA1):  
-Jamestown, St Helena (UK) (today)  
 
 Tropical Arid Desert Hot Summer (BDA1):  
-Lima, Peru	(today)  
-San Diego, CA	(today)  
-Windhoek, Namibia	(today)  
 
 ### Tropical Mild Summer Climates (B-B2):
 
 Tropical Humid Mild Summer (BHB2):  
-Guatemala City, Guatemala	(today)  
-Wellington, New Zealand	(today)  
-Edinburgh of the Seven Seas (today)  
-Bogotá, Colombia (today)
 
 Tropical Semihumid Mild Summer (BGB2):  
 <img src="images/Ruwenpflanzen.jpg"/>
 
-Kigali, Rwanda (today)  
-Cape Town, South Africa (today)
-
 Tropical Monsoon Mild Summer (BWB2):  
-Mexico City, Mexico (today)  
-Mbabane, Eswatini (today)  
-Addis Ababa, Ethiopia (today)
 
 ### Tropical Cold Summer Climate (BB1):  
 Quito, Ecuador (today)  
@@ -584,130 +393,34 @@ Temperate Arid Desert Scorching Hot Summer (DDZ1):
 Temperate Humid Very Hot Summer (DHA2):  
 
 Temperate Semihumid Very Hot Summer (DGA2):  
-St. Louis, MO–IL	D (Temperate), G (Semihumid), A2 (Very Hot Summer)
-Kansas City, MO–KS	D (Temperate), G (Semihumid), A2 (Very Hot Summer)
-Salt Lake City, UT	D (Temperate), G (Semihumid), A2 (Very Hot Summer)
-Topeka, KS	D (Temperate), G (Semihumid), A2 (Very Hot Summer)
-Jefferson City, MO	D (Temperate), G (Semihumid), A2 (Very Hot Summer)
-Lincoln, NE	D (Temperate), G (Semihumid), A2 (Very Hot Summer)
 
 Temperate Monsoon Very Hot Summer (DWA2):  
-Seoul–Incheon, South Korea	D (Temperate), W (Monsoon), A2 (Very Hot Summer)
-Beijing, China	D (Temperate), W (Monsoon), A2 (Very Hot Summer)
-Tianjin, China	D (Temperate), W (Monsoon), A2 (Very Hot Summer)
 
 Temperate Semiarid Very Hot Summer (DSA2):  
-Pierre, SD	D (Temperate), S (Semiarid), A2 (Very Hot Summer)
 
 Temperate Arid Desert Very Hot Summer (DDA2):  
-Tehran, Iran	D (Temperate), D (Arid Desert), A2 (Very Hot Summer)
 
 ### Temperate Hot Summer Climates (D-A1):
 
 Temperate Humid Hot Summer (DHA1):  
-New York, United States	D (Temperate), H (Humid), A1 (Hot Summer)
-Chicago, United States	D (Temperate), H (Humid), A1 (Hot Summer)
-Philadelphia, PA–NJ–DE–MD	D (Temperate), H (Humid), A1 (Hot Summer)
-Boston, MA–NH	D (Temperate), H (Humid), A1 (Hot Summer)
-Baltimore, MD	D (Temperate), H (Humid), A1 (Hot Summer)
-Pittsburgh, PA	D (Temperate), H (Humid), A1 (Hot Summer)
-Cleveland, OH	D (Temperate), H (Humid), A1 (Hot Summer)
-Indianapolis, IN	D (Temperate), H (Humid), A1 (Hot Summer)
-Cincinnati, OH–KY	D (Temperate), H (Humid), A1 (Hot Summer)
-Columbus, OH	D (Temperate), H (Humid), A1 (Hot Summer)
-Providence, RI–MA	D (Temperate), H (Humid), A1 (Hot Summer)
-Hartford, CT	D (Temperate), H (Humid), A1 (Hot Summer)
-Buffalo, NY	D (Temperate), H (Humid), A1 (Hot Summer)
-Augusta, ME	D (Temperate), H (Humid), A1 (Hot Summer)
-Concord, NH	D (Temperate), H (Humid), A1 (Hot Summer)
-Trenton, NJ	D (Temperate), H (Humid), A1 (Hot Summer)
-Albany, NY	D (Temperate), H (Humid), A1 (Hot Summer)
-Harrisburg, PA	D (Temperate), H (Humid), A1 (Hot Summer)
-Madison, WI	D (Temperate), H (Humid), A1 (Hot Summer)
-Zagreb, Croatia	D (Temperate), H (Humid), A1 (Hot Summer)
-Hamilton, ON	D (Temperate), H (Humid), A1 (Hot Summer)
-Champaign, IL	D (Temperate), H (Humid), A1 (Hot Summer)
 
 Temperate Semihumid Hot Summer (DGA1):  
-Moscow, Russia	D (Temperate), G (Semihumid), A1 (Hot Summer)
-Detroit, MI	D (Temperate), G (Semihumid), A1 (Hot Summer)
-Minneapolis–St. Paul, MN	D (Temperate), G (Semihumid), A1 (Hot Summer)
-Milwaukee, WI	D (Temperate), G (Semihumid), A1 (Hot Summer)
-Springfield, IL	D (Temperate), G (Semihumid), A1 (Hot Summer)
-Des Moines, IA	D (Temperate), G (Semihumid), A1 (Hot Summer)
-Lansing, MI	D (Temperate), G (Semihumid), A1 (Hot Summer)
-Santa Fe, NM	D (Temperate), G (Semihumid), A1 (Hot Summer)
-Kabul, Afghanistan	D (Temperate), G (Semihumid), A1 (Hot Summer)
-Vienna, Austria	D (Temperate), G (Semihumid), A1 (Hot Summer)
-Budapest, Hungary	D (Temperate), G (Semihumid), A1 (Hot Summer)
-Pristina, Kosovo	D (Temperate), G (Semihumid), A1 (Hot Summer)
-Skopje, North Macedonia	D (Temperate), G (Semihumid), A1 (Hot Summer)
-Bratislava, Slovakia	D (Temperate), G (Semihumid), A1 (Hot Summer)
-Kyiv, Ukraine	D (Temperate), G (Semihumid), A1 (Hot Summer)
-Toronto, ON	D (Temperate), G (Semihumid), A1 (Hot Summer)
-Mississauga, ON	D (Temperate), G (Semihumid), A1 (Hot Summer)
-Brampton, ON	D (Temperate), G (Semihumid), A1 (Hot Summer)
 
 Temperate Monsoon Hot Summer (DWA1):  
-Pyongyang, North Korea	D (Temperate), W (Monsoon), A1 (Hot Summer)
 
 Temperate Mediterranean Hot Summer (DMA1):  
-Boise, ID	D (Temperate), M (Mediterranean), A1 (Hot Summer)
-Carson City, NV	D (Temperate), M (Mediterranean), A1 (Hot Summer)
 
 Temperate Semiarid Hot Summer (DSA1): 
-Denver–Aurora, CO	D (Temperate), S (Semiarid), A1 (Hot Summer)
-Cheyenne, WY	D (Temperate), S (Semiarid), A1 (Hot Summer)
-Yerevan, Armenia	D (Temperate), S (Semiarid), A1 (Hot Summer)
-Tbilisi, Georgia	D (Temperate), S (Semiarid), A1 (Hot Summer)
-Bishkek, Kyrgyzstan	D (Temperate), S (Semiarid), A1 (Hot Summer)
-Chișinău, Moldova	D (Temperate), S (Semiarid), A1 (Hot Summer)
-Bucharest, Romania	D (Temperate), S (Semiarid), A1 (Hot Summer)
-Ankara, Turkey	D (Temperate), S (Semiarid), A1 (Hot Summer)
-Rexburg, ID	D (Temperate), S (Semiarid), A1 (Hot Summer)
 
 ### Temperate Mild Summer Climates (D-B2):
 
 Temperate Humid Mild Summer (DHB2):  
-Sarajevo, Bosnia and Herzegovina	D (Temperate), H (Humid), B2 (Mild Summer)
-Vaduz, Liechtenstein	D (Temperate), H (Humid), B2 (Mild Summer)
-Oslo, Norway	D (Temperate), H (Humid), B2 (Mild Summer)
-Ljubljana, Slovenia	D (Temperate), H (Humid), B2 (Mild Summer)
-Saint-Pierre, Saint-Pierre & Miquelon (FR)	D (Temperate), H (Humid), B2 (Mild Summer)
-Halifax, NS	D (Temperate), H (Humid), B2 (Mild Summer)
-Cape Breton Regional Municipality, NS	D (Temperate), H (Humid), B2 (Mild Summer)
-Truro, NS	D (Temperate), H (Humid), B2 (Mild Summer)
-New Glasgow, NS	D (Temperate), H (Humid), B2 (Mild Summer)
-Amherst, NS	D (Temperate), H (Humid), B2 (Mild Summer)
-Moncton, NB	D (Temperate), H (Humid), B2 (Mild Summer)
-Saint John, NB	D (Temperate), H (Humid), B2 (Mild Summer)
-Dieppe, NB	D (Temperate), H (Humid), B2 (Mild Summer)
-St. John's, NL	D (Temperate), H (Humid), B2 (Mild Summer)
-Conception Bay South, NL	D (Temperate), H (Humid), B2 (Mild Summer)
-Mount Pearl, NL	D (Temperate), H (Humid), B2 (Mild Summer)
-Paradise, NL	D (Temperate), H (Humid), B2 (Mild Summer)
-Corner Brook, NL	D (Temperate), H (Humid), B2 (Mild Summer)
-Charlottetown, PE	D (Temperate), H (Humid), B2 (Mild Summer)
-Andorra la Vella, Andorra (today)
 
 Temperate Semihumid Mild Summer (DGB2):  
-Minsk, Belarus	D (Temperate), G (Semihumid), B2 (Mild Summer)
-Sofia, Bulgaria	D (Temperate), G (Semihumid), B2 (Mild Summer)
-Prague, Czech Republic	D (Temperate), G (Semihumid), B2 (Mild Summer)
-Tallinn, Estonia	D (Temperate), G (Semihumid), B2 (Mild Summer)
-Helsinki, Finland	D (Temperate), G (Semihumid), B2 (Mild Summer)
-Riga, Latvia	D (Temperate), G (Semihumid), B2 (Mild Summer)
-Vilnius, Lithuania	D (Temperate), G (Semihumid), B2 (Mild Summer)
-Warsaw, Poland	D (Temperate), G (Semihumid), B2 (Mild Summer)
-Stockholm, Sweden	D (Temperate), G (Semihumid), B2 (Mild Summer)
-Calgary, AB	D (Temperate), G (Semihumid), B2 (Mild Summer)
 
 Temperate Mediterranean Mild Summer (DMB2):  
-Dushanbe, Tajikistan	D (Temperate), M (Mediterranean), B2 (Mild Summer)
 
 Temperate Semiarid Mild Summer (DSB2):  
-Helena, MT	D (Temperate), S (Semiarid), B2 (Mild Summer)
-Lethbridge, AB	D (Temperate), S (Semiarid), B2 (Mild Summer)
 
 ### Temperate Cold Summer Climate (DB1):  
 Anchorage, AK (today)  
@@ -737,51 +450,16 @@ Primavera Research Station, Antarctica (today)
 ### Continental Hot Summer Climates (E-A1):
 
 Continental Humid Hot Summer (EHA1):  
-Ottawa, Canada	(today)  
-Ottawa, ON	(today)  
-Montreal, QC	(today)  
-Laval, QC	(today)  
-Gatineau, QC	(today)  
-Longueuil, QC	(today)  
 
 ### Continental Mild Summer Climates (E-B2):  
 
 Continental Humid Mild Summer (EHB2):  
-Montpelier, VT	(today)  
-Quebec City, QC	(today)  
-Fredericton, NB	(today)  
-Miramichi, NB	(today)  
-Duluth, MN	(today)  
-Lutsen, MN	(today)  
-Thunder Bay, ON	(today)  
 
 Continental Semihumid Mild Summer (EGB2):  
-Edmonton, AB	(today)  
-Red Deer, AB	(today)  
-St. Albert, AB	(today)  
-Winnipeg, MB	(today)  
-Brandon, MB	(today)  
-Steinbach, MB	(today)  
-Portage la Prairie, MB	(today)  
-Saskatoon, SK	(today)  
-Regina, SK	(today)  
-Prince Albert, SK	(today)  
-Moose Jaw, SK	(today)  
-Swift Current, SK	(today)  
-Knik-Fairview, AK	(today)  
-Novosibirsk, Russia	(today)  
-Krasnoyarsk, Russia	(today)  
-Omsk, Russia	(today)  
 
-Continental Monsoon Mild Summer (EWB2):  
-Fairbanks, AK	(today)  
-Badger, AK	(today)  
-Steele Creek, AK	(today)  
+Continental Monsoon Mild Summer (EWB2):   
 
-Continental Semiarid Mild Summer (ESB2):  
-Astana, Kazakhstan	(today)  
-College, AK	(today)  
-Chena Ridge, AK	(today)  
+Continental Semiarid Mild Summer (ESB2):   
 
 ### Continental Cold Summer Climate (EB1):  
 BETHEL IN SUMMER
