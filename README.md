@@ -10,7 +10,7 @@ Click the "run" button.
 
 This will generate a current climate map and a map of the climate as it is projected to be in the year 2100 given NASA's RCP8.5 "business as usual" global warming/climate change projections.
 
-![](https://github.com/calebdickinson/DickinsonComprehensiveClimateClassification/blob/main/images/screenshot.png)
+![screenshot of program running in google earth engine and creating map](https://github.com/calebdickinson/DickinsonComprehensiveClimateClassification/blob/main/images/screenshot.png)
 
 All locations on the maps are organized and color-coded according to the Dickinson Comprehensive Climate Classification System, which is explained below in this README.
 
@@ -379,7 +379,7 @@ Tropical Semiarid Very Hot Summer (BSA2):
 San Antonio, TX	(today)  
 Austin, TX	(today)  
 
-Tropical Arid Desert Very Hot Summer (BDA2):  !(images/All_Gizah_Pyramids.jpg)
+Tropical Arid Desert Very Hot Summer (BDA2):  ![pyramids](images/All_Gizah_Pyramids.jpg)
 
 Cairo, Egypt	(today)  
 Amman, Jordan	(today)  
