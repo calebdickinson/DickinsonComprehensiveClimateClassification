@@ -683,6 +683,7 @@ Pangnirtung, NU (2100)
 
 ### Continental Freezing Summer Climate (EC1):  
 <img src="images/DavisStation.jpg"/>
+
 Davis Research Station, Antarctica (today)  
 Davis Research Station, Antarctica (2100)  
 Casey Research Station, Antarctica (2100)
@@ -722,7 +723,7 @@ Cambridge Bay, NU (2100)
 
 ### Subarctic Very Cold Summer Climate (FC2):  
 PRODHOE BAY IN JULY
-<img src="images/ProdhoeJulyjpg.jpg"/>
+<img src="images/ProdhoeJuly.jpg"/>
 
 Tuktoyaktuk, NT (today)  
 Iqaluit, NU (today)  
