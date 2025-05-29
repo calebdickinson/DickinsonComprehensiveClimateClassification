@@ -295,8 +295,14 @@ Subtropical Semihumid Mild Summer (CGB2):
 Subtropical Mediterranean Mild Summer (CMB2):  
 
 ### Subtropical Cold Summer Climate (CB1):  
+Reykjavík, Iceland  (today)  
+Stanley, Falkland Islands (UK) (today)  
+Tórshavn, Faroe Islands (DK) (today)  
+Ushuaia, Argentina
 
 ### Subtropical Very Cold Summer Climate (CC2):  
+Macquarie Island Research Station (today)  
+Bird Island Research Station (today)
 
 # Temperate Climates (D):
 
@@ -363,10 +369,14 @@ Temperate Mild Summer (DHB2):
 Temperate Monsoon Mild Summer (DWB2):  
 
 ### Temperate Cold Summer Climate (DB1):  
+Wainwright, AK (today)
 
 ### Temperate Very Cold Summer Climate (DC2):  
+Nuuk, Greenland (DK) (today)  
+Longyearbyen, Svalbard & Jan Mayen (NO) (today)  
 
 ### Temperate Freezing Summer Climate (DC1):  
+Primavera Research Station, Antarctica (today)
 
 # Continental Climates (E):
 
