@@ -379,7 +379,9 @@ Tropical Semiarid Very Hot Summer (BSA2):
 San Antonio, TX	(today)  
 Austin, TX	(today)  
 
-Tropical Arid Desert Very Hot Summer (BDA2): ![pyramids](https://github.com/calebdickinson/DickinsonComprehensiveClimateClassification/blob/main/images/All_Gizah_Pyramids.jpg)
+Tropical Arid Desert Very Hot Summer (BDA2):
+
+![pyramids](https://github.com/calebdickinson/DickinsonComprehensiveClimateClassification/blob/main/images/All_Gizah_Pyramids.jpg)
 
 Cairo, Egypt	(today)  
 Amman, Jordan	(today)  
