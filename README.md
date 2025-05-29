@@ -381,8 +381,6 @@ Austin, TX	(today)
 
 Tropical Arid Desert Very Hot Summer (BDA2):
 
-<img src="images/pyramids.jpg" alt="Pyramids" style="width: 100%; max-width: 400px;"/>
-
 Cairo, Egypt	(today)  
 Amman, Jordan	(today)  
 Tripoli, Libya	(today)  
