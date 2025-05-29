@@ -126,7 +126,7 @@ Y = Frigid Summer. Below 0
 
 Programmers and others are encouraged to find uses for this system and to make their own software programs, visualisations, or spin offs of this one based on the Dickinson Climate Classification, as long as Caleb Dickinson is acknowledged as the creater of this system and the system is appropriately titled the Dickinson Climate Classification.
 
-Here are some examples of these zones.
+# Here are some examples of these zones.
 
 # Ultratropical Climates (Z):
 
