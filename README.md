@@ -295,14 +295,19 @@ Subtropical Semihumid Mild Summer (CGB2):
 Subtropical Mediterranean Mild Summer (CMB2):  
 
 ### Subtropical Cold Summer Climate (CB1):  
-Reykjavík, Iceland  (today)  
+Ketchikan, AK (today)  
 Stanley, Falkland Islands (UK) (today)  
 Tórshavn, Faroe Islands (DK) (today)  
-Ushuaia, Argentina
+Stanley, Falkland Islands (UK) (2100)  
+Tórshavn, Faroe Islands (DK) (2100)  
+Reykjavík, Iceland  (2100)  
+Ushuaia, Argentina (2100)
 
 ### Subtropical Very Cold Summer Climate (CC2):  
+Adak, AK (today)  
 Macquarie Island Research Station (today)  
-Bird Island Research Station (today)
+Macquarie Island Research Station (2100)  
+Bird Island Research Station (2100)
 
 # Temperate Climates (D):
 
@@ -369,13 +374,25 @@ Temperate Mild Summer (DHB2):
 Temperate Monsoon Mild Summer (DWB2):  
 
 ### Temperate Cold Summer Climate (DB1):  
-Wainwright, AK (today)
+Thimphu, Bhutan (today)  
+Reykjavík, Iceland (today)  
+Kalifornsky, AK (today)  
+Sitka, AK (today)  
+Kenai, AK (today)  
+Sterling, AK (today)  
+Wainwright, AK (2100)
 
 ### Temperate Very Cold Summer Climate (DC2):  
-Nuuk, Greenland (DK) (today)  
-Longyearbyen, Svalbard & Jan Mayen (NO) (today)  
+Juneau, AK (today)  
+Ushuaia, Argentina (today)  
+Nuuk, Greenland (DK) (2100)  
+Longyearbyen, Svalbard & Jan Mayen (NO) (2100)  
 
 ### Temperate Freezing Summer Climate (DC1):  
+Bird Island Research Station (today)  
+Primavera Research Station, Antarctica (2100)
+
+### Temperate Frigid Summer Climate (DY):  
 Primavera Research Station, Antarctica (today)
 
 # Continental Climates (E):
@@ -419,60 +436,100 @@ Continental Humid Mild Summer (EHB2):
 Continental Monsoon Mild Summer (EWB2):  
 
 ### Continental Cold Summer Climate (EB1):  
+Meadow Lakes, AK (today)  
+Bethel, AK (today)  
+Iqaluit, NU (2100)  
+Igloolik, NU (2100)  
+Qikiqtarjuaq, NU (2100)  
+Utqiagvik, AK (2100)
 
 ### Continental Very Cold Summer Climate (EC2):  
+Nuuk, Greenland (DK) (today)  
+Longyearbyen, Svalbard & Jan Mayen (NO) (today)  
+Pangnirtung, NU (2100)
 
 ### Continental Freezing Summer Climate (EC1):  
+Davis Research Station, Antarctica (today)  
+Davis Research Station, Antarctica (2100)  
+Casey Research Station, Antarctica (2100)
+
+### Continental Frigid Summer Climate (EY):  
+Casey Research Station, Antarctica (today)
 
 # Subarctic Climates (F):
 
 ### Subarctic Very Hot Summer Climate (FA2):  
+Yakutsk, Russia (2100)
 
 ### Subarctic Hot Summer Climate (FA1):  
 
-### Subarctic Mild Summer Climate (FB2):
+### Subarctic Mild Summer Climate (FB2):  
+Ulaanbaatar, Mongolia (today)  
+Thompson, MB (today)  
+Yellowknife, NT	(today)  
+Hay River, NT	(today)  
+Fort Smith, NT	(today)  
+Behchoko, NT	(today)  
+Fort Simpson, NT	(today)  
+Fort Providence, NT	(today)  
+Norman Wells, NT	(today)  
+Fort Good Hope, NT	(today)  
+Baker Lake, NU (2100)
 
 ### Subarctic Cold Summer Climate (FB1):  
+Inuvik, NT (today)  
+Arviat, NU (today)  
+Cambridge Bay, NU (2100)
 
 ### Subarctic Very Cold Summer Climate (FC2):  
+Tuktoyaktuk, NT (today)  
+Iqaluit, NU (today)  
+Pangnirtung, NU (today)     
+Prudhoe Bay, AK (today)  
+Tuktoyaktuk, NT (today)  
+Eureka Research Station, NU (2100)  
+Isachsen Research Station, NU (2100)
 
 ### Subarctic Freezing Summer Climate (FC1):  
+Qikiqtarjuaq, NU (today)  
+Wainwright, AK (today)  
+Utqiagvik, AK (today)  
+Pond Inlet, NU (today)  
+Pond Inlet, NU (2100)  
+McMurdo Research Station, Antarctica (2100)
 
 ### Subarctic Frigid Summer Climate (FY):  
+McMurdo Research Station, Antarctica (today)
 
-# Arctic Climates (G):
-
-### Arctic Hot Summer Cimate (GZ1):  
-
-### Arctic Very Hot Summer Climate (GA2):
-
-### Arctic Hot Summer Climate (GA1):
+# Arctic Climates (G): 
 
 ### Arctic Mild Summer Climate (GB2):  
+Yakutsk, Russia (today)
 
 ### Arctic Cold Summer Climate (GB1):  
+Rankin Inlet, NU (today)  
+Baker Lake, NU (today)  
+Coral Harbour, NU (today)
 
 ### Arctic Very Cold Summer Climate (GC2):  
+Cambridge Bay, NU (today)  
+Igloolik, NU (today)  
+Eureka Research Station, NU (today)
 
 ### Arctic Freezing Summer Climate (GC1):  
+Isachsen Research Station, NU (today)
 
 ### Arctic Frigid Summer Climate (GY):  
 
 # Superarctic Climates (Y):
 
-### Superarctic Very Hot Summer Climate (YA2):  
-
-### Superarctic Hot Summer Climate (YA1):
-
-### Superarctic Mild Summer Climate (YB2):
-
-### Superarctic Cold Summer Climate (YB1):
-
 ### Superarctic Very Cold Summer Climate (YC2):  
+Concordia Research Station, Antarctica (2100)
 
 ### Superarctic Freezing Summer Climate (YC1):  
 
 ### Superarctic Frigid Summer Climate (YY):  
+Concordia Research Station, Antarctica (today)
 
 
 
