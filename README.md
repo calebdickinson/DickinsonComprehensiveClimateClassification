@@ -534,6 +534,8 @@ Reykjavík, Iceland  (2100)
 Ushuaia, Argentina (2100)
 
 ### Subtropical Very Cold Summer Climate (CC2):  
+<img src="images/MacquarieIsland.png"/>
+
 Adak, AK (today)  
 Macquarie Island Research Station (today)  
 Macquarie Island Research Station (2100)  
@@ -666,6 +668,12 @@ Continental Humid Mild Summer (EHB2):
 Continental Monsoon Mild Summer (EWB2):  
 
 ### Continental Cold Summer Climate (EB1):  
+BETHEL IN SUMMER
+<img src="images/BethelAlaska.png"/>
+
+BETHEL IN WINTER
+<img src="images/BethelWinter.png"/>
+
 Meadow Lakes, AK (today)  
 Bethel, AK (today)  
 Iqaluit, NU (2100)  
