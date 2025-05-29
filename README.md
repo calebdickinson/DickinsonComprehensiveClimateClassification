@@ -732,7 +732,7 @@ Eureka Research Station, NU (2100)
 Isachsen Research Station, NU (2100)
 
 ### Subarctic Freezing Summer Climate (FC1):  
-POND INLET IN JUNE
+POND INLET IN JUNE  
 <img src="images/PondInletJune.jpg"/>
 
 Qikiqtarjuaq, NU (today)  
