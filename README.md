@@ -751,12 +751,14 @@ Baker Lake, NU (today)
 Coral Harbour, NU (today)
 
 ### Arctic Very Cold Summer Climate (GC2):  
+
 <img src="images/Cambridge_Bay.jpg"/>
 Cambridge Bay, NU (today)  
 Igloolik, NU (today)  
 Eureka Research Station, NU (today)
 
 ### Arctic Freezing Summer Climate (GC1):  
+
 <img src="images/Isachsen.jpg"/>
 Isachsen Research Station, NU (today)
 
@@ -770,6 +772,7 @@ Concordia Research Station, Antarctica (2100)
 ### Superarctic Freezing Summer Climate (YC1):  
 
 ### Superarctic Frigid Summer Climate (YY):  
+
 <img src="images/Concordia.jpg"/>
 Concordia Research Station, Antarctica (today)
 
