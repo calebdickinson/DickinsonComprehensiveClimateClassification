@@ -745,7 +745,7 @@ McMurdo Research Station, Antarctica (today)
 Yakutsk, Russia (today)
 
 ### Arctic Cold Summer Climate (GB1):  
-<img src="images/Baker_Lake.jpg"/>
+<img src="images/Baker_Lake.jpg"/>  
 Rankin Inlet, NU (today)  
 Baker Lake, NU (today)  
 Coral Harbour, NU (today)
@@ -753,6 +753,7 @@ Coral Harbour, NU (today)
 ### Arctic Very Cold Summer Climate (GC2):  
 
 <img src="images/Cambridge_Bay.jpg"/>
+
 Cambridge Bay, NU (today)  
 Igloolik, NU (today)  
 Eureka Research Station, NU (today)
