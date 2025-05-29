@@ -1,87 +1,128 @@
 // ----------------------------------------------------
-// 1. LOAD & PREP 2000–2005 HISTORICAL DATA
+//1. LOAD & PREP 2100 RCP8.5 DATA
 // ----------------------------------------------------
 
-// a) ERA5 for warm/cold
-var era5 = ee.ImageCollection('ECMWF/ERA5/MONTHLY')
-  .filterDate('2000-01-01','2005-12-31')
-  .select('mean_2m_air_temperature')
-  .map(function(img){
-    return img.subtract(273.15)
-              .rename('tempC')
-              .set('system:time_start', img.get('system:time_start'));
+// a) NASA/NEX-GDDP for warm/cold
+var future = ee.ImageCollection('NASA/NEX-GDDP')
+  .filter(ee.Filter.eq('scenario', 'rcp85'))
+  .filter(ee.Filter.calendarRange(2100, 2100, 'year'));
+
+// Convert tasmax and tasmin from Kelvin to Celsius
+var tasmax = future.select('tasmax')
+  .map(function(img) {
+    return img
+      .subtract(273.15)
+      .rename('tasmaxC')
+      .copyProperties(img, ['system:time_start']);
   });
-var months = ee.List.sequence(1,12);
+var tasmin = future.select('tasmin')
+  .map(function(img) {
+    return img
+      .subtract(273.15)
+      .rename('tasminC')
+      .copyProperties(img, ['system:time_start']);
+  });
+
+// Build monthly means by averaging tasmax/tasmin
+var months = ee.List.sequence(1, 12);
 var monthlyMeans = ee.ImageCollection(
-  months.map(function(m){
-    var mImg = era5.filter(ee.Filter.calendarRange(m,m,'month')).mean();
-    return mImg.set('month',m).rename('tempC');
+  months.map(function(m) {
+    var maxMean = tasmax
+      .filter(ee.Filter.calendarRange(m, m, 'month'))
+      .mean();
+    var minMean = tasmin
+      .filter(ee.Filter.calendarRange(m, m, 'month'))
+      .mean();
+    // daily‐mean → monthly‐mean
+    return maxMean.add(minMean)
+                  .divide(2)
+                  .rename('monthlyMean')
+                  .set('month', m);
   })
 );
-var hottestC_global = monthlyMeans
-  .qualityMosaic('tempC')
-  .select('tempC').rename('hottestC');
-var coldestC_global = monthlyMeans
-  .map(function(img){ return img.multiply(-1).copyProperties(img); })
-  .qualityMosaic('tempC')
+
+// Extract hottest-month and coldest-month rasters
+
+// Hottest‐month: pick the image with the highest monthlyMean at each pixel
+var hottestC_future = monthlyMeans
+  .qualityMosaic('monthlyMean')
+  .select('monthlyMean')
+  .rename('hottestC');
+
+// Coldest‐month: invert, mosaic, then invert back
+var coldestC_future = monthlyMeans
+  .map(function(img) {
+    return img.multiply(-1).copyProperties(img);
+  })
+  .qualityMosaic('monthlyMean')
   .multiply(-1)
-  .select('tempC').rename('coldestC');
+  .select('monthlyMean')
+  .rename('coldestC');
 
 // b) NEX-GDDP for aridity
-var hist2000 = ee.ImageCollection('NASA/NEX-GDDP')
-  .filter(ee.Filter.eq('scenario','historical'))
-  .filter(ee.Filter.eq('model','ACCESS1-0'))
-  .filter(ee.Filter.calendarRange(2000,2005,'year'));
-var prDaily   = hist2000.select('pr'),
-    tmaxDaily = hist2000.select('tasmax'),
-    tminDaily = hist2000.select('tasmin'),
-    daysList  = ee.List([31,28,31,30,31,30,31,31,30,31,30,31]);
+var future2100 = ee.ImageCollection('NASA/NEX-GDDP')
+    .filter(ee.Filter.eq('scenario','rcp85'))
+    .filter(ee.Filter.calendarRange(2100,2100,'year'));
+var prDaily   = future2100.select('pr');
+var tmaxDaily = future2100.select('tasmax');
+var tminDaily = future2100.select('tasmin');
+var months   = ee.List.sequence(1,12);
+var daysList = ee.List([31,28,31,30,31,30,31,31,30,31,30,31]);
 
-var monthlyClim2000 = ee.ImageCollection(
-  months.map(function(m){
+var monthlyClim2100 = ee.ImageCollection(
+  months.map(function(m) {
     m = ee.Number(m);
-    var prM   = prDaily.filter(ee.Filter.calendarRange(m,m,'month')).mean(),
-        tmaxM = tmaxDaily.filter(ee.Filter.calendarRange(m,m,'month')).mean(),
-        tminM = tminDaily.filter(ee.Filter.calendarRange(m,m,'month')).mean(),
-        days  = ee.Number(daysList.get(m.subtract(1))),
-        rainM = prM.multiply(days).rename('pr'),
-        tmeanC= tmaxM.add(tminM).divide(2).subtract(273.15).rename('tmeanC'),
-        es    = tmeanC.expression(
-                  '0.6108 * exp(17.27 * T / (T + 237.3))',{T:tmeanC}
-                ),
-        Ra    = ee.Image.constant(12 * 0.0820),
-        petM  = es.multiply(Ra).multiply(0.1651).rename('pet');
-    return rainM.addBands(petM).addBands(tmeanC).set('month',m);
+    var prM   = prDaily  .filter(ee.Filter.calendarRange(m,m,'month')).mean();
+    var tmaxM = tmaxDaily.filter(ee.Filter.calendarRange(m,m,'month')).mean();
+    var tminM = tminDaily.filter(ee.Filter.calendarRange(m,m,'month')).mean();
+    var days  = ee.Number(daysList.get(m.subtract(1)));
+    var rainM = prM.multiply(days).rename('pr');
+    var tmeanC = tmaxM.add(tminM)
+                      .divide(2)
+                      .subtract(273.15)
+                      .rename('tmeanC');
+    var es   = tmeanC.expression(
+      '0.6108 * exp(17.27 * T / (T + 237.3))',
+      {T: tmeanC}
+    );
+    var Ra   = ee.Image.constant(12 * 0.0820);
+    var petM = es.multiply(Ra)
+                 .multiply(0.1651)
+                 .rename('pet');
+    return rainM
+      .addBands(petM)
+      .addBands(tmeanC)
+      .set('month', m);
   })
 );
 
-var P_ann2000    = monthlyClim2000.select('pr' ).sum().rename('P_ann'),
-    PET_ann2000  = monthlyClim2000.select('pet').sum().rename('PET_ann'),
-    histHottest  = monthlyClim2000.qualityMosaic('tmeanC').select('tmeanC').rename('histHottest'),
-    histColdest  = monthlyClim2000
+var P_ann2100    = monthlyClim2100.select('pr' ).sum().rename('P_ann'),
+    PET_ann2100  = monthlyClim2100.select('pet').sum().rename('PET_ann'),
+    histHottest  = monthlyClim2100.qualityMosaic('tmeanC').select('tmeanC').rename('histHottest'),
+    histColdest  = monthlyClim2100
                      .map(function(img){return img.select('tmeanC').multiply(-1);})
                      .qualityMosaic('tmeanC')
                      .select('tmeanC').multiply(-1).rename('histColdest'),
     validMask    = histColdest.gte(-20).and(histHottest.gte(15)),
-    AI2000       = P_ann2000.divide(PET_ann2000).rename('AI'),
+    AI2100       = P_ann2100.divide(PET_ann2100).rename('AI'),
     aridBase     = ee.Image(3)
-                     .where(AI2000.lt(0.0036),2)
-                     .where(AI2000.lt(0.0024), 1)
-                     .where(AI2000.lt(0.0012), 0)
+                     .where(AI2100.lt(0.0036),2)
+                     .where(AI2100.lt(0.0024), 1)
+                     .where(AI2100.lt(0.0012), 0)
                      .rename('aridity')
-                     .updateMask(AI2000.mask())
+                     .updateMask(AI2100.mask())
                      .updateMask(validMask),
-    P_hs2000     = monthlyClim2000
+    P_hs2100     = monthlyClim2100
                      .filter(ee.Filter.inList('month',[4,5,6,7,8,9]))
                      .select('pr').sum().rename('P_highSun'),
-    HS2000       = P_hs2000.divide(P_ann2000).rename('HS_ratio'),
-    clim2000     = aridBase
-                     .where(aridBase.neq(0).and(HS2000.gte(0.8)),4)
-                     .where(aridBase.neq(0).and(HS2000.lt(0.35)),5)
+    HS2100       = P_hs2100.divide(P_ann2100).rename('HS_ratio'),
+    clim2100     = aridBase
+                     .where(aridBase.neq(0).and(HS2100.gte(0.8)),4)
+                     .where(aridBase.neq(0).and(HS2100.lt(0.35)),5)
                      .rename('climateClass'),
-    clim2000_flip= clim2000
-                     .where(ee.Image.pixelLonLat().select('latitude').lt(0).and(clim2000.eq(4)),5)
-                     .where(ee.Image.pixelLonLat().select('latitude').lt(0).and(clim2000.eq(5)),4);
+    clim2100_flip= clim2100
+                     .where(ee.Image.pixelLonLat().select('latitude').lt(0).and(clim2100.eq(4)),5)
+                     .where(ee.Image.pixelLonLat().select('latitude').lt(0).and(clim2100.eq(5)),4);
 
 // --------------------------------------------------
 // 2. CLASSIFY CLIMATE AND SUMMER ZONES
@@ -119,8 +160,8 @@ function classifyCold(tC) {
     .rename('coldZone');
 }
 
-var warmComb = classifySummer(hottestC_global),
-    coldComb = classifyCold(coldestC_global);
+var warmComb = classifySummer(hottestC_future);
+var coldComb = classifyCold(coldestC_future);
 
 // --------------------------------------------------
 // 3. BUILD COMBINED ZONE (with aridity) + PALETTE
@@ -131,7 +172,7 @@ var combined = ee.Image(0)
   .where(validMask,
          warmComb.multiply(100)
                  .add(coldComb.multiply(10))
-                 .add(clim2000_flip))
+                 .add(clim2100_flip))
   .where(validMask.not(),
          warmComb.multiply(10).add(coldComb))
   .rename('combinedZone');
@@ -195,7 +236,6 @@ var summerLetters = {
   13:'Y (Frigid Summer)', 
   14:''
 };
-
 var coldLetters = {
   1: 'Z2 (Uninhabitable)',
   2:'Z (Ultratropical)',
@@ -214,7 +254,7 @@ var aridityLetters = {
   2:'G (Semihumid)',
   1:'S (Semiarid)',
   5:'M (Mediterranean)',
-  4:'W (Monsoon)', 
+  4:'W (Monsoon)',
   0:'D (Arid Desert)',
   null:''
 };
@@ -283,7 +323,6 @@ menu.style().set({
 });
 ui.root.add(menu);
 
-
 // Add layer
 Map.addLayer(
   combined,
@@ -350,7 +389,7 @@ Map.onClick(function(coords) {
   }).get('mask').evaluate(function(inZone) {
     if (inZone) {
       // a) inside aridity domain → fetch actual class
-      clim2000_flip.reduceRegion({
+      clim2100_flip.reduceRegion({
         reducer: ee.Reducer.first(),
         geometry: pt,
         scale: 10000
