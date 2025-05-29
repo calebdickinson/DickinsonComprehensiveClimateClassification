@@ -381,7 +381,7 @@ Austin, TX	(today)
 
 Tropical Arid Desert Very Hot Summer (BDA2):
 
-![pyramids](https://github.com/calebdickinson/DickinsonComprehensiveClimateClassification/blob/main/images/All_Gizah_Pyramids.jpg)
+![pyramids](https://github.com/calebdickinson/DickinsonComprehensiveClimateClassification/blob/main/images/pyramids.jpg)
 
 Cairo, Egypt	(today)  
 Amman, Jordan	(today)  
