@@ -316,6 +316,10 @@ Tropical Monsoon Hyperthermal Summer (BWZ2):
 Tropical Semiarid Hyperthermal Summer (BSZ2):  
 
 Tropical Arid Desert Hyperthermal Summer (BDZ2):  
+Phoenix–Mesa–Scottsdale, AZ	(today)  
+Baghdad, Iraq	(today)  
+Kuwait City, Kuwait	(today)  
+Riyadh, Saudi Arabia	(today)  
 
 ### Tropical Scorching Hot Summer climates (B-Z1):
 
@@ -324,32 +328,124 @@ Tropical Humid Scorching Hot Summer (BHZ1):
 Tropical Semihumid Scorching Hot Summer (BGZ1):  
 
 Tropical Monsoon Scorching Hot Summer (BWZ1):  
+Delhi, India	(today)  
+Kolkata, India	(today)  
+Lahore, Pakistan	(today)  
 
 Tropical Mediterranean Scorching Hot Summer (BMZ1):   
 
 Tropical Desert Scorching Hot Summer (BDZ1):  
+Manama, Bahrain	(today)  
+Nicosia, Cyprus	(today)  
+Doha, Qatar	(today)  
 
 ### Tropical Very Hot Summer Climates (B-A2):
 
 Tropical Humid Very Hot Summer (BHA2):  
+Taipei, Taiwan	(today)  
+Nouméa, New Caledonia (FR)	(today)  
 
 Tropical Semihumid Very Hot Summer (BGA2):  
+Miami–Fort Lauderdale, FL	(today)  
+Houston, TX	(today)  
+Tampa–St. Petersburg, FL	(today)  
+Orlando, FL	(today)  
+Jacksonville, FL	(today)  
+New Orleans, LA	(today)  
+Tallahassee, FL	(today)  
+Baton Rouge, LA	(today)  
+Hamilton, Bermuda (UK)	(today)  
+
+Tropical Monsoon Very Hot Summer (BWA2):  
+Guangzhou–Foshan, China	(today)  
+Dhaka, Bangladesh	(today)  
+Shenzhen, China	(today)  
+Rio de Janeiro, Brazil	(today)  
+Dongguan, China	(today)  
+Gaborone, Botswana	(today)  
+Maputo, Mozambique	(today)  
+Asunción, Paraguay	(today)  
+Hanoi, Vietnam	(today)  
 
 Tropical Mediterranean Very Hot Summer (BMA2):  
+Algiers, Algeria	(today)  
+Jerusalem, Israel	(today)  
+Beirut, Lebanon	(today)  
+Tunis, Tunisia	(today)  
 
 Tropical Semiarid Very Hot Summer (BSA2):  
+San Antonio, TX	(today)  
+Austin, TX	(today)  
 
-Tropical Arid Desert Very Hot Summer (BDA2):  
+Tropical Arid Desert Very Hot Summer (BDA2):  !(https://commons.wikimedia.org/wiki/File:All_Gizah_Pyramids.jpg)
+Cairo, Egypt	(today)  
+Amman, Jordan	(today)  
+Tripoli, Libya	(today)  
+Valletta, Malta	(today)  
+Melilla, Melilla (ES)	(today)  
 
 ### Tropical Hot Summer Climates (B-A1):
 
 Tropical Humid Hot Summer (BHA1):  
+San José, Costa Rica	(today)  
+Kingston, Norfolk Island (AU)	(today)  
+
+Tropical Semihumid Hot Summer (BGA1):  
+Buenos Aires, Argentina	(today)  
+Tegucigalpa, Honduras	(today)  
+Nairobi, Kenya	(today)  
+Kampala, Uganda	(today)  
+Montevideo, Uruguay	(today)  
+Hanga Roa, Easter Island (CL)	(today)  
 
 Tropical Monsoon Hot Summer (BWA1):  
+São Paulo, Brazil	(today)  
+Gitega, Burundi	(today)  
+Asmara, Eritrea	(today)  
+Antananarivo, Madagascar	(today)  
+Lilongwe, Malawi	(today)  
+Sana'a, Yemen	(today)  
+Lusaka, Zambia	(today)  
+Harare, Zimbabwe	(today)  
+
+Tropical Mediterranean Hot Summer (BMA1):  
+Los Angeles, United States	(today)  
+Riverside–San Bernardino, CA	(today)  
+Rabat, Morocco	(today)  
+Lisbon, Portugal	(today)  
+Gibraltar, Gibraltar (UK)	(today)  
+Ceuta, Ceuta (ES)	(today)  
+Ponta Delgada, Azores (PT)	(today)  
+Funchal, Madeira (PT)	(today)  
+
+Tropical Semiarid Hot Summer (BSA1):  
+Jamestown, St Helena (UK) (today)  
+
+Tropical Arid Desert Hot Summer (BDA1):  
+Lima, Peru	(today)  
+San Diego, CA	(today)  
+Windhoek, Namibia	(today)  
 
 ### Tropical Mild Summer Climates (B-B2):
 
 Tropical Humid Mild Summer (BHB2):  
+Guatemala City, Guatemala	(today)  
+Wellington, New Zealand	(today)  
+Edinburgh of the Seven Seas (today)  
+Bogotá, Colombia (today)
+
+Tropical Semihumid Mild Summer (BGB2):  
+Kigali, Rwanda (today)  
+Cape Town, South Africa (today)
+
+Tropical Monsoon Mild Summer (BWB2):  
+Mexico City, Mexico (today)  
+Mbabane, Eswatini (today)  
+Addis Ababa, Ethiopia (today)
+
+### Tropical Cold Summer Climate (BB1):  
+Quito, Ecuador (today)  
+Sucre, Bolivia (today)
 
 # Subtropical Climates (C):
 
