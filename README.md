@@ -440,6 +440,8 @@ Edinburgh of the Seven Seas (today)
 Bogotá, Colombia (today)
 
 Tropical Semihumid Mild Summer (BGB2):  
+<img src="images/Ruwenpflanzen.jpg"/>
+
 Kigali, Rwanda (today)  
 Cape Town, South Africa (today)
 
