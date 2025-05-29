@@ -674,6 +674,9 @@ Qikiqtarjuaq, NU (2100)
 Utqiagvik, AK (2100)
 
 ### Continental Very Cold Summer Climate (EC2):  
+NUUK IN JUNE
+<img src="images/NuukJune.jpg"/>
+
 Nuuk, Greenland (DK) (today)  
 Longyearbyen, Svalbard & Jan Mayen (NO) (today)  
 Pangnirtung, NU (2100)
@@ -697,6 +700,7 @@ Yakutsk, Russia (2100)
 
 ### Subarctic Mild Summer Climate (FB2):  
 <img src="images/GorkhiTerelj.jpg"/>
+
 Ulaanbaatar, Mongolia (today)  
 Thompson, MB (today)  
 Yellowknife, NT	(today)  
@@ -711,22 +715,26 @@ Baker Lake, NU (2100)
 
 ### Subarctic Cold Summer Climate (FB1):  
 <img src="images/Inuvik.jpg"/>
+
 Inuvik, NT (today)   
 Arviat, NU (today)  
 Cambridge Bay, NU (2100)
 
 ### Subarctic Very Cold Summer Climate (FC2):  
+PRODHOE BAY IN JULY
+<img src="images/ProdhoeJuly.jpg"/>
+
 Tuktoyaktuk, NT (today)  
 Iqaluit, NU (today)  
 Pangnirtung, NU (today)     
 Prudhoe Bay, AK (today)  
-Tuktoyaktuk, NT (today)  
 Eureka Research Station, NU (2100)  
 Isachsen Research Station, NU (2100)
 
 ### Subarctic Freezing Summer Climate (FC1):  
 POND INLET IN JUNE
 <img src="images/PondInletJune.jpg"/>
+
 Qikiqtarjuaq, NU (today)  
 Wainwright, AK (today)  
 Utqiagvik, AK (today)  
@@ -736,22 +744,24 @@ McMurdo Research Station, Antarctica (2100)
 
 ### Subarctic Frigid Summer Climate (FY):  
 <img src="images/McMurdoStation.jpg"/>
+
 McMurdo Research Station, Antarctica (today)
 
 # Arctic Climates (G): 
 
 ### Arctic Mild Summer Climate (GB2):  
 <img src="images/Yakutsk_.jpg"/>
+
 Yakutsk, Russia (today)
 
 ### Arctic Cold Summer Climate (GB1):  
 <img src="images/Baker_Lake.jpg"/>  
+
 Rankin Inlet, NU (today)  
 Baker Lake, NU (today)  
 Coral Harbour, NU (today)
 
 ### Arctic Very Cold Summer Climate (GC2):  
-
 <img src="images/Cambridge_Bay.jpg"/>
 
 Cambridge Bay, NU (today)  
@@ -759,8 +769,8 @@ Igloolik, NU (today)
 Eureka Research Station, NU (today)
 
 ### Arctic Freezing Summer Climate (GC1):  
-
 <img src="images/Isachsen.jpg"/>
+
 Isachsen Research Station, NU (today)
 
 ### Arctic Frigid Summer Climate (GY):  
@@ -773,8 +783,8 @@ Concordia Research Station, Antarctica (2100)
 ### Superarctic Freezing Summer Climate (YC1):  
 
 ### Superarctic Frigid Summer Climate (YY):  
-
 <img src="images/Concordia.jpg"/>
+
 Concordia Research Station, Antarctica (today)
 
 
