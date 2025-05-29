@@ -669,10 +669,10 @@ Continental Monsoon Mild Summer (EWB2):
 
 ### Continental Cold Summer Climate (EB1):  
 BETHEL IN SUMMER
-<img src="images/BethelAlaska.png"/>
+<img src="images/BethelAlaska.jpg"/>
 
 BETHEL IN WINTER
-<img src="images/BethelWinter.png"/>
+<img src="images/BethelWinter.jpg"/>
 
 Meadow Lakes, AK (today)  
 Bethel, AK (today)  
