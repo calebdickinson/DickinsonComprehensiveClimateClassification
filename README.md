@@ -161,12 +161,141 @@ Supertropical Arid Desert Hyperthermal Summer (ADZ2):
 Supertropical Humid Scorching Hot Summer (AHZ1):  
 
 Supertropical Semihumid Scorching Hot Summer (AGZ1):  
+Bangkok, Thailand	(today)  
+Ho Chi Minh City, Vietnam	(today)  
+Chennai, India	(today)  
+Phnom Penh, Cambodia	(today)  
+Managua, Nicaragua	(today)  
 
 Supertropical Monsoon Scorching Hot Summer (AWZ1):  
+Ouagadougou, Burkina Faso	(today)  
+Bamako, Mali	(today)  
+Naypyidaw, Myanmar	(today)  
+Abuja, Nigeria	(today)  
+
+Supertropical Semiarid Scorching Hot Summer (ASZ1):  
+Hyderabad, India	(today)  
+Juba, South Sudan	(today)
+
+Supertropical Arid Desert Scorching Hot Summer (ADZ1):  
+N'Djamena, Chad	(today)  
+Djibouti, Djibouti	(today)  
+Niamey, Niger	(today)  
+Muscat, Oman	(today)  
+Khartoum, Sudan	(today)  
+Abu Dhabi, United Arab Emirates	(today)  
 
 ### Supertropial Very Hot Summer climates (A-A2):
 
 Supertropical Humid Very Hot Summer (AHA2):  
+Manila, Philippines	(today)  
+Kuala Lumpur, Malaysia	(today)  
+San Juan, PR	(today)  
+St. John's, Antigua and Barbuda	(today)  
+Bandar Seri Begawan, Brunei	(today)  
+Moroni, Comoros	(today)  
+Roseau, Dominica	(today)  
+Malabo, Equatorial Guinea	(today)  
+Palikir, Federated States of Micronesia	(today)  
+Georgetown, Guyana	(today)  
+Kingston, Jamaica	(today)  
+Monrovia, Liberia	(today)  
+Majuro, Marshall Islands	(today)  
+Ngerulmud, Palau	(today)  
+Port Moresby, Papua New Guinea	(today)  
+Basseterre, Saint Kitts and Nevis	(today)  
+Apia, Samoa	(today)  
+São Tomé, São Tomé and Príncipe	(today)  
+Honiara, Solomon Islands (today)  
+Sri Jayawardenepura Kotte, Sri Lanka	(today)  
+Nukuʻalofa, Tonga	(today)  
+Funafuti, Tuvalu	(today)  
+Port Vila, Vanuatu	(today)  
+Brades, Montserrat (UK)	(today)  
+Pago Pago, American Samoa (US)	(today)  
+Hagåtña, Guam (US)	(today)  
+Saipan, Northern Mariana Islands (US)	(today)  
+Charlotte Amalie, U.S. Virgin Islands (US)	(today)  
+San Juan, Puerto Rico (US)	(today)  
+Mata-Utu, Wallis & Futuna (FR)	(today)  
+Avarua, Cook Islands (NZ)	(today)  
+Alofi, Niue (NZ)	(today)  
+Nukunonu, Tokelau (NZ)	(today)  
+
+Supertropical Semihumid Very Hot Summer (AGA2):  
+Lagos, Nigeria	(today)  
+Honolulu, HI	(today)  
+Nassau, Bahamas	(today)  
+Bridgetown, Barbados	(today)  
+Belmopan, Belize	(today)  
+Yaoundé, Cameroon	(today)  
+Bangui, Central African Republic	(today)  
+Yamoussoukro, Côte d'Ivoire	(today)  
+Havana, Cuba	(today)  
+Santo Domingo, Dominican Republic	(today)  
+St. George's, Grenada	(today)  
+Port-au-Prince, Haiti	(today)  
+Tarawa, Kiribati	(today)  
+Malé, Maldives	(today)  
+Yaren, Nauru	(today)  
+Panama City, Panama	(today)  
+Kingstown, Saint Vincent and the Grenadines	(today)  
+Singapore, Singapore	(today)  
+Paramaribo, Suriname	(today)  
+Port of Spain, Trinidad and Tobago	(today)  
+The Valley, Anguilla (UK)	(today)  
+Road Town, British Virgin Islands (UK)	(today)  
+Adamstown, Pitcairn Islands (UK)	(today)  
+Philipsburg, Sint Maarten (NL)	(today)  
+
+Supertropical Monsoon Very Hot Summer (AWA2):  
+Jakarta, Indonesia	(today)  
+Mumbai, India	(today)  
+Kinshasa, DR Congo	(today)  
+Brazzaville, Congo	(today)  
+San Salvador, El Salvador	(today)  
+Suva, Fiji	(today)  
+Banjul, Gambia	(today)  
+Conakry, Guinea	(today)  
+Bissau, Guinea-Bissau	(today)  
+Vientiane, Laos	(today)  
+Port Louis, Mauritius	(today)  
+Dakar, Senegal	(today)  
+Victoria, Seychelles	(today)  
+Freetown, Sierra Leone	(today)  
+Dodoma, Tanzania	(today)  
+Dili, Timor-Leste	(today)  
+Papeete, French Polynesia (FR)	(today)  
+Libreville, Gabon	(today)  
+
+Supertropical Semiarid Very Hot Summer (ASA2):  
+Bangalore, India	(today)  
+Porto-Novo, Benin	(today)  
+Accra, Ghana	(today)  
+Castries, Saint Lucia	(today)  
+Lomé, Togo	(today)  
+Oranjestad, Aruba (NL)	(today)  
+Kralendijk, Bonaire (NL)	(today)  
+The Bottom, Saba (NL)	(today)  
+Oranjestad, Sint Eustatius (NL)	(today)  
+
+Supertropical Arid Desert Very Hot Summer (ADA2):  
+Karachi, Pakistan	(today)  
+Luanda, Angola	(today)  
+Praia, Cabo Verde	(today)  
+Nouakchott, Mauritania	(today)  
+Mogadishu, Somalia	(today)  
+George Town, Cayman Islands (UK)	(today)  
+Cockburn Town, Turks & Caicos (UK)	(today)  
+Willemstad, Curaçao (NL)	(today)  
+
+### Supertropial Hot Summer climates (A-A1):
+
+Supertropical Semihumid Hot Summer (AGA1):  
+Caracas, Venezuela (today)
+
+Supertropical Monsoon Hot Summer (AWA1):  
+Brasília, Brazil (today)
 
 # Tropical Climates (B):
 
