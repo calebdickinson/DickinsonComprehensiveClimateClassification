@@ -722,7 +722,7 @@ Cambridge Bay, NU (2100)
 
 ### Subarctic Very Cold Summer Climate (FC2):  
 PRODHOE BAY IN JULY
-<img src="images/ProdhoeJuly.jpg"/>
+<img src="images/ProdhoeJulyjpg.jpg"/>
 
 Tuktoyaktuk, NT (today)  
 Iqaluit, NU (today)  
