@@ -711,7 +711,7 @@ Baker Lake, NU (2100)
 
 ### Subarctic Cold Summer Climate (FB1):  
 <img src="images/Inuvik.jpg"/>
-Inuvik, NT (today)  
+Inuvik, NT (today)   
 Arviat, NU (today)  
 Cambridge Bay, NU (2100)
 
@@ -726,7 +726,7 @@ Isachsen Research Station, NU (2100)
 
 ### Subarctic Freezing Summer Climate (FC1):  
 POND INLET IN JUNE
-<img src="images/PondInlet.jpg"/>
+<img src="images/PondInletJune.jpg"/>
 Qikiqtarjuaq, NU (today)  
 Wainwright, AK (today)  
 Utqiagvik, AK (today)  
