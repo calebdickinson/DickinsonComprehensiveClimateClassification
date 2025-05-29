@@ -65,9 +65,9 @@ var P_ann2000    = monthlyClim2000.select('pr' ).sum().rename('P_ann'),
     validMask    = histColdest.gte(-20).and(histHottest.gte(15)),
     AI2000       = P_ann2000.divide(PET_ann2000).rename('AI'),
     aridBase     = ee.Image(3)
-                     .where(AI2000.lt(0.0037),2)
-                     .where(AI2000.lt(0.002), 1)
-                     .where(AI2000.lt(0.001), 0)
+                     .where(AI2000.lt(0.0036),2)
+                     .where(AI2000.lt(0.0024), 1)
+                     .where(AI2000.lt(0.0012), 0)
                      .rename('aridity')
                      .updateMask(AI2000.mask())
                      .updateMask(validMask),
@@ -780,7 +780,6 @@ var cityList = [
   { name: 'Qikiqtarjuaq, NU',        lon: -64.0305,   lat: 67.5459 },
   { name: 'Anchorage, AK',      lon: -149.89361, lat: 61.21667 },
   { name: 'Fairbanks, AK',      lon: -147.72306, lat: 64.84361 },
-  { name: 'Juneau, AK',         lon: -134.41600, lat: 58.30000 },
   { name: 'Knik-Fairview, AK',  lon: -149.59810, lat: 61.52750 },
   { name: 'Badger, AK',         lon: -147.41028, lat: 64.80528 },
   { name: 'College, AK',        lon: -147.82722, lat: 64.84833 },
