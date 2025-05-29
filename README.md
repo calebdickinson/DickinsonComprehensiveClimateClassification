@@ -679,11 +679,13 @@ Longyearbyen, Svalbard & Jan Mayen (NO) (today)
 Pangnirtung, NU (2100)
 
 ### Continental Freezing Summer Climate (EC1):  
+<img src="images/DavisStation.jpg"/>
 Davis Research Station, Antarctica (today)  
 Davis Research Station, Antarctica (2100)  
 Casey Research Station, Antarctica (2100)
 
 ### Continental Frigid Summer Climate (EY):  
+<img src="images/CaseyStation.jpg"/>
 Casey Research Station, Antarctica (today)
 
 # Subarctic Climates (F):
@@ -694,6 +696,7 @@ Yakutsk, Russia (2100)
 ### Subarctic Hot Summer Climate (FA1):  
 
 ### Subarctic Mild Summer Climate (FB2):  
+<img src="images/GorkhiTerelj.jpg"/>
 Ulaanbaatar, Mongolia (today)  
 Thompson, MB (today)  
 Yellowknife, NT	(today)  
@@ -707,6 +710,7 @@ Fort Good Hope, NT	(today)
 Baker Lake, NU (2100)
 
 ### Subarctic Cold Summer Climate (FB1):  
+<img src="images/Inuvik.jpg"/>
 Inuvik, NT (today)  
 Arviat, NU (today)  
 Cambridge Bay, NU (2100)
@@ -721,6 +725,8 @@ Eureka Research Station, NU (2100)
 Isachsen Research Station, NU (2100)
 
 ### Subarctic Freezing Summer Climate (FC1):  
+POND INLET IN JUNE
+<img src="images/PondInlet.jpg"/>
 Qikiqtarjuaq, NU (today)  
 Wainwright, AK (today)  
 Utqiagvik, AK (today)  
@@ -729,6 +735,7 @@ Pond Inlet, NU (2100)
 McMurdo Research Station, Antarctica (2100)
 
 ### Subarctic Frigid Summer Climate (FY):  
+<img src="images/McMurdoStation.jpg"/>
 McMurdo Research Station, Antarctica (today)
 
 # Arctic Climates (G): 
