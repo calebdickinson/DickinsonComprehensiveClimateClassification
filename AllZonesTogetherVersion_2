@@ -1,7 +1,3 @@
-// ----------------------------------------------------
-// 1. LOAD & PREP 2000–2005 HISTORICAL DATA
-// ----------------------------------------------------
-
 // a) ERA5 for warm/cold
 var era5 = ee.ImageCollection('ECMWF/ERA5/MONTHLY')
   .filterDate('2000-01-01','2005-12-31')
@@ -175,31 +171,33 @@ for(var w=1; w<=11; w++){
 // LABEL LOOKUPS
 // ————————————————————————
 var summerLetters = {
-  1:'X2 (Extreme Hyperthermal Summer)',
-  2:'X1 (Extreme Hyperthermal)',
-  3:'Z2 (Hyperthermal Summer)',
-  4:'Z1 (Scorching Hot Summer)',
-  5:'A2 (Very Hot Summer)',
-  6:'A1 (Hot Summer)',
-  7:'B2 (Mild Summer)',
-  8:'B1 (Cold Summer)',
-  9:'C2 (Very Cold Summer)',
-  10:'C1 (Freezing Summer)',
-  11:'Y (Frigid Summer)',
-  0:''
+  1: 'X4 (Extreme Hyperthermal Summer)',
+  2: 'X3 (Extreme Hyperthermal Summer)',
+  3:'X2 (Extreme Hyperthermal Summer)',
+  4:'X1 (Extreme Hyperthermal Summer)',
+  5:'Z2 (Hyperthermal Summer)',
+  6:'Z1 (Scorching Hot Summer)',
+  7:'A2 (Very Hot Summer)',
+  8:'A1 (Hot Summer)',
+  9:'B2 (Mild Summer)',
+  10:'B1 (Cold Summer)',
+  11:'C2 (Very Cold Summer)',
+  12:'C1 (Freezing Summer)',
+  13:'Y (Frigid Summer)', 
+  14:''
 };
 
 var coldLetters = {
-   2:'Z (Ultratropical)',
-   3:'A (Supertropical)',
-   4:'B (Tropical)',
-   5:'C (Subtropical)',
-   6:'D (Temperate)',
-   7:'E (Continental)',
-   8:'F (Subarctic)',
-   9:'G (Arctic)',
-   10:'Y (Superarctic)',
-   0:''
+  1: 'Z2 (Uninhabitable)',
+  2:'Z (Ultratropical)',
+  3:'A (Supertropical)',
+  4:'B (Tropical)',
+  5:'C (Subtropical)',
+  6:'D (Temperate)',
+  7:'E (Continental)',
+  8:'F (Subarctic)',
+  9:'G (Arctic)',
+  10:'Y (Superarctic)'
 };
 
 var aridityLetters = {
@@ -704,7 +702,103 @@ var cityList = [
   { name: 'Melilla, Melilla (ES)',                     lat: 35.1740,   lon: -2.9215 },
   { name: 'Ponta Delgada, Azores (PT)',                lat: 37.7412,   lon: -25.6756 },
   { name: 'Funchal, Madeira (PT)',                     lat: 32.6669,   lon: -16.9241 },
-  { name: 'Hanga Roa, Easter Island (CL)',              lat: -27.1506,  lon: -109.4330 }
+  { name: 'Hanga Roa, Easter Island (CL)',              lat: -27.1506,  lon: -109.4330 },
+  { name: 'Toronto, ON',               lon: -79.3832,   lat: 43.6532 },
+  { name: 'Ottawa, ON',                lon: -75.6972,   lat: 45.4215 },
+  { name: 'Mississauga, ON',           lon: -79.6475,   lat: 43.5890 },
+  { name: 'Brampton, ON',              lon: -79.7576,   lat: 43.7315 },
+  { name: 'Hamilton, ON',              lon: -79.8711,   lat: 43.2557 },
+  { name: 'Montreal, QC',              lon: -73.5673,   lat: 45.5017 },
+  { name: 'Quebec City, QC',           lon: -71.2080,   lat: 46.8139 },
+  { name: 'Laval, QC',                 lon: -73.7454,   lat: 45.6066 },
+  { name: 'Gatineau, QC',              lon: -75.6648,   lat: 45.4765 },
+  { name: 'Longueuil, QC',             lon: -73.5180,   lat: 45.5312 },
+  { name: 'Vancouver, BC',             lon: -123.1207,  lat: 49.2827 },
+  { name: 'Surrey, BC',                lon: -122.8490,  lat: 49.1044 },
+  { name: 'Burnaby, BC',               lon: -122.9805,  lat: 49.2488 },
+  { name: 'Richmond, BC',              lon: -123.1360,  lat: 49.1666 },
+  { name: 'Abbotsford, BC',            lon: -122.2817,  lat: 49.0504 },
+  { name: 'Calgary, AB',               lon: -114.0719,  lat: 51.0447 },
+  { name: 'Edmonton, AB',              lon: -113.4909,  lat: 53.5444 },
+  { name: 'Red Deer, AB',              lon: -113.8112,  lat: 52.2681 },
+  { name: 'Lethbridge, AB',            lon: -112.8411,  lat: 49.6956 },
+  { name: 'St. Albert, AB',            lon: -113.6346,  lat: 53.6305 },
+  { name: 'Winnipeg, MB',              lon: -97.1384,   lat: 49.8951 },
+  { name: 'Brandon, MB',               lon: -99.9537,   lat: 49.8485 },
+  { name: 'Steinbach, MB',             lon: -96.6846,   lat: 49.5215 },
+  { name: 'Thompson, MB',              lon: -97.8558,   lat: 55.7430 },
+  { name: 'Portage la Prairie, MB',    lon: -98.2915,   lat: 49.9728 },
+  { name: 'Saskatoon, SK',             lon: -106.6702,  lat: 52.1332 },
+  { name: 'Regina, SK',                lon: -104.6189,  lat: 50.4452 },
+  { name: 'Prince Albert, SK',         lon: -105.7531,  lat: 53.2033 },
+  { name: 'Moose Jaw, SK',             lon: -105.5516,  lat: 50.3940 },
+  { name: 'Swift Current, SK',         lon: -107.7972,  lat: 50.2853 },
+  { name: 'Halifax, NS',               lon: -63.5752,   lat: 44.6488 },
+  { name: 'Cape Breton Regional Municipality, NS', lon: -60.8964, lat: 46.2468 },
+  { name: 'Truro, NS',                 lon: -63.2625,   lat: 45.3648 },
+  { name: 'New Glasgow, NS',           lon: -62.6450,   lat: 45.5866 },
+  { name: 'Amherst, NS',               lon: -64.2048,   lat: 45.8371 },
+  { name: 'Moncton, NB',               lon: -64.7782,   lat: 46.0878 },
+  { name: 'Saint John, NB',            lon: -66.0590,   lat: 45.2733 },
+  { name: 'Fredericton, NB',           lon: -66.6431,   lat: 45.9636 },
+  { name: 'Dieppe, NB',                lon: -64.7035,   lat: 46.0893 },
+  { name: 'Miramichi, NB',             lon: -65.5031,   lat: 47.0031 },
+  { name: 'St. John\'s, NL',           lon: -52.7126,   lat: 47.5615 },
+  { name: 'Conception Bay South, NL',  lon: -52.8667,   lat: 47.5333 },
+  { name: 'Mount Pearl, NL',           lon: -52.8190,   lat: 47.5218 },
+  { name: 'Paradise, NL',              lon: -52.8285,   lat: 47.5080 },
+  { name: 'Corner Brook, NL',          lon: -57.9140,   lat: 48.9359 },
+  { name: 'Charlottetown, PE',         lon: -63.1307,   lat: 46.2382 },
+  { name: 'Yellowknife, NT',        lon: -114.3718,  lat: 62.4539 },
+  { name: 'Hay River, NT',           lon: -115.7978,  lat: 60.8394 },
+  { name: 'Inuvik, NT',              lon: -133.7168,  lat: 68.3601 },
+  { name: 'Fort Smith, NT',          lon: -112.4181,  lat: 60.0238 },
+  { name: 'Behchoko, NT',            lon: -114.3813,  lat: 62.8032 },
+  { name: 'Fort Simpson, NT',        lon: -122.7271,  lat: 61.7488 },
+  { name: 'Fort Providence, NT',     lon: -117.7656,  lat: 61.3718 },
+  { name: 'Tuktoyaktuk, NT',         lon: -133.0358,  lat: 69.4447 },
+  { name: 'Norman Wells, NT',        lon: -126.8043,  lat: 65.2820 },
+  { name: 'Fort Good Hope, NT',      lon: -128.6504,  lat: 66.2405 },
+  { name: 'Iqaluit, NU',             lon: -68.5150,   lat: 63.7467 },
+  { name: 'Rankin Inlet, NU',        lon: -92.0966,   lat: 62.8192 },
+  { name: 'Arviat, NU',              lon: -94.0608,   lat: 61.1099 },
+  { name: 'Cambridge Bay, NU',       lon: -105.0667,  lat: 69.1167 },
+  { name: 'Baker Lake, NU',          lon: -96.0010,   lat: 64.2986 },
+  { name: 'Pangnirtung, NU',         lon: -65.7131,   lat: 66.1440 },
+  { name: 'Pond Inlet, NU',          lon: -70.7439,   lat: 72.6961 },
+  { name: 'Igloolik, NU',            lon: -81.7890,   lat: 69.3648 },
+  { name: 'Coral Harbour, NU',       lon: -83.3680,   lat: 64.1380 },
+  { name: 'Qikiqtarjuaq, NU',        lon: -64.0305,   lat: 67.5459 },
+  { name: 'Anchorage, AK',      lon: -149.89361, lat: 61.21667 },
+  { name: 'Fairbanks, AK',      lon: -147.72306, lat: 64.84361 },
+  { name: 'Juneau, AK',         lon: -134.41600, lat: 58.30000 },
+  { name: 'Knik-Fairview, AK',  lon: -149.59810, lat: 61.52750 },
+  { name: 'Badger, AK',         lon: -147.41028, lat: 64.80528 },
+  { name: 'College, AK',        lon: -147.82722, lat: 64.84833 },
+  { name: 'North Lakes, AK',    lon: -149.30194, lat: 61.60750 },
+  { name: 'Meadow Lakes, AK',   lon: -149.61611, lat: 61.59972 },
+  { name: 'Wasilla, AK',        lon: -149.45250, lat: 61.58167 },
+  { name: 'Tanaina, AK',        lon: -149.43278, lat: 61.62417 },
+  { name: 'Kalifornsky, AK',    lon: -151.20139, lat: 60.47333 },
+  { name: 'Sitka, AK',          lon: -135.33472, lat: 57.05333 },
+  { name: 'Ketchikan, AK',      lon: -131.64800, lat: 55.34200 },
+  { name: 'Kenai, AK',          lon: -151.22972, lat: 60.55861 },
+  { name: 'Steele Creek, AK',   lon: -147.50766, lat: 64.89241 },
+  { name: 'Bethel, AK',         lon: -161.75583, lat: 60.79222 },
+  { name: 'Chena Ridge, AK',    lon: -147.92833, lat: 64.83167 },
+  { name: 'Sterling, AK',       lon: -150.79778, lat: 60.52972 },
+  { name: 'Palmer, AK',         lon: -149.11722, lat: 61.60194 },
+  { name: 'Gateway, AK',        lon: -149.25250, lat: 61.57639 },
+  { name: 'Novosibirsk, Russia',    lon: 82.950,   lat: 55.050 },
+  { name: 'Krasnoyarsk, Russia',    lon: 92.87194, lat: 56.00889 },
+  { name: 'Omsk, Russia',           lon: 73.36859, lat: 54.99244 },
+  { name: 'Eureka Research Station, NU',        lon: -85.95000,    lat:  79.98300 },
+  { name: 'Primavera Research Station, Antarctica', lon: -60.955183, lat: -64.155766 },
+  { name: 'McMurdo Research Station, Antarctica',  lon: 166.668235,  lat: -77.846323 },
+  { name: 'Rexburg, ID',                         lon: -111.78389,   lat:  43.82611 },
+  { name: 'Carbondale, IL',                      lon:  -89.22030,   lat:  37.72640 },
+  { name: 'Champaign, IL',                       lon:  -88.24361,   lat:  40.11639 },
+  { name: 'Ushuaia, Argentina',                  lon:  -68.30306,   lat: -54.80194 }
 ];
 
 // (b) Build mapping of code → human-readable labels
@@ -715,9 +809,16 @@ Object.keys(summerLetters).forEach(function(wKey) {
   Object.keys(coldLetters).forEach(function(cKey) {
     var c = parseInt(cKey, 10);
     if (c === 0) return;
-    // fallback (no aridity)
-    combinedLabels[w * 10 + c] = coldLetters[c] + ', ' + summerLetters[w];
-    // full (with aridity)
+
+    // ←— keep your original 2-digit fallback key
+    combinedLabels[w * 10 + c] =
+      coldLetters[c] + ', ' + summerLetters[w];
+
+    // ←— ALSO add the forced 3-digit fallback key (aridity = 0)
+    combinedLabels[w * 100 + c * 10 + 0] =
+      coldLetters[c] + ', ' + summerLetters[w];
+
+    // full codes with real aridity
     Object.keys(aridityLetters).forEach(function(aKey) {
       var a = parseInt(aKey, 10);
       if (isNaN(a)) return;
@@ -726,6 +827,8 @@ Object.keys(summerLetters).forEach(function(wKey) {
     });
   });
 });
+var combinedDict = ee.Dictionary(combinedLabels);
+
 var combinedDict = ee.Dictionary(combinedLabels);
 
 // (c) Create FeatureCollection & sample combinedZone
@@ -744,30 +847,55 @@ var cityClasses = combined
   })
   .filter(ee.Filter.notNull(['combinedZone']));
 
-// (d) Attach labels + compute sort key components
-var MAX_COLD = ee.Number(10);
-var MAX_WARM = ee.Number(11);
+// (d) Attach labels + full sortKey
+var MAX_COLD = ee.Number(Object.keys(coldLetters).length);
+var MAX_WARM = ee.Number(Object.keys(summerLetters).length);
+var MAX_ARID = ee.Number(Object.keys(aridityLetters).length).subtract(1);
+
 var processed = cityClasses.map(function(f) {
-  var code = ee.Number(f.get('combinedZone'));
-  var w = code.divide(100).floor();   // warm zone code
-  var c = code.divide(10).mod(10);    // cold zone code
-  var a = code.mod(10);               // aridity code
-  var arRank = a.eq(3).multiply(6)
-    .add(a.eq(2).multiply(5))
-    .add(a.eq(4).multiply(4))
-    .add(a.eq(5).multiply(3))
-    .add(a.eq(1).multiply(2))
-    .add(a.eq(0).multiply(1));
-  var sortKey = MAX_COLD.add(1).subtract(c).multiply(10000)
-    .add(MAX_WARM.add(1).subtract(w).multiply(100))
+  var code = ee.Number(f.get('combinedZone')).toInt();
+
+  // detect 2-digit (no‐aridity) codes vs full 3-digit codes
+  var isTwoDigit = code.lt(100);
+
+  // summer = tens place for 2-digit, hundreds place for 3-digit
+  var w = isTwoDigit
+    .multiply(code.divide(10).floor())
+    .add(code.gte(100).multiply(code.divide(100).floor()))
+    .toInt();
+  //  cold = ones place for 2-digit, tens place for 3-digit
+  var c = isTwoDigit
+    .multiply(code.mod(10))
+    .add(code.gte(100).multiply(code.divide(10).mod(10)))
+    .toInt();
+  // aridity = 0 for 2-digit, ones place for 3-digit
+  var a = isTwoDigit
+    .multiply(0)
+    .add(code.gte(100).multiply(code.mod(10)))
+    .toInt();
+  // full aridity ranking:
+  var arRank = ee.Number(0)
+    .add(a.eq(0).multiply(1)) //arid desert
+    .add(a.eq(1).multiply(2)) //semiarid
+    .add(a.eq(2).multiply(5)) //semihumid
+    .add(a.eq(3).multiply(1006)) //humid.
+    //1006 IS NOT A MISTAKE.
+    //For unknown reasons the code only works correctly if this line is multiplied by 1006 or higher.
+    .add(a.eq(4).multiply(4)) //monsoon
+    .add(a.eq(5).multiply(3)); //mediterranean
+
+  // composite key: cold is highest‐order, then summer, then aridity
+  var sortKey = MAX_COLD.add(1).subtract(c).multiply(1e6)
+    .add(MAX_WARM.add(1).subtract(w).multiply(1e3))
     .add(arRank);
+
   return f.set({
-    classification: combinedDict.get(code),
+    classification: combinedDict.get(code), 
     sortKey:        sortKey
   });
 });
 
-// (e) Sort descending by composite key
+// (e) Sort descending by that key
 var sorted = processed.sort('sortKey', false);
 
 // (f) Build and print a UI table for better visuals
