@@ -1,3 +1,7 @@
+// ----------------------------------------------------
+// 1. LOAD & PREP 2000–2005 HISTORICAL DATA
+// ----------------------------------------------------
+
 // a) ERA5 for warm/cold
 var era5 = ee.ImageCollection('ECMWF/ERA5/MONTHLY')
   .filterDate('2000-01-01','2005-12-31')
