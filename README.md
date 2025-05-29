@@ -126,5 +126,344 @@ Y = Frigid Summer. Below 0
 
 Programmers and others are encouraged to find uses for this system and to make their own software programs, visualisations, or spin offs of this one based on the Dickinson Climate Classification, as long as Caleb Dickinson is acknowledged as the creater of this system and the system is appropriately titled the Dickinson Climate Classification.
 
+Here are some examples of these zones.
+
+# Ultratropical Climates (Z):
+
+### Ultratropical Scorching Hot Summer climates (Z-Z1):
+
+Ultratropical Humid Scorching Hot Summer: (ZHZ1):  
+
+# Supertropical Climates (A):
+
+### Supertropical Extreme Hyperthermal Summer climates (A-X1):
+
+Supertropical Semihumid Extreme Hyperthermal Summer (AGX1):  
+
+Supertropical Monsoon Extreme Hyperthermal Summer (AWX1):  
+
+Supertropical Semiarid Extreme Hyperthermal Summer (ASX1):  
+
+### Supertropical Hyperthermal Summer climates (A-Z2):
+
+Supertropical Humid Hyperthermal Summer (AHZ2):  
+
+Supertropical Semihumid Hyperthermal Summer (AGZ2):  
+
+Supertropical Monsoon Hyperthermal Summer (AWZ2):  
+
+Supertropical Semiarid Hyperthermal Summer (ASZ2):  
+
+Supertropical Arid Desert Hyperthermal Summer (ADZ2):  
+
+### Supertropical Scorching Hot Summer climates (A-Z1):
+
+Supertropical Humid Scorching Hot Summer (AHZ1):  
+
+Supertropical Semihumid Scorching Hot Summer (AGZ1):  
+
+Supertropical Monsoon Scorching Hot Summer (AWZ1):  
+
+### Supertropial Very Hot Summer climates (A-A2):
+
+Supertropical Humid Very Hot Summer (AHA2):  
+
+# Tropical Climates (B):
+
+### Tropical Extreme Hyperthermal Summer climates (B-X1):  
+
+Tropical Monsoon Extreme Hyperthermal Summer (BWX1):  
+
+Tropical Semiarid Extreme Hyperthermal Summer (BSX1):  
+
+Tropical Arid Desert Extreme Hyperthermal Summer (BDX1):  
+
+### Tropical Hyperthermal Summer climates (B-Z2):
+
+Tropical Semihumid Hyperthermal Summer (BGZ2):  
+
+Tropical Monsoon Hyperthermal Summer (BWZ2):  
+
+Tropical Semiarid Hyperthermal Summer (BSZ2):  
+
+Tropical Arid Desert Hyperthermal Summer (BDZ2):  
+
+### Tropical Scorching Hot Summer climates (B-Z1):
+
+Tropical Humid Scorching Hot Summer (BHZ1):  
+
+Tropical Semihumid Scorching Hot Summer (BGZ1):  
+
+Tropical Monsoon Scorching Hot Summer (BWZ1):  
+
+Tropical Mediterranean Scorching Hot Summer (BMZ1):   
+
+Tropical Desert Scorching Hot Summer (BDZ1):  
+
+### Tropical Very Hot Summer Climates (B-A2):
+
+Tropical Humid Very Hot Summer (BHA2):  
+
+Tropical Semihumid Very Hot Summer (BGA2):  
+
+Tropical Mediterranean Very Hot Summer (BMA2):  
+
+Tropical Semiarid Very Hot Summer (BSA2):  
+
+Tropical Arid Desert Very Hot Summer (BDA2):  
+
+### Tropical Hot Summer Climates (B-A1):
+
+Tropical Humid Hot Summer (BHA1):  
+
+Tropical Monsoon Hot Summer (BWA1):  
+
+### Tropical Mild Summer Climates (B-B2):
+
+Tropical Humid Mild Summer (BHB2):  
+
+# Subtropical Climates (C):
+
+### Subtropical Extreme Hyperthermal Summer Climates (C-X1):
+
+Subtropical Semihumid Extreme Hyperthermal Summer (CGX1):  
+
+Subtropical Monsoon Extreme Hyperthermal Summer (CWX1):  
+
+Subtropical Mediterranean Extreme Hyperthermal Summer (CMX1):  
+
+Subtropical Semiarid Extreme Hyperthermal Summer (CSX1):  
+
+Subtropical Desert Wasteland (CDX1):  
+
+### Subtropical Hyperthermal Summer Climates (C-Z2):
+
+Subtropical Humid Hyperthermal Summer (CHZ2):  
+
+Subtropical Semihumid Hyperthermal Summer (CGZ2):  
+
+Subtropical Mediterranean Hyperthermal Summer (CMZ2):  
+
+Subtropical Monsoon Hyperthermal Summer (CWZ2):  
+
+Subtropical Semiarid Hyperthermal Summer (CSZ2):  
+
+Subtropical Desert Hyperthermal Summer (CDZ2):  
+
+### Subtropical Scorching Hot Summer Climates (C-Z1):
+
+Subtropical Humid Scorching Hot Summer (CHZ1):  
+
+Subtropical Semihumid Scorching Hot Summer (CGZ1):  
+
+Subtropical Monsoon Scorching Hot Summer (CWZ1):  
+
+Subtropical Meiterranean Scorching Hot Summer (CMZ1):  
+
+Subtropical Semiarid Scorching Hot Summer (CSZ1):   
+
+Subtropical Desert Scorching Hot Summer (CDZ1):  
+
+### Subtropical Very Hot Summer Climates (C-A2):
+
+Subtropical Semihumid Very Hot Summer (CGA2):   
+
+Subtropical Monsoon Very Hot Summer (CWA2):  
+
+Subtropical Mediterranean Very Hot Summer (CMA2):   
+
+Subtropical Semiarid Very Hot Summer (CSA2):  
+
+Subtropical Arid Desert Very Hot Summer (CDA2):  
+
+### Subtropical Hot Summer Climates (C-A1):  
+
+Subtropical Humid Hot Summer (CHA1):  
+
+Subtropical Semihumid Hot Summer (CGA1):   
+
+Subtropical Meiterranean Hot Summer (CMA1):  
+
+Subtropical Arid Desert Hot Summer (CDA1):  
+
+### Subtropical Mild Summer Climates (C-B2):
+
+Subtropical Humid Mild Summer (CHB2):  
+
+Subtropical Semihumid Mild Summer (CGB2):  
+
+Subtropical Mediterranean Mild Summer (CMB2):  
+
+### Subtropical Cold Summer Climate (CB1):  
+
+### Subtropical Very Cold Summer Climate (CC2):  
+
+# Temperate Climates (D):
+
+### Temperate Wasteland Climates (D-X1):
+
+Temperate Semiarid Extreme Hyperthermal Summer (DSX1):  
+
+Temperate Arid Desert Extreme Hyperthermal Summer (DDX1):  
+
+### Temperate Hyperthermal Summer Climates (D-Z2):  
+
+Temperate Humid Hyperthermal Summer (DHZ2):  
+
+Temperate Semihumid Hyperthermal Summer (DGZ2):  
+
+Temperate Monsoon Hyperthermal Summer (DWZ2):  
+
+Temperate Mediterranean Hyperthermal Summer (DMZ2):  
+
+Temperate Semiarid Hyperthermal Summer (DSZ2):  
+
+Temperate Arid Desert Hyperthermal Summer (DDZ2):  
+
+### Temperate Scorching Hot Summer Climates (D-Z1):
+
+Temperate Humid Scorching Hot Summer (DHZ1):  
+
+Temperate Semihumid Scorching Hot Summer (DGZ1):  
+
+Temperate Monsoon Scorching Hot Summer (DWZ1):  
+
+Temperate Mediterranean Scorching Hot Summer (DMZ1):  
+
+Temperate Semiarid Scorching Hot Summer (DSZ1):  
+
+Temperate Arid Desert Scorching Hot Summer (DDZ1):  
+
+### Temperate Very Hot Summer Climates (D-A2):
+
+Temperate Humid Very Hot Summer (DHA2):  
+
+Temperate Semihumid Very Hot Summer (DGA2):  
+
+Temperate Monsoon Very Hot Summer (DWA2):  
+
+Temperate Mediterranean Very Hot Summer (DMA2):  
+
+Temperate Semiarid Very Hot Summer (DSA2):  
+
+### Temperate Hot Summer Climates (D-A1):
+
+Temperate Humid Hot Summer (DHA1):  
+
+Temperate Semihumid Hot Summer (DGA1):  
+
+Temperate Mediterranean Hot Summer (DMA1):  
+
+Temperate Monsoon Hot Summer (DWA1):  
+
+### Temperate Mild Summer Climates (D-B2):
+
+Temperate Mild Summer (DHB2):  
+
+Temperate Monsoon Mild Summer (DWB2):  
+
+### Temperate Cold Summer Climate (DB1):  
+
+### Temperate Very Cold Summer Climate (DC2):  
+
+### Temperate Freezing Summer Climate (DC1):  
+
+# Continental Climates (E):
+
+### Continental Hyperthermal Summer Climates (E-Z2):
+
+Continental Semiarid Hyperthermal Summer (ESZ2):  
+
+### Continental Scorching Hot Summer Climates (E-Z1):
+
+Continental Semihumid Scorching Hot Summer (EGZ1):  
+
+Continental Semiarid Scorching Hot Summer (ESZ1):  
+
+### Continental Very Hot Summer Climates (E-A2):
+
+Continental Humid Very Hot Summer (EHA2):  
+
+Continental Semihumid Very Hot Summer (EGA2):  
+
+Continental Monsoon Very Hot Summer (EWA2):  
+
+Continental Semiarid Very Hot Summer (ESA2):  
+
+### Continental Hot Summer Climates (E-A1):
+
+Continental Humid Hot Summer (EHA1):  
+
+Continental Semihumid Hot Summer (EGA1):  
+
+Continental Monsoon Hot Summer (EWA1):  
+
+Continental Semiarid Hot Summer (ESA1):  
+
+Continental Arid Desert Hot Summer (EDA1):  
+
+### Continental Mild Summer Climates (E-B2):  
+
+Continental Humid Mild Summer (EHB2):  
+
+Continental Monsoon Mild Summer (EWB2):  
+
+### Continental Cold Summer Climate (EB1):  
+
+### Continental Very Cold Summer Climate (EC2):  
+
+### Continental Freezing Summer Climate (EC1):  
+
+# Subarctic Climates (F):
+
+### Subarctic Very Hot Summer Climate (FA2):  
+
+### Subarctic Hot Summer Climate (FA1):  
+
+### Subarctic Mild Summer Climate (FB2):
+
+### Subarctic Cold Summer Climate (FB1):  
+
+### Subarctic Very Cold Summer Climate (FC2):  
+
+### Subarctic Freezing Summer Climate (FC1):  
+
+### Subarctic Frigid Summer Climate (FY):  
+
+# Arctic Climates (G):
+
+### Arctic Hot Summer Cimate (GZ1):  
+
+### Arctic Very Hot Summer Climate (GA2):
+
+### Arctic Hot Summer Climate (GA1):
+
+### Arctic Mild Summer Climate (GB2):  
+
+### Arctic Cold Summer Climate (GB1):  
+
+### Arctic Very Cold Summer Climate (GC2):  
+
+### Arctic Freezing Summer Climate (GC1):  
+
+### Arctic Frigid Summer Climate (GY):  
+
+# Superarctic Climates (Y):
+
+### Superarctic Very Hot Summer Climate (YA2):  
+
+### Superarctic Hot Summer Climate (YA1):
+
+### Superarctic Mild Summer Climate (YB2):
+
+### Superarctic Cold Summer Climate (YB1):
+
+### Superarctic Very Cold Summer Climate (YC2):  
+
+### Superarctic Freezing Summer Climate (YC1):  
+
+### Superarctic Frigid Summer Climate (YY):  
+
+
 
 
