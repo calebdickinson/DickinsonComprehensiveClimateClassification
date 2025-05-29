@@ -741,31 +741,23 @@ McMurdo Research Station, Antarctica (today)
 # Arctic Climates (G): 
 
 ### Arctic Mild Summer Climate (GB2):  
-
 <img src="images/Yakutsk_.jpg"/>
-
 Yakutsk, Russia (today)
 
 ### Arctic Cold Summer Climate (GB1):  
-
 <img src="images/Baker_Lake.jpg"/>
-
 Rankin Inlet, NU (today)  
 Baker Lake, NU (today)  
 Coral Harbour, NU (today)
 
 ### Arctic Very Cold Summer Climate (GC2):  
-
 <img src="images/Cambridge_Bay.jpg"/>
-
 Cambridge Bay, NU (today)  
 Igloolik, NU (today)  
 Eureka Research Station, NU (today)
 
 ### Arctic Freezing Summer Climate (GC1):  
-
 <img src="images/Isachsen.jpg"/>
-
 Isachsen Research Station, NU (today)
 
 ### Arctic Frigid Summer Climate (GY):  
@@ -778,9 +770,7 @@ Concordia Research Station, Antarctica (2100)
 ### Superarctic Freezing Summer Climate (YC1):  
 
 ### Superarctic Frigid Summer Climate (YY):  
-
 <img src="images/Concordia.jpg"/>
-
 Concordia Research Station, Antarctica (today)
 
 
