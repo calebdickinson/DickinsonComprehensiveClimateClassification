@@ -734,8 +734,10 @@ Montreal, QC	(today)
 Laval, QC	(today)  
 Gatineau, QC	(today)  
 Longueuil, QC	(today)  
+
 Continental Monsoon Hot Summer (EWA1):  
 Bismarck, ND	(today)  
+
 ### Continental Mild Summer Climates (E-B2):  
 
 Continental Humid Mild Summer (EHB2):  
