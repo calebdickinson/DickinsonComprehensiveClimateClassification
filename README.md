@@ -662,15 +662,21 @@ Edinburgh of the Seven Seas	(today)
 Bogotá, Colombia	(2100)  
 
 Tropical Semihumid Mild Summer (BGB2):  
-Kigali, Rwanda	(today)  
+REWNZORI MOUNTAINS NATIONAL PARK
 <img src="images/Ruwenpflanzen.jpg"/>
 
+Kigali, Rwanda	(today)  
+
 Tropical Monsoon Mild Summer (BWB2):  
+<img src="images/Mbabane.jpg"/>
+
 Mexico City, Mexico	(today)  
 Mbabane, Eswatini	(today)  
 Addis Ababa, Ethiopia	(today)  
 
 Tropical Semiarid Mild Summer (BSB2):  
+<img src="images/CapeTown.jpg"/>
+
 Cape Town, South Africa	(today)  
 
 ### Tropical Cold Summer Climate (BB1):  
