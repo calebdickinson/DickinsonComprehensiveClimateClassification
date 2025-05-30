@@ -681,7 +681,7 @@ Mbabane, Eswatini	(today)
 Addis Ababa, Ethiopia	(today)  
 
 Tropical Semiarid Mild Summer (BSB2):  
-<img src="images/CapeTown.jpg"/>
+<img src="images/CapeTown.jpeg"/>
 
 Cape Town, South Africa	(today)  
 
