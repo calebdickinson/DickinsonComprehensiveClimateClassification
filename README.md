@@ -178,6 +178,7 @@ Paramaribo, Suriname	(2100)
 Ultratropical Arid Desert Hyperthermal Summer (ZDZ1):  
 Mogadishu, Somalia	(2100)  
 Willemstad, Curaçao (NL)	(2100)  
+
 # Supertropical Climates (A):
 
 ### Supertropical Extreme Hyperthermal Summer climates (A-X1):
@@ -847,6 +848,7 @@ Ashgabat, Turkmenistan	(today)
 Kabul, Afghanistan	(2100)  
 Damascus, Syria	(2100)  
 Ankara, Turkey	(2100)  
+
 ### Subtropical Hot Summer Climates (C-A1):  
 
 Subtropical Humid Hot Summer (CHA1):  
