@@ -163,101 +163,272 @@ Supertropical Arid Desert Hyperthermal Summer (ADZ2):
 Supertropical Humid Scorching Hot Summer (AHZ1):  
 
 Supertropical Semihumid Scorching Hot Summer (AGZ1):  
+Ho Chi Minh City, Vietnam	A (Supertropical), G (Semihumid), Z1 (Scorching Hot Summer)
+Phnom Penh, Cambodia	A (Supertropical), G (Semihumid), Z1 (Scorching Hot Summer)
 
 Supertropical Monsoon Scorching Hot Summer (AWZ1):  
+Bamako, Mali	A (Supertropical), W (Monsoon), Z1 (Scorching Hot Summer)
+Naypyidaw, Myanmar	A (Supertropical), W (Monsoon), Z1 (Scorching Hot Summer)
+Abuja, Nigeria	A (Supertropical), W (Monsoon), Z1 (Scorching Hot Summer)
 
 Supertropical Semiarid Scorching Hot Summer (ASZ1):  
+Bangkok, Thailand	A (Supertropical), S (Semiarid), Z1 (Scorching Hot Summer)
+Chennai, India	A (Supertropical), S (Semiarid), Z1 (Scorching Hot Summer)
+Hyderabad, India	A (Supertropical), S (Semiarid), Z1 (Scorching Hot Summer)
+Managua, Nicaragua	A (Supertropical), S (Semiarid), Z1 (Scorching Hot Summer)
+Juba, South Sudan	A (Supertropical), S (Semiarid), Z1 (Scorching Hot Summer)
 
 Supertropical Arid Desert Scorching Hot Summer (ADZ1):  
+Ouagadougou, Burkina Faso	A (Supertropical), D (Arid Desert), Z1 (Scorching Hot Summer)
+N'Djamena, Chad	A (Supertropical), D (Arid Desert), Z1 (Scorching Hot Summer)
+Djibouti, Djibouti	A (Supertropical), D (Arid Desert), Z1 (Scorching Hot Summer)
+Niamey, Niger	A (Supertropical), D (Arid Desert), Z1 (Scorching Hot Summer)
+Muscat, Oman	A (Supertropical), D (Arid Desert), Z1 (Scorching Hot Summer)
+Khartoum, Sudan	A (Supertropical), D (Arid Desert), Z1 (Scorching Hot Summer)
+Abu Dhabi, United Arab Emirates	A (Supertropical), D (Arid Desert), Z1 (Scorching Hot Summer)
 
 ### Supertropial Very Hot Summer climates (A-A2):
 
 Supertropical Humid Very Hot Summer (AHA2):  
+Manila, Philippines	A (Supertropical), H (Humid), A2 (Very Hot Summer)
+Kuala Lumpur, Malaysia	A (Supertropical), H (Humid), A2 (Very Hot Summer)
+San Juan, PR	A (Supertropical), H (Humid), A2 (Very Hot Summer)
+St. John's, Antigua and Barbuda	A (Supertropical), H (Humid), A2 (Very Hot Summer)
+Bandar Seri Begawan, Brunei	A (Supertropical), H (Humid), A2 (Very Hot Summer)
+Moroni, Comoros	A (Supertropical), H (Humid), A2 (Very Hot Summer)
+Roseau, Dominica	A (Supertropical), H (Humid), A2 (Very Hot Summer)
+Malabo, Equatorial Guinea	A (Supertropical), H (Humid), A2 (Very Hot Summer)
+Palikir, Federated States of Micronesia	A (Supertropical), H (Humid), A2 (Very Hot Summer)
+Georgetown, Guyana	A (Supertropical), H (Humid), A2 (Very Hot Summer)
+Kingston, Jamaica	A (Supertropical), H (Humid), A2 (Very Hot Summer)
+Monrovia, Liberia	A (Supertropical), H (Humid), A2 (Very Hot Summer)
+Majuro, Marshall Islands	A (Supertropical), H (Humid), A2 (Very Hot Summer)
+Ngerulmud, Palau	A (Supertropical), H (Humid), A2 (Very Hot Summer)
+Panama City, Panama	A (Supertropical), H (Humid), A2 (Very Hot Summer)
+Port Moresby, Papua New Guinea	A (Supertropical), H (Humid), A2 (Very Hot Summer)
+Basseterre, Saint Kitts and Nevis	A (Supertropical), H (Humid), A2 (Very Hot Summer)
+Apia, Samoa	A (Supertropical), H (Humid), A2 (Very Hot Summer)
+São Tomé, São Tomé and Príncipe	A (Supertropical), H (Humid), A2 (Very Hot Summer)
+Singapore, Singapore	A (Supertropical), H (Humid), A2 (Very Hot Summer)
+Honiara, Solomon Islands	A (Supertropical), H (Humid), A2 (Very Hot Summer)
+Sri Jayawardenepura Kotte, Sri Lanka	A (Supertropical), H (Humid), A2 (Very Hot Summer)
+Nukuʻalofa, Tonga	A (Supertropical), H (Humid), A2 (Very Hot Summer)
+Funafuti, Tuvalu	A (Supertropical), H (Humid), A2 (Very Hot Summer)
+Port Vila, Vanuatu	A (Supertropical), H (Humid), A2 (Very Hot Summer)
+Road Town, British Virgin Islands (UK)	A (Supertropical), H (Humid), A2 (Very Hot Summer)
+Brades, Montserrat (UK)	A (Supertropical), H (Humid), A2 (Very Hot Summer)
+Pago Pago, American Samoa (US)	A (Supertropical), H (Humid), A2 (Very Hot Summer)
+Hagåtña, Guam (US)	A (Supertropical), H (Humid), A2 (Very Hot Summer)
+Saipan, Northern Mariana Islands (US)	A (Supertropical), H (Humid), A2 (Very Hot Summer)
+Charlotte Amalie, U.S. Virgin Islands (US)	A (Supertropical), H (Humid), A2 (Very Hot Summer)
+San Juan, Puerto Rico (US)	A (Supertropical), H (Humid), A2 (Very Hot Summer)
+Mata-Utu, Wallis & Futuna (FR)	A (Supertropical), H (Humid), A2 (Very Hot Summer)
+Avarua, Cook Islands (NZ)	A (Supertropical), H (Humid), A2 (Very Hot Summer)
+Alofi, Niue (NZ)	A (Supertropical), H (Humid), A2 (Very Hot Summer)
+Nukunonu, Tokelau (NZ)	A (Supertropical), H (Humid), A2 (Very Hot Summer)
 
 Supertropical Semihumid Very Hot Summer (AGA2):  
+Bridgetown, Barbados	A (Supertropical), G (Semihumid), A2 (Very Hot Summer)
+Belmopan, Belize	A (Supertropical), G (Semihumid), A2 (Very Hot Summer)
+Yaoundé, Cameroon	A (Supertropical), G (Semihumid), A2 (Very Hot Summer)
+Bangui, Central African Republic	A (Supertropical), G (Semihumid), A2 (Very Hot Summer)
+Port-au-Prince, Haiti	A (Supertropical), G (Semihumid), A2 (Very Hot Summer)
+Malé, Maldives	A (Supertropical), G (Semihumid), A2 (Very Hot Summer)
+Yaren, Nauru	A (Supertropical), G (Semihumid), A2 (Very Hot Summer)
+Kingstown, Saint Vincent and the Grenadines	A (Supertropical), G (Semihumid), A2 (Very Hot Summer)
+Paramaribo, Suriname	A (Supertropical), G (Semihumid), A2 (Very Hot Summer)
+Port of Spain, Trinidad and Tobago	A (Supertropical), G (Semihumid), A2 (Very Hot Summer)
+The Valley, Anguilla (UK)	A (Supertropical), G (Semihumid), A2 (Very Hot Summer)
+Adamstown, Pitcairn Islands (UK)	A (Supertropical), G (Semihumid), A2 (Very Hot Summer)
+Philipsburg, Sint Maarten (NL)	A (Supertropical), G (Semihumid), A2 (Very Hot Summer)
 
 Supertropical Monsoon Very Hot Summer (AWA2):  
+Jakarta, Indonesia	A (Supertropical), W (Monsoon), A2 (Very Hot Summer)
+Mumbai, India	A (Supertropical), W (Monsoon), A2 (Very Hot Summer)
+Kinshasa, DR Congo	A (Supertropical), W (Monsoon), A2 (Very Hot Summer)
+Brazzaville, Congo	A (Supertropical), W (Monsoon), A2 (Very Hot Summer)
+San Salvador, El Salvador	A (Supertropical), W (Monsoon), A2 (Very Hot Summer)
+Suva, Fiji	A (Supertropical), W (Monsoon), A2 (Very Hot Summer)
+Banjul, Gambia	A (Supertropical), W (Monsoon), A2 (Very Hot Summer)
+Conakry, Guinea	A (Supertropical), W (Monsoon), A2 (Very Hot Summer)
+Bissau, Guinea-Bissau	A (Supertropical), W (Monsoon), A2 (Very Hot Summer)
+Vientiane, Laos	A (Supertropical), W (Monsoon), A2 (Very Hot Summer)
+Port Louis, Mauritius	A (Supertropical), W (Monsoon), A2 (Very Hot Summer)
+Victoria, Seychelles	A (Supertropical), W (Monsoon), A2 (Very Hot Summer)
+Freetown, Sierra Leone	A (Supertropical), W (Monsoon), A2 (Very Hot Summer)
+Dili, Timor-Leste	A (Supertropical), W (Monsoon), A2 (Very Hot Summer)
+Papeete, French Polynesia (FR)	A (Supertropical), W (Monsoon), A2 (Very Hot Summer)
+Libreville, Gabon	A (Supertropical), W (Monsoon), A2 (Very Hot Summer)
 
 Supertropical Semiarid Very Hot Summer (ASA2):  
+Bangalore, India	A (Supertropical), S (Semiarid), A2 (Very Hot Summer)
+Lagos, Nigeria	A (Supertropical), S (Semiarid), A2 (Very Hot Summer)
+Honolulu, HI	A (Supertropical), S (Semiarid), A2 (Very Hot Summer)
+Nassau, Bahamas	A (Supertropical), S (Semiarid), A2 (Very Hot Summer)
+Porto-Novo, Benin	A (Supertropical), S (Semiarid), A2 (Very Hot Summer)
+Yamoussoukro, Côte d'Ivoire	A (Supertropical), S (Semiarid), A2 (Very Hot Summer)
+Havana, Cuba	A (Supertropical), S (Semiarid), A2 (Very Hot Summer)
+Santo Domingo, Dominican Republic	A (Supertropical), S (Semiarid), A2 (Very Hot Summer)
+Accra, Ghana	A (Supertropical), S (Semiarid), A2 (Very Hot Summer)
+St. George's, Grenada	A (Supertropical), S (Semiarid), A2 (Very Hot Summer)
+Tarawa, Kiribati	A (Supertropical), S (Semiarid), A2 (Very Hot Summer)
+Castries, Saint Lucia	A (Supertropical), S (Semiarid), A2 (Very Hot Summer)
+Lomé, Togo	A (Supertropical), S (Semiarid), A2 (Very Hot Summer)
+Oranjestad, Aruba (NL)	A (Supertropical), S (Semiarid), A2 (Very Hot Summer)
 
 Supertropical Arid Desert Very Hot Summer (ADA2):  
+Karachi, Pakistan	A (Supertropical), D (Arid Desert), A2 (Very Hot Summer)
+Luanda, Angola	A (Supertropical), D (Arid Desert), A2 (Very Hot Summer)
+Praia, Cabo Verde	A (Supertropical), D (Arid Desert), A2 (Very Hot Summer)
+Nouakchott, Mauritania	A (Supertropical), D (Arid Desert), A2 (Very Hot Summer)
+Dakar, Senegal	A (Supertropical), D (Arid Desert), A2 (Very Hot Summer)
+Mogadishu, Somalia	A (Supertropical), D (Arid Desert), A2 (Very Hot Summer)
+Dodoma, Tanzania	A (Supertropical), D (Arid Desert), A2 (Very Hot Summer)
+George Town, Cayman Islands (UK)	A (Supertropical), D (Arid Desert), A2 (Very Hot Summer)
+Cockburn Town, Turks & Caicos (UK)	A (Supertropical), D (Arid Desert), A2 (Very Hot Summer)
+Willemstad, Curaçao (NL)	A (Supertropical), D (Arid Desert), A2 (Very Hot Summer)
+Kralendijk, Bonaire (NL)	A (Supertropical), D (Arid Desert), A2 (Very Hot Summer)
+The Bottom, Saba (NL)	A (Supertropical), D (Arid Desert), A2 (Very Hot Summer)
+Oranjestad, Sint Eustatius (NL)	A (Supertropical), D (Arid Desert), A2 (Very Hot Summer)
 
 ### Supertropial Hot Summer climates (A-A1):
 
-Supertropical Semihumid Hot Summer (AGA1):  
-
 Supertropical Monsoon Hot Summer (AWA1):  
+Brasília, Brazil	A (Supertropical), W (Monsoon), A1 (Hot Summer)
+
+Supertropical Semiarid Hot Summer (ASA1):  
+Caracas, Venezuela	A (Supertropical), S (Semiarid), A1 (Hot Summer)
 
 # Tropical Climates (B):
 
-### Tropical Extreme Hyperthermal Summer climates (B-X1):  
-
-Tropical Monsoon Extreme Hyperthermal Summer (BWX1):  
-
-Tropical Semiarid Extreme Hyperthermal Summer (BSX1):  
-
-Tropical Arid Desert Extreme Hyperthermal Summer (BDX1):  
-
 ### Tropical Hyperthermal Summer climates (B-Z2):
 
-Tropical Semihumid Hyperthermal Summer (BGZ2):  
-
-Tropical Monsoon Hyperthermal Summer (BWZ2):  
-
-Tropical Semiarid Hyperthermal Summer (BSZ2):  
-
 Tropical Arid Desert Hyperthermal Summer (BDZ2):  
+Phoenix–Mesa–Scottsdale, AZ	B (Tropical), D (Arid Desert), Z2 (Hyperthermal Summer)
+Baghdad, Iraq	B (Tropical), D (Arid Desert), Z2 (Hyperthermal Summer)
+Kuwait City, Kuwait	B (Tropical), D (Arid Desert), Z2 (Hyperthermal Summer)
+Riyadh, Saudi Arabia	B (Tropical), D (Arid Desert), Z2 (Hyperthermal Summer)
 
-### Tropical Scorching Hot Summer climates (B-Z1):
-
-Tropical Humid Scorching Hot Summer (BHZ1):  
-
-Tropical Semihumid Scorching Hot Summer (BGZ1):  
+### Tropical Scorching Hot Summer climates (B-Z1): 
 
 Tropical Monsoon Scorching Hot Summer (BWZ1):  
-
-Tropical Mediterranean Scorching Hot Summer (BMZ1):   
+Delhi, India	B (Tropical), W (Monsoon), Z1 (Scorching Hot Summer)
+Kolkata, India	B (Tropical), W (Monsoon), Z1 (Scorching Hot Summer)
 
 Tropical Desert Scorching Hot Summer (BDZ1):  
+Lahore, Pakistan	B (Tropical), D (Arid Desert), Z1 (Scorching Hot Summer)
+Manama, Bahrain	B (Tropical), D (Arid Desert), Z1 (Scorching Hot Summer)
+Nicosia, Cyprus	B (Tropical), D (Arid Desert), Z1 (Scorching Hot Summer)
+Doha, Qatar	B (Tropical), D (Arid Desert), Z1 (Scorching Hot Summer)
 
 ### Tropical Very Hot Summer Climates (B-A2):
 
 Tropical Humid Very Hot Summer (BHA2):  
+Taipei, Taiwan	B (Tropical), H (Humid), A2 (Very Hot Summer)
+Nouméa, New Caledonia (FR)	B (Tropical), H (Humid), A2 (Very Hot Summer)
 
 Tropical Semihumid Very Hot Summer (BGA2):  
+Miami–Fort Lauderdale, FL	B (Tropical), G (Semihumid), A2 (Very Hot Summer)
+Tampa–St. Petersburg, FL	B (Tropical), G (Semihumid), A2 (Very Hot Summer)
+Orlando, FL	B (Tropical), G (Semihumid), A2 (Very Hot Summer)
+Jacksonville, FL	B (Tropical), G (Semihumid), A2 (Very Hot Summer)
+New Orleans, LA	B (Tropical), G (Semihumid), A2 (Very Hot Summer)
+Tallahassee, FL	B (Tropical), G (Semihumid), A2 (Very Hot Summer)
+Baton Rouge, LA	B (Tropical), G (Semihumid), A2 (Very Hot Summer)
+Hamilton, Bermuda (UK)	B (Tropical), G (Semihumid), A2 (Very Hot Summer)
 
 Tropical Monsoon Very Hot Summer (BWA2):  
+Guangzhou–Foshan, China	B (Tropical), W (Monsoon), A2 (Very Hot Summer)
+Dhaka, Bangladesh	B (Tropical), W (Monsoon), A2 (Very Hot Summer)
+Shenzhen, China	B (Tropical), W (Monsoon), A2 (Very Hot Summer)
+Rio de Janeiro, Brazil	B (Tropical), W (Monsoon), A2 (Very Hot Summer)
+Dongguan, China	B (Tropical), W (Monsoon), A2 (Very Hot Summer)
+Maputo, Mozambique	B (Tropical), W (Monsoon), A2 (Very Hot Summer)
+Asunción, Paraguay	B (Tropical), W (Monsoon), A2 (Very Hot Summer)
+Hanoi, Vietnam	B (Tropical), W (Monsoon), A2 (Very Hot Summer)
 
 Tropical Mediterranean Very Hot Summer (BMA2):  
+Algiers, Algeria	B (Tropical), M (Mediterranean), A2 (Very Hot Summer)
+Beirut, Lebanon	B (Tropical), M (Mediterranean), A2 (Very Hot Summer)
+Tunis, Tunisia	B (Tropical), M (Mediterranean), A2 (Very Hot Summer)
 
 Tropical Semiarid Very Hot Summer (BSA2):  
+Houston, TX	B (Tropical), S (Semiarid), A2 (Very Hot Summer)
+San Antonio, TX	B (Tropical), S (Semiarid), A2 (Very Hot Summer)
+Austin, TX	B (Tropical), S (Semiarid), A2 (Very Hot Summer)
 
-Tropical Arid Desert Very Hot Summer (BDA2):
-
+Tropical Arid Desert Very Hot Summer (BDA2):  
 <img src="images/pyramids.jpg"/>  
+
+Cairo, Egypt	B (Tropical), D (Arid Desert), A2 (Very Hot Summer)
+Gaborone, Botswana	B (Tropical), D (Arid Desert), A2 (Very Hot Summer)
+Jerusalem, Israel	B (Tropical), D (Arid Desert), A2 (Very Hot Summer)
+Amman, Jordan	B (Tropical), D (Arid Desert), A2 (Very Hot Summer)
+Tripoli, Libya	B (Tropical), D (Arid Desert), A2 (Very Hot Summer)
+Valletta, Malta	B (Tropical), D (Arid Desert), A2 (Very Hot Summer)
+Melilla, Melilla (ES)	B (Tropical), D (Arid Desert), A2 (Very Hot Summer)
 
 ### Tropical Hot Summer Climates (B-A1):
 
 Tropical Humid Hot Summer (BHA1):  
+San José, Costa Rica	B (Tropical), H (Humid), A1 (Hot Summer)
+Kingston, Norfolk Island (AU)	B (Tropical), H (Humid), A1 (Hot Summer)
 
 Tropical Semihumid Hot Summer (BGA1):  
+Buenos Aires, Argentina	B (Tropical), G (Semihumid), A1 (Hot Summer)
+Tegucigalpa, Honduras	B (Tropical), G (Semihumid), A1 (Hot Summer)
+Kampala, Uganda	B (Tropical), G (Semihumid), A1 (Hot Summer)
+Montevideo, Uruguay	B (Tropical), G (Semihumid), A1 (Hot Summer)
 
 Tropical Monsoon Hot Summer (BWA1):  
+São Paulo, Brazil	B (Tropical), W (Monsoon), A1 (Hot Summer)
+Gitega, Burundi	B (Tropical), W (Monsoon), A1 (Hot Summer)
+Antananarivo, Madagascar	B (Tropical), W (Monsoon), A1 (Hot Summer)
+Lilongwe, Malawi	B (Tropical), W (Monsoon), A1 (Hot Summer)
+Sana'a, Yemen	B (Tropical), W (Monsoon), A1 (Hot Summer)
+Lusaka, Zambia	B (Tropical), W (Monsoon), A1 (Hot Summer)
+Harare, Zimbabwe	B (Tropical), W (Monsoon), A1 (Hot Summer)
 
 Tropical Mediterranean Hot Summer (BMA1):  
+Los Angeles, United States	B (Tropical), M (Mediterranean), A1 (Hot Summer)
+Riverside–San Bernardino, CA	B (Tropical), M (Mediterranean), A1 (Hot Summer)
+Lisbon, Portugal	B (Tropical), M (Mediterranean), A1 (Hot Summer)
+Gibraltar, Gibraltar (UK)	B (Tropical), M (Mediterranean), A1 (Hot Summer)
+Ceuta, Ceuta (ES)	B (Tropical), M (Mediterranean), A1 (Hot Summer)
+Ponta Delgada, Azores (PT)	B (Tropical), M (Mediterranean), A1 (Hot Summer)
+Funchal, Madeira (PT)	B (Tropical), M (Mediterranean), A1 (Hot Summer)
 
 Tropical Semiarid Hot Summer (BSA1):  
+Nairobi, Kenya	B (Tropical), S (Semiarid), A1 (Hot Summer)
+Jamestown, St Helena (UK)	B (Tropical), S (Semiarid), A1 (Hot Summer)
+Hanga Roa, Easter Island (CL)	B (Tropical), S (Semiarid), A1 (Hot Summer)
 
 Tropical Arid Desert Hot Summer (BDA1):  
+Lima, Peru	B (Tropical), D (Arid Desert), A1 (Hot Summer)
+San Diego, CA	B (Tropical), D (Arid Desert), A1 (Hot Summer)
+Asmara, Eritrea	B (Tropical), D (Arid Desert), A1 (Hot Summer)
+Rabat, Morocco	B (Tropical), D (Arid Desert), A1 (Hot Summer)
+Windhoek, Namibia	B (Tropical), D (Arid Desert), A1 (Hot Summer)
 
 ### Tropical Mild Summer Climates (B-B2):
 
 Tropical Humid Mild Summer (BHB2):  
+Guatemala City, Guatemala	B (Tropical), H (Humid), B2 (Mild Summer)
+Wellington, New Zealand	B (Tropical), H (Humid), B2 (Mild Summer)
+Bogotá, Colombia (today)  
+Edinburgh of the Seven Seas	(today)
 
 Tropical Semihumid Mild Summer (BGB2):  
+Kigali, Rwanda	B (Tropical), G (Semihumid), B2 (Mild Summer)
 <img src="images/Ruwenpflanzen.jpg"/>
 
 Tropical Monsoon Mild Summer (BWB2):  
+Mexico City, Mexico	B (Tropical), W (Monsoon), B2 (Mild Summer)
+Mbabane, Eswatini	B (Tropical), W (Monsoon), B2 (Mild Summer)
+Addis Ababa, Ethiopia	B (Tropical), W (Monsoon), B2 (Mild Summer)
+
+Tropical Semiarid Mild Summer (BSB2):  
+Cape Town, South Africa	B (Tropical), S (Semiarid), B2 (Mild Summer)
 
 ### Tropical Cold Summer Climate (BB1):  
 Quito, Ecuador (today)  
@@ -265,75 +436,120 @@ Sucre, Bolivia (today)
 
 # Subtropical Climates (C):
 
-### Subtropical Extreme Hyperthermal Summer Climates (C-X1):
-
-Subtropical Semihumid Extreme Hyperthermal Summer (CGX1):  
-
-Subtropical Monsoon Extreme Hyperthermal Summer (CWX1):  
-
-Subtropical Mediterranean Extreme Hyperthermal Summer (CMX1):  
-
-Subtropical Semiarid Extreme Hyperthermal Summer (CSX1):  
-
-Subtropical Desert Wasteland (CDX1):  
-
-### Subtropical Hyperthermal Summer Climates (C-Z2):
-
-Subtropical Humid Hyperthermal Summer (CHZ2):  
-
-Subtropical Semihumid Hyperthermal Summer (CGZ2):  
-
-Subtropical Mediterranean Hyperthermal Summer (CMZ2):  
-
-Subtropical Monsoon Hyperthermal Summer (CWZ2):  
-
-Subtropical Semiarid Hyperthermal Summer (CSZ2):  
-
-Subtropical Desert Hyperthermal Summer (CDZ2):  
-
 ### Subtropical Scorching Hot Summer Climates (C-Z1):
 
-Subtropical Humid Scorching Hot Summer (CHZ1):  
-
-Subtropical Semihumid Scorching Hot Summer (CGZ1):  
-
-Subtropical Monsoon Scorching Hot Summer (CWZ1):  
-
-Subtropical Meiterranean Scorching Hot Summer (CMZ1):  
-
 Subtropical Semiarid Scorching Hot Summer (CSZ1):   
+Islamabad, Pakistan	C (Subtropical), S (Semiarid), Z1 (Scorching Hot Summer)
 
 Subtropical Desert Scorching Hot Summer (CDZ1):  
+Las Vegas–Henderson–Paradise, NV	C (Subtropical), D (Arid Desert), Z1 (Scorching Hot Summer)
 
 ### Subtropical Very Hot Summer Climates (C-A2):
 
+Subtropical Humid Very Hot Summer (CHA2):  
+Tokyo–Yokohama, Japan	C (Subtropical), H (Humid), A2 (Very Hot Summer)
+Osaka–Kobe–Kyoto, Japan	C (Subtropical), H (Humid), A2 (Very Hot Summer)
+Nagoya, Japan	C (Subtropical), H (Humid), A2 (Very Hot Summer)
+Atlanta, GA	C (Subtropical), H (Humid), A2 (Very Hot Summer)
+Virginia Beach–Norfolk, VA	C (Subtropical), H (Humid), A2 (Very Hot Summer)
+Nashville–Davidson, TN	C (Subtropical), H (Humid), A2 (Very Hot Summer)
+Memphis, TN–MS–AR	C (Subtropical), H (Humid), A2 (Very Hot Summer)
+Louisville/Jefferson County, KY–IN	C (Subtropical), H (Humid), A2 (Very Hot Summer)
+Little Rock, AR	C (Subtropical), H (Humid), A2 (Very Hot Summer)
+Annapolis, MD	C (Subtropical), H (Humid), A2 (Very Hot Summer)
+Carbondale, IL	C (Subtropical), H (Humid), A2 (Very Hot Summer)
+
 Subtropical Semihumid Very Hot Summer (CGA2):   
+Shanghai, China	C (Subtropical), G (Semihumid), A2 (Very Hot Summer)
+Wuhan, China	C (Subtropical), G (Semihumid), A2 (Very Hot Summer)
+Hangzhou, China	C (Subtropical), G (Semihumid), A2 (Very Hot Summer)
+Charlotte, NC–SC	C (Subtropical), G (Semihumid), A2 (Very Hot Summer)
+Raleigh, NC	C (Subtropical), G (Semihumid), A2 (Very Hot Summer)
+Richmond, VA	C (Subtropical), G (Semihumid), A2 (Very Hot Summer)
+Montgomery, AL	C (Subtropical), G (Semihumid), A2 (Very Hot Summer)
+Jackson, MS	C (Subtropical), G (Semihumid), A2 (Very Hot Summer)
+Columbia, SC	C (Subtropical), G (Semihumid), A2 (Very Hot Summer)
 
 Subtropical Monsoon Very Hot Summer (CWA2):  
+Chengdu, China	C (Subtropical), W (Monsoon), A2 (Very Hot Summer)
+Chongqing, China	C (Subtropical), W (Monsoon), A2 (Very Hot Summer)
+Xi’an, China	C (Subtropical), W (Monsoon), A2 (Very Hot Summer)
+Zhengzhou, China	C (Subtropical), W (Monsoon), A2 (Very Hot Summer)
 
 Subtropical Mediterranean Very Hot Summer (CMA2):   
+Istanbul, Turkey	C (Subtropical), M (Mediterranean), A2 (Very Hot Summer)
+Sacramento, CA	C (Subtropical), M (Mediterranean), A2 (Very Hot Summer)
+Athens, Greece	C (Subtropical), M (Mediterranean), A2 (Very Hot Summer)
+Tashkent, Uzbekistan	C (Subtropical), M (Mediterranean), A2 (Very Hot Summer)
 
 Subtropical Semiarid Very Hot Summer (CSA2):  
+Dallas–Fort Worth–Arlington, TX	C (Subtropical), S (Semiarid), A2 (Very Hot Summer)
+Oklahoma City, OK	C (Subtropical), S (Semiarid), A2 (Very Hot Summer)
+Madrid, Spain	C (Subtropical), S (Semiarid), A2 (Very Hot Summer)
 
 Subtropical Arid Desert Very Hot Summer (CDA2):  
+Baku, Azerbaijan	C (Subtropical), D (Arid Desert), A2 (Very Hot Summer)
+Ashgabat, Turkmenistan	C (Subtropical), D (Arid Desert), A2 (Very Hot Summer)
 
 ### Subtropical Hot Summer Climates (C-A1):  
 
 Subtropical Humid Hot Summer (CHA1):  
+Dover, DE	C (Subtropical), H (Humid), A1 (Hot Summer)
+Frankfort, KY	C (Subtropical), H (Humid), A1 (Hot Summer)
+Charleston, WV	C (Subtropical), H (Humid), A1 (Hot Summer)
+Tirana, Albania	C (Subtropical), H (Humid), A1 (Hot Summer)
+Podgorica, Montenegro	C (Subtropical), H (Humid), A1 (Hot Summer)
 
 Subtropical Semihumid Hot Summer (CGA1):   
+Washington–Arlington, DC–VA–MD	C (Subtropical), G (Semihumid), A1 (Hot Summer)
+Rome, Italy	C (Subtropical), G (Semihumid), A1 (Hot Summer)
+Monaco, Monaco	C (Subtropical), G (Semihumid), A1 (Hot Summer)
+San Marino, San Marino	C (Subtropical), G (Semihumid), A1 (Hot Summer)
+Belgrade, Serbia	C (Subtropical), G (Semihumid), A1 (Hot Summer)
+
+Subtropical Monsoon Hot Summer (CWA1):  
+Johannesburg–Pretoria, South Africa	C (Subtropical), W (Monsoon), A1 (Hot Summer)
+Maseru, Lesotho	C (Subtropical), W (Monsoon), A1 (Hot Summer)
+Kathmandu, Nepal	C (Subtropical), W (Monsoon), A1 (Hot Summer)
+Bloemfontein, South Africa	C (Subtropical), W (Monsoon), A1 (Hot Summer)
 
 Subtropical Meiterranean Hot Summer (CMA1):  
+Damascus, Syria	C (Subtropical), M (Mediterranean), A1 (Hot Summer)
+
+Subtropical Semiarid Hot Summer (CSA1):  
+Vatican City, Vatican City	C (Subtropical), S (Semiarid), A1 (Hot Summer)
 
 Subtropical Arid Desert Hot Summer (CDA1):  
+Santiago, Chile	C (Subtropical), D (Arid Desert), A1 (Hot Summer)
 
 ### Subtropical Mild Summer Climates (C-B2):
 
 Subtropical Humid Mild Summer (CHB2):  
+Dublin, Ireland	C (Subtropical), H (Humid), B2 (Mild Summer)
+Luxembourg, Luxembourg	C (Subtropical), H (Humid), B2 (Mild Summer)
+Bern, Switzerland	C (Subtropical), H (Humid), B2 (Mild Summer)
 
 Subtropical Semihumid Mild Summer (CGB2):  
+Paris, France	C (Subtropical), G (Semihumid), B2 (Mild Summer)
+London, United Kingdom	C (Subtropical), G (Semihumid), B2 (Mild Summer)
+Canberra, Australia	C (Subtropical), G (Semihumid), B2 (Mild Summer)
+Brussels, Belgium	C (Subtropical), G (Semihumid), B2 (Mild Summer)
+Copenhagen, Denmark	C (Subtropical), G (Semihumid), B2 (Mild Summer)
+Berlin, Germany	C (Subtropical), G (Semihumid), B2 (Mild Summer)
+Amsterdam, Netherlands	C (Subtropical), G (Semihumid), B2 (Mild Summer)
 
 Subtropical Mediterranean Mild Summer (CMB2):  
+Seattle–Tacoma, WA	C (Subtropical), M (Mediterranean), B2 (Mild Summer)
+San Francisco–Oakland, CA	C (Subtropical), M (Mediterranean), B2 (Mild Summer)
+Portland, OR–WA	C (Subtropical), M (Mediterranean), B2 (Mild Summer)
+San Jose, CA	C (Subtropical), M (Mediterranean), B2 (Mild Summer)
+Salem, OR	C (Subtropical), M (Mediterranean), B2 (Mild Summer)
+Olympia, WA	C (Subtropical), M (Mediterranean), B2 (Mild Summer)
+Vancouver, BC	C (Subtropical), M (Mediterranean), B2 (Mild Summer)
+Surrey, BC	C (Subtropical), M (Mediterranean), B2 (Mild Summer)
+Burnaby, BC	C (Subtropical), M (Mediterranean), B2 (Mild Summer)
+Richmond, BC	C (Subtropical), M (Mediterranean), B2 (Mild Summer)
+Abbotsford, BC	C (Subtropical), M (Mediterranean), B2 (Mild Summer)
 
 ### Subtropical Cold Summer Climate (CB1):  
 Ketchikan, AK (today)  
@@ -354,73 +570,135 @@ Bird Island Research Station (2100)
 
 # Temperate Climates (D):
 
-### Temperate Wasteland Climates (D-X1):
-
-Temperate Semiarid Extreme Hyperthermal Summer (DSX1):  
-
-Temperate Arid Desert Extreme Hyperthermal Summer (DDX1):  
-
-### Temperate Hyperthermal Summer Climates (D-Z2):  
-
-Temperate Humid Hyperthermal Summer (DHZ2):  
-
-Temperate Semihumid Hyperthermal Summer (DGZ2):  
-
-Temperate Monsoon Hyperthermal Summer (DWZ2):  
-
-Temperate Mediterranean Hyperthermal Summer (DMZ2):  
-
-Temperate Semiarid Hyperthermal Summer (DSZ2):  
-
-Temperate Arid Desert Hyperthermal Summer (DDZ2):  
-
-### Temperate Scorching Hot Summer Climates (D-Z1):
-
-Temperate Humid Scorching Hot Summer (DHZ1):  
-
-Temperate Semihumid Scorching Hot Summer (DGZ1):  
-
-Temperate Monsoon Scorching Hot Summer (DWZ1):  
-
-Temperate Mediterranean Scorching Hot Summer (DMZ1):  
-
-Temperate Semiarid Scorching Hot Summer (DSZ1):  
-
-Temperate Arid Desert Scorching Hot Summer (DDZ1):  
-
 ### Temperate Very Hot Summer Climates (D-A2):
 
 Temperate Humid Very Hot Summer (DHA2):  
+Kansas City, MO–KS	D (Temperate), H (Humid), A2 (Very Hot Summer)
 
 Temperate Semihumid Very Hot Summer (DGA2):  
+St. Louis, MO–IL	D (Temperate), G (Semihumid), A2 (Very Hot Summer)
+Topeka, KS	D (Temperate), G (Semihumid), A2 (Very Hot Summer)
+Jefferson City, MO	D (Temperate), G (Semihumid), A2 (Very Hot Summer)
+Lincoln, NE	D (Temperate), G (Semihumid), A2 (Very Hot Summer)
 
 Temperate Monsoon Very Hot Summer (DWA2):  
+Seoul–Incheon, South Korea	D (Temperate), W (Monsoon), A2 (Very Hot Summer)
+Beijing, China	D (Temperate), W (Monsoon), A2 (Very Hot Summer)
+Tianjin, China	D (Temperate), W (Monsoon), A2 (Very Hot Summer)
 
 Temperate Semiarid Very Hot Summer (DSA2):  
+Salt Lake City, UT	D (Temperate), S (Semiarid), A2 (Very Hot Summer)
+Pierre, SD	D (Temperate), S (Semiarid), A2 (Very Hot Summer)
 
 Temperate Arid Desert Very Hot Summer (DDA2):  
+Tehran, Iran	D (Temperate), D (Arid Desert), A2 (Very Hot Summer)
 
 ### Temperate Hot Summer Climates (D-A1):
 
 Temperate Humid Hot Summer (DHA1):  
+New York, United States	D (Temperate), H (Humid), A1 (Hot Summer)
+Chicago, United States	D (Temperate), H (Humid), A1 (Hot Summer)
+Philadelphia, PA–NJ–DE–MD	D (Temperate), H (Humid), A1 (Hot Summer)
+Boston, MA–NH	D (Temperate), H (Humid), A1 (Hot Summer)
+Baltimore, MD	D (Temperate), H (Humid), A1 (Hot Summer)
+Pittsburgh, PA	D (Temperate), H (Humid), A1 (Hot Summer)
+Cleveland, OH	D (Temperate), H (Humid), A1 (Hot Summer)
+Indianapolis, IN	D (Temperate), H (Humid), A1 (Hot Summer)
+Cincinnati, OH–KY	D (Temperate), H (Humid), A1 (Hot Summer)
+Columbus, OH	D (Temperate), H (Humid), A1 (Hot Summer)
+Milwaukee, WI	D (Temperate), H (Humid), A1 (Hot Summer)
+Providence, RI–MA	D (Temperate), H (Humid), A1 (Hot Summer)
+Hartford, CT	D (Temperate), H (Humid), A1 (Hot Summer)
+Buffalo, NY	D (Temperate), H (Humid), A1 (Hot Summer)
+Augusta, ME	D (Temperate), H (Humid), A1 (Hot Summer)
+Concord, NH	D (Temperate), H (Humid), A1 (Hot Summer)
+Trenton, NJ	D (Temperate), H (Humid), A1 (Hot Summer)
+Albany, NY	D (Temperate), H (Humid), A1 (Hot Summer)
+Harrisburg, PA	D (Temperate), H (Humid), A1 (Hot Summer)
+Madison, WI	D (Temperate), H (Humid), A1 (Hot Summer)
+Zagreb, Croatia	D (Temperate), H (Humid), A1 (Hot Summer)
+Hamilton, ON	D (Temperate), H (Humid), A1 (Hot Summer)
+Champaign, IL	D (Temperate), H (Humid), A1 (Hot Summer)
 
 Temperate Semihumid Hot Summer (DGA1):  
+Moscow, Russia	D (Temperate), G (Semihumid), A1 (Hot Summer)
+Detroit, MI	D (Temperate), G (Semihumid), A1 (Hot Summer)
+Minneapolis–St. Paul, MN	D (Temperate), G (Semihumid), A1 (Hot Summer)
+Springfield, IL	D (Temperate), G (Semihumid), A1 (Hot Summer)
+Des Moines, IA	D (Temperate), G (Semihumid), A1 (Hot Summer)
+Lansing, MI	D (Temperate), G (Semihumid), A1 (Hot Summer)
+Vienna, Austria	D (Temperate), G (Semihumid), A1 (Hot Summer)
+Budapest, Hungary	D (Temperate), G (Semihumid), A1 (Hot Summer)
+Pristina, Kosovo	D (Temperate), G (Semihumid), A1 (Hot Summer)
+Skopje, North Macedonia	D (Temperate), G (Semihumid), A1 (Hot Summer)
+Bratislava, Slovakia	D (Temperate), G (Semihumid), A1 (Hot Summer)
+Kyiv, Ukraine	D (Temperate), G (Semihumid), A1 (Hot Summer)
+Toronto, ON	D (Temperate), G (Semihumid), A1 (Hot Summer)
+Mississauga, ON	D (Temperate), G (Semihumid), A1 (Hot Summer)
+Brampton, ON	D (Temperate), G (Semihumid), A1 (Hot Summer)
 
 Temperate Monsoon Hot Summer (DWA1):  
+Pyongyang, North Korea	D (Temperate), W (Monsoon), A1 (Hot Summer)
 
 Temperate Mediterranean Hot Summer (DMA1):  
+Boise, ID	D (Temperate), M (Mediterranean), A1 (Hot Summer)
+Carson City, NV	D (Temperate), M (Mediterranean), A1 (Hot Summer)
 
 Temperate Semiarid Hot Summer (DSA1): 
+Denver–Aurora, CO	D (Temperate), S (Semiarid), A1 (Hot Summer)
+Santa Fe, NM	D (Temperate), S (Semiarid), A1 (Hot Summer)
+Cheyenne, WY	D (Temperate), S (Semiarid), A1 (Hot Summer)
+Kabul, Afghanistan	D (Temperate), S (Semiarid), A1 (Hot Summer)
+Yerevan, Armenia	D (Temperate), S (Semiarid), A1 (Hot Summer)
+Tbilisi, Georgia	D (Temperate), S (Semiarid), A1 (Hot Summer)
+Bishkek, Kyrgyzstan	D (Temperate), S (Semiarid), A1 (Hot Summer)
+Chișinău, Moldova	D (Temperate), S (Semiarid), A1 (Hot Summer)
+Bucharest, Romania	D (Temperate), S (Semiarid), A1 (Hot Summer)
+Ankara, Turkey	D (Temperate), S (Semiarid), A1 (Hot Summer)
+Rexburg, ID	D (Temperate), S (Semiarid), A1 (Hot Summer)
 
 ### Temperate Mild Summer Climates (D-B2):
 
 Temperate Humid Mild Summer (DHB2):  
+Sarajevo, Bosnia and Herzegovina	D (Temperate), H (Humid), B2 (Mild Summer)
+Vaduz, Liechtenstein	D (Temperate), H (Humid), B2 (Mild Summer)
+Oslo, Norway	D (Temperate), H (Humid), B2 (Mild Summer)
+Ljubljana, Slovenia	D (Temperate), H (Humid), B2 (Mild Summer)
+Saint-Pierre, Saint-Pierre & Miquelon (FR)	D (Temperate), H (Humid), B2 (Mild Summer)
+Halifax, NS	D (Temperate), H (Humid), B2 (Mild Summer)
+Cape Breton Regional Municipality, NS	D (Temperate), H (Humid), B2 (Mild Summer)
+Truro, NS	D (Temperate), H (Humid), B2 (Mild Summer)
+New Glasgow, NS	D (Temperate), H (Humid), B2 (Mild Summer)
+Amherst, NS	D (Temperate), H (Humid), B2 (Mild Summer)
+Moncton, NB	D (Temperate), H (Humid), B2 (Mild Summer)
+Saint John, NB	D (Temperate), H (Humid), B2 (Mild Summer)
+Dieppe, NB	D (Temperate), H (Humid), B2 (Mild Summer)
+St. John's, NL	D (Temperate), H (Humid), B2 (Mild Summer)
+Conception Bay South, NL	D (Temperate), H (Humid), B2 (Mild Summer)
+Mount Pearl, NL	D (Temperate), H (Humid), B2 (Mild Summer)
+Paradise, NL	D (Temperate), H (Humid), B2 (Mild Summer)
+Corner Brook, NL	D (Temperate), H (Humid), B2 (Mild Summer)
+Charlottetown, PE	D (Temperate), H (Humid), B2 (Mild Summer)
+Andorra la Vella, Andorra (today)
 
 Temperate Semihumid Mild Summer (DGB2):  
+Minsk, Belarus	D (Temperate), G (Semihumid), B2 (Mild Summer)
+Sofia, Bulgaria	D (Temperate), G (Semihumid), B2 (Mild Summer)
+Prague, Czech Republic	D (Temperate), G (Semihumid), B2 (Mild Summer)
+Tallinn, Estonia	D (Temperate), G (Semihumid), B2 (Mild Summer)
+Helsinki, Finland	D (Temperate), G (Semihumid), B2 (Mild Summer)
+Riga, Latvia	D (Temperate), G (Semihumid), B2 (Mild Summer)
+Vilnius, Lithuania	D (Temperate), G (Semihumid), B2 (Mild Summer)
+Stockholm, Sweden	D (Temperate), G (Semihumid), B2 (Mild Summer)
+Calgary, AB	D (Temperate), G (Semihumid), B2 (Mild Summer)
 
 Temperate Mediterranean Mild Summer (DMB2):  
+Dushanbe, Tajikistan	D (Temperate), M (Mediterranean), B2 (Mild Summer)
 
 Temperate Semiarid Mild Summer (DSB2):  
+Helena, MT	D (Temperate), S (Semiarid), B2 (Mild Summer)
+Warsaw, Poland	D (Temperate), S (Semiarid), B2 (Mild Summer)
+Lethbridge, AB	D (Temperate), S (Semiarid), B2 (Mild Summer)
 
 ### Temperate Cold Summer Climate (DB1):  
 Anchorage, AK (today)  
@@ -450,16 +728,54 @@ Primavera Research Station, Antarctica (today)
 ### Continental Hot Summer Climates (E-A1):
 
 Continental Humid Hot Summer (EHA1):  
+Ottawa, Canada	E (Continental), H (Humid), A1 (Hot Summer)
+Ottawa, ON	E (Continental), H (Humid), A1 (Hot Summer)
+Montreal, QC	E (Continental), H (Humid), A1 (Hot Summer)
+Laval, QC	E (Continental), H (Humid), A1 (Hot Summer)
+Gatineau, QC	E (Continental), H (Humid), A1 (Hot Summer)
+Longueuil, QC	E (Continental), H (Humid), A1 (Hot Summer)
+
+Continental Monsoon Hot Summer (EWA1):  
+Bismarck, ND	E (Continental), W (Monsoon), A1 (Hot Summer)
 
 ### Continental Mild Summer Climates (E-B2):  
 
 Continental Humid Mild Summer (EHB2):  
+Montpelier, VT	E (Continental), H (Humid), B2 (Mild Summer)
+Quebec City, QC	E (Continental), H (Humid), B2 (Mild Summer)
+Fredericton, NB	E (Continental), H (Humid), B2 (Mild Summer)
+Miramichi, NB	E (Continental), H (Humid), B2 (Mild Summer)
+Duluth, MN	E (Continental), H (Humid), B2 (Mild Summer)
+Lutsen, MN	E (Continental), H (Humid), B2 (Mild Summer)
+Thunder Bay, ON	E (Continental), H (Humid), B2 (Mild Summer)
 
 Continental Semihumid Mild Summer (EGB2):  
+Edmonton, AB	E (Continental), G (Semihumid), B2 (Mild Summer)
+Red Deer, AB	E (Continental), G (Semihumid), B2 (Mild Summer)
+St. Albert, AB	E (Continental), G (Semihumid), B2 (Mild Summer)
+Winnipeg, MB	E (Continental), G (Semihumid), B2 (Mild Summer)
+Brandon, MB	E (Continental), G (Semihumid), B2 (Mild Summer)
+Steinbach, MB	E (Continental), G (Semihumid), B2 (Mild Summer)
+Portage la Prairie, MB	E (Continental), G (Semihumid), B2 (Mild Summer)
+Prince Albert, SK	E (Continental), G (Semihumid), B2 (Mild Summer)
+Knik-Fairview, AK	E (Continental), G (Semihumid), B2 (Mild Summer)
+Novosibirsk, Russia	E (Continental), G (Semihumid), B2 (Mild Summer)
+Krasnoyarsk, Russia	E (Continental), G (Semihumid), B2 (Mild Summer)
+Omsk, Russia	E (Continental), G (Semihumid), B2 (Mild Summer)
 
-Continental Monsoon Mild Summer (EWB2):   
+Continental Monsoon Mild Summer (EWB2):  
+Fairbanks, AK	E (Continental), W (Monsoon), B2 (Mild Summer)
+Badger, AK	E (Continental), W (Monsoon), B2 (Mild Summer)
+Steele Creek, AK	E (Continental), W (Monsoon), B2 (Mild Summer)
 
 Continental Semiarid Mild Summer (ESB2):   
+Astana, Kazakhstan	E (Continental), S (Semiarid), B2 (Mild Summer)
+Saskatoon, SK	E (Continental), S (Semiarid), B2 (Mild Summer)
+Regina, SK	E (Continental), S (Semiarid), B2 (Mild Summer)
+Moose Jaw, SK	E (Continental), S (Semiarid), B2 (Mild Summer)
+Swift Current, SK	E (Continental), S (Semiarid), B2 (Mild Summer)
+College, AK	E (Continental), S (Semiarid), B2 (Mild Summer)
+Chena Ridge, AK	E (Continental), S (Semiarid), B2 (Mild Summer)
 
 ### Continental Cold Summer Climate (EB1):  
 BETHEL IN SUMMER
