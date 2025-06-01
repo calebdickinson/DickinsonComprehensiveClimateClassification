@@ -1276,6 +1276,7 @@ Continental Monsoon Mild Summer (EWB2):
 Fairbanks, AK	(today)  
 Badger, AK	(today)  
 Steele Creek, AK	(today)  
+
 Continental Semiarid Mild Summer (ESB2):   
 Astana, Kazakhstan	(today)  
 Saskatoon, SK	(today)  
