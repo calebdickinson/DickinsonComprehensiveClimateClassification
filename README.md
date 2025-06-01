@@ -928,6 +928,8 @@ Santiago, Chile	(today)
 ### Subtropical Mild Summer Climates (C-B2):
 
 Subtropical Humid Mild Summer (CHB2):  
+<img src="images/CHB2.jpg"/>
+
 Dublin, Ireland	(today)  
 Luxembourg, Luxembourg	(today)  
 Bern, Switzerland	(today)  
@@ -938,6 +940,8 @@ Edinburgh of the Seven Seas	(2100)
 Adak, AK	(2100)  
 
 Subtropical Semihumid Mild Summer (CGB2):  
+<img src="images/CGB2.jpg"/>
+
 Paris, France	(today)  
 London, United Kingdom	(today)  
 Canberra, Australia	(today)  
