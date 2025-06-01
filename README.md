@@ -823,6 +823,8 @@ Xi’an, China	(today)
 Zhengzhou, China	(today)  
 
 Subtropical Mediterranean Very Hot Summer (CMA2):   
+<img src="images/CMA2.jpg"/>
+
 Istanbul, Turkey	(today)  
 Sacramento, CA	(today)  
 Athens, Greece	(today)  
@@ -864,6 +866,8 @@ Ankara, Turkey	(2100)
 ### Subtropical Hot Summer Climates (C-A1):  
 
 Subtropical Humid Hot Summer (CHA1):  
+<img src="images/CHA1.jpg"/>
+
 Dover, DE	(today)  
 Frankfort, KY	(today)  
 Charleston, WV	(today)  
@@ -887,6 +891,7 @@ Kalifornsky, AK	(2100)
 Kenai, AK	(2100)  
 
 Subtropical Semihumid Hot Summer (CGA1):   
+<img src="images/CGA1.jpg"/>
 Washington–Arlington, DC–VA–MD	(today)  
 Rome, Italy	(today)  
 Monaco, Monaco	(today)  
@@ -918,6 +923,8 @@ Vancouver, BC	(2100)
 Burnaby, BC	(2100)  
 
 Subtropical Semiarid Hot Summer (CSA1):  
+<img src="images/CSA1.jpg"/>
+
 Vatican City, Vatican City	(today)  
 Berlin, Germany	(2100)  
 Warsaw, Poland	(2100)  
