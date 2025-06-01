@@ -950,6 +950,8 @@ Subtropical Monsoon Mild Summer (CWB2):
 Thimphu, Bhutan	(2100)  
 
 Subtropical Mediterranean Mild Summer (CMB2):  
+<img src="images/CMB2.jpeg"/>
+
 Seattle–Tacoma, WA	(today)  
 San Francisco–Oakland, CA	(today)  
 Portland, OR–WA	(today)  
@@ -964,6 +966,8 @@ Abbotsford, BC	(today)
 Ketchikan, AK	(2100)  
 
 ### Subtropical Cold Summer Climate (CB1):  
+<img src="images/CB1.jpg"/>
+
 Ketchikan, AK (today)  
 Stanley, Falkland Islands (UK) (today)  
 Tórshavn, Faroe Islands (DK) (today)  
