@@ -1164,11 +1164,15 @@ Temperate Mediterranean Mild Summer (DMB2):
 Dushanbe, Tajikistan	(today)  
 
 Temperate Semiarid Mild Summer (DSB2):  
+<img src="images/DSB2.jpg"/>
+
 Helena, MT	(today)  
 Warsaw, Poland	(today)  
 Lethbridge, AB	(today)  
 
 ### Temperate Cold Summer Climate (DB1):  
+<img src="images/DB1.jpg"/>
+
 Anchorage, AK (today)  
 Thimphu, Bhutan (today)  
 Reykjavík, Iceland (today)  
@@ -1179,17 +1183,23 @@ Sterling, AK (today)
 Wainwright, AK (2100)
 
 ### Temperate Very Cold Summer Climate (DC2):  
+<img src="images/DC2.jpg"/>
+
 Juneau, AK (today)  
 Ushuaia, Argentina (today)  
 Nuuk, Greenland (DK) (2100)  
 Longyearbyen, Svalbard & Jan Mayen (NO) (2100)  
 
 ### Temperate Freezing Summer Climate (DC1):  
+<img src="images/DC1.jpg"/>
+
 Bird Island Research Station (today)  
-Primavera Research Station, Antarctica (2100)
+Primavera Research Base, Antarctica (2100)
 
 ### Temperate Frigid Summer Climate (DY):  
-Primavera Research Station, Antarctica (today)
+<img src="images/DC1.jpg"/>
+
+Primavera Research Base, Antarctica (today)
 
 # Continental Climates (E):
 
