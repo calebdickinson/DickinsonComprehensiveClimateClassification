@@ -221,6 +221,8 @@ Monrovia, Liberia	(2100)
 Sri Jayawardenepura Kotte, Sri Lanka	(2100)  
 
 Supertropical Semihumid Scorching Hot Summer (AGZ1):  
+<img src="images/AGZ1.webp"/>
+
 Ho Chi Minh City, Vietnam	(today)  
 Phnom Penh, Cambodia	(today)  
 Yaoundé, Cameroon	(2100)  
