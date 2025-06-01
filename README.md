@@ -940,7 +940,7 @@ Edinburgh of the Seven Seas	(2100)
 Adak, AK	(2100)  
 
 Subtropical Semihumid Mild Summer (CGB2):  
-<img src="images/CGB2.jpg"/>
+<img src="images/CGB2.jpeg"/>
 
 Paris, France	(today)  
 London, United Kingdom	(today)  
