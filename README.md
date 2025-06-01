@@ -668,7 +668,7 @@ Edinburgh of the Seven Seas	(today)
 Bogotá, Colombia	(2100)  
 
 Tropical Semihumid Mild Summer (BGB2):  
-REWNZORI MOUNTAINS NATIONAL PARK
+RWENZORI MOUNTAINS NATIONAL PARK
 <img src="images/Ruwenpflanzen.jpg"/>
 
 Kigali, Rwanda	(today)  
