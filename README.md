@@ -1406,6 +1406,7 @@ Concordia Research Station, Antarctica (2100)
 ### Superarctic Freezing Summer Climate (YC1):  
 
 ### Superarctic Frigid Summer Climate (YY):  
+THIS CLIMATE WILL NO LONGER EXIST ON EARTH IN 2100
 <img src="images/Concordia.jpg"/>
 
 Concordia Research Station, Antarctica (today)
