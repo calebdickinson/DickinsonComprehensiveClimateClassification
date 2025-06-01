@@ -1197,7 +1197,7 @@ Bird Island Research Station (today)
 Primavera Research Base, Antarctica (2100)
 
 ### Temperate Frigid Summer Climate (DY):  
-<img src="images/DY.jpg"/>
+<img src="images/DY.jpeg"/>
 
 Primavera Research Base, Antarctica (today)
 
