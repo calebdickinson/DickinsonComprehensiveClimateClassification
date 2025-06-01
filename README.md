@@ -1285,11 +1285,7 @@ Moose Jaw, SK	(today)
 Swift Current, SK	(today)  
 College, AK	(today)  
 Chena Ridge, AK	(today)  
-
-
-Continental Semiarid Mild Summer (ESB2):  
 Inuvik, NT	(2100)  
-Tuktoyaktuk, NT	(2100)  
 Tuktoyaktuk, NT	(2100)  
 
 Continental Arid Desert Mild Summer (EDB2):  
