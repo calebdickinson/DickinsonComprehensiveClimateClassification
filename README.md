@@ -916,7 +916,7 @@ Maseru, Lesotho	(today)
 Kathmandu, Nepal	(today)  
 Bloemfontein, South Africa	(today)  
 
-Subtropical Meiterranean Hot Summer (CMA1):  
+Subtropical Mediterranean Hot Summer (CMA1):  
 Damascus, Syria	(today)  
 Carson City, NV	(2100)  
 Vancouver, BC	(2100)  
