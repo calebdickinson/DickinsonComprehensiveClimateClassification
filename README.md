@@ -1144,6 +1144,8 @@ St. Albert, AB	(2100)
 ### Temperate Mild Summer Climates (D-B2):
 
 Temperate Humid Mild Summer (DHB2):  
+<img src="images/DHB2.jpg"/>  
+
 Sarajevo, Bosnia and Herzegovina	(today)  
 Vaduz, Liechtenstein	(today)  
 Oslo, Norway (today)  
@@ -1167,6 +1169,8 @@ Andorra la Vella, Andorra (today)
 Juneau, AK	(2100)  
 
 Temperate Semihumid Mild Summer (DGB2):  
+<img src="images/DGB2.jpg"/>  
+
 Minsk, Belarus	(today)  
 Sofia, Bulgaria	(today)  
 Prague, Czech Republic	(today)  
@@ -1179,6 +1183,8 @@ Calgary, AB	(today)
 Bethel, AK	(2100)  
 
 Temperate Mediterranean Mild Summer (DMB2):  
+<img src="images/DMB2.jpg"/>  
+
 Dushanbe, Tajikistan	(today)  
 
 Temperate Semiarid Mild Summer (DSB2):  
@@ -1224,6 +1230,8 @@ Primavera Research Base, Antarctica (today)
 ### Continental Hot Summer Climates (E-A1):
 
 Continental Humid Hot Summer (EHA1):  
+<img src="images/EHA1.jpg"/>  
+
 Ottawa, ON	(today)  
 Montreal, QC	(today)  
 Laval, QC	(today)  
@@ -1236,6 +1244,8 @@ Fort Simpson, NT	(2100)
 Norman Wells, NT	(2100)  
 
 Continental Monsoon Hot Summer (EWA1):  
+<img src="images/EWA1.jpg"/>  
+
 Bismarck, ND	(today)  
 Fairbanks, AK	(2100)  
 Badger, AK	(2100)  
