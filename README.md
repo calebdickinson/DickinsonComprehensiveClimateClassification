@@ -473,7 +473,7 @@ Dallas–Fort Worth–Arlington, TX	(2100)
 Islamabad, Pakistan	(2100)  
 
 Tropical Arid Desert Hyperthermal Summer (BDZ2):  
-<img src="images/ZDX1.png"/>
+<img src="images/BDZ2.png"/>
 
 Phoenix–Mesa–Scottsdale, AZ	(today)  
 Baghdad, Iraq	(today)  
