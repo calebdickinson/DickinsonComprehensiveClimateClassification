@@ -1028,7 +1028,6 @@ Jefferson City, MO	(today)
 Lincoln, NE	(today)  
 Minneapolis–St. Paul, MN	(2100)  
 Madison, WI	(2100)  
-Ottawa, Canada	(2100)  
 Ottawa, ON	(2100)  
 Gatineau, QC	(2100)  
 Duluth, MN	(2100)  
@@ -1223,7 +1222,6 @@ Primavera Research Base, Antarctica (today)
 ### Continental Hot Summer Climates (E-A1):
 
 Continental Humid Hot Summer (EHA1):  
-Ottawa, Canada	(today)  
 Ottawa, ON	(today)  
 Montreal, QC	(today)  
 Laval, QC	(today)  
