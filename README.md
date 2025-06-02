@@ -1024,6 +1024,9 @@ Fredericton, NB	(2100)
 Miramichi, NB	(2100)  
 
 Temperate Semihumid Very Hot Summer (DGA2):  
+<img src="images/DGA2One.jpg"/>
+<img src="images/DGA2Two.jpg"/>
+
 St. Louis, MO–IL	(today)  
 Topeka, KS	(today)  
 Jefferson City, MO	(today)  
