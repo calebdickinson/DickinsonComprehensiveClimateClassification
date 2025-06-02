@@ -1256,6 +1256,11 @@ Fort Good Hope, NT	(2100)
 ### Continental Mild Summer Climates (E-B2):  
 
 Continental Humid Mild Summer (EHB2):  
+NORTH SHORE OF LAKE SUPERIOR IN SUMMER
+<img src="images/EHB2Summer.jpg"/>
+NORTH SHORE OF LAKE SUPERIOR IN WINTER
+<img src="images/EHB2Winter.jpg"/>
+
 Montpelier, VT	(today)  
 Quebec City, QC	(today)  
 Fredericton, NB	(today)  
@@ -1265,6 +1270,9 @@ Lutsen, MN	(today)
 Thunder Bay, ON	(today)  
 
 Continental Semihumid Mild Summer (EGB2):  
+NOVOSIBIRSK RUSSIA IN JULY
+<img src="images/EGB2.jpg"/>
+
 Edmonton, AB	(today)  
 Red Deer, AB	(today)  
 St. Albert, AB	(today)  
@@ -1282,11 +1290,17 @@ Arviat, NU	(2100)
 Coral Harbour, NU	(2100)  
 
 Continental Monsoon Mild Summer (EWB2):  
+FAIRBANKS ALASKA IN MARCH
+<img src="images/EWB2.jpg"/>
+
 Fairbanks, AK	(today)  
 Badger, AK	(today)  
 Steele Creek, AK	(today)  
 
 Continental Semiarid Mild Summer (ESB2):   
+KOKSHETAU KAZAKHSTAN IN MAY
+<img src="images/ESB2.jpg"/>
+
 Astana, Kazakhstan	(today)  
 Saskatoon, SK	(today)  
 Regina, SK	(today)  
