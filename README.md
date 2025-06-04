@@ -450,6 +450,7 @@ Quito, Ecuador	(2100)
 Guatemala City, Guatemala	(2100)  
 
 Supertropical Semihumid Hot Summer (AGA1):  
+Kampala, Uganda	(today)  
 Addis Ababa, Ethiopia	(2100)  
 
 Supertropical Monsoon Hot Summer (AWA1):  
@@ -620,7 +621,6 @@ Avarua, Cook Islands (NZ)	(2100)
 Tropical Semihumid Hot Summer (BGA1):  
 Buenos Aires, Argentina	(today)  
 Tegucigalpa, Honduras	(today)  
-Kampala, Uganda	(today)  
 Montevideo, Uruguay	(today)  
 Kingston, Norfolk Island (AU)	(2100)  
 
