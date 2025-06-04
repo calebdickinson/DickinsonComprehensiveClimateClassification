@@ -135,7 +135,7 @@ Programmers and others are encouraged to find uses for this system and to make t
 ### Ultratropical Extreme Hyperthermal Summer climates (Z-X1):
 
 Ultratropical Arid Desert Extreme Hyperthermal Summer (ZDX1):  
-<span style="color:red">THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH</span>   
+THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH
 Niamey, Niger	(2100)  
 Khartoum, Sudan	(2100)  
 
