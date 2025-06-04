@@ -1213,6 +1213,13 @@ Edmonton, AB	(2100)
 Red Deer, AB	(2100)  
 St. Albert, AB	(2100)  
 
+Temperate Arid Desert Hot Summer (DDA1):  
+<img src="images/DDA1.jpg"/>  
+
+Aksu City, China (today)  
+Shoshoni, WY (today)  
+Yakima, WA (today)
+
 ### Temperate Mild Summer Climates (D-B2):
 
 Temperate Humid Mild Summer (DHB2):  
@@ -1266,6 +1273,11 @@ Helena, MT	(today)
 Warsaw, Poland	(today)  
 Lethbridge, AB	(today)  
 
+Temperate Arid Desert Mild Summer (DDB2):  
+<img src="images/DDB2.jpg"/>
+
+Meeteetse, WY (today)
+
 ### Temperate Cold Summer Climate (DB1):  
 <img src="images/DB1.jpg"/>
 
@@ -1297,7 +1309,14 @@ Primavera Research Base, Antarctica (2100)
 
 Primavera Research Base, Antarctica (today)
 
-# Continental Climates (E):
+# Continental Climates (E):  
+
+### Continental Very Hot Summer Climates (E-A2):
+
+Continental Arid Desert Hot Summer (EDA2):  
+<img src="images/EDA2.jpeg"/>
+
+Bulgan, Mongolia (today)
 
 ### Continental Hot Summer Climates (E-A1):
 
@@ -1334,6 +1353,11 @@ Fort Smith, NT	(2100)
 Behchoko, NT	(2100)  
 Fort Providence, NT	(2100)  
 Fort Good Hope, NT	(2100)  
+
+Continental Arid Desert Hot Summer (EDA1):  
+<img src="images/EDA1.jpg"/>
+
+Mandalgovi, Mongolia (today)
 
 ### Continental Mild Summer Climates (E-B2):  
 
@@ -1394,6 +1418,9 @@ Inuvik, NT	(2100)
 Tuktoyaktuk, NT	(2100)  
 
 Continental Arid Desert Mild Summer (EDB2):  
+<img src="images/EDB2.jpg"/>
+
+West Taiji Nai'er Lake, China (today)  
 Prudhoe Bay, AK	(2100)  
 
 ### Continental Cold Summer Climate (EB1):  
