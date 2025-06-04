@@ -135,7 +135,7 @@ Programmers and others are encouraged to find uses for this system and to make t
 ### Ultratropical Extreme Hyperthermal Summer climates (Z-X1):
 
 Ultratropical Arid Desert Extreme Hyperthermal Summer (ZDX1):  
->THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH
+>**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
 
 Niamey, Niger	(2100)  
 Khartoum, Sudan	(2100)  
@@ -205,7 +205,7 @@ Supertropical Arid Desert Extreme Hyperthermal Summer (ADX1):
 Manama, Bahrain	(2100)  
 Doha, Qatar	(2100)  
 Riyadh, Saudi Arabia	(2100)  
-Abu Dhabi, United Arab Emirates	(2100)  
+Dubai, United Arab Emirates	(2100)  
 
 ### Supertropical Hyperthermal Summer climates (A-Z2):
 
@@ -219,6 +219,9 @@ Supertropical Semiarid Hyperthermal Summer (ASZ2):
 Chennai, India	(2100)  
 
 Supertropical Arid Desert Hyperthermal Summer (ADZ2):  
+<img src="images/ADZ2.jpg"/>
+
+Bourem, Mali (today)
 Karachi, Pakistan	(2100)  
 N'Djamena, Chad	(2100)  
 Djibouti, Djibouti	(2100)  
@@ -301,13 +304,15 @@ San Juan, Puerto Rico (US)	(2100)
 Philipsburg, Sint Maarten (NL)	(2100)  
 
 Supertropical Arid Desert Scorching Hot Summer (ADZ1):  
+<img src="images/ADZ1.jpg"/>
+
 Ouagadougou, Burkina Faso	(today)  
 N'Djamena, Chad	(today)  
 Djibouti, Djibouti	(today)  
 Niamey, Niger	(today)  
 Muscat, Oman	(today)  
 Khartoum, Sudan	(today)  
-Abu Dhabi, United Arab Emirates	(today)  
+Dubai, United Arab Emirates	(today)  
 Luanda, Angola	(2100)  
 Gaborone, Botswana	(2100)  
 Praia, Cabo Verde	(2100)  
@@ -434,6 +439,8 @@ Kigali, Rwanda	(2100)
 Caracas, Venezuela	(2100)  
 
 Supertropical Arid Desert Very Hot Summer (ADA2):  
+<img src="images/ADA2.jpg"/>
+
 Karachi, Pakistan	(today)  
 Luanda, Angola	(today)  
 Praia, Cabo Verde	(today)  
@@ -471,11 +478,19 @@ Brasília, Brazil	(today)
 Supertropical Semiarid Hot Summer (ASA1):  
 Caracas, Venezuela	(today)  
 
+Supertropical Arid Desert Hot Summer (ADA1):  
+<img src="images/ADA1.webp"/>
+
+Salango Island, Ecuador (today)
+
 # Tropical Climates (B):  
 
 ### Tropical Extreme Hyperthermal Summer climates (B-X1):
 
 Tropical Arid Desert Extreme Hyperthermal Summer (BDX1):  
+<img src="images/BDX1.jpg"/>
+
+Sharmokhiya, Iraq (today)  
 Baghdad, Iraq	(2100)  
 Kuwait City, Kuwait	(2100)  
 
@@ -535,6 +550,8 @@ Orlando, FL	(2100)
 Austin, TX	(2100)  
 
 Tropical Desert Scorching Hot Summer (BDZ1):  
+<img src="images/BDZ1.jpeg"/>
+
 Lahore, Pakistan	(today)  
 Manama, Bahrain	(today)  
 Nicosia, Cyprus	(today)  
@@ -667,6 +684,8 @@ Adamstown, Pitcairn Islands (UK)	(2100)
 Hanga Roa, Easter Island (CL)	(2100)  
 
 Tropical Arid Desert Hot Summer (BDA1):  
+<img src="images/BDA1.jpg"/>
+
 Lima, Peru	(today)  
 San Diego, CA	(today)  
 Asmara, Eritrea	(today)  
@@ -700,6 +719,12 @@ Tropical Semiarid Mild Summer (BSB2):
 <img src="images/CapeTown.jpeg"/>
 
 Cape Town, South Africa	(today)  
+
+Tropical Arid Desert Mild Summer (BDB2):  
+<img src="images/BDB2One.jpg"/>
+<img src="images/BDB2Two.jpg"/>
+
+Coronodo Islands, Mexico (today)
 
 ### Tropical Cold Summer Climate (BB1):  
 Quito, Ecuador (today)  
