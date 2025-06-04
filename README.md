@@ -136,25 +136,30 @@ Programmers and others are encouraged to find uses for this system and to make t
 
 Ultratropical Arid Desert Extreme Hyperthermal Summer (ZDX1):  
 >**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
+
 Niamey, Niger	(2100)  
 Khartoum, Sudan	(2100)  
 
 ### Ultratropical Hyperthermal Summer climates (Z-Z2):
 
 Ultratropical Semiarid Hyperthermal Summer (ZSZ2):  
-THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH  
+>**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
+
 Bangkok, Thailand	(2100)  
 Phnom Penh, Cambodia	(2100)  
 Juba, South Sudan	(2100)  
 
 Ultratropical Arid Desert Hyperthermal Summer (ZDZ2):  
-THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH  
+>**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
+ 
 Ouagadougou, Burkina Faso	(2100)  
 Bamako, Mali	(2100)  
 
 ### Ultratropical Scorching Hot Summer climates (Z-Z1):
 
 Ultratropical Humid Scorching Hot Summer: (ZHZ1):  
+>**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
+
 Bandar Seri Begawan, Brunei	(2100)  
 Tarawa, Kiribati	(2100)  
 Majuro, Marshall Islands	(2100)  
@@ -165,6 +170,8 @@ Hagåtña, Guam (US)	(2100)
 Saipan, Northern Mariana Islands (US)	(2100)  
 
 Ultratropical Semihumid Scorching Hot Summer: (ZGZ1):  
+>**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
+
 Ho Chi Minh City, Vietnam	(2100)  
 Kuala Lumpur, Malaysia	(2100)  
 Georgetown, Guyana	(2100)  
@@ -172,13 +179,19 @@ Singapore, Singapore	(2100)
 Nukunonu, Tokelau (NZ)	(2100)  
 
 Ultratropical Monsoon Hyperthermal Summer (ZWZ1):  
+>**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
+
 Jakarta, Indonesia	(2100)  
 
 Ultratropical Semiarid Hyperthermal Summer (ZSZ1):  
+>**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
+
 Bissau, Guinea-Bissau	(2100)  
 Paramaribo, Suriname	(2100)  
 
 Ultratropical Arid Desert Hyperthermal Summer (ZDZ1):  
+>**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
+
 Mogadishu, Somalia	(2100)  
 Willemstad, Curaçao (NL)	(2100)  
 
@@ -187,6 +200,8 @@ Willemstad, Curaçao (NL)	(2100)
 ### Supertropical Extreme Hyperthermal Summer climates (A-X1):
 
 Supertropical Arid Desert Extreme Hyperthermal Summer (ADX1):  
+>**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
+
 Manama, Bahrain	(2100)  
 Doha, Qatar	(2100)  
 Riyadh, Saudi Arabia	(2100)  
