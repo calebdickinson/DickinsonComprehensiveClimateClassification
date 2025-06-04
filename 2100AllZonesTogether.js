@@ -862,7 +862,25 @@ var cityList = [
   { name: 'Prudhoe Bay, AK',  lon: -148.46138,  lat:  70.200523 },
   { name: 'Wainwright, AK',   lon: -160.0097,   lat:  70.6417 },
   { name: 'Utqiagvik, AK',    lon: -156.788605, lat:  71.290558 },
-  { name: 'Yakutsk, Russia',  lon:  129.7331,   lat:  62.0339 }
+  { name: 'Yakutsk, Russia',  lon:  129.7331,   lat:  62.0339 },
+  { name: 'Ust-Nera, Russia',        lon: 143.2000,  lat: 64.5667 },
+  { name: 'Verkhoyansk, Russia',     lon: 133.3833,  lat: 67.5500 },
+  { name: 'Hulunbuir, China',        lon: 119.7667,  lat: 49.2167 },
+  { name: 'Heard Island and McDonald Islands', lon: 73.5167, lat: -53.1000 },
+  { name: 'Bourem, Mali', lon: -0.3497, lat: 16.9667 },
+  { name: 'Salango Island, Ecuador',           lon: -80.8583, lat: -1.5833 },
+  { name: 'Sharmokhiya, Iraq',                 lon: 44.7167,  lat: 35.1167 },
+  { name: 'Coronado Islands, Mexico',          lon: -117.3000, lat: 32.4167 },
+  { name: 'El Menia, Algeria',                 lon: 3.5333,   lat: 30.5667 },
+  { name: 'Comodoro Rivadavia, Argentina',     lon: -67.4975, lat: -45.8642 },
+  { name: 'Aksu City, China',                  lon: 80.2600,  lat: 41.1700 },
+  { name: 'Shoshoni, WY, United States',       lon: -108.1109, lat: 43.2355 },
+  { name: 'Yakima, WA, United States',         lon: -120.5059, lat: 46.6021 },
+  { name: 'Meeteetse, WY, United States',      lon: -108.8679, lat: 44.1569 },
+  { name: 'Bulgan, Mongolia',                  lon: 103.5333, lat: 48.8167 },
+  { name: 'Mandalgovi, Mongolia',              lon: 106.2667, lat: 45.7500 },
+  { name: 'West Taijinar Lake, China',         lon: 90.4167,  lat: 37.0667 },
+  { name: 'Trincomalee, Sri Lanka', lon: 81.2333, lat: 8.5667 },
 ];
 
 // (b) Build mapping of code → human-readable labels
