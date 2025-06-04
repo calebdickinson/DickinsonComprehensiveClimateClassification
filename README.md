@@ -1127,7 +1127,7 @@ Temperate Mediterranean Hot Summer (DMA1):
 Boise, ID	(today)  
 Carson City, NV	(today)  
 
-Temperate Semiarid Hot Summer (DSA1): 
+Temperate Semiarid Hot Summer (DSA1):  
 Denver–Aurora, CO	(today)  
 Santa Fe, NM	(today)  
 Cheyenne, WY	(today)  
