@@ -417,6 +417,12 @@ Port Louis, Mauritius	(2100)
 Dili, Timor-Leste	(2100)  
 Papeete, French Polynesia (FR)	(2100)  
 
+Supertropical Mediterranean Very Hot Summer (AMA2):  
+<img src="images/AMA2.webp"/>
+<img src="images/AMA2Two.webp"/>
+
+Trincomake, Sri Lanka (today)
+
 Supertropical Semiarid Very Hot Summer (ASA2):  
 Bangalore, India	(today)  
 Lagos, Nigeria	(today)  
@@ -539,6 +545,8 @@ Chongqing, China	(2100)
 Dongguan, China	(2100)  
 
 Tropical Mediterranean Scorching Hot Summer (BMZ1):  
+>**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
+
 Rome, Italy	(2100)  
 Monaco, Monaco	(2100)  
 Vatican City, Vatican City	(2100)  
