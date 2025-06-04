@@ -1371,6 +1371,9 @@ Casey Research Station, Antarctica (today)
 Yakutsk, Russia (2100)
 
 ### Subarctic Hot Summer Climate (FA1):  
+<img src="images/FA1.jpg"/>
+
+Hulunbuir, China (today)
 
 ### Subarctic Mild Summer Climate (FB2):  
 <img src="images/GorkhiTerelj.jpg"/>
@@ -1436,6 +1439,9 @@ Baker Lake, NU (today)
 Coral Harbour, NU (today)
 
 ### Arctic Very Cold Summer Climate (GC2):  
+IGLOOLIK IN AUGUST
+<img src="images/GC2.jpg"/>
+CAMBRIDGE BAY IN MAY
 <img src="images/Cambridge_Bay.jpg"/>
 
 Cambridge Bay, NU (today)  
@@ -1451,10 +1457,25 @@ Isachsen Research Station, NU (today)
 
 # Superarctic Climates (Y):
 
+### Superarctic Mild Summer Climate (YB2):  
+VERKHOYANSK (SIBERIA'S "POLE OF COLD") IN SUMMER
+<img src="images/YB2One.jpg"/>
+VERKHOYANSK IN WINTER
+<img src="images/YB2Two.jpg"/>
+
+Verkhoyansk, Russia (today)
+
+### Superarctic Cold Summer Climate (YB1):  
+<img src="images/YB1.jpg"/>
+
+Ust-Nera, Russia (today)
+
 ### Superarctic Very Cold Summer Climate (YC2):  
+THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH 
 Concordia Research Station, Antarctica (2100)
 
 ### Superarctic Freezing Summer Climate (YC1):  
+THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH
 
 ### Superarctic Frigid Summer Climate (YY):  
 THIS CLIMATE WILL NO LONGER EXIST ON EARTH IN 2100
