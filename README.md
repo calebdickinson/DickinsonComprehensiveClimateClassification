@@ -141,18 +141,14 @@ AI-GENERATED IMAGE DEPICTING WHAT THIS CLIMATE, WHICH DOES NOT CURRENTLY EXIST O
 <img src="images/ZDX1.png"/>
 Niamey, Niger	(2100)  
 Khartoum, Sudan	(2100)  
-
 ### Ultratropical Hyperthermal Summer climates (Z-Z2):
-
 Ultratropical Semiarid Hyperthermal Summer (ZSZ2):  
 Bangkok, Thailand	(2100)  
 Phnom Penh, Cambodia	(2100)  
 Juba, South Sudan	(2100)  
 
 Ultratropical Arid Desert Hyperthermal Summer (ZDZ2):  
-
 AI-GENERATED IMAGE DEPICTING WHAT THIS CLIMATE, WHICH DOES NOT CURRENTLY EXIST ON EARTH, MIGHT LOOK LIKE
-
 <img src="images/ZDZ2.png"/>
 Ouagadougou, Burkina Faso	(2100)  
 Bamako, Mali	(2100)  
@@ -1009,6 +1005,7 @@ AS OF THIS WRITING, THE PENGUINS OF THESE UNINHABITED ISLANDS ARE CURRENTLY ENGA
 AFTER TRUMP FAMOUSLY ATTEMPTED TO TARIFF THE PENGUINS OF THIS ISLAND, HE WAS FORCED TO BACK DOWN AND PAUSE THE TARIFFS FOR 90 DAYS.  
 
 IT REMAINS UNCLEAR WHETHER HE'LL DARE TO REINSTATE THE PENGUIN TARIFFS.  
+
 <img src="images/CC1.jpg"/>
 
 Heard and McDonald Islands (today)
