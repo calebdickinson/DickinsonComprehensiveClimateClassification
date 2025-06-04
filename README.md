@@ -221,7 +221,7 @@ Chennai, India	(2100)
 Supertropical Arid Desert Hyperthermal Summer (ADZ2):  
 <img src="images/ADZ2.jpg"/>
 
-Bourem, Mali (today)
+Bourem, Mali (today)  
 Karachi, Pakistan	(2100)  
 N'Djamena, Chad	(2100)  
 Djibouti, Djibouti	(2100)  
@@ -738,6 +738,9 @@ Subtropical Semihumid Hyperthermal Summer (CGZ2):
 Wuhan, China	(2100)  
 
 Subtropical Arid Desert Hyperthermal Summer (CDZ2):  
+<img src="images/CDZ2.jpg"/>
+
+El Menia, Algeria (today)  
 Tehran, Iran	(2100)  
 Ashgabat, Turkmenistan	(2100)  
 
@@ -801,6 +804,8 @@ Bucharest, Romania	(2100)
 Belgrade, Serbia	(2100)  
 
 Subtropical Desert Scorching Hot Summer (CDZ1):  
+<img src="images/CDZ1.jpg"/>
+
 Las Vegas–Henderson–Paradise, NV	(today)  
 Beijing, China	(2100)  
 Tianjin, China	(2100)  
@@ -898,6 +903,8 @@ Kyiv, Ukraine	(2100)
 Rexburg, ID	(2100)  
 
 Subtropical Arid Desert Very Hot Summer (CDA2):  
+<img src="images/CDA2.webp"/>
+
 Baku, Azerbaijan	(today)  
 Ashgabat, Turkmenistan	(today)  
 Kabul, Afghanistan	(2100)  
@@ -971,6 +978,8 @@ Berlin, Germany	(2100)
 Warsaw, Poland	(2100)  
 
 Subtropical Arid Desert Hot Summer (CDA1):  
+<img src="images/CDA1.jpg"/>
+
 Santiago, Chile	(today)  
 
 ### Subtropical Mild Summer Climates (C-B2):
@@ -1017,6 +1026,11 @@ Richmond, BC	(today)
 Abbotsford, BC	(today)  
 Ketchikan, AK	(2100)  
 
+Subtropical Arid Desert Mild Summer (CDB2):
+<img src="images/CDB2.jpeg"/>
+
+Comodoro Rividava, Argentina (today)
+
 ### Subtropical Cold Summer Climate (CB1):  
 <img src="images/CB1.jpg"/>
 
@@ -1056,6 +1070,11 @@ Pyongyang, North Korea	(2100)
 
 Temperate Semiarid Scorching Hot Summer (DSZ1):  
 Pierre, SD	(2100)  
+
+Temperate Arid Desert Scorching Hot Summer (DDZ1):  
+<img src="images/DDZ1.jpg"/>
+
+Turpan, China (today)
 
 ### Temperate Very Hot Summer Climates (D-A2):
 
@@ -1109,6 +1128,8 @@ Novosibirsk, Russia	(2100)
 Omsk, Russia	(2100)  
 
 Temperate Arid Desert Very Hot Summer (DDA2):  
+<img src="images/DDA2.jpg"/>
+
 Tehran, Iran	(today)  
 Astana, Kazakhstan	(2100)  
 
