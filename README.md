@@ -1471,7 +1471,7 @@ Verkhoyansk, Russia (today)
 Ust-Nera, Russia (today)
 
 ### Superarctic Very Cold Summer Climate (YC2):  
-THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH 
+THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH  
 Concordia Research Station, Antarctica (2100)
 
 ### Superarctic Freezing Summer Climate (YC1):  
