@@ -135,9 +135,7 @@ Programmers and others are encouraged to find uses for this system and to make t
 ### Ultratropical Extreme Hyperthermal Summer climates (Z-X1):
 
 Ultratropical Arid Desert Extreme Hyperthermal Summer (ZDX1):  
-
 AI-GENERATED IMAGE DEPICTING WHAT THIS CLIMATE, WHICH DOES NOT CURRENTLY EXIST ON EARTH, MIGHT LOOK LIKE
-
 <img src="images/ZDX1.png"/>
 Niamey, Niger	(2100)  
 Khartoum, Sudan	(2100)  
