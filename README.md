@@ -1371,7 +1371,7 @@ Casey Research Station, Antarctica (today)
 Yakutsk, Russia (2100)
 
 ### Subarctic Hot Summer Climate (FA1):  
-<img src="images/FA1.jpg"/>
+<img src="images/hulunbuir.webp"/>
 
 Hulunbuir, China (today)
 
