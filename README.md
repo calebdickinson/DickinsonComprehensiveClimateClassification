@@ -1459,9 +1459,9 @@ Isachsen Research Station, NU (today)
 
 ### Superarctic Mild Summer Climate (YB2):  
 VERKHOYANSK (SIBERIA'S "POLE OF COLD") IN SUMMER
-<img src="images/YB2One.jpg"/>
-VERKHOYANSK IN WINTER
 <img src="images/YB2Two.jpg"/>
+VERKHOYANSK IN WINTER
+<img src="images/YB2One.jpg"/>
 
 Verkhoyansk, Russia (today)
 
