@@ -637,7 +637,7 @@ Sucre, Bolivia	(2100)
 
 Tropical Mediterranean Hot Summer (BMA1):  
 Los Angeles, United States	(today)  
-Riverside–San Bernardino, CA	(today)  )
+Riverside–San Bernardino, CA	(today)  
 Lisbon, Portugal	(today)  
 Gibraltar, Gibraltar (UK)	(today)  
 Ceuta, Ceuta (ES)	(today)  
