@@ -704,7 +704,7 @@ var cityList = [
   { name: 'Funafuti, Tuvalu',                   lon: 179.2167,    lat: -8.5167 },
   { name: 'Kampala, Uganda',                    lon: 32.5825,     lat: 0.3476 },
   { name: 'Kyiv, Ukraine',                      lon: 30.5234,     lat: 50.4501 },
-  { name: 'Abu Dhabi, United Arab Emirates',    lon: 54.3773,     lat: 24.4539 },
+  { name: 'Dubai, United Arab Emirates',        lon: 55.2744,     lat: 25.1972 },
   { name: 'Montevideo, Uruguay',                lon: -56.1645,    lat: -34.9011 },
   { name: 'Tashkent, Uzbekistan',               lon: 69.2401,     lat: 41.2995 },
   { name: 'Port Vila, Vanuatu',                 lon: 168.3333,    lat: -17.7333 },
