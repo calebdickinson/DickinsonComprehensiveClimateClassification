@@ -1472,6 +1472,8 @@ Casey Research Station, Antarctica (today)
 # Subarctic Climates (F):
 
 ### Subarctic Very Hot Summer Climate (FA2):  
+>THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH  
+
 Yakutsk, Russia (2100)
 
 ### Subarctic Hot Summer Climate (FA1):  
@@ -1575,14 +1577,16 @@ Verkhoyansk, Russia (today)
 Ust-Nera, Russia (today)
 
 ### Superarctic Very Cold Summer Climate (YC2):  
-THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH  
+>THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH  
+
 Concordia Research Station, Antarctica (2100)
 
 ### Superarctic Freezing Summer Climate (YC1):  
-THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH
+>THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH
 
 ### Superarctic Frigid Summer Climate (YY):  
-THIS CLIMATE WILL NO LONGER EXIST ON EARTH IN 2100
+>THIS CLIMATE WILL NO LONGER EXIST ON EARTH IN 2100
+
 <img src="images/Concordia.jpg"/>
 
 Concordia Research Station, Antarctica (today)
