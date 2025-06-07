@@ -212,6 +212,7 @@ Dubai, United Arab Emirates	(2100)
 Supertropical Monsoon Hyperthermal Summer (AWZ2):  
 <img src="images/AWZ2.jpg"/>
 
+Chandrapur, India (today)  
 Kolkata, India	(2100)  
 Hyderabad, India	(2100)  
 Naypyidaw, Myanmar	(2100)  
