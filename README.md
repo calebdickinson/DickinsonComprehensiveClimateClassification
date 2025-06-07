@@ -210,6 +210,8 @@ Dubai, United Arab Emirates	(2100)
 ### Supertropical Hyperthermal Summer climates (A-Z2):
 
 Supertropical Monsoon Hyperthermal Summer (AWZ2):  
+<img src="images/AWZ2.jpg"/>
+
 Kolkata, India	(2100)  
 Hyderabad, India	(2100)  
 Naypyidaw, Myanmar	(2100)  
@@ -249,6 +251,8 @@ Port Moresby, Papua New Guinea	(2100)
 Brades, Montserrat (UK)	(2100)  
 
 Supertropical Monsoon Scorching Hot Summer (AWZ1):  
+<img src="images/AWZ1.jpg"/>
+
 Bamako, Mali	(today)  
 Naypyidaw, Myanmar	(today)  
 Abuja, Nigeria	(today)  
@@ -374,6 +378,8 @@ Mata-Utu, Wallis & Futuna (FR)	(2100)
 Alofi, Niue (NZ)	(2100)  
 
 Supertropical Semihumid Very Hot Summer (AGA2):  
+<img src="images/AGA2.jpg"/>
+
 Bridgetown, Barbados	(today)  
 Belmopan, Belize	(today)  
 Yaoundé, Cameroon	(today)  
@@ -471,6 +477,8 @@ Oranjestad, Sint Eustatius (NL)	(2100)
 ### Supertropial Hot Summer climates (A-A1):  
 
 Supertropical Humid Hot Summer (AHA1):  
+<img src="images/AHA1.jpg"/>
+
 Quito, Ecuador	(2100)  
 Guatemala City, Guatemala	(2100)  
 
@@ -501,6 +509,9 @@ Baghdad, Iraq	(2100)
 Kuwait City, Kuwait	(2100)  
 
 ### Tropical Hyperthermal Summer climates (B-Z2):  
+
+Tropical Monsoon Hyperthermal Summer (BWZ2):  
+<img src="images/BWZ2.jpg"/>
 
 Tropical Semiarid Hyperthermal Summer (BSZ2):  
 Dallas–Fort Worth–Arlington, TX	(2100)  
@@ -552,6 +563,8 @@ Monaco, Monaco	(2100)
 Vatican City, Vatican City	(2100)  
 
 Tropical Semiarid Scorching Hot Summer (BSZ1):  
+<img src="images/BSZ1.jpg"/>
+
 Houston, TX	(2100)  
 Tampa–St. Petersburg, FL	(2100)  
 Orlando, FL	(2100)  
@@ -723,6 +736,9 @@ Mexico City, Mexico	(today)
 Mbabane, Eswatini	(today)  
 Addis Ababa, Ethiopia	(today)  
 
+Tropical Mediterranean Mild Summer (BMB2):
+<img src="images/BMB2.jpg"/>
+
 Tropical Semiarid Mild Summer (BSB2):  
 <img src="images/CapeTown.jpeg"/>
 
@@ -735,6 +751,8 @@ Tropical Arid Desert Mild Summer (BDB2):
 Coronodo Islands, Mexico (today)
 
 ### Tropical Cold Summer Climate (BB1):  
+<img src="images/BB1.jpg"/>
+
 Quito, Ecuador (today)  
 Sucre, Bolivia (today)
 
@@ -755,11 +773,18 @@ Ashgabat, Turkmenistan	(2100)
 ### Subtropical Scorching Hot Summer Climates (C-Z1):  
 
 Subtropical Humid Scorching Hot Summer (CHZ1):  
+<img src="images/CHZ1One.jpeg"/>
+<img src="images/CHZ1Two.jpeg"/>
+
+
 Tokyo–Yokohama, Japan	(2100)  
 Osaka–Kobe–Kyoto, Japan	(2100)  
 Nagoya, Japan	(2100)  
 
 Subtropical Semihumid Scorching Hot Summer (CGZ1):  
+<img src="images/CGZ1One.jpg"/>
+<img src="images/CGZ1Two.jpeg"/>
+
 Shanghai, China	(2100)  
 New York, United States	(2100)  
 Hangzhou, China	(2100)  
@@ -845,6 +870,8 @@ Dieppe, NB	(2100)
 Charlottetown, PE	(2100)  
 
 Subtropical Semihumid Very Hot Summer (CGA2):   
+<img src="images/CGA2.jpg"/>
+
 Shanghai, China	(today)  
 Wuhan, China	(today)  
 Hangzhou, China	(today)  
@@ -1016,6 +1043,8 @@ Berlin, Germany	(today)
 Amsterdam, Netherlands	(today)  
 
 Subtropical Monsoon Mild Summer (CWB2):  
+<img src="images/CWB2.jpeg"/>
+
 Thimphu, Bhutan	(2100)  
 
 Subtropical Mediterranean Mild Summer (CMB2):  
@@ -1033,6 +1062,9 @@ Burnaby, BC	(today)
 Richmond, BC	(today)  
 Abbotsford, BC	(today)  
 Ketchikan, AK	(2100)  
+
+Subtropical Semiarid Mild Summer (CSB2):  
+<img src="images/CSB2.jpg"/>
 
 Subtropical Arid Desert Mild Summer (CDB2):
 <img src="images/CDB2.jpeg"/>
@@ -1117,6 +1149,9 @@ Temperate Monsoon Very Hot Summer (DWA2):
 Seoul–Incheon, South Korea	(today)  
 Beijing, China	(today)  
 Tianjin, China	(today)  
+
+Temperate Mediterranean Very Hot Summer (DMA2):
+<img src="images/DMA2One.jpg"/>
 
 Temperate Semiarid Very Hot Summer (DSA2):  
 Salt Lake City, UT	(today)  
