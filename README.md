@@ -686,6 +686,9 @@ Mexico City, Mexico	(2100)
 Sucre, Bolivia	(2100)  
 
 Tropical Mediterranean Hot Summer (BMA1):  
+<img src="images/BMA1One.jpg"/>
+<img src="images/BMA1Two.jpg"/>
+
 Los Angeles, United States	(today)  
 Riverside–San Bernardino, CA	(today)  
 Lisbon, Portugal	(today)  
@@ -1360,10 +1363,13 @@ Primavera Research Base, Antarctica (today)
 
 ### Continental Very Hot Summer Climates (E-A2):
 
-Continental Monsoon Hot Summer (EWA2):
+Continental Monsoon Very Hot Summer (EWA2):
 <img src="images/EWA2.jpg"/>
 
-Continental Arid Desert Hot Summer (EDA2):  
+Continental Semiarid Very Hot Summer (ESA2):
+<img src="images/ESA2.png"/>
+
+Continental Arid Desert Very Hot Summer (EDA2):  
 <img src="images/EDA2.jpeg"/>
 
 Bulgan, Mongolia (today)
@@ -1444,6 +1450,9 @@ Omsk, Russia	(today)
 Rankin Inlet, NU	(2100)  
 Arviat, NU	(2100)  
 Coral Harbour, NU	(2100)  
+
+Continental Mediterranean Mild Summer (EMB2):
+<img src="images/EMB2.png"/>
 
 Continental Monsoon Mild Summer (EWB2):  
 FAIRBANKS ALASKA IN MARCH
