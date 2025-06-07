@@ -1152,6 +1152,7 @@ Tianjin, China	(today)
 
 Temperate Mediterranean Very Hot Summer (DMA2):
 <img src="images/DMA2One.jpg"/>
+<img src="images/DMA2Two.jpeg"/>
 
 Temperate Semiarid Very Hot Summer (DSA2):  
 Salt Lake City, UT	(today)  
@@ -1304,6 +1305,9 @@ Stockholm, Sweden	(today)
 Calgary, AB	(today)  
 Bethel, AK	(2100)  
 
+Temperate Monsoon Mild Summer (DWB2):
+<img src="images/DWB2.jpg"/>
+
 Temperate Mediterranean Mild Summer (DMB2):  
 <img src="images/DMB2.jpg"/>  
 
@@ -1355,6 +1359,9 @@ Primavera Research Base, Antarctica (today)
 # Continental Climates (E):  
 
 ### Continental Very Hot Summer Climates (E-A2):
+
+Continental Monsoon Hot Summer (EWA2):
+<img src="images/EWA2.jpg"/>
 
 Continental Arid Desert Hot Summer (EDA2):  
 <img src="images/EDA2.jpeg"/>
@@ -1595,6 +1602,7 @@ Eureka Research Station, NU (today)
 Isachsen Research Station, NU (today)
 
 ### Arctic Frigid Summer Climate (GY):  
+<img src="images/GY.jpg"/>
 
 # Superarctic Climates (Y):
 
