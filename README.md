@@ -1666,7 +1666,8 @@ Wainwright, AK (today)
 Utqiagvik, AK (today)  
 Pond Inlet, NU (today)  
 Pond Inlet, NU (2100)  
-McMurdo Research Station, Antarctica (2100)
+McMurdo Research Station, Antarctica (2100)  
+Svea Research Station, Antarctica (2100)
 
 ### Subarctic Frigid Summer Climate (FY):  
 <img src="images/McMurdoStation.jpg"/>
