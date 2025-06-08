@@ -1071,7 +1071,7 @@ Subtropical Semiarid Hot Summer (CSA1):
 
 Barcelona, Spain (today)  
 Sedona, AZ (today)  
-Vatican City, Vatican City	(today) (on the border with CGA1)
+Vatican City, Vatican City	(today) (on the border with CGA1)  
 Berlin, Germany	(2100)  
 Warsaw, Poland	(2100)  
 
@@ -1109,7 +1109,7 @@ Amsterdam, Netherlands	(today)
 Subtropical Monsoon Mild Summer (CWB2):  
 <img src="images/CWB2.jpeg"/>
 
-Phungling, Nepal (today)
+Phungling, Nepal (today)  
 Thimphu, Bhutan	(2100)  
 
 Subtropical Mediterranean Mild Summer (CMB2):  
@@ -1678,7 +1678,7 @@ McMurdo Research Station, Antarctica (today)
 ### Arctic Hot Summer Climate (GA1):  
 >**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
 
-Verkhoyansk, Russia
+Verkhoyansk, Russia (2100)
 
 ### Arctic Mild Summer Climate (GB2):  
 <img src="images/Yakutsk_.jpg"/>
@@ -1710,6 +1710,8 @@ Isachsen Research Station, NU (today)
 
 ### Arctic Frigid Summer Climate (GY):  
 <img src="images/GY.jpg"/>
+
+Svea Research Station, Antarctica (today)
 
 # Superarctic Climates (Y):
 
