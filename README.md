@@ -627,7 +627,8 @@ Windhoek, Namibia	(2100)
 Tunis, Tunisia	(2100)  
 Melilla, Melilla (ES)	(2100)  
 Barcelona, Spain (2100)  
-Sedona, AZ (2100)
+Sedona, AZ (2100)  
+San José de la Joya, Mexico (2100)
 
 ### Tropical Very Hot Summer Climates (B-A2):
 
