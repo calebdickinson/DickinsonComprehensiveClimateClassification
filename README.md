@@ -226,6 +226,8 @@ Naypyidaw, Myanmar	(2100)
 Hanoi, Vietnam	(2100)  
 
 Supertropical Semiarid Hyperthermal Summer (ASZ2):  
+>**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
+
 Chennai, India	(2100)  
 
 Supertropical Arid Desert Hyperthermal Summer (ADZ2):  
@@ -240,6 +242,8 @@ Muscat, Oman	(2100)
 ### Supertropical Scorching Hot Summer climates (A-Z1):
 
 Supertropical Humid Scorching Hot Summer (AHZ1):  
+>**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
+
 Manila, Philippines	(2100)  
 Palikir, Federated States of Micronesia	(2100)  
 Monrovia, Liberia	(2100)  
@@ -490,7 +494,7 @@ Oranjestad, Sint Eustatius (NL)	(2100)
 Supertropical Humid Hot Summer (AHA1):  
 <img src="images/AHA1.jpg"/>
 
-Santo Domingo, Ecuador (today)
+Santo Domingo, Ecuador (today)  
 Quito, Ecuador	(2100)  
 Guatemala City, Guatemala	(2100)  
 
@@ -805,6 +809,8 @@ Sucre, Bolivia (today)
 ### Subtropical Hyperthermal Summer Climates (C-Z2):  
 
 Subtropical Semihumid Hyperthermal Summer (CGZ2):  
+>**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
+
 Wuhan, China	(2100)  
 
 Subtropical Arid Desert Hyperthermal Summer (CDZ2):  
@@ -817,7 +823,6 @@ Ashgabat, Turkmenistan	(2100)
 ### Subtropical Scorching Hot Summer Climates (C-Z1):  
 
 Subtropical Humid Scorching Hot Summer (CHZ1):  
-<img src="images/CHZ1One.jpeg"/>
 <img src="images/CHZ1Two.jpeg"/>
 
 Fuzhou, China (today)  
