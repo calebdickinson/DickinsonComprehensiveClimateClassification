@@ -1,3 +1,6 @@
+// paste this in address bar and paste this code in new script box
+// https://code.earthengine.google.com/
+
 // ----------------------------------------------------
 // 1. LOAD & PREP 2000–2005 HISTORICAL DATA
 // ----------------------------------------------------
