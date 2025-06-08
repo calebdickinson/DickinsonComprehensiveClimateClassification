@@ -995,7 +995,7 @@ Kyiv, Ukraine	(2100)
 Rexburg, ID	(2100)  
 
 Subtropical Arid Desert Very Hot Summer (CDA2):  
-<img src="images/CDA2.jpg"/>
+<img src="images/CDA2.webp"/>
 
 Baku, Azerbaijan	(today)  
 Ashgabat, Turkmenistan	(today)  
