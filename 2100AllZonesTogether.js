@@ -903,7 +903,8 @@ Map.onClick(function(coords) {
   { name: 'Shenyang, China',                        lon: 123.400002,  lat: 41.799999 },
   { name: 'Hengyang, China',                        lon: 112.61888,   lat: 26.88946 }, 
   { name: 'Grand Forks, ND',                        lon: -97.0883389, lat: 47.9212639 },
-  { name: 'Svea Research Station, Antarctica',      lon: -11.216667,  lat: -74.583333 } 
+  { name: 'Svea Research Station, Antarctica',      lon: -11.216667,  lat: -74.583333 },
+  { name: 'San José de la Joya, Mexico',            lon: -101.13566,  lat: 25.30750 },
 ];
 
 // (b) Build mapping of code → human-readable labels
