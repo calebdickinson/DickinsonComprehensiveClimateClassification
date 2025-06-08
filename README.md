@@ -199,6 +199,11 @@ Willemstad, Curaçao (NL)	(2100)
 
 ### Supertropical Extreme Hyperthermal Summer climates (A-X1):
 
+Supertropical Monsoon Extreme Hyperthermal Summer (AWX1):
+>**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
+
+Chandrapur, India (2100)
+
 Supertropical Arid Desert Extreme Hyperthermal Summer (ADX1):  
 >**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
 
@@ -206,6 +211,8 @@ Manama, Bahrain	(2100)
 Doha, Qatar	(2100)  
 Riyadh, Saudi Arabia	(2100)  
 Dubai, United Arab Emirates	(2100)  
+Bourem, Mali (2100)  
+Kota, India (2100)
 
 ### Supertropical Hyperthermal Summer climates (A-Z2):
 
@@ -250,6 +257,7 @@ Malé, Maldives	(2100)
 Panama City, Panama	(2100)  
 Port Moresby, Papua New Guinea	(2100)  
 Brades, Montserrat (UK)	(2100)  
+Trincomalee, Sri Lanka (2100)
 
 Supertropical Monsoon Scorching Hot Summer (AWZ1):  
 <img src="images/AWZ1.jpg"/>
@@ -327,6 +335,7 @@ Castries, Saint Lucia	(2100)
 Dakar, Senegal	(2100)  
 George Town, Cayman Islands (UK)	(2100)  
 Oranjestad, Aruba (NL)	(2100)  
+Salango Island, Ecuador (2100)
 
 ### Supertropial Very Hot Summer climates (A-A2):
 
@@ -377,6 +386,7 @@ Port Vila, Vanuatu	(2100)
 Pago Pago, American Samoa (US)	(2100)  
 Mata-Utu, Wallis & Futuna (FR)	(2100)  
 Alofi, Niue (NZ)	(2100)  
+Santo Domingo, Ecuador (2100)
 
 Supertropical Semihumid Very Hot Summer (AGA2):  
 <img src="images/AGA2.jpg"/>
@@ -507,10 +517,17 @@ Tropical Arid Desert Extreme Hyperthermal Summer (BDX1):
 <img src="images/BDX1.jpg"/>
 
 Sharmokhiya, Iraq (today)  
+Sharmokhiya, Iraq (2100)  
 Baghdad, Iraq	(2100)  
 Kuwait City, Kuwait	(2100)  
+El Menia, Algeria (2100)
 
 ### Tropical Hyperthermal Summer climates (B-Z2):  
+
+Tropical Semihumid Hyperthermal Summer (BGZ2):  
+>**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
+
+Hengyang, China (2100)
 
 Tropical Monsoon Hyperthermal Summer (BWZ2):  
 <img src="images/BWZ2.jpg"/>
@@ -518,6 +535,8 @@ Tropical Monsoon Hyperthermal Summer (BWZ2):
 Kota, India (today)
 
 Tropical Semiarid Hyperthermal Summer (BSZ2):  
+>**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
+
 Dallas–Fort Worth–Arlington, TX	(2100)  
 Islamabad, Pakistan	(2100)  
 
@@ -533,13 +552,19 @@ Cairo, Egypt	(2100)
 Lahore, Pakistan	(2100)  
 Phoenix–Mesa–Scottsdale, AZ	(2100)  
 Las Vegas–Henderson–Paradise, NV	(2100)  
+Gujrat, Pakistan (2100)  
+Crystal City, TX (2100)
 
 ### Tropical Scorching Hot Summer climates (B-Z1): 
 
 Tropical Humid Scorching Hot Summer (BHZ1):  
+>**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
+
 Taipei, Taiwan	(2100)  
 
 Tropical Semihumid Scorching Hot Summer (BGZ1):  
+>**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
+
 Atlanta, GA	(2100)  
 Jacksonville, FL	(2100)  
 New Orleans, LA	(2100)  
@@ -549,6 +574,7 @@ Tallahassee, FL	(2100)
 Baton Rouge, LA	(2100)  
 Jackson, MS	(2100)  
 Columbia, SC	(2100)  
+Fuzhou, China (2100)
 
 Tropical Monsoon Scorching Hot Summer (BWZ1):  
 Delhi, India	(today)  
@@ -596,6 +622,8 @@ Valletta, Malta	(2100)
 Windhoek, Namibia	(2100)  
 Tunis, Tunisia	(2100)  
 Melilla, Melilla (ES)	(2100)  
+Barcelona, Spain (2100)  
+Sedona, AZ (2100)
 
 ### Tropical Very Hot Summer Climates (B-A2):
 
@@ -665,6 +693,7 @@ Bloemfontein, South Africa	(2100)
 Sana'a, Yemen	(2100)  
 Gibraltar, Gibraltar (UK)	(2100)  
 Ceuta, Ceuta (ES)	(2100)  
+Coronado Islands, Mexico (2100)
 
 ### Tropical Hot Summer Climates (B-A1):
 
@@ -690,6 +719,7 @@ Lusaka, Zambia	(today)
 Harare, Zimbabwe	(today)  
 Mexico City, Mexico	(2100)  
 Sucre, Bolivia	(2100)  
+Phungling, Nepal (2100)
 
 Tropical Mediterranean Hot Summer (BMA1):  
 <img src="images/BMA1One.jpg"/>
@@ -704,6 +734,7 @@ Ponta Delgada, Azores (PT)	(today)
 Funchal, Madeira (PT)	(today)  
 San Francisco–Oakland, CA	(2100)  
 Funchal, Madeira (PT)	(2100)  
+Lompoc, CA (2100)
 
 Tropical Semiarid Hot Summer (BSA1):  
 Nairobi, Kenya	(today)  
@@ -858,6 +889,7 @@ Yerevan, Armenia	(2100)
 Baku, Azerbaijan	(2100)  
 Madrid, Spain	(2100)  
 Tashkent, Uzbekistan	(2100)  
+Borujerd, Iran (2100)
 
 ### Subtropical Very Hot Summer Climates (C-A2):
 
@@ -914,6 +946,7 @@ Chengdu, China	(today)
 Chongqing, China	(today)  
 Xi’an, China	(today)  
 Zhengzhou, China	(today)  
+Longnan, China (2100)
 
 Subtropical Mediterranean Very Hot Summer (CMA2):   
 <img src="images/CMA2.jpg"/>
@@ -957,6 +990,10 @@ Ashgabat, Turkmenistan	(today)
 Kabul, Afghanistan	(2100)  
 Damascus, Syria	(2100)  
 Ankara, Turkey	(2100)  
+Shoshoni, WY (2100)  
+Yakima, WA (2100)  
+Meeteetse, WY (2100)  
+Sharistan, Afghanistan (2100)
 
 ### Subtropical Hot Summer Climates (C-A1):  
 
@@ -1030,6 +1067,7 @@ Subtropical Arid Desert Hot Summer (CDA1):
 <img src="images/CDA1.jpg"/>
 
 Santiago, Chile	(today)  
+Comodoro Rivadavia, Argentina (2100)
 
 ### Subtropical Mild Summer Climates (C-B2):
 
@@ -1097,7 +1135,8 @@ Tórshavn, Faroe Islands (DK) (today)
 Stanley, Falkland Islands (UK) (2100)  
 Tórshavn, Faroe Islands (DK) (2100)  
 Reykjavík, Iceland  (2100)  
-Ushuaia, Argentina (2100)
+Ushuaia, Argentina (2100)  
+Heard and McDonald Islands (2100)
 
 ### Subtropical Very Cold Summer Climate (CC2):  
 <img src="images/MacquarieIsland.jpg"/>
@@ -1123,15 +1162,22 @@ IT REMAINS UNCLEAR WHETHER HE WILL DARE TO REINSTATE TARIFFS ON THESE VICIOUS AN
 ### Temperate Scorching Hot Summer Climates (D-Z1):
 
 Temperate Monsson Scorching Hot Summer (DWZ1):  
+>**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
+
 Pyongyang, North Korea	(2100)  
+Shenyang, China (2100)
 
 Temperate Semiarid Scorching Hot Summer (DSZ1):  
+>**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
+
 Pierre, SD	(2100)  
 
 Temperate Arid Desert Scorching Hot Summer (DDZ1):  
 <img src="images/DDZ1.jpg"/>
 
-Turpan, China (today)
+Turpan, China (today)  
+Aksu City, China (2100)  
+Ushmola, Kazakhstan (2100)
 
 ### Temperate Very Hot Summer Climates (D-A2):
 
@@ -1189,6 +1235,8 @@ Moose Jaw, SK	(2100)
 Swift Current, SK	(2100)  
 Novosibirsk, Russia	(2100)  
 Omsk, Russia	(2100)  
+Zhetikara, Kazakhstan (2100)  
+Grand Forks, ND (2100)
 
 Temperate Arid Desert Very Hot Summer (DDA2):  
 <img src="images/DDA2.jpg"/>
@@ -1344,7 +1392,8 @@ Lethbridge, AB	(today)
 Temperate Arid Desert Mild Summer (DDB2):  
 <img src="images/DDB2.jpg"/>
 
-Meeteetse, WY (today)
+Meeteetse, WY (today)  
+West Taijinar Lake, China (2100)
 
 ### Temperate Cold Summer Climate (DB1):  
 <img src="images/DB1.jpg"/>
@@ -1384,7 +1433,8 @@ Primavera Research Base, Antarctica (today)
 Continental Monsoon Very Hot Summer (EWA2):
 <img src="images/EWA2.jpg"/>
 
-Shenyang, China (today)
+Shenyang, China (today)  
+Hulunbuir, China (2100)
 
 Continental Semiarid Very Hot Summer (ESA2):
 <img src="images/ESA2.png"/>
@@ -1394,7 +1444,8 @@ Ushmola, Kazakhstan (today)
 Continental Arid Desert Very Hot Summer (EDA2):  
 <img src="images/EDA2.jpeg"/>
 
-Bulgan, Mongolia (today)
+Bulgan, Mongolia (today)  
+Mandalgovi, Mongolia (2100)
 
 ### Continental Hot Summer Climates (E-A1):
 
@@ -1423,6 +1474,7 @@ College, AK	(2100)
 Steele Creek, AK	(2100)  
 Chena Ridge, AK	(2100)  
 Ulaanbaatar, Mongolia	(2100)  
+Bulgan, Mongolia (2100)
 
 Continental Semiarid Hot Summer (ESA1):  
 Zhetikara, Kazakhstan (today)  
@@ -1609,10 +1661,16 @@ McMurdo Research Station, Antarctica (today)
 
 # Arctic Climates (G): 
 
+### Arctic Hot Summer Climate (GA1):  
+>**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
+
+Verkhoyansk, Russia
+
 ### Arctic Mild Summer Climate (GB2):  
 <img src="images/Yakutsk_.jpg"/>
 
-Yakutsk, Russia (today)
+Yakutsk, Russia (today)  
+Ust-Nera, Russia (2100)
 
 ### Arctic Cold Summer Climate (GB1):  
 <img src="images/Baker_Lake.jpg"/>  
@@ -1655,15 +1713,15 @@ Verkhoyansk, Russia (today)
 Ust-Nera, Russia (today)
 
 ### Superarctic Very Cold Summer Climate (YC2):  
->THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH  
+>**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
 
 Concordia Research Station, Antarctica (2100)
 
 ### Superarctic Freezing Summer Climate (YC1):  
->THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH
+>**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
 
 ### Superarctic Frigid Summer Climate (YY):  
->THIS CLIMATE WILL NO LONGER EXIST ON EARTH IN 2100
+>**THIS CLIMATE WILL NO LONGER EXIST ON EARTH IN 2100**
 
 <img src="images/Concordia.jpg"/>
 
