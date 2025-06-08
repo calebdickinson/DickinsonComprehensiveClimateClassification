@@ -901,8 +901,8 @@ var cityList = [
   { name: 'Longnan, China',              lon: 104.92184,   lat: 33.400685 },
   { name: 'Shenyang, China',             lon: 123.400002,  lat: 41.799999 },
   { name: 'Hengyang, China',             lon: 112.61888,   lat: 26.88946 }, 
-  { name: 'Grand Forks, ND', lon: -97.0883389, lat: 47.9212639 } 
-
+  { name: 'Grand Forks, ND',             lon: -97.0883389, lat: 47.9212639 },
+  { name: 'Svea Research Station, Antarctica', lon: -11.216667, lat: -74.583333 } 
 ];
 
 // (b) Build mapping of code → human-readable labels
