@@ -862,10 +862,14 @@ Carbondale, IL	(2100)
 Champaign, IL	(2100)  
 
 Subtropical Monsoon Scorching Hot Summer (CWZ1):  
+>**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
+
 Seoul–Incheon, South Korea	(2100)  
 Zhengzhou, China	(2100)  
 
 Subtropical Mediterranean Scorching Hot Summer (CMZ1):  
+>**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
+
 Istanbul, Turkey	(2100)  
 Tirana, Albania	(2100)  
 Podgorica, Montenegro	(2100)  
@@ -886,7 +890,7 @@ Pristina, Kosovo	(2100)
 Bucharest, Romania	(2100)  
 Belgrade, Serbia	(2100)  
 
-Subtropical Desert Scorching Hot Summer (CDZ1):  
+Subtropical Arid Desert Scorching Hot Summer (CDZ1):  
 <img src="images/CDZ1.jpg"/>
 
 Las Vegas–Henderson–Paradise, NV	(today)  
@@ -990,7 +994,7 @@ Kyiv, Ukraine	(2100)
 Rexburg, ID	(2100)  
 
 Subtropical Arid Desert Very Hot Summer (CDA2):  
-<img src="images/CDA2.webp"/>
+<img src="images/CDA2.jpg"/>
 
 Baku, Azerbaijan	(today)  
 Ashgabat, Turkmenistan	(today)  
