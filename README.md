@@ -428,7 +428,7 @@ Supertropical Mediterranean Very Hot Summer (AMA2):
 <img src="images/AMA2.webp"/>
 <img src="images/AMA2Two.webp"/>
 
-Trincomake, Sri Lanka (today)
+Trincomalee, Sri Lanka (today)
 
 Supertropical Semiarid Very Hot Summer (ASA2):  
 Bangalore, India	(today)  
@@ -480,6 +480,7 @@ Oranjestad, Sint Eustatius (NL)	(2100)
 Supertropical Humid Hot Summer (AHA1):  
 <img src="images/AHA1.jpg"/>
 
+Santo Domingo, Ecuador (today)
 Quito, Ecuador	(2100)  
 Guatemala City, Guatemala	(2100)  
 
@@ -513,6 +514,8 @@ Kuwait City, Kuwait	(2100)
 
 Tropical Monsoon Hyperthermal Summer (BWZ2):  
 <img src="images/BWZ2.jpg"/>
+
+Kota, India (today)
 
 Tropical Semiarid Hyperthermal Summer (BSZ2):  
 Dallas–Fort Worth–Arlington, TX	(2100)  
@@ -566,6 +569,8 @@ Vatican City, Vatican City	(2100)
 Tropical Semiarid Scorching Hot Summer (BSZ1):  
 <img src="images/BSZ1.jpg"/>
 
+Gujrat, Pakistan (today)  
+Crystal City, TX (today)
 Houston, TX	(2100)  
 Tampa–St. Petersburg, FL	(2100)  
 Orlando, FL	(2100)  
@@ -743,6 +748,8 @@ Addis Ababa, Ethiopia	(today)
 Tropical Mediterranean Mild Summer (BMB2):
 <img src="images/BMB2.jpg"/>
 
+Lompoc, California (today)
+
 Tropical Semiarid Mild Summer (BSB2):  
 <img src="images/CapeTown.jpeg"/>
 
@@ -780,7 +787,7 @@ Subtropical Humid Scorching Hot Summer (CHZ1):
 <img src="images/CHZ1One.jpeg"/>
 <img src="images/CHZ1Two.jpeg"/>
 
-
+Fuzhou, China (today)  
 Tokyo–Yokohama, Japan	(2100)  
 Osaka–Kobe–Kyoto, Japan	(2100)  
 Nagoya, Japan	(2100)  
@@ -789,6 +796,7 @@ Subtropical Semihumid Scorching Hot Summer (CGZ1):
 <img src="images/CGZ1One.jpg"/>
 <img src="images/CGZ1Two.jpeg"/>
 
+Hengyang, China (today)  
 Shanghai, China	(2100)  
 New York, United States	(2100)  
 Hangzhou, China	(2100)  
@@ -1012,7 +1020,9 @@ Burnaby, BC	(2100)
 Subtropical Semiarid Hot Summer (CSA1):  
 <img src="images/CSA1.jpg"/>
 
-Vatican City, Vatican City	(today)  
+Barcelona, Spain (today)  
+Sedona, AZ (today)  
+Vatican City, Vatican City	(today) (on the border with CGA1)
 Berlin, Germany	(2100)  
 Warsaw, Poland	(2100)  
 
@@ -1049,6 +1059,7 @@ Amsterdam, Netherlands	(today)
 Subtropical Monsoon Mild Summer (CWB2):  
 <img src="images/CWB2.jpeg"/>
 
+Phungling, Nepal (today)
 Thimphu, Bhutan	(2100)  
 
 Subtropical Mediterranean Mild Summer (CMB2):  
@@ -1069,6 +1080,8 @@ Ketchikan, AK	(2100)
 
 Subtropical Semiarid Mild Summer (CSB2):  
 <img src="images/CSB2.jpg"/>
+
+San Jose de la Joya, Mexico (today)
 
 Subtropical Arid Desert Mild Summer (CDB2):
 <img src="images/CDB2.jpeg"/>
@@ -1157,6 +1170,8 @@ Tianjin, China	(today)
 Temperate Mediterranean Very Hot Summer (DMA2):
 <img src="images/DMA2One.jpg"/>
 <img src="images/DMA2Two.jpeg"/>
+
+Borujerd, Iran (today)
 
 Temperate Semiarid Very Hot Summer (DSA2):  
 Salt Lake City, UT	(today)  
@@ -1312,6 +1327,8 @@ Bethel, AK	(2100)
 Temperate Monsoon Mild Summer (DWB2):
 <img src="images/DWB2.jpg"/>
 
+Longnan, China (today)
+
 Temperate Mediterranean Mild Summer (DMB2):  
 <img src="images/DMB2.jpg"/>  
 
@@ -1367,8 +1384,12 @@ Primavera Research Base, Antarctica (today)
 Continental Monsoon Very Hot Summer (EWA2):
 <img src="images/EWA2.jpg"/>
 
+Shenyang, China (today)
+
 Continental Semiarid Very Hot Summer (ESA2):
 <img src="images/ESA2.png"/>
+
+Ushmola, Kazakhstan (today)
 
 Continental Arid Desert Very Hot Summer (EDA2):  
 <img src="images/EDA2.jpeg"/>
@@ -1387,6 +1408,7 @@ Gatineau, QC	(today)
 Longueuil, QC	(today)  
 
 Continental Semihumid Hot Summer (EGA1):  
+Grand Forks, North Dakota (today)  
 Thompson, MB	(2100)  
 Fort Simpson, NT	(2100)  
 Norman Wells, NT	(2100)  
@@ -1403,6 +1425,7 @@ Chena Ridge, AK	(2100)
 Ulaanbaatar, Mongolia	(2100)  
 
 Continental Semiarid Hot Summer (ESA1):  
+Zhetikara, Kazakhstan (today)  
 Prince Albert, SK	(2100)  
 Yellowknife, NT	(2100)  
 Hay River, NT	(2100)  
@@ -1454,6 +1477,8 @@ Coral Harbour, NU	(2100)
 
 Continental Mediterranean Mild Summer (EMB2):
 <img src="images/EMB2.png"/>
+
+Sharistan, Afghanistan (today)
 
 Continental Monsoon Mild Summer (EWB2):  
 FAIRBANKS ALASKA IN MARCH
