@@ -659,6 +659,8 @@ Kathmandu, Nepal	(2100)
 Harare, Zimbabwe	(2100)  
 
 Tropical Mediterranean Very Hot Summer (BMA2):  
+<img src="images/BMA2.jpg"/>  
+
 Algiers, Algeria	(today)  
 Beirut, Lebanon	(today)  
 Tunis, Tunisia	(today)  
@@ -1056,6 +1058,7 @@ Burnaby, BC	(2100)
 
 Subtropical Semiarid Hot Summer (CSA1):  
 <img src="images/CSA1.jpg"/>
+<img src="images/CSA1Two.jpg"/>
 
 Barcelona, Spain (today)  
 Sedona, AZ (today)  
@@ -1477,6 +1480,8 @@ Ulaanbaatar, Mongolia	(2100)
 Bulgan, Mongolia (2100)
 
 Continental Semiarid Hot Summer (ESA1):  
+<img src="images/ESA1.jpg"/>
+
 Zhetikara, Kazakhstan (today)  
 Prince Albert, SK	(2100)  
 Yellowknife, NT	(2100)  
