@@ -847,14 +847,14 @@ var cityList = [
   { name: 'Trincomalee, Sri Lanka',      lon: 81.2333, lat: 8.5667 },
   { name: 'Chandrapur, India',           lon: 79.297,      lat: 19.950 },    
   { name: 'Gujrat, Pakistan',            lon: 74.0744,     lat: 32.5728 },  
-  { name: 'Crystal City, TX',    lon: -99.82778,   lat: 28.68444 }, 
+  { name: 'Crystal City, TX',            lon: -99.82778,   lat: 28.68444 }, 
   { name: 'Barcelona, Spain',            lon: 2.1734,      lat: 41.3851 },  
-  { name: 'Sedona, AZ',        lon: -111.76111,  lat: 34.86972 }, 
+  { name: 'Sedona, AZ',                  lon: -111.76111,  lat: 34.86972 }, 
   { name: 'Ushmola, Kazakhstan',         lon: 77.58, lat: 45.57 }, 
   { name: 'Zhetikara, Kazakhstan',       lon: 61.2006,     lat: 52.1908 },  
   { name: 'Santo Domingo, Ecuador',      lon: -79.17194,   lat: -0.25417 }, 
   { name: 'Fuzhou, China',               lon: 119.2964,    lat: 26.0743 },  
-  { name: 'Lompoc, CA',     lon: -120.46028,  lat: 34.64611 }, 
+  { name: 'Lompoc, CA',                  lon: -120.46028,  lat: 34.64611 }, 
   { name: 'Borujerd, Iran',              lon: 48.75222,    lat: 33.91111 }, 
   { name: 'Sharistan, Afghanistan',      lon: 66.47000,    lat: 33.71000 }, 
   { name: 'Kota, India',                 lon: 75.83,       lat: 25.18 },   
@@ -862,7 +862,8 @@ var cityList = [
   { name: 'Longnan, China',              lon: 104.92184,   lat: 33.400685 },
   { name: 'Shenyang, China',             lon: 123.400002,  lat: 41.799999 },
   { name: 'Hengyang, China',             lon: 112.61888,   lat: 26.88946 }, 
-  { name: 'Grand Forks, ND', lon: -97.0883389, lat: 47.9212639 } 
+  { name: 'Grand Forks, ND',             lon: -97.0883389, lat: 47.9212639 },
+  { name: 'Svea Research Station, Antarctica', lon: -11.216667, lat: -74.583333 } 
 ];
 
 // (b) Build mapping of code → human-readable labels
