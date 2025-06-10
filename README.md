@@ -285,7 +285,7 @@ Lusaka, Zambia	(2100)
 Libreville, Gabon	(2100)  
 
 Supertropical Semiarid Scorching Hot Summer (ASZ1):  
-<img src="images/AHZ1.jpg"/>
+<img src="images/ASZ1.jpg"/>
 
 Bangkok, Thailand	(today)  
 Chennai, India	(today)  
