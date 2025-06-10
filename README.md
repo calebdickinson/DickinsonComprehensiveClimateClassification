@@ -648,10 +648,14 @@ San José de la Joya, Mexico (2100)
 ### Tropical Very Hot Summer Climates (B-A2):
 
 Tropical Humid Very Hot Summer (BHA2):  
+<img src="images/BHA2.jpg"/>
+
 Taipei, Taiwan	(today)  
 Nouméa, New Caledonia (FR)	(today)  
 
 Tropical Semihumid Very Hot Summer (BGA2):  
+<img src="images/BGA2.jpg"/>
+
 Miami–Fort Lauderdale, FL	(today)  
 Tampa–St. Petersburg, FL	(today)  
 Orlando, FL	(today)  
@@ -664,6 +668,8 @@ Buenos Aires, Argentina	(2100)
 Montevideo, Uruguay	(2100)  
 
 Tropical Monsoon Very Hot Summer (BWA2):  
+<img src="images/BWA2.jpg"/>
+
 Guangzhou–Foshan, China	(today)  
 Dhaka, Bangladesh	(today)  
 Shenzhen, China	(today)  
