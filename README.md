@@ -285,6 +285,8 @@ Lusaka, Zambia	(2100)
 Libreville, Gabon	(2100)  
 
 Supertropical Semiarid Scorching Hot Summer (ASZ1):  
+<img src="images/AHZ1.jpg"/>
+
 Bangkok, Thailand	(today)  
 Chennai, India	(today)  
 Hyderabad, India	(today)  
@@ -344,6 +346,8 @@ Salango Island, Ecuador (2100)
 ### Supertropial Very Hot Summer climates (A-A2):
 
 Supertropical Humid Very Hot Summer (AHA2):  
+<img src="images/AHA2.jpg"/>
+
 Manila, Philippines	(today)  
 Kuala Lumpur, Malaysia	(today)  
 San Juan, PR	(today)  
@@ -414,6 +418,9 @@ Kampala, Uganda	(2100)
 Nouméa, New Caledonia (FR)	(2100)  
 
 Supertropical Monsoon Very Hot Summer (AWA2):  
+<img src="images/AWA2One.jpg"/>
+<img src="images/AWA2Two.jpg"/>
+
 Jakarta, Indonesia	(today)  
 Mumbai, India	(today)  
 Kinshasa, DR Congo	(today)  
@@ -499,13 +506,19 @@ Quito, Ecuador	(2100)
 Guatemala City, Guatemala	(2100)  
 
 Supertropical Semihumid Hot Summer (AGA1):  
+<img src="images/AGA1.png"/>
+
 Kampala, Uganda	(today)  
 Addis Ababa, Ethiopia	(2100)  
 
 Supertropical Monsoon Hot Summer (AWA1):  
+<img src="images/AWA1.jpg"/>
+
 Brasília, Brazil	(today)  
 
 Supertropical Semiarid Hot Summer (ASA1):  
+<img src="images/ASA1.jpg"/>
+
 Caracas, Venezuela	(today)  
 
 Supertropical Arid Desert Hot Summer (ADA1):  
