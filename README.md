@@ -452,6 +452,8 @@ Supertropical Mediterranean Very Hot Summer (AMA2):
 Trincomalee, Sri Lanka (today)
 
 Supertropical Semiarid Very Hot Summer (ASA2):  
+<img src="images/ASA2.jpg"/>
+
 Bangalore, India	(today)  
 Lagos, Nigeria	(today)  
 Honolulu, HI	(today)  
