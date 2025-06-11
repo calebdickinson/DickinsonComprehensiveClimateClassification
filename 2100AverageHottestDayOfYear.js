@@ -45,7 +45,7 @@ for (var i = 0; i < binEdges.length().getInfo() - 1; i++) {
 }
 
 // ===========================================
-// 5. DISPLAY COLORED ZONES (BUT NOT VALUES)
+// 5. DISPLAY COLORED ZONES
 // ===========================================
 Map.setCenter(0, 20, 2);
 Map.addLayer(classified, {
