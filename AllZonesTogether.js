@@ -79,7 +79,7 @@ var P_ann2000    = monthlyClim2000.select('pr' ).sum().rename('P_ann'),
                      .select('pr').sum().rename('P_highSun'),
     HS2000       = P_hs2000.divide(P_ann2000).rename('HS_ratio'),
     clim2000     = aridBase
-                     .where(aridBase.neq(0).and(HS2000.gte(0.7)),4)
+                     .where(aridBase.neq(0).and(HS2000.gte(0.8)),4)
                      .where(aridBase.neq(0).and(HS2000.lt(0.4)),5)
                      .rename('climateClass'),
     clim2000_flip= clim2000
