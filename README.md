@@ -88,7 +88,7 @@ G = Semihumid
 
 M = Meditterranean (If not arid desert and if < 40% of percipitation falls in the sunniest half of the year)
 
-W = Monsoon (If not arid desert and if > 70% of percipitation falls in the sunniest half of the year)
+W = Monsoon (If not arid desert and if > 80% of percipitation falls in the sunniest half of the year)
 
 S = Semiarid
 
