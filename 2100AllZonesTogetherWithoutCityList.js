@@ -120,7 +120,7 @@ var P_ann2100    = monthlyClim2100.select('pr' ).sum().rename('P_ann'),
                      .select('pr').sum().rename('P_highSun'),
     HS2100       = P_hs2100.divide(P_ann2100).rename('HS_ratio'),
     clim2100     = aridBase
-                     .where(aridBase.neq(0).and(HS2100.gte(0.7)),4)
+                     .where(aridBase.neq(0).and(HS2100.gte(0.8)),4)
                      .where(aridBase.neq(0).and(HS2100.lt(0.4)),5)
                      .rename('climateClass'),
     clim2100_flip= clim2100
