@@ -44,34 +44,35 @@ document.body.appendChild(container);
 // Tables
 const winterZoneTable = {
   Z: '00',
-  A: '22',
-  B: '44',
-  C: '66',
-  D: '88',
-  E: 'AA',
-  F: 'CC',
-  G: 'EE',
+  A: '20',
+  B: '40',
+  C: '60',
+  D: '80',
+  E: 'A0',
+  F: 'C0',
+  G: 'E0',
   Y: 'FF'
 };
 const aridityTable = {
-  H: 'FF',
-  G: 'DD',
-  W: 'BB',
-  M: '99',
-  S: '55',
-  D: '00' 
+  H: '00',
+  G: '44',
+  W: '66',
+  M: '88',
+  S: 'AA',
+  D: 'FF',
+  _: '00'
 };
 const summerZoneTable = {
-  X1: 'FF',
-  Z2: 'CC',
-  Z1: 'AA',
-  A2: '88',
-  A1: '66',
-  B2: '44',
-  B1: '66',
-  C2: '77',
-  C1: '88',
-  Y: ''
+  X1: '00',
+  Z2: '1C',
+  Z1: '39',
+  A2: '55',
+  A1: '71',
+  B2: '8E',
+  B1: 'AA',
+  C2: 'C6',
+  C1: 'E3',
+  Y:  'FF',
 };
 
 // Codes to show
@@ -87,36 +88,36 @@ const legendData = [
   "BHA2", "BGA2", "BWA2", "BMA2", "BSA2", "BDA2",
   "BHA1", "BGA1", "BWA1", "BMA1", "BSA1", "BDA1",
   "BHB2", "BGB2", "BWB2", "BMB2", "BSB2", "BDB2",
-  "BB1" , "    ", "    ", "    ", "    ", "    ",
+  "B_B1", "    ", "    ", "    ", "    ", "    ",
   "    ", "    ", "    ", "    ", "    ", "CDZ2",
   "CHZ1", "CGZ1", "    ", "    ", "CSZ1", "CDZ1",
   "CHA2", "CGA2", "CWA2", "CMA2", "CSA2", "CDA2",
   "CHA1", "CGA1", "CWA1", "CMA1", "CSA1", "CDA1",
   "CHB2", "CGB2", "CWB2", "CMB2", "CSB2", "CDB2",
-  "CB1" , "    ", "    ", "    ", "    ", "    ",
-  "CC2" , "    ", "    ", "    ", "    ", "    ",
-  "CC1" , "    ", "    ", "    ", "    ", "    ",
+  "C_B1", "    ", "    ", "    ", "    ", "    ",
+  "C_C2", "    ", "    ", "    ", "    ", "    ",
+  "C_C1", "    ", "    ", "    ", "    ", "    ",
   "    ", "    ", "    ", "    ", "    ", "DDZ1",
   "DHA2", "DGA2", "DWA2", "DMA2", "DSA2", "DDA2",
   "DHA1", "DGA1", "DWA1", "DMA1", "DSA1", "DDA1",
   "DHB2", "DGB2", "DWB2", "DMB2", "DSB2", "DDB2",
-  "DB1" , "    ", "    ", "    ", "    ", "    ",
-  "DC2" , "    ", "    ", "    ", "    ", "    ",
-  "DC1" , "    ", "    ", "    ", "    ", "    ",
-  "DY"  , "    ", "    ", "    ", "    ", "    ",
+  "D_B1", "    ", "    ", "    ", "    ", "    ",
+  "D_C2", "    ", "    ", "    ", "    ", "    ",
+  "D_C1", "    ", "    ", "    ", "    ", "    ",
+  "D_Y" , "    ", "    ", "    ", "    ", "    ",
   "    ", "    ", "EWA2", "    ", "ESA2", "EDA2",
   "EHA1", "EGA1", "EWA1", "    ", "ESA1", "EDA1",
   "EHB2", "EGB2", "EWB2", "EMB2", "ESB2", "EDB2",
-  "EB1" , "    ", "    ", "    ", "    ", "    ",
-  "EC2" , "    ", "    ", "    ", "    ", "    ",
-  "EC1" , "    ", "    ", "    ", "    ", "    ",
-  "EY"  , "    ", "    ", "    ", "    ", "    ",
+  "E_B1", "    ", "    ", "    ", "    ", "    ",
+  "E_C2", "    ", "    ", "    ", "    ", "    ",
+  "E_C1", "    ", "    ", "    ", "    ", "    ",
+  "E_Y" , "    ", "    ", "    ", "    ", "    ",
   "    ", "    ", "    ", "    ", "    ", "    ",
-  "FA1" , "FB2" , "FB1" , "FC2" , "FC1" , "FY"  ,
+  "F_A1", "F_B2", "F_B1", "F_C2", "F_C1", "F_Y" ,
   "    ", "    ", "    ", "    ", "    ", "    ",
-  "    ", "GB2" , "GB1" , "GC2" , "GC1" , "GY"  ,
+  "    ", "G_B2", "G_B1", "G_C2", "G_C1", "G_Y" ,
   "    ", "    ", "    ", "    ", "    ", "    ",
-  "    ", "YB2" , "YB1" , "    ", "    ", "YY"  ,
+  "    ", "Y_B2", "Y_B1", "    ", "    ", "Y_Y" ,
   "    ", "    ", "    ", "    ", "    ", "    ",
   ];
 
@@ -126,8 +127,8 @@ legendData.forEach(code => {
   const summer = code.slice(2);     // e.g. "Z2"
 
   const blue  = winterZoneTable[winter]   || '00';
-  const green = aridityTable[arid]        || '00';
-  const red   = summerZoneTable[summer]    || '00';
+  const red = aridityTable[arid]        || '00';
+  const green   = summerZoneTable[summer]    || '00';
 
   const hexColor = `#${red}${green}${blue}`;
 
