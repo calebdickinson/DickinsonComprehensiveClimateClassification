@@ -131,7 +131,7 @@ var combined = ee.Image(0)
   .where(validMask,
          coldComb.multiply(100)
                  .add(clim2000_flip.multiply(10))
-                 .add(coldComb))
+                 .add(warmComb))
   .rename('combined');
 
 // ----------------------------------------------------
@@ -301,31 +301,47 @@ var codeColorMap = {
 
   };
 
-// Convert string keys to numbers if possible
-var keys = Object.keys(codeColorMap);
-var codes = keys.map(function(k) {
-  var n = parseInt(k, 10);
-  return isNaN(n) ? null : n;
-}).filter(function(v){ return v !== null; });
+// 1. Turn your JS object into client-side arrays:
+var keys    = Object.keys(codeColorMap);                  // ["876","875",…,"110"]
+var codes   = keys.map(function(k){ return parseInt(k,10); });    // [876,875,…,110]
+var palette = keys.map(function(k){ return codeColorMap[k]; });   // ["#009090",…,"#FFFFFF"]
 
-var palette = keys.map(function(k) { return codeColorMap[k]; });
+// 2. Build a JavaScript index array 0…N-1:
+var indices = codes.map(function(code, idx){ return idx; });  // [0,1,2,…,123]
 
+// 3. Remap your “big” codes → small indices:
+var combinedIndexed = combined
+  .remap(codes, indices, /* defaultValue */ -1)
+  .rename('classIndex');
+
+// 4. Draw *that* with an exact 0…(N-1) palette:
 Map.centerObject(ee.Geometry.Point([0, 20]), 2);
-Map.addLayer(combined, {min: 1, max: codes.length, palette: palette}, 'combinedColored');
+Map.addLayer(
+  combinedIndexed,
+  {
+    min:     0,
+    max:     indices.length - 1,   // 123
+    palette: palette
+  },
+  'combined (discrete)'
+);
 
 // ----------------------------------------------------
 // 7. PRINT UNIQUE COMBINED ZONE CODES
 // ----------------------------------------------------
+// Make sure this function is defined *before* you call it:
 function printZoneCodes() {
   var world = ee.Geometry.Rectangle([-180, -90, 180, 90]);
-  var hist = combined.reduceRegion({
-    reducer: ee.Reducer.frequencyHistogram(),
-    geometry: world,
-    scale: 50000,
+  var hist  = combined.reduceRegion({
+    reducer:   ee.Reducer.frequencyHistogram(),
+    geometry:  world,
+    scale:     50000,
     maxPixels: 1e13
   });
-  var codesDict = ee.Dictionary(hist.get('combined'));
+  var codesDict   = ee.Dictionary(hist.get('combined'));
   var uniqueZones = codesDict.keys();
   print('Unique combined zone numbers:', uniqueZones);
 }
+
+// …and then call it:
 printZoneCodes();
