@@ -54,11 +54,6 @@ var monthlyClim2000 = ee.ImageCollection(
 
 var P_ann2000    = monthlyClim2000.select('pr' ).sum().rename('P_ann'),
     PET_ann2000  = monthlyClim2000.select('pet').sum().rename('PET_ann'),
-    histHottest  = monthlyClim2000.qualityMosaic('tmeanC').select('tmeanC').rename('histHottest'),
-    histColdest  = monthlyClim2000
-                     .map(function(img){ return img.select('tmeanC').multiply(-1); })
-                     .qualityMosaic('tmeanC')
-                     .select('tmeanC').multiply(-1).rename('histColdest'),
     AI2000       = P_ann2000.divide(PET_ann2000).rename('AI'),
     aridBase     = ee.Image(6) // H: Humid
                      .where(AI2000.lt(0.0036),5) // G: Semihumid
@@ -70,8 +65,8 @@ var P_ann2000    = monthlyClim2000.select('pr' ).sum().rename('P_ann'),
                      .select('pr').sum().rename('P_highSun'),
     HS2000       = P_hs2000.divide(P_ann2000).rename('HS_ratio'),
     clim2000     = aridBase
-                     .where(aridBase.neq(0).and(HS2000.gte(0.8)), 4) // W: Monsoon
-                     .where(aridBase.neq(0).and(HS2000.lt(0.4)), 3) // M: Mediterranean
+                     .where(aridBase.neq(1).and(HS2000.gte(0.8)), 4) // W: Monsoon
+                     .where(aridBase.neq(1).and(HS2000.lt(0.4)), 3) // M: Mediterranean
                      .rename('climateClass'),
     clim2000_flip= clim2000
                      .where(ee.Image.pixelLonLat().select('latitude').lt(0).and(clim2000.eq(4)), 3)
@@ -113,6 +108,13 @@ var combined = coldComb
     .add(clim2000_flip.multiply(10))
     .add(warmComb)    
     .rename('combined');
+    
+var waterMask = ee.ImageCollection('MODIS/006/MOD44W')
+                  .select('water_mask')
+                  .first();
+var landMask = waterMask.eq(0);
+var combinedLand = combined.updateMask(landMask);
+
 
 var codeColorMap = {
   
@@ -413,16 +415,26 @@ var keys    = Object.keys(codeColorMap);
 var codes   = keys.map(function(k){ return parseInt(k,10); });
 var palette = keys.map(function(k){ return codeColorMap[k]; });
 var indices = codes.map(function(code, idx){ return idx; }); 
-var combinedIndexed = combined
-  .remap(codes, indices, -1)
-  .rename('classIndex');
 
+// 1. Remap raw combined codes → [0…palette.length−1]
+var combinedIndexed = combined.remap(
+  /* from */ codes,
+  /* to   */ indices,
+  /* else */ -1
+).rename('classIndex');
+
+// 2. Mask out the oceans on the indexed image
+var combinedIndexedLand = combinedIndexed.updateMask(landMask);
+
+// 3. Draw it with palette _and_ 50% opacity
 Map.addLayer(
-  combinedIndexed,
+  combinedIndexedLand,
   {
     min:     0,
     max:     indices.length - 1,
     palette: palette
   },
-  'combined (discrete)'
+  'Climate (land only, discrete)',
+  true,
+  0.7   // opacity
 );
