@@ -1,6 +1,3 @@
-// ----------------------------------------------------
-// 1. LOAD ERA5 MONTHLY TEMPERATURE DATA (2000–2005)
-// ----------------------------------------------------
 var era5 = ee.ImageCollection('ECMWF/ERA5/MONTHLY')
   .filterDate('2000-01-01', '2005-12-31')
   .select('mean_2m_air_temperature')
@@ -27,9 +24,6 @@ var coldestC_global = monthlyMeans
   .multiply(-1)
   .select('tempC').rename('coldestC');
 
-// ----------------------------------------------------
-// 2. LOAD NEX-GDDP HISTORICAL DATA (2000–2005)
-// ----------------------------------------------------
 var hist2000 = ee.ImageCollection('NASA/NEX-GDDP')
   .filter(ee.Filter.eq('scenario', 'historical'))
   .filter(ee.Filter.eq('model', 'ACCESS1-0'))
@@ -58,9 +52,6 @@ var monthlyClim2000 = ee.ImageCollection(
   })
 );
 
-// ----------------------------------------------------
-// 3. CLIMATE DERIVATIONS
-// ----------------------------------------------------
 var P_ann2000    = monthlyClim2000.select('pr' ).sum().rename('P_ann'),
     PET_ann2000  = monthlyClim2000.select('pet').sum().rename('PET_ann'),
     histHottest  = monthlyClim2000.qualityMosaic('tmeanC').select('tmeanC').rename('histHottest'),
@@ -74,7 +65,6 @@ var P_ann2000    = monthlyClim2000.select('pr' ).sum().rename('P_ann'),
                      .where(AI2000.lt(0.0036),6) // G: Semihumid
                      .where(AI2000.lt(0.0024),3) // S: Semiarid
                      .where(AI2000.lt(0.0012),2) // D: Arid Desert
-                     .unmask(1) // no aridity
                      .rename('aridity')
                      .updateMask(AI2000.mask())
                      .updateMask(validMask),
@@ -89,10 +79,8 @@ var P_ann2000    = monthlyClim2000.select('pr' ).sum().rename('P_ann'),
     clim2000_flip= clim2000
                      .where(ee.Image.pixelLonLat().select('latitude').lt(0).and(clim2000.eq(4)), 5)
                      .where(ee.Image.pixelLonLat().select('latitude').lt(0).and(clim2000.eq(5)), 4);
+    var climFilled = clim2000_flip.unmask(1); // no aridity
 
-// ----------------------------------------------------
-// 4. CLASSIFICATION FUNCTIONS
-// ----------------------------------------------------
 function classifySummer(tC) {
   return ee.Image.constant(0)
     .where(tC.gte(40).and(tC.lt(45)),  9) // X1: Extreme Hyperthermal Summer
@@ -121,9 +109,6 @@ function classifyCold(tC) {
     .rename('coldZone');
 }
 
-// ----------------------------------------------------
-// 5. COMBINED ZONE CODE IMAGE
-// ----------------------------------------------------
 var warmComb = classifySummer(hottestC_global),
     coldComb = classifyCold(coldestC_global);
 
@@ -134,10 +119,8 @@ var combined = ee.Image(0)
                  .add(warmComb))
   .rename('combined');
 
-// ----------------------------------------------------
-// 6. COLOR MAP + VISUALIZATION
-// ----------------------------------------------------
 var codeColorMap = {
+  
   876: "#009090", //AHA2
   875: "#00CACA", //AHA1
 
@@ -301,47 +284,20 @@ var codeColorMap = {
 
   };
 
-// 1. Turn your JS object into client-side arrays:
-var keys    = Object.keys(codeColorMap);                  // ["876","875",…,"110"]
-var codes   = keys.map(function(k){ return parseInt(k,10); });    // [876,875,…,110]
-var palette = keys.map(function(k){ return codeColorMap[k]; });   // ["#009090",…,"#FFFFFF"]
-
-// 2. Build a JavaScript index array 0…N-1:
-var indices = codes.map(function(code, idx){ return idx; });  // [0,1,2,…,123]
-
-// 3. Remap your “big” codes → small indices:
+var keys    = Object.keys(codeColorMap);                 
+var codes   = keys.map(function(k){ return parseInt(k,10); });
+var palette = keys.map(function(k){ return codeColorMap[k]; });
+var indices = codes.map(function(code, idx){ return idx; }); 
 var combinedIndexed = combined
-  .remap(codes, indices, /* defaultValue */ -1)
+  .remap(codes, indices, -1)
   .rename('classIndex');
 
-// 4. Draw *that* with an exact 0…(N-1) palette:
-Map.centerObject(ee.Geometry.Point([0, 20]), 2);
 Map.addLayer(
   combinedIndexed,
   {
     min:     0,
-    max:     indices.length - 1,   // 123
+    max:     indices.length - 1,
     palette: palette
   },
   'combined (discrete)'
 );
-
-// ----------------------------------------------------
-// 7. PRINT UNIQUE COMBINED ZONE CODES
-// ----------------------------------------------------
-// Make sure this function is defined *before* you call it:
-function printZoneCodes() {
-  var world = ee.Geometry.Rectangle([-180, -90, 180, 90]);
-  var hist  = combined.reduceRegion({
-    reducer:   ee.Reducer.frequencyHistogram(),
-    geometry:  world,
-    scale:     50000,
-    maxPixels: 1e13
-  });
-  var codesDict   = ee.Dictionary(hist.get('combined'));
-  var uniqueZones = codesDict.keys();
-  print('Unique combined zone numbers:', uniqueZones);
-}
-
-// …and then call it:
-printZoneCodes();
