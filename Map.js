@@ -109,11 +109,9 @@ var combined = coldComb
     .add(warmComb)    
     .rename('combined');
     
-var waterMask = ee.ImageCollection('MODIS/006/MOD44W')
-                  .select('water_mask')
-                  .first();
-var landMask = waterMask.eq(0);
-var combinedLand = combined.updateMask(landMask);
+var landMask = ee.Image('NOAA/NGDC/ETOPO1')
+  .select('bedrock')
+  .gte(0);  // ≥0 m = land (includes ice & lakes)
 
 
 var codeColorMap = {
@@ -411,30 +409,26 @@ var codeColorMap = {
 
   };
 
-var keys    = Object.keys(codeColorMap);                 
-var codes   = keys.map(function(k){ return parseInt(k,10); });
+// 4) Turn map into parallel arrays
+var keys    = Object.keys(codeColorMap);
+var codes   = keys.map(function(k){ return parseInt(k, 10); });
 var palette = keys.map(function(k){ return codeColorMap[k]; });
-var indices = codes.map(function(code, idx){ return idx; }); 
+var indices = codes.map(function(_, i){ return i; });
 
-// 1. Remap raw combined codes → [0…palette.length−1]
-var combinedIndexed = combined.remap(
-  /* from */ codes,
-  /* to   */ indices,
-  /* else */ -1
-).rename('classIndex');
+// 5) Remap → mask → display (one layer only)
+var discreteLand = combined
+  .remap(codes, indices, -1)  // any code not in `codes` → -1 (transparent)
+  .updateMask(landMask)       // drop only true ocean
+  .rename('classIndex');
 
-// 2. Mask out the oceans on the indexed image
-var combinedIndexedLand = combinedIndexed.updateMask(landMask);
-
-// 3. Draw it with palette _and_ 50% opacity
 Map.addLayer(
-  combinedIndexedLand,
+  discreteLand,
   {
     min:     0,
     max:     indices.length - 1,
     palette: palette
   },
   'Climate (land only, discrete)',
-  true,
-  0.7   // opacity
+  true,   // show layer
+  0.7     // 70% opacity
 );
