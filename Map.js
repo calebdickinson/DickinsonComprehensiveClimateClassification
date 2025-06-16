@@ -59,27 +59,23 @@ var P_ann2000    = monthlyClim2000.select('pr' ).sum().rename('P_ann'),
                      .map(function(img){ return img.select('tmeanC').multiply(-1); })
                      .qualityMosaic('tmeanC')
                      .select('tmeanC').multiply(-1).rename('histColdest'),
-    validMask    = histColdest.gte(-20).and(histHottest.gte(15)),
     AI2000       = P_ann2000.divide(PET_ann2000).rename('AI'),
-    aridBase     = ee.Image(7) // H: Humid
-                     .where(AI2000.lt(0.0036),6) // G: Semihumid
-                     .where(AI2000.lt(0.0024),3) // S: Semiarid
-                     .where(AI2000.lt(0.0012),2) // D: Arid Desert
-                     .rename('aridity')
-                     .updateMask(AI2000.mask())
-                     .updateMask(validMask),
+    aridBase     = ee.Image(6) // H: Humid
+                     .where(AI2000.lt(0.0036),5) // G: Semihumid
+                     .where(AI2000.lt(0.0024),2) // S: Semiarid
+                     .where(AI2000.lt(0.0012),1) // D: Arid Desert
+                     .rename('aridity'),
     P_hs2000     = monthlyClim2000
                      .filter(ee.Filter.inList('month',[4,5,6,7,8,9]))
                      .select('pr').sum().rename('P_highSun'),
     HS2000       = P_hs2000.divide(P_ann2000).rename('HS_ratio'),
     clim2000     = aridBase
-                     .where(aridBase.neq(0).and(HS2000.gte(0.8)), 5) // W: Monsoon
-                     .where(aridBase.neq(0).and(HS2000.lt(0.4)), 4) // M: Mediterranean
+                     .where(aridBase.neq(0).and(HS2000.gte(0.8)), 4) // W: Monsoon
+                     .where(aridBase.neq(0).and(HS2000.lt(0.4)), 3) // M: Mediterranean
                      .rename('climateClass'),
     clim2000_flip= clim2000
-                     .where(ee.Image.pixelLonLat().select('latitude').lt(0).and(clim2000.eq(4)), 5)
-                     .where(ee.Image.pixelLonLat().select('latitude').lt(0).and(clim2000.eq(5)), 4);
-    var climFilled = clim2000_flip.unmask(1); // no aridity
+                     .where(ee.Image.pixelLonLat().select('latitude').lt(0).and(clim2000.eq(4)), 3)
+                     .where(ee.Image.pixelLonLat().select('latitude').lt(0).and(clim2000.eq(3)), 4);
 
 function classifySummer(tC) {
   return ee.Image.constant(0)
@@ -112,175 +108,304 @@ function classifyCold(tC) {
 var warmComb = classifySummer(hottestC_global),
     coldComb = classifyCold(coldestC_global);
 
-var combined = ee.Image(0)
-  .where(validMask,
-         coldComb.multiply(100)
-                 .add(clim2000_flip.multiply(10))
-                 .add(warmComb))
-  .rename('combined');
+var combined = coldComb
+    .multiply(100)                
+    .add(clim2000_flip.multiply(10))
+    .add(warmComb)    
+    .rename('combined');
 
 var codeColorMap = {
   
-  876: "#009090", //AHA2
-  875: "#00CACA", //AHA1
+  866: "#009090", //AHA2
+  865: "#00CACA", //AHA1
 
-  776: "#005500", //BHA2
-  775: "#008800", //BHA1
-  774: "#00BB00", //BHB2
+  766: "#005500", //BHA2
+  765: "#008800", //BHA1
+  764: "#00BB00", //BHB2
   
-  677: "#005050", //CHZ1
-  676: "#009090", //CHA2
-  675: "#00CACA", //CHA1
-  674: "#00EEEE", //CHB2
+  667: "#005050", //CHZ1
+  666: "#009090", //CHA2
+  665: "#00CACA", //CHA1
+  664: "#00EEEE", //CHB2
   
-  576: "#005500", //DHA2
-  575: "#008800", //DHA1
-  574: "#00BB00", //DHB2
+  566: "#005500", //DHA2
+  565: "#008800", //DHA1
+  564: "#00BB00", //DHB2
   
-  475: "#00CACA", //EHA1
-  474: "#00EEEE", //EHB2
+  465: "#00CACA", //EHA1
+  464: "#00EEEE", //EHB2
   
-  867: "#90EE90", //AGZ1
-  866: "#90EE90", //AGA2
-  865: "#90EE90", //AGA1
+  857: "#90EE90", //AGZ1
+  856: "#90EE90", //AGA2
+  855: "#90EE90", //AGA1
   
-  766: "#90EE90", //BGA2
-  765: "#90EE90", //BGA1
-  764: "#90EE90", //BGB2
+  756: "#90EE90", //BGA2
+  755: "#90EE90", //BGA1
+  754: "#90EE90", //BGB2
   
-  667: "#90EE90", //CGZ1
-  666: "#90EE90", //CGA2
-  665: "#90EE90", //CGA1
-  664: "#90EE90", //CGB2
+  657: "#90EE90", //CGZ1
+  656: "#90EE90", //CGA2
+  655: "#90EE90", //CGA1
+  654: "#90EE90", //CGB2
   
-  566: "#90EE90", //DGA2
-  565: "#90EE90", //DGA1
-  564: "#90EE90", //DGB2
+  556: "#90EE90", //DGA2
+  555: "#90EE90", //DGA1
+  554: "#90EE90", //DGB2
   
-  465: "#90EE90", //EGA1
-  464: "#90EE90", //EGB2
+  455: "#90EE90", //EGA1
+  454: "#90EE90", //EGB2
   
-  858: "#800080", //AWZ2
-  857: "#800080", //AWZ1
-  856: "#800080", //AWA2
-  855: "#800080", //AWA1
+  848: "#800080", //AWZ2
+  847: "#800080", //AWZ1
+  846: "#800080", //AWA2
+  845: "#800080", //AWA1
   
-  758: "#800080", //BWZ2
-  757: "#800080", //BWZ1
-  756: "#800080", //BWA2
-  755: "#800080", //BWA1
-  754: "#800080", //BWB2
+  748: "#800080", //BWZ2
+  747: "#800080", //BWZ1
+  746: "#800080", //BWA2
+  745: "#800080", //BWA1
+  744: "#800080", //BWB2
   
-  656: "#800080", //CWA2
-  655: "#800080", //CWA1
-  654: "#800080", //CWB2
+  646: "#800080", //CWA2
+  645: "#800080", //CWA1
+  644: "#800080", //CWB2
   
-  556: "#800080", //DWA2
-  555: "#800080", //DWA1
-  554: "#800080", //DWB2
+  546: "#800080", //DWA2
+  545: "#800080", //DWA1
+  544: "#800080", //DWB2
   
-  456: "#800080", //EWA2
-  455: "#800080", //EWA1
-  454: "#800080", //EWB2
+  446: "#800080", //EWA2
+  445: "#800080", //EWA1
+  444: "#800080", //EWB2
   
-  846: "#FFFF00", //AMA2
+  836: "#FFFF00", //AMA2
   
-  746: "#FFFF00", //BMA2
-  745: "#FFFF00", //BMA1
-  744: "#FFFF00", //BMB2
+  736: "#FFFF00", //BMA2
+  735: "#FFFF00", //BMA1
+  734: "#FFFF00", //BMB2
   
-  646: "#FFFF00", //CMA2
-  645: "#FFFF00", //CMA1
-  644: "#FFFF00", //CMB2
+  636: "#FFFF00", //CMA2
+  635: "#FFFF00", //CMA1
+  634: "#FFFF00", //CMB2
   
-  546: "#FFFF00", //DMA2
-  545: "#FFFF00", //DMA1
-  544: "#FFFF00", //DMB2
+  536: "#FFFF00", //DMA2
+  535: "#FFFF00", //DMA1
+  534: "#FFFF00", //DMB2
   
-  444: "#FFFF00", //EMB2
+  434: "#FFFF00", //EMB2
 
-  837: "#FFA500", //ASZ1
-  836: "#FFA500", //ASA2
-  835: "#FFA500", //ASA1
+  827: "#FFA500", //ASZ1
+  826: "#FFA500", //ASA2
+  825: "#FFA500", //ASA1
   
-  738: "#FFA500", //BSZ2
-  737: "#FFA500", //BSZ1
-  736: "#FFA500", //BSA2
-  735: "#FFA500", //BSA1
-  734: "#FFA500", //BSB2
+  728: "#FFA500", //BSZ2
+  727: "#FFA500", //BSZ1
+  726: "#FFA500", //BSA2
+  725: "#FFA500", //BSA1
+  724: "#FFA500", //BSB2
 
-  637: "#FFA500", //CSZ1
-  636: "#FFA500", //CSA2
-  635: "#FFA500", //CSA1
-  634: "#FFA500", //CSB2
+  627: "#FFA500", //CSZ1
+  626: "#FFA500", //CSA2
+  625: "#FFA500", //CSA1
+  624: "#FFA500", //CSB2
   
-  536: "#FFA500", //DSA2
-  535: "#FFA500", //DSA1
-  534: "#FFA500", //DSB2
+  526: "#FFA500", //DSA2
+  525: "#FFA500", //DSA1
+  524: "#FFA500", //DSB2
   
-  436: "#FFA500", //ESA2
-  435: "#FFA500", //ESA1
-  434: "#FFA500", //ESB2
+  426: "#FFA500", //ESA2
+  425: "#FFA500", //ESA1
+  424: "#FFA500", //ESB2
   
-  828: "#FF0000", //ADZ2
-  827: "#FF0000", //ADZ1
-  826: "#FF0000", //ADA2
-  825: "#FF0000", //ADA1
+  818: "#FF0000", //ADZ2
+  817: "#FF0000", //ADZ1
+  816: "#FF0000", //ADA2
+  815: "#FF0000", //ADA1
   
-  729: "#000000", //BDX1
-  728: "#770000", //BDZ2
-  727: "#FF0000", //BDZ1
-  726: "#FF0000", //BDA2
-  725: "#FF0000", //BDA1
-  724: "#FF0000", //BDB2
+  719: "#000000", //BDX1
+  718: "#770000", //BDZ2
+  717: "#FF0000", //BDZ1
+  716: "#FF0000", //BDA2
+  715: "#FF0000", //BDA1
+  714: "#FF0000", //BDB2
   
-  628: "#FF0000", //CDZ2
-  627: "#FF0000", //CDZ1
-  626: "#FF0000", //CDA2
-  625: "#FF0000", //CDA1
-  624: "#FF0000", //CDB2
+  618: "#FF0000", //CDZ2
+  617: "#FF0000", //CDZ1
+  616: "#FF0000", //CDA2
+  615: "#FF0000", //CDA1
+  614: "#FF0000", //CDB2
   
-  527: "#FF0000", //DDZ1
-  526: "#FF0000", //DDA2
-  525: "#FF0000", //DDA1
-  524: "#FF0000", //DDB2
+  517: "#FF0000", //DDZ1
+  516: "#FF0000", //DDA2
+  515: "#FF0000", //DDA1
+  514: "#FF0000", //DDB2
   
-  426: "#FF0000", //EDA2
-  425: "#FF0000", //EDA1
-  424: "#FF0000", //EDB2
+  416: "#FF0000", //EDA2
+  415: "#FF0000", //EDA1
+  414: "#FF0000", //EDB2
   
-  714: "#0000FF", //B_B1
+  713: "#0000FF", //B_B1
+  723: "#0000FF", //B_B1
+  733: "#0000FF", //B_B1
+  743: "#0000FF", //B_B1
+  753: "#0000FF", //B_B1
+  763: "#0000FF", //B_B1
   
   613: "#3333FF", //C_B1
+  623: "#3333FF", //C_B1
+  633: "#3333FF", //C_B1
+  643: "#3333FF", //C_B1
+  653: "#3333FF", //C_B1
+  663: "#3333FF", //C_B1
   612: "#AC6AC5", //C_C2
+  622: "#AC6AC5", //C_C2
+  632: "#AC6AC5", //C_C2
+  642: "#AC6AC5", //C_C2
+  652: "#AC6AC5", //C_C2
+  662: "#AC6AC5", //C_C2
   611: "#DC5596", //C_C1
+  621: "#DC5596", //C_C1
+  631: "#DC5596", //C_C1
+  641: "#DC5596", //C_C1
+  651: "#DC5596", //C_C1
+  661: "#DC5596", //C_C1
   
   513: "#5555FF", //D_B1
+  523: "#5555FF", //D_B1
+  533: "#5555FF", //D_B1
+  543: "#5555FF", //D_B1
+  553: "#5555FF", //D_B1
+  563: "#5555FF", //D_B1
   512: "#C378E0", //D_C2
+  522: "#C378E0", //D_C2
+  532: "#C378E0", //D_C2
+  542: "#C378E0", //D_C2
+  552: "#C378E0", //D_C2
+  562: "#C378E0", //D_C2
   511: "#FF69B4", //D_C1
+  521: "#FF69B4", //D_C1
+  531: "#FF69B4", //D_C1
+  541: "#FF69B4", //D_C1
+  551: "#FF69B4", //D_C1
+  561: "#FF69B4", //D_C1
   510: "#888888", //D_Y
+  520: "#888888", //D_Y
+  530: "#888888", //D_Y
+  540: "#888888", //D_Y
+  550: "#888888", //D_Y
+  560: "#888888", //D_Y
   
   413: "#7777FF", //E_B1
+  423: "#7777FF", //E_B1
+  433: "#7777FF", //E_B1
+  443: "#7777FF", //E_B1
+  453: "#7777FF", //E_B1
+  463: "#7777FF", //E_B1
   412: "#DD88FF", //E_C2
+  422: "#DD88FF", //E_C2
+  432: "#DD88FF", //E_C2
+  442: "#DD88FF", //E_C2
+  452: "#DD88FF", //E_C2
+  462: "#DD88FF", //E_C2
   411: "#FF90BB", //E_C1
+  421: "#FF90BB", //E_C1
+  431: "#FF90BB", //E_C1
+  441: "#FF90BB", //E_C1
+  451: "#FF90BB", //E_C1
+  461: "#FF90BB", //E_C1
   410: "#AAAAAA", //E_Y
+  420: "#AAAAAA", //E_Y
+  430: "#AAAAAA", //E_Y
+  440: "#AAAAAA", //E_Y
+  450: "#AAAAAA", //E_Y
+  460: "#AAAAAA", //E_Y
   
   315: "#5C4033", //F_A1
+  325: "#5C4033", //F_A1
+  335: "#5C4033", //F_A1
+  345: "#5C4033", //F_A1
+  355: "#5C4033", //F_A1
+  365: "#5C4033", //F_A1
   314: "#964B00", //F_B2
+  324: "#964B00", //F_B2
+  334: "#964B00", //F_B2
+  344: "#964B00", //F_B2
+  354: "#964B00", //F_B2
+  364: "#964B00", //F_B2
   313: "#9999FF", //F_B1
+  323: "#9999FF", //F_B1
+  333: "#9999FF", //F_B1
+  343: "#9999FF", //F_B1
+  353: "#9999FF", //F_B1
+  363: "#9999FF", //F_B1
   312: "#EFBBFF", //F_C2
+  322: "#EFBBFF", //F_C2
+  332: "#EFBBFF", //F_C2
+  342: "#EFBBFF", //F_C2
+  352: "#EFBBFF", //F_C2
+  362: "#EFBBFF", //F_C2
   311: "#FFB6C1", //F_C1
+  321: "#FFB6C1", //F_C1
+  331: "#FFB6C1", //F_C1
+  341: "#FFB6C1", //F_C1
+  351: "#FFB6C1", //F_C1
+  361: "#FFB6C1", //F_C1
   310: "#CCCCCC", //F_Y
+  320: "#CCCCCC", //F_Y
+  330: "#CCCCCC", //F_Y
+  340: "#CCCCCC", //F_Y
+  350: "#CCCCCC", //F_Y
+  360: "#CCCCCC", //F_Y
   
   214: "#AD7842", //G_B2
+  224: "#AD7842", //G_B2
+  234: "#AD7842", //G_B2
+  244: "#AD7842", //G_B2
+  254: "#AD7842", //G_B2
+  264: "#AD7842", //G_B2
   213: "#BBBBFF", //G_B1
+  223: "#BBBBFF", //G_B1
+  233: "#BBBBFF", //G_B1
+  243: "#BBBBFF", //G_B1
+  253: "#BBBBFF", //G_B1
+  263: "#BBBBFF", //G_B1
   212: "#E6CCFF", //G_C2
+  222: "#E6CCFF", //G_C2
+  232: "#E6CCFF", //G_C2
+  242: "#E6CCFF", //G_C2
+  252: "#E6CCFF", //G_C2
+  262: "#E6CCFF", //G_C2
   211: "#FBD9ED", //G_C1
+  221: "#FBD9ED", //G_C1
+  231: "#FBD9ED", //G_C1
+  241: "#FBD9ED", //G_C1
+  251: "#FBD9ED", //G_C1
+  261: "#FBD9ED", //G_C1
   210: "#EEEEEE", //G_Y
+  220: "#EEEEEE", //G_Y
+  230: "#EEEEEE", //G_Y
+  240: "#EEEEEE", //G_Y
+  250: "#EEEEEE", //G_Y
+  260: "#EEEEEE", //G_Y
   
   114: "#C4A484", //Y_B2
+  124: "#C4A484", //Y_B2
+  134: "#C4A484", //Y_B2
+  144: "#C4A484", //Y_B2
+  154: "#C4A484", //Y_B2
+  164: "#C4A484", //Y_B2
   113: "#DDDDFF", //Y_B1
+  123: "#DDDDFF", //Y_B1
+  133: "#DDDDFF", //Y_B1
+  143: "#DDDDFF", //Y_B1
+  153: "#DDDDFF", //Y_B1
+  163: "#DDDDFF", //Y_B1
   110: "#FFFFFF", //Y_Y
+  120: "#FFFFFF", //Y_Y
+  130: "#FFFFFF", //Y_Y
+  140: "#FFFFFF", //Y_Y
+  150: "#FFFFFF", //Y_Y
+  160: "#FFFFFF", //Y_Y
 
   };
 
