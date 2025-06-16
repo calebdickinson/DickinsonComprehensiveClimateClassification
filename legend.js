@@ -41,41 +41,133 @@ const container = document.createElement('div');
 container.className = 'legend';
 document.body.appendChild(container);
 
-// Tables
-const winterZoneTable = {
-  Z: '00',
-  A: '20',
-  B: '40',
-  C: '60',
-  D: '80',
-  E: 'A0',
-  F: 'C0',
-  G: 'E0',
-  Y: 'FF'
-};
-const aridityTable = {
-  H: '00',
-  G: '44',
-  W: '66',
-  M: '88',
-  S: 'AA',
-  D: 'FF',
-  _: '00'
-};
-const summerZoneTable = {
-  X1: '00',
-  Z2: '1C',
-  Z1: '39',
-  A2: '55',
-  A1: '71',
-  B2: '8E',
-  B1: 'AA',
-  C2: 'C6',
-  C1: 'E3',
-  Y:  'FF',
+const codeColorMap = {
+  "AWZ2": "#800080",
+  "ADZ2": "#FF0000",
+  "AGZ1": "#90EE90",
+  "AWZ1": "#800080",
+  "ASZ1": "#FFA500",
+  "ADZ1": "#FF0000",
+  "AHA2": "#006400",
+  "AGA2": "#90EE90",
+  "AWA2": "#800080",
+  "AMA2": "#FFFF00",
+  "ASA2": "#FFA500",
+  "ADA2": "#FF0000",
+  "AHA1": "#006400",
+  "AGA1": "#90EE90",
+  "AWA1": "#800080",
+  "ASA1": "#FFA500",
+  "ADA1": "#FF0000",
+  "BDX1": "#FF0000",
+  "BWZ2": "#800080",
+  "BSZ2": "#FFA500",
+  "BDZ2": "#FF0000",
+  "BWZ1": "#800080",
+  "BSZ1": "#FFA500",
+  "BDZ1": "#FF0000",
+  "BHA2": "#006400",
+  "BGA2": "#90EE90",
+  "BWA2": "#800080",
+  "BMA2": "#FFFF00",
+  "BSA2": "#FFA500",
+  "BDA2": "#FF0000",
+  "BHA1": "#006400",
+  "BGA1": "#90EE90",
+  "BWA1": "#800080",
+  "BMA1": "#FFFF00",
+  "BSA1": "#FFA500",
+  "BDA1": "#FF0000",
+  "BHB2": "#006400",
+  "BGB2": "#90EE90",
+  "BWB2": "#800080",
+  "BMB2": "#FFFF00",
+  "BSB2": "#FFA500",
+  "BDB2": "#FF0000",
+  "B_B1": "#0000FF",
+  "CDZ2": "#FF0000",
+  "CHZ1": "#006400",
+  "CGZ1": "#90EE90",
+  "CSZ1": "#FFA500",
+  "CDZ1": "#FF0000",
+  "CHA2": "#006400",
+  "CGA2": "#90EE90",
+  "CWA2": "#800080",
+  "CMA2": "#FFFF00",
+  "CSA2": "#FFA500",
+  "CDA2": "#FF0000",
+  "CHA1": "#006400",
+  "CGA1": "#90EE90",
+  "CWA1": "#800080",
+  "CMA1": "#FFFF00",
+  "CSA1": "#FFA500",
+  "CDA1": "#FF0000",
+  "CHB2": "#006400",
+  "CGB2": "#90EE90",
+  "CWB2": "#800080",
+  "CMB2": "#FFFF00",
+  "CSB2": "#FFA500",
+  "CDB2": "#FF0000",
+  "C_B1": "#0000FF",
+  "C_C2": "#0000FF",
+  "C_C1": "#0000FF",
+  "DDZ1": "#FF0000",
+  "DHA2": "#006400",
+  "DGA2": "#90EE90",
+  "DWA2": "#800080",
+  "DMA2": "#FFFF00",
+  "DSA2": "#FFA500",
+  "DDA2": "#FF0000",
+  "DHA1": "#006400",
+  "DGA1": "#90EE90",
+  "DWA1": "#800080",
+  "DMA1": "#FFFF00",
+  "DSA1": "#FFA500",
+  "DDA1": "#FF0000",
+  "DHB2": "#006400",
+  "DGB2": "#90EE90",
+  "DWB2": "#800080",
+  "DMB2": "#FFFF00",
+  "DSB2": "#FFA500",
+  "DDB2": "#FF0000",
+  "D_B1": "#0000FF",
+  "D_C2": "#0000FF",
+  "D_C1": "#0000FF",
+  "D_Y":  "#0000FF",
+  "EWA2": "#800080",
+  "ESA2": "#FFA500",
+  "EDA2": "#FF0000",
+  "EHA1": "#006400",
+  "EGA1": "#90EE90",
+  "EWA1": "#800080",
+  "ESA1": "#FFA500",
+  "EDA1": "#FF0000",
+  "EHB2": "#006400",
+  "EGB2": "#90EE90",
+  "EWB2": "#800080",
+  "EMB2": "#FFFF00",
+  "ESB2": "#FFA500",
+  "EDB2": "#FF0000",
+  "E_B1": "#0000FF",
+  "E_C2": "#0000FF",
+  "E_C1": "#0000FF",
+  "E_Y":  "#0000FF",
+  "F_A1": "#0000FF",
+  "F_B2": "#0000FF",
+  "F_B1": "#0000FF",
+  "F_C2": "#0000FF",
+  "F_C1": "#0000FF",
+  "F_Y":  "#0000FF",
+  "G_B2": "#0000FF",
+  "G_B1": "#0000FF",
+  "G_C2": "#0000FF",
+  "G_C1": "#0000FF",
+  "G_Y":  "#0000FF",
+  "Y_B2": "#0000FF",
+  "Y_B1": "#0000FF",
+  "Y_Y":  "#0000FF"
 };
 
-// Codes to show
 const legendData = [
   "    ", "    ", "AWZ2", "    ", "    ", "ADZ2",
   "    ", "AGZ1", "AWZ1", "    ", "ASZ1", "ADZ1",
@@ -122,40 +214,31 @@ const legendData = [
   ];
 
 legendData.forEach(code => {
-  const winter = code.charAt(0);    // e.g. "A"
-  const arid   = code.charAt(1);    // e.g. "W"
-  const summer = code.slice(2);     // e.g. "Z2"
+  if (!code.trim() || !(code in codeColorMap)) {
+    const placeholder = document.createElement('div');
+    placeholder.className = 'legend-item';
+    const box = document.createElement('div');
+    box.className = 'color-box';
+    box.style.visibility = 'hidden';
+    placeholder.appendChild(box);
+    container.appendChild(placeholder);
+    return;
+  }
 
-  const blue  = winterZoneTable[winter]   || '00';
-  const red = aridityTable[arid]        || '00';
-  const green   = summerZoneTable[summer]    || '00';
+  // Look up the manually assigned color
+  const hexColor = codeColorMap[code];
 
-  const hexColor = `#${red}${green}${blue}`;
+  const item = document.createElement('div');
+  item.className = 'legend-item';
 
-  if (red === '00' && green === '00' && blue === '00') {
-  const placeholder = document.createElement('div');
-  placeholder.className = 'legend-item';
   const box = document.createElement('div');
   box.className = 'color-box';
-  box.style.visibility = 'hidden';
-  placeholder.appendChild(box);
-  container.appendChild(placeholder);
-  return;
-}
+  box.style.backgroundColor = hexColor;
 
+  const label = document.createElement('span');
+  label.textContent = code;
 
-const item = document.createElement('div');
-item.className = 'legend-item';
-
-const box = document.createElement('div');
-box.className = 'color-box';
-box.style.backgroundColor = hexColor;
-
-const label = document.createElement('span');
-label.textContent = `${code}`;
-
-item.appendChild(box);
-item.appendChild(label);
-container.appendChild(item);
-
+  item.appendChild(box);
+  item.appendChild(label);
+  container.appendChild(item);
 });
