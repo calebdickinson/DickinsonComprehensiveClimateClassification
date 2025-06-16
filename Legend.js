@@ -81,22 +81,6 @@ const codeColorMap = {
   "EGA1": "#90EE90",
   "EGB2": "#90EE90",
 
-  "AMA2": "#FFFF00",
-
-  "BMA2": "#FFFF00",
-  "BMA1": "#FFFF00",
-  "BMB2": "#FFFF00",
-
-  "CMA2": "#FFFF00",
-  "CMA1": "#FFFF00",
-  "CMB2": "#FFFF00",
-
-  "DMA2": "#FFFF00",
-  "DMA1": "#FFFF00",
-  "DMB2": "#FFFF00",
-
-  "EMB2": "#FFFF00",
-
   "AWZ2": "#800080",
   "AWZ1": "#800080",
   "AWA2": "#800080",
@@ -119,6 +103,22 @@ const codeColorMap = {
   "EWA2": "#800080",
   "EWA1": "#800080",
   "EWB2": "#800080",
+
+  "AMA2": "#FFFF00",
+
+  "BMA2": "#FFFF00",
+  "BMA1": "#FFFF00",
+  "BMB2": "#FFFF00",
+
+  "CMA2": "#FFFF00",
+  "CMA1": "#FFFF00",
+  "CMB2": "#FFFF00",
+
+  "DMA2": "#FFFF00",
+  "DMA1": "#FFFF00",
+  "DMB2": "#FFFF00",
+
+  "EMB2": "#FFFF00",
 
   "ASZ1": "#FFA500",
   "ASA1": "#FFA500",
