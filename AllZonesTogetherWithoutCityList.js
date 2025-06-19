@@ -227,8 +227,6 @@ var aridityLetters = {
 // 4. DISPLAY & UI
 // ————————————————————————
 
-Map.setCenter(0, 20, 2);
-
 // Dropdown filter
 var combinedAlpha = {};
 Object.keys(summerLetters).forEach(function(wKey) {
