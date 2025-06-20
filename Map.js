@@ -69,8 +69,8 @@ var P_ann2000    = monthlyClim2000.select('pr' ).sum().rename('P_ann'),
                      .where(aridBase.neq(1).and(HS2000.lt(0.4)), 3) // M: Mediterranean
                      .rename('climateClass'),
     clim2000_flip= clim2000
-                     .where(ee.Image.pixelLonLat().select('latitude').lt(0).and(clim2000.eq(4)), 3)
-                     .where(ee.Image.pixelLonLat().select('latitude').lt(0).and(clim2000.eq(3)), 4);
+                     .where(ee.Image.pixelLonLat().select('latitude').lt(5).and(clim2000.eq(4)), 3)
+                     .where(ee.Image.pixelLonLat().select('latitude').lt(5).and(clim2000.eq(3)), 4);
 
 function classifySummer(tC) {
   return ee.Image.constant(0)
