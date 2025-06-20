@@ -112,8 +112,8 @@ var codeColorMap = {
   8: "#C71585", // A: Supertropical
   7: "#FF0000", // A: Tropical
   6: "#FFA500", // B: Subtropical
-  5: "#FFFF00", // D: Temperate
-  4: "#008000", // E: Continental
+  5: "#008800", // D: Temperate
+  4: "#004400", // E: Continental
   3: "#0000FF", // F: Subarctic
   2: "#FFC0CB", // G: Arctic
   1: "#000000"  // Y: Superarctic
@@ -138,7 +138,7 @@ Map.addLayer(
     max:     indices.length - 1,
     palette: palette
   },
-  'Climate (land only, discrete)',
+  'Climate',
   true,   // show layer
   0.7     // 70% opacity
 );
