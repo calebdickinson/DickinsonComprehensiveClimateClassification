@@ -255,13 +255,11 @@ Supertropical Semihumid Scorching Hot Summer (AGZ1):
 Ho Chi Minh City, Vietnam	(today)  
 Phnom Penh, Cambodia	(today)  
 Yaoundé, Cameroon	(2100)  
-Bangui, Central African Republic	(2100)  
-Kingston, Jamaica	(2100)  
+Bangui, Central African Republic	(2100)    
 Malé, Maldives	(2100)  
 Panama City, Panama	(2100)  
 Port Moresby, Papua New Guinea	(2100)  
 Brades, Montserrat (UK)	(2100)  
-Trincomalee, Sri Lanka (2100)
 
 Supertropical Monsoon Scorching Hot Summer (AWZ1):  
 <img src="images/AWZ1.jpg"/>
@@ -286,6 +284,8 @@ Libreville, Gabon	(2100)
 
 Supertropical Mediterranean Scorching Hot Summer (AMZ1):  
 Chennai, India	(today)  
+Trincomalee, Sri Lanka (2100)  
+Kingston, Jamaica	(2100)
 
 Supertropical Semiarid Scorching Hot Summer (ASZ1):  
 <img src="images/ASZ1.jpg"/>
@@ -453,6 +453,7 @@ Supertropical Mediterranean Very Hot Summer (AMA2):
 
 Trincomalee, Sri Lanka (today)  
 Castries, Saint Lucia	(today)  
+Honolulu, HI	(2100) 
 
 Supertropical Semiarid Very Hot Summer (ASA2):  
 <img src="images/ASA2.jpg"/>
@@ -469,8 +470,7 @@ Accra, Ghana	(today)
 St. George's, Grenada	(today)  
 Tarawa, Kiribati	(today)  
 Lomé, Togo	(today)  
-Oranjestad, Aruba (NL)	(today)  
-Honolulu, HI	(2100)  
+Oranjestad, Aruba (NL)	(today)   
 Tegucigalpa, Honduras	(2100)  
 Nairobi, Kenya	(2100)  
 Kigali, Rwanda	(2100)  
@@ -894,6 +894,7 @@ Zhengzhou, China	(2100)
 Subtropical Mediterranean Scorching Hot Summer (CMZ1):  
 >**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
 
+Salt Lake City, UT	(2100)  
 Istanbul, Turkey	(2100)  
 Tirana, Albania	(2100)  
 Podgorica, Montenegro	(2100)  
@@ -903,7 +904,6 @@ Subtropical Semiarid Scorching Hot Summer (CSZ1):
 Islamabad, Pakistan	(today)  
 Xi’an, China	(2100)  
 St. Louis, MO–IL	(2100)  
-Salt Lake City, UT	(2100)  
 Oklahoma City, OK	(2100)  
 Des Moines, IA	(2100)  
 Topeka, KS	(2100)  
@@ -991,9 +991,11 @@ Sacramento, CA	(today)
 Athens, Greece	(today)  
 Tashkent, Uzbekistan	(today)  
 Madrid, Spain	(today)  
+Paris, France	(2100)  
 Portland, OR–WA	(2100)  
 Boise, ID	(2100)  
 Salem, OR	(2100)  
+San Marino, San Marino	(2100)  
 Surrey, BC	(2100)  
 Richmond, BC	(2100)  
 Abbotsford, BC	(2100)  
@@ -1001,7 +1003,6 @@ Abbotsford, BC	(2100)
 Subtropical Semiarid Very Hot Summer (CSA2):  
 Dallas–Fort Worth–Arlington, TX	(today)  
 Oklahoma City, OK	(today)    
-Paris, France	(2100)  
 Denver–Aurora, CO	(2100)  
 Helena, MT	(2100)  
 Santa Fe, NM	(2100)  
@@ -1012,7 +1013,6 @@ Prague, Czech Republic	(2100)
 Budapest, Hungary	(2100)  
 Chișinău, Moldova	(2100)  
 Skopje, North Macedonia	(2100)  
-San Marino, San Marino	(2100)  
 Bratislava, Slovakia	(2100)  
 Kyiv, Ukraine	(2100)  
 Rexburg, ID	(2100)  
@@ -1042,28 +1042,19 @@ Podgorica, Montenegro	(today)
 Vaduz, Liechtenstein	(2100)  
 Oslo, Norway	(2100)  
 Bern, Switzerland	(2100)  
-Saint-Pierre, Saint-Pierre & Miquelon (FR)	(2100)  
-Halifax, NS	(2100)  
-Cape Breton Regional Municipality, NS	(2100)  
 Truro, NS	(2100)  
 New Glasgow, NS	(2100)  
 Amherst, NS	(2100)  
 Saint John, NB	(2100)  
-St. John's, NL	(2100)  
-Conception Bay South, NL	(2100)  
-Mount Pearl, NL	(2100)  
-Paradise, NL	(2100)  
 Kalifornsky, AK	(2100)  
 Kenai, AK	(2100)  
 
 Subtropical Semihumid Hot Summer (CGA1):   
 Washington–Arlington, DC–VA–MD	(today)  
 San Marino, San Marino	(today)  
-Belgrade, Serbia	(today)  
-London, United Kingdom	(2100)  
+Belgrade, Serbia	(today)   
 Andorra la Vella, Andorra	(2100)  
 Minsk, Belarus	(2100)  
-Brussels, Belgium	(2100)  
 Copenhagen, Denmark	(2100)  
 Tallinn, Estonia	(2100)  
 Helsinki, Finland	(2100)  
@@ -1087,9 +1078,20 @@ Vatican City (today)
 Monaco	(today)  
 Tirana, Albania	(today)  
 Damascus, Syria	(today)  
+London, United Kingdom	(2100) 
 Carson City, NV	(2100)  
+Brussels, Belgium	(2100)  
+Luxembourg, Luxembourg	(2100)  
+Amsterdam, Netherlands	(2100)  
+Saint-Pierre, Saint-Pierre & Miquelon (FR)	(2100)  
 Vancouver, BC	(2100)  
 Burnaby, BC	(2100)  
+Halifax, NS	(2100)  
+Cape Breton Regional Municipality, NS	(2100)  
+St. John's, NL	(2100)  
+Conception Bay South, NL	(2100)  
+Mount Pearl, NL	(2100)  
+Paradise, NL	(2100)  
 
 Subtropical Semiarid Hot Summer (CSA1):  
 <img src="images/CSA1.jpg"/>
@@ -1112,11 +1114,8 @@ Subtropical Humid Mild Summer (CHB2):
 <img src="images/CHB2.jpg"/>
 
 Bern, Switzerland	(today)  
-Dublin, Ireland	(2100)  
-Sitka, AK	(2100)  
 Sterling, AK	(2100)  
 Edinburgh of the Seven Seas	(2100)  
-Adak, AK	(2100)  
 
 Subtropical Semihumid Mild Summer (CGB2):  
 <img src="images/CGB2.jpeg"/>
@@ -1151,7 +1150,10 @@ Surrey, BC	(today)
 Burnaby, BC	(today)  
 Richmond, BC	(today)  
 Abbotsford, BC	(today)  
+Dublin, Ireland	(2100)  
+Sitka, AK	(2100)  
 Ketchikan, AK	(2100)  
+Adak, AK	(2100)  
 
 Subtropical Semiarid Mild Summer (CSB2):  
 <img src="images/CSB2.jpg"/>
