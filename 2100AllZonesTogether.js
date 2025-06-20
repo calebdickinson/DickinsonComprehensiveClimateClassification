@@ -124,8 +124,8 @@ var P_ann2100    = monthlyClim2100.select('pr' ).sum().rename('P_ann'),
                      .where(aridBase.neq(0).and(HS2100.lt(0.4)),5)
                      .rename('climateClass'),
     clim2100_flip= clim2100
-                     .where(ee.Image.pixelLonLat().select('latitude').lt(0).and(clim2100.eq(4)),5)
-                     .where(ee.Image.pixelLonLat().select('latitude').lt(0).and(clim2100.eq(5)),4);
+                     .where(ee.Image.pixelLonLat().select('latitude').lt(5).and(clim2100.eq(4)),5)
+                     .where(ee.Image.pixelLonLat().select('latitude').lt(5).and(clim2100.eq(5)),4);
 
 // --------------------------------------------------
 // 2. CLASSIFY CLIMATE AND SUMMER ZONES
