@@ -1057,7 +1057,6 @@ Kalifornsky, AK	(2100)
 Kenai, AK	(2100)  
 
 Subtropical Semihumid Hot Summer (CGA1):   
-<img src="images/CGA1.jpg"/>
 Washington–Arlington, DC–VA–MD	(today)  
 San Marino, San Marino	(today)  
 Belgrade, Serbia	(today)  
@@ -1081,6 +1080,8 @@ Kathmandu, Nepal	(today)
 Bloemfontein, South Africa	(today)  
 
 Subtropical Mediterranean Hot Summer (CMA1):  
+<img src="images/CMA1.jpg"/>
+
 Rome, Italy	(today)  
 Vatican City (today)
 Monaco	(today)  
