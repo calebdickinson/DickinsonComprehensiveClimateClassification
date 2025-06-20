@@ -284,11 +284,13 @@ Victoria, Seychelles	(2100)
 Lusaka, Zambia	(2100)  
 Libreville, Gabon	(2100)  
 
+Supertropical Mediterranean Scorching Hot Summer (AMZ1):  
+Chennai, India	(today)  
+
 Supertropical Semiarid Scorching Hot Summer (ASZ1):  
 <img src="images/ASZ1.jpg"/>
 
 Bangkok, Thailand	(today)  
-Chennai, India	(today)  
 Hyderabad, India	(today)  
 Managua, Nicaragua	(today)  
 Juba, South Sudan	(today)  
@@ -449,7 +451,8 @@ Supertropical Mediterranean Very Hot Summer (AMA2):
 <img src="images/AMA2.webp"/>
 <img src="images/AMA2Two.webp"/>
 
-Trincomalee, Sri Lanka (today)
+Trincomalee, Sri Lanka (today)  
+Castries, Saint Lucia	(today)  
 
 Supertropical Semiarid Very Hot Summer (ASA2):  
 <img src="images/ASA2.jpg"/>
@@ -465,7 +468,6 @@ Santo Domingo, Dominican Republic	(today)
 Accra, Ghana	(today)  
 St. George's, Grenada	(today)  
 Tarawa, Kiribati	(today)  
-Castries, Saint Lucia	(today)  
 Lomé, Togo	(today)  
 Oranjestad, Aruba (NL)	(today)  
 Honolulu, HI	(2100)  
@@ -988,6 +990,7 @@ Istanbul, Turkey	(today)
 Sacramento, CA	(today)  
 Athens, Greece	(today)  
 Tashkent, Uzbekistan	(today)  
+Madrid, Spain	(today)  
 Portland, OR–WA	(2100)  
 Boise, ID	(2100)  
 Salem, OR	(2100)  
@@ -997,8 +1000,7 @@ Abbotsford, BC	(2100)
 
 Subtropical Semiarid Very Hot Summer (CSA2):  
 Dallas–Fort Worth–Arlington, TX	(today)  
-Oklahoma City, OK	(today)  
-Madrid, Spain	(today)  
+Oklahoma City, OK	(today)    
 Paris, France	(2100)  
 Denver–Aurora, CO	(2100)  
 Helena, MT	(2100)  
@@ -1036,7 +1038,6 @@ Subtropical Humid Hot Summer (CHA1):
 Dover, DE	(today)  
 Frankfort, KY	(today)  
 Charleston, WV	(today)  
-Tirana, Albania	(today)  
 Podgorica, Montenegro	(today)  
 Vaduz, Liechtenstein	(2100)  
 Oslo, Norway	(2100)  
@@ -1058,8 +1059,6 @@ Kenai, AK	(2100)
 Subtropical Semihumid Hot Summer (CGA1):   
 <img src="images/CGA1.jpg"/>
 Washington–Arlington, DC–VA–MD	(today)  
-Rome, Italy	(today)  
-Monaco, Monaco	(today)  
 San Marino, San Marino	(today)  
 Belgrade, Serbia	(today)  
 London, United Kingdom	(2100)  
@@ -1082,6 +1081,10 @@ Kathmandu, Nepal	(today)
 Bloemfontein, South Africa	(today)  
 
 Subtropical Mediterranean Hot Summer (CMA1):  
+Rome, Italy	(today)  
+Vatican City (today)
+Monaco	(today)  
+Tirana, Albania	(today)  
 Damascus, Syria	(today)  
 Carson City, NV	(2100)  
 Vancouver, BC	(2100)  
@@ -1093,7 +1096,6 @@ Subtropical Semiarid Hot Summer (CSA1):
 
 Barcelona, Spain (today)  
 Sedona, AZ (today)  
-Vatican City, Vatican City	(today) (on the border with CGA1)  
 Berlin, Germany	(2100)  
 Warsaw, Poland	(2100)  
 
@@ -1108,8 +1110,6 @@ Comodoro Rivadavia, Argentina (2100)
 Subtropical Humid Mild Summer (CHB2):  
 <img src="images/CHB2.jpg"/>
 
-Dublin, Ireland	(today)  
-Luxembourg, Luxembourg	(today)  
 Bern, Switzerland	(today)  
 Dublin, Ireland	(2100)  
 Sitka, AK	(2100)  
@@ -1121,12 +1121,10 @@ Subtropical Semihumid Mild Summer (CGB2):
 <img src="images/CGB2.jpeg"/>
 
 Paris, France	(today)  
-London, United Kingdom	(today)  
 Canberra, Australia	(today)  
 Brussels, Belgium	(today)  
 Copenhagen, Denmark	(today)  
 Berlin, Germany	(today)  
-Amsterdam, Netherlands	(today)  
 
 Subtropical Monsoon Mild Summer (CWB2):  
 <img src="images/CWB2.jpeg"/>
@@ -1137,7 +1135,11 @@ Thimphu, Bhutan	(2100)
 Subtropical Mediterranean Mild Summer (CMB2):  
 <img src="images/CMB2.jpeg"/>
 
+London, United Kingdom	(today)  
+Luxembourg	(today)  
+Dublin, Ireland (today)  
 Seattle–Tacoma, WA	(today)  
+Amsterdam, Netherlands	(today)  
 San Francisco–Oakland, CA	(today)  
 Portland, OR–WA	(today)  
 San Jose, CA	(today)  
@@ -1383,9 +1385,6 @@ Amherst, NS	(today)
 Moncton, NB	(today)  
 Saint John, NB	(today)  
 Dieppe, NB	(today)  
-St. John's, NL	(today)  
-Conception Bay South, NL	(today)  
-Mount Pearl, NL	(today)  
 Paradise, NL	(today)  
 Corner Brook, NL	(today)  
 Charlottetown, PE	(today)  
@@ -1415,6 +1414,9 @@ Temperate Mediterranean Mild Summer (DMB2):
 <img src="images/DMB2.jpg"/>  
 
 Dushanbe, Tajikistan	(today)  
+St. John's, NL	(today)  
+Conception Bay South, NL	(today)  
+Mount Pearl, NL	(today)  
 
 Temperate Semiarid Mild Summer (DSB2):  
 <img src="images/DSB2.jpg"/>
