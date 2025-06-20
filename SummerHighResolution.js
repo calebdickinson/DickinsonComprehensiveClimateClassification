@@ -1,3 +1,5 @@
+//SEE LOW RESOLUTION FOR ACCURATE MAP OF ANTARCTICA
+
 // a) WorldClim v1 (~1 km) for warm/cold
 var era5 = ee.ImageCollection('WORLDCLIM/V1/MONTHLY')
   .select('tavg')  // mean monthly temp stored as °C × 10
