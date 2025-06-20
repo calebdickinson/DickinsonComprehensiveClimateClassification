@@ -71,7 +71,7 @@ var P_ann2000    = monthlyClim2000.select('pr' ).sum().rename('P_ann'),
     clim2000_flip= clim2000
                      .where(ee.Image.pixelLonLat().select('latitude').lt(5).and(clim2000.eq(4)), 3)
                      .where(ee.Image.pixelLonLat().select('latitude').lt(5).and(clim2000.eq(3)), 4)
-                     .where(hottestC_global.lt(10).or(coldestC_global.lt(-20)),7); // no aridity
+                     .where(hottestC_global.lt(15).or(coldestC_global.lt(-20)),7); // no aridity
 
 function classifySummer(tC) {
   return ee.Image.constant(0)
@@ -101,15 +101,6 @@ function classifyCold(tC) {
     .rename('coldZone');
 }
 
-var warmComb = classifySummer(hottestC_global),
-    coldComb = classifyCold(coldestC_global);
-
-var combined = coldComb
-    .multiply(100)                
-    .add(clim2000_flip.multiply(10))
-    .add(warmComb)    
-    .rename('combined');
-    
 var landMask = ee.Image('NOAA/NGDC/ETOPO1')
   .select('bedrock')
   .gte(0);  // ≥0 m = land (includes ice & lakes)
