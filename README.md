@@ -910,8 +910,9 @@ Seoul–Incheon, South Korea	(2100)
 Zhengzhou, China	(2100)  
 
 Subtropical Mediterranean Scorching Hot Summer (CMZ1):  
->**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
+<img src="images/CMZ1.jpg"/>
 
+Batman, Turkey (today)  
 Salt Lake City, UT	(2100)  
 Istanbul, Turkey	(2100)  
 Tirana, Albania	(2100)  
