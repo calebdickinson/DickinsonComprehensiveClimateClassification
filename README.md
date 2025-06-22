@@ -703,10 +703,11 @@ Lisbon, Portugal	(2100)
 Ponta Delgada, Azores (PT)	(2100)  
 
 Tropical Semiarid Very Hot Summer (BSA2):  
-<img src="images/BSA2.jpeg"/>
+<img src="images/BSA2.jpg"/>
 
 Houston, TX	(today)  
 San Antonio, TX	(today)  
+Austin, TX	(today)  
 Canberra, Australia	(2100)  
 
 Tropical Arid Desert Very Hot Summer (BDA2):  
@@ -919,6 +920,9 @@ Podgorica, Montenegro	(2100)
 Dushanbe, Tajikistan	(2100)  
 
 Subtropical Semiarid Scorching Hot Summer (CSZ1):   
+<img src="images/CSZ1One.jpg"/>
+<img src="images/CSZ1Two.webp"/>
+
 Islamabad, Pakistan	(today)  
 Xi’an, China	(2100)  
 St. Louis, MO–IL	(2100)  
@@ -948,6 +952,8 @@ Batman, Turkey (2100)
 ### Subtropical Very Hot Summer Climates (C-A2):
 
 Subtropical Humid Very Hot Summer (CHA2):  
+<img src="images/CHA2.jpg"/>
+
 Tokyo–Yokohama, Japan	(today)  
 Osaka–Kobe–Kyoto, Japan	(today)  
 Nagoya, Japan	(today)  
@@ -996,6 +1002,8 @@ Brampton, ON	(2100)
 Hamilton, ON	(2100)  
 
 Subtropical Monsoon Very Hot Summer (CWA2):  
+<img src="images/CWA2.jpg"/>
+
 Chengdu, China	(today)  
 Chongqing, China	(today)  
 Xi’an, China	(today)  
@@ -1020,9 +1028,11 @@ Richmond, BC	(2100)
 Abbotsford, BC	(2100)  
 
 Subtropical Semiarid Very Hot Summer (CSA2):  
+<img src="images/CSA2One.jpg"/>
+<img src="images/CSA2Two.jpg"/>
+
 Dallas–Fort Worth–Arlington, TX	(today)  
 Oklahoma City, OK	(today)    
-Austin, TX	(today)  
 Denver–Aurora, CO	(2100)  
 Helena, MT	(2100)  
 Santa Fe, NM	(2100)  
@@ -1070,6 +1080,8 @@ Kalifornsky, AK	(2100)
 Kenai, AK	(2100)  
 
 Subtropical Semihumid Hot Summer (CGA1):   
+<img src="images/CGA1.jpg"/>
+
 Washington–Arlington, DC–VA–MD	(today)  
 San Marino, San Marino	(today)  
 Belgrade, Serbia	(today)   
@@ -1085,6 +1097,8 @@ Amsterdam, Netherlands	(2100)
 Stockholm, Sweden	(2100)  
 
 Subtropical Monsoon Hot Summer (CWA1):  
+<img src="images/CWA1.jpg"/>
+
 Johannesburg–Pretoria, South Africa	(today)  
 Maseru, Lesotho	(today)  
 Kathmandu, Nepal	(today)  
