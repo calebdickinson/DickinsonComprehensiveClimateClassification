@@ -943,7 +943,8 @@ Yerevan, Armenia	(2100)
 Baku, Azerbaijan	(2100)  
 Madrid, Spain	(2100)  
 Tashkent, Uzbekistan	(2100)  
-Borujerd, Iran (2100)
+Borujerd, Iran (2100)  
+Batman, Turkey (2100)
 
 ### Subtropical Very Hot Summer Climates (C-A2):
 
