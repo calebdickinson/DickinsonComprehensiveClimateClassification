@@ -1385,7 +1385,7 @@ Thunder Bay, ON	(2100)
 
 Temperate Monsoon Hot Summer (DWA1):  
 MOUNTAINS IN SOUTH KOREA THAT FALL WITHIN THIS CLIMATE ZONE
-<img src="images/DWA1.jpg"/>
+<img src="images/DWA1.webp"/>
 
 Pyongyang, North Korea	(today)  
 
