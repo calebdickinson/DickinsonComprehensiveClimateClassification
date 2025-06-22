@@ -903,6 +903,7 @@ Map.onClick(function(coords) {
   { name: 'Grand Forks, ND',                             lon: -97.08834, lat: 47.9212639 },
   { name: 'Svea Research Station, Antarctica',           lon: -11.21667, lat: -74.583333 },
   { name: 'San José de la Joya, Mexico',                 lon: -101.1357, lat: 25.30750 },
+  { name: 'Batman, Turkey',                              lon: 41.1320, lat: 37.8870 },
 ];
 
 // (b) Build mapping of code → human-readable labels
