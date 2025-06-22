@@ -1255,6 +1255,8 @@ Ushmola, Kazakhstan (2100)
 ### Temperate Very Hot Summer Climates (D-A2):
 
 Temperate Humid Very Hot Summer (DHA2):  
+<img src="images/DHA2.jpg"/>
+
 Kansas City, MO–KS	(today)  
 Augusta, ME	(2100)  
 Montpelier, VT	(2100)  
@@ -1282,6 +1284,8 @@ Duluth, MN	(2100)
 Lutsen, MN	(2100)  
 
 Temperate Monsoon Very Hot Summer (DWA2):  
+<img src="images/DWA2.jpg"/>
+
 Seoul–Incheon, South Korea	(today)  
 Beijing, China	(today)  
 Tianjin, China	(today)  
@@ -1293,6 +1297,8 @@ Temperate Mediterranean Very Hot Summer (DMA2):
 Borujerd, Iran (today)
 
 Temperate Semiarid Very Hot Summer (DSA2):  
+<img src="images/DSA2.jpg"/>
+
 Salt Lake City, UT	(today)  
 Pierre, SD	(today)  
 Bismarck, ND	(2100)  
@@ -1320,6 +1326,8 @@ Astana, Kazakhstan	(2100)
 ### Temperate Hot Summer Climates (D-A1):
 
 Temperate Humid Hot Summer (DHA1):  
+<img src="images/DHA1.jpg"/>
+
 New York, United States	(today)  
 Chicago, United States	(today)  
 Philadelphia, PA–NJ–DE–MD	(today)  
@@ -1346,6 +1354,8 @@ Champaign, IL	(today)
 Corner Brook, NL	(2100)  
 
 Temperate Semihumid Hot Summer (DGA1):  
+<img src="images/DGA1.jpg"/>
+
 Moscow, Russia	(today)  
 Detroit, MI	(today)  
 Minneapolis–St. Paul, MN	(today)  
@@ -1374,13 +1384,20 @@ Krasnoyarsk, Russia	(2100)
 Thunder Bay, ON	(2100)  
 
 Temperate Monsoon Hot Summer (DWA1):  
+MOUNTAINS IN SOUTH KOREA THAT FALL WITHIN THIS CLIMATE ZONE
+<img src="images/DWA1.jpg"/>
+
 Pyongyang, North Korea	(today)  
 
 Temperate Mediterranean Hot Summer (DMA1):  
+<img src="images/DMA1.jpg"/>
+
 Boise, ID	(today)  
 Carson City, NV	(today)  
 
 Temperate Semiarid Hot Summer (DSA1):  
+<img src="images/DSA1.webp"/>
+
 Denver–Aurora, CO	(today)  
 Santa Fe, NM	(today)  
 Cheyenne, WY	(today)  
