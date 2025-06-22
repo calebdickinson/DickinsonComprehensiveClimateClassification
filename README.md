@@ -707,7 +707,6 @@ Tropical Semiarid Very Hot Summer (BSA2):
 
 Houston, TX	(today)  
 San Antonio, TX	(today)  
-Austin, TX	(today)  
 Canberra, Australia	(2100)  
 
 Tropical Arid Desert Very Hot Summer (BDA2):  
@@ -1023,6 +1022,7 @@ Abbotsford, BC	(2100)
 Subtropical Semiarid Very Hot Summer (CSA2):  
 Dallas–Fort Worth–Arlington, TX	(today)  
 Oklahoma City, OK	(today)    
+Austin, TX	(today)  
 Denver–Aurora, CO	(2100)  
 Helena, MT	(2100)  
 Santa Fe, NM	(2100)  
