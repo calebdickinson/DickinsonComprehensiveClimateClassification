@@ -1518,6 +1518,8 @@ Gatineau, QC	(today)
 Longueuil, QC	(today)  
 
 Continental Semihumid Hot Summer (EGA1):  
+<img src="images/EGA1.jpg"/>  
+
 Grand Forks, North Dakota (today)  
 Thompson, MB	(2100)  
 Fort Simpson, NT	(2100)  
