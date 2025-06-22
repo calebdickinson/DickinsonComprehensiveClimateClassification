@@ -952,7 +952,7 @@ Batman, Turkey (2100)
 ### Subtropical Very Hot Summer Climates (C-A2):
 
 Subtropical Humid Very Hot Summer (CHA2):  
-<img src="images/CHA2.jpg"/>
+<img src="images/CHA2.jpeg"/>
 
 Tokyo–Yokohama, Japan	(today)  
 Osaka–Kobe–Kyoto, Japan	(today)  
