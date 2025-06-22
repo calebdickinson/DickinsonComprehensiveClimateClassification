@@ -283,6 +283,8 @@ Lusaka, Zambia	(2100)
 Libreville, Gabon	(2100)  
 
 Supertropical Mediterranean Scorching Hot Summer (AMZ1):  
+<img src="images/AMZ1.jpg"/>
+
 Chennai, India	(today)  
 Trincomalee, Sri Lanka (2100)  
 Kingston, Jamaica	(2100)
@@ -598,6 +600,8 @@ Columbia, SC	(2100)
 Fuzhou, China (2100)
 
 Tropical Monsoon Scorching Hot Summer (BWZ1):  
+<img src="images/BWZ1.jpeg"/>
+
 Delhi, India	(today)  
 Kolkata, India	(today)  
 Guangzhou–Foshan, China	(2100)  
@@ -699,6 +703,8 @@ Lisbon, Portugal	(2100)
 Ponta Delgada, Azores (PT)	(2100)  
 
 Tropical Semiarid Very Hot Summer (BSA2):  
+<img src="images/BSA2.jpeg"/>
+
 Houston, TX	(today)  
 San Antonio, TX	(today)  
 Austin, TX	(today)  
@@ -728,12 +734,17 @@ Coronado Islands, Mexico (2100)
 ### Tropical Hot Summer Climates (B-A1):
 
 Tropical Humid Hot Summer (BHA1):  
+<img src="images/BHA1One.jpg"/>
+<img src="images/BHA1Two.jpg"/>
+
 San José, Costa Rica	(today)  
 Kingston, Norfolk Island (AU)	(today)  
 Wellington, New Zealand	(2100)  
 Avarua, Cook Islands (NZ)	(2100)  
 
 Tropical Semihumid Hot Summer (BGA1):  
+<img src="images/BGA1.jpg"/>
+
 Buenos Aires, Argentina	(today)  
 Tegucigalpa, Honduras	(today)  
 Montevideo, Uruguay	(today)  
@@ -767,6 +778,9 @@ Funchal, Madeira (PT)	(2100)
 Lompoc, CA (2100)
 
 Tropical Semiarid Hot Summer (BSA1):  
+<img src="images/BSA1One.jpg"/>
+<img src="images/BSA1Two.jpg"/>
+
 Nairobi, Kenya	(today)  
 Jamestown, St Helena (UK)	(today)  
 Hanga Roa, Easter Island (CL)	(today)  
@@ -787,6 +801,8 @@ Jamestown, St Helena (UK)	(2100)
 ### Tropical Mild Summer Climates (B-B2):
 
 Tropical Humid Mild Summer (BHB2):  
+<img src="images/BHB2.jpg"/>
+
 Guatemala City, Guatemala	(today)  
 Wellington, New Zealand	(today)  
 Bogotá, Colombia (today)  
