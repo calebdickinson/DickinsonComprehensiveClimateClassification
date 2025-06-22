@@ -751,6 +751,8 @@ Montevideo, Uruguay	(today)
 Kingston, Norfolk Island (AU)	(2100)  
 
 Tropical Monsoon Hot Summer (BWA1):  
+<img src="images/BWA1.jpeg"/>
+
 São Paulo, Brazil	(today)  
 Gitega, Burundi	(today)  
 Antananarivo, Madagascar	(today)  
