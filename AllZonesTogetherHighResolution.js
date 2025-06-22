@@ -1,6 +1,8 @@
 // paste this in address bar and paste this code in new script box
 // https://code.earthengine.google.com/
 
+// may not be as accurate as AllZonesTogether.js -- is still under construction
+
 // the higher resolution data does not include Antarctica
 // to see Antarctica's climate, go to AllZonesTogether.js
 
