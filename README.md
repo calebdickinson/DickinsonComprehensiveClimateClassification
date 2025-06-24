@@ -2,7 +2,7 @@
 
 # How to run the code
 
-To run the code, open two Earth Engine Code Editor windows.
+To run the code, open two Earth Engine Code Editor windows (it may be necessary to make an account with Google Earth Engine)
 
 Paste the full code of the the most up to date versions, AllVersionsTogether.js and 2100AllVersionsTogether.js seperately in New Script boxes of each of the windows.
 
