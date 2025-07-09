@@ -165,13 +165,13 @@ var codeColorMap = {
   645: "#CC66FF", //CWA1
   644: "#CC66FF", //CWB2
   
-  546: "#00FF00", //DWA2
-  545: "#00FF00", //DWA1
-  544: "#00FF00", //DWB2
+  546: "#AA44CC", //DWA2
+  545: "#CBC3E3", //DWA1
+  544: "#CBC3E3", //DWB2
   
-  446: "#00FF00", //EWA2
-  445: "#88FF88", //EWA1
-  444: "#06402B", //EWB2
+  446: "#AA44CC", //EWA2
+  445: "#CBC3E3", //EWA1
+  444: "#CBC3E3", //EWB2
   
   836: "#CCCC00", //AMA2
   
