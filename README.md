@@ -100,7 +100,7 @@ It is possible that aridity zone ratios may be further refined in the future; a 
 
 On the other hand, climate zones and zummer zones are unlikely to be changed in the future; due to their root in Celsius and thus their categorizations being simple and intuitive percentages of the difference between the freezing and boiling temperatures of water.
 
-Aridity does not appear to be relevant to the classification of climates that fall withiin subarctic, arctic, superarctic, cold summer, very cold summer, freezing summer, or frigid summer zones.
+Aridity does not appear to be relevant to the classification of climates that fall within subarctic, arctic, superarctic, cold summer, very cold summer, freezing summer, or frigid summer zones.
 
 Climate classifications that fall within these zones are not measured by aridity.
 
