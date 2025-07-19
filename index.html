@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Find Your Ideal Climate</title>
+  <style>
+    body { background: #f4f4f4; font-family: Arial, sans-serif; }
+    #climate-box { max-width: 400px; margin: 50px auto; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    #climate-box h2 { text-align: center; margin-bottom: 20px; }
+    .climate-input { margin-bottom: 15px; }
+    .climate-input label { display: block; margin-bottom: 5px; font-size: 0.9rem; }
+    .climate-input input { width: 100%; padding: 8px; box-sizing: border-box; font-size: 1rem; }
+    /* Unit toggle button styles */
+    button.unit-btn {
+      margin: 5px 2px;
+      padding: 8px 12px;
+      font-size: 0.9rem;
+      border: 2px solid black;
+      border-radius: 999px;
+      background: white;
+      color: black;
+      cursor: pointer;
+    }
+    button.unit-btn:disabled {
+      background: #007BFF;
+      color: white;
+      cursor: default;
+    }
+    /* Submit button */
+    #submitBtn {
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+      background: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #submitBtn:hover { background: #0056b3; }
+    #result {
+      margin-top: 20px;
+      padding: 10px;
+      background: #e9ecef;
+      border-radius: 5px;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="climate-box">
+    <h2>Find Your Ideal Climate</h2>
+    <div>
+      <button id="toCelsiusBtn" class="unit-btn">To °C</button>
+      <button id="toFahrenheitBtn" class="unit-btn" disabled>To °F</button>
+    </div>
+    <div class="climate-input">
+      <label for="coldLow">Coldest Month – Avg Nighttime <strong>Low</strong> (<span class="unit">°F</span>):</label>
+      <input type="number" id="coldLow" placeholder="e.g., 30">
+    </div>
+    <div class="climate-input">
+      <label for="coldHigh">Coldest Month – Avg Daytime <strong>High</strong> (<span class="unit">°F</span>):</label>
+      <input type="number" id="coldHigh" placeholder="e.g., 45">
+    </div>
+    <div class="climate-input">
+      <label for="hotLow">Hottest Month – Avg Nighttime <strong>Low</strong> (<span class="unit">°F</span>):</label>
+      <input type="number" id="hotLow" placeholder="e.g., 70">
+    </div>
+    <div class="climate-input">
+      <label for="hotHigh">Hottest Month – Avg Daytime <strong>High</strong> (<span class="unit">°F</span>):</label>
+      <input type="number" id="hotHigh" placeholder="e.g., 85">
+    </div>
+    <button id="submitBtn">Submit</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    let currentUnit = 'F';
+
+    const unitSpans = document.querySelectorAll('.unit');
+    const inputs = ['hotLow','hotHigh','coldLow','coldHigh'];
+
+    function updateUnitLabels() {
+      unitSpans.forEach(span => span.textContent = currentUnit === 'F' ? '°F' : '°C');
+    }
+
+    function convertValues(toUnit) {
+      inputs.forEach(id => {
+        const el = document.getElementById(id);
+        const val = parseFloat(el.value);
+        if (!isNaN(val)) {
+          let converted;
+          if (toUnit === 'C') converted = (val - 32) * 5/9;
+          else converted = (val * 9/5) + 32;
+          el.value = converted.toFixed(1);
+        }
+      });
+    }
+
+    document.getElementById('toCelsiusBtn').addEventListener('click', () => {
+      if (currentUnit === 'F') {
+        convertValues('C');
+        currentUnit = 'C';
+        updateUnitLabels();
+        document.getElementById('toCelsiusBtn').disabled = true;
+        document.getElementById('toFahrenheitBtn').disabled = false;
+      }
+    });
+
+    document.getElementById('toFahrenheitBtn').addEventListener('click', () => {
+      if (currentUnit === 'C') {
+        convertValues('F');
+        currentUnit = 'F';
+        updateUnitLabels();
+        document.getElementById('toCelsiusBtn').disabled = false;
+        document.getElementById('toFahrenheitBtn').disabled = true;
+      }
+    });
+
+    document.getElementById('submitBtn').addEventListener('click', () => {
+      const hotLow  = parseFloat(document.getElementById('hotLow').value);
+      const hotHigh = parseFloat(document.getElementById('hotHigh').value);
+      const coldLow = parseFloat(document.getElementById('coldLow').value);
+      const coldHigh= parseFloat(document.getElementById('coldHigh').value);
+      const resultDiv = document.getElementById('result');
+
+      if ([hotLow, hotHigh, coldLow, coldHigh].some(v => isNaN(v))) {
+        resultDiv.textContent = 'Please fill in all four fields with valid numbers.';
+        resultDiv.style.color = 'red';
+        return;
+      }
+
+      resultDiv.style.color = '#333';
+      resultDiv.innerHTML = `
+        Your selections:<br>
+        🔥 Hottest Month: Low ${hotLow}${currentUnit}, High ${hotHigh}${currentUnit}<br>
+        ❄️ Coldest Month: Low ${coldLow}${currentUnit}, High ${coldHigh}${currentUnit}
+      `;
+    });
+  </script>
+
+</body>
+</html>
