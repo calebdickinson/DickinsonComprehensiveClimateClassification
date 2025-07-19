@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <title>Find Your Ideal Climate</title>
   <style>
-    body { background: #f4f4f4; font-family: Arial, sans-serif; }
+    body {background:url('https://upload.wikimedia.org/wikipedia/commons/1/19/Departure_%2833950426345%29.jpg') no-repeat center center;
+    background-size: cover;
+    font-family: Arial, sans-serif; }
     #climate-box, #recommendation { max-width: 400px; margin: 50px auto; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
     #climate-box h2, #recommendation h2 { text-align: center; margin-bottom: 20px; }
     .climate-input { margin-bottom: 15px; }
@@ -40,19 +42,19 @@
     </div>
     <div class="climate-input">
       <label for="coldLow">Coldest Month – Avg Nighttime <strong>Low</strong> (<span class="unit">°F</span>):</label>
-      <input type="number" id="coldLow" placeholder="Example: 46">
+      <input type="number" id="coldLow" placeholder="Example: 49">
     </div>
     <div class="climate-input">
       <label for="coldHigh">Coldest Month – Avg Daytime <strong>High</strong> (<span class="unit">°F</span>):</label>
-      <input type="number" id="coldHigh" placeholder="Example: 65">
+      <input type="number" id="coldHigh" placeholder="Example: 59">
     </div>
     <div class="climate-input">
       <label for="hotLow">Hottest Month – Avg Nighttime <strong>Low</strong> (<span class="unit">°F</span>):</label>
-      <input type="number" id="hotLow" placeholder="Example: 68">
+      <input type="number" id="hotLow" placeholder="Example: 58">
     </div>
     <div class="climate-input">
       <label for="hotHigh">Hottest Month – Avg Daytime <strong>High</strong> (<span class="unit">°F</span>):</label>
-      <input type="number" id="hotHigh" placeholder="Example: 86">
+      <input type="number" id="hotHigh" placeholder="Example: 69">
     </div>
     <button id="submitBtn">Submit</button>
     <div id="result"></div>
@@ -68,7 +70,7 @@
     let currentUnit = 'F';
     const unitSpans = document.querySelectorAll('.unit');
     const inputs = ['coldLow','coldHigh','hotLow','hotHigh'];
-    const defaultPlaceholders = { coldLow: 46, coldHigh: 65, hotLow: 68, hotHigh: 86 };
+    const defaultPlaceholders = { coldLow: 49, coldHigh: 59, hotLow: 58, hotHigh: 69 };
 
     function updateUnitLabels() {
       unitSpans.forEach(span => span.textContent = currentUnit === 'F' ? '°F' : '°C');
