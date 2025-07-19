@@ -78,7 +78,7 @@
       inputs.forEach(id => {
         const el = document.getElementById(id);
         const def = defaultPlaceholders[id];
-        const ph = toUnit === 'C' ? ((def - 32) * 5/9).toFixed(1) : def;
+        const ph = toUnit === 'C' ? Math.round((def - 32) * 5/9): def;
         el.placeholder = `Example: ${ph}`;
       });
     }
