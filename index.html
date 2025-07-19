@@ -68,7 +68,7 @@
     let currentUnit = 'F';
     const unitSpans = document.querySelectorAll('.unit');
     const inputs = ['coldLow','coldHigh','hotLow','hotHigh'];
-    const defaultPlaceholders = { coldLow: 30, coldHigh: 45, hotLow: 70, hotHigh: 85 };
+    const defaultPlaceholders = { coldLow: 59, coldHigh: 68, hotLow: 77, hotHigh: 86 };
 
     function updateUnitLabels() {
       unitSpans.forEach(span => span.textContent = currentUnit === 'F' ? '°F' : '°C');
