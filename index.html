@@ -5,47 +5,29 @@
   <title>Find Your Ideal Climate</title>
   <style>
     body { background: #f4f4f4; font-family: Arial, sans-serif; }
-    #climate-box { max-width: 400px; margin: 50px auto; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-    #climate-box h2 { text-align: center; margin-bottom: 20px; }
+    #climate-box, #recommendation { max-width: 400px; margin: 50px auto; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    #climate-box h2, #recommendation h2 { text-align: center; margin-bottom: 20px; }
     .climate-input { margin-bottom: 15px; }
     .climate-input label { display: block; margin-bottom: 5px; font-size: 0.9rem; }
     .climate-input input { width: 100%; padding: 8px; box-sizing: border-box; font-size: 1rem; }
-    /* Unit toggle button styles */
     button.unit-btn {
-      margin: 5px 2px;
-      padding: 8px 12px;
-      font-size: 0.9rem;
-      border: 2px solid black;
-      border-radius: 999px;
-      background: white;
-      color: black;
-      cursor: pointer;
+      margin: 5px 2px; padding: 8px 12px; font-size: 0.9rem;
+      border: 2px solid black; border-radius: 999px;
+      background: white; color: black; cursor: pointer;
     }
     button.unit-btn:disabled {
-      background: #007BFF;
-      color: white;
-      cursor: default;
+      background: #007BFF; color: white; cursor: default;
     }
-    /* Submit button */
     #submitBtn {
-      width: 100%;
-      padding: 10px;
-      font-size: 1rem;
-      background: #007BFF;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
+      width: 100%; padding: 10px; font-size: 1rem;
+      background: #007BFF; color: #fff; border: none;
+      border-radius: 5px; cursor: pointer;
     }
     #submitBtn:hover { background: #0056b3; }
-    #result {
-      margin-top: 20px;
-      padding: 10px;
-      background: #e9ecef;
-      border-radius: 5px;
-      font-weight: bold;
-      text-align: center;
-    }
+    #result { margin-top: 20px; padding: 10px; background: #e9ecef; border-radius: 5px; font-weight: bold; text-align: center; }
+    #recommendation { display: none; text-align: center; }
+    #recommendation img { max-width: 100%; border-radius: 5px; margin-bottom: 15px; }
+    #recommendation p { font-size: 1rem; }
   </style>
 </head>
 <body>
@@ -76,14 +58,29 @@
     <div id="result"></div>
   </div>
 
+  <div id="recommendation">
+    <h2 id="climateType"></h2>
+    <img id="climateImage" src="" alt="Climate illustration">
+    <p>Consider moving to: <span id="cityList"></span></p>
+  </div>
+
   <script>
     let currentUnit = 'F';
-
     const unitSpans = document.querySelectorAll('.unit');
-    const inputs = ['hotLow','hotHigh','coldLow','coldHigh'];
+    const inputs = ['coldLow','coldHigh','hotLow','hotHigh'];
+    const defaultPlaceholders = { coldLow: 30, coldHigh: 45, hotLow: 70, hotHigh: 85 };
 
     function updateUnitLabels() {
       unitSpans.forEach(span => span.textContent = currentUnit === 'F' ? '°F' : '°C');
+    }
+
+    function updatePlaceholders(toUnit) {
+      inputs.forEach(id => {
+        const el = document.getElementById(id);
+        const def = defaultPlaceholders[id];
+        const ph = toUnit === 'C' ? ((def - 32) * 5/9).toFixed(1) : def;
+        el.placeholder = `e.g., ${ph}`;
+      });
     }
 
     function convertValues(toUnit) {
@@ -91,9 +88,9 @@
         const el = document.getElementById(id);
         const val = parseFloat(el.value);
         if (!isNaN(val)) {
-          let converted;
-          if (toUnit === 'C') converted = (val - 32) * 5/9;
-          else converted = (val * 9/5) + 32;
+          const converted = toUnit === 'C'
+            ? (val - 32) * 5/9
+            : (val * 9/5) + 32;
           el.value = converted.toFixed(1);
         }
       });
@@ -101,9 +98,7 @@
 
     document.getElementById('toCelsiusBtn').addEventListener('click', () => {
       if (currentUnit === 'F') {
-        convertValues('C');
-        currentUnit = 'C';
-        updateUnitLabels();
+        convertValues('C'); currentUnit = 'C'; updateUnitLabels(); updatePlaceholders('C');
         document.getElementById('toCelsiusBtn').disabled = true;
         document.getElementById('toFahrenheitBtn').disabled = false;
       }
@@ -111,9 +106,7 @@
 
     document.getElementById('toFahrenheitBtn').addEventListener('click', () => {
       if (currentUnit === 'C') {
-        convertValues('F');
-        currentUnit = 'F';
-        updateUnitLabels();
+        convertValues('F'); currentUnit = 'F'; updateUnitLabels(); updatePlaceholders('F');
         document.getElementById('toCelsiusBtn').disabled = false;
         document.getElementById('toFahrenheitBtn').disabled = true;
       }
@@ -132,13 +125,63 @@
         return;
       }
 
-      resultDiv.style.color = '#333';
-      resultDiv.innerHTML = `
-        Your selections:<br>
-        🔥 Hottest Month: Low ${hotLow}${currentUnit}, High ${hotHigh}${currentUnit}<br>
-        ❄️ Coldest Month: Low ${coldLow}${currentUnit}, High ${coldHigh}${currentUnit}
-      `;
+      // Compute raw averages
+      const summerAvgRaw = (hotLow + hotHigh) / 2;
+      const winterAvgRaw = (coldLow + coldHigh) / 2;
+      // Convert to Celsius for classification
+      const summerAvgC = currentUnit === 'F'
+        ? (summerAvgRaw - 32) * 5/9
+        : summerAvgRaw;
+      const winterAvgC = currentUnit === 'F'
+        ? (winterAvgRaw - 32) * 5/9
+        : winterAvgRaw;
+
+      // Check thresholds
+      if (summerAvgC < 15 || winterAvgC < -20) {
+        // Determine climate variable
+        let climateVar;
+        if (winterAvgC < -40) climateVar = 'Superarctic';
+        else if (winterAvgC < -30) climateVar = 'Arctic';
+        else if (winterAvgC < -20) climateVar = 'Subarctic';
+        else climateVar = 'Temperate';
+
+        // Determine summer variable
+        let summerVar;
+        if (summerAvgC < 0) summerVar = 'Frigid Summer';
+        else if (summerAvgC < 5) summerVar = 'Freezing Summer';
+        else if (summerAvgC < 10) summerVar = 'Very Cold Summer';
+        else if (summerAvgC < 15) summerVar = 'Cold Summer';
+        else summerVar = 'Warm Summer';
+
+        const climateType = `${climateVar} - ${summerVar}`;
+
+        // Recommendations based on winter trigger
+        const recommendations = winterAvgC < -20
+          ? ['']
+          : [''];
+
+        // Show recommendation screen
+        document.getElementById('climate-box').style.display = 'none';
+        document.getElementById('climateType').textContent = climateType;
+        document.getElementById('climateImage').src = ''; // set an appropriate image URL
+        document.getElementById('cityList').textContent = recommendations.join(', ');
+        document.getElementById('recommendation').style.display = 'block';
+      } else {
+        // Otherwise, show results as before
+        resultDiv.style.color = '#333';
+        resultDiv.innerHTML = `
+          Your selections:<br>
+          🔥 Hottest Month: Low ${hotLow}${currentUnit}, High ${hotHigh}${currentUnit}<br>
+          ❄️ Coldest Month: Low ${coldLow}${currentUnit}, High ${coldHigh}${currentUnit}<br><br>
+          🏖️ Summer Avg: ${summerAvgRaw.toFixed(1)}${currentUnit} → ${summerAvgC.toFixed(1)}°C<br>
+          🥶 Winter Avg: ${winterAvgRaw.toFixed(1)}${currentUnit} → ${winterAvgC.toFixed(1)}°C
+        `;
+      }
     });
+
+    // Initialize on load
+    updateUnitLabels();
+    updatePlaceholders(currentUnit);
   </script>
 
 </body>
