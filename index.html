@@ -173,7 +173,7 @@
         else if (winterAvgC < 0) climateVar = 'Temperate';
         else if (winterAvgC < 10) climateVar = 'Tropical';
         else if (winterAvgC < 20) climateVar = 'Supertropical';
-        else climateVar = 'Sorry this climate does not exist';
+        else climateVar = 'Sorry this winter climate does not exist';
 
         // Determine summer variable
         let summerVar;
@@ -183,7 +183,7 @@
         else if (summerAvgC < 35) summerVar = 'Scorching Hot Summer';
         else if (summerAvgC < 40) summerVar = 'Hyperthermal Summer';
         else if (summerAvgC < 45) summerVar = 'Extreme Hyperthermal Summer';
-        else summerVar = 'Sorry this climate does not exist';
+        else summerVar = 'Sorry this summer climate does not exist';
 
         const climateType = `${climateVar} - ${summerVar}`;
 
