@@ -167,15 +167,37 @@
         document.getElementById('cityList').textContent = recommendations.join(', ');
         document.getElementById('recommendation').style.display = 'block';
       } else {
-        // Otherwise, show results as before
-        resultDiv.style.color = '#333';
-        resultDiv.innerHTML = `
-          Your selections:<br>
-          🔥 Hottest Month: Low ${hotLow}${currentUnit}, High ${hotHigh}${currentUnit}<br>
-          ❄️ Coldest Month: Low ${coldLow}${currentUnit}, High ${coldHigh}${currentUnit}<br><br>
-          🏖️ Summer Avg: ${summerAvgRaw.toFixed(1)}${currentUnit} → ${summerAvgC.toFixed(1)}°C<br>
-          🥶 Winter Avg: ${winterAvgRaw.toFixed(1)}${currentUnit} → ${winterAvgC.toFixed(1)}°C
-        `;
+        // Determine climate variable
+        let climateVar;
+        if (winterAvgC < -10) climateVar = 'Continental';
+        else if (winterAvgC < 0) climateVar = 'Temperate';
+        else if (winterAvgC < 10) climateVar = 'Tropical';
+        else if (winterAvgC < 20) climateVar = 'Supertropical';
+        else climateVar = 'Sorry this climate does not exist';
+
+        // Determine summer variable
+        let summerVar;
+        if (summerAvgC < 20) summerVar = 'Mild Summer';
+        else if (summerAvgC < 25) summerVar = 'Hot Summer';
+        else if (summerAvgC < 30) summerVar = 'Very Hot Summer';
+        else if (summerAvgC < 35) summerVar = 'Scorching Hot Summer';
+        else if (summerAvgC < 40) summerVar = 'Hyperthermal Summer';
+        else if (summerAvgC < 45) summerVar = 'Extreme Hyperthermal Summer';
+        else summerVar = 'Sorry this climate does not exist';
+
+        const climateType = `${climateVar} - ${summerVar}`;
+
+        // Recommendations based on winter trigger
+        //const recommendations = winterAvgC < -20
+        //  ? ['']
+        //  : [''];
+
+        // Show recommendation screen
+        document.getElementById('climate-box').style.display = 'none';
+        document.getElementById('climateType').textContent = climateType;
+        //document.getElementById('climateImage').src = ''; // set an appropriate image URL
+        //document.getElementById('cityList').textContent = recommendations.join(', ');
+        document.getElementById('recommendation').style.display = 'block';
       }
     });
 
