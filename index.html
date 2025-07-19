@@ -79,7 +79,7 @@
         const el = document.getElementById(id);
         const def = defaultPlaceholders[id];
         const ph = toUnit === 'C' ? ((def - 32) * 5/9).toFixed(1) : def;
-        el.placeholder = `e.g., ${ph}`;
+        el.placeholder = `Example: ${ph}`;
       });
     }
 
