@@ -40,15 +40,15 @@
     </div>
     <div class="climate-input">
       <label for="coldLow">Coldest Month – Avg Nighttime <strong>Low</strong> (<span class="unit">°F</span>):</label>
-      <input type="number" id="coldLow" placeholder="Example: 59">
+      <input type="number" id="coldLow" placeholder="Example: 46">
     </div>
     <div class="climate-input">
       <label for="coldHigh">Coldest Month – Avg Daytime <strong>High</strong> (<span class="unit">°F</span>):</label>
-      <input type="number" id="coldHigh" placeholder="Example: 68">
+      <input type="number" id="coldHigh" placeholder="Example: 65">
     </div>
     <div class="climate-input">
       <label for="hotLow">Hottest Month – Avg Nighttime <strong>Low</strong> (<span class="unit">°F</span>):</label>
-      <input type="number" id="hotLow" placeholder="Example: 77">
+      <input type="number" id="hotLow" placeholder="Example: 68">
     </div>
     <div class="climate-input">
       <label for="hotHigh">Hottest Month – Avg Daytime <strong>High</strong> (<span class="unit">°F</span>):</label>
@@ -68,7 +68,7 @@
     let currentUnit = 'F';
     const unitSpans = document.querySelectorAll('.unit');
     const inputs = ['coldLow','coldHigh','hotLow','hotHigh'];
-    const defaultPlaceholders = { coldLow: 59, coldHigh: 68, hotLow: 77, hotHigh: 86 };
+    const defaultPlaceholders = { coldLow: 46, coldHigh: 65, hotLow: 68, hotHigh: 86 };
 
     function updateUnitLabels() {
       unitSpans.forEach(span => span.textContent = currentUnit === 'F' ? '°F' : '°C');
