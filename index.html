@@ -115,115 +115,149 @@
     <p>Consider moving to: <span id="cityList"></span></p>
   </div>
 
-  <script>
-    let currentUnit = 'F';
-    const unitSpans = document.querySelectorAll('.unit');
-    const inputs = ['coldLow','coldHigh','hotLow','hotHigh'];
-    const defaultPlaceholders = { coldLow: 49, coldHigh: 59, hotLow: 58, hotHigh: 69 };
+ <script>
+  let currentUnit = 'F';
+  const unitSpans = document.querySelectorAll('.unit');
+  const inputs = ['coldLow','coldHigh','hotLow','hotHigh'];
+  const defaultPlaceholders = { coldLow: 49, coldHigh: 59, hotLow: 58, hotHigh: 69 };
 
-    function updateUnitLabels() {
-      unitSpans.forEach(span => span.textContent = currentUnit === 'F' ? '°F' : '°C');
-    }
-
-    function updatePlaceholders(toUnit) {
-      inputs.forEach(id => {
-        const el = document.getElementById(id);
-        const def = defaultPlaceholders[id];
-        const ph = toUnit === 'C' ? Math.round((def - 32) * 5/9): def;
-        el.placeholder = `Example: ${ph}`;
-      });
-    }
-
-    function convertValues(toUnit) {
-      inputs.forEach(id => {
-        const el = document.getElementById(id);
-        const val = parseFloat(el.value);
-        if (!isNaN(val)) {
-          const converted = toUnit === 'C'
-	  ? (val - 32) * 5/9
-	  : (val * 9/5) + 32;
-	  el.value = Math.round(converted);
-        }
-      });
-    }
-
-    document.getElementById('toCelsiusBtn').addEventListener('click', () => {
-      if (currentUnit === 'F') {
-        convertValues('C'); currentUnit = 'C'; updateUnitLabels(); updatePlaceholders('C');
-        document.getElementById('toCelsiusBtn').disabled = true;
-        document.getElementById('toFahrenheitBtn').disabled = false;
-      }
-    });
-
-    document.getElementById('toFahrenheitBtn').addEventListener('click', () => {
-      if (currentUnit === 'C') {
-        convertValues('F'); currentUnit = 'F'; updateUnitLabels(); updatePlaceholders('F');
-        document.getElementById('toCelsiusBtn').disabled = false;
-        document.getElementById('toFahrenheitBtn').disabled = true;
-      }
-    });
-
-    document.getElementById('submitBtn').addEventListener('click', () => {
-  const hotLow   = parseFloat(document.getElementById('hotLow').value);
-  const hotHigh  = parseFloat(document.getElementById('hotHigh').value);
-  const coldLow  = parseFloat(document.getElementById('coldLow').value);
-  const coldHigh = parseFloat(document.getElementById('coldHigh').value);
-  const resultDiv = document.getElementById('result');
-
-  if ([hotLow, hotHigh, coldLow, coldHigh].some(v => isNaN(v))) {
-    resultDiv.textContent = 'Please fill in all four fields with valid numbers.';
-    resultDiv.style.color = 'red';
-    return;
+  function updateUnitLabels() {
+    unitSpans.forEach(span => span.textContent = currentUnit === 'F' ? '°F' : '°C');
   }
 
-  // Compute raw averages
-  const summerAvgRaw = (hotLow + hotHigh) / 2;
-  const winterAvgRaw = (coldLow + coldHigh) / 2;
-  // Convert to Celsius for classification
-  const summerAvgC = currentUnit === 'F'
-    ? (summerAvgRaw - 32) * 5/9
-    : summerAvgRaw;
-  const winterAvgC = currentUnit === 'F'
-    ? (winterAvgRaw - 32) * 5/9
-    : winterAvgRaw;
+  function updatePlaceholders(toUnit) {
+    inputs.forEach(id => {
+      const el = document.getElementById(id);
+      const def = defaultPlaceholders[id];
+      const ph = toUnit === 'C'
+        ? Math.round((def - 32) * 5/9)
+        : def;
+      el.placeholder = `Example: ${ph}`;
+    });
+  }
+
+  function convertValues(toUnit) {
+    inputs.forEach(id => {
+      const el = document.getElementById(id);
+      const val = parseFloat(el.value);
+      if (!isNaN(val)) {
+        const converted = toUnit === 'C'
+          ? (val - 32) * 5/9
+          : (val * 9/5) + 32;
+        el.value = Math.round(converted);
+      }
+    });
+  }
+
+  document.getElementById('toCelsiusBtn').addEventListener('click', () => {
+    if (currentUnit === 'F') {
+      convertValues('C');
+      currentUnit = 'C';
+      updateUnitLabels();
+      updatePlaceholders('C');
+      document.getElementById('toCelsiusBtn').disabled = true;
+      document.getElementById('toFahrenheitBtn').disabled = false;
+    }
+  });
+
+  document.getElementById('toFahrenheitBtn').addEventListener('click', () => {
+    if (currentUnit === 'C') {
+      convertValues('F');
+      currentUnit = 'F';
+      updateUnitLabels();
+      updatePlaceholders('F');
+      document.getElementById('toCelsiusBtn').disabled = false;
+      document.getElementById('toFahrenheitBtn').disabled = true;
+    }
+  });
+
+  document.getElementById('submitBtn').addEventListener('click', () => {
+    const hotLow   = parseFloat(document.getElementById('hotLow').value);
+    const hotHigh  = parseFloat(document.getElementById('hotHigh').value);
+    const coldLow  = parseFloat(document.getElementById('coldLow').value);
+    const coldHigh = parseFloat(document.getElementById('coldHigh').value);
+    const resultDiv = document.getElementById('result');
+
+    if ([hotLow, hotHigh, coldLow, coldHigh].some(v => isNaN(v))) {
+      resultDiv.textContent = 'Please fill in all four fields with valid numbers.';
+      resultDiv.style.color = 'red';
+      return;
+    }
+    
+    // range & sanity checks
+    const minTemp = currentUnit === 'F' ? -112 : -80;
+    const maxTemp = currentUnit === 'F' ?  176 :  80;
+    const maxDiff = currentUnit === 'F' ?   36 :  20;
+
+    // 1) out-of-bounds
+    if ([hotLow, hotHigh, coldLow, coldHigh].some(v => v < minTemp || v > maxTemp)) {
+      resultDiv.textContent = 
+        `Error: Temps must be between ${minTemp} and ${maxTemp} ${currentUnit}.`;
+      resultDiv.style.color = 'red';
+      return;
+    }
+
+    // 2) day/night swing too large
+    if (Math.abs(hotHigh - hotLow) > maxDiff
+     || Math.abs(coldHigh - coldLow) > maxDiff) {
+      resultDiv.textContent =
+        `Error: Day–night difference cannot exceed ${maxDiff} ${currentUnit}.`;
+      resultDiv.style.color = 'red';
+      return;
+    }
+
+    // 3) hottest-month avg colder than coldest-month avg
+    const summerAvgRaw = (hotLow + hotHigh) / 2;
+    const winterAvgRaw = (coldLow + coldHigh) / 2;
+    if (summerAvgRaw < winterAvgRaw) {
+      resultDiv.textContent =
+        'Error: Hottest-month average cannot be colder than coldest-month average.';
+      resultDiv.style.color = 'red';
+      return;
+    }
+
+    // Convert to Celsius for classification
+    const summerAvgC = currentUnit === 'F'
+      ? (summerAvgRaw - 32) * 5/9
+      : summerAvgRaw;
+    const winterAvgC = currentUnit === 'F'
+      ? (winterAvgRaw - 32) * 5/9
+      : winterAvgRaw;
 
     let climateVar, summerVar;
 
-      if      (winterAvgC < -40) climateVar = 'Superarctic';
-      else if (winterAvgC < -30) climateVar = 'Arctic';
-      else if (winterAvgC < -20) climateVar = 'Subarctic';
-      else if (winterAvgC < -10) climateVar = 'Continental';
-      else if (winterAvgC < 0)   climateVar = 'Temperate';
-      else if (winterAvgC < 10)  climateVar = 'Subtropical';
-      else if (winterAvgC < 20)  climateVar = 'Tropical';
-      else if (winterAvgC < 30)  climateVar = 'Supertropical';
-      else if (winterAvgC < 40)  climateVar = 'Ultratropical';
-      else if (winterAvgC < 50)  climateVar = 'Uninhabitable';
-      else climateVar = 'Hypercaneal';
-      
-      
-      if      (summerAvgC < 0)  summerVar = 'Frigid Summer';
-      else if (summerAvgC < 5)  summerVar = 'Freezing Summer';
-      else if (summerAvgC < 10) summerVar = 'Very Cold Summer';
-      else if (summerAvgC < 15) summerVar = 'Cold Summer';
-      else if (summerAvgC < 20) summerVar = 'Mild Summer';
-      else if (summerAvgC < 25) summerVar = 'Hot Summer';
-      else if (summerAvgC < 30) summerVar = 'Very Hot Summer';
-      else if (summerAvgC < 35) summerVar = 'Scorching Hot Summer';
-      else if (summerAvgC < 40) summerVar = 'Hyperthermal Summer';
-      else if (summerAvgC < 50) summerVar = 'Extreme Hyperthermal Summer';
-      else summerVar = 'Hypercaneal Summer';
-    }
+    if      (winterAvgC < -40) climateVar = 'Superarctic';
+    else if (winterAvgC < -30) climateVar = 'Arctic';
+    else if (winterAvgC < -20) climateVar = 'Subarctic';
+    else if (winterAvgC < -10) climateVar = 'Continental';
+    else if (winterAvgC <   0) climateVar = 'Temperate';
+    else if (winterAvgC <  10) climateVar = 'Subtropical';
+    else if (winterAvgC <  20) climateVar = 'Tropical';
+    else if (winterAvgC <  30) climateVar = 'Supertropical';
+    else if (winterAvgC <  40) climateVar = 'Ultratropical';
+    else if (winterAvgC <  50) climateVar = 'Uninhabitable';
+    else                       climateVar = 'Hypercaneal';
+
+    if      (summerAvgC <  0) summerVar = 'Frigid Summer';
+    else if (summerAvgC <  5) summerVar = 'Freezing Summer';
+    else if (summerAvgC < 10) summerVar = 'Very Cold Summer';
+    else if (summerAvgC < 15) summerVar = 'Cold Summer';
+    else if (summerAvgC < 20) summerVar = 'Mild Summer';
+    else if (summerAvgC < 25) summerVar = 'Hot Summer';
+    else if (summerAvgC < 30) summerVar = 'Very Hot Summer';
+    else if (summerAvgC < 35) summerVar = 'Scorching Hot Summer';
+    else if (summerAvgC < 40) summerVar = 'Hyperthermal Summer';
+    else if (summerAvgC < 50) summerVar = 'Extreme Hyperthermal Summer';
+    else                      summerVar = 'Hypercaneal Summer';
 
     // build a URL like "continental-mild-summer.html"
-    const slug = s => s.toLowerCase().replace(/\s+/g,'-');
+    const slug    = s => s.toLowerCase().replace(/\s+/g,'-');
     const pageUrl = `${slug(climateVar)}-${slug(summerVar)}.html`;
 
     // redirect:
     window.location.href = pageUrl;
   });
-
-  </script>
+</script>
 
 </body>
 </html>
