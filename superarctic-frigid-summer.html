@@ -6,7 +6,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 
   <style>
-    html { font-size: 150%; }
+  	html { font-size: 150%; }
     /* light gray page–wide background */
     body {
       background-color: #bbbbbb;
@@ -17,7 +17,9 @@
     /* HEADER / FAVICON BANNER */
     #header {
       background: #111;
-      padding: .5rem 0;
+      padding: 0;                  /* now truly zero */
+      border-bottom: 1px solid transparent;
+      /* —or— overflow: hidden; */
       text-align: center;
     }
     #header h1 {
