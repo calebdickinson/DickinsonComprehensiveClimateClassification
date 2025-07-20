@@ -164,97 +164,65 @@
     });
 
     document.getElementById('submitBtn').addEventListener('click', () => {
-      const hotLow  = parseFloat(document.getElementById('hotLow').value);
-      const hotHigh = parseFloat(document.getElementById('hotHigh').value);
-      const coldLow = parseFloat(document.getElementById('coldLow').value);
-      const coldHigh= parseFloat(document.getElementById('coldHigh').value);
-      const resultDiv = document.getElementById('result');
+  const hotLow   = parseFloat(document.getElementById('hotLow').value);
+  const hotHigh  = parseFloat(document.getElementById('hotHigh').value);
+  const coldLow  = parseFloat(document.getElementById('coldLow').value);
+  const coldHigh = parseFloat(document.getElementById('coldHigh').value);
+  const resultDiv = document.getElementById('result');
 
-      if ([hotLow, hotHigh, coldLow, coldHigh].some(v => isNaN(v))) {
-        resultDiv.textContent = 'Please fill in all four fields with valid numbers.';
-        resultDiv.style.color = 'red';
-        return;
-      }
+  if ([hotLow, hotHigh, coldLow, coldHigh].some(v => isNaN(v))) {
+    resultDiv.textContent = 'Please fill in all four fields with valid numbers.';
+    resultDiv.style.color = 'red';
+    return;
+  }
 
-      // Compute raw averages
-      const summerAvgRaw = (hotLow + hotHigh) / 2;
-      const winterAvgRaw = (coldLow + coldHigh) / 2;
-      // Convert to Celsius for classification
-      const summerAvgC = currentUnit === 'F'
-        ? (summerAvgRaw - 32) * 5/9
-        : summerAvgRaw;
-      const winterAvgC = currentUnit === 'F'
-        ? (winterAvgRaw - 32) * 5/9
-        : winterAvgRaw;
+  // Compute raw averages
+  const summerAvgRaw = (hotLow + hotHigh) / 2;
+  const winterAvgRaw = (coldLow + coldHigh) / 2;
+  // Convert to Celsius for classification
+  const summerAvgC = currentUnit === 'F'
+    ? (summerAvgRaw - 32) * 5/9
+    : summerAvgRaw;
+  const winterAvgC = currentUnit === 'F'
+    ? (winterAvgRaw - 32) * 5/9
+    : winterAvgRaw;
 
-      // Check thresholds
-      if (summerAvgC < 15 || winterAvgC < -20) {
-        // Determine climate variable
-        let climateVar;
-        if (winterAvgC < -40) climateVar = 'Superarctic';
-        else if (winterAvgC < -30) climateVar = 'Arctic';
-        else if (winterAvgC < -20) climateVar = 'Subarctic';
-        else climateVar = 'Temperate';
+    let climateVar, summerVar;
 
-        // Determine summer variable
-        let summerVar;
-        if (summerAvgC < 0) summerVar = 'Frigid Summer';
-        else if (summerAvgC < 5) summerVar = 'Freezing Summer';
-        else if (summerAvgC < 10) summerVar = 'Very Cold Summer';
-        else if (summerAvgC < 15) summerVar = 'Cold Summer';
-        else summerVar = 'Warm Summer';
+      if      (winterAvgC < -40) climateVar = 'Superarctic';
+      else if (winterAvgC < -30) climateVar = 'Arctic';
+      else if (winterAvgC < -20) climateVar = 'Subarctic';
+      else if (winterAvgC < -10) climateVar = 'Continental';
+      else if (winterAvgC < 0)   climateVar = 'Temperate';
+      else if (winterAvgC < 10)  climateVar = 'Subtropical';
+      else if (winterAvgC < 20)  climateVar = 'Tropical';
+      else if (winterAvgC < 30)  climateVar = 'Supertropical';
+      else if (winterAvgC < 40)  climateVar = 'Ultratropical';
+      else if (winterAvgC < 50)  climateVar = 'Uninhabitable';
+      else climateVar = 'Hypercaneal';
+      
+      
+      if      (summerAvgC < 0)  summerVar = 'Frigid Summer';
+      else if (summerAvgC < 5)  summerVar = 'Freezing Summer';
+      else if (summerAvgC < 10) summerVar = 'Very Cold Summer';
+      else if (summerAvgC < 15) summerVar = 'Cold Summer';
+      else if (summerAvgC < 20) summerVar = 'Mild Summer';
+      else if (summerAvgC < 25) summerVar = 'Hot Summer';
+      else if (summerAvgC < 30) summerVar = 'Very Hot Summer';
+      else if (summerAvgC < 35) summerVar = 'Scorching Hot Summer';
+      else if (summerAvgC < 40) summerVar = 'Hyperthermal Summer';
+      else if (summerAvgC < 50) summerVar = 'Extreme Hyperthermal Summer';
+      else summerVar = 'Hypercaneal Summer';
+    }
 
-        const climateType = `${climateVar} - ${summerVar}`;
+    // build a URL like "continental-mild-summer.html"
+    const slug = s => s.toLowerCase().replace(/\s+/g,'-');
+    const pageUrl = `${slug(climateVar)}-${slug(summerVar)}.html`;
 
-        // Recommendations based on winter trigger
-        const recommendations = winterAvgC < -20
-          ? ['']
-          : [''];
+    // redirect:
+    window.location.href = pageUrl;
+  });
 
-        // Show recommendation screen
-        document.getElementById('climate-box').style.display = 'none';
-        document.getElementById('climateType').textContent = climateType;
-        document.getElementById('climateImage').src = ''; // set an appropriate image URL
-        document.getElementById('cityList').textContent = recommendations.join(', ');
-        document.getElementById('recommendation').style.display = 'block';
-      } else {
-        // Determine climate variable
-        let climateVar;
-        if (winterAvgC < -10) climateVar = 'Continental';
-        else if (winterAvgC < 0) climateVar = 'Temperate';
-        else if (winterAvgC < 10) climateVar = 'Tropical';
-        else if (winterAvgC < 20) climateVar = 'Supertropical';
-        else climateVar = 'Sorry this winter climate does not exist';
-
-        // Determine summer variable
-        let summerVar;
-        if (summerAvgC < 20) summerVar = 'Mild Summer';
-        else if (summerAvgC < 25) summerVar = 'Hot Summer';
-        else if (summerAvgC < 30) summerVar = 'Very Hot Summer';
-        else if (summerAvgC < 35) summerVar = 'Scorching Hot Summer';
-        else if (summerAvgC < 40) summerVar = 'Hyperthermal Summer';
-        else if (summerAvgC < 45) summerVar = 'Extreme Hyperthermal Summer';
-        else summerVar = 'Sorry this summer climate does not exist';
-
-        const climateType = `${climateVar} - ${summerVar}`;
-
-        // Recommendations based on winter trigger
-        //const recommendations = winterAvgC < -20
-        //  ? ['']
-        //  : [''];
-
-        // Show recommendation screen
-        document.getElementById('climate-box').style.display = 'none';
-        document.getElementById('climateType').textContent = climateType;
-        //document.getElementById('climateImage').src = ''; // set an appropriate image URL
-        //document.getElementById('cityList').textContent = recommendations.join(', ');
-        document.getElementById('recommendation').style.display = 'block';
-      }
-    });
-
-    // Initialize on load
-    updateUnitLabels();
-    updatePlaceholders(currentUnit);
   </script>
 
 </body>
