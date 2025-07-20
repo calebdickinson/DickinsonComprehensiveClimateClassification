@@ -140,9 +140,9 @@
         const val = parseFloat(el.value);
         if (!isNaN(val)) {
           const converted = toUnit === 'C'
-            ? (val - 32) * 5/9
-            : (val * 9/5) + 32;
-          el.value = converted.toFixed(0);
+	  ? (val - 32) * 5/9
+	  : (val * 9/5) + 32;
+	  el.value = Math.round(converted);
         }
       });
     }
