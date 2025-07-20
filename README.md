@@ -52,7 +52,9 @@ Each climate is measured with 3 letters.
 
 The first letter measures climate zones by measuring the average temperature of the coldest month in Celsius.
 
-X = Uninhabitable. 40+ (hypothetical)
+H = Hypercaneal. 50 and above (hypothetical)
+
+X = Uninhabitable. 40 - 50 (hypothetical)
 
 Z = Ultratropical. 30 - 40 (hypothetical)
 
@@ -106,7 +108,9 @@ Climate classifications that fall within these zones are not measured by aridity
 
 The third letter measures the severity of the summers by measuring the average temperature of the warmest month in Celsius.
 
-X1, X2, X3,... et cetera = Extreme Hyperthermal Summer. 40+ (X3 and above are hypothetical climates)
+H = Hypercaneal Summer. 50 and above (hypothetical)
+
+X = Hyperthermal Summer. 40 - 50
 
 Z2 = Hyperthermal Summer. 35 - 40
 
@@ -132,9 +136,9 @@ Programmers and others are encouraged to find uses for this system and to make t
 
 # Ultratropical Climates (Z):
 
-### Ultratropical Extreme Hyperthermal Summer climates (Z-X1):
+### Ultratropical Extreme Hyperthermal Summer climates (Z-X):
 
-Ultratropical Arid Desert Extreme Hyperthermal Summer (ZDX1):  
+Ultratropical Arid Desert Extreme Hyperthermal Summer (ZDX):  
 >**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
 
 Niamey, Niger	(2100)  
@@ -197,14 +201,14 @@ Willemstad, Curaçao (NL)	(2100)
 
 # Supertropical Climates (A):
 
-### Supertropical Extreme Hyperthermal Summer climates (A-X1):
+### Supertropical Extreme Hyperthermal Summer climates (A-X):
 
-Supertropical Monsoon Extreme Hyperthermal Summer (AWX1):
+Supertropical Monsoon Extreme Hyperthermal Summer (AWX):
 >**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
 
 Chandrapur, India (2100)
 
-Supertropical Arid Desert Extreme Hyperthermal Summer (ADX1):  
+Supertropical Arid Desert Extreme Hyperthermal Summer (ADX):  
 >**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
 
 Manama, Bahrain	(2100)  
@@ -534,9 +538,9 @@ Salango Island, Ecuador (today)
 
 # Tropical Climates (B):  
 
-### Tropical Extreme Hyperthermal Summer climates (B-X1):
+### Tropical Extreme Hyperthermal Summer climates (B-X):
 
-Tropical Arid Desert Extreme Hyperthermal Summer (BDX1):  
+Tropical Arid Desert Extreme Hyperthermal Summer (BDX):  
 <img src="images/BDX1.jpg"/>
 
 Sharmokhiya, Iraq (today)  
