@@ -216,6 +216,14 @@
       return;
     }
 
+    // 4) high must be ≥ low for each month
+    if (hotHigh < hotLow || coldHigh < coldLow) {
+      resultDiv.textContent =
+        'Error: For each month, the average daytime high must be equal to or higher than the average nighttime low.';
+      resultDiv.style.color = 'red';
+      return;
+    }
+
     // Convert to Celsius for classification
     const summerAvgC = currentUnit === 'F'
       ? (summerAvgRaw - 32) * 5/9
