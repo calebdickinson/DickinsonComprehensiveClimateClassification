@@ -1112,7 +1112,7 @@ Subtropical Mediterranean Hot Summer (CMA1):
 <img src="images/CMA1.jpg"/>
 
 Rome, Italy	(today)  
-Vatican City (today)
+Vatican City (today)  
 Monaco	(today)  
 Tirana, Albania	(today)  
 Damascus, Syria	(today)  
