@@ -94,11 +94,6 @@ var monthlyClim2100 = ee.ImageCollection(
 
 var P_ann2100    = monthlyClim2100.select('pr' ).sum().rename('P_ann'),
     PET_ann2100  = monthlyClim2100.select('pet').sum().rename('PET_ann'),
-    histHottest  = monthlyClim2100.qualityMosaic('tmeanC').select('tmeanC').rename('histHottest'),
-    histColdest  = monthlyClim2100
-                     .map(function(img){return img.select('tmeanC').multiply(-1);})
-                     .qualityMosaic('tmeanC')
-                     .select('tmeanC').multiply(-1).rename('histColdest'),
     AI2100       = P_ann2100.divide(PET_ann2100).rename('AI'),
     aridBase     = ee.Image(6)
                      .where(AI2100.lt(0.0036),5)
@@ -120,7 +115,7 @@ var P_ann2100    = monthlyClim2100.select('pr' ).sum().rename('P_ann'),
 
 function classifySummer(tC) {
   return ee.Image.constant(0)
-    .where(tC.gte(40).and(tC.lt(45)),  9) // X1: Extreme Hyperthermal Summer
+    .where(tC.gte(40).and(tC.lt(50)),  9) // X: Extreme Hyperthermal Summer
     .where(tC.gte(35).and(tC.lt(40)),  8) // Z2: Hyperthermal Summer
     .where(tC.gte(30).and(tC.lt(35)),  7) // Z1: Scorching Hot Summer
     .where(tC.gte(25).and(tC.lt(30)),  6) // A2: Very Hot Summer
@@ -134,6 +129,7 @@ function classifySummer(tC) {
 
 function classifyCold(tC) {
   return ee.Image.constant(0)
+    .where(tC.gte(30).and(tC.lt(40)),   9) // Z: Ultratropical
     .where(tC.gte(20).and(tC.lt(30)),   8) // A: Supertropical
     .where(tC.gte(10).and(tC.lt(20)),   7) // B: Tropical
     .where(tC.gte(0).and(tC.lt(10)),    6) // C: Subtropical
@@ -150,24 +146,26 @@ var summerClass = classifySummer(hottestC_future);
 // classify lowest‐month temps
 var coldClass   = classifyCold(coldestC_future);
 
-// combine (and note: use clim2100_flip, not the undefined clim2000_flip)
-var combined = summerClass
+// combine
+var combined = coldClass
   .multiply(100)                
   .add(clim2100_flip.multiply(10))
-  .add(coldClass)    
+  .add(summerClass)    
   .rename('combined');
 var codeColorMap = {
   
+  867: "#339966", //AHZ1
   866: "#339966", //AHA2
   865: "#339966", //AHA1
 
+  767: "#339966", //BHZ1
   766: "#339966", //BHA2
   765: "#339966", //BHA1
   764: "#00FFCC", //BHB2
   
-  667: "#009900", //CHZ1
-  666: "#33CC33", //CHA2
-  665: "#33CC33", //CHA1
+  667: "#00AA00", //CHZ1
+  666: "#00AA00", //CHA2
+  665: "#00AA00", //CHA1
   664: "#00FFFF", //CHB2
   
   566: "#00FF00", //DHA2
@@ -177,31 +175,37 @@ var codeColorMap = {
   465: "#00FF00", //EHA1
   464: "#06402B", //EHB2
   
-  857: "#339966", //AGZ1
+  857: "#00CC66", //AGZ1
   856: "#00CC66", //AGA2
   855: "#00CC66", //AGA1
   
+  757: "#00CC66", //BGZ1
   756: "#00CC66", //BGA2
   755: "#00CC66", //BGA1
   754: "#00FFCC", //BGB2
   
-  657: "#009900", //CGZ1
+  658: "#33CC33", //CGZ2
+  657: "#33CC33", //CGZ1
   656: "#33CC33", //CGA2
   655: "#33CC33", //CGA1
   654: "#00FFFF", //CGB2
   
+  557: "#88FF88", //DGZ1
   556: "#88FF88", //DGA2
   555: "#88FF88", //DGA1
   554: "#88FF88", //DGB2
   
+  456: "#88FF88", //EGA2
   455: "#88FF88", //EGA1
   454: "#06402B", //EGB2
   
+  849: "#000000", //AWX
   848: "#FF99CC", //AWZ2
   847: "#FF99CC", //AWZ1
   846: "#FF99CC", //AWA2
   845: "#FF99FF", //AWA1
   
+  749: "#000000", //AWX
   748: "#FF99CC", //BWZ2
   747: "#FF99CC", //BWZ1
   746: "#FF99CC", //BWA2
@@ -260,12 +264,13 @@ var codeColorMap = {
   425: "#FFCC66", //ESA1
   424: "#FFCC66", //ESB2
   
+  819: "#000000", //ADX
   818: "#FF0000", //ADZ2
   817: "#FF0000", //ADZ1
   816: "#FF0000", //ADA2
   815: "#FF4444", //ADA1
   
-  719: "#000000", //BDX1
+  719: "#000000", //BDX
   718: "#FF0000", //BDZ2
   717: "#FF0000", //BDZ1
   716: "#FF0000", //BDA2
@@ -278,14 +283,14 @@ var codeColorMap = {
   615: "#FF4444", //CDA1
   614: "#FF4444", //CDB2
   
-  517: "#990000", //DDZ1
-  516: "#990000", //DDA2
-  515: "#888888", //DDA1
-  514: "#888888", //DDB2
+  517: "#CC0000", //DDZ1
+  516: "#CC0000", //DDA2
+  515: "#990000", //DDA1
+  514: "#990000", //DDB2
   
-  416: "#990000", //EDA2
-  415: "#888888", //EDA1
-  414: "#888888", //EDB2
+  416: "#CC0000", //EDA2
+  415: "#990000", //EDA1
+  414: "#990000", //EDB2
   
   713: "#00FFCC", //B_B1
   723: "#00FFCC", //B_B1
@@ -449,8 +454,7 @@ var codeColorMap = {
   140: "#FFC0CB", //Y_Y
   150: "#FFC0CB", //Y_Y
   160: "#FFC0CB", //Y_Y
-
-  };
+};
 
 // 4) Turn map into parallel arrays
 var keys    = Object.keys(codeColorMap);
@@ -460,14 +464,12 @@ var indices = codes.map(function(_, i){ return i; });
 
 // 5) Remap → mask → display (one layer only)
 var discreteLand = combined
-  .remap(codes, indices, -1)  // any code not in `codes` → -1 (transparent)
+  .remap(codes, indices)
   .rename('classIndex');
 
 Map.addLayer(
   discreteLand,
   {
-    min:     0,
-    max:     indices.length - 1,
     palette: palette
   },
   'Climate',
