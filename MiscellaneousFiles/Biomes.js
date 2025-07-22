@@ -118,9 +118,9 @@ var codeColorMap = {
   765: "#339966", //BHA1
   764: "#00FFCC", //BHB2
   
-  667: "#009900", //CHZ1
-  666: "#33CC33", //CHA2
-  665: "#33CC33", //CHA1
+  667: "#00AA00", //CHZ1
+  666: "#00AA00", //CHA2
+  665: "#00AA00", //CHA1
   664: "#00FFFF", //CHB2
   
   566: "#00FF00", //DHA2
@@ -130,7 +130,7 @@ var codeColorMap = {
   465: "#00FF00", //EHA1
   464: "#06402B", //EHB2
   
-  857: "#339966", //AGZ1
+  857: "#00CC66", //AGZ1
   856: "#00CC66", //AGA2
   855: "#00CC66", //AGA1
   
@@ -138,7 +138,7 @@ var codeColorMap = {
   755: "#00CC66", //BGA1
   754: "#00FFCC", //BGB2
   
-  657: "#009900", //CGZ1
+  657: "#33CC33", //CGZ1
   656: "#33CC33", //CGA2
   655: "#33CC33", //CGA1
   654: "#00FFFF", //CGB2
@@ -231,14 +231,14 @@ var codeColorMap = {
   615: "#FF4444", //CDA1
   614: "#FF4444", //CDB2
   
-  517: "#990000", //DDZ1
-  516: "#990000", //DDA2
-  515: "#888888", //DDA1
-  514: "#888888", //DDB2
+  517: "#CC0000", //DDZ1
+  516: "#CC0000", //DDA2
+  515: "#990000", //DDA1
+  514: "#990000", //DDB2
   
-  416: "#990000", //EDA2
-  415: "#888888", //EDA1
-  414: "#888888", //EDB2
+  416: "#CC0000", //EDA2
+  415: "#990000", //EDA1
+  414: "#990000", //EDB2
   
   713: "#00FFCC", //B_B1
   723: "#00FFCC", //B_B1
@@ -413,14 +413,12 @@ var indices = codes.map(function(_, i){ return i; });
 
 // 5) Remap → mask → display (one layer only)
 var discreteLand = combined
-  .remap(codes, indices, -1)  // any code not in `codes` → -1 (transparent)
+  .remap(codes, indices)
   .rename('classIndex');
 
 Map.addLayer(
   discreteLand,
   {
-    min:     0,
-    max:     indices.length - 1,
     palette: palette
   },
   'Climate',
