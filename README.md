@@ -1822,7 +1822,6 @@ Concordia Research Station, Antarctica (2100)
 >**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
 
 ### Superarctic Frigid Summer Climate (YY):  
->**THIS CLIMATE WILL NO LONGER EXIST ON EARTH IN 2100**
 
 <img src="images/Concordia.jpg"/>
 
