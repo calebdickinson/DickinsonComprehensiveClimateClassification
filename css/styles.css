@@ -57,7 +57,7 @@ html { font-size: 150%; }
       align-items: flex-end;
     }
     .buttons-group button {
-      width: 10rem;
+      width: 11rem;
       height: 4rem;
       padding: .5rem 1rem;
       font-family: sans-serif;
