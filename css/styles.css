@@ -59,7 +59,7 @@ html { font-size: 150%; }
     .buttons-group button {
       width: 12rem;
       padding: .5rem 1rem;
-      font-family: cursive;
+      font-family: sans-serif;
       font-size: 1rem;
       color: #fff;
       border: none;
@@ -104,17 +104,17 @@ html { font-size: 150%; }
       height: auto;
     }
     main h3 {
-      font-family: 'Mayhart Windah', cursive;
+      font-family: cursive;
       font-size: 1.6rem;
       text-align: center;
       margin: 1.5rem 0 0.5rem;
     }
     main h3 strong {
-      font-family: Arial, sans-serif;
+      font-family: sans-serif;
       font-weight: bold;
     }
     main p {
-      font-family: Arial, sans-serif;
+      font-family: sans-serif;
       font-size: 1rem;
       text-align: center;
       margin: 0;
