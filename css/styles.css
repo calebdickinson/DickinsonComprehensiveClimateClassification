@@ -76,6 +76,16 @@ html { font-size: 150%; }
     .buttons-group button.colder {
       background-color: #3498db;
     }
+    .buttons-group button.disabled {
+      background-color: #95a5a6;
+      color: #ecf0f1;
+      cursor: default;
+      pointer-events: none;
+      transform: none;
+    }
+    .buttons-group button.disabled:hover {
+      transform: none;
+    }
 
     /* CLIMATE DISPLAY STYLES */
     main {
