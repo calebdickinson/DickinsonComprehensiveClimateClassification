@@ -78,7 +78,7 @@ html { font-size: 150%; }
       background-color: #3498db;
     }
     .buttons-group button.disabled {
-      background-color: #555555;
+      background-color: #444;
       color: #ecf0f1;
       cursor: default;
       pointer-events: none;
