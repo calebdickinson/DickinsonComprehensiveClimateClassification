@@ -16,7 +16,7 @@ html { font-size: 150%; }
     }
     #header h1 {
       margin: .5rem;
-      font-family: 'Mayhart Windah', cursive;
+      font-family: cursive;
       font-size: 2rem;
       color: #fff;
     }
@@ -29,7 +29,7 @@ html { font-size: 150%; }
       padding: 0.5rem 0;
     }
     nav a {
-      font-family: 'Mayhart Windah', cursive;
+      font-family: cursive;
       color: #fff;
       margin: 0 1rem;
       text-decoration: none;
@@ -59,7 +59,7 @@ html { font-size: 150%; }
     .buttons-group button {
       width: 12rem;
       padding: .5rem 1rem;
-      font-family: 'Mayhart Windah', cursive;
+      font-family: cursive;
       font-size: 1rem;
       color: #fff;
       border: none;
@@ -82,19 +82,19 @@ html { font-size: 150%; }
       padding: 2rem 1rem;
     }
     main h1 {
-      font-family: 'Mayhart Windah', cursive;
+      font-family: cursive;
       font-size: 2.8rem;
       text-align: center;
       margin: 0.5rem 0;
     }
     .climate-code h2 {
-      font-family: 'Mayhart Windah', cursive;
+      font-family: cursive;
       font-size: 2rem;
       text-align: center;
       margin: 0;
     }
     .climate-code h2 strong {
-      font-family: Arial, sans-serif;
+      font-family: sans-serif;
       font-weight: bold;
     }
     main img {
