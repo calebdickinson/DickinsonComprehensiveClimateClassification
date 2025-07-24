@@ -1,10 +1,16 @@
 # DICKINSON CLIMATE CLASSIFICATION
 
-# How to run the code
+# Website
+
+Here is the link to the website hosted on this repository: https://www.dickinsonclimate.com/
+
+# How to run the javascript google earth engine files in this repository
 
 To run the code, open two Earth Engine Code Editor windows (it may be necessary to make an account with Google Earth Engine)
 
 Paste the full code of the the most up to date versions, AllVersionsTogether.js and 2100AllVersionsTogether.js seperately in New Script boxes of each of the windows.
+
+These files can be found in the ClimateFiles folder of this github repository.
 
 Click the "run" button.
 
@@ -32,40 +38,36 @@ If a different range of years are desired, some simple editing of the first coup
 
 # The Dickinson Climate Classification explained
 
-This is a new climate classification inspired by the Koppen system.
+This is a new climate classification inspired by the Köppen system that was created and developed by Caleb Dickinson.
 
-It is generally more granular and includes more edge cases than the Koppen system.
+This system produces hundreds of possible climates; many of which are hypothetical.</p>
+ 
+This system has the advantage of the ability to accuratly describe hypothetical climates which may occur in the future due to climate change.</p>
 
-This method produces hundreds of possible climates; many of which are hypothetical.
+This could be useful in the future as humans continue to warm the earth with fossil fuels.</p>
 
-This system has the advantage of the ability to accuratly describe hypothetical climates which may occur in the future due to climate change.
+This system, being more generally more granular than the Köppen, better illustrates the differences between each of the new extreme climates we will see in the future, as well as the climates we see today</p>
 
-This could be useful in the future as humans continue to warm the earth with fossil fuels.
+This system, because of its edge cases, illustrates some intresting climate factors that are not measured in the Köppen system.</p>
 
-This system, being more generally more granular in many ways than the Koppen, better illustrates the differences between each of the new extreme climates we will see in the future.
-
-This could even have importance in determining habitability in high emissions (business as usual) warming scenarios.
-
-This system also, because of its edge cases, illustrates some intresting climate factors that may not be obvious on the Koppen.
-
-Each climate is measured with 3 letters.
-
-The first letter measures climate zones by measuring the average temperature of the coldest month in Celsius.
-
+Each climate is measured with 2 or 3 parts, depending if the climate is is classified by aridity.
+ 
+The first part measures climate zones by measuring the average temperature of the coldest month in Celsius.
+ 
 H = Hypercaneal. 50 and above (hypothetical)
-
+ 
 X = Uninhabitable. 40 - 50 (hypothetical)
-
+ 
 Z = Ultratropical. 30 - 40 (hypothetical)
-
+ 
 A = Supertropical. 20 - 30
-
+ 
 B = Tropical. 10 - 20
-
+ 
 C = Subtropical. 0 - 10
-
+ 
 D = Temperate. -10 - 0
-
+ 
 E = Continental. -20 - -10
 
 F = Subarctic. -30 - -20
@@ -74,39 +76,31 @@ G = Arctic. -40 - -30
 
 Y = Superarctic. Below -40
 
-The second letter measures aridity zones.
+The second part measures aridity zones.
 
-Aridity zones are measured using evapotraspiration, and thresholds had to be manually adjusted to match the boundaries of vegetation zones.
+Aridity zones are measured using evapotraspiration.
 
-In the future, a more scientifically and specifically defined aridity calculation may be available. 
-
-In the meantime, further information on the specifics of the aridity calculations may be found my examining my code and figuring out how it works.
-
-In my system, the lettering of the aridity zones is as follows:
-
-H = Humid
-
-G = Semihumid
-
-M = Meditterranean (If not arid desert and if < 40% of percipitation falls in the sunniest half of the year)
-
-W = Monsoon (If not arid desert and if > 80% of percipitation falls in the sunniest half of the year)
-
-S = Semiarid
-
-D = Arid Desert
+To see the exact method we used to determine aridity zones, please visit https://www.dickinsonclimate.com/classification.html.
 
 The differences in ratios between mediterranean and monsoon may seem strange until you consider that evaporation rates are higher in the warmer months, therefore, the reason for a difference between these ratios (and their corresponding vegetation zones) is intuitive if you really think about it.
-
-It is possible that aridity zone ratios may be further refined in the future; a more scientific examination of vegatation may require fine tuning.
-
-On the other hand, climate zones and zummer zones are unlikely to be changed in the future; due to their root in Celsius and thus their categorizations being simple and intuitive percentages of the difference between the freezing and boiling temperatures of water.
 
 Aridity does not appear to be relevant to the classification of climates that fall within subarctic, arctic, superarctic, cold summer, very cold summer, freezing summer, or frigid summer zones.
 
 Climate classifications that fall within these zones are not measured by aridity.
 
-The third letter measures the severity of the summers by measuring the average temperature of the warmest month in Celsius.
+H = Humid
+
+G = Semihumid
+    
+W = Monsoon (If not arid desert and if > 80% of percipitation falls in the sunniest half of the year)
+
+M = Mediterranean (If not arid desert and if < 40% of percipitation falls in the sunniest half of the year)
+
+S = Semiarid
+
+D = Arid Desert
+
+The third part measures the severity of the summers by measuring the average temperature of the warmest month in Celsius.
 
 H = Hypercaneal Summer. 50 and above (hypothetical)
 
@@ -125,12 +119,6 @@ B2 = Mild Summer. 15 - 20
 B1 = Cold summer. 10 - 15
 
 C2 = Very Cold Summer. 5 - 10
-
-C1 = Freezing Summer. 0 - 5
-
-Y = Frigid Summer. Below 0
-
-Programmers and others are encouraged to find uses for this system and to make their own software programs, visualisations, or spin offs of this one based on the Dickinson Climate Classification, as long as Caleb Dickinson is acknowledged as the creater of this system and the system is appropriately titled the Dickinson Climate Classification.
 
 # Here are some examples of these zones.
 
