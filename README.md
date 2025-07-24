@@ -80,7 +80,7 @@ The second part measures aridity zones.
 
 Aridity zones are measured using evapotraspiration.
 
-To see the exact method we used to determine aridity zones, please visit https://www.dickinsonclimate.com/classification.html.
+To see the exact method we used to determine aridity zones, please visit https://www.dickinsonclimate.com/classification.html
 
 The differences in ratios between mediterranean and monsoon may seem strange until you consider that evaporation rates are higher in the warmer months, therefore, the reason for a difference between these ratios (and their corresponding vegetation zones) is intuitive if you really think about it.
 
