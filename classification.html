@@ -1,108 +1,657 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <style>
-  	html { font-size: 150%; }
-    /* light gray page–wide background */
-    body {
-      background-color: #bbbbbb;
-      margin: 5;
-      padding: 0;
-    }
-
-    /* HEADER / FAVICON BANNER */
-    #header {
-      background: #111;
-      padding: 0;         
-      border-top: 1px solid transparent;
-      border-bottom: 1px solid transparent;
-      /* —or— overflow: hidden; */
-      text-align: center;
-    }
-    #header h1 {
-      margin: .5rem;
-      font-family: 'Mayhart Windah', cursive;
-      font-size: 2rem;
-      color: #fff;
-    }
-
-    /* NAVBAR */
-    nav {
-      background: #444;
-      display: flex;
+    /* 11×11 grid of 60px squares */
+    .button-grid {
+      display: grid;
+      grid-template-columns: repeat(32, 35px);
+      grid-template-rows: repeat(32, 35px);
+      gap: 8px;
       justify-content: center;
-      padding: 0.5rem 0;
-    }
-    nav a {
-      font-family: 'Mayhart Windah', cursive;
-      color: #fff;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-size: 1.4rem;
-      transition: transform .2s ease;
-    }
-    nav a:hover {
-      transform: scale(1.2);
+      margin-top: 20px;
     }
 
-    /* CLIMATE DISPLAY STYLES */
-    main {
-      padding: 2rem 1rem;
-    }
-    main h1 {
-      font-family: 'Mayhart Windah', cursive;
-      font-size: 2.8rem;
-      text-align: center;
-      margin: 0.5rem 0;
-    }
-    main h2 {
-      font-family: 'Mayhart Windah', cursive;
-      font-size: 2rem;
-      text-align: center;
-      margin: 0.3rem 0 1rem;
-    }
-    main h2 strong {
-      font-family: Arial, sans-serif;
-      font-weight: bold;
-    }
-    main img {
-      display: block;
-      margin: 1rem auto;
-      max-width: 90%;
-      height: auto;
-    }
-    main h3 {
-      font-family: 'Mayhart Windah', cursive;
-      font-size: 1.6rem;
-      text-align: center;
-      margin: 1.5rem 0 0.5rem;
-    }
-    main p {
-      font-family: Arial, sans-serif;
+    /* base button styling */
+    .grid-button {
+      border: none;
+      color: #ffffff;
       font-size: 1rem;
-      text-align: center;
-      margin: 0;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
+    .grid-button.real { background-color: #00ffff; }
+    .grid-button.imaginary { background-color: #0000ff; }
+    .grid-button:hover { transform: scale(1.1); }
+	.tall { grid-row:  span 2; }
+    .verytall { grid-row: span 6; }
+    .supertall { grid-row: span 8 }
+    .wide { grid-column: span 2; } 
+    .doublewide { grid-column: span 4 }
+    .verywide { grid-column: span 6; }
+    .superwide { grid-column: span 8; }
+    .ultrawide { grid-column: span 16; }
+   
+
+
+    /* placeholders just hold grid cells—no styling needed */
+    .placeholder { }
   </style>
 </head>
 <body>
-  <!-- HEADER / FAVICON BANNER -->
-  <div id="header">
-    <h1>The Dickinson Comprehensive Climate Classification System</h1>
+
+  <div class="button-grid">
+    <!-- Row 1 -->
+    <button class="grid-button imaginary verywide verytall"
+            onclick="location.href='link2.html'">HH</button>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div> 
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div> 
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div> 
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div> 
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div> 
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div> 
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div> 
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div> 
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div> 
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <button class="grid-button imaginary verywide tall"
+            onclick="location.href='link2.html'">XH</button>
+    <button class="grid-button imaginary wide tall"
+            onclick="location.href='link2.html'">XX</button>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div> 
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div> 
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div> 
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <button class="grid-button imaginary verywide tall"
+            onclick="location.href='link2.html'">ZH</button>
+    <button class="grid-button imaginary wide tall"
+            onclick="location.href='link2.html'">ZX</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">ZZ2</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">ZZ1</button>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div> 
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div> 
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <button class="grid-button imaginary verywide tall"
+            onclick="location.href='link2.html'">AH</button>
+    <button class="grid-button imaginary wide tall"
+            onclick="location.href='link2.html'">AX</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">AZ2</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">AZ1</button>
+     <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">AA2</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">AA1</button>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div> 
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div> 
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <button class="grid-button imaginary verywide tall"
+            onclick="location.href='link2.html'">BH</button>
+    <button class="grid-button imaginary wide tall"
+            onclick="location.href='link2.html'">BX</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">BZ2</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">BZ1</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">BA2</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">BA1</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">BB2</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">BB1</button>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div> 
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div> 
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <button class="grid-button imaginary verywide tall"
+            onclick="location.href='link2.html'">CH</button>
+    <button class="grid-button imaginary wide tall"
+            onclick="location.href='link2.html'">CX</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">CZ2</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">CZ1</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">CA2</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">CA1</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">CB2</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">CB1</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">CC2</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">CC1</button>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div> 
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div> 
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <button class="grid-button imaginary verywide tall"
+            onclick="location.href='link2.html'">DH</button>
+    <button class="grid-button imaginary wide tall"
+            onclick="location.href='link2.html'">DX</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">DZ2</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">DZ1</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">DA2</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">DA1</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">DB2</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">DB1</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">DC2</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">DC1</button>
+    <button class="grid-button imaginary wide tall"
+            onclick="location.href='link2.html'">DY</button>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div> 
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div> 
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <button class="grid-button imaginary verywide tall"
+            onclick="location.href='link2.html'">EH</button>
+    <button class="grid-button imaginary wide tall"
+            onclick="location.href='link2.html'">EX</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">EZ2</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">EZ1</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">EA2</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">EA1</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">EB2</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">EB1</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">EC2</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">EC1</button>
+    <button class="grid-button imaginary doublewide tall"
+            onclick="location.href='link2.html'">EY</button>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div> 
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <button class="grid-button imaginary verywide tall"
+            onclick="location.href='link2.html'">FH</button>
+    <button class="grid-button imaginary wide tall"
+            onclick="location.href='link2.html'">FX</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">FZ2</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">FZ1</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">FA2</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">FA1</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">FB2</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">FB1</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">FC2</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">FC1</button>
+    <button class="grid-button imaginary verywide tall"
+            onclick="location.href='link2.html'">FY</button>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div> 
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <button class="grid-button imaginary verywide tall"
+            onclick="location.href='link2.html'">GH</button>
+    <button class="grid-button imaginary wide tall"
+            onclick="location.href='link2.html'">GX</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">GZ2</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">GZ1</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">GA2</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">GA1</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">GB2</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">GB1</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">GC2</button>
+    <button class="grid-button imaginary tall"
+            onclick="location.href='link2.html'">GC1</button>
+    <button class="grid-button imaginary superwide tall"
+            onclick="location.href='link2.html'">GY</button>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div> 
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <div class="placeholder"></div>
+    <button class="grid-button imaginary verywide supertall"
+            onclick="location.href='link2.html'">YH</button>
+    <button class="grid-button imaginary wide supertall"
+            onclick="location.href='link2.html'">YX</button>
+    <button class="grid-button imaginary supertall"
+            onclick="location.href='link2.html'">YZ2</button>
+    <button class="grid-button imaginary supertall"
+            onclick="location.href='link2.html'">YZ1</button>
+    <button class="grid-button imaginary supertall"
+            onclick="location.href='link2.html'">YA2</button>
+    <button class="grid-button imaginary supertall"
+            onclick="location.href='link2.html'">YA1</button>
+    <button class="grid-button imaginary supertall"
+            onclick="location.href='link2.html'">YB2</button>
+    <button class="grid-button imaginary supertall"
+            onclick="location.href='link2.html'">YB1</button>
+    <button class="grid-button imaginary supertall"
+            onclick="location.href='link2.html'">YC2</button>
+    <button class="grid-button imaginary supertall"
+            onclick="location.href='link2.html'">YC1</button>
+    <button class="grid-button imaginary ultrawide supertall"
+            onclick="location.href='link2.html'">YY</button>
+    
+    
   </div>
 
-  <!-- NAVIGATION BAR -->
-  <nav>
-    <a href="home.html">Home</a>
-    <a href="classification.html">Classification</a>
-    <a href="maps.html">Maps</a>
-    <a href="about.html">About</a>
-  </nav>
-  
-  <main>
-    <p>Sorry this page is currently under construction</p>
-  </main>
 </body>
 </html>
