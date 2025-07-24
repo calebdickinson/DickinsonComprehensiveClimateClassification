@@ -8,7 +8,7 @@ Here is the link to the website hosted in this repository: https://www.dickinson
 
 To run the code, open two Earth Engine Code Editor windows (it may be necessary to make an account with Google Earth Engine)
 
-Paste the full code of the the most up to date versions, AllVersionsTogether.js and 2100AllVersionsTogether.js seperately in New Script boxes of each of the windows.
+Paste the full code of the the most up to date versions, AllZonesTogether.js and 2100AllZonesTogether.js seperately in New Script boxes of each of the windows.
 
 These files can be found in the ClimateFiles folder of this github repository.
 
@@ -29,8 +29,6 @@ You can also filter by climate codes using the bottom right dropdown menu.
 A graph to the top right displays selected cities, organized by climate classification.
 
 Anyone with a basic knowledge of programming could make their own versions of the code by editing to add more cities to the cityList that is displayed in this graph.
-
-As of this writing, the cityList begins on line 411 of 2100AllVersionsTogether.js and line 372 of AllVersionsTogether.js.
 
 Keep in mind that due to the limitations of the resolution of the data, some small remote islands and/or extremely mountainous areas may not be exactly rendered according to their true classification.
 
