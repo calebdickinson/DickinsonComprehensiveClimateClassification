@@ -1,66 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <style>
-    /* 11×11 grid of 60px squares */
     .button-grid {
       display: grid;
-      grid-template-columns: repeat(32, 4vh);
-      grid-template-rows: repeat(32, 4vh);
-      gap: 8px;
+      grid-template-columns: repeat(32, 3vh);
+      grid-template-rows:    repeat(32, 3vh);
+      gap: 2px;
       justify-content: center;
       margin-top: 20px;
     }
-
-    /* base button styling */
     .grid-button {
+      position: relative;
+      z-index: 0;              
+      overflow: visible;       
       border: none;
-      color: #ffffff;
-      font-size: 1rem;
+      background: transparent; 
+      color: #000;
+      font-size: .7rem;
       cursor: pointer;
-      transition: transform 0.2s ease;
       display: flex;
       align-items: center;
       justify-content: center;
+      transition: transform 0.2s ease;
     }
-    .grid-button.real { background-color: #00ffff; }
-    .grid-button.imaginary { background-color: #0000ff; }
     .grid-button:hover {
-      width:  calc(100% + 0.5rem);
-      height: calc(100% + 0.5rem);
-      margin-top:  -0.25rem;
-      margin-left: -0.25rem;
-      position: relative;
-      overflow: hidden; 
+      transform: scale(1.05);
     }
-	.tall { grid-row:  span 2; }
-    .verytall { grid-row: span 6; }
-    .supertall { grid-row: span 8 }
-    .wide { grid-column: span 2; } 
-    .doublewide { grid-column: span 4 }
-    .verywide { grid-column: span 6; }
-    .superwide { grid-column: span 8; }
-    .ultrawide { grid-column: span 16; }
-    .half-hide-topright {
-      clip-path: polygon(0 0, 0% 100%, 100% 100%);
-    }
-    .half-hide-topright .btn-label {
+    .grid-button::before {
+      content: "";
       position: absolute;
-      left: 50%;
-      top: 75%;
-      transform: translate(-50%, -50%);
-	}
-}
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: #00ffff;
+      z-index: -1;            
+      clip-path: none;
+    }
+    .half-hide-topright::before {
+      clip-path: polygon(0% 0%, 0% 100%, 100% 100%);
+    }
+    .custom-one::before {
+      clip-path: polygon(0% 0%, 0% 0%, 100% 50%, 100% 100%, 0% 100%);
+    }
+    .custom-two::before {
+      clip-path: polygon(0% 50%, 0% 50%, 100% 100%, 50% 100%, 0% 100%);
+    }
+    .custom-three::before {
+      clip-path: polygon(0% 0%, 50% 0%, 100% 100%, 100% 100%, 0% 100%);
+    }
+    .custom-four::before {
+      clip-path: polygon(0% 0%, 66.7% 0%, 100% 100%, 100% 100%, 0% 100%);
+    }
+    .custom-five::before {
+      clip-path: polygon(0% 0%, 75% 0%, 100% 100%, 100% 100%, 0% 100%);
+    }
+    .tall       { grid-row:    span 2; }
+    .verytall   { grid-row:    span 6; }
+    .supertall  { grid-row:    span 8; }
+    .wide       { grid-column: span 2; }
+    .doublewide { grid-column: span 4; }
+    .verywide   { grid-column: span 6; }
+    .superwide  { grid-column: span 8; }
+    .ultrawide  { grid-column: span 16; }
   </style>
 </head>
 <body>
-
   <div class="button-grid">
-    <!-- Row 1 -->
-    <button class="grid-button imaginary verywide verytall half-hide-topright"
-            onclick="location.href='link2.html'">HH</button>
+    <button class="grid-button verytall verywide half-hide-topright">
+      <span class="btn-label">HH</span>
+    </button>
     <div></div><div></div><div></div><div></div>
     <div></div><div></div><div></div><div></div>
  	<div></div><div></div><div></div><div></div>
@@ -101,8 +111,9 @@
     <div></div><div></div><div></div><div></div>
     <button class="grid-button imaginary verywide tall"
             onclick="location.href='link2.html'">XH</button>
-    <button class="half-hide-topright grid-button imaginary wide tall"
-            onclick="location.href='link2.html'">XX</button>
+    <button class="tall wide grid-button half-hide-topright">
+  <span class="btn-label">XX</span>
+</button>
     <div></div><div></div><div></div><div></div>
     <div></div><div></div><div></div><div></div>
  	<div></div><div></div><div></div><div></div>
@@ -119,11 +130,13 @@
             onclick="location.href='link2.html'">ZH</button>
     <button class="grid-button imaginary wide tall"
             onclick="location.href='link2.html'">ZX</button>
-    <button class="grid-button imaginary tall"
-            onclick="location.href='link2.html'">ZZ2</button>
-    <button class="grid-button imaginary tall"
-            onclick="location.href='link2.html'">ZZ1</button>
-    <div></div><div></div><div></div><div></div>
+    <button class="grid-button tall custom-one">
+  <span class="btn-label">ZZ2</span>
+</button>
+    <button class="grid-button tall custom-two">
+  <span class="btn-label">ZZ1</span>
+</button>
+	<div></div><div></div><div></div><div></div>
     <div></div><div></div><div></div><div></div>
  	<div></div><div></div><div></div><div></div>
     <div></div><div></div><div></div><div></div>
@@ -141,17 +154,19 @@
             onclick="location.href='link2.html'">AZ2</button>
     <button class="grid-button imaginary tall"
             onclick="location.href='link2.html'">AZ1</button>
-     <button class="grid-button imaginary tall"
-            onclick="location.href='link2.html'">AA2</button>
-    <button class="grid-button imaginary tall"
-            onclick="location.href='link2.html'">AA1</button>
-    <div></div><div></div><div></div><div></div>
-    <div></div><div></div><div></div><div></div>
-    <div></div><div></div><div></div><div></div>
+    <button class="grid-button tall custom-one">
+  <span class="btn-label">AA2</span>
+</button>
+    <button class="grid-button tall custom-two">
+  <span class="btn-label">AA1</span>
+</button>
+	<div></div><div></div><div></div><div></div>
     <div></div><div></div><div></div><div></div>
  	<div></div><div></div><div></div><div></div>
     <div></div><div></div><div></div><div></div>
     <div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div>
+ 	<div></div><div></div><div></div><div></div>
     <div></div><div></div><div></div><div></div>
     <div></div><div></div><div></div><div></div>
     <button class="grid-button imaginary verywide tall"
@@ -166,17 +181,19 @@
             onclick="location.href='link2.html'">BA2</button>
     <button class="grid-button imaginary tall"
             onclick="location.href='link2.html'">BA1</button>
-    <button class="grid-button imaginary tall"
-            onclick="location.href='link2.html'">BB2</button>
-    <button class="grid-button imaginary tall"
-            onclick="location.href='link2.html'">BB1</button>
-    <div></div><div></div><div></div><div></div>
-    <div></div><div></div><div></div><div></div>
-    <div></div><div></div><div></div><div></div>
+    <button class="grid-button tall custom-one">
+  <span class="btn-label">BB2</span>
+</button>
+    <button class="grid-button tall custom-two">
+  <span class="btn-label">BB1</span>
+</button>
+	<div></div><div></div><div></div><div></div>
     <div></div><div></div><div></div><div></div>
  	<div></div><div></div><div></div><div></div>
     <div></div><div></div><div></div><div></div>
     <div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div>
+ 	<div></div><div></div><div></div><div></div>
     <div></div><div></div><div></div><div></div>
     <button class="grid-button imaginary verywide tall"
             onclick="location.href='link2.html'">CH</button>
@@ -194,17 +211,19 @@
             onclick="location.href='link2.html'">CB2</button>
     <button class="grid-button imaginary tall"
             onclick="location.href='link2.html'">CB1</button>
-    <button class="grid-button imaginary tall"
-            onclick="location.href='link2.html'">CC2</button>
-    <button class="grid-button imaginary tall"
-            onclick="location.href='link2.html'">CC1</button>
-    <div></div><div></div><div></div><div></div>
-    <div></div><div></div><div></div><div></div>
-    <div></div><div></div><div></div><div></div>
+    <button class="grid-button tall custom-one">
+  <span class="btn-label">CC2</span>
+</button>
+    <button class="grid-button tall custom-two">
+  <span class="btn-label">CC1</span>
+</button>
+	<div></div><div></div><div></div><div></div>
     <div></div><div></div><div></div><div></div>
  	<div></div><div></div><div></div><div></div>
     <div></div><div></div><div></div><div></div>
     <div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div>
+ 	<div></div><div></div><div></div><div></div>
     <button class="grid-button imaginary verywide tall"
             onclick="location.href='link2.html'">DH</button>
     <button class="grid-button imaginary wide tall"
@@ -225,8 +244,9 @@
             onclick="location.href='link2.html'">DC2</button>
     <button class="grid-button imaginary tall"
             onclick="location.href='link2.html'">DC1</button>
-    <button class="grid-button imaginary wide tall"
-            onclick="location.href='link2.html'">DY</button>
+     <button class="grid-button tall wide half-hide-topright">
+      <span class="btn-label">DY</span>
+    </button>
    	<div></div><div></div><div></div><div></div>
     <div></div><div></div><div></div><div></div>
     <div></div><div></div><div></div><div></div>
@@ -253,8 +273,9 @@
             onclick="location.href='link2.html'">EC2</button>
     <button class="grid-button imaginary tall"
             onclick="location.href='link2.html'">EC1</button>
-    <button class="grid-button imaginary doublewide tall"
-            onclick="location.href='link2.html'">EY</button>
+    <button class="grid-button tall doublewide custom-three">
+      <span class="btn-label">EY</span>
+    </button>
     <div></div><div></div><div></div><div></div>
     <div></div><div></div><div></div><div></div>
     <div></div><div></div><div></div><div></div>
@@ -280,7 +301,7 @@
             onclick="location.href='link2.html'">FC2</button>
     <button class="grid-button imaginary tall"
             onclick="location.href='link2.html'">FC1</button>
-    <button class="grid-button imaginary verywide tall"
+    <button class="grid-button imaginary verywide tall custom-four"
             onclick="location.href='link2.html'">FY</button>
     <div></div><div></div><div></div><div></div>
     <div></div><div></div><div></div><div></div>
@@ -306,7 +327,7 @@
             onclick="location.href='link2.html'">GC2</button>
     <button class="grid-button imaginary tall"
             onclick="location.href='link2.html'">GC1</button>
-    <button class="grid-button imaginary superwide tall"
+    <button class="grid-button imaginary superwide tall custom-five"
             onclick="location.href='link2.html'">GY</button>
     <div></div><div></div><div></div><div></div>
     <div></div><div></div><div></div><div></div>
@@ -331,7 +352,7 @@
             onclick="location.href='link2.html'">YC2</button>
     <button class="grid-button imaginary supertall"
             onclick="location.href='link2.html'">YC1</button>
-    <button class="grid-button imaginary ultrawide supertall"
+    <button class="grid-button imaginary ultrawide supertall custom-three"
             onclick="location.href='link2.html'">YY</button>
     
     
