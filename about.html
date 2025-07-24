@@ -2,122 +2,107 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Aridity Calculator</title>
+
   <style>
+  	html { font-size: 150%; }
+    /* light gray page–wide background */
     body {
-      font-weight: bold;
-    }
-    .grid {
-      display: grid;
-      /* col1: labels 200px; col2: Med 1fr; col3: main 1fr; col4: Mon 0.5fr */
-      grid-template-columns: 200px 1fr 1fr 0.5fr;
-      grid-auto-rows: minmax(200px, auto);
-      border: 1px solid #333;
-      font-family: sans-serif;
-    }
-    .grid > div {
-      border: 1px solid #333;
-      padding: 0.5rem;
-      box-sizing: border-box;
-    }
-    .header {
-      background: #f0f0f0;
-      font-weight: bold;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .label {
-      background: #fafafa;
-      display: flex;
-      align-items: center;
+      background-color: #bbbbbb;
+      margin: 5;
+      padding: 0;
     }
 
-    /* Climate‑type backgrounds */
-        .mediterranean {
-      grid-column: 2;
-      grid-row: 2 / span 3;
-      background: yellow;
-      border-left: none;
-      border-right: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .monsoon {
-      grid-column: 4;
-      grid-row: 2 / span 3;
-      background: purple;
-      border-left: none;
-      border-right: none;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .humid {
-      grid-column: 3;
-      grid-row: 2;
-      background: darkgreen;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .semihumid {
-      grid-column: 3;
-      grid-row: 3;
-      background: lightgreen;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .semiarid {
-      grid-column: 3;
-      grid-row: 4;
-      background: orange;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .desert {
-      grid-column: 2 / span 3;
-      grid-row: 5;
-      background: red;
+    /* HEADER / FAVICON BANNER */
+    #header {
+      background: #111;
+      padding: 0;         
+      border-top: 1px solid transparent;
+      border-bottom: 1px solid transparent;
+      /* —or— overflow: hidden; */
       text-align: center;
+    }
+    #header h1 {
+      margin: .5rem;
+      font-family: 'Mayhart Windah', cursive;
+      font-size: 2rem;
+      color: #fff;
+    }
+
+    /* NAVBAR */
+    nav {
+      background: #444;
       display: flex;
-      align-items: center;
       justify-content: center;
-      color: white;
+      padding: 0.5rem 0;
+    }
+    nav a {
+      font-family: 'Mayhart Windah', cursive;
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-size: 1.4rem;
+      transition: transform .2s ease;
+    }
+    nav a:hover {
+      transform: scale(1.2);
+    }
+
+    /* CLIMATE DISPLAY STYLES */
+    main {
+      padding: 2rem 1rem;
+    }
+    main h1 {
+      font-family: 'Mayhart Windah', cursive;
+      font-size: 2.8rem;
+      text-align: center;
+      margin: 0.5rem 0;
+    }
+    main h2 {
+      font-family: 'Mayhart Windah', cursive;
+      font-size: 2rem;
+      text-align: center;
+      margin: 0.3rem 0 1rem;
+    }
+    main h2 strong {
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+    }
+    main img {
+      display: block;
+      margin: 1rem auto;
+      max-width: 90%;
+      height: auto;
+    }
+    main h3 {
+      font-family: 'Mayhart Windah', cursive;
+      font-size: 1.6rem;
+      text-align: center;
+      margin: 1.5rem 0 0.5rem;
+    }
+    main p {
+      font-family: Arial, sans-serif;
+      font-size: 1rem;
+      text-align: center;
+      margin: 0;
     }
   </style>
 </head>
 <body>
-  <div class="grid">
-    <!-- row 1: headers -->
-    <div class="header">Aridity Calculator</div>
-    <div class="header">Less than 40% of precipitation in 6 sunniest months (April – September)</div>
-    <div class="header">40%–80% of precipitation in 6 sunniest months (April –September)</div>
-    <div class="header">More than 80% of precipitation in 6 sunniest months (April –September)</div>
-
-    <!-- row 2: >36 ET units -->
-    <div class="label" style="grid-column:1; grid-row:2;">&gt; 36 evapotranspiration units</div>
-    <div class="mediterranean">Mediterranean (M)</div>
-    <div class="humid">Humid (H)</div>
-    <div class="monsoon">Monsoon (W)</div>
-
-    <!-- row 3: 24–36 ET units -->
-    <div class="label" style="grid-column:1; grid-row:3;">24 - 36 evapotranspiration units</div>
-    <div class="semihumid">Semihumid (G)</div>
-
-    <!-- row 4: 12–24 ET units -->
-    <div class="label" style="grid-column:1; grid-row:4;">12 - 24 evapotranspiration units</div>
-    <div class="semiarid">Semiarid (S)</div>
-
-    <!-- row 5: 0–12 ET units -->
-    <div class="label" style="grid-column:1; grid-row:5;">0 - 12 evapotranspiration units</div>
-    <div class="desert">Arid Desert (D)</div>
+  <!-- HEADER / FAVICON BANNER -->
+  <div id="header">
+    <h1>The Dickinson Comprehensive Climate Classification System</h1>
   </div>
+
+  <!-- NAVIGATION BAR -->
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="classification.html">Classification</a>
+    <a href="maps.html">Maps</a>
+    <a href="about.html">About</a>
+  </nav>
+  
+  <main>
+    <p>Sorry this page is currently under construction</p>
+  </main>
 </body>
 </html>
