@@ -2,7 +2,7 @@
 
 # Website
 
-Here is the link to the website hosted on this repository: https://www.dickinsonclimate.com/
+Here is the link to the website hosted in this repository: https://www.dickinsonclimate.com/
 
 # How to run the javascript google earth engine files in this repository
 
