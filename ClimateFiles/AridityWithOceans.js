@@ -1,3 +1,6 @@
+//A MAJOR ISSUE WITH ARIDITY CALCULATIONS WAS DISCOVERED
+//ONLY PROGRAMS WITH THIS MESSAGE AT THE TOP HAVE BEEN CORRECTED
+//THEREFORE ONLY THESE PROGRAMS CAN BE CONSIDERED VALID FOR CALCULATING ARIDITY
 var era5 = ee.ImageCollection('ECMWF/ERA5/MONTHLY')
   .filterDate('2000-01-01', '2005-12-31')
   .select('mean_2m_air_temperature')
@@ -52,6 +55,10 @@ var monthlyClim2000 = ee.ImageCollection(
   })
 );
 
+var pixelLat = ee.Image.pixelLonLat().select('latitude');
+var northMask = pixelLat.gt(5);
+var tropic   = pixelLat.abs().lte(5);
+var southMask = pixelLat.lt(-5);
 var P_ann2000    = monthlyClim2000.select('pr' ).sum().rename('P_ann'),
     PET_ann2000  = monthlyClim2000.select('pet').sum().rename('PET_ann'),
     AI2000       = P_ann2000.divide(PET_ann2000).rename('AI'),
@@ -64,15 +71,15 @@ var P_ann2000    = monthlyClim2000.select('pr' ).sum().rename('P_ann'),
                      .filter(ee.Filter.inList('month',[4,5,6,7,8,9]))
                      .select('pr').sum().rename('P_highSun'),
     HS2000       = P_hs2000.divide(P_ann2000).rename('HS_ratio'),
-    clim2000     = aridBase
-                     .where(aridBase.neq(1).and(HS2000.gte(0.8)), 4) // W: Monsoon
-                     .where(aridBase.neq(1).and(HS2000.lt(0.4)), 3) // M: Mediterranean
-                     .rename('climateClass'),
-    clim2000_flip= clim2000
-                     .where(ee.Image.pixelLonLat().select('latitude').lt(5).and(clim2000.eq(4)), 3)
-                     .where(ee.Image.pixelLonLat().select('latitude').lt(5).and(clim2000.eq(3)), 4)
-                     .where(hottestC_global.lt(15).or(coldestC_global.lt(-20)),7); // no aridity
-
+    clim2000 = aridBase
+  .where(northMask.and(aridBase.neq(1)).and(HS2000.gte(0.8)), 4) // Monsoon
+  .where(northMask.and(aridBase.neq(1)).and(HS2000.lt(0.4)),  3) // Mediterranean
+  .where(tropic.and(aridBase.neq(1)).and(HS2000.lt(0.2)),     4) // Monsoon
+  .where(tropic.and(aridBase.neq(1)).and(HS2000.gte(0.8)),    4) // Monsoon
+  .where(southMask.and(aridBase.neq(1)).and(HS2000.lt(0.2)),  4)  // Monsoon
+  .where(southMask.and(aridBase.neq(1)).and(HS2000.gte(0.6)), 3)  // Mediterranean
+  .where(hottestC_global.lt(15).or(coldestC_global.lt(-20)),  7) // no aridity
+  .rename('climateClass');
 function classifySummer(tC) {
   return ee.Image.constant(0)
     .where(tC.gte(40).and(tC.lt(45)),  9) // X1: Extreme Hyperthermal Summer
@@ -118,8 +125,8 @@ var palette = keys.map(function(k){ return codeColorMap[k]; });
 var indices = codes.map(function(_, i){ return i; });
 
 // 5) Remap → mask → display (one layer only)
-var discreteLand = clim2000_flip
-  .remap(codes, indices, -1)  // any code not in `codes` → -1 (transparent)
+var discreteLand = clim2000
+  .remap(codes, indices, -1)  // any code not in codes → -1 (transparent)
   .rename('classIndex');
 
 Map.addLayer(
