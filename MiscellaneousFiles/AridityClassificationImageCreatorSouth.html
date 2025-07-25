@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aridity Calculator</title>
+  <style>
+    body {
+      font-weight: bold;
+      color: black;
+    }
+      * {
+      color: black !important;
+    }
+    .grid {
+      display: grid;
+      /* col1: labels 200px; col2: Med 1fr; col3: main 1fr; col4: Mon 0.5fr */
+      grid-template-columns: 150px 1fr 1fr 0.5fr;
+      grid-auto-rows: minmax(150px, auto);
+      border: 1px solid #333;
+      font-family: sans-serif;
+    }
+    .grid > div {
+      border: 1px solid #333;
+      padding: 0.5rem;
+      box-sizing: border-box;
+    }
+    .header {
+      background: #f0f0f0;
+      font-weight: bold;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .label {
+      background: #fafafa;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Climate‑type backgrounds */
+        .mediterranean {
+      grid-column: 2;
+      grid-row: 2 / span 3;
+      background: yellow;
+      border-left: none;
+      border-right: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .monsoon {
+      grid-column: 4;
+      grid-row: 2 / span 3;
+      background: purple;
+      border-left: none;
+      border-right: none;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .humid {
+      grid-column: 3;
+      grid-row: 2;
+      background: darkgreen;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .semihumid {
+      grid-column: 3;
+      grid-row: 3;
+      background: lightgreen;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .semiarid {
+      grid-column: 3;
+      grid-row: 4;
+      background: orange;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .desert {
+      grid-column: 2 / span 3;
+      grid-row: 5;
+      background: red;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <!-- row 1: headers -->
+    <div class="header">Aridity Calculator for more than 5 degrees south of equator</div>
+    <div class="header">Less than 40% of precipitation in 6 sunniest months (October – May)</div>
+    <div class="header">40%–80% of precipitation in 6 sunniest months (October - May)</div>
+    <div class="header">More than 80% of precipitation in 6 sunniest months (October –May)</div>
+
+    <!-- row 2: >36 ET units -->
+    <div class="label" style="grid-column:1; grid-row:2;">&gt; 36 evapo- transpiration units</div>
+    <div class="mediterranean">Mediterranean (M)</div>
+    <div class="humid">Humid (H)</div>
+    <div class="monsoon">Monsoon (W)</div>
+
+    <!-- row 3: 24–36 ET units -->
+    <div class="label" style="grid-column:1; grid-row:3;">24 - 36 evapo- transpiration units</div>
+    <div class="semihumid">Semihumid (G)</div>
+
+    <!-- row 4: 12–24 ET units -->
+    <div class="label" style="grid-column:1; grid-row:4;">12 - 24 evapo- transpiration units</div>
+    <div class="semiarid">Semiarid (S)</div>
+
+    <!-- row 5: 0–12 ET units -->
+    <div class="label" style="grid-column:1; grid-row:5;">0 - 12 evapo- transpiration units</div>
+    <div class="desert">Arid Desert (D)</div>
+  </div>
+</body>
+</html>
