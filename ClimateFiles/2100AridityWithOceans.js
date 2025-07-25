@@ -1,3 +1,6 @@
+//A MAJOR ISSUE WITH ARIDITY CALCULATIONS WAS DISCOVERED
+//ONLY PROGRAMS WITH THIS MESSAGE AT THE TOP HAVE BEEN CORRECTED
+//THEREFORE ONLY THESE PROGRAMS CAN BE CONSIDERED VALID FOR CALCULATING ARIDITY
 // a) NASA/NEX-GDDP for warm/cold
 var future = ee.ImageCollection('NASA/NEX-GDDP')
   .filter(ee.Filter.eq('scenario', 'rcp85'))
@@ -55,17 +58,12 @@ var coldestC_global = monthlyMeans
   .select('monthlyMean')
   .rename('coldestC');
 
-var hist2000 = ee.ImageCollection('NASA/NEX-GDDP')
-  .filter(ee.Filter.eq('scenario', 'historical'))
-  .filter(ee.Filter.eq('model', 'ACCESS1-0'))
-  .filter(ee.Filter.calendarRange(2000, 2005, 'year'));
-
-var prDaily   = hist2000.select('pr'),
-    tmaxDaily = hist2000.select('tasmax'),
-    tminDaily = hist2000.select('tasmin'),
+var prDaily   = future.select('pr'),
+    tmaxDaily = future.select('tasmax'),
+    tminDaily = future.select('tasmin'),
     daysList  = ee.List([31,28,31,30,31,30,31,31,30,31,30,31]);
 
-var monthlyClim2000 = ee.ImageCollection(
+var monthlyClim = ee.ImageCollection(
   months.map(function(m){
     m = ee.Number(m);
     var prM   = prDaily.filter(ee.Filter.calendarRange(m,m,'month')).mean(),
@@ -83,26 +81,31 @@ var monthlyClim2000 = ee.ImageCollection(
   })
 );
 
-var P_ann2000    = monthlyClim2000.select('pr' ).sum().rename('P_ann'),
-    PET_ann2000  = monthlyClim2000.select('pet').sum().rename('PET_ann'),
-    AI2000       = P_ann2000.divide(PET_ann2000).rename('AI'),
+var pixelLat = ee.Image.pixelLonLat().select('latitude');
+var northMask = pixelLat.gt(5);
+var tropic   = pixelLat.abs().lte(5);
+var southMask = pixelLat.lt(-5);
+var P_ann    = monthlyClim.select('pr' ).sum().rename('P_ann'),
+    PET_ann  = monthlyClim.select('pet').sum().rename('PET_ann'),
+    AI       = P_ann.divide(PET_ann).rename('AI'),
     aridBase     = ee.Image(6) // H: Humid
-                     .where(AI2000.lt(0.0036),5) // G: Semihumid
-                     .where(AI2000.lt(0.0024),2) // S: Semiarid
-                     .where(AI2000.lt(0.0012),1) // D: Arid Desert
+                     .where(AI.lt(0.0036),5) // G: Semihumid
+                     .where(AI.lt(0.0024),2) // S: Semiarid
+                     .where(AI.lt(0.0012),1) // D: Arid Desert
                      .rename('aridity'),
-    P_hs2000     = monthlyClim2000
+    P_hs     = monthlyClim
                      .filter(ee.Filter.inList('month',[4,5,6,7,8,9]))
                      .select('pr').sum().rename('P_highSun'),
-    HS2000       = P_hs2000.divide(P_ann2000).rename('HS_ratio'),
-    clim2000     = aridBase
-                     .where(aridBase.neq(1).and(HS2000.gte(0.8)), 4) // W: Monsoon
-                     .where(aridBase.neq(1).and(HS2000.lt(0.4)), 3) // M: Mediterranean
-                     .rename('climateClass'),
-    clim2000_flip= clim2000
-                     .where(ee.Image.pixelLonLat().select('latitude').lt(5).and(clim2000.eq(4)), 3)
-                     .where(ee.Image.pixelLonLat().select('latitude').lt(5).and(clim2000.eq(3)), 4)
-                     .where(hottestC_global.lt(15).or(coldestC_global.lt(-20)),7); // no aridity
+    HS       = P_hs.divide(P_ann).rename('HS_ratio'),
+    clim = aridBase
+  .where(northMask.and(aridBase.neq(1)).and(HS.gte(0.8)), 4) // Monsoon
+  .where(northMask.and(aridBase.neq(1)).and(HS.lt(0.4)),  3) // Mediterranean
+  .where(tropic.and(aridBase.neq(1)).and(HS.lt(0.2)),     4) // Monsoon
+  .where(tropic.and(aridBase.neq(1)).and(HS.gte(0.8)),    4) // Monsoon
+  .where(southMask.and(aridBase.neq(1)).and(HS.lt(0.2)),  4)  // Monsoon
+  .where(southMask.and(aridBase.neq(1)).and(HS.gte(0.6)), 3)  // Mediterranean
+  .where(hottestC_global.lt(15).or(coldestC_global.lt(-20)),  7) // no aridity
+  .rename('climateClass');
 
 function classifySummer(tC) {
   return ee.Image.constant(0)
@@ -154,7 +157,7 @@ var palette = keys.map(function(k){ return codeColorMap[k]; });
 var indices = codes.map(function(_, i){ return i; });
 
 // 5) Remap → mask → display (one layer only)
-var discreteLand = clim2000_flip
+var discreteLand = clim
   .remap(codes, indices, -1)  // any code not in `codes` → -1 (transparent)
   .rename('classIndex');
 
