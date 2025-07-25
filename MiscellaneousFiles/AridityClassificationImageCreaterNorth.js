@@ -100,7 +100,7 @@
 <body>
   <div class="grid">
     <!-- row 1: headers -->
-    <div class="header">Aridity Calculator</div>
+    <div class="header">Aridity Calculator for more than 5 degrees north of equator</div>
     <div class="header">Less than 40% of precipitation in 6 sunniest months (April – September)</div>
     <div class="header">40%–80% of precipitation in 6 sunniest months (April –September)</div>
     <div class="header">More than 80% of precipitation in 6 sunniest months (April –September)</div>
