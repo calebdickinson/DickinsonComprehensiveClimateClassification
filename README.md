@@ -78,9 +78,7 @@ The second part measures aridity zones.
 
 Aridity zones are measured using evapotraspiration.
 
-To see the exact method we used to determine aridity zones, please visit https://www.dickinsonclimate.com/classification.html
-
-The differences in ratios between mediterranean and monsoon may seem strange until you consider that evaporation rates are higher in the warmer months, therefore, the reason for a difference between these ratios (and their corresponding vegetation zones) is intuitive if you really think about it.
+To see the method we use to determine aridity zones, please visit https://www.dickinsonclimate.com/classification.html
 
 Aridity does not appear to be relevant to the classification of climates that fall within subarctic, arctic, superarctic, cold summer, very cold summer, freezing summer, or frigid summer zones.
 
@@ -90,9 +88,9 @@ H = Humid
 
 G = Semihumid
     
-W = Monsoon (If not arid desert and if > 80% of percipitation falls in the sunniest half of the year)
+W = Monsoon
 
-M = Mediterranean (If not arid desert and if < 40% of percipitation falls in the sunniest half of the year)
+M = Mediterranean
 
 S = Semiarid
 
