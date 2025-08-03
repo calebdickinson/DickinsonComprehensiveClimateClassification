@@ -1,20 +1,17 @@
-//A MAJOR ISSUE WITH ARIDITY CALCULATIONS WAS DISCOVERED
-//ONLY PROGRAMS WITH THIS MESSAGE AT THE TOP HAVE BEEN CORRECTED
-//THEREFORE ONLY THESE PROGRAMS CAN BE CONSIDERED VALID FOR CALCULATING ARIDITY
-// a) NASA/NEX-GDDP for warm/cold
-var future = ee.ImageCollection('NASA/NEX-GDDP')
+// a) NASA/NEX-GDDP
+var data = ee.ImageCollection('NASA/NEX-GDDP')
   .filter(ee.Filter.eq('scenario', 'rcp85'))
   .filter(ee.Filter.calendarRange(2099, 2100, 'year'));
-
+  
 // Convert tasmax and tasmin from Kelvin to Celsius
-var tasmax = future.select('tasmax')
+var tasmax = data.select('tasmax')
   .map(function(img) {
     return img
       .subtract(273.15)
       .rename('tasmaxC')
       .copyProperties(img, ['system:time_start']);
   });
-var tasmin = future.select('tasmin')
+var tasmin = data.select('tasmin')
   .map(function(img) {
     return img
       .subtract(273.15)
@@ -58,9 +55,9 @@ var coldestC_global = monthlyMeans
   .select('monthlyMean')
   .rename('coldestC');
 
-var prDaily   = future.select('pr'),
-    tmaxDaily = future.select('tasmax'),
-    tminDaily = future.select('tasmin'),
+var prDaily   = data.select('pr'),
+    tmaxDaily = data.select('tasmax'),
+    tminDaily = data.select('tasmin'),
     daysList  = ee.List([31,28,31,30,31,30,31,31,30,31,30,31]);
 
 var monthlyClim = ee.ImageCollection(
@@ -125,7 +122,7 @@ var indices = codes.map(function(_, i){ return i; });
 
 // 5) Remap → mask → display (one layer only)
 var discreteLand = clim
-  .remap(codes, indices, -1)  // any code not in `codes` → -1 (transparent)
+  .remap(codes, indices, -1)  // any code not in codes → -1 (transparent)
   .rename('classIndex');
 
 Map.addLayer(
