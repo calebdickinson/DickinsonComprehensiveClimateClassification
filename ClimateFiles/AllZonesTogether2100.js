@@ -5,20 +5,20 @@
 //1. LOAD & PREP 2100 RCP8.5 DATA
 // ----------------------------------------------------
 
-// a) NASA/NEX-GDDP for warm/cold
-var future = ee.ImageCollection('NASA/NEX-GDDP')
+// a) NASA/NEX-GDDP
+var data = ee.ImageCollection('NASA/NEX-GDDP')
   .filter(ee.Filter.eq('scenario', 'rcp85'))
-  .filter(ee.Filter.calendarRange(2100, 2100, 'year'));
+  .filter(ee.Filter.calendarRange(2099, 2100, 'year'));
 
 // Convert tasmax and tasmin from Kelvin to Celsius
-var tasmax = future.select('tasmax')
+var tasmax = data.select('tasmax')
   .map(function(img) {
     return img
       .subtract(273.15)
       .rename('tasmaxC')
       .copyProperties(img, ['system:time_start']);
   });
-var tasmin = future.select('tasmin')
+var tasmin = data.select('tasmin')
   .map(function(img) {
     return img
       .subtract(273.15)
@@ -47,13 +47,13 @@ var monthlyMeans = ee.ImageCollection(
 // Extract hottest-month and coldest-month rasters
 
 // Hottest‐month: pick the image with the highest monthlyMean at each pixel
-var hottestC_future = monthlyMeans
+var hottestC = monthlyMeans
   .qualityMosaic('monthlyMean')
   .select('monthlyMean')
   .rename('hottestC');
 
 // Coldest‐month: invert, mosaic, then invert back
-var coldestC_future = monthlyMeans
+var coldestC = monthlyMeans
   .map(function(img) {
     return img.multiply(-1).copyProperties(img);
   })
@@ -63,12 +63,9 @@ var coldestC_future = monthlyMeans
   .rename('coldestC');
 
 // b) NEX-GDDP for aridity
-var future = ee.ImageCollection('NASA/NEX-GDDP')
-    .filter(ee.Filter.eq('scenario','rcp85'))
-    .filter(ee.Filter.calendarRange(2100,2100,'year'));
-var prDaily   = future.select('pr');
-var tmaxDaily = future.select('tasmax');
-var tminDaily = future.select('tasmin');
+var prDaily   = data.select('pr');
+var tmaxDaily = data.select('tasmax');
+var tminDaily = data.select('tasmin');
 var months   = ee.List.sequence(1,12);
 var daysList = ee.List([31,28,31,30,31,30,31,31,30,31,30,31]);
 
@@ -168,8 +165,8 @@ function classifyCold(tC) {
     .rename('coldZone');
 }
 
-var warmComb = classifySummer(hottestC_future);
-var coldComb = classifyCold(coldestC_future);
+var warmComb = classifySummer(hottestC);
+var coldComb = classifyCold(coldestC);
 
 // --------------------------------------------------
 // 3. BUILD COMBINED ZONE (with aridity) + PALETTE
