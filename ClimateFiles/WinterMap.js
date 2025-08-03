@@ -1,46 +1,65 @@
-var era5 = ee.ImageCollection('ECMWF/ERA5/MONTHLY')
-  .filterDate('2000-01-01', '2005-12-31')
-  .select('mean_2m_air_temperature')
+// a) NASA/NEX-GDDP
+var data = ee.ImageCollection('NASA/NEX-GDDP')
+  .filter(ee.Filter.eq('scenario', 'historical'))
+  .filter(ee.Filter.calendarRange(1995, 2005, 'year'));
+
+// Convert tasmax and tasmin from Kelvin to Celsius
+var tasmax = data.select('tasmax')
   .map(function(img) {
-    return img.subtract(273.15).rename('tempC')
-              .set('system:time_start', img.get('system:time_start'));
+    return img
+      .subtract(273.15)
+      .rename('tasmaxC')
+      .copyProperties(img, ['system:time_start']);
+  });
+var tasmin = data.select('tasmin')
+  .map(function(img) {
+    return img
+      .subtract(273.15)
+      .rename('tasminC')
+      .copyProperties(img, ['system:time_start']);
   });
 
+// Build monthly means by averaging tasmax/tasmin
 var months = ee.List.sequence(1, 12);
-
 var monthlyMeans = ee.ImageCollection(
   months.map(function(m) {
-    var mImg = era5.filter(ee.Filter.calendarRange(m, m, 'month')).mean();
-    return mImg.set('month', m).rename('tempC');
+    var maxMean = tasmax
+      .filter(ee.Filter.calendarRange(m, m, 'month'))
+      .mean();
+    var minMean = tasmin
+      .filter(ee.Filter.calendarRange(m, m, 'month'))
+      .mean();
+    // daily‐mean → monthly‐mean
+    return maxMean.add(minMean)
+                  .divide(2)
+                  .rename('monthlyMean')
+                  .set('month', m);
   })
 );
 
-var hottestC_global = monthlyMeans.qualityMosaic('tempC')
-                                  .select('tempC').rename('hottestC');
+// Extract hottest-month and coldest-month rasters
 
+// Hottest‐month: pick the image with the highest monthlyMean at each pixel
+var hottestC_global = monthlyMeans
+  .qualityMosaic('monthlyMean')
+  .select('monthlyMean')
+  .rename('hottestC');
+
+// Coldest‐month: invert, mosaic, then invert back
 var coldestC_global = monthlyMeans
-  .map(function(img){ return img.multiply(-1).copyProperties(img); })
-  .qualityMosaic('tempC')
+  .map(function(img) {
+    return img.multiply(-1).copyProperties(img);
+  })
+  .qualityMosaic('monthlyMean')
   .multiply(-1)
-  .select('tempC').rename('coldestC');
-
-function classifySummer(tC) {
-  return ee.Image.constant(0)
-    .where(tC.gte(40).and(tC.lt(45)),  9) // X1: Extreme Hyperthermal Summer
-    .where(tC.gte(35).and(tC.lt(40)),  8) // Z2: Hyperthermal Summer
-    .where(tC.gte(30).and(tC.lt(35)),  7) // Z1: Scorching Hot Summer
-    .where(tC.gte(25).and(tC.lt(30)),  6) // A2: Very Hot Summer
-    .where(tC.gte(20).and(tC.lt(25)),  5) // A1: Hot Summer
-    .where(tC.gte(15).and(tC.lt(20)),  4) // B2: Mild Summer
-    .where(tC.gte(10).and(tC.lt(15)),  3) // B1: Cold Summer
-    .where(tC.gte(5).and(tC.lt(10)),   2) // C2: Very Cold Summer
-    .where(tC.gte(0).and(tC.lt(5)),    1) // C1: Freezing Summer
-    .where(tC.lt(0),                   0) // Y: Frigid Summer
-    .rename('warmZone');
-}
+  .select('monthlyMean')
+  .rename('coldestC');
 
 function classifyCold(tC) {
   return ee.Image.constant(0)
+    .where(tC.gte(50).and(tC.lt(60)),   11) // H: Hypercaneal
+    .where(tC.gte(40).and(tC.lt(50)),   10) // X: Uninhabitable
+    .where(tC.gte(30).and(tC.lt(40)),   9) // Z: Ultratropical
     .where(tC.gte(20).and(tC.lt(30)),   8) // A: Supertropical
     .where(tC.gte(10).and(tC.lt(20)),   7) // B: Tropical
     .where(tC.gte(0).and(tC.lt(10)),    6) // C: Subtropical
@@ -52,20 +71,21 @@ function classifyCold(tC) {
     .rename('coldZone');
 }
 
-var warmZone = classifySummer(hottestC_global);
 var coldZone = classifyCold(coldestC_global);
 
 var codeColorMap = {
+  11: "#0000FF", // H: Hypercaneal
+  10: "#0000FF", // X: Uninhabitable
+  9: "#000000", // Z: Ultratropical
   8: "#C71585", // A: Supertropical
-  7: "#FF0000", // A: Tropical
-  6: "#FFA500", // B: Subtropical
+  7: "#FF0000", // B: Tropical
+  6: "#FFA500", // C: Subtropical
   5: "#008800", // D: Temperate
   4: "#004400", // E: Continental
   3: "#0000FF", // F: Subarctic
   2: "#FFC0CB", // G: Arctic
   1: "#000000"  // Y: Superarctic
 };
-
 // 4) Turn map into parallel arrays
 var keys    = Object.keys(codeColorMap);
 var codes   = keys.map(function(k){ return parseInt(k, 10); });
@@ -74,7 +94,7 @@ var indices = codes.map(function(_, i){ return i; });
 
 // 5) Remap → mask → display (one layer only)
 var discreteLand = coldZone
-  .remap(codes, indices, -1)
+  .remap(codes, indices)
   .rename('classIndex');
 
 Map.addLayer(
