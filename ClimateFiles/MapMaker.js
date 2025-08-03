@@ -1,38 +1,65 @@
-var era5 = ee.ImageCollection('ECMWF/ERA5/MONTHLY')
-  .filterDate('2000-01-01', '2005-12-31')
-  .select('mean_2m_air_temperature')
+// a) NASA/NEX-GDDP
+var data = ee.ImageCollection('NASA/NEX-GDDP')
+  .filter(ee.Filter.eq('scenario', 'rcp85'))
+  .filter(ee.Filter.calendarRange(2100, 2100, 'year'));
+
+// Convert tasmax and tasmin from Kelvin to Celsius
+var tasmax = data.select('tasmax')
   .map(function(img) {
-    return img.subtract(273.15).rename('tempC')
-              .set('system:time_start', img.get('system:time_start'));
+    return img
+      .subtract(273.15)
+      .rename('tasmaxC')
+      .copyProperties(img, ['system:time_start']);
+  });
+var tasmin = data.select('tasmin')
+  .map(function(img) {
+    return img
+      .subtract(273.15)
+      .rename('tasminC')
+      .copyProperties(img, ['system:time_start']);
   });
 
+// Build monthly means by averaging tasmax/tasmin
 var months = ee.List.sequence(1, 12);
-
 var monthlyMeans = ee.ImageCollection(
   months.map(function(m) {
-    var mImg = era5.filter(ee.Filter.calendarRange(m, m, 'month')).mean();
-    return mImg.set('month', m).rename('tempC');
+    var maxMean = tasmax
+      .filter(ee.Filter.calendarRange(m, m, 'month'))
+      .mean();
+    var minMean = tasmin
+      .filter(ee.Filter.calendarRange(m, m, 'month'))
+      .mean();
+    // daily‐mean → monthly‐mean
+    return maxMean.add(minMean)
+                  .divide(2)
+                  .rename('monthlyMean')
+                  .set('month', m);
   })
 );
 
-var hottestC_global = monthlyMeans.qualityMosaic('tempC')
-                                  .select('tempC').rename('hottestC');
+// Extract hottest-month and coldest-month rasters
 
-var coldestC_global = monthlyMeans
-  .map(function(img){ return img.multiply(-1).copyProperties(img); })
-  .qualityMosaic('tempC')
+// Hottest‐month: pick the image with the highest monthlyMean at each pixel
+var hottestC_future = monthlyMeans
+  .qualityMosaic('monthlyMean')
+  .select('monthlyMean')
+  .rename('hottestC');
+
+// Coldest‐month: invert, mosaic, then invert back
+var coldestC_future = monthlyMeans
+  .map(function(img) {
+    return img.multiply(-1).copyProperties(img);
+  })
+  .qualityMosaic('monthlyMean')
   .multiply(-1)
-  .select('tempC').rename('coldestC');
+  .select('monthlyMean')
+  .rename('coldestC');
 
-var hist = ee.ImageCollection('NASA/NEX-GDDP')
-  .filter(ee.Filter.eq('scenario', 'historical'))
-  .filter(ee.Filter.eq('model', 'ACCESS1-0'))
-  .filter(ee.Filter.calendarRange(2000, 2005, 'year'));
-
-var prDaily   = hist.select('pr'),
-    tmaxDaily = hist.select('tasmax'),
-    tminDaily = hist.select('tasmin'),
-    daysList  = ee.List([31,28,31,30,31,30,31,31,30,31,30,31]);
+var prDaily   = data.select('pr');
+var tmaxDaily = data.select('tasmax');
+var tminDaily = data.select('tasmin');
+var months   = ee.List.sequence(1,12);
+var daysList = ee.List([31,28,31,30,31,30,31,31,30,31,30,31]);
 
 var monthlyClim = ee.ImageCollection(
   months.map(function(m){
@@ -77,9 +104,10 @@ var P_ann    = monthlyClim.select('pr' ).sum().rename('P_ann'),
   .where(southMask.and(aridBase.neq(1)).and(HS.gte(0.6)), 3)  // Mediterranean
   .rename('climateClass');
 
+
 function classifySummer(tC) {
   return ee.Image.constant(0)
-    .where(tC.gte(40).and(tC.lt(45)),  9) // X1: Extreme Hyperthermal Summer
+    .where(tC.gte(40).and(tC.lt(50)),  9) // X: Extreme Hyperthermal Summer
     .where(tC.gte(35).and(tC.lt(40)),  8) // Z2: Hyperthermal Summer
     .where(tC.gte(30).and(tC.lt(35)),  7) // Z1: Scorching Hot Summer
     .where(tC.gte(25).and(tC.lt(30)),  6) // A2: Very Hot Summer
@@ -89,11 +117,11 @@ function classifySummer(tC) {
     .where(tC.gte(5).and(tC.lt(10)),   2) // C2: Very Cold Summer
     .where(tC.gte(0).and(tC.lt(5)),    1) // C1: Freezing Summer
     .where(tC.lt(0),                   0) // Y: Frigid Summer
-    .rename('warmZone');
 }
 
 function classifyCold(tC) {
   return ee.Image.constant(0)
+    .where(tC.gte(30).and(tC.lt(40)),   9) // Z: Ultratropical
     .where(tC.gte(20).and(tC.lt(30)),   8) // A: Supertropical
     .where(tC.gte(10).and(tC.lt(20)),   7) // B: Tropical
     .where(tC.gte(0).and(tC.lt(10)),    6) // C: Subtropical
@@ -102,26 +130,29 @@ function classifyCold(tC) {
     .where(tC.gte(-30).and(tC.lt(-20)), 3) // F: Subarctic
     .where(tC.gte(-40).and(tC.lt(-30)), 2) // G: Arctic
     .where(tC.lt(-40),                  1) // Y: Superarctic
-    .rename('coldZone');
 }
 
-var warmComb = classifySummer(hottestC_global),
-    coldComb = classifyCold(coldestC_global);
+// classify highest‐month temps
+var summerClass = classifySummer(hottestC_future);
 
-var combined = coldComb
-    .multiply(100)                
-    .add(clim.multiply(10))
-    .add(warmComb)    
-    .rename('combined');
+// classify lowest‐month temps
+var coldClass   = classifyCold(coldestC_future);
 
+// combine
+var combined = coldClass
+  .multiply(100)                
+  .add(clim.multiply(10))
+  .add(summerClass)    
+  .rename('combined');
+  
 var codeColorMap = {
-  714: "#ff0000",
-  724: "#ff8800",
-  734: "#ffff00",
-  744: "#ff00ff",
-  754: "#00ff00",
-  764: "#008800",
-  };
+  617: "#ff0000",
+  627: "#ff8800",
+  637: "#ffff00",
+  647: "#ff00ff",
+  657: "#00ff00",
+  667: "#008800",
+};
 
 // 4) Turn map into parallel arrays
 var keys    = Object.keys(codeColorMap);
@@ -141,5 +172,5 @@ Map.addLayer(
   },
   'Climate',
   true,   // show layer
-  0.8     // 80% opacity
+  0.7     // 70% opacity
 );
