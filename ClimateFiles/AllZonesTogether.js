@@ -365,7 +365,7 @@ Map.onClick(function(coords) {
   }).get('mask').evaluate(function(inZone) {
     if (inZone) {
       // a) inside aridity domain → fetch actual class
-      clim2000_flip.reduceRegion({
+      clim.reduceRegion({
         reducer: ee.Reducer.first(),
         geometry: pt,
         scale: 10000
