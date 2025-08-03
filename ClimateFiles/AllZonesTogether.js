@@ -92,12 +92,12 @@ var P_ann        = monthlyClim.select('pr' ).sum().rename('P_ann'),
                      .select('pr').sum().rename('P_highSun'),
     HS       = P_hs.divide(P_ann).rename('HS_ratio'),
     clim = aridBase
-                     .where(northMask.and(aridBase.neq(1)).and(HS.gte(0.8)), 4) // Monsoon
-                     .where(northMask.and(aridBase.neq(1)).and(HS.lt(0.4)),  5) // Mediterranean
-                     .where(tropic.and(aridBase.neq(1)).and(HS.lt(0.2)),     4) // Monsoon
-                     .where(tropic.and(aridBase.neq(1)).and(HS.gte(0.8)),    4) // Monsoon
-                     .where(southMask.and(aridBase.neq(1)).and(HS.lt(0.2)),  4)  // Monsoon
-                     .where(southMask.and(aridBase.neq(1)).and(HS.gte(0.6)), 5)  // Mediterranean
+                     .where(northMask.and(aridBase.neq(0)).and(HS.gte(0.8)), 4) // Monsoon
+                     .where(northMask.and(aridBase.neq(0)).and(HS.lt(0.4)),  5) // Mediterranean
+                     .where(tropic.and(aridBase.neq(0)).and(HS.lt(0.2)),     4) // Monsoon
+                     .where(tropic.and(aridBase.neq(0)).and(HS.gte(0.8)),    4) // Monsoon
+                     .where(southMask.and(aridBase.neq(0)).and(HS.lt(0.2)),  4)  // Monsoon
+                     .where(southMask.and(aridBase.neq(0)).and(HS.gte(0.6)), 5)  // Mediterranean
                      .rename('climateClass');
 
 // --------------------------------------------------
