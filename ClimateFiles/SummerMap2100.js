@@ -1,17 +1,17 @@
-// a) NASA/NEX-GDDP for warm/cold
-var future = ee.ImageCollection('NASA/NEX-GDDP')
+// a) NASA/NEX-GDDP
+var data = ee.ImageCollection('NASA/NEX-GDDP')
   .filter(ee.Filter.eq('scenario', 'rcp85'))
   .filter(ee.Filter.calendarRange(2099, 2100, 'year'));
 
 // Convert tasmax and tasmin from Kelvin to Celsius
-var tasmax = future.select('tasmax')
+var tasmax = data.select('tasmax')
   .map(function(img) {
     return img
       .subtract(273.15)
       .rename('tasmaxC')
       .copyProperties(img, ['system:time_start']);
   });
-var tasmin = future.select('tasmin')
+var tasmin = data.select('tasmin')
   .map(function(img) {
     return img
       .subtract(273.15)
@@ -55,11 +55,6 @@ var coldestC_global = monthlyMeans
   .select('monthlyMean')
   .rename('coldestC');
 
-var hist2000 = ee.ImageCollection('NASA/NEX-GDDP')
-  .filter(ee.Filter.eq('scenario', 'historical'))
-  .filter(ee.Filter.eq('model', 'ACCESS1-0'))
-  .filter(ee.Filter.calendarRange(2000, 2005, 'year'));
-
 function classifySummer(tC) {
   return ee.Image.constant(0)
     .where(tC.gte(100).and(tC.lt(150)),  11) // Boiling
@@ -78,10 +73,6 @@ function classifySummer(tC) {
 }
 
 var warmZone = classifySummer(hottestC_global);
-
-var landMask = ee.Image('NOAA/NGDC/ETOPO1')
-  .select('bedrock')
-  .gte(0);  // ≥0 m = land (includes ice & lakes)
 
 var codeColorMap = {
   11: "#888888", // Boiling
