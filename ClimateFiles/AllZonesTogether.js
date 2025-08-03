@@ -5,40 +5,69 @@
 // 1. LOAD & PREP 2000–2005 HISTORICAL DATA
 // ----------------------------------------------------
 
-// a) ERA5 for warm/cold
-var era5 = ee.ImageCollection('ECMWF/ERA5/MONTHLY')
-  .filterDate('2000-01-01','2005-12-31')
-  .select('mean_2m_air_temperature')
-  .map(function(img){
-    return img.subtract(273.15)
-              .rename('tempC')
-              .set('system:time_start', img.get('system:time_start'));
+// a) NASA/NEX-GDDP
+var data = ee.ImageCollection('NASA/NEX-GDDP')
+  .filter(ee.Filter.eq('scenario', 'historical'))
+  .filter(ee.Filter.calendarRange(1995, 2005, 'year'));
+
+// Convert tasmax and tasmin from Kelvin to Celsius
+var tasmax = data.select('tasmax')
+  .map(function(img) {
+    return img
+      .subtract(273.15)
+      .rename('tasmaxC')
+      .copyProperties(img, ['system:time_start']);
   });
-var months = ee.List.sequence(1,12);
+var tasmin = data.select('tasmin')
+  .map(function(img) {
+    return img
+      .subtract(273.15)
+      .rename('tasminC')
+      .copyProperties(img, ['system:time_start']);
+  });
+
+// Build monthly means by averaging tasmax/tasmin
+var months = ee.List.sequence(1, 12);
 var monthlyMeans = ee.ImageCollection(
-  months.map(function(m){
-    var mImg = era5.filter(ee.Filter.calendarRange(m,m,'month')).mean();
-    return mImg.set('month',m).rename('tempC');
+  months.map(function(m) {
+    var maxMean = tasmax
+      .filter(ee.Filter.calendarRange(m, m, 'month'))
+      .mean();
+    var minMean = tasmin
+      .filter(ee.Filter.calendarRange(m, m, 'month'))
+      .mean();
+    // daily‐mean → monthly‐mean
+    return maxMean.add(minMean)
+                  .divide(2)
+                  .rename('monthlyMean')
+                  .set('month', m);
   })
 );
-var hottestC_global = monthlyMeans
-  .qualityMosaic('tempC')
-  .select('tempC').rename('hottestC');
-var coldestC_global = monthlyMeans
-  .map(function(img){ return img.multiply(-1).copyProperties(img); })
-  .qualityMosaic('tempC')
+
+// Extract hottest-month and coldest-month rasters
+
+// Hottest‐month: pick the image with the highest monthlyMean at each pixel
+var hottestC = monthlyMeans
+  .qualityMosaic('monthlyMean')
+  .select('monthlyMean')
+  .rename('hottestC');
+
+// Coldest‐month: invert, mosaic, then invert back
+var coldestC = monthlyMeans
+  .map(function(img) {
+    return img.multiply(-1).copyProperties(img);
+  })
+  .qualityMosaic('monthlyMean')
   .multiply(-1)
-  .select('tempC').rename('coldestC');
+  .select('monthlyMean')
+  .rename('coldestC');
 
 // b) NEX-GDDP for aridity
-var hist = ee.ImageCollection('NASA/NEX-GDDP')
-  .filter(ee.Filter.eq('scenario','historical'))
-  .filter(ee.Filter.eq('model','ACCESS1-0'))
-  .filter(ee.Filter.calendarRange(2000,2005,'year'));
-var prDaily   = hist.select('pr'),
-    tmaxDaily = hist.select('tasmax'),
-    tminDaily = hist.select('tasmin'),
-    daysList  = ee.List([31,28,31,30,31,30,31,31,30,31,30,31]);
+var prDaily   = data.select('pr');
+var tmaxDaily = data.select('tasmax');
+var tminDaily = data.select('tasmin');
+var months   = ee.List.sequence(1,12);
+var daysList = ee.List([31,28,31,30,31,30,31,31,30,31,30,31]);
 
 var monthlyClim = ee.ImageCollection(
   months.map(function(m){
@@ -132,8 +161,8 @@ function classifyCold(tC) {
     .rename('coldZone');
 }
 
-var warmComb = classifySummer(hottestC_global),
-    coldComb = classifyCold(coldestC_global);
+var warmComb = classifySummer(hottestC),
+    coldComb = classifyCold(coldestC);
 
 // --------------------------------------------------
 // 3. BUILD COMBINED ZONE (with aridity) + PALETTE
