@@ -1,7 +1,7 @@
 // a) NASA/NEX-GDDP
 var data = ee.ImageCollection('NASA/NEX-GDDP')
-  .filter(ee.Filter.eq('scenario', 'rcp85'))
-  .filter(ee.Filter.calendarRange(2100, 2100, 'year'));
+  .filter(ee.Filter.eq('scenario', 'historical'))
+  .filter(ee.Filter.calendarRange(1995, 2005, 'year'));
 
 // Convert tasmax and tasmin from Kelvin to Celsius
 var tasmax = data.select('tasmax')
