@@ -1,17 +1,17 @@
 // a) NASA/NEX-GDDP for warm/cold
-var future = ee.ImageCollection('NASA/NEX-GDDP')
+var data = ee.ImageCollection('NASA/NEX-GDDP')
   .filter(ee.Filter.eq('scenario', 'rcp85'))
   .filter(ee.Filter.calendarRange(2099, 2100, 'year'));
 
 // Convert tasmax and tasmin from Kelvin to Celsius
-var tasmax = future.select('tasmax')
+var tasmax = data.select('tasmax')
   .map(function(img) {
     return img
       .subtract(273.15)
       .rename('tasmaxC')
       .copyProperties(img, ['system:time_start']);
   });
-var tasmin = future.select('tasmin')
+var tasmin = data.select('tasmin')
   .map(function(img) {
     return img
       .subtract(273.15)
@@ -55,21 +55,6 @@ var coldestC_global = monthlyMeans
   .select('monthlyMean')
   .rename('coldestC');
 
-function classifySummer(tC) {
-  return ee.Image.constant(0)
-    .where(tC.gte(40).and(tC.lt(45)),  9) // X1: Extreme Hyperthermal Summer
-    .where(tC.gte(35).and(tC.lt(40)),  8) // Z2: Hyperthermal Summer
-    .where(tC.gte(30).and(tC.lt(35)),  7) // Z1: Scorching Hot Summer
-    .where(tC.gte(25).and(tC.lt(30)),  6) // A2: Very Hot Summer
-    .where(tC.gte(20).and(tC.lt(25)),  5) // A1: Hot Summer
-    .where(tC.gte(15).and(tC.lt(20)),  4) // B2: Mild Summer
-    .where(tC.gte(10).and(tC.lt(15)),  3) // B1: Cold Summer
-    .where(tC.gte(5).and(tC.lt(10)),   2) // C2: Very Cold Summer
-    .where(tC.gte(0).and(tC.lt(5)),    1) // C1: Freezing Summer
-    .where(tC.lt(0),                   0) // Y: Frigid Summer
-    .rename('warmZone');
-}
-
 function classifyCold(tC) {
   return ee.Image.constant(0)
     .where(tC.gte(50).and(tC.lt(60)),   11) // H: Hypercaneal
@@ -86,12 +71,7 @@ function classifyCold(tC) {
     .rename('coldZone');
 }
 
-var warmZone = classifySummer(hottestC_global);
 var coldZone = classifyCold(coldestC_global);
-
-var landMask = ee.Image('NOAA/NGDC/ETOPO1')
-  .select('bedrock')
-  .gte(0);  // ≥0 m = land (includes ice & lakes)
 
 var codeColorMap = {
   11: "#0000FF", // H: Hypercaneal
