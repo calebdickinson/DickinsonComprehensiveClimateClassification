@@ -1,17 +1,17 @@
-// a) NASA/NEX-GDDP for warm/cold
-var future = ee.ImageCollection('NASA/NEX-GDDP')
+// a) NASA/NEX-GDDP
+var data = ee.ImageCollection('NASA/NEX-GDDP')
   .filter(ee.Filter.eq('scenario', 'rcp85'))
   .filter(ee.Filter.calendarRange(2100, 2100, 'year'));
 
 // Convert tasmax and tasmin from Kelvin to Celsius
-var tasmax = future.select('tasmax')
+var tasmax = data.select('tasmax')
   .map(function(img) {
     return img
       .subtract(273.15)
       .rename('tasmaxC')
       .copyProperties(img, ['system:time_start']);
   });
-var tasmin = future.select('tasmin')
+var tasmin = data.select('tasmin')
   .map(function(img) {
     return img
       .subtract(273.15)
@@ -55,13 +55,9 @@ var coldestC_future = monthlyMeans
   .select('monthlyMean')
   .rename('coldestC');
 
-// b) NEX-GDDP for aridity
-var future = ee.ImageCollection('NASA/NEX-GDDP')
-    .filter(ee.Filter.eq('scenario','rcp85'))
-    .filter(ee.Filter.calendarRange(2100,2100,'year'));
-var prDaily   = future.select('pr');
-var tmaxDaily = future.select('tasmax');
-var tminDaily = future.select('tasmin');
+var prDaily   = data.select('pr');
+var tmaxDaily = data.select('tasmax');
+var tminDaily = data.select('tasmin');
 var months   = ee.List.sequence(1,12);
 var daysList = ee.List([31,28,31,30,31,30,31,31,30,31,30,31]);
 
