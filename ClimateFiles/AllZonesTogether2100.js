@@ -107,7 +107,7 @@ var P_ann        = monthlyClim.select('pr' ).sum().rename('P_ann'),
                      .map(function(img){return img.select('tmeanC').multiply(-1);})
                      .qualityMosaic('tmeanC')
                      .select('tmeanC').multiply(-1).rename('histColdest'),
-    validMask    = histColdest.gte(-20).and(histHottest.gte(15)),
+    validMask    = histColdest.gte(-35).and(histHottest.gte(10)),
     AI       = P_ann.divide(PET_ann).rename('AI'),
     aridBase     = ee.Image(3)
                      .where(AI.lt(0.0036),2)
