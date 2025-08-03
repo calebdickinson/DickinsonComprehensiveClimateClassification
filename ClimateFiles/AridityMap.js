@@ -80,34 +80,6 @@ var P_ann    = monthlyClim.select('pr' ).sum().rename('P_ann'),
   .where(southMask.and(aridBase.neq(1)).and(HS.gte(0.6)), 3)  // Mediterranean
   .where(hottestC_global.lt(15).or(coldestC_global.lt(-20)),  7) // no aridity
   .rename('climateClass');
-  
-function classifySummer(tC) {
-  return ee.Image.constant(0)
-    .where(tC.gte(40).and(tC.lt(45)),  9) // X1: Extreme Hyperthermal Summer
-    .where(tC.gte(35).and(tC.lt(40)),  8) // Z2: Hyperthermal Summer
-    .where(tC.gte(30).and(tC.lt(35)),  7) // Z1: Scorching Hot Summer
-    .where(tC.gte(25).and(tC.lt(30)),  6) // A2: Very Hot Summer
-    .where(tC.gte(20).and(tC.lt(25)),  5) // A1: Hot Summer
-    .where(tC.gte(15).and(tC.lt(20)),  4) // B2: Mild Summer
-    .where(tC.gte(10).and(tC.lt(15)),  3) // B1: Cold Summer
-    .where(tC.gte(5).and(tC.lt(10)),   2) // C2: Very Cold Summer
-    .where(tC.gte(0).and(tC.lt(5)),    1) // C1: Freezing Summer
-    .where(tC.lt(0),                   0) // Y: Frigid Summer
-    .rename('warmZone');
-}
-
-function classifyCold(tC) {
-  return ee.Image.constant(0)
-    .where(tC.gte(20).and(tC.lt(30)),   8) // A: Supertropical
-    .where(tC.gte(10).and(tC.lt(20)),   7) // B: Tropical
-    .where(tC.gte(0).and(tC.lt(10)),    6) // C: Subtropical
-    .where(tC.gte(-10).and(tC.lt(0)),   5) // D: Temperate
-    .where(tC.gte(-20).and(tC.lt(-10)), 4) // E: Continental
-    .where(tC.gte(-30).and(tC.lt(-20)), 3) // F: Subarctic
-    .where(tC.gte(-40).and(tC.lt(-30)), 2) // G: Arctic
-    .where(tC.lt(-40),                  1) // Y: Superarctic
-    .rename('coldZone');
-}
 
 var codeColorMap = {
   1: "#FF0000", // D: Arid Desert
