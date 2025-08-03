@@ -1019,7 +1019,7 @@ var table = ui.Chart.feature.byFeature({
 .setChartType('Table')
 .setOptions({
   title:    'City Climate Classifications',
-  pageSize: 455,
+  pageSize: 500,
   hAxis:    { title: 'City' },
   vAxis:    { title: 'Classification' }
 });
