@@ -58,7 +58,7 @@ var maxPx  = 1e13;
 Export.image.toAsset({
   image:       hottestC,
   description: 'HottestC_1971_2000',
-  assetId:     'users/calebisaacdickinson/DickinsonComprehensiveClimateClassification/CurrentClimate/HottestC_1971_2000',
+  assetId:     'HottestC_1971_2000',
   region:      region,
   scale:       scale,
   maxPixels:   maxPx
@@ -68,7 +68,7 @@ Export.image.toAsset({
 Export.image.toAsset({
   image:       coldestC,
   description: 'ColdestC_1971_2000',
-  assetId:     'users/calebisaacdickinson/DickinsonComprehensiveClimateClassification/CurrentClimate/ColdestC_1971_2000',
+  assetId:     'ColdestC_1971_2000',
   region:      region,
   scale:       scale,
   maxPixels:   maxPx
