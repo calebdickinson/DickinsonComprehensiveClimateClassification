@@ -10,57 +10,8 @@ var data = ee.ImageCollection('NASA/NEX-GDDP')
   .filter(ee.Filter.eq('scenario', 'historical'))
   .filter(ee.Filter.calendarRange(1995, 2005, 'year'));
 
-// Convert tasmax and tasmin from Kelvin to Celsius
-var tasmax = data.select('tasmax')
-  .map(function(img) {
-    return img
-      .subtract(273.15)
-      .rename('tasmaxC')
-      .copyProperties(img, ['system:time_start']);
-  });
-var tasmin = data.select('tasmin')
-  .map(function(img) {
-    return img
-      .subtract(273.15)
-      .rename('tasminC')
-      .copyProperties(img, ['system:time_start']);
-  });
-
-// Build monthly means by averaging tasmax/tasmin
-var months = ee.List.sequence(1, 12);
-var monthlyMeans = ee.ImageCollection(
-  months.map(function(m) {
-    var maxMean = tasmax
-      .filter(ee.Filter.calendarRange(m, m, 'month'))
-      .mean();
-    var minMean = tasmin
-      .filter(ee.Filter.calendarRange(m, m, 'month'))
-      .mean();
-    // daily‐mean → monthly‐mean
-    return maxMean.add(minMean)
-                  .divide(2)
-                  .rename('monthlyMean')
-                  .set('month', m);
-  })
-);
-
-// Extract hottest-month and coldest-month rasters
-
-// Hottest‐month: pick the image with the highest monthlyMean at each pixel
-var hottestC = monthlyMeans
-  .qualityMosaic('monthlyMean')
-  .select('monthlyMean')
-  .rename('hottestC');
-
-// Coldest‐month: invert, mosaic, then invert back
-var coldestC = monthlyMeans
-  .map(function(img) {
-    return img.multiply(-1).copyProperties(img);
-  })
-  .qualityMosaic('monthlyMean')
-  .multiply(-1)
-  .select('monthlyMean')
-  .rename('coldestC');
+var hottestC = ee.Image('projects/ordinal-crowbar-459807-m2/assets/HottestC_1971_2000');
+var coldestC = ee.Image('projects/ordinal-crowbar-459807-m2/assets/ColdestC_1971_2000');
 
 // b) NEX-GDDP for aridity
 var prDaily   = data.select('pr');
