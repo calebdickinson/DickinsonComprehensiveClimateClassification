@@ -727,7 +727,6 @@ Tropical Humid Hot Summer (BHA1):
 
 San José, Costa Rica	(today)  
 Kingston, Norfolk Island (AU)	(today)  
-Wellington, New Zealand	(2100)  
 Avarua, Cook Islands (NZ)	(2100)  
 
 Tropical Semihumid Hot Summer (BGA1):  
@@ -764,8 +763,11 @@ Ceuta, Ceuta (ES)	(today)
 Ponta Delgada, Azores (PT)	(today)  
 Funchal, Madeira (PT)	(today)  
 San Francisco–Oakland, CA	(2100)  
+Wellington, New Zealand	(2100)  
+Cape Town, South Africa	(2100)  
 Funchal, Madeira (PT)	(2100)  
-Lompoc, CA (2100)
+Lompoc, CA (2100)  
+Hanga Roa, Easter Island (CL)	(2100)  
 
 Tropical Semiarid Hot Summer (BSA1):  
 <img src="images/BSA1One.jpg"/>
@@ -774,9 +776,7 @@ Tropical Semiarid Hot Summer (BSA1):
 Nairobi, Kenya	(today)  
 Jamestown, St Helena (UK)	(today)  
 Hanga Roa, Easter Island (CL)	(today)  
-Cape Town, South Africa	(2100)  
 Adamstown, Pitcairn Islands (UK)	(2100)  
-Hanga Roa, Easter Island (CL)	(2100)  
 
 Tropical Arid Desert Hot Summer (BDA1):  
 <img src="images/BDA1.jpg"/>
