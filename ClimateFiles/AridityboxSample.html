@@ -4,26 +4,26 @@
   <meta charset="UTF-8">
   <title>Climate Buttons (adjusted colors)</title>
   <style>
-    .climate-buttons {
+    .box {
+      /* custom properties must start with -- */
       --outer-col-width: 200px;
       --center-col-width: 300px;
-      --btn-height:      100px;
-      --gap:             20px;
-      --radius:          40px;
+      --btn-height: 100px;
+      --gap: 20px;
+      --radius: 40px;
     }
-
-    .climate-buttons .ariditybox-border-outer {
+    .box .ariditybox-border-outer {
       margin: 50px auto;
       display: inline-block;
       border: 3px solid black;
       padding: 8px;
     }
-    .climate-buttons .ariditybox-border-inner {
+    .box .ariditybox-border-inner {
       display: inline-block;
       border: 3px solid black;
       padding: var(--gap);
     }
-    .climate-buttons .ariditybox-grid {
+    .box .ariditybox-grid {
       display: grid;
       grid-template-columns:
         var(--outer-col-width)
@@ -39,7 +39,7 @@
       align-content: center;
       margin: 0;
     }
-    .climate-buttons .ariditybox {
+    .box .ariditybox {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -53,42 +53,40 @@
       transition: transform 0.2s ease;
       pointer-events: auto;
     }
-    .climate-buttons .ariditybox:not(.disabled):hover {
+    .box .ariditybox:not(.disabled):hover {
       transform: scale(1.05);
     }
-    .climate-buttons .ariditybox.disabled {
+    .box .ariditybox.disabled {
       background: #444444 !important;
       pointer-events: none;
       cursor: default;
     }
-
-    .climate-buttons .ariditybox-humid {
+    .box .ariditybox-humid {
       grid-row: 1;
       grid-column: 2;
       background: #007500;
     }
-    .climate-buttons .ariditybox-semihumid {
+    .box .ariditybox-semihumid {
       grid-row: 2;
       grid-column: 2;
       background: lightgreen;
     }
-    .climate-buttons .ariditybox-semiarid {
+    .box .ariditybox-semiarid {
       grid-row: 3;
       grid-column: 2;
       background: orange;
     }
-
-    .climate-buttons .ariditybox-mediterranean {
+    .box .ariditybox-mediterranean {
       grid-row: 1 / span 3;
       grid-column: 1;
       background: #eeee00;
     }
-    .climate-buttons .ariditybox-monsoon {
+    .box .ariditybox-monsoon {
       grid-row: 1 / span 3;
       grid-column: 3;
       background: purple;
     }
-    .climate-buttons .ariditybox-arid {
+    .box .ariditybox-arid {
       grid-row: 4;
       grid-column: 1 / span 3;
       background: red;
@@ -96,7 +94,7 @@
   </style>
 </head>
 <body>
-  <div class="climate-buttons">
+  <div class="box">
     <div class="ariditybox-border-outer">
       <div class="ariditybox-border-inner">
         <div class="ariditybox-grid">
