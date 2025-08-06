@@ -849,6 +849,7 @@ Subtropical Arid Desert Hyperthermal Summer (CDZ2):
 El Menia, Algeria (today)  
 Tehran, Iran	(2100)  
 Ashgabat, Turkmenistan	(2100)  
+Batman, Turkey (2100)  
 
 ### Subtropical Scorching Hot Summer Climates (C-Z1):  
 
@@ -934,7 +935,7 @@ Baku, Azerbaijan	(2100)
 Madrid, Spain	(2100)  
 Tashkent, Uzbekistan	(2100)  
 Borujerd, Iran (2100)  
-Batman, Turkey (2100)  
+Ankara, Turkey (2100)  
 Bucharest, Romania	(2100)  
 
 ### Subtropical Very Hot Summer Climates (C-A2):
