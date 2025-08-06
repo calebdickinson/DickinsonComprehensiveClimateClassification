@@ -921,7 +921,6 @@ Jefferson City, MO	(2100)
 Lincoln, NE	(2100)  
 Tbilisi, Georgia	(2100)  
 Pristina, Kosovo	(2100)  
-Bucharest, Romania	(2100)  
 Belgrade, Serbia	(2100)  
 
 Subtropical Arid Desert Scorching Hot Summer (CDZ1):  
@@ -936,6 +935,7 @@ Madrid, Spain	(2100)
 Tashkent, Uzbekistan	(2100)  
 Borujerd, Iran (2100)  
 Batman, Turkey (2100)
+Bucharest, Romania	(2100)  
 
 ### Subtropical Very Hot Summer Climates (C-A2):
 
