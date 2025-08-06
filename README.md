@@ -262,7 +262,6 @@ Abuja, Nigeria	(today)
 Mumbai, India	(2100)  
 Dhaka, Bangladesh	(2100)  
 Brasília, Brazil	(2100)  
-Brazzaville, Congo	(2100)  
 Conakry, Guinea	(2100)  
 Vientiane, Laos	(2100)  
 Lilongwe, Malawi	(2100)  
@@ -281,6 +280,8 @@ Trincomalee, Sri Lanka (2100)
 Supertropical Semiarid Scorching Hot Summer (ASZ1):  
 <img src="images/ASZ1.jpg"/>
 
+Miami–Fort Lauderdale, FL	(2100)  
+Tampa–St. Petersburg, FL	(2100)  
 Bangkok, Thailand	(today)  
 Hyderabad, India	(today)  
 Managua, Nicaragua	(today)  
@@ -289,13 +290,13 @@ Bangalore, India	(2100)
 Lagos, Nigeria	(2100)  
 Rio de Janeiro, Brazil	(2100)  
 Kinshasa, DR Congo	(2100)  
-Miami–Fort Lauderdale, FL	(2100)  
 San Juan, PR	(2100)  
 St. John's, Antigua and Barbuda	(2100)  
 Nassau, Bahamas	(2100)  
 Bridgetown, Barbados	(2100)  
 Belmopan, Belize	(2100)  
 Porto-Novo, Benin	(2100)  
+Brazzaville, Congo	(2100)  
 Yamoussoukro, Côte d'Ivoire	(2100)  
 Havana, Cuba	(2100)  
 Santo Domingo, Dominican Republic	(2100)  
@@ -314,6 +315,7 @@ Road Town, British Virgin Islands (UK)	(2100)
 Charlotte Amalie, U.S. Virgin Islands (US)	(2100)  
 San Juan, Puerto Rico (US)	(2100)  
 Philipsburg, Sint Maarten (NL)	(2100)  
+Salango Island, Ecuador (2100)
 
 Supertropical Arid Desert Scorching Hot Summer (ADZ1):  
 <img src="images/ADZ1.jpg"/>
@@ -333,7 +335,6 @@ Castries, Saint Lucia	(2100)
 Dakar, Senegal	(2100)  
 George Town, Cayman Islands (UK)	(2100)  
 Oranjestad, Aruba (NL)	(2100)  
-Salango Island, Ecuador (2100)
 
 ### Supertropial Very Hot Summer climates (A-A2):
 
@@ -386,7 +387,8 @@ Port Vila, Vanuatu	(2100)
 Pago Pago, American Samoa (US)	(2100)  
 Mata-Utu, Wallis & Futuna (FR)	(2100)  
 Alofi, Niue (NZ)	(2100)  
-Santo Domingo, Ecuador (2100)
+Santo Domingo, Ecuador (2100)  
+Suva, Fiji	(2100)  
 
 Supertropical Semihumid Very Hot Summer (AGA2):  
 <img src="images/AGA2.jpg"/>
@@ -404,10 +406,15 @@ Port of Spain, Trinidad and Tobago	(today)
 The Valley, Anguilla (UK)	(today)  
 Adamstown, Pitcairn Islands (UK)	(today)  
 Philipsburg, Sint Maarten (NL)	(today)  
+São Paulo, Brazil	(2100)  
+Gitega, Burundi	(2100)  
 Moroni, Comoros	(2100)  
-Nukuʻalofa, Tonga	(2100)  
+Kigali, Rwanda	(2100)  
 Kampala, Uganda	(2100)  
+Nukuʻalofa, Tonga	(2100)  
 Nouméa, New Caledonia (FR)	(2100)  
+Port Louis, Mauritius	(2100)  
+Papeete, French Polynesia (FR)	(2100)  
 
 Supertropical Monsoon Very Hot Summer (AWA2):  
 <img src="images/AWA2One.jpg"/>
@@ -429,13 +436,7 @@ Freetown, Sierra Leone	(today)
 Dili, Timor-Leste	(today)  
 Papeete, French Polynesia (FR)	(today)  
 Libreville, Gabon	(today)  
-São Paulo, Brazil	(2100)  
-Gitega, Burundi	(2100)  
-Suva, Fiji	(2100)  
 Antananarivo, Madagascar	(2100)  
-Port Louis, Mauritius	(2100)  
-Dili, Timor-Leste	(2100)  
-Papeete, French Polynesia (FR)	(2100)  
 
 Supertropical Mediterranean Very Hot Summer (AMA2):  
 <img src="images/AMA2.webp"/>
@@ -463,8 +464,8 @@ Lomé, Togo	(today)
 Oranjestad, Aruba (NL)	(today)   
 Tegucigalpa, Honduras	(2100)  
 Nairobi, Kenya	(2100)  
-Kigali, Rwanda	(2100)  
 Caracas, Venezuela	(2100)  
+Dili, Timor-Leste	(2100)  
 
 Supertropical Arid Desert Very Hot Summer (ADA2):  
 <img src="images/ADA2.jpg"/>
@@ -503,12 +504,12 @@ Supertropical Semihumid Hot Summer (AGA1):
 <img src="images/AGA1.png"/>
 
 Kampala, Uganda	(today)  
-Addis Ababa, Ethiopia	(2100)  
 
 Supertropical Monsoon Hot Summer (AWA1):  
 <img src="images/AWA1.jpg"/>
 
 Brasília, Brazil	(today)  
+Addis Ababa, Ethiopia	(2100)  
 
 Supertropical Semiarid Hot Summer (ASA1):  
 <img src="images/ASA1.jpg"/>
@@ -548,7 +549,6 @@ Kota, India (today)
 Tropical Semiarid Hyperthermal Summer (BSZ2):  
 >**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
 
-Dallas–Fort Worth–Arlington, TX	(2100)  
 Islamabad, Pakistan	(2100)  
 
 Tropical Arid Desert Hyperthermal Summer (BDZ2):  
@@ -611,9 +611,9 @@ Tropical Semiarid Scorching Hot Summer (BSZ1):
 Gujrat, Pakistan (today)  
 Crystal City, TX (today)
 Houston, TX	(2100)  
-Tampa–St. Petersburg, FL	(2100)  
 Orlando, FL	(2100)  
 Austin, TX	(2100)  
+Dallas–Fort Worth–Arlington, TX	(2100)  
 
 Tropical Desert Scorching Hot Summer (BDZ1):  
 <img src="images/BDZ1.jpeg"/>
@@ -677,6 +677,7 @@ Mbabane, Eswatini	(2100)
 Maseru, Lesotho	(2100)  
 Kathmandu, Nepal	(2100)  
 Harare, Zimbabwe	(2100)  
+Sana'a, Yemen	(2100)  
 
 Tropical Mediterranean Very Hot Summer (BMA2):  
 <img src="images/BMA2.jpg"/>  
@@ -714,7 +715,6 @@ Riverside–San Bernardino, CA	(2100)
 Santiago, Chile	(2100)  
 Rabat, Morocco	(2100)  
 Bloemfontein, South Africa	(2100)  
-Sana'a, Yemen	(2100)  
 Gibraltar, Gibraltar (UK)	(2100)  
 Ceuta, Ceuta (ES)	(2100)  
 Coronado Islands, Mexico (2100)
