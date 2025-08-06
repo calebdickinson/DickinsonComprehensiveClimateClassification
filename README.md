@@ -148,6 +148,7 @@ Bamako, Mali	(2100)
 Ultratropical Humid Scorching Hot Summer: (ZHZ1):  
 >**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
 
+Kuala Lumpur, Malaysia	(2100)  
 Bandar Seri Begawan, Brunei	(2100)  
 Tarawa, Kiribati	(2100)  
 Majuro, Marshall Islands	(2100)  
@@ -161,7 +162,7 @@ Ultratropical Semihumid Scorching Hot Summer: (ZGZ1):
 >**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
 
 Ho Chi Minh City, Vietnam	(2100)  
-Kuala Lumpur, Malaysia	(2100)  
+Jakarta, Indonesia	(2100)  
 Georgetown, Guyana	(2100)  
 Singapore, Singapore	(2100)  
 Nukunonu, Tokelau (NZ)	(2100)  
@@ -169,12 +170,11 @@ Nukunonu, Tokelau (NZ)	(2100)
 Ultratropical Monsoon Hyperthermal Summer (ZWZ1):  
 >**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
 
-Jakarta, Indonesia	(2100)  
+Bissau, Guinea-Bissau	(2100)  
 
 Ultratropical Semiarid Hyperthermal Summer (ZSZ1):  
 >**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
 
-Bissau, Guinea-Bissau	(2100)  
 Paramaribo, Suriname	(2100)  
 
 Ultratropical Arid Desert Hyperthermal Summer (ZDZ1):  
@@ -213,7 +213,7 @@ Hyderabad, India	(2100)
 Naypyidaw, Myanmar	(2100)  
 Hanoi, Vietnam	(2100)  
 
-Supertropical Semiarid Hyperthermal Summer (ASZ2):  
+Supertropical Mediterranean Hyperthermal Summer (AMZ2):  
 >**THIS CLIMATE DOES NOT CURRENTLY EXIST ON EARTH**
 
 Chennai, India	(2100)  
@@ -235,6 +235,7 @@ Supertropical Humid Scorching Hot Summer (AHZ1):
 Manila, Philippines	(2100)  
 Palikir, Federated States of Micronesia	(2100)  
 Monrovia, Liberia	(2100)  
+Apia, Samoa	(2100)  
 Sri Jayawardenepura Kotte, Sri Lanka	(2100)  
 
 Supertropical Semihumid Scorching Hot Summer (AGZ1):  
@@ -243,11 +244,14 @@ Supertropical Semihumid Scorching Hot Summer (AGZ1):
 Ho Chi Minh City, Vietnam	(today)  
 Phnom Penh, Cambodia	(today)  
 Yaoundé, Cameroon	(2100)  
+Libreville, Gabon	(2100)  
 Bangui, Central African Republic	(2100)    
+Kingston, Jamaica	(2100)
 Malé, Maldives	(2100)  
 Panama City, Panama	(2100)  
 Port Moresby, Papua New Guinea	(2100)  
 Brades, Montserrat (UK)	(2100)  
+Victoria, Seychelles	(2100)  
 
 Supertropical Monsoon Scorching Hot Summer (AWZ1):  
 <img src="images/AWZ1.jpg"/>
@@ -257,25 +261,22 @@ Naypyidaw, Myanmar	(today)
 Abuja, Nigeria	(today)  
 Mumbai, India	(2100)  
 Dhaka, Bangladesh	(2100)  
-Kinshasa, DR Congo	(2100)  
 Brasília, Brazil	(2100)  
 Brazzaville, Congo	(2100)  
 Conakry, Guinea	(2100)  
 Vientiane, Laos	(2100)  
 Lilongwe, Malawi	(2100)  
 Maputo, Mozambique	(2100)  
-Abuja, Nigeria	(2100)  
-Apia, Samoa	(2100)  
-Victoria, Seychelles	(2100)  
+Abuja, Nigeria	(2100)   
 Lusaka, Zambia	(2100)  
-Libreville, Gabon	(2100)  
+San Salvador, El Salvador	(2100)  
+Banjul, Gambia	(2100)  
 
 Supertropical Mediterranean Scorching Hot Summer (AMZ1):  
 <img src="images/AMZ1.jpg"/>
 
 Chennai, India	(today)  
 Trincomalee, Sri Lanka (2100)  
-Kingston, Jamaica	(2100)
 
 Supertropical Semiarid Scorching Hot Summer (ASZ1):  
 <img src="images/ASZ1.jpg"/>
@@ -287,6 +288,7 @@ Juba, South Sudan	(today)
 Bangalore, India	(2100)  
 Lagos, Nigeria	(2100)  
 Rio de Janeiro, Brazil	(2100)  
+Kinshasa, DR Congo	(2100)  
 Miami–Fort Lauderdale, FL	(2100)  
 San Juan, PR	(2100)  
 St. John's, Antigua and Barbuda	(2100)  
@@ -297,7 +299,6 @@ Porto-Novo, Benin	(2100)
 Yamoussoukro, Côte d'Ivoire	(2100)  
 Havana, Cuba	(2100)  
 Santo Domingo, Dominican Republic	(2100)  
-San Salvador, El Salvador	(2100)  
 Accra, Ghana	(2100)  
 St. George's, Grenada	(2100)  
 Port-au-Prince, Haiti	(2100)  
@@ -327,7 +328,6 @@ Dubai, United Arab Emirates	(today)
 Luanda, Angola	(2100)  
 Gaborone, Botswana	(2100)  
 Praia, Cabo Verde	(2100)  
-Banjul, Gambia	(2100)  
 Nouakchott, Mauritania	(2100)  
 Castries, Saint Lucia	(2100)  
 Dakar, Senegal	(2100)  
