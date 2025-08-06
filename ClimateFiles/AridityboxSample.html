@@ -6,11 +6,13 @@
   <style>
     .box {
       /* custom properties must start with -- */
-      --outer-col-width: 200px;
-      --center-col-width: 300px;
-      --btn-height: 100px;
-      --gap: 20px;
-      --radius: 40px;
+      --outer-col-width: 150px;
+      --center-col-width: 225px;
+      --btn-height: 75px;
+      --gap: 15px;
+      --radius: 30px;
+      width: fit-content;
+  	  margin: 0 auto;   
     }
     .box .ariditybox-border-outer {
       margin: 50px auto;
@@ -47,8 +49,9 @@
       height: 100%;
       border-radius: var(--radius);
       font-family: sans-serif;
-      font-size: 1.2rem;
+      font-size: 1.8rem;
       color: black;
+      text-align: center;
       text-decoration: none;
       transition: transform 0.2s ease;
       pointer-events: auto;
@@ -82,6 +85,7 @@
       background: #eeee00;
     }
     .box .ariditybox-monsoon {
+      color: white;
       grid-row: 1 / span 3;
       grid-column: 3;
       background: purple;
@@ -101,8 +105,8 @@
           <a href="#" class="ariditybox ariditybox-humid">Humid (H)</a>
           <a href="#" class="ariditybox ariditybox-semihumid">Semihumid (G)</a>
           <a href="#" class="ariditybox ariditybox-semiarid">Semiarid (S)</a>
-          <a href="#" class="ariditybox ariditybox-mediterranean">Mediterranean (M)</a>
-          <a href="#" class="ariditybox ariditybox-monsoon">Monsoon (W)</a>
+          <a href="#" class="ariditybox ariditybox-mediterranean">Mediter-<br>ranean<br><br>(M)</a>
+          <a href="#" class="ariditybox ariditybox-monsoon">Monsoon<br><br>(W)</a>
           <a href="#" class="ariditybox ariditybox-arid">Arid Desert (D)</a>
         </div>
       </div>
