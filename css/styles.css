@@ -249,6 +249,6 @@ cursor: default;
 }
 .box .ariditybox.highlight {
       box-shadow:
-        0 0 0 5px white,
+        0 0 0 5px #bbbbbb,
         0 0 0 10px black;
     }
