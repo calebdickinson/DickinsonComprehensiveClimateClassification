@@ -186,30 +186,45 @@ pointer-events: auto;
 .box .ariditybox:not(.disabled):hover {
 transform: scale(1.05);
 }
-.box .ariditybox.disabled {
-background: #444444 !important;
-pointer-events: none;
-cursor: default;
-}
 .box .ariditybox-humid {
 grid-row: 1;
 grid-column: 2;
 background: #007500;
+}
+.box .ariditybox-humid.disabled {
+background: #444444 !important;
+pointer-events: none;
+cursor: default;
 }
 .box .ariditybox-semihumid {
 grid-row: 2;
 grid-column: 2;
 background: lightgreen;
 }
+.box .ariditybox-semihumid.disabled {
+background: #444444 !important;
+pointer-events: none;
+cursor: default;
+}
 .box .ariditybox-semiarid {
 grid-row: 3;
 grid-column: 2;
 background: orange;
 }
+.box .ariditybox-semiarid.disabled {
+background: #444444 !important;
+pointer-events: none;
+cursor: default;
+}
 .box .ariditybox-mediterranean {
 grid-row: 1 / span 3;
 grid-column: 1;
 background: #eeee00;
+}
+.box .ariditybox-mediterranean.disabled {
+background: #444444 !important;
+pointer-events: none;
+cursor: default;
 }
 .box .ariditybox-monsoon {
 color: white;
@@ -217,8 +232,18 @@ grid-row: 1 / span 3;
 grid-column: 3;
 background: purple;
 }
+.box .ariditybox-monsoon.disabled {
+background: #444444 !important;
+pointer-events: none;
+cursor: default;
+}
 .box .ariditybox-arid {
 grid-row: 4;
 grid-column: 1 / span 3;
 background: red;
+}
+.box .ariditybox-arid.disabled {
+background: #444444 !important;
+pointer-events: none;
+cursor: default;
 }
