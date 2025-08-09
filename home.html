@@ -12,6 +12,20 @@
       text-align: center;
       font-family: cursive;
     }
+    .double-line {
+      position: relative;
+      height: 3px;
+      background: black;
+    }
+    .double-line::after {
+      content: "";
+      position: absolute;
+      top: 11px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: black;
+    }
     .button-grid {
       display: grid;
       grid-template-columns: repeat(11, 3rem);
@@ -159,6 +173,7 @@
     <button class="grid-button pink" onclick="location.href='superarctic-freezing-summer.html'">YC1</button>
     <button class="grid-button aqua" onclick="location.href='superarctic-frigid-summer.html'">YY</button>
   </div>
+  <div class="double-line"></div>
   <h1>Quick Search for Humid Climates</h1>
   <div class="button-grid">
     <button class="grid-button disabled"></button>
@@ -254,6 +269,7 @@
     <button class="grid-button disabled"></button>
     <button class="grid-button disabled"></button>
   </div>
+  <div class="double-line"></div>
   <h1>Quick Search for Semihumid Climates</h1>
   <div class="button-grid">
     <button class="grid-button disabled"></button>
@@ -349,6 +365,7 @@
     <button class="grid-button disabled"></button>
     <button class="grid-button disabled"></button>
   </div>
+  <div class="double-line"></div>
   <h1>Quick Search for Monsoon Climates</h1>
   <div class="button-grid">
     <button class="grid-button disabled"></button>
@@ -444,6 +461,7 @@
     <button class="grid-button disabled"></button>
     <button class="grid-button disabled"></button>
   </div>
+  <div class="double-line"></div>
   <h1>Quick Search for Mediterranean Climates</h1>
   <div class="button-grid">
     <button class="grid-button disabled"></button>
@@ -539,6 +557,7 @@
     <button class="grid-button disabled"></button>
     <button class="grid-button disabled"></button>
   </div>
+  <div class="double-line"></div>
   <h1>Quick Search for Semiarid Climates</h1>
   <div class="button-grid">
     <button class="grid-button disabled"></button>
@@ -634,6 +653,7 @@
     <button class="grid-button disabled"></button>
     <button class="grid-button disabled"></button>
   </div>
+  <div class="double-line"></div>
   <h1>Quick Search for Arid Desert Climates</h1>
   <div class="button-grid">
     <button class="grid-button disabled"></button>
