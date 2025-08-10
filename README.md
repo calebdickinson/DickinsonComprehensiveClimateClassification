@@ -100,7 +100,7 @@ The third part measures the severity of the summers by measuring the average tem
 
 H = Hypercaneal Summer. 50 and above (hypothetical)
 
-X = Hyperthermal Summer. 40 - 50
+X = Extreme Hyperthermal Summer. 40 - 50 (hypothetical)
 
 Z2 = Hyperthermal Summer. 35 - 40
 
