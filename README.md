@@ -116,6 +116,10 @@ B1 = Cold summer. 10 - 15
 
 C2 = Very Cold Summer. 5 - 10
 
+C1 = Freezing Summer. 0 - 5
+
+Y = Frigid Summer. Below 0
+
 # Here are some examples of these zones.
 
 # Ultratropical Climates (Z):
