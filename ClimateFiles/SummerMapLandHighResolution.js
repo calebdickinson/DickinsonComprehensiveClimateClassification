@@ -1,0 +1,81 @@
+// ==== WorldClim V1 monthly climatology (global) ====
+// Source: WORLDCLIM/V1/MONTHLY (bands: tavg, tmin, tmax, prec; month property)
+// Temperatures must be multiplied by 0.1 to get °C.  (EE catalog docs)
+
+// 1) Load WorldClim monthly images (global)
+var WC = ee.ImageCollection('WORLDCLIM/V1/MONTHLY');
+
+// Quick sanity checks (optional)
+print('WorldClim size:', WC.size());
+print('Months present:', WC.aggregate_array('month').distinct().sort());
+
+// 2) Build a 12-image collection (one per month) using tavg (°C)
+var months = ee.List.sequence(1, 12);
+var monthlyMeans = ee.ImageCollection(
+  months.map(function (m) {
+    var im = WC.filter(ee.Filter.eq('month', m)).first();
+    // Each image has band 'tavg' at scale 0.1 °C
+    return ee.Image(im).select('tavg').multiply(0.1)
+             .rename('monthlyMean')   // keep your expected band name
+             .set('month', m);
+  })
+);
+
+// 3) Hottest & coldest month rasters from climatology
+var hottestC = monthlyMeans
+  .qualityMosaic('monthlyMean')
+  .select('monthlyMean')
+  .rename('hottestC');
+
+var coldestC = monthlyMeans
+  .map(function (img) { return img.multiply(-1).copyProperties(img); })
+  .qualityMosaic('monthlyMean')
+  .multiply(-1)
+  .select('monthlyMean')
+  .rename('coldestC');
+
+// 4) Your classification (unchanged)
+function classifySummer(tC) {
+  return ee.Image.constant(0)
+    .where(tC.gte(100).and(tC.lt(150)), 11) // Boiling
+    .where(tC.gte(50).and(tC.lt(100)), 10)  // Hypercaneal
+    .where(tC.gte(40).and(tC.lt(50)),  9)   // X1
+    .where(tC.gte(35).and(tC.lt(40)),  8)   // Z2
+    .where(tC.gte(30).and(tC.lt(35)),  7)   // Z1
+    .where(tC.gte(25).and(tC.lt(30)),  6)   // A2
+    .where(tC.gte(20).and(tC.lt(25)),  5)   // A1
+    .where(tC.gte(15).and(tC.lt(20)),  4)   // B2
+    .where(tC.gte(10).and(tC.lt(15)),  3)   // B1
+    .where(tC.gte(5).and(tC.lt(10)),   2)   // C2
+    .where(tC.gte(0).and(tC.lt(5)),    1)   // C1
+    .where(tC.lt(0),                   0)   // Y
+    .rename('warmZone');
+}
+var warmZone = classifySummer(hottestC);
+
+// 5) Color map & display (unchanged)
+var codeColorMap = {
+  11:"#888888",10:"#0000FF",9:"#000000",8:"#550000",
+  7:"#C71585",6:"#FF0000",5:"#FFA500",4:"#FFFF00",
+  3:"#008000",2:"#0000FF",1:"#FFC0CB",0:"#000000"
+};
+var keys    = Object.keys(codeColorMap);
+var codes   = keys.map(function(k){ return parseInt(k, 10); });
+var palette = keys.map(function(k){ return codeColorMap[k]; });
+var indices = codes.map(function(_, i){ return i; });
+
+var discreteLand = warmZone.remap(codes, indices).rename('classIndex');
+
+Map.addLayer(
+  discreteLand,
+  { min: 0, max: indices.length - 1, palette: palette },
+  'Climate (WorldClim normals)',
+  true, 0.7
+);
+
+// Optional context layers
+Map.addLayer(hottestC, {min:-20, max:35}, 'Hottest month °C (WorldClim)', false);
+Map.addLayer(coldestC, {min:-50, max:20}, 'Coldest month °C (WorldClim)', false);
+
+// Global view
+Map.setCenter(0, 20, 2);
