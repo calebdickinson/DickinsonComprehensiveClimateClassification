@@ -261,7 +261,7 @@
 
     // build a URL like "continental-mild-summer.html"
     const slug    = s => s.toLowerCase().replace(/\s+/g,'-');
-    const pageUrl = `${slug(climateVar)}-${slug(summerVar)}.html`;
+    const pageUrl = `${slug(climateVar)}/${slug(summerVar)}.html`;
 
     // redirect:
     window.location.href = pageUrl;
