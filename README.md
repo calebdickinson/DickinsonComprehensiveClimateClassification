@@ -10,7 +10,7 @@ To run the code, open two Earth Engine Code Editor windows (it may be necessary 
 
 Paste the full code of the the most up to date versions, AllZonesTogether.js and AllZonesTogether2100.js seperately in New Script boxes of each of the windows.
 
-These files can be found in the ClimateFiles folder of this github repository.
+These files can be found in the MapMakers folder of this github repository.
 
 Click the "run" button.
 
