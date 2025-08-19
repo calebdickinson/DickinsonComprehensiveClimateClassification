@@ -132,6 +132,9 @@ var combined = ee.Image(0)
   .where(validMask.not(),
          warmComb.multiply(10).add(coldComb))
   .rename('combinedZone');
+  
+var landMask = WC.first().select('prec').mask();
+  combined = combined.updateMask(landMask);
 
 // HSL→HEX helper & 7-step rainbow
 function hslToHex(h,s,l){
