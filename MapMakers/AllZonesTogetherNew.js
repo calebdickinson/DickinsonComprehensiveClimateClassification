@@ -905,7 +905,8 @@ var cityClasses = combined
     scale:       10000,
     geometries:  false
   })
-  .filter(ee.Filter.notNull(['combinedZone']));
+  .filter(ee.Filter.notNull(['combinedZone']))
+  .filter(ee.Filter.gt('combinedZone', 0));   // ← ignore oceans / no-data
 
 // (d) Attach labels + full sortKey
 var MAX_COLD = ee.Number(Object.keys(coldLetters).length);
