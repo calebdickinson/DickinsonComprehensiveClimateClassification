@@ -1,4 +1,4 @@
-// 2100
+// 2100 Aridity Map
 
 var months   = ee.List.sequence(1, 12);
 var daysList = ee.List([31,28,31,30,31,30,31,31,30,31,30,31]);
