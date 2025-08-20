@@ -140,7 +140,6 @@ def merge_duplicate_locations(df: pd.DataFrame) -> pd.DataFrame:
 
 def remove_rows_with_missing_data(df: pd.DataFrame) -> pd.DataFrame:
     """Remove rows with missing data from the DataFrame
-    prints list of removed rows
 
     Args:
         df (pd.DataFrame): The DataFrame to modify
@@ -148,9 +147,6 @@ def remove_rows_with_missing_data(df: pd.DataFrame) -> pd.DataFrame:
     Returns:
         pd.DataFrame: The modified DataFrame
     """
-    removed_rows = df[df.isnull().any(axis=1)]
-    print("Removed rows:")
-    print(removed_rows)
     return df.dropna() # type:ignore
 
 def list_places_by_climate(df: pd.DataFrame, climate: str, column:int) -> set[str]:

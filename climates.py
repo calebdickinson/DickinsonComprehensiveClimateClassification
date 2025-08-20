@@ -252,8 +252,6 @@ def breakup(code:str):
     else:
         arid = ''      # no aridity value for this climate
 
-    print(code)
-    print(cold, arid, warm)
     return [cold, arid, warm]
 
 def decode(code:str):

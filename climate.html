@@ -37,15 +37,14 @@
         <button class="colder" id="climate_warm_minus">Colder Summers --></button>
         <button class="colder" id="climate_cold_minus">Colder Winters --></button>
       </div>
-    <!-- </div>
-    <img src=climate.pics alt="climate.name + landscape">
-    <h3>Cities with this climate:</h3>
-    <p>climate.places2025</p>
-    <h3>World map of this climate:</h3>
-    <img src="climate.map_2025" alt="climate.name + map">
-     <h3>World map of this climate in 2100:</h3>
-    <img src="climate.map_2100" alt="climate.name + map in 2100"> -->
     </div>
+        <!-- <img id="climate_landscape" src="" alt="climate landscape"> -->
+        <h3>Cities with this climate:</h3>
+        <p id="climate_cities_2025"></p>
+        <h3>World map of this climate:</h3>
+        <img id="climate_map_2025" src="" alt="climate map">
+        <h3>World map of this climate in 2100:</h3>
+        <img id="climate_map_2100" src="" alt="climate map in 2100">
   </main>
 
 
@@ -108,18 +107,6 @@
             // else document.getElementById('climate_arid+').onclick = () => change_climate(climate_arid_plus);
             // if (climate_arid_minus == "False") document.getElementById('climate_arid_minus').disabled = true;
             // else document.getElementById('climate_arid-').onclick = () => change_climate(climate_arid_minus);
-            try {
-                if (is_disabled(climate_warm_plus)) {
-                    const btn = document.getElementById('climate_warm_plus');
-                    if (btn) btn.disabled = true;
-                } else {
-                    const btn = document.getElementById('climate_warm_plus');
-                    if (btn) btn.onclick = () => change_climate(climate_warm_plus);
-                }
-                // Repeat for other buttons...
-            } catch (error) {
-                console.error('Error setting up buttons:', error);
-            }
             if (is_disabled(climate_warm_plus)) document.getElementById('climate_warm_plus').disabled = true;
             else document.getElementById('climate_warm_plus').onclick = () => change_climate(climate_warm_plus);
             if (is_disabled(climate_warm_minus)) document.getElementById('climate_warm_minus').disabled = true;
@@ -128,6 +115,14 @@
             else document.getElementById('climate_cold_plus').onclick = () => change_climate(climate_cold_plus);
             if (is_disabled(climate_cold_minus)) document.getElementById('climate_cold_minus').disabled = true;
             else document.getElementById('climate_cold_minus').onclick = () => change_climate(climate_cold_minus);
+
+            document.getElementById('climate_cities_2025').textContent = climate_cities_2025.join(", ");
+            document.getElementById('climate_map_2025').src = climate_map_2025;
+            document.getElementById('climate_map_2025').alt = climate_name + " map";
+            document.getElementById('climate_map_2100').src = climate_map_2100;
+            document.getElementById('climate_map_2100').alt = climate_name + " map in 2100";
+            // document.getElementById('climate_landscape').src = climate_landscape;
+            // document.getElementById('climate_landscape').alt = climate_name + " landscape";
         })
         .catch(error => {
             throw new Error("Error loading climate data: " + error.message);
