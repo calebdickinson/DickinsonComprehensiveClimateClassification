@@ -68,7 +68,6 @@ var monthly6 = ee.ImageCollection(
 var hottestC = hottestFromMonthly(monthly6);
 var coldestC = coldestFromMonthly(monthly6);
 
-// ---- classify by COLDEST month ----
 function classifyCold(tC) {
   return ee.Image.constant(0)
     .where(tC.gte(50).and(tC.lt(60)),   11) // H: Hypercaneal
