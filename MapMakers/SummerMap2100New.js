@@ -50,8 +50,17 @@ function classifySummer(tC) {
 var warmZone = classifySummer(hottest6);
 
 var codeColorMap = {
-  10:"#0000FF", 9:"#000000", 8:"#550000", 7:"#C71585", 6:"#FF0000", 
-  5:"#FFA500", 4:"#FFFF00", 3:"#008000", 2:"#0000FF", 1:"#FF10F0",  0:"#000000"
+  10:"#0000FF", // Hypercaneal
+  9:"#000000",  // X1: Extreme Hyperthermal Summer
+  8:"#550000",  // Z2: Hyperthermal Summer
+  7:"#C71585",  // Z1: Scorching Hot Summer
+  6:"#FF0000",  // A2: Very Hot Summer 
+  5:"#FFA500",  // A1: Hot Summer
+  4:"#FFFF00",  // B2: Mild Summer
+  3:"#008000",  // B1: Cold Summer
+  2:"#0000FF",  // C2: Very Cold Summer
+  1:"#FF10F0",  // C1: Freezing Summer
+  0:"#000000"   // Y: Frigid Summer
 };
 var keys    = Object.keys(codeColorMap);
 var codes   = keys.map(function(k){ return parseInt(k,10); });
