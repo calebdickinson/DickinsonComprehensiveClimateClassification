@@ -162,6 +162,17 @@ def list_places_by_climate(df: pd.DataFrame, climate: str, column:int) -> set[st
     """
     return set(df[df.iloc[:, column] == climate]['Location'])
 
+def list_places_by_climate_and_time(df: pd.DataFrame, climate: str) -> list[str]:
+    a1900s = list_places_by_climate(df, climate, 1)
+    a2025 = list_places_by_climate(df, climate, 2)
+    a2100 = list_places_by_climate(df, climate, 3)
+    
+    places:list[str] = []
+    for place in a1900s: places.append(f"{place} (1961-1990 normals)")
+    for place in a2025: places.append(f"{place} (2025)")
+    for place in a2100: places.append(f"{place} (2100)")
+    return places
+
 if __name__ == "__main__": # edit this to do whatever formatting you want
     df = get_csv("cities.csv")
     df = remove_rows_with_missing_data(df)

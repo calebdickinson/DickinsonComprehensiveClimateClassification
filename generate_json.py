@@ -1,7 +1,7 @@
 import json
 import glob
 from climates import decode, codes, traverse_codes
-from format import get_csv, list_places_by_climate
+from format import get_csv, list_places_by_climate_and_time
 
 def generate_json() -> dict[str, dict]: #type:ignore
     data = {}
@@ -22,9 +22,7 @@ def generate_json() -> dict[str, dict]: #type:ignore
             'map_2025': f'climates/map_2025/{code}.png',
             'map_2100': f'climates/map_2100/{code}.png',
             'landscape': list(glob.glob(f'/climates/landscape/{code}*')),
-            'cities_1900s': list(list_places_by_climate(get_csv("cities.csv"), code, 1)),
-            'cities_2025': list(list_places_by_climate(get_csv("cities.csv"), code, 2)),
-            'cities_2100': list(list_places_by_climate(get_csv("cities.csv"), code, 3)),
+            'cities': list_places_by_climate_and_time(get_csv("cities.csv"), code),
         }
     return data #type:ignore
 
