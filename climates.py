@@ -196,45 +196,101 @@ cold_ordered = list(cold_codes.keys())
 arid_ordered = list(arid_codes.keys())
 warm_ordered = list(warm_codes.keys())
 
-def traverse_climates(code:str, type:str, direction:int) -> str:
-    """Traverse the climate zones in the specified direction.
-
-    Args:
-        code (str): The current climate zone code
-        type (str): The type of climate zone ('cold', 'arid', 'warm')
-        direction (int): The direction to traverse (1 for forward, -1 for backward)
-        Also gives magnitude to traverse. Current website implementation
-        will only use magnitude 1.
+def verify_codes_1() -> bool:
+    """Verify that all codes in the set are valid
 
     Returns:
-        str: The climate zone found after the specified step from the input one
+        bool: True if all codes in the set are valid, False otherwise
+    """
+    for code in codes:
+
+        cold = code[0]
+        if code[-1].isdigit():  # if last digit is a number then warm is a two digit code
+            warm = code[-2:] 
+            arid = code[1:-2]
+        else:                   # otherwise warm is a single digit
+            warm = code[-1]
+            arid = code[1:-1]
+
+        if cold not in [ 'F', 'G', 'Y'] and warm not in ['B1', 'C2', 'C1', 'Y']:
+            assert arid != "", f"Code {code} shouldn't have aridity, but does"
+        else:
+            assert arid == '', f"Code {code} should have aridity, but doesn't"
+
+    return True
+
+def verify_codes_2() -> bool:
+    """Verify that all valid codes are in the codes set
+
+    Returns:
+        bool: True if all valid codes are in the set, False otherwise
     """
 
-    if type not in ['cold', 'arid', 'warm']:
-        raise ValueError("Invalid climate type")
+    valid_codes:set[str] = set()
+    # there is always a cold and always a warm
+    # if cold is F or colder, there is no aridity
+    # if warm is B1 or colder, there is no aridity
+    for cold_code in cold_codes:
+        for warm_code in warm_codes:
+            if cold_code in ['F', 'G', 'Y'] or warm_code in ['B1', 'C2', 'C1', 'Y']:
+                valid_codes.add(combine(cold_code, "", warm_code))  # no aridity
+            else:
+                for arid_code in arid_codes: # aridity
+                    valid_codes.add(combine(cold_code, arid_code, warm_code))
+
+    for code in valid_codes:
+        #assert code in codes, f"Code {code} is not in the set of codes"
+        if code not in codes: print(f"Code {code} is not in the set of codes")
+
+    for code in codes:
+        #assert code in valid_codes, f"Code {code} is not valid"
+        if code not in valid_codes: print(f"Code {code} is not valid")
+
+    return True
+
+
+# todo we must know whether we are using all possible climates (even ones not on readme) or 
+# todo or whether there are more filter rules that must be followed, before we can build
+# todo a function to navigate climates that filters out unallowed ones
+# def traverse_climates(code:str, type:str, direction:int) -> str:
+#     """Traverse the climate zones in the specified direction.
+
+#     Args:
+#         code (str): The current climate zone code
+#         type (str): The type of climate zone ('cold', 'arid', 'warm')
+#         direction (int): The direction to traverse (1 for forward, -1 for backward)
+#         Also gives magnitude to traverse. Current website implementation
+#         will only use magnitude 1.
+
+#     Returns:
+#         str: The climate zone found after the specified step from the input one
+#     """
+
+#     if type not in ['cold', 'arid', 'warm']:
+#         raise ValueError("Invalid climate type")
     
-    if direction not in [1, -1]:
-        raise ValueError("Invalid direction")
+#     if direction not in [1, -1]:
+#         raise ValueError("Invalid direction")
 
-    if type == 'cold':
-        ordered = cold_ordered
-    elif type == 'arid':
-        ordered = arid_ordered
-    else: #  type == 'warm'
-        ordered = warm_ordered
+#     if type == 'cold':
+#         ordered = cold_ordered
+#     elif type == 'arid':
+#         ordered = arid_ordered
+#     else: #  type == 'warm'
+#         ordered = warm_ordered
 
     
 
-    current_index = ordered.index(code)
-    new_index = current_index + direction
+#     current_index = ordered.index(code)
+#     new_index = current_index + direction
 
-    # Wrap around if out of bounds
-    if new_index < 0:
-        new_index = len(ordered) - 1
-    elif new_index >= len(ordered):
-        new_index = 0
+#     # Wrap around if out of bounds
+#     if new_index < 0:
+#         new_index = len(ordered) - 1
+#     elif new_index >= len(ordered):
+#         new_index = 0
 
-    return ordered[new_index]
+#     return ordered[new_index]
 
 # functions
 def breakup(code:str):
@@ -290,3 +346,8 @@ def combine(cold:str, arid:str, warm:str) -> str:
     """
 
     return cold + arid + warm # arid may be ""
+
+
+if __name__ == "__main__":
+    print(verify_codes_1())  # verify that all codes in set are valid
+    print(verify_codes_2())  # verify that all valid codes are in set
