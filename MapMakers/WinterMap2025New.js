@@ -54,21 +54,17 @@ function coldestFromMonthly(monthlyIC) {
                   .select('monthlyMean').rename('coldestC');
 }
 
-// ==== CMIP6 (ssp585, 2025) ====
 var cmip6 = ee.ImageCollection('NASA/GDDP-CMIP6')
   .filter(ee.Filter.eq('scenario', 'ssp585'))
   .filterDate('2025-01-01', '2026-01-01');
 
-// Build CMIP6 monthly means using tas when available, else tasmax/tasmin
 var monthly6 = ee.ImageCollection(
   ee.Algorithms.If(
     icHasBand(cmip6, 'tas'),
     monthlyFromTas(cmip6),
-    monthlyFromPair(cmip6) // only used if 'tas' is truly absent
   )
 );
 
-// CMIP6 hottest/coldest
 var hottestC = hottestFromMonthly(monthly6);
 var coldestC = coldestFromMonthly(monthly6);
 
@@ -91,7 +87,6 @@ function classifyCold(tC) {
 
 var coldZone = classifyCold(coldestC);
 
-// ---- palette & display ----
 var codeColorMap = {
   11: "#0000FF", // H: Hypercaneal
   10: "#0000FF", // X: Uninhabitable
