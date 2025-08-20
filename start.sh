@@ -5,6 +5,10 @@
 source venv/bin/activate
 # if you want you can just run this command directly in your terminal instead
 
+# when you are done coding, deactivate your virtual environment 
+# by running this command: deactivate
+# we probably don't need a script for that
+
 
 
 
