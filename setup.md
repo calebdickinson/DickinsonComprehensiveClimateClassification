@@ -1,5 +1,3 @@
-# How to run this website locally on your machine
-
 *This guide is written for macOS and will probably also work on Linux. If you use Windows an online tutorial about how to use github and how to use python on your device will work just as well.*
 
 In your terminal, copy-paste this command and hit `ENTER`:
