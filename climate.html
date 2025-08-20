@@ -43,6 +43,14 @@
         <p id="climate_cities_2025"></p>
         <h3>World map of this climate:</h3>
         <img id="climate_map_2025" src="" alt="climate map">
+
+        <h3>Cities which had this climate from 1960-1900:</h3>
+        <p id="climate_cities_1900s"></p>
+        <h3>World map of this climate from 1960-1900:</h3>
+        <img id="climate_map_1900s" src="" alt="climate map in 1900">
+
+        <h3>Cities projected to have this climate in 2100:</h3>
+        <p id="climate_cities_2100"></p>
         <h3>World map of this climate in 2100:</h3>
         <img id="climate_map_2100" src="" alt="climate map in 2100">
   </main>
@@ -87,13 +95,13 @@
             document.getElementById('climate_name').textContent = climate_name;
             document.getElementById('climate_code').textContent = climate_code;
 
-            // document.getElementById('climate_cities_2025').textContent = climate_cities_2025.join(", ");
-            // document.getElementById('climate_cities_2100').textContent = climate_cities_2100.join(", ");
-            // document.getElementById('climate_cities_1900s').textContent = climate_cities_1900s.join(", ");
 
-            // document.getElementById('climate_map_2025').src = climate_map_2025;
-            // document.getElementById('climate_map_2100').src = climate_map_2100;
-            // document.getElementById('climate_map_1900s').src = climate_map_1900s;
+            if (climate_cities_2025 && climate_cities_2025.length > 0) document.getElementById('climate_cities_2025').innerHTML = climate_cities_2025.join("<br>");
+            else document.getElementById('climate_cities_2025').textContent = "There are no cities with this climate";
+            if (climate_cities_2100 && climate_cities_2100.length > 0) document.getElementById('climate_cities_2100').innerHTML = climate_cities_2100.join("<br>");
+            else document.getElementById('climate_cities_2100').textContent = "There are projected to be no cities with this climate in 2100";
+            if (climate_cities_1900s && climate_cities_1900s.length > 0) document.getElementById('climate_cities_1900s').innerHTML = climate_cities_1900s.join("<br>");
+            else document.getElementById('climate_cities_1900s').textContent = "There were no cities with this climate in the 1960-1900 period";
 
             function change_climate(code) {
                 window.location.href = window.location.pathname + '?code=' + code;
@@ -101,6 +109,26 @@
 
             function is_disabled(value) {
                 return value === "False" || value === "false" || value === false || value === "" || value === undefined || value === null
+            }
+
+            function set_map(elementId, src, alt, fallbackMessage) {
+                const img = document.getElementById(elementId);
+                img.src = src;
+                img.alt = alt;
+                
+                img.onerror = function() {
+                    // Replace the image with a div containing the error message
+                    const parent = img.parentNode;
+                    const errorDiv = document.createElement('div');
+                    errorDiv.innerHTML = fallbackMessage;
+                    errorDiv.style.padding = '20px';
+                    errorDiv.style.backgroundColor = '#f8d7da';
+                    errorDiv.style.color = '#721c24';
+                    errorDiv.style.border = '1px solid #f5c6cb';
+                    errorDiv.style.borderRadius = '5px';
+                    errorDiv.style.textAlign = 'center';
+                    parent.replaceChild(errorDiv, img);
+                };
             }
 
             // if (climate_arid_plus == "False") document.getElementById('climate_arid_plus').disabled = true;
@@ -116,13 +144,12 @@
             if (is_disabled(climate_cold_minus)) document.getElementById('climate_cold_minus').disabled = true;
             else document.getElementById('climate_cold_minus').onclick = () => change_climate(climate_cold_minus);
 
-            document.getElementById('climate_cities_2025').textContent = climate_cities_2025.join(", ");
-            document.getElementById('climate_map_2025').src = climate_map_2025;
-            document.getElementById('climate_map_2025').alt = climate_name + " map";
-            document.getElementById('climate_map_2100').src = climate_map_2100;
-            document.getElementById('climate_map_2100').alt = climate_name + " map in 2100";
-            // document.getElementById('climate_landscape').src = climate_landscape;
-            // document.getElementById('climate_landscape').alt = climate_name + " landscape";
+            set_map('climate_map_2025', climate_map_2025, climate_name + " map", "Map image not available");
+            set_map('climate_map_2100', climate_map_2100, climate_name + " map in 2100", "2100 map image not available"); 
+            set_map('climate_map_1900s', climate_map_1900s, climate_name + " map in the 1900s", "1900s map image not available");
+
+            document.getElementById('climate_landscape').src = climate_landscape;
+            document.getElementById('climate_landscape').alt = climate_name + " landscape";
         })
         .catch(error => {
             throw new Error("Error loading climate data: " + error.message);
