@@ -61,7 +61,7 @@ var cmip6 = ee.ImageCollection('NASA/GDDP-CMIP6')
 var monthly6 = ee.ImageCollection(
   ee.Algorithms.If(
     icHasBand(cmip6, 'tas'),
-    monthlyFromTas(cmip6),
+    monthlyFromTas(cmip6)
   )
 );
 
