@@ -138,5 +138,22 @@ def merge_duplicate_locations(df: pd.DataFrame) -> pd.DataFrame:
     """
     return df.groupby(df.columns[0], as_index=False).agg(lambda x: x.dropna().iloc[0] if not x.dropna().empty else np.nan) # type:ignore
 
+def remove_rows_with_missing_data(df: pd.DataFrame) -> pd.DataFrame:
+    """Remove rows with missing data from the DataFrame
+    prints list of removed rows
+
+    Args:
+        df (pd.DataFrame): The DataFrame to modify
+
+    Returns:
+        pd.DataFrame: The modified DataFrame
+    """
+    removed_rows = df[df.isnull().any(axis=1)]
+    print("Removed rows:")
+    print(removed_rows)
+    return df.dropna()
+
 if __name__ == "__main__": # edit this to do whatever formatting you want
-    pass
+    df = get_csv("cities.csv")
+    df = remove_rows_with_missing_data(df)
+    df.to_csv("cities.csv", index=False)

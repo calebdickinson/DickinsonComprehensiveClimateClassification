@@ -2,156 +2,43 @@
 # on the left is the code and on the right is the name
 
 climates = {
-    'ZDX',
-    'ZSZ2',
-    'ZDZ2',
-    'ZHZ1',
-    'ZGZ1',
-    'ZWZ1',
-    'ZSZ1',
-    'ZDZ1',
-    'AWX',
-    'ADX',
-    'AWZ2',
-    'AMZ2',
-    'ADZ2',
-    'AHZ1',
-    'AGZ1',
-    'AWZ1',
-    'AMZ1',
-    'ASZ1',
-    'ADZ1',
-    'AHA2',
-    'AGA2',
-    'AWA2',
-    'AMA2',
-    'ASA2',
-    'ADA2',
-    'AHA1',
-    'AGA1',
-    'AWA1',
-    'ASA1',
-    'ADA1',
-    'BDX',
-    'BGZ2',
-    'BWZ2',
-    'BSZ2',
-    'BDZ2',
-    'BHZ1',
-    'BGZ1',
-    'BWZ1',
-    'BMZ1',
-    'BSZ1',
-    'BDZ1',
-    'BHA2',
-    'BGA2',
-    'BWA2',
-    'BMA2',
-    'BSA2',
-    'BDA2',
-    'BHA1',
-    'BGA1',
-    'BWA1',
-    'BMA1',
-    'BSA1',
-    'BDA1',
-    'BHB2',
-    'BGB2',
-    'BWB2',
-    'BMB2',
-    'BSB2',
-    'BDB2',
-    'BB1',
-    'CGZ2',
-    'CDZ2',
-    'CHZ1',
-    'CGZ1',
-    'CWZ1',
-    'CMZ1',
-    'CSZ1',
-    'CDZ1',
-    'CHA2',
-    'CGA2',
-    'CWA2',
-    'CMA2',
-    'CSA2',
-    'CDA2',
-    'CHA1',
-    'CGA1',
-    'CWA1',
-    'CMA1',
-    'CSA1',
-    'CDA1',
-    'CHB2',
-    'CGB2',
-    'CWB2',
-    'CMB2',
-    'CSB2',
-    'CDB2',
-    'CB1',
-    'CC2',
-    'CC1',
-    'DWZ1',
-    'DSZ1',
-    'DDZ1',
-    'DHA2',
-    'DGA2',
-    'DWA2',
-    'DMA2',
-    'DSA2',
-    'DDA2',
-    'DHA1',
-    'DGA1',
-    'DWA1',
-    'DMA1',
-    'DSA1',
-    'DDA1',
-    'DHB2',
-    'DGB2',
-    'DWB2',
-    'DMB2',
-    'DSB2',
-    'DDB2',
-    'DB1',
-    'DC2',
-    'DC1',
-    'DY',
-    'EWA2',
-    'ESA2',
-    'EDA2',
-    'EHA1',
-    'EGA1',
-    'EWA1',
-    'ESA1',
-    'EDA1',
-    'EHB2',
-    'EGB2',
-    'EMB2',
-    'EWB2',
-    'ESB2',
-    'EDB2',
-    'EB1',
-    'EC2',
-    'EC1',
-    'EY',
-    'FA2',
-    'FA1',
-    'FB2',
-    'FB1',
-    'FC2',
-    'FC1',
-    'FY',
-    'GA1',
-    'GB2',
-    'GB1',
-    'GC2',
-    'GC1',
-    'GY',
-    'YB2',
-    'YB1',
-    'YC2',
-    'YC1',
-    'YY'
+'HH',   'XH',   'ZH',   'AH',   'BH',
+'CH',   'DH',   'EH',   'FH',   'GH',
+'YH',   'XX',   'CX',   'DZ',   'EX',
+'FX',   'GX',   'YX',   'EZ2',  'FZ2',
+'GZ2',  'YZ2',  'FZ1',  'GZ1',  'YZ1',
+'FA2',  'GA2',  'YA2',  'FA1',  'GA1',
+'YA1',  'FB2',  'GB2',  'YB2',  'BB1',
+'CB1',  'DB1',  'EB1',  'FB1',  'GB1',
+'YB1',  'CC2',  'DC2',  'EC2',  'FC2',
+'GC2',  'YC2',  'CC1',  'DC1',  'EC1',
+'FC1',  'GC1',  'YC1',  'DY',   'EY',
+'FY',   'GY',   'YY',   'ZHZ1', 'AHZ1',
+'BHZ1', 'CHZ1', 'AHA2', 'BHA2', 'CHA2',
+'DHA2', 'EHA2', 'AHA1', 'BHA1', 'CHA1',
+'DHA1', 'EHA1', 'BHB2', 'CHB2', 'DHB2',
+'EHB2', 'ZGZ2', 'AGZ2', 'BGZ2', 'CGB2',
+'ZGZ1', 'AGZ1', 'BGZ1', 'CGZ1', 'DGZ1',
+'AGA2', 'BGA2', 'CGA2', 'DGA2', 'EGA2',
+'AGA1', 'BGA1', 'CGA1', 'DGA1', 'EGA1',
+'BGB2', 'CGB2', 'DGB2', 'EGB2', 'AWX',
+'ZWZ2', 'AWZ2', 'BWZ2', 'ZWZ1', 'AWZ1',
+'BWZ1', 'CWZ1', 'DWZ1', 'AWA2', 'BWA2',
+'CWA2', 'DWA2', 'EWA2', 'AWA1', 'BWA1',
+'CWA1', 'DWA1', 'EWA1', 'BWB2', 'CWB2',
+'DWB2', 'EWB2', 'AMZ2', 'ZMZ1', 'AMZ1',
+'BMZ1', 'CMZ1', 'DMZ1', 'AMA2', 'BMA2',
+'CMA2', 'DMA2', 'AMA1', 'BMA1', 'CMA1',
+'DMA1', 'BMB2', 'CMB2', 'DMB2', 'EMB2',
+'ZSZ2', 'ASZ2', 'BSZ2', 'CSZ2', 'ZSZ1',
+'ASZ1', 'BSZ1', 'CSZ1', 'DSZ1', 'ASA2',
+'BSA2', 'CSA2', 'ESB2', 'ZDX',  'ADX',
+'BDX',  'ZDZ2', 'ADZ2', 'BDZ2', 'CDZ2',
+'DDZ2', 'ZDZ1', 'ADZ1', 'BDZ1', 'CDZ1',
+'DDZ1', 'EDZ1', 'ADA2', 'BDA2', 'CDA2',
+'DDA2', 'EDA2', 'ADA1', 'BDA1', 'CDA1',
+'DDA1', 'EDA1', 'BDB2', 'CDB2', 'DDB2',
+'EDB2',
 }
 
 cold_climates = {
@@ -243,7 +130,7 @@ def verify_climates_1() -> bool:
             arid = code[1:-1]
 
         if cold not in [ 'F', 'G', 'Y'] and warm not in ['B1', 'C2', 'C1', 'Y']:
-            assert arid != "", f"Code {code} shouldn't have aridity, but does"
+            assert arid != "", f"Code {code} shouldn't have aridity, but does: {arid}"
         else:
             assert arid == '', f"Code {code} should have aridity, but doesn't"
 
@@ -306,19 +193,19 @@ def traverse_climates(code:str, type:str, direction:int) -> str:
     warm = factors[2]
 
     if type == 'cold':
-        if not cold in cold_ordered: return "False"
-        if direction == 1 and not cold_ordered.index(cold) < len(cold_ordered) - 1: return "False"
-        elif direction == -1 and not cold_ordered.index(cold) > 0: return "False"
+        # if not cold in cold_ordered: return "False"
+        # if direction == 1 and not cold_ordered.index(cold) < len(cold_ordered) - 1: return "False"
+        # elif direction == -1 and not cold_ordered.index(cold) > 0: return "False"
         cold = cold_ordered[direction + cold_ordered.index(cold)]
     elif type == 'arid':
-        if not arid in arid_ordered: return "False"
-        if direction == 1 and not arid_ordered.index(arid) < len(arid_ordered) - 1: return "False"
-        elif direction == -1 and not arid_ordered.index(arid) > 0: return "False"
+        # if not arid in arid_ordered: return "False"
+        # if direction == 1 and not arid_ordered.index(arid) < len(arid_ordered) - 1: return "False"
+        # elif direction == -1 and not arid_ordered.index(arid) > 0: return "False"
         arid = arid_ordered[direction + arid_ordered.index(arid)]
     else: #  type == 'warm'
-        if not warm in warm_ordered: return "False"
-        if direction == 1 and not warm_ordered.index(warm) < len(warm_ordered) - 1: return "False"
-        elif direction == -1 and not warm_ordered.index(warm) > 0: return "False"
+        # if not warm in warm_ordered: return "False"
+        # if direction == 1 and not warm_ordered.index(warm) < len(warm_ordered) - 1: return "False"
+        # elif direction == -1 and not warm_ordered.index(warm) > 0: return "False"
         warm = warm_ordered[direction + warm_ordered.index(warm)]
 
     new_climate = combine(cold, arid, warm)
@@ -381,6 +268,6 @@ def combine(cold:str, arid:str, warm:str) -> str:
     return cold + arid + warm # arid may be ""
 
 
-if __name__ == "__main__":
+if __name__ == "__main__": # these tests will fail. Instead we're trusting that the values on the website are correct
     print(verify_climates_1())  # verify that all climates in set are valid
     print(verify_climates_2())  # verify that all valid climates are in set
