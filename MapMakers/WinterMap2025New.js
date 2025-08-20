@@ -1,4 +1,4 @@
-// ==== helpers ====
+// 2025
 var months = ee.List.sequence(1, 12);
 
 function monthlyFromTas(ic) {
@@ -37,7 +37,6 @@ function monthlyFromPair(ic) {
 }
 
 function icHasBand(ic, bandName) {
-  // true if ANY image has the band
   var flagged = ic.map(function (img) {
     return img.set('hasBand', img.bandNames().contains(bandName));
   });
@@ -55,7 +54,7 @@ function coldestFromMonthly(monthlyIC) {
                   .select('monthlyMean').rename('coldestC');
 }
 
-// ==== PRIMARY: CMIP6 (ssp585, 2025) ====
+// ==== CMIP6 (ssp585, 2025) ====
 var cmip6 = ee.ImageCollection('NASA/GDDP-CMIP6')
   .filter(ee.Filter.eq('scenario', 'ssp585'))
   .filterDate('2025-01-01', '2026-01-01');
@@ -65,28 +64,13 @@ var monthly6 = ee.ImageCollection(
   ee.Algorithms.If(
     icHasBand(cmip6, 'tas'),
     monthlyFromTas(cmip6),
-    monthlyFromPair(cmip6) // only used if tas is truly absent
+    monthlyFromPair(cmip6) // only used if 'tas' is truly absent
   )
 );
 
 // CMIP6 hottest/coldest
-var hottest6 = hottestFromMonthly(monthly6);
-var coldest6 = coldestFromMonthly(monthly6);
-
-// ==== FALLBACK: CMIP5 NEX-GDDP (rcp85, 2025) ====
-var cmip5 = ee.ImageCollection('NASA/NEX-GDDP')
-  .filter(ee.Filter.eq('scenario', 'rcp85'))
-  .filter(ee.Filter.calendarRange(2025, 2025, 'year'));
-
-var monthly5 = monthlyFromPair(cmip5); // CMIP5 lacks 'tas'
-
-// CMIP5 hottest/coldest
-var hottest5 = hottestFromMonthly(monthly5).rename('hottestC_fb');
-var coldest5 = coldestFromMonthly(monthly5).rename('coldestC_fb');
-
-// ==== BLEND PER PIXEL (this is the key difference) ====
-var hottestC_global = hottest6.unmask(hottest5);
-var coldestC_global = coldest6.unmask(coldest5);
+var hottestC = hottestFromMonthly(monthly6);
+var coldestC = coldestFromMonthly(monthly6);
 
 // ---- classify by COLDEST month ----
 function classifyCold(tC) {
@@ -105,7 +89,7 @@ function classifyCold(tC) {
     .rename('coldZone');
 }
 
-var coldZone = classifyCold(coldestC_global);
+var coldZone = classifyCold(coldestC);
 
 // ---- palette & display ----
 var codeColorMap = {
