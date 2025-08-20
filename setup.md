@@ -33,6 +33,6 @@ When you want to upload code back to the website, run these commands in order:
 
 `git push`
 
-If you cannot push to the project, please reach out to one of the maintainers to ask for access.
+If you cannot push to the project, please reach out to @calebdickinson to ask for access.
 
 Enjoy!

@@ -151,7 +151,7 @@ def remove_rows_with_missing_data(df: pd.DataFrame) -> pd.DataFrame:
     removed_rows = df[df.isnull().any(axis=1)]
     print("Removed rows:")
     print(removed_rows)
-    return df.dropna()
+    return df.dropna() # type:ignore
 
 if __name__ == "__main__": # edit this to do whatever formatting you want
     df = get_csv("cities.csv")
