@@ -1,4 +1,5 @@
 // 2025
+
 var months = ee.List.sequence(1, 12);
 
 function monthlyFromTas(ic) {
