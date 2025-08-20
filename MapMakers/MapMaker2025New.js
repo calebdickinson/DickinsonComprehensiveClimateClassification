@@ -1,4 +1,5 @@
 // 2025
+
 var cmip6 = ee.ImageCollection('NASA/GDDP-CMIP6')
   .filter(ee.Filter.eq('scenario', 'ssp585'))
   .filter(ee.Filter.calendarRange(2025, 2025, 'year'));
