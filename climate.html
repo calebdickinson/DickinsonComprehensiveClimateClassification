@@ -27,15 +27,15 @@
     <h1 id="climate_name"></h1>
     <div class="buttons-with-code">
       <div class="buttons-group">
-        <button class="warmer" id="climate_warm+"><-- Warmer Summers</button>
-        <button class="warmer" id="climate_cold+"><-- Warmer Winters</button>
+        <button class="warmer" id="climate_warm_plus"><-- Warmer Summers</button>
+        <button class="warmer" id="climate_cold_plus"><-- Warmer Winters</button>
       </div>
       <div class="climate-code">
         <h2>Climate Code: <strong id="climate_code"></strong></h2>
       </div>
       <div class="buttons-group buttons-group_right">
-        <button class="colder" id="climate_warm-">Colder Summers --></button>
-        <button class="colder" id="climate_cold-">Colder Winters --></button>
+        <button class="colder" id="climate_warm_minus">Colder Summers --></button>
+        <button class="colder" id="climate_cold_minus">Colder Winters --></button>
       </div>
     <!-- </div>
     <img src=climate.pics alt="climate.name + landscape">
@@ -74,12 +74,12 @@
             const climate_map_2025 = climate['map_2025'];
             const climate_map_2100 = climate['map_2100'];
             const climate_map_1900s = climate['map_1900s'];
-            const climate_arid_plus = climate['arid+'];
-            const climate_arid_minus = climate['arid-'];
-            const climate_warm_plus = climate['warm+'];
-            const climate_warm_minus = climate['warm-'];
-            const climate_cold_plus = climate['cold+'];
-            const climate_cold_minus = climate['cold-'];
+            const climate_arid_plus = climate['arid_plus'];
+            const climate_arid_minus = climate['arid_minus'];
+            const climate_warm_plus = climate['warm_plus'];
+            const climate_warm_minus = climate['warm_minus'];
+            const climate_cold_plus = climate['cold_plus'];
+            const climate_cold_minus = climate['cold_minus'];
 
             if (!climate) {
                 throw new Error(`Climate data for code "${code}" not found`);
@@ -100,18 +100,34 @@
                 window.location.href = window.location.pathname + '?code=' + code;
             }
 
-            // if (climate_arid_plus == "False") document.getElementById('climate_arid+').disabled = true;
+            function is_disabled(value) {
+                return value === "False" || value === "false" || value === false || value === "" || value === undefined || value === null
+            }
+
+            // if (climate_arid_plus == "False") document.getElementById('climate_arid_plus').disabled = true;
             // else document.getElementById('climate_arid+').onclick = () => change_climate(climate_arid_plus);
-            // if (climate_arid_minus == "False") document.getElementById('climate_arid-').disabled = true;
+            // if (climate_arid_minus == "False") document.getElementById('climate_arid_minus').disabled = true;
             // else document.getElementById('climate_arid-').onclick = () => change_climate(climate_arid_minus);
-            if (climate_warm_plus == "False") document.getElementById('climate_warm+').disabled = true;
-            else document.getElementById('climate_warm+').onclick = () => change_climate(climate_warm_plus);
-            if (climate_warm_minus == "False") document.getElementById('climate_warm-').disabled = true;
-            else document.getElementById('climate_warm-').onclick = () => change_climate(climate_warm_minus);
-            if (climate_cold_plus == "False") document.getElementById('climate_cold+').disabled = true;
-            else document.getElementById('climate_cold+').onclick = () => change_climate(climate_cold_plus);
-            if (climate_cold_minus == "False") document.getElementById('climate_cold-').disabled = true;
-            else document.getElementById('climate_cold-').onclick = () => change_climate(climate_cold_minus);
+            try {
+                if (is_disabled(climate_warm_plus)) {
+                    const btn = document.getElementById('climate_warm_plus');
+                    if (btn) btn.disabled = true;
+                } else {
+                    const btn = document.getElementById('climate_warm_plus');
+                    if (btn) btn.onclick = () => change_climate(climate_warm_plus);
+                }
+                // Repeat for other buttons...
+            } catch (error) {
+                console.error('Error setting up buttons:', error);
+            }
+            if (is_disabled(climate_warm_plus)) document.getElementById('climate_warm_plus').disabled = true;
+            else document.getElementById('climate_warm_plus').onclick = () => change_climate(climate_warm_plus);
+            if (is_disabled(climate_warm_minus)) document.getElementById('climate_warm_minus').disabled = true;
+            else document.getElementById('climate_warm_minus').onclick = () => change_climate(climate_warm_minus);
+            if (is_disabled(climate_cold_plus)) document.getElementById('climate_cold_plus').disabled = true;
+            else document.getElementById('climate_cold_plus').onclick = () => change_climate(climate_cold_plus);
+            if (is_disabled(climate_cold_minus)) document.getElementById('climate_cold_minus').disabled = true;
+            else document.getElementById('climate_cold_minus').onclick = () => change_climate(climate_cold_minus);
         })
         .catch(error => {
             throw new Error("Error loading climate data: " + error.message);
