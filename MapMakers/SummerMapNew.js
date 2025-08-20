@@ -57,7 +57,7 @@ var warmZone = classifySummer(hottestC);
 var codeColorMap = {
   11:"#888888",10:"#0000FF",9:"#000000",8:"#550000",
   7:"#C71585",6:"#FF0000",5:"#FFA500",4:"#FFFF00",
-  3:"#008000",2:"#0000FF",1:"#FFC0CB",0:"#000000"
+  3:"#008000",2:"#0000FF",1:"#FF10F0",0:"#000000"
 };
 var keys    = Object.keys(codeColorMap);
 var codes   = keys.map(function(k){ return parseInt(k, 10); });
