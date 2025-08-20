@@ -9,57 +9,109 @@
     gtag('js', new Date());
     gtag('config', 'G-L6C1HZ2LBZ');
   </script>
-
-
-
-
-  <!-- dynamic rendering -->
-  <script>
-    const code = new URLSearchParams(location.search).get('code');
-    
-  </script>
-
-
-
-
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="../css/styles.css">
-</head>
+  <link rel="stylesheet" href="css/styles.css">
+    <title></title>
 </head>
 <body>
   <div id="header">
     <h1>The Dickinson Comprehensive Climate Classification System</h1>
   </div>
   <nav>
-    <a href="../home.html">Home</a>
-    <a href="../classification.html">Classification</a>
-    <a href="../maps.html">Maps</a>
-    <a href="../about.html">About</a>
+    <a href="home.html">Home</a>
+    <a href="classification.html">Classification</a>
+    <a href="maps.html">Maps</a>
+    <a href="about.html">About</a>
   </nav>
   <main>
-    <h1>Arctic Cold Summer Climate</h1>
+    <h1 id="climate_name"></h1>
     <div class="buttons-with-code">
       <div class="buttons-group">
-        <button class="warmer" onclick="window.location.href='mild-summer.html'"><-- Warmer Summers</button>
-        <button class="warmer" onclick="window.location.href='../subarctic/cold-summer.html'"><-- Warmer Winters</button>
+        <button class="warmer" id="climate_warm+"><-- Warmer Summers</button>
+        <button class="warmer" id="climate_cold+"><-- Warmer Winters</button>
       </div>
       <div class="climate-code">
-        <h2>Climate Code: <strong>GB1</strong></h2>
+        <h2>Climate Code: <strong id="climate_code"></strong></h2>
       </div>
       <div class="buttons-group buttons-group_right">
-        <button class="colder" onclick="window.location.href='very-cold-summer.html'">Colder Summers --></button>
-        <button class="colder" onclick="window.location.href='../superarctic/cold-summer.html'">Colder Winters --></button>
+        <button class="colder" id="climate_warm-">Colder Summers --></button>
+        <button class="colder" id="climate_cold-">Colder Winters --></button>
       </div>
-    </div>
-    <img src="images/Baker_Lake.jpg" alt="Arctic Cold Summer landscape">
+    <!-- </div>
+    <img src=climate.pics alt="climate.name + landscape">
     <h3>Cities with this climate:</h3>
-    <p>Rankin Inlet, Nunavut, Canada</p>
-    <p>Baker Lake, Nunavut, Canada</p>
-    <p>Coral Harbour, Nunavut, Canada</p>
+    <p>climate.places2025</p>
     <h3>World map of this climate:</h3>
-    <img src="images/gb1map.png" alt="Arctic Cold Summer map">
+    <img src="climate.map_2025" alt="climate.name + map">
      <h3>World map of this climate in 2100:</h3>
-    <img src="images/2100gb1map.png" alt="Arctic Cold Summer map in 2100">
+    <img src="climate.map_2100" alt="climate.name + map in 2100"> -->
+    </div>
   </main>
+
+
+  <!-- get data for specific climate code -->
+  <script>
+    const code = new URLSearchParams(location.search).get('code');
+
+    if (!code) {
+        throw new Error("No climate code specified in URL");
+    }
+
+    fetch('data.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            const climate = data[code];
+            const climate_name = climate['name'];
+            const climate_code = climate['code'];
+            const climate_cities_2025 = climate['cities_2025'];
+            const climate_cities_2100 = climate['cities_2100'];
+            const climate_cities_1900s = climate['cities_1900s'];
+            const climate_map_2025 = climate['map_2025'];
+            const climate_map_2100 = climate['map_2100'];
+            const climate_map_1900s = climate['map_1900s'];
+            const climate_arid_plus = climate['arid+'];
+            const climate_arid_minus = climate['arid-'];
+            const climate_warm_plus = climate['warm+'];
+            const climate_warm_minus = climate['warm-'];
+            const climate_cold_plus = climate['cold+'];
+            const climate_cold_minus = climate['cold-'];
+
+            if (!climate) {
+                throw new Error(`Climate data for code "${code}" not found`);
+            }
+
+            document.getElementById('climate_name').textContent = climate_name;
+            document.getElementById('climate_code').textContent = climate_code;
+
+            document.getElementById('climate_cities_2025').textContent = climate_cities_2025.join(", ");
+            document.getElementById('climate_cities_2100').textContent = climate_cities_2100.join(", ");
+            document.getElementById('climate_cities_1900s').textContent = climate_cities_1900s.join(", ");
+
+            document.getElementById('climate_map_2025').src = climate_map_2025;
+            document.getElementById('climate_map_2100').src = climate_map_2100;
+            document.getElementById('climate_map_1900s').src = climate_map_1900s;
+
+            document.getElementById('climate_arid+').onclick = () => change_climate(climate_arid_plus);
+            document.getElementById('climate_arid-').onclick = () => change_climate(climate_arid_minus);
+            document.getElementById('climate_warm+').onclick = () => change_climate(climate_warm_plus);
+            document.getElementById('climate_warm-').onclick = () => change_climate(climate_warm_minus);
+            document.getElementById('climate_cold+').onclick = () => change_climate(climate_cold_plus);
+            document.getElementById('climate_cold-').onclick = () => change_climate(climate_cold_minus);
+        })
+        .catch(error => {
+            throw new Error("Error loading climate data: " + error.message);
+        });
+
+    function change_climate(code) {
+        if (code) {
+            window.location.href = window.location.pathname + '?code=' + code;
+        }
+    }
+  </script>
 </body>
 </html>

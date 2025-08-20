@@ -7,6 +7,7 @@ def generate_json() -> dict[str, dict]: #type:ignore
     data = {}
     for code in codes:
         data[code] = {
+            'code': code,
             'name': decode(code),
             'cold': code[0],
             'arid': code[1:-1] if code[-1].isdigit() else code[1:],
@@ -21,9 +22,9 @@ def generate_json() -> dict[str, dict]: #type:ignore
             'map_2025': f'~climates/2025_maps/{code}.png',
             'map_2100': f'~climates/2100_maps/{code}.png',
             'pics': list(glob.glob(f'~/climates/2100_maps/{code}*')),
-            'places_1900s': list(list_places_by_climate(get_csv("cities.csv"), code, 1)),
-            'places_2025': list(list_places_by_climate(get_csv("cities.csv"), code, 2)),
-            'places_2100': list(list_places_by_climate(get_csv("cities.csv"), code, 3)),
+            'cities_1900s': list(list_places_by_climate(get_csv("cities.csv"), code, 1)),
+            'cities_2025': list(list_places_by_climate(get_csv("cities.csv"), code, 2)),
+            'cities_2100': list(list_places_by_climate(get_csv("cities.csv"), code, 3)),
         }
     return data #type:ignore
 
