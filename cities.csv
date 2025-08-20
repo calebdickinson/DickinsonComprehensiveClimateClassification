@@ -1,0 +1,471 @@
+Location,1900s,2025,2100
+"Abbotsford, BC",CMB2,CMA1,CMA2
+"Abuja, Nigeria",AWA2,AWZ1,AWZ1
+"Accra, Ghana",ASA2,ASA2,ASZ1
+"Adak, AK",CB1,CHB1,CHB2
+"Adamstown, Pitcairn Islands",AHA1,BHA1,BGA1
+"Addis Ababa, Ethiopia",BWB2,BWA1,AGA1
+"Aksu City, China",DDA1,DDA2,CDZ1
+"Albany, NY",DHA1,DHA1,CGZ1
+"Algiers, Algeria",BMA1,BMA2,BDZ1
+"Alofi, Niue",AHA2,AHA1,AHA2
+"Amherst, NS",DHB2,DHA1,CHA2
+"Amman, Jordan",CDA1,CDA2,BDZ1
+"Amsterdam, Netherlands",CHB2,CGB2,CMA1
+"Anchorage, AK",DB1,DGB2,CGA1
+"Andorra la Vella, Andorra",DB1,DHB2,CGA1
+"Ankara, Turkey",DSA1,CSA1,CDZ1
+"Annapolis, MD",CHA2,CGA2,CGZ1
+"Antananarivo, Madagascar",BWA1,BWA1,AWA2
+"Apia, Samoa",AHA2,AHA2,AHZ1
+"Arviat, NU",GB1,FGB1,EGA1
+"Ashgabat, Turkmenistan",CDA2,CDZ1,CDZ2
+"Asmara, Eritrea",BWB2,BDA1,AWA2
+"Astana, Kazakhstan",ESA1,ESA1,DDA2
+"Asunción, Paraguay",BGA2,BGA2,ASZ1
+"Athens, Greece",CMA2,CMA2,BDZ1
+"Atlanta, GA",CHA2,CGA2,BGZ1
+"Augusta, ME",DHA1,DHA1,CHA2
+"Austin, TX",CSA2,BSZ1,BSZ2
+"Avarua, Cook Islands",AHA2,BHA1,BHA1
+"Badger, AK",FB2,FSB2,DSA1
+"Baghdad, Iraq",CDZ1,BDZ2,BDX1
+"Baker Lake, NU",GB1,FGB1,ESA1
+"Baku, Azerbaijan",CDA2,CDA2,CDZ2
+"Baltimore, MD",CHA2,CGA2,CGZ1
+"Bamako, Mali",AWZ1,AWZ1,ZDZ2
+"Bandar Seri Begawan, Brunei",AHA2,AHA2,ZHZ1
+"Bangalore, India",ASA2,ASA2,ASZ1
+"Bangkok, Thailand",ASZ1,ASZ1,ZSZ2
+"Bangui, Central African Republic",AGA2,AGA2,ASZ1
+"Banjul, Gambia",AWA2,AWA2,ZDZ1
+"Basseterre, Saint Kitts and Nevis",AGA2,AHA2,ASZ1
+"Batman, Turkey",CMZ1,CMZ1,BDZ2
+"Baton Rouge, LA",CHA2,BGA2,BGZ1
+"Behchoko, NT",FB2,FGB2,ESA1
+"Beijing, China",DWA2,DWA2,CWZ1
+"Beirut, Lebanon",BMA2,BMA2,BDZ1
+"Belgrade, Serbia",CGA1,CSA2,CSZ1
+"Belmopan, Belize",AHA2,AGA2,ASZ1
+"Berlin, Germany",DGB2,CGA1,CSA2
+"Bern, Switzerland",DHB2,CHB2,CHA2
+"Bethel, AK",EB1,EGB1,CGA1
+Bird Island Research Station,DC1,CC1,CC2
+"Bishkek, Kyrgyzstan",DSA1,DSA1,CSZ1
+"Bismarck, ND",ESA1,DSA1,DSZ1
+"Bissau, Guinea-Bissau",AWA2,AWA2,ZWZ1
+"Bloemfontein, South Africa",CSA1,BWA1,BDZ1
+"Bogotá, Colombia",BB1,BHB2,BHB2
+"Boise, ID",DMA1,CMA2,CMZ1
+"Borujerd, Iran",CMA2,DMA2,CDZ1
+"Boston, MA–NH",DHA1,DHA1,CGZ1
+"Bourem, Mali",ADZ1,ADZ2,ADX1
+"Brades, Montserrat",AGA2,AHA2,AGZ1
+"Brampton, ON",DHA1,DGA1,CGA2
+"Brandon, MB",EGB2,EGA1,DSA2
+"Brasília, Brazil",BWA1,AWA2,AWZ1
+"Bratislava, Slovakia",DGB2,CSA1,CSA2
+"Brazzaville, Congo",AGA2,AGA2,ASZ1
+"Bridgetown, Barbados",ASA2,AGA2,ASZ1
+"Brussels, Belgium",CGB2,CGB2,CMA1
+"Bucharest, Romania",DGA1,DSA2,CDZ1
+"Budapest, Hungary",DGA1,DSA1,CSZ1
+"Buenos Aires, Argentina",BGA1,BGA2,BGA2
+"Buffalo, NY",DHA1,DHA1,CGA2
+"Bulgan, Mongolia",EWB2,FWB2,EWA1
+"Burnaby, BC",CMB2,CMB2,CMA1
+"Cairo, Egypt",BDA2,BDZ1,BDZ2
+"Calgary, AB",EGB2,DGB2,DSA2
+"Cambridge Bay, NU",GC2,FSB1,ESB2
+"Canberra, Australia",CGA1,CGA1,BSA2
+"Cape Breton Regional Municipality, NS",DHB2,DHB2,CHA2
+"Cape Town, South Africa",BMA1,BMA1,BDA1
+"Caracas, Venezuela",BSA1,ASA1,ADA2
+"Carbondale, IL",DHA2,CGA2,CGZ1
+"Carson City, NV",CDA1,CMA1,CMA2
+"Castries, Saint Lucia",AHA2,AGA2,ASZ1
+"Ceuta, Ceuta",BMA1,BMA2,BDA2
+"Champaign, IL",DHA1,DGA2,CGZ1
+"Chandrapur, India",AWZ2,AWZ2,AWX1
+"Charleston, WV",DHA1,CGA2,CGZ1
+"Charlotte Amalie, U.S. Virgin Islands",ASA2,AHA2,ASZ1
+"Charlotte, NC–SC",CGA2,CGA2,BGZ1
+"Charlottetown, PE",DHB2,DHA1,CHA2
+"Chena Ridge, AK",FB2,FSB2,DSA1
+"Chengdu, China",CWA2,CWA2,BWZ1
+"Chennai, India",ASZ1,AMZ1,AMZ2
+"Cheyenne, WY",DSA1,DSA1,CSA2
+"Chicago, United States",DHA1,DGA1,CGZ1
+"Chișinău, Moldova",DSA1,DSA1,CSZ1
+"Chongqing, China",CGA2,CGA2,BSZ1
+"Cincinnati, OH–KY",DHA1,CGA2,CGZ1
+"Cleveland, OH",DHA1,DHA1,CGA2
+"Cockburn Town, Turks & Caicos",ADA2,ASA2,ASZ1
+"College, AK",FB2,FSB2,DSA1
+"Columbia, SC",CGA2,CGA2,BGZ1
+"Columbus, OH",DHA1,CGA2,CGZ1
+"Comodoro Rivadavia, Argentina",CDB2,CDB2,CDA1
+"Conakry, Guinea",AWA2,AWA2,AWZ1
+"Conception Bay South, NL",DB1,DHB2,CMA1
+"Concord, NH",DHA1,DHA1,CHA2
+"Copenhagen, Denmark",CGB2,CGB2,CGA1
+"Coral Harbour, NU",FC1,FHB1,EGB2
+"Corner Brook, NL",DHB2,DHB2,DHA1
+"Crystal City, TX",BDA2,BDZ1,BDZ2
+"Dakar, Senegal",ADA2,AWA2,ADZ1
+"Dallas–Fort Worth–Arlington, TX",CSA2,CSZ1,BSZ2
+"Damascus, Syria",CDA2,CMA1,CDA2
+"Delhi, India",BDZ1,BWZ1,AWZ2
+"Denver–Aurora, CO",DSA1,CSA1,CDA2
+"Des Moines, IA",DGA1,DGA2,CSZ1
+"Detroit, MI",DGA1,DGA1,CGZ1
+"Dhaka, Bangladesh",BWA2,BWA2,AWZ1
+"Dieppe, NB",DHB2,DHA1,CHA2
+"Dili, Timor-Leste",ASA2,AGA2,ASA2
+"Djibouti, Djibouti",BDA2,ADZ1,ADZ2
+"Dodoma, Tanzania",BWA1,ADA2,ADA2
+"Doha, Qatar",BDZ1,BDZ2,ADX1
+"Dongguan, China",BHA2,BWZ1,AWZ1
+"Dover, DE",CHA1,CGA2,CGZ1
+"Dubai, United Arab Emirates",BDZ1,ADZ2,ADX1
+"Dublin, Ireland",CHB2,CHB2,CMA1
+"Duluth, MN",EHB2,DHA1,DGA2
+"Dushanbe, Tajikistan",CMA2,CMA2,CMZ1
+"Edmonton, AB",EGB2,EGB2,DSA2
+"El Menia, Algeria",BDZ1,BDZ2,BDX1
+"Eureka Research Station, NU",GY,GC2,FSB1
+"Fairbanks, AK",FB2,FSB2,DSA1
+"Fort Good Hope, NT",GB2,FSB2,ESA1
+"Fort Providence, NT",FB2,FSB2,ESA1
+"Fort Simpson, NT",FB2,FGB2,EGA1
+"Fort Smith, NT",FB2,FGB2,ESA1
+"Frankfort, KY",DHA1,CHA2,CGZ1
+"Fredericton, NB",DHB2,DHA1,CHA2
+"Freetown, Sierra Leone",AWA2,AWA2,AWA2
+"Funchal, Madeira",BMA1,BMB2,BMA1
+"Fuzhou, China",CHA2,BGA2,BGZ1
+"Gaborone, Botswana",BDA2,BDA2,ADZ1
+"Gateway, AK",EB1,DGB2,CGA1
+"Gatineau, QC",EHA1,DHA1,DGA2
+"George Town, Cayman Islands",ASA2,AGA2,ASZ1
+"Georgetown, Guyana",AHA2,AHA2,ZSZ1
+"Gibraltar, Gibraltar",BMA1,BMA2,BDZ1
+"Gitega, Burundi",BGB2,AGA1,AGA2
+"Grand Forks, ND",EGA1,ESA1,DSZ1
+"Guangzhou–Foshan, China",BWA2,BGZ1,AWZ1
+"Guatemala City, Guatemala",BWA1,BHA1,AHA2
+"Gujrat, Pakistan",BSZ1,BWZ1,BWZ2
+"Hagåtña, Guam",AHA2,AHA2,ZHZ1
+"Halifax, NS",DHB2,DHA1,CHA2
+"Hamilton, Bermuda",BGA1,AGA2,AGZ1
+"Hamilton, ON",DHA1,DGA1,CGA2
+"Hanga Roa, Easter Island",BGA1,BGB2,BMA1
+"Hangzhou, China",CHA2,CGZ1,BGZ1
+"Hanoi, Vietnam",BWA2,BWZ1,AWZ2
+"Harare, Zimbabwe",BWA1,BWA1,AWA2
+"Harrisburg, PA",DHA1,CHA2,CGZ1
+"Hartford, CT",DHA1,CHA2,CGZ1
+"Havana, Cuba",AGA2,ASA2,ASZ1
+"Hay River, NT",FB2,FGB2,ESA1
+Heard Island and McDonald Islands,DC1,DC1,DC2
+"Helena, MT",DSB2,DSA1,CDA2
+"Helsinki, Finland",DB1,DGB2,CGA1
+"Hengyang, China",CGZ1,CGZ1,BGZ2
+"Ho Chi Minh City, Vietnam",AGA2,AGZ1,ZSZ1
+"Honiara, Solomon Islands",AHA2,AHA2,AHA2
+"Honolulu, HI",AMA2,AMA2,AMA2
+"Houston, TX",BGA2,BGZ1,BSZ1
+"Hulunbuir, China",FA1,FWA1,EWA2
+"Hyderabad, India",AWZ1,AWZ1,AWZ2
+"Igloolik, NU",FY,FC2,EGB1
+"Indianapolis, IN",DHA1,DGA2,CGZ1
+"Inuvik, NT",FB1,FGB2,ESA1
+"Iqaluit, NU",FC2,FC2,DHB2
+"Isachsen Research Station, NU",GY,GC1,EC2
+"Islamabad, Pakistan",CSZ1,BSZ1,BSZ2
+"Istanbul, Turkey",CMA1,CMA2,BMZ1
+"Jackson, MS",CGA2,CGA2,BGZ1
+"Jacksonville, FL",BGA2,BGA2,BSZ1
+"Jakarta, Indonesia",AGA2,AGA2,ZGZ1
+"Jamestown, St Helena",BMA1,BSB2,BDA1
+"Jefferson City, MO",DGA2,CGA2,CSZ1
+"Jerusalem, Israel",CMA1,BDA2,BDZ1
+"Johannesburg–Pretoria, South Africa",BWA1,BWA1,BWA2
+"Juba, South Sudan",ASA2,ASZ1,ZSZ2
+"Juneau, AK",DB1,DHB1,CHB2
+"Kabul, Afghanistan",DMA1,DSA1,CSA2
+"Kalifornsky, AK",EB1,DHB2,CGA1
+"Kampala, Uganda",AGA1,AGA2,AGA2
+"Kansas City, MO–KS",DGA2,CGA2,CSZ1
+"Karachi, Pakistan",ADZ1,BDZ1,ADZ2
+"Kathmandu, Nepal",BWA1,CWA1,BWA2
+"Kenai, AK",EB1,DHB2,CGA1
+"Ketchikan, AK",DB1,DMB2,CMA1
+"Khartoum, Sudan",ADZ1,ADZ2,ZDX1
+"Kigali, Rwanda",BGA1,AGA1,AGA2
+"Kingston, Jamaica",AGA2,AHA2,AMZ1
+"Kingstown, Saint Vincent and the Grenadines",AHA2,AGA2,ASZ1
+"Kinshasa, DR Congo",AGA2,AGA2,ASZ1
+"Knik-Fairview, AK",DB1,DGB2,CGA1
+"Kolkata, India",BWZ1,AWZ1,AWZ2
+"Kota, India",BWZ2,BWZ2,AWX1
+"Kralendijk, Bonaire",ADA2,ASA2,ADZ1
+"Krasnoyarsk, Russia",EGB2,EGA1,DSA2
+"Kuala Lumpur, Malaysia",AHA2,AHA2,ZGZ1
+"Kyiv, Ukraine",DGB2,DGA1,CSA2
+"Lagos, Nigeria",AGA2,ASZ1,ZSZ1
+"Lahore, Pakistan",BDZ1,BSZ1,BWZ2
+"Lansing, MI",DHA1,DGA1,CGA2
+"Las Vegas–Henderson–Paradise, NV",CDZ1,BDZ1,BDZ2
+"Laval, QC",DHA1,DHA1,DHA2
+"Lethbridge, AB",DSB2,DSA1,CSA2
+"Libreville, Gabon",AHA2,AHA2,AGZ1
+"Lilongwe, Malawi",BWA1,BWA2,AWZ1
+"Lima, Peru",BDA1,BDA2,ADA2
+"Lincoln, NE",DGA2,DGA2,CSZ1
+"Lisbon, Portugal",BMA1,BMA1,BMA2
+"Little Rock, AR",CGA2,CGA2,BGZ1
+"Ljubljana, Slovenia",CHA1,CHA1,CGA2
+"Lompoc, CA",BMB2,BMB2,BMA1
+"Lomé, Togo",ASA2,ASA2,ASZ1
+"London, United Kingdom",CGB2,CGB2,CMA1
+"Longnan, China",CWA1,CWA1,CWA2
+"Longueuil, QC",DHA1,DHA1,DHA2
+"Longyearbyen, Svalbard & Jan Mayen",EC1,EC1,DHB1
+"Los Angeles, United States",BDA1,BDA1,BDA2
+"Louisville/Jefferson County, KY–IN",CHA2,CHA2,CGZ1
+"Luanda, Angola",ADA2,ADA2,ADZ1
+"Lusaka, Zambia",BWA1,BWA2,AWZ1
+"Lutsen, MN",EHB2,DHA1,DGA2
+"Luxembourg, Luxembourg",CHB2,CHB2,CMA2
+Macquarie Island Research Station,CC2,CC2,CC2
+"Madison, WI",DHA1,DGA1,CGA2
+"Madrid, Spain",CMA1,CMA2,BDZ1
+"Malabo, Equatorial Guinea",AHA1,AHA1,AHA2
+"Managua, Nicaragua",ASA2,ASA2,ZSZ1
+"Manama, Bahrain",ADZ1,BDZ2,ADX1
+"Mandalgovi, Mongolia",EDB2,EDA1,EDA2
+"Manila, Philippines",AGA2,AGZ1,ZGZ1
+"Maputo, Mozambique",BSA2,ASA2,ADZ1
+"Maseru, Lesotho",CSA1,BWA1,BWA2
+"Mbabane, Eswatini",BWB2,BWA1,BWA2
+"Meadow Lakes, AK",EB1,DGB2,CGA1
+"Meeteetse, WY",DSB2,DSA1,CDA2
+"Melilla, Melilla",BDA2,BDA2,BDZ1
+"Memphis, TN–MS–AR",CHA2,CGA2,BGZ1
+"Mexico City, Mexico",BWB2,BWA1,BWA2
+"Miami–Fort Lauderdale, FL",AGA2,AGA2,ASZ1
+"Milwaukee, WI",DHA1,DGA1,CGA2
+"Minneapolis–St. Paul, MN",EGA1,DGA1,CSZ1
+"Minsk, Belarus",DHB2,DGB2,CSA2
+"Miramichi, NB",EHB2,DHA1,DHA2
+"Mississauga, ON",DHA1,DGA1,CGA2
+"Mogadishu, Somalia",ADA2,ADZ1,ZDZ1
+"Moncton, NB",DHB2,DHA1,CHA2
+"Monrovia, Liberia",AHA2,AHA2,AHZ1
+"Montevideo, Uruguay",BGA1,BGA1,BGA2
+"Montgomery, AL",CGA2,BGA2,BGZ1
+"Montpelier, VT",DHB2,DHA1,DHA2
+"Montreal, QC",DHA1,DHA1,DHA2
+"Moose Jaw, SK",ESB2,ESA1,DSA2
+"Moroni, Comoros",AHA2,AGA2,AGA2
+"Moscow, Russia",DHB2,DGA1,DGA2
+"Mount Pearl, NL",DHB2,DHB2,CMA1
+"Mumbai, India",AWA2,AWZ1,AWZ2
+"Muscat, Oman",ADZ1,ADZ1,ADZ2
+"N'Djamena, Chad",ADZ1,ADZ2,ZDX1
+"Nagoya, Japan",CHA2,CHA2,CHZ1
+"Nairobi, Kenya",BGB2,BSA1,ASA2
+"Nashville–Davidson, TN",CHA2,CHA2,CGZ1
+"Nassau, Bahamas",ASA2,ASA2,ASZ1
+"Naypyidaw, Myanmar",AWZ1,AWZ1,AWZ2
+"New Glasgow, NS",DHB2,DHA1,CHA2
+"New Orleans, LA",BHA2,BGA2,BGZ1
+"New York, United States",DHA1,CHA2,CGZ1
+"Ngerulmud, Palau",AHA2,AHA2,ZHZ1
+"Niamey, Niger",ADZ1,ADZ2,ZDX1
+"Nicosia, Cyprus",BDA2,BDA2,BDZ1
+"Norman Wells, NT",FB2,FGB2,ESA1
+"North Lakes, AK",DB1,DGB2,CGA1
+"Nouakchott, Mauritania",ADA2,ADZ1,ADZ1
+"Nouméa, New Caledonia",BSA2,BGA1,AGA2
+"Novosibirsk, Russia",EGB2,EGA1,DSA2
+"Nukuʻalofa, Tonga",AGA2,BGA1,AGA2
+"Nuuk, Greenland",DC2,DC2,DHB1
+"Oklahoma City, OK",CGA2,CSZ1,BSZ2
+"Olympia, WA",CMB2,CMA1,BMA2
+"Omsk, Russia",EGB2,ESA1,DSA2
+"Oranjestad, Aruba",ADA2,ASA2,ADZ1
+"Orlando, FL",BGA2,BGA2,ASZ1
+"Osaka–Kobe–Kyoto, Japan",CHA2,CHA2,CGZ1
+"Oslo, Norway",DHB2,DHB2,CHA1
+"Ottawa, Canada",EHA1,DHA1,DGA2
+"Ottawa, ON",EHA1,DHA1,DGA2
+"Ouagadougou, Burkina Faso",AWZ1,ADZ1,ZDZ2
+"Pago Pago, American Samoa",AHA2,AHA2,AHA2
+"Palikir, Federated States of Micronesia",AHA2,AHA2,AHA2
+"Palmer, AK",EB1,DGB2,CGA1
+"Panama City, Panama",AGA2,AHA2,ZGZ1
+"Pangnirtung, NU",FC1,FC1,EC2
+"Papeete, French Polynesia",AHA1,AGA1,AGA2
+"Paradise, NL",DB1,DHB2,CMA1
+"Paramaribo, Suriname",AGA2,AGA2,ZSZ1
+"Paris, France",CGB2,CSA1,CMA2
+"Philadelphia, PA–NJ–DE–MD",DHA1,CGA2,CGZ1
+"Philipsburg, Sint Maarten",ASA2,AGA2,ASZ1
+"Phnom Penh, Cambodia",ASA2,AGZ1,ZSZ2
+"Phoenix–Mesa–Scottsdale, AZ",BDZ1,BDZ1,BDZ2
+"Phungling, Nepal",BWA1,CWA1,BWA1
+"Pierre, SD",DSA1,DSA2,CSZ1
+"Pittsburgh, PA",DHA1,CHA1,CGZ1
+"Podgorica, Montenegro",CMA2,CMA2,CMZ1
+"Ponta Delgada, Azores",BMA1,BMA1,BMA2
+"Port Louis, Mauritius",BHA2,AGA2,AGA2
+"Port Moresby, Papua New Guinea",ASA2,AGA2,ZGZ1
+"Port Vila, Vanuatu",AHA2,AHA2,AHA2
+"Port of Spain, Trinidad and Tobago",AGA2,AGA2,ASZ1
+"Port-au-Prince, Haiti",ASA2,AGA2,ASZ1
+"Portage la Prairie, MB",EGB2,EGA1,DSA2
+"Portland, OR–WA",CMB2,CMA1,BMA2
+"Porto-Novo, Benin",ASA2,ASZ1,ZSZ1
+"Prague, Czech Republic",DSB2,DSA1,CSA2
+"Praia, Cabo Verde",ADA2,ADA2,ADZ1
+"Prince Albert, SK",EGB2,ESA1,DSA2
+"Pristina, Kosovo",DGB2,CGA1,CSZ1
+"Providence, RI–MA",DHA1,CHA2,CGZ1
+"Prudhoe Bay, AK",GB1,FWB1,DDA1
+"Pyongyang, North Korea",DWA1,DWA2,CWZ1
+"Qikiqtarjuaq, NU",FC1,FC1,EHB1
+"Quebec City, QC",DHB2,DHA1,DHA2
+"Quito, Ecuador",BB1,BHB2,AGA1
+"Rabat, Morocco",BMB2,BDA2,BDA2
+"Raleigh, NC",CGA2,CGA2,CGZ1
+"Rankin Inlet, NU",GC2,FGB1,EGB2
+"Red Deer, AB",EGB2,EGB2,DSA2
+"Regina, SK",ESB2,ESA1,DSA2
+"Rexburg, ID",DSB2,DSA1,CSA2
+"Reykjavík, Iceland",CC2,CHB1,CHB1
+"Richmond, BC",CMB2,CMA1,BMA2
+"Richmond, VA",CHA2,CGA2,CGZ1
+"Riga, Latvia",DGB2,DGB2,CGA1
+"Rio de Janeiro, Brazil",AGA1,ASA2,ASZ1
+"Riverside–San Bernardino, CA",BDA2,BDA2,BDZ1
+"Riyadh, Saudi Arabia",BDZ1,BDZ2,ADX1
+"Road Town, British Virgin Islands",ASA2,AGA2,ASZ1
+"Rome, Italy",CMA1,CMA2,BMZ1
+"Roseau, Dominica",AHA2,AHA1,AHA2
+"Sacramento, CA",CMA1,CMA2,BDZ1
+"Saint John, NB",DHB2,DHA1,CHA2
+"Saint-Pierre, Saint-Pierre & Miquelon",DB1,DHB2,CMA2
+"Saipan, Northern Mariana Islands",AGA2,AHA2,ZHZ1
+"Salango Island, Ecuador",ADA1,ADA2,ADZ1
+"Salem, OR",CMB2,CMA1,BMA2
+"Salt Lake City, UT",DSA1,CMA2,CMZ1
+"San Antonio, TX",BSA2,BSZ1,BDZ2
+"San Diego, CA",BDA1,BDA1,BDA2
+"San Francisco–Oakland, CA",BMB2,BMA1,BMA2
+"San Jose, CA",CMA1,BMA1,BMA2
+"San José de la Joya, Mexico",BDA2,BDA1,BDZ1
+"San José, Costa Rica",BHA1,AHA1,AHA2
+"San Juan, PR",AGA2,AHA2,ASZ1
+"San Juan, Puerto Rico",AGA2,AHA2,ASZ1
+"San Marino, San Marino",CGA1,CGA1,CMA2
+"San Salvador, El Salvador",AWA1,AWA2,ASZ1
+"Sana'a, Yemen",BDB2,BSA1,BSA2
+"Santa Fe, NM",DSA1,CSA1,CSA2
+"Santiago, Chile",CMA1,BMA1,BDA2
+"Santo Domingo, Dominican Republic",AGA2,ASA2,ASZ1
+"Santo Domingo, Ecuador",AHA1,AHA2,AHA2
+"Sarajevo, Bosnia and Herzegovina",DHB2,DHA1,CGA2
+"Saskatoon, SK",ESB2,ESA1,DSA2
+"Seattle–Tacoma, WA",CMB2,CMA1,BMA2
+"Sedona, AZ",CSA1,CDA2,BDZ1
+"Seoul–Incheon, South Korea",DWA2,DWA2,CWZ1
+"Shanghai, China",CGA2,CGA2,CGZ1
+"Sharistan, Afghanistan",EMB2,DDA1,CDZ1
+"Sharmokhiya, Iraq",CDZ1,BDZ2,BDX1
+"Shenyang, China",EWA2,DWA2,DWZ1
+"Shenzhen, China",BWA2,BWA2,AWZ1
+"Shoshoni, WY",DDA1,DDA1,CDA2
+"Singapore, Singapore",AHA2,AHA2,ZGZ1
+"Sitka, AK",DB1,DHB1,CMB2
+"Skopje, North Macedonia",CSA1,DGA1,CSZ1
+"Sofia, Bulgaria",DGA1,DGA1,CSZ1
+"Springfield, IL",DGA1,DGA2,CGZ1
+"Sri Jayawardenepura Kotte, Sri Lanka",AHA2,AGA2,ZGZ1
+"St. Albert, AB",EGB2,EGB2,DSA2
+"St. George's, Grenada",AGA2,ASA2,ASZ1
+"St. John's, Antigua and Barbuda",ASA2,AHA2,ASZ1
+"St. John's, NL",DHB2,DHB2,CMA1
+"St. Louis, MO–IL",DGA2,CGA2,CSZ1
+"Stanley, Falkland Islands",CC2,CC2,CGB1
+"Steele Creek, AK",FB2,FSB2,DSA1
+"Steinbach, MB",EGB2,EGA1,DSA2
+"Sterling, AK",DB1,DHB2,CGA1
+"Stockholm, Sweden",DGB2,DGB2,CSA1
+"Sucre, Bolivia",BWB2,BWB2,BWA1
+"Surrey, BC",CMB2,CMA1,BMA2
+"Suva, Fiji",AHA2,AHA2,AHA2
+"Swift Current, SK",ESB2,ESA1,DSA2
+"São Paulo, Brazil",BHA1,BHA1,AGA2
+"São Tomé, São Tomé and Príncipe",AGA1,AHA1,AHA2
+"Taipei, Taiwan",BHA2,BHA2,BGZ1
+"Tallahassee, FL",BHA2,BGA2,BGZ1
+"Tallinn, Estonia",DHB2,DGB2,CGA1
+"Tampa–St. Petersburg, FL",BGA2,BGA2,ASZ1
+"Tanaina, AK",DB1,DGB2,CGA1
+"Tarawa, Kiribati",AGA2,AGA2,ZGZ1
+"Tashkent, Uzbekistan",CMA2,CDA2,CDZ2
+"Tbilisi, Georgia",CSA1,CSA2,CSZ1
+"Tegucigalpa, Honduras",BSA1,BGA1,ASA2
+"Tehran, Iran",CDA2,CDZ1,CDZ2
+"Thimphu, Bhutan",CWB2,DWB1,CWB2
+"Thompson, MB",FB2,FGB2,EGA2
+"Thunder Bay, ON",EHB2,EHB2,DGA2
+"Tianjin, China",DWA2,DWA2,CWZ1
+"Tirana, Albania",CMA1,CMA2,CMZ1
+"Tokyo–Yokohama, Japan",CHA2,CHA2,CHZ1
+"Topeka, KS",DGA2,CGA2,CSZ1
+"Toronto, ON",DGA1,DGA1,CGA2
+"Trenton, NJ",DHA1,CHA2,CGZ1
+"Trincomalee, Sri Lanka",AMA2,AMA2,AMZ1
+"Tripoli, Libya",BDA2,BDZ1,BDZ2
+"Truro, NS",DHB2,DHA1,CHA2
+"Tuktoyaktuk, NT",FB1,FSB1,ESB2
+"Tunis, Tunisia",BMA2,BDA2,BDZ1
+"Tórshavn, Faroe Islands",CB1,CMB1,CMB1
+"Ulaanbaatar, Mongolia",FB2,FWB2,EWA2
+"Ushmola, Kazakhstan",EDA1,DDA2,DDZ1
+"Ushuaia, Argentina",CC2,CC2,CGB1
+"Ust-Nera, Russia",YB1,YB1,GB2
+"Utqiagvik, AK",EY,FC2,DSB1
+"Vaduz, Liechtenstein",DHB2,DHB2,CHA1
+"Valletta, Malta",BMA2,BDA2,BDZ1
+"Vancouver, BC",CMB2,CMB2,CMA1
+"Vatican City, Vatican City",CMA1,CMA2,BDZ1
+"Verkhoyansk, Russia",YB2,YB2,GSA1
+"Victoria, Seychelles",AHA2,AGA2,AGZ1
+"Vienna, Austria",DGB2,CGA1,CSA2
+"Vientiane, Laos",AWA2,AWZ1,AWZ1
+"Vilnius, Lithuania",DHB2,DGB2,CSA2
+"Virginia Beach–Norfolk, VA",CGA1,CGA2,CGZ1
+"Wainwright, AK",FY,FC2,DSB2
+"Warsaw, Poland",DGB2,DSA1,CSA2
+"Washington–Arlington, DC–VA–MD",CHA1,CGA2,CGZ1
+"Wasilla, AK",DB1,DGB2,CGA1
+"Wellington, New Zealand",CHB2,CMB2,BHA1
+"West Taijinar Lake, China",EC2,EDB1,DDB2
+"Willemstad, Curaçao",ADA2,ADZ1,ZDZ1
+"Windhoek, Namibia",BDA1,BDA2,ADZ1
+"Winnipeg, MB",EGB2,EGA1,DSA2
+"Wuhan, China",CGA2,CGZ1,BGZ2
+"Xi’an, China",CSA2,CWA2,CSZ1
+"Yakima, WA",DDA1,CDA1,CDZ1
+"Yakutsk, Russia",YB2,GA1,FSA2
+"Yamoussoukro, Côte d'Ivoire",ASA2,ASA2,ASZ1
+"Yaoundé, Cameroon",AGA1,AGA2,AGZ1
+"Yellowknife, NT",FB2,FGB2,ESA1
+"Yerevan, Armenia",DDA1,DSA2,CDZ1
+"Zagreb, Croatia",DHA1,CHA1,CSZ1
+"Zhengzhou, China",CWA2,CWA2,CWZ1
+"Zhetikara, Kazakhstan",ESA1,ESA1,DDA2
