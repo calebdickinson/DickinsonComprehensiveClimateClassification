@@ -1,4 +1,4 @@
-// 2100
+// 2100 Map Maker
 
 var cmip6 = ee.ImageCollection('NASA/GDDP-CMIP6')
   .filter(ee.Filter.eq('scenario', 'ssp585'))
