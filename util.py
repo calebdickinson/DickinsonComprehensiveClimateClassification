@@ -33,5 +33,5 @@ warmest_code = {
     'C2': 'Very Cold Summer',
     'C1': 'Freezing Summer',
     'Y': 'Frigid Summer',
-
 }
+
