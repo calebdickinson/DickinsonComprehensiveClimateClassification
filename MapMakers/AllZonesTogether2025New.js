@@ -331,6 +331,8 @@ menu.style().set({
 });
 ui.root.add(menu);
 
+
+// Mask out nodata so they're transparent
 var combinedMasked = combined.updateMask(combined.neq(0));
 
 Map.addLayer(
@@ -343,6 +345,7 @@ Map.addLayer(
   'Combined Zones',
   true, 0.5
 );
+
 
 
 // Build a proper info panel, adding one widget at a time
@@ -398,7 +401,7 @@ Map.onClick(function(coords) {
   }).get('mask').evaluate(function(inZone) {
     if (inZone) {
       // a) inside aridity domain → fetch actual class
-      clim2100_flip.reduceRegion({
+      clim.reduceRegion({
         reducer: ee.Reducer.first(),
         geometry: pt,
         scale: 10000
@@ -417,8 +420,8 @@ Map.onClick(function(coords) {
 // ——————————————————————————
 
 // (a) Define cities
-  
- var cityList = [
+
+var cityList = [
   { name: 'Tokyo–Yokohama, Japan',                       lon: 139.6917,  lat: 35.6895 },
   { name: 'Jakarta, Indonesia',                          lon: 106.8456,  lat: -6.2088 },
   { name: 'Delhi, India',                                lon: 77.1025,   lat: 28.7041 },
@@ -958,7 +961,8 @@ var cityClasses = combined
     scale:       10000,
     geometries:  false
   })
-  .filter(ee.Filter.notNull(['combinedZone']));
+  .filter(ee.Filter.notNull(['combinedZone']))
+  .filter(ee.Filter.gt('combinedZone', 0));   // ← ignore oceans / no-data
 
 // (d) Attach labels + full sortKey
 var MAX_COLD = ee.Number(Object.keys(coldLetters).length);
