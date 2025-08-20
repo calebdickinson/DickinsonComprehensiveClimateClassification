@@ -1,10 +1,10 @@
 # these maps can be used to decode or encode climate zone classifications
 # on the left is the code and on the right is the name
 
-climates = {
+codes = {
 'HH',   'XH',   'ZH',   'AH',   'BH',
 'CH',   'DH',   'EH',   'FH',   'GH',
-'YH',   'XX',   'CX',   'DZ',   'EX',
+'YH',   'XX',   'CX',   'DX',   'EX',
 'FX',   'GX',   'YX',   'EZ2',  'FZ2',
 'GZ2',  'YZ2',  'FZ1',  'GZ1',  'YZ1',
 'FA2',  'GA2',  'YA2',  'FA1',  'GA1',
@@ -41,7 +41,7 @@ climates = {
 'EDB2',
 }
 
-cold_climates = {
+cold_codes = {
     'H': 'Hypercaneal',
     'X': 'Uninhabitable',
     'Z': 'Ultratropical',
@@ -55,7 +55,7 @@ cold_climates = {
     'Y': 'Superarctic'
 }
 
-arid_climates = {
+arid_codes = {
     'H': 'Humid',
     'G': 'Semihumid',
     'W': 'Monsoon',
@@ -64,7 +64,7 @@ arid_climates = {
     'D': 'Arid Desert'
 }
 
-warm_climates = {
+warm_codes = {
     'H': 'Hypercaneal Summer',
     'X': 'Extreme Hyperthermal Summer',
     'Z2': 'Hyperthermal Summer',
@@ -109,17 +109,17 @@ warm_temps = {
 }
 
 # these lists give a way to iterate through the temperature changes
-cold_ordered = list(cold_climates.keys())
-arid_ordered = list(arid_climates.keys())
-warm_ordered = list(warm_climates.keys())
+cold_ordered = list(cold_codes.keys())
+arid_ordered = list(arid_codes.keys())
+warm_ordered = list(warm_codes.keys())
 
-def verify_climates_1() -> bool:
-    """Verify that all climates in the set are valid
+def verify_codes_1() -> bool:
+    """Verify that all codes in the set are valid
 
     Returns:
-        bool: True if all climates in the set are valid, False otherwise
+        bool: True if all codes in the set are valid, False otherwise
     """
-    for code in climates:
+    for code in codes:
 
         cold = code[0]
         if code[-1].isdigit():  # if last digit is a number then warm is a two digit code
@@ -129,46 +129,60 @@ def verify_climates_1() -> bool:
             warm = code[-1]
             arid = code[1:-1]
 
-        if cold not in [ 'F', 'G', 'Y'] and warm not in ['B1', 'C2', 'C1', 'Y']:
-            assert arid != "", f"Code {code} shouldn't have aridity, but does: {arid}"
+        if has_aridity(cold, warm):
+            assert arid != "", f"Code {code} should have aridity, but doesn't: {arid}"
         else:
-            assert arid == '', f"Code {code} should have aridity, but doesn't"
+            assert arid == '', f"Code {code} shouldn't have aridity, but does: {arid}"
 
     return True
 
-def verify_climates_2() -> bool:
-    """Verify that all valid climates are in the climates set
+def has_aridity(cold:str, warm:str) -> bool:
+    """Check if a climate code has aridity
+
+    Args:
+        cold (str): The cold climate code
+        warm (str): The warm climate code
 
     Returns:
-        bool: True if all valid climates are in the set, False otherwise
+        bool: True if the code has aridity, False otherwise
+    """
+    if cold in ['H', 'F', 'G', 'Y'] or warm in ['B1', 'C2', 'C1', 'Y'] or cold + warm in ['XX', 'CX', 'DX', 'EX', 'EZ2']:
+        return False
+    return True
+
+def verify_codes_2() -> bool:
+    """Verify that all valid codes are in the codes set
+
+    Returns:
+        bool: True if all valid codes are in the set, False otherwise
     """
 
-    valid_climates:set[str] = set()
+    valid_codes:set[str] = set()
     # there is always a cold and always a warm
     # if cold is F or colder, there is no aridity
     # if warm is B1 or colder, there is no aridity
     # the temperature of the hottest month cannot be colder than the coldest month
-    for cold_code in cold_climates:
-        for warm_code in warm_climates:
+    for cold_code in cold_codes:
+        for warm_code in warm_codes:
             if warm_temps[warm_code] >= cold_temps[cold_code]:
-                if cold_code in ['F', 'G', 'Y'] or warm_code in ['B1', 'C2', 'C1', 'Y']:
-                    valid_climates.add(combine(cold_code, "", warm_code))  # no aridity
+                if not has_aridity(cold_code, warm_code):
+                    valid_codes.add(combine(cold_code, "", warm_code))  # no aridity
                 else:
-                    for arid_code in arid_climates: # aridity
-                        valid_climates.add(combine(cold_code, arid_code, warm_code))
+                    for arid_code in arid_codes: # aridity
+                        valid_codes.add(combine(cold_code, arid_code, warm_code))
 
-    for code in valid_climates:
-        #assert code in climates, f"Code {code} is not in the set of climates"
-        if code not in climates: print(f"Code {code} is not in the set of climates")
+    for code in valid_codes:
+        #assert code in codes, f"Code {code} is not in the set of codes"
+        if code not in codes: print(f"Code {code} is not in the set of codes")
 
-    for code in climates:
-        #assert code in valid_climates, f"Code {code} is not valid"
-        if code not in valid_climates: print(f"Code {code} is not valid")
+    for code in codes:
+        #assert code in valid_codes, f"Code {code} is not valid"
+        if code not in valid_codes: print(f"Code {code} is not valid")
 
     return True
 
 
-def traverse_climates(code:str, type:str, direction:int) -> str:
+def traverse_codes(code:str, type:str, direction:int) -> str:
     """Traverse the climate zones in the specified direction
     Can also be used to check if traversal is possible
 
@@ -193,23 +207,23 @@ def traverse_climates(code:str, type:str, direction:int) -> str:
     warm = factors[2]
 
     if type == 'cold':
-        # if not cold in cold_ordered: return "False"
-        # if direction == 1 and not cold_ordered.index(cold) < len(cold_ordered) - 1: return "False"
-        # elif direction == -1 and not cold_ordered.index(cold) > 0: return "False"
+        if not cold in cold_ordered: return "False"
+        if direction == 1 and not cold_ordered.index(cold) < len(cold_ordered) - 1: return "False"
+        elif direction == -1 and not cold_ordered.index(cold) > 0: return "False"
         cold = cold_ordered[direction + cold_ordered.index(cold)]
     elif type == 'arid':
-        # if not arid in arid_ordered: return "False"
-        # if direction == 1 and not arid_ordered.index(arid) < len(arid_ordered) - 1: return "False"
-        # elif direction == -1 and not arid_ordered.index(arid) > 0: return "False"
+        if not arid in arid_ordered: return "False"
+        if direction == 1 and not arid_ordered.index(arid) < len(arid_ordered) - 1: return "False"
+        elif direction == -1 and not arid_ordered.index(arid) > 0: return "False"
         arid = arid_ordered[direction + arid_ordered.index(arid)]
     else: #  type == 'warm'
-        # if not warm in warm_ordered: return "False"
-        # if direction == 1 and not warm_ordered.index(warm) < len(warm_ordered) - 1: return "False"
-        # elif direction == -1 and not warm_ordered.index(warm) > 0: return "False"
+        if not warm in warm_ordered: return "False"
+        if direction == 1 and not warm_ordered.index(warm) < len(warm_ordered) - 1: return "False"
+        elif direction == -1 and not warm_ordered.index(warm) > 0: return "False"
         warm = warm_ordered[direction + warm_ordered.index(warm)]
 
     new_climate = combine(cold, arid, warm)
-    if new_climate not in climates: return "False"
+    if new_climate not in codes: return "False"
     return new_climate
 
 # functions
@@ -233,11 +247,13 @@ def breakup(code:str):
     else:                   # otherwise warm is a single digit
         warm = code[-1]
 
-    if cold not in [ 'F', 'G', 'Y'] and warm not in ['B1', 'C2', 'C1', 'Y']:
+    if has_aridity(cold, warm): 
         arid = code[1]  # aridity exists
     else:
         arid = ''      # no aridity value for this climate
 
+    print(code)
+    print(cold, arid, warm)
     return [cold, arid, warm]
 
 def decode(code:str):
@@ -251,7 +267,11 @@ def decode(code:str):
     """
 
     [cold, arid, warm] = breakup(code)  # get cold, arid, and warm values
-    return cold_climates[cold] + " " + arid_climates[arid] + " " + warm_climates[warm] # arid may be ""
+    parts: list[str] = []
+    parts.append(cold_codes[cold])
+    if arid: parts.append(arid_codes[arid])
+    parts.append(warm_codes[warm])
+    return " ".join(parts)
 
 def combine(cold:str, arid:str, warm:str) -> str:
     """Combine cold, arid, and warm values into a climate zone code
@@ -269,5 +289,5 @@ def combine(cold:str, arid:str, warm:str) -> str:
 
 
 if __name__ == "__main__": # these tests will fail. Instead we're trusting that the values on the website are correct
-    print(verify_climates_1())  # verify that all climates in set are valid
-    print(verify_climates_2())  # verify that all valid climates are in set
+    print(verify_codes_1())  # verify that all codes in set are valid
+    print(verify_codes_2())  # verify that all valid codes are in set

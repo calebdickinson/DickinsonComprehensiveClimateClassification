@@ -153,6 +153,19 @@ def remove_rows_with_missing_data(df: pd.DataFrame) -> pd.DataFrame:
     print(removed_rows)
     return df.dropna() # type:ignore
 
+def list_places_by_climate(df: pd.DataFrame, climate: str, column:int) -> set[str]:
+    """List all places in the DataFrame that match the specified climate
+
+    Args:
+        df (pd.DataFrame): The DataFrame to search
+        climate (str): The climate to filter by
+        column (int): The index of the column to filter by
+
+    Returns:
+        set[str]: A set of all places with the specified climate
+    """
+    return set(df[df.iloc[:, column] == climate]['Location'])
+
 if __name__ == "__main__": # edit this to do whatever formatting you want
     df = get_csv("cities.csv")
     df = remove_rows_with_missing_data(df)

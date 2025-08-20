@@ -1,0 +1,33 @@
+import json
+import glob
+from climates import decode, codes, traverse_codes
+from format import get_csv, list_places_by_climate
+
+def generate_json() -> dict[str, dict]: #type:ignore
+    data = {}
+    for code in codes:
+        data[code] = {
+            'name': decode(code),
+            'cold': code[0],
+            'arid': code[1:-1] if code[-1].isdigit() else code[1:],
+            'warm': code[-2:] if code[-1].isdigit() else code[-1],
+            'cold+': traverse_codes(code, 'cold', 1),
+            'cold-': traverse_codes(code, 'cold', -1),
+            'arid+': traverse_codes(code, 'arid', 1),
+            'arid-': traverse_codes(code, 'arid', -1),
+            'warm+': traverse_codes(code, 'warm', 1),
+            'warm-': traverse_codes(code, 'warm', -1),
+            'map_1900s': f'~climates/1900s_maps/{code}.png',
+            'map_2025': f'~climates/2025_maps/{code}.png',
+            'map_2100': f'~climates/2100_maps/{code}.png',
+            'pics': list(glob.glob(f'~/climates/2100_maps/{code}*')),
+            'places_1900s': list(list_places_by_climate(get_csv("cities.csv"), code, 1)),
+            'places_2025': list(list_places_by_climate(get_csv("cities.csv"), code, 2)),
+            'places_2100': list(list_places_by_climate(get_csv("cities.csv"), code, 3)),
+        }
+    return data #type:ignore
+
+if __name__ == "__main__":
+    data = generate_json() #type:ignore
+    with open("data.json", "w") as json_file:
+        json.dump(data, json_file, indent=4, ensure_ascii=False)
