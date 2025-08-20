@@ -88,30 +88,34 @@
             document.getElementById('climate_name').textContent = climate_name;
             document.getElementById('climate_code').textContent = climate_code;
 
-            document.getElementById('climate_cities_2025').textContent = climate_cities_2025.join(", ");
-            document.getElementById('climate_cities_2100').textContent = climate_cities_2100.join(", ");
-            document.getElementById('climate_cities_1900s').textContent = climate_cities_1900s.join(", ");
+            // document.getElementById('climate_cities_2025').textContent = climate_cities_2025.join(", ");
+            // document.getElementById('climate_cities_2100').textContent = climate_cities_2100.join(", ");
+            // document.getElementById('climate_cities_1900s').textContent = climate_cities_1900s.join(", ");
 
-            document.getElementById('climate_map_2025').src = climate_map_2025;
-            document.getElementById('climate_map_2100').src = climate_map_2100;
-            document.getElementById('climate_map_1900s').src = climate_map_1900s;
+            // document.getElementById('climate_map_2025').src = climate_map_2025;
+            // document.getElementById('climate_map_2100').src = climate_map_2100;
+            // document.getElementById('climate_map_1900s').src = climate_map_1900s;
 
-            document.getElementById('climate_arid+').onclick = () => change_climate(climate_arid_plus);
-            document.getElementById('climate_arid-').onclick = () => change_climate(climate_arid_minus);
-            document.getElementById('climate_warm+').onclick = () => change_climate(climate_warm_plus);
-            document.getElementById('climate_warm-').onclick = () => change_climate(climate_warm_minus);
-            document.getElementById('climate_cold+').onclick = () => change_climate(climate_cold_plus);
-            document.getElementById('climate_cold-').onclick = () => change_climate(climate_cold_minus);
+            function change_climate(code) {
+                window.location.href = window.location.pathname + '?code=' + code;
+            }
+
+            // if (climate_arid_plus == "False") document.getElementById('climate_arid+').disabled = true;
+            // else document.getElementById('climate_arid+').onclick = () => change_climate(climate_arid_plus);
+            // if (climate_arid_minus == "False") document.getElementById('climate_arid-').disabled = true;
+            // else document.getElementById('climate_arid-').onclick = () => change_climate(climate_arid_minus);
+            if (climate_warm_plus == "False") document.getElementById('climate_warm+').disabled = true;
+            else document.getElementById('climate_warm+').onclick = () => change_climate(climate_warm_plus);
+            if (climate_warm_minus == "False") document.getElementById('climate_warm-').disabled = true;
+            else document.getElementById('climate_warm-').onclick = () => change_climate(climate_warm_minus);
+            if (climate_cold_plus == "False") document.getElementById('climate_cold+').disabled = true;
+            else document.getElementById('climate_cold+').onclick = () => change_climate(climate_cold_plus);
+            if (climate_cold_minus == "False") document.getElementById('climate_cold-').disabled = true;
+            else document.getElementById('climate_cold-').onclick = () => change_climate(climate_cold_minus);
         })
         .catch(error => {
             throw new Error("Error loading climate data: " + error.message);
         });
-
-    function change_climate(code) {
-        if (code) {
-            window.location.href = window.location.pathname + '?code=' + code;
-        }
-    }
   </script>
 </body>
 </html>
