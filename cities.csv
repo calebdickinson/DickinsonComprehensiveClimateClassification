@@ -39,7 +39,6 @@ Location,1900s,2025,2100
 "Bangkok, Thailand",ASZ1,ASZ1,ZSZ2
 "Bangui, Central African Republic",AGA2,AGA2,ASZ1
 "Banjul, Gambia",AWA2,AWA2,ZDZ1
-"Barcelona, Spain",,CSA2,BDZ1
 "Basseterre, Saint Kitts and Nevis",AGA2,AHA2,ASZ1
 "Batman, Turkey",CMZ1,CMZ1,BDZ2
 "Baton Rouge, LA",CHA2,BGA2,BGZ1
@@ -84,7 +83,6 @@ Bird Island Research Station,DC1,CC1,CC2
 "Caracas, Venezuela",BSA1,ASA1,ADA2
 "Carbondale, IL",DHA2,CGA2,CGZ1
 "Carson City, NV",CDA1,CMA1,CMA2
-"Casey Research Station, Antarctica",,EC1,EC1
 "Castries, Saint Lucia",AHA2,AGA2,ASZ1
 "Ceuta, Ceuta",BMA1,BMA2,BDA2
 "Champaign, IL",DHA1,DGA2,CGZ1
@@ -110,16 +108,13 @@ Bird Island Research Station,DC1,CC1,CC2
 "Conakry, Guinea",AWA2,AWA2,AWZ1
 "Conception Bay South, NL",DB1,DHB2,CMA1
 "Concord, NH",DHA1,DHA1,CHA2
-"Concordia Research Station, Antarctica",,YC1,YC2
 "Copenhagen, Denmark",CGB2,CGB2,CGA1
 "Coral Harbour, NU",FC1,FHB1,EGB2
 "Corner Brook, NL",DHB2,DHB2,DHA1
-"Coronado Islands, Mexico",,BDA1,BDA2
 "Crystal City, TX",BDA2,BDZ1,BDZ2
 "Dakar, Senegal",ADA2,AWA2,ADZ1
 "Dallas–Fort Worth–Arlington, TX",CSA2,CSZ1,BSZ2
 "Damascus, Syria",CDA2,CMA1,CDA2
-"Davis Research Station, Antarctica",,FY,EC1
 "Delhi, India",BDZ1,BWZ1,AWZ2
 "Denver–Aurora, CO",DSA1,CSA1,CDA2
 "Des Moines, IA",DGA1,DGA2,CSZ1
@@ -136,7 +131,6 @@ Bird Island Research Station,DC1,CC1,CC2
 "Dublin, Ireland",CHB2,CHB2,CMA1
 "Duluth, MN",EHB2,DHA1,DGA2
 "Dushanbe, Tajikistan",CMA2,CMA2,CMZ1
-Edinburgh of the Seven Seas,,CHB1,CHB2
 "Edmonton, AB",EGB2,EGB2,DSA2
 "El Menia, Algeria",BDZ1,BDZ2,BDX1
 "Eureka Research Station, NU",GY,GC2,FSB1
@@ -148,7 +142,6 @@ Edinburgh of the Seven Seas,,CHB1,CHB2
 "Frankfort, KY",DHA1,CHA2,CGZ1
 "Fredericton, NB",DHB2,DHA1,CHA2
 "Freetown, Sierra Leone",AWA2,AWA2,AWA2
-"Funafuti, Tuvalu",,AHA2,ZHZ1
 "Funchal, Madeira",BMA1,BMB2,BMA1
 "Fuzhou, China",CHA2,BGA2,BGZ1
 "Gaborone, Botswana",BDA2,BDA2,ADZ1
@@ -211,7 +204,6 @@ Heard Island and McDonald Islands,DC1,DC1,DC2
 "Khartoum, Sudan",ADZ1,ADZ2,ZDX1
 "Kigali, Rwanda",BGA1,AGA1,AGA2
 "Kingston, Jamaica",AGA2,AHA2,AMZ1
-"Kingston, Norfolk Island",,BHA1,BGA1
 "Kingstown, Saint Vincent and the Grenadines",AHA2,AGA2,ASZ1
 "Kinshasa, DR Congo",AGA2,AGA2,ASZ1
 "Knik-Fairview, AK",DB1,DGB2,CGA1
@@ -220,7 +212,6 @@ Heard Island and McDonald Islands,DC1,DC1,DC2
 "Kralendijk, Bonaire",ADA2,ASA2,ADZ1
 "Krasnoyarsk, Russia",EGB2,EGA1,DSA2
 "Kuala Lumpur, Malaysia",AHA2,AHA2,ZGZ1
-"Kuwait City, Kuwait",,BDZ2,ADX1
 "Kyiv, Ukraine",DGB2,DGA1,CSA2
 "Lagos, Nigeria",AGA2,ASZ1,ZSZ1
 "Lahore, Pakistan",BDZ1,BSZ1,BWZ2
@@ -250,18 +241,14 @@ Heard Island and McDonald Islands,DC1,DC1,DC2
 Macquarie Island Research Station,CC2,CC2,CC2
 "Madison, WI",DHA1,DGA1,CGA2
 "Madrid, Spain",CMA1,CMA2,BDZ1
-"Majuro, Marshall Islands",,AHA2,ZHZ1
 "Malabo, Equatorial Guinea",AHA1,AHA1,AHA2
-"Malé, Maldives",,AHA2,AGZ1
 "Managua, Nicaragua",ASA2,ASA2,ZSZ1
 "Manama, Bahrain",ADZ1,BDZ2,ADX1
 "Mandalgovi, Mongolia",EDB2,EDA1,EDA2
 "Manila, Philippines",AGA2,AGZ1,ZGZ1
 "Maputo, Mozambique",BSA2,ASA2,ADZ1
 "Maseru, Lesotho",CSA1,BWA1,BWA2
-"Mata-Utu, Wallis & Futuna",,AHA2,AHA2
 "Mbabane, Eswatini",BWB2,BWA1,BWA2
-"McMurdo Research Station, Antarctica",,FY,FC1
 "Meadow Lakes, AK",EB1,DGB2,CGA1
 "Meeteetse, WY",DSB2,DSA1,CDA2
 "Melilla, Melilla",BDA2,BDA2,BDZ1
@@ -274,7 +261,6 @@ Macquarie Island Research Station,CC2,CC2,CC2
 "Miramichi, NB",EHB2,DHA1,DHA2
 "Mississauga, ON",DHA1,DGA1,CGA2
 "Mogadishu, Somalia",ADA2,ADZ1,ZDZ1
-"Monaco, Monaco",,CMA2,BMZ1
 "Moncton, NB",DHB2,DHA1,CHA2
 "Monrovia, Liberia",AHA2,AHA2,AHZ1
 "Montevideo, Uruguay",BGA1,BGA1,BGA2
@@ -304,14 +290,12 @@ Macquarie Island Research Station,CC2,CC2,CC2
 "Nouakchott, Mauritania",ADA2,ADZ1,ADZ1
 "Nouméa, New Caledonia",BSA2,BGA1,AGA2
 "Novosibirsk, Russia",EGB2,EGA1,DSA2
-"Nukunonu, Tokelau",,AHA2,ZGZ1
 "Nukuʻalofa, Tonga",AGA2,BGA1,AGA2
 "Nuuk, Greenland",DC2,DC2,DHB1
 "Oklahoma City, OK",CGA2,CSZ1,BSZ2
 "Olympia, WA",CMB2,CMA1,BMA2
 "Omsk, Russia",EGB2,ESA1,DSA2
 "Oranjestad, Aruba",ADA2,ASA2,ADZ1
-"Oranjestad, Sint Eustatius",,ADA2,ADA2
 "Orlando, FL",BGA2,BGA2,ASZ1
 "Osaka–Kobe–Kyoto, Japan",CHA2,CHA2,CGZ1
 "Oslo, Norway",DHB2,DHB2,CHA1
@@ -335,7 +319,6 @@ Macquarie Island Research Station,CC2,CC2,CC2
 "Pierre, SD",DSA1,DSA2,CSZ1
 "Pittsburgh, PA",DHA1,CHA1,CGZ1
 "Podgorica, Montenegro",CMA2,CMA2,CMZ1
-"Pond Inlet, NU",,GY,FC1
 "Ponta Delgada, Azores",BMA1,BMA1,BMA2
 "Port Louis, Mauritius",BHA2,AGA2,AGA2
 "Port Moresby, Papua New Guinea",ASA2,AGA2,ZGZ1
@@ -347,7 +330,6 @@ Macquarie Island Research Station,CC2,CC2,CC2
 "Porto-Novo, Benin",ASA2,ASZ1,ZSZ1
 "Prague, Czech Republic",DSB2,DSA1,CSA2
 "Praia, Cabo Verde",ADA2,ADA2,ADZ1
-"Primavera Research Station, Antarctica",,EC1,DC1
 "Prince Albert, SK",EGB2,ESA1,DSA2
 "Pristina, Kosovo",DGB2,CGA1,CSZ1
 "Providence, RI–MA",DHA1,CHA2,CGZ1
@@ -424,7 +406,6 @@ Macquarie Island Research Station,CC2,CC2,CC2
 "Sucre, Bolivia",BWB2,BWB2,BWA1
 "Surrey, BC",CMB2,CMA1,BMA2
 "Suva, Fiji",AHA2,AHA2,AHA2
-"Svea Research Station, Antarctica",,FY,FC1
 "Swift Current, SK",ESB2,ESA1,DSA2
 "São Paulo, Brazil",BHA1,BHA1,AGA2
 "São Tomé, São Tomé and Príncipe",AGA1,AHA1,AHA2
@@ -438,8 +419,6 @@ Macquarie Island Research Station,CC2,CC2,CC2
 "Tbilisi, Georgia",CSA1,CSA2,CSZ1
 "Tegucigalpa, Honduras",BSA1,BGA1,ASA2
 "Tehran, Iran",CDA2,CDZ1,CDZ2
-"The Bottom, Saba",,ASA2,ADZ1
-"The Valley, Anguilla",,AGA2,ASZ1
 "Thimphu, Bhutan",CWB2,DWB1,CWB2
 "Thompson, MB",FB2,FGB2,EGA2
 "Thunder Bay, ON",EHB2,EHB2,DGA2
@@ -485,7 +464,6 @@ Macquarie Island Research Station,CC2,CC2,CC2
 "Yakutsk, Russia",YB2,GA1,FSA2
 "Yamoussoukro, Côte d'Ivoire",ASA2,ASA2,ASZ1
 "Yaoundé, Cameroon",AGA1,AGA2,AGZ1
-"Yaren, Nauru",,AHA2,AHZ1
 "Yellowknife, NT",FB2,FGB2,ESA1
 "Yerevan, Armenia",DDA1,DSA2,CDZ1
 "Zagreb, Croatia",DHA1,CHA1,CSZ1
