@@ -176,11 +176,11 @@ If Caleb Dickinson accepts your pull request, then your changes will be added.
 
 `images/*` maps and infographics
 
-`climates/*` unique images for each climate (where a climate code will place of CLIMATECODE)
--  `climates/landscape/CLIMATECODE.jpg` landscape of CLIMATECODE
--  `climates/map_1900s/CLIMATECODE.png` map of CLIMATECODE in 1961-1990
--  `climates/map_2025/CLIMATECODE.png` map of CLIMATECODE in 2025
--  `climates/map_2100/CLIMATECODE.png` projected map of CLIMATECODE in 2100
+`climates/*` unique images for each climate (where a climate code will place of `CODE`)
+-  `climates/landscape/CODE.jpg` landscape of `CODE`
+-  `climates/map_1900s/CODE.png` map of `CODE` in 1961-1990
+-  `climates/map_2025/CODE.png` map of `CODE` in 2025
+-  `climates/map_2100/CODE.png` projected map of `CODE` in 2100
 
 `backend/format.py` converts Google Earth Engine outputs to `data/cities.csv` data
 
