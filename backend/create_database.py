@@ -9,6 +9,7 @@ def generate_json() -> dict[str, dict]: #type:ignore
         data[code] = {
             'code': code,
             'name': climates.decode(code),
+            'exists': climates.does_exist(code),
             'cold': climates.breakup(code)[0],
             'arid': climates.breakup(code)[1],
             'warm': climates.breakup(code)[2],

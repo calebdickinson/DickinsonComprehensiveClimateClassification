@@ -150,6 +150,17 @@ def has_aridity(cold:str, warm:str) -> bool:
         return False
     return True
 
+def does_exist(code: str) -> bool:
+    """Check if a climate code exists in the codes set
+
+    Args:
+        code (str): The climate code to check
+
+    Returns:
+        bool: True if the code exists, False otherwise
+    """
+    return code not in ['HH', 'XH', 'ZH', 'AH', 'BH', 'CH', 'DH', 'EH', 'XX', 'CX', 'DX', 'EX', 'EZ2']
+
 def verify_codes_2() -> bool:
     """Verify that all valid codes are in the codes set
 
