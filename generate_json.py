@@ -20,7 +20,7 @@ def generate_json() -> dict[str, dict]: #type:ignore
             'map_1900s': f'climates/map_1900s/{code}.png',
             'map_2025': f'climates/map_2025/{code}.png',
             'map_2100': f'climates/map_2100/{code}.png',
-            'landscape': list_landscapes(code),
+            'landscape': f'climates/landscape/{code}.jpg',
             'cities': list_places_by_climate_and_time(get_csv("data/cities.csv"), code),
         }
     return data #type:ignore

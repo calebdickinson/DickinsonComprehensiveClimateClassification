@@ -39,7 +39,7 @@
       </div>
     </div>
 
-        <!-- <img id="landscape" src="" alt="landscape in this climate"> -->
+        <img id="climate_landscape" src="" alt="landscape in this climate">
 
         <h3>Cities with this climate</h3>
         <p id="climate_cities"></p>
@@ -114,12 +114,6 @@
                 return value === "False" || value === "false" || value === false || value === "" || value === undefined || value === null
             }
 
-            function set_image(elementId, src, alt, fallbackMessage) {
-                const img = document.getElementById(elementId);
-                img.src = src;
-                img.alt = alt;
-            }
-
             if (is_disabled(climate_warm_plus)) document.getElementById('climate_warm_plus').disabled = true;
             else document.getElementById('climate_warm_plus').onclick = () => change_climate(climate_warm_plus);
             if (is_disabled(climate_warm_minus)) document.getElementById('climate_warm_minus').disabled = true;
@@ -129,12 +123,22 @@
             if (is_disabled(climate_cold_minus)) document.getElementById('climate_cold_minus').disabled = true;
             else document.getElementById('climate_cold_minus').onclick = () => change_climate(climate_cold_minus);
 
-            set_image('climate_map_2025', climate_map_2025, "Global distribution (2025)", "Map not available");
-            set_image('climate_map_2100', climate_map_2100, "Global distribution (2100)", "Map not available");
-            set_image('climate_map_1900s', climate_map_1900s, "Global distribution (1961-1900 normals)", "Map not available");
+            const images = [
+                {id: 'climate_landscape', src: climate_landscape, alt: "landscape in this climate"},
+                {id: 'climate_map_2025', src: climate_map_2025, alt: "climate map in 2025"},
+                {id: 'climate_map_2100', src: climate_map_2100, alt: "climate map in 2100"},
+                {id: 'climate_map_1900s', src: climate_map_1900s, alt: "climate map in 1961-1990"}
+            ];
 
-            document.getElementById('climate_landscape').src = climate_landscape;
-            document.getElementById('climate_landscape').alt = climate_name + " landscape";
+            images.forEach(({id, src, alt}) => {
+                const img = document.getElementById(id);
+                if (img) {
+                    img.src = src;
+                    img.alt = alt;
+                } else {
+                    console.warn(`Element with id '${id}' not found`);
+                }
+            });
         })
         .catch(error => {
             throw new Error("Error loading climate data: " + error.message);
