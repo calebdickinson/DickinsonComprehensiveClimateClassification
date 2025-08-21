@@ -166,13 +166,15 @@ If Caleb Dickinson accepts your pull request, then your changes will be added.
 
 `data/cities.csv` database that lists cities and their climates at different time periods
 
-`climates/*` image database (folder of images) containing these images for each climate (repace `CODE` with climate code)
--  `climates/landscape/CODE.jpg` landscape of `CODE`
--  `climates/map_1900s/CODE.png` map of `CODE` in 1961-1990 normals
--  `climates/map_2025/CODE.png` map of `CODE` in 2025
--  `climates/map_2100/CODE.png` projected map of `CODE` in 2100
-
 `images/*` image database (folder of images) containing maps and infographics
+
+`images/landscape/CLIMATE.jpg` an image of nature in the `CLIMATE` climate
+
+`images/map_1900s/CLIMATE.png` map of `CLIMATE` in 1961-1990 normals
+
+`images/map_2025/CLIMATE.png` map of `CLIMATE` in 2025
+
+`images/map_2100/CLIMATE.png` projected map of `CLIMATE` in 2100
 
 ### Backend
 
