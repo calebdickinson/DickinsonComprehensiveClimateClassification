@@ -76,15 +76,13 @@ background-color: #e74c3c;
 .buttons-group button.colder {
 background-color: #3498db;
 }
-.buttons-group button.disabled {
-background-color: #444;
-color: #ecf0f1;
-cursor: default;
-pointer-events: none;
-transform: none;
-}
-.buttons-group button.disabled:hover {
-transform: none;
+
+button:disabled {
+  background-color: #444 !important;
+  color: #ecf0f1 !important;
+  cursor: default !important;
+  pointer-events: none !important;
+  transform: none !important;
 }
 
 /* CLIMATE DISPLAY STYLES */
