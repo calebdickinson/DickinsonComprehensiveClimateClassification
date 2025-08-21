@@ -1,135 +1,61 @@
-// ==========================================================
-// 1) Inputs: CMIP6 primary, CMIP5 fallback (year 2100)
-// ==========================================================
+// 2100 Map Maker
 
-// --- CMIP6 (primary) ---
 var cmip6 = ee.ImageCollection('NASA/GDDP-CMIP6')
   .filter(ee.Filter.eq('scenario', 'ssp585'))
   .filter(ee.Filter.calendarRange(2100, 2100, 'year'));
 
-// Daily mean 2m air temp (tas), K -> °C
 var tasC6 = cmip6.select('tas').map(function(img){
   return img.subtract(273.15).rename('tasC')
             .copyProperties(img, ['system:time_start']);
 });
 
-// Precip (kg m-2 s-1) same units as CMIP5; we’ll month-sum via days later
 var pr6 = cmip6.select('pr');
 
-// --- CMIP5 (fallback) ---
-var cmip5 = ee.ImageCollection('NASA/NEX-GDDP')
-  .filter(ee.Filter.eq('scenario', 'rcp85'))
-  .filter(ee.Filter.calendarRange(2100, 2100, 'year'));
+var months   = ee.List.sequence(1, 12);
+var daysList = ee.List([31,28,31,30,31,30,31,31,30,31,30,31]);
 
-var tasmax5 = cmip5.select('tasmax'); // K
-var tasmin5 = cmip5.select('tasmin'); // K
-// Build CMIP5 daily-mean proxy then °C
-var tasC5 = ee.ImageCollection(
-  tasmax5.combine(tasmin5).map(function(img){
-    // match dates by using the two-band image collections directly when filtered by month
-    // We'll compute monthly means below from tasmax/tasmin separately.
-    return img; // placeholder, we compute monthly means from tasmax5/tasmin5
-  })
-);
-var pr5 = cmip5.select('pr');
-
-// ==========================================================
-// 2) Monthly means (°C) for temperature: CMIP6.tas preferred,
-//    fallback to CMIP5 (mean(tasmax,tasmin)) where CMIP6 missing
-// ==========================================================
-var months = ee.List.sequence(1, 12);
-
-// Helper: monthly mean of CMIP6 tasC
 function monthlyTasMean6(m){
   m = ee.Number(m);
   return tasC6.filter(ee.Filter.calendarRange(m, m, 'month'))
               .mean()
-              .rename('tasC_month');
+              .rename('monthlyMean')
+              .set('month', m);
 }
 
-// Helper: monthly mean of CMIP5 (tasmax+tasmin)/2 in °C
-function monthlyTasMean5(m){
-  m = ee.Number(m);
-  var maxM = tasmax5.filter(ee.Filter.calendarRange(m, m, 'month')).mean();
-  var minM = tasmin5.filter(ee.Filter.calendarRange(m, m, 'month')).mean();
-  // (K+K)/2 -> °C
-  return maxM.add(minM).divide(2).subtract(273.15).rename('tasC_month');
-}
+var monthlyTas6 = ee.ImageCollection(months.map(monthlyTasMean6));
 
-// Build merged monthly °C (tasC6 preferred, else tasC5)
-var monthlyTasMerged = ee.ImageCollection(
-  months.map(function(m){
-    var m6 = monthlyTasMean6(m);
-    var m5 = monthlyTasMean5(m);
-    var merged = m6.unmask(m5)                 // per-pixel fallback
-                   .rename('monthlyMean')       // keep your original band name
-                   .set('month', m);
-    return merged;
-  })
-);
-
-// ==========================================================
-// 3) Hottest / coldest month rasters from the merged monthly means
-// ==========================================================
-var hottestC = monthlyTasMerged
+var hottestC = monthlyTas6
   .qualityMosaic('monthlyMean')
   .select('monthlyMean')
   .rename('hottestC');
 
-var coldestC = monthlyTasMerged
+var coldestC = monthlyTas6
   .map(function(img){ return img.multiply(-1).copyProperties(img); })
   .qualityMosaic('monthlyMean')
   .multiply(-1)
   .select('monthlyMean')
   .rename('coldestC');
 
-// ==========================================================
-// 4) Monthly climatology for P, PET, and tmeanC using CMIP6→CMIP5 fallback
-//     - Precip: month mean * days -> monthly total (mm equiv. if you prefer)
-//     - tmeanC: same merged logic as above
-//     - PET: Hargreaves-lite proxy from tmeanC (your original formula)
-// ==========================================================
-var daysList = ee.List([31,28,31,30,31,30,31,31,30,31,30,31]);
-
 function monthlyPrMean6(m){ 
-  return pr6.filter(ee.Filter.calendarRange(m, m, 'month')).mean().rename('pr');
-}
-function monthlyPrMean5(m){ 
-  return pr5.filter(ee.Filter.calendarRange(m, m, 'month')).mean().rename('pr');
+  return pr6.filter(ee.Filter.calendarRange(m, m, 'month'))
+            .mean().rename('pr');
 }
 
 var monthlyClim = ee.ImageCollection(
   months.map(function(m){
     m = ee.Number(m);
-
-    // precip mean (rate), fallback
-    var prM6 = monthlyPrMean6(m);
-    var prM5 = monthlyPrMean5(m);
-    var prM  = prM6.unmask(prM5).rename('pr');
-
-    // tmeanC (merged already defined as logic above)
-    var tmeanC = monthlyTasMerged.filter(ee.Filter.eq('month', m)).first()
-                                .select('monthlyMean')
-                                .rename('tmeanC');
-
-    // days in month
+    var prM  = monthlyPrMean6(m).rename('pr');
+    var tmeanC = monthlyTas6.filter(ee.Filter.eq('month', m)).first()
+                            .select('monthlyMean').rename('tmeanC');
     var days  = ee.Number(daysList.get(m.subtract(1)));
-
-    // monthly precip total (same units scaling as your prior approach)
     var rainM = prM.multiply(days).rename('pr');
-
-    // PET proxy from tmeanC
     var es = tmeanC.expression('0.6108 * exp(17.27 * T / (T + 237.3))', {T: tmeanC});
-    var Ra = ee.Image.constant(12 * 0.0820); // same as your constant
+    var Ra = ee.Image.constant(12 * 0.0820);
     var petM = es.multiply(Ra).multiply(0.1651).rename('pet');
-
     return rainM.addBands(petM).addBands(tmeanC).set('month', m);
   })
 );
 
-// ==========================================================
-// 5) Aridity + seasonality classification (unchanged logic)
-// ==========================================================
 var pixelLat = ee.Image.pixelLonLat().select('latitude');
 var northMask = pixelLat.gt(5);
 var tropic    = pixelLat.abs().lte(5);
@@ -160,9 +86,6 @@ var clim = aridBase
   .where(southMask.and(aridBase.neq(1)).and(HS.gte(0.6)), 3) // Mediterranean
   .rename('climateClass');
 
-// ==========================================================
-// 6) Your temp class functions (unchanged)
-// ==========================================================
 function classifySummer(tC) {
   return ee.Image.constant(0)
     .where(tC.gte(40).and(tC.lt(50)),  9)
@@ -190,9 +113,6 @@ function classifyCold(tC) {
     .where(tC.lt(-40),                  1);
 }
 
-// ==========================================================
-// 7) Combine classes
-// ==========================================================
 var summerClass = classifySummer(hottestC);
 var coldClass   = classifyCold(coldestC);
 
@@ -202,16 +122,20 @@ var combined = coldClass
   .add(summerClass)
   .rename('combined');
 
-// ==========================================================
-// 8) Display (fixed the variable name; using 'discrete' below)
-// ==========================================================
 var codeColorMap = {
-  617: "#ff0000",
-  627: "#ff8800",
-  637: "#ffff00",
-  647: "#ff00ff",
-  657: "#00ff00",
-  667: "#008800",
+  //515: "#ff0000",
+  //525: "#ff8800",
+  //535: "#ffff00",
+  //545: "#ff00ff",
+  //555: "#00ff00",
+  //565: "#008800",
+
+  110: "#000000",
+  120: "#000000",
+  130: "#000000",
+  140: "#000000",
+  150: "#000000",
+  160: "#000000",
 };
 
 var keys    = Object.keys(codeColorMap);
@@ -224,6 +148,5 @@ var discrete = combined.remap(codes, indices).rename('classIndex');
 Map.addLayer(
   discrete,
   {min: 0, max: indices.length - 1, palette: palette},
-  'Climate (CMIP6 w/ CMIP5 fallback)',
+  'Climate',
   true, 0.7
-);

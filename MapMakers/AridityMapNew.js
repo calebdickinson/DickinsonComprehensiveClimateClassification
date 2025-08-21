@@ -1,4 +1,4 @@
-// ==== WorldClim v1 monthly (WORLDCLIM/V1/MONTHLY) ====
+// Aridity Map 1961-1990 Normals
 
 var WC = ee.ImageCollection('WORLDCLIM/V1/MONTHLY');
 

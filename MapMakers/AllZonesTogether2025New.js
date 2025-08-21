@@ -1,40 +1,30 @@
 // paste this in address bar and paste this code in new script box
 // https://code.earthengine.google.com/
 
-// ----------------------------------------------------
+// ------------------------------
 //1. LOAD & PREP 2025 RCP8.5 DATA
-// ----------------------------------------------------
+// ------------------------------
 
-// ===============================
-// CMIP6-first with NEX-GDDP fallback (per pixel)
-// ===============================
+// ===========================
+// CMIP6 (SSP5-8.5), year 2025
+// ===========================
 
 // ---- Collections ----
 var data6 = ee.ImageCollection('NASA/GDDP-CMIP6')
   .filter(ee.Filter.eq('scenario', 'ssp585'))
   .filter(ee.Filter.calendarRange(2025, 2025, 'year'));
 
-var data5 = ee.ImageCollection('NASA/NEX-GDDP')
-  .filter(ee.Filter.eq('scenario', 'rcp85'))
-  .filter(ee.Filter.calendarRange(2025, 2025, 'year'));
-
 // ---- Helpers ----
 var months   = ee.List.sequence(1, 12);
 var daysList = ee.List([31,28,31,30,31,30,31,31,30,31,30,31]);
 
-// Daily mean temp (°C) from an ImageCollection:
-// - if 'tas' exists, use it
-// - else use (tasmax + tasmin)/2
+// Daily mean temp (°C) from CMIP6 'tas' (K -> °C)
 function dailyTmeanC(ic) {
   return ic.map(function(img) {
-    var bn = img.bandNames();
-    var tmeanK = ee.Image(ee.Algorithms.If(
-      bn.contains('tas'),
-      img.select('tas'),
-      img.select('tasmax').add(img.select('tasmin')).multiply(0.5)
-    ));
-    return tmeanK.subtract(273.15).rename('tmeanC')
-                 .copyProperties(img, ['system:time_start']);
+    return img.select('tas')
+      .subtract(273.15)
+      .rename('tmeanC')
+      .copyProperties(img, ['system:time_start']);
   });
 }
 
@@ -42,31 +32,12 @@ function dailyTmeanC(ic) {
 // A) Hottest/Coldest month (using monthly mean tmeanC)
 // ===============================
 var tmean6 = dailyTmeanC(data6);
-var tmean5 = dailyTmeanC(data5);
 
-// Build monthly mean tmeanC for each dataset
-var monthlyMeans6 = ee.ImageCollection(
-  months.map(function(m) {
-    var tM6 = tmean6.filter(ee.Filter.calendarRange(m, m, 'month')).mean();
-    return tM6.rename('monthlyMean').set('month', m);
-  })
-);
-
-var monthlyMeans5 = ee.ImageCollection(
-  months.map(function(m) {
-    var tM5 = tmean5.filter(ee.Filter.calendarRange(m, m, 'month')).mean();
-    return tM5.rename('monthlyMean').set('month', m);
-  })
-);
-
-// Per-month per-pixel blend: CMIP6 first, fallback to NEX-GDDP where masked
+// Build monthly mean tmeanC (°C)
 var monthlyMeans = ee.ImageCollection(
   months.map(function(m) {
-    m = ee.Number(m);
-    var m6 = ee.Image(monthlyMeans6.filter(ee.Filter.eq('month', m)).first());
-    var m5 = ee.Image(monthlyMeans5.filter(ee.Filter.eq('month', m)).first());
-    var combo = m6.unmask(m5).rename('monthlyMean').set('month', m);
-    return combo;
+    var tM = tmean6.filter(ee.Filter.calendarRange(m, m, 'month')).mean();
+    return tM.rename('monthlyMean').set('month', m);
   })
 );
 
@@ -84,22 +55,21 @@ var coldestC = monthlyMeans
   .rename('coldestC');
 
 // ===============================
-// B) Aridity & seasonal ratios (CMIP6-first with fallback)
-// (keeps your original PET form and thresholds)
+// B) Aridity & seasonal ratios (CMIP6 only)
 // ===============================
 
-// Build monthly climate stacks (pr sum proxy, PET, tmeanC) for each dataset
+// Build monthly climate stacks (pr "sum" proxy, PET, tmeanC) from CMIP6
 function monthlyClimFrom(ic_for_pr, ic_for_tmean) {
   return ee.ImageCollection(
     months.map(function(m) {
       m = ee.Number(m);
-      var days  = ee.Number(daysList.get(m.subtract(1)));
+      var days = ee.Number(daysList.get(m.subtract(1)));
 
       // precipitation (monthly "sum" proxy): mean over month * days
       var prM = ic_for_pr.select('pr')
         .filter(ee.Filter.calendarRange(m, m, 'month'))
         .mean();
-      var rainM = prM.multiply(days).rename('pr'); // keep your original scaling
+      var rainM = prM.multiply(days).rename('pr'); // scaling retained
 
       // monthly mean tmeanC
       var tmeanM = ic_for_tmean
@@ -107,7 +77,7 @@ function monthlyClimFrom(ic_for_pr, ic_for_tmean) {
         .mean()
         .rename('tmeanC');
 
-      // your PET proxy (from tmeanC), unchanged
+      // PET proxy (from tmeanC), unchanged
       var es = tmeanM.expression('0.6108 * exp(17.27 * T / (T + 237.3))', {T: tmeanM});
       var Ra = ee.Image.constant(12 * 0.0820);
       var petM = es.multiply(Ra).multiply(0.1651).rename('pet');
@@ -117,21 +87,8 @@ function monthlyClimFrom(ic_for_pr, ic_for_tmean) {
   );
 }
 
-var monthlyClim6 = monthlyClimFrom(data6, tmean6);
-var monthlyClim5 = monthlyClimFrom(data5, tmean5);
-
-// Per-month per-pixel blend for pr, pet, tmeanC
-var monthlyClim = ee.ImageCollection(
-  months.map(function(m) {
-    m = ee.Number(m);
-    var i6 = ee.Image(monthlyClim6.filter(ee.Filter.eq('month', m)).first());
-    var i5 = ee.Image(monthlyClim5.filter(ee.Filter.eq('month', m)).first());
-    var pr   = i6.select('pr'    ).unmask(i5.select('pr'    )).rename('pr');
-    var pet  = i6.select('pet'   ).unmask(i5.select('pet'   )).rename('pet');
-    var tmc  = i6.select('tmeanC').unmask(i5.select('tmeanC')).rename('tmeanC');
-    return pr.addBands([pet, tmc]).set('month', m);
-  })
-);
+// Build monthly climate collection (NO self-reference, NO i5)
+var monthlyClim = monthlyClimFrom(data6, tmean6);
 
 // Annual aggregates and hottest/coldest (from monthlyClim tmeanC)
 var P_ann       = monthlyClim.select('pr'    ).sum().rename('P_ann');
@@ -143,7 +100,7 @@ var histColdest = monthlyClim
   .select('tmeanC').multiply(-1)
   .rename('histColdest');
 
-// Masks & indices preserved from your original
+// Masks & indices (unchanged)
 var pixelLat  = ee.Image.pixelLonLat().select('latitude');
 var northMask = pixelLat.gt(5);
 var tropic    = pixelLat.abs().lte(5);
@@ -374,17 +331,21 @@ menu.style().set({
 });
 ui.root.add(menu);
 
-// Add layer
+
+// Mask out nodata so they're transparent
+var combinedMasked = combined.updateMask(combined.neq(0));
+
 Map.addLayer(
-  combined,
+  combinedMasked,
   {
-    min: Math.min.apply(null,codes),
-    max: Math.max.apply(null,codes),
+    min: Math.min.apply(null, codes),
+    max: Math.max.apply(null, codes),
     palette: palette
   },
   'Combined Zones',
   true, 0.5
 );
+
 
 
 // Build a proper info panel, adding one widget at a time
@@ -440,7 +401,7 @@ Map.onClick(function(coords) {
   }).get('mask').evaluate(function(inZone) {
     if (inZone) {
       // a) inside aridity domain → fetch actual class
-      clim2100_flip.reduceRegion({
+      clim.reduceRegion({
         reducer: ee.Reducer.first(),
         geometry: pt,
         scale: 10000
@@ -459,8 +420,8 @@ Map.onClick(function(coords) {
 // ——————————————————————————
 
 // (a) Define cities
-  
- var cityList = [
+
+var cityList = [
   { name: 'Tokyo–Yokohama, Japan',                       lon: 139.6917,  lat: 35.6895 },
   { name: 'Jakarta, Indonesia',                          lon: 106.8456,  lat: -6.2088 },
   { name: 'Delhi, India',                                lon: 77.1025,   lat: 28.7041 },
@@ -1000,7 +961,8 @@ var cityClasses = combined
     scale:       10000,
     geometries:  false
   })
-  .filter(ee.Filter.notNull(['combinedZone']));
+  .filter(ee.Filter.notNull(['combinedZone']))
+  .filter(ee.Filter.gt('combinedZone', 0));   // ← ignore oceans / no-data
 
 // (d) Attach labels + full sortKey
 var MAX_COLD = ee.Number(Object.keys(coldLetters).length);

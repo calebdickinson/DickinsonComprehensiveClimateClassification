@@ -58,28 +58,42 @@
         </div>
     </div>
 
-    <img id="climate_landscape" src="" alt="landscape in this climate">
+    <div id="landscapes"></div>
+      <img id="climate_landscape" src="" alt="landscape in this climate">
+    </div>
 
-    <h3>Cities with this climate</h3>
-    <p id="climate_cities"></p>
-    <br>
-    <br>
-    <br>
-    <br>
-    <h3>Global climate distribution</h3>
-    <p><i id="distribution_message"></i></p>
+    <div id="cities"></div>
+      <h3>Cities with this climate</h3>
+      <p id="climate_cities"></p>
+      <br>
+      <br>
+      <br>
+    </div>
 
-    <br> <br>
-    <p><b>1960-1900 normals</b></p>
-    <img id="climate_map_1900s" src="" alt="climate map in 1900">
+    <div id="maps_header"></div>      
+      <br>
+      <h3>Global climate distribution</h3>
+      <p><i id="distribution_message"></i></p>
+    </div>
+
+    <div id="1900s"></div>
+      <br> <br>
+      <p><b>1960-1900 normals</b></p>
+      <img id="climate_map_1900s" src="" alt="climate map in 1900">
+    </div>
     
-    <br> <br>
-    <p><b>2025</b></p>
-    <img id="climate_map_2025" src="" alt="climate map in 2025">
+    <div id="2025"></div>
+      <br> <br>
+      <p><b>2025</b></p>
+      <img id="climate_map_2025" src="" alt="climate map in 2025">
+    </div>
 
-    <br> <br>
-    <p><b>2100 projection</b></p>
-    <img id="climate_map_2100" src="" alt="climate map in 2100">
+    <div id="2100"></div>
+      <br> <br>
+      <p><b>2100 projection</b></p>
+      <img id="climate_map_2100" src="" alt="climate map in 2100">
+    </div>
+
   </main>
 
 
@@ -119,8 +133,15 @@
             const climate_map_2100 = climate['map_2100'];
             const climate_map_1900s = climate['map_1900s'];
             const climate_landscape = climate['landscape'];
-
             const distribution_message = "See the global distribution of " + climate_name + " over time. Note that map data for oceans and Antarctica is not available.";
+
+            Promise.all([
+                new Promise(resolve => checkImageExists(climate_map_2025, resolve)),
+                new Promise(resolve => checkImageExists(climate_map_2100, resolve)),
+                new Promise(resolve => checkImageExists(climate_map_1900s, resolve)),
+                new Promise(resolve => checkImageExists(climate_landscape, resolve))
+            ]).then(results => {
+                const [map2025Exists, map2100Exists, map1900sExists, landscapeExists] = results;
 
             if (!climate) throw new Error(`Climate data for code "${code}" not found`);
 
@@ -129,42 +150,58 @@
             document.getElementById('distribution_message').textContent = distribution_message;
 
             if (!climate_exists) document.getElementById('climate_exists').textContent = "THIS CLIMATE DOES NOT EXIST";
-            else document.getElementById('climate_exists').textContent = "";
+            else document.getElementById('climate_exists').style.display = 'none';
 
             if (climate_group) document.getElementById('ariditySection').style.display = 'block';
             else document.getElementById('ariditySection').style.display = 'none';
 
             if (climate_cities && climate_cities.length > 0) document.getElementById('climate_cities').innerHTML = climate_cities.join("<br>");
-            else document.getElementById('climate_cities').textContent = "There are no cities with this climate";
+            else document.getElementById('cities').style.display = 'none';
 
             function change_climate(code) {
                 window.location.href = window.location.pathname + '?code=' + code;
             }
 
-            function is_disabled(value) {
+            function disable_or_omit(value) {
                 return value === "False" || value === "false" || value === false || value === "" || value === undefined || value === null
             }
 
-            if (is_disabled(climate_go_to_hotter_summer)) document.getElementById('climate_go_to_hotter_summer').disabled = true;
+            function checkImageExists(url, callback) {
+              if (!url) {
+                  callback(false);
+                  return;
+              }
+              
+              const img = new Image();
+              img.onload = function() {
+                  callback(true);
+              };
+              img.onerror = function() {
+                  callback(false);
+              };
+              img.src = url;
+          }
+
+            if (disable_or_omit(climate_go_to_hotter_summer)) document.getElementById('climate_go_to_hotter_summer').disabled = true;
             else document.getElementById('climate_go_to_hotter_summer').onclick = () => change_climate(climate_go_to_hotter_summer);
-            if (is_disabled(climate_go_to_colder_summer)) document.getElementById('climate_go_to_colder_summer').disabled = true;
+            if (disable_or_omit(climate_go_to_colder_summer)) document.getElementById('climate_go_to_colder_summer').disabled = true;
             else document.getElementById('climate_go_to_colder_summer').onclick = () => change_climate(climate_go_to_colder_summer);
-            if (is_disabled(climate_go_to_hotter_winter)) document.getElementById('climate_go_to_hotter_winter').disabled = true;
+            if (disable_or_omit(climate_go_to_hotter_winter)) document.getElementById('climate_go_to_hotter_winter').disabled = true;
             else document.getElementById('climate_go_to_hotter_winter').onclick = () => change_climate(climate_go_to_hotter_winter);
-            if (is_disabled(climate_go_to_colder_winter)) document.getElementById('climate_go_to_colder_winter').disabled = true;
+            if (disable_or_omit(climate_go_to_colder_winter)) document.getElementById('climate_go_to_colder_winter').disabled = true;
             else document.getElementById('climate_go_to_colder_winter').onclick = () => change_climate(climate_go_to_colder_winter);
 
-            if (is_disabled(climate_go_to_humid)) document.getElementById('climate_go_to_humid').disabled = true;
+            if (disable_or_omit(climate_go_to_humid)) document.getElementById('climate_go_to_humid').disabled = true;
             else document.getElementById('climate_go_to_humid').onclick = () => change_climate(climate_go_to_humid);
-            if (is_disabled(climate_go_to_semihumid)) document.getElementById('climate_go_to_semihumid').disabled = true;
+            if (disable_or_omit(climate_go_to_semihumid)) document.getElementById('climate_go_to_semihumid').disabled = true;
             else document.getElementById('climate_go_to_semihumid').onclick = () => change_climate(climate_go_to_semihumid);
-            if (is_disabled(climate_go_to_monsoon)) document.getElementById('climate_go_to_monsoon').disabled = true;
+            if (disable_or_omit(climate_go_to_monsoon)) document.getElementById('climate_go_to_monsoon').disabled = true;
             else document.getElementById('climate_go_to_monsoon').onclick = () => change_climate(climate_go_to_monsoon);
-            if (is_disabled(climate_go_to_mediterranean)) document.getElementById('climate_go_to_mediterranean').disabled = true;
+            if (disable_or_omit(climate_go_to_mediterranean)) document.getElementById('climate_go_to_mediterranean').disabled = true;
             else document.getElementById('climate_go_to_mediterranean').onclick = () => change_climate(climate_go_to_mediterranean);
-            if (is_disabled(climate_go_to_semiarid)) document.getElementById('climate_go_to_semiarid').disabled = true;
+            if (disable_or_omit(climate_go_to_semiarid)) document.getElementById('climate_go_to_semiarid').disabled = true;
             else document.getElementById('climate_go_to_semiarid').onclick = () => change_climate(climate_go_to_semiarid);
-            if (is_disabled(climate_go_to_arid_desert)) document.getElementById('climate_go_to_arid_desert').disabled = true;
+            if (disable_or_omit(climate_go_to_arid_desert)) document.getElementById('climate_go_to_arid_desert').disabled = true;
             else document.getElementById('climate_go_to_arid_desert').onclick = () => change_climate(climate_go_to_arid_desert);
 
             const images = [
@@ -173,6 +210,26 @@
                 {id: 'climate_map_2100', src: climate_map_2100, alt: "climate map in 2100"},
                 {id: 'climate_map_1900s', src: climate_map_1900s, alt: "climate map in 1961-1990"}
             ];
+
+            const maps = [
+                {id: '1900s', src: climate_map_1900s},
+                {id: '2025', src: climate_map_2025},
+                {id: '2100', src: climate_map_2100}
+            ];
+
+            let has_any_map = false;
+
+            maps.forEach(({id, src}) => {
+                if (src) {
+                    has_any_map = true;
+                } else {
+                    document.getElementById(id).style.display = 'none';
+                }
+            });
+
+            if (!has_any_map) document.getElementById('maps_header').style.display = 'none';
+
+            if (!climate_landscape) document.getElementById('landscapes').style.display = 'none';
 
             images.forEach(({id, src, alt}) => {
                 const img = document.getElementById(id);

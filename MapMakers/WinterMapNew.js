@@ -56,7 +56,7 @@ var codeColorMap = {
    5: "#008800", // D: Temperate
    4: "#004400", // E: Continental
    3: "#0000FF", // F: Subarctic
-   2: "#FFC0CB", // G: Arctic
+   2: "#FF10F0", // G: Arctic
    1: "#000000"  // Y: Superarctic
 };
 
