@@ -1,11 +1,13 @@
 import json
 import backend.create_database as create_database
 
-
 def main():
     data = create_database.generate_json() #type:ignore
     with open("data/data.json", "w") as json_file:
         json.dump(data, json_file, indent=4, ensure_ascii=False)
+
+if __name__ == "__main__":
+    main()
 
 
 # right now this just automatically updates data/data.json

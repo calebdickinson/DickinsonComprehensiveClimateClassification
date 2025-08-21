@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-L6C1HZ2LBZ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -32,31 +31,31 @@
 
     <div class="buttons-with-code">
       <div class="buttons-group">
-        <button class="warmer" id="climate_warm_plus"><-- Warmer Summers</button>
-        <button class="warmer" id="climate_cold_plus"><-- Warmer Winters</button>
+        <button class="warmer" id="climate_go_to_hotter_summer"><-- Warmer Summers</button>
+        <button class="warmer" id="climate_go_to_hotter_winter"><-- Warmer Winters</button>
       </div>
       <div class="climate-code">
         <h2>Climate Code: <strong id="climate_code"></strong></h2>
       </div>
       <div class="buttons-group buttons-group_right">
-        <button class="colder" id="climate_warm_minus">Colder Summers --></button>
-        <button class="colder" id="climate_cold_minus">Colder Winters --></button>
+        <button class="colder" id="climate_go_to_colder_summer">Colder Summers --></button>
+        <button class="colder" id="climate_go_to_colder_winter">Colder Winters --></button>
       </div>
     </div>
 
-    <div class="box">
-      <div class="ariditybox-border-outer">
-        <div class="ariditybox-border-inner">
-          <div class="ariditybox-grid">
-            <a href="humid-scorching-hot-summer.html" class="ariditybox ariditybox-humid">Humid (H)</a>
-            <a href="semihumid-scorching-hot-summer.html" class="ariditybox ariditybox-semihumid">Semihumid (G)</a>
-            <a href="monsoon-scorching-hot-summer.html" class="ariditybox ariditybox-monsoon">Monsoon<br><br>(W)</a>
-            <a href="mediterranean-scorching-hot-summer.html" class="ariditybox ariditybox-mediterranean">Mediter-<br>ranean<br><br>(M)</a>
-            <a href="semiarid-scorching-hot-summer.html" class="ariditybox ariditybox-semiarid">Semiarid (S)</a>
-            <a href="arid-desert-scorching-hot-summer.html" class="ariditybox ariditybox-arid-desert">Arid Desert (D)</a>
-          </div>
+    <div class="box" id="ariditySection">
+        <div class="ariditybox-border-outer">
+            <div class="ariditybox-border-inner">
+                <div class="ariditybox-grid">
+                    <button id="climate_go_to_humid" class="ariditybox ariditybox-humid">Humid (H)</button>
+                    <button id="climate_go_to_semihumid" class="ariditybox ariditybox-semihumid">Semihumid (G)</button>
+                    <button id="climate_go_to_monsoon" class="ariditybox ariditybox-monsoon">Monsoon<br><br>(W)</button>
+                    <button id="climate_go_to_mediterranean" class="ariditybox ariditybox-mediterranean">Mediter-<br>ranean<br><br>(M)</button>
+                    <button id="climate_go_to_semiarid" class="ariditybox ariditybox-semiarid">Semiarid (S)</button>
+                    <button id="climate_go_to_arid_desert" class="ariditybox ariditybox-arid-desert">Arid Desert (D)</button>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 
     <img id="climate_landscape" src="" alt="landscape in this climate">
@@ -101,23 +100,29 @@
         })
         .then(data => {
             const climate = data[code];
+            const climate_code = climate['code'];
             const climate_name = climate['name'];
             const climate_exists = climate['exists'];
-            const climate_code = climate['code'];
+            const climate_group = climate['group'];
+            const climate_go_to_humid = climate['go_to_humid'];
+            const climate_go_to_semihumid = climate['go_to_semihumid'];
+            const climate_go_to_monsoon = climate['go_to_monsoon'];
+            const climate_go_to_mediterranean = climate['go_to_mediterranean'];
+            const climate_go_to_semiarid = climate['go_to_semiarid'];
+            const climate_go_to_arid_desert = climate['go_to_arid_desert'];
+            const climate_go_to_hotter_summer = climate['go_to_hotter_summer'];
+            const climate_go_to_colder_summer = climate['go_to_colder_summer'];
+            const climate_go_to_hotter_winter = climate['go_to_hotter_winter'];
+            const climate_go_to_colder_winter = climate['go_to_colder_winter'];
             const climate_cities = climate['cities'];
             const climate_map_2025 = climate['map_2025'];
             const climate_map_2100 = climate['map_2100'];
             const climate_map_1900s = climate['map_1900s'];
             const climate_landscape = climate['landscape'];
-            const climate_warm_plus = climate['warm_plus'];
-            const climate_warm_minus = climate['warm_minus'];
-            const climate_cold_plus = climate['cold_plus'];
-            const climate_cold_minus = climate['cold_minus'];
+
             const distribution_message = "See the global distribution of " + climate_name + " over time. Note that map data for oceans and Antarctica is not available.";
 
-            if (!climate) {
-                throw new Error(`Climate data for code "${code}" not found`);
-            }
+            if (!climate) throw new Error(`Climate data for code "${code}" not found`);
 
             document.getElementById('climate_name').textContent = climate_name;
             document.getElementById('climate_code').textContent = climate_code;
@@ -125,6 +130,9 @@
 
             if (!climate_exists) document.getElementById('climate_exists').textContent = "THIS CLIMATE DOES NOT EXIST";
             else document.getElementById('climate_exists').textContent = "";
+
+            if (climate_group) document.getElementById('ariditySection').style.display = 'block';
+            else document.getElementById('ariditySection').style.display = 'none';
 
             if (climate_cities && climate_cities.length > 0) document.getElementById('climate_cities').innerHTML = climate_cities.join("<br>");
             else document.getElementById('climate_cities').textContent = "There are no cities with this climate";
@@ -137,14 +145,27 @@
                 return value === "False" || value === "false" || value === false || value === "" || value === undefined || value === null
             }
 
-            if (is_disabled(climate_warm_plus)) document.getElementById('climate_warm_plus').disabled = true;
-            else document.getElementById('climate_warm_plus').onclick = () => change_climate(climate_warm_plus);
-            if (is_disabled(climate_warm_minus)) document.getElementById('climate_warm_minus').disabled = true;
-            else document.getElementById('climate_warm_minus').onclick = () => change_climate(climate_warm_minus);
-            if (is_disabled(climate_cold_plus)) document.getElementById('climate_cold_plus').disabled = true;
-            else document.getElementById('climate_cold_plus').onclick = () => change_climate(climate_cold_plus);
-            if (is_disabled(climate_cold_minus)) document.getElementById('climate_cold_minus').disabled = true;
-            else document.getElementById('climate_cold_minus').onclick = () => change_climate(climate_cold_minus);
+            if (is_disabled(climate_go_to_hotter_summer)) document.getElementById('climate_go_to_hotter_summer').disabled = true;
+            else document.getElementById('climate_go_to_hotter_summer').onclick = () => change_climate(climate_go_to_hotter_summer);
+            if (is_disabled(climate_go_to_colder_summer)) document.getElementById('climate_go_to_colder_summer').disabled = true;
+            else document.getElementById('climate_go_to_colder_summer').onclick = () => change_climate(climate_go_to_colder_summer);
+            if (is_disabled(climate_go_to_hotter_winter)) document.getElementById('climate_go_to_hotter_winter').disabled = true;
+            else document.getElementById('climate_go_to_hotter_winter').onclick = () => change_climate(climate_go_to_hotter_winter);
+            if (is_disabled(climate_go_to_colder_winter)) document.getElementById('climate_go_to_colder_winter').disabled = true;
+            else document.getElementById('climate_go_to_colder_winter').onclick = () => change_climate(climate_go_to_colder_winter);
+
+            if (is_disabled(climate_go_to_humid)) document.getElementById('climate_go_to_humid').disabled = true;
+            else document.getElementById('climate_go_to_humid').onclick = () => change_climate(climate_go_to_humid);
+            if (is_disabled(climate_go_to_semihumid)) document.getElementById('climate_go_to_semihumid').disabled = true;
+            else document.getElementById('climate_go_to_semihumid').onclick = () => change_climate(climate_go_to_semihumid);
+            if (is_disabled(climate_go_to_monsoon)) document.getElementById('climate_go_to_monsoon').disabled = true;
+            else document.getElementById('climate_go_to_monsoon').onclick = () => change_climate(climate_go_to_monsoon);
+            if (is_disabled(climate_go_to_mediterranean)) document.getElementById('climate_go_to_mediterranean').disabled = true;
+            else document.getElementById('climate_go_to_mediterranean').onclick = () => change_climate(climate_go_to_mediterranean);
+            if (is_disabled(climate_go_to_semiarid)) document.getElementById('climate_go_to_semiarid').disabled = true;
+            else document.getElementById('climate_go_to_semiarid').onclick = () => change_climate(climate_go_to_semiarid);
+            if (is_disabled(climate_go_to_arid_desert)) document.getElementById('climate_go_to_arid_desert').disabled = true;
+            else document.getElementById('climate_go_to_arid_desert').onclick = () => change_climate(climate_go_to_arid_desert);
 
             const images = [
                 {id: 'climate_landscape', src: climate_landscape, alt: "landscape in this climate"},
