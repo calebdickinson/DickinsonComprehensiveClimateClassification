@@ -226,7 +226,6 @@ def traverse_codes(code:str, type:str, direction:int) -> str:
     if new_climate not in codes: return "False"
     return new_climate
 
-# functions
 def breakup(code:str):
     """ Get cold, arid, and warm values from code
 
