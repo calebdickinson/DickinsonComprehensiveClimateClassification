@@ -4,9 +4,9 @@ from . import climates
 from . import format
 
 def generate_json() -> dict[str, dict]: #type:ignore
-    data = {}
+    database = {}
     for code in climates.codes:
-        data[code] = {
+        database[code] = {
             'code': code,
             'name': climates.decode(code),
             'exists': climates.does_exist(code),
@@ -27,7 +27,7 @@ def generate_json() -> dict[str, dict]: #type:ignore
             'landscape': f'climates/landscape/{code}.jpg',
             'cities': format.list_places_by_climate_and_time(format.get_csv("data/cities.csv"), code),
         }
-    return data #type:ignore
+    return database #type:ignore
 
 if __name__ == "__main__":
     data = generate_json() #type:ignore

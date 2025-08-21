@@ -3,7 +3,7 @@
 # go to the setup.sh file and run it
 
 source venv/bin/activate
-# if you want you can just run this command directly in your terminal instead
+# if you want, you can just run this command directly in your terminal instead
 
 # when you are done coding, deactivate your virtual environment 
 # by running this command: deactivate
@@ -21,7 +21,7 @@ source venv/bin/activate
 # go into your terminal in the folder and enter the folder for this climate project
 # run this command: ./test.sh
 
-# to view your locally-ran test website:
+# to view your locally-run test website:
 # open a web browser and go to http://localhost:8000
 
 python3 -m http.server 8000
