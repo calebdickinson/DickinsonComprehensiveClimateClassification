@@ -272,8 +272,7 @@ def decode(code:str):
         str: The climate zone name
     """
     [cold, arid, warm] = breakup(code)  # get cold, arid, and warm values
-    parts: list[str] = []
-    parts.append(cold_codes[cold])
+    parts: list[str] = [cold_codes[cold]]
     if arid: parts.append(arid_codes[arid])
     parts.append(warm_codes[warm])
     return " ".join(parts)

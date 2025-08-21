@@ -260,10 +260,8 @@
     else                      summerVar = 'Y';
 
     // build a URL like "climate.html?code=AZ2"
-    const pageUrl = `climate.html?code=${climateVar}${summerVar}`;
-
-    // redirect:
-    window.location.href = pageUrl;
+      // redirect:
+    window.location.href = `climate.html?code=${climateVar}${summerVar}`;
   });
 </script>
 
