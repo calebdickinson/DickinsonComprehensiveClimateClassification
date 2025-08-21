@@ -1,6 +1,6 @@
 import json
-from climates import decode, codes, traverse_codes
-from format import get_csv, list_places_by_climate_and_time, list_landscapes
+from backend.climates import decode, codes, traverse_codes
+from backend.format import get_csv, list_places_by_climate_and_time, list_landscapes
 
 def generate_json() -> dict[str, dict]: #type:ignore
     data = {}
@@ -21,11 +21,11 @@ def generate_json() -> dict[str, dict]: #type:ignore
             'map_2025': f'climates/map_2025/{code}.png',
             'map_2100': f'climates/map_2100/{code}.png',
             'landscape': list_landscapes(code),
-            'cities': list_places_by_climate_and_time(get_csv("cities.csv"), code),
+            'cities': list_places_by_climate_and_time(get_csv("../data/cities.csv"), code),
         }
     return data #type:ignore
 
 if __name__ == "__main__":
     data = generate_json() #type:ignore
-    with open("data.json", "w") as json_file:
+    with open("../data/data.json", "w") as json_file:
         json.dump(data, json_file, indent=4, ensure_ascii=False)

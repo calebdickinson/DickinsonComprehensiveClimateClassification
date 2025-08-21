@@ -184,7 +184,7 @@ def list_landscapes(climate:str) -> list[str]:
     Returns:
         list[str]: A list of all landscape image paths for the specified climate
     """
-    landscape_dir = 'climates/landscape/'
+    landscape_dir = '../climates/landscape/'
     if not os.path.exists(landscape_dir):
         print(f"Error: Directory does not exist: {landscape_dir}")
         return []
@@ -194,6 +194,6 @@ def list_landscapes(climate:str) -> list[str]:
 
 
 if __name__ == "__main__": # edit this to do whatever formatting you want
-    df = get_csv("cities.csv")
+    df = get_csv("../data/cities.csv")
     df = remove_rows_with_missing_data(df)
     df.to_csv("cities.csv", index=False)
