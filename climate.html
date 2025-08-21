@@ -38,7 +38,7 @@
         <button class="colder" id="climate_cold_minus">Colder Winters --></button>
       </div>
     </div>
-        <h3>Landscape Image(s):</h3>
+
         <div id="landscape_container"></div>
 
         <h3>Cities with this climate</h3>
@@ -47,15 +47,19 @@
         <br>
         <br>
         <br>
-        <p><b>Map data for oceans or Antarctica is not available</b></p>
+        <h3>Global climate distribution</h3>
+        <p><i id="distribution_message"></i></p>
 
-        <h3>Global distribution (1960-1900 normals)</h3>
+        <br> <br>
+        <p><b>1960-1900 normals</b></p>
         <img id="climate_map_1900s" src="" alt="climate map in 1900">
-
-        <h3>Global distribution (2025)</h3>
-        <img id="climate_map_2025" src="" alt="climate map">
-
-        <h3>Global distribution (2100)</h3>
+        
+        <br> <br>
+        <p><b>2025</b></p>
+        <img id="climate_map_2025" src="" alt="climate map in 2025">
+        
+        <br> <br>
+        <p><b>2100 projection</b></p>
         <img id="climate_map_2100" src="" alt="climate map in 2100">
   </main>
 
@@ -90,6 +94,7 @@
             const climate_warm_minus = climate['warm_minus'];
             const climate_cold_plus = climate['cold_plus'];
             const climate_cold_minus = climate['cold_minus'];
+            const distribution_message = "See the global distribution of " + climate_name + " over time. Note that map data for oceans and Antarctica is not available.";
 
             if (!climate) {
                 throw new Error(`Climate data for code "${code}" not found`);
@@ -97,6 +102,7 @@
 
             document.getElementById('climate_name').textContent = climate_name;
             document.getElementById('climate_code').textContent = climate_code;
+            document.getElementById('distribution_message').textContent = distribution_message;
 
 
             if (climate_cities && climate_cities.length > 0) document.getElementById('climate_cities').innerHTML = climate_cities.join("<br>");
