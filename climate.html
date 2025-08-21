@@ -58,11 +58,11 @@
         </div>
     </div>
 
-    <div id="landscapes"></div>
+    <div id="landscapes">
       <img id="climate_landscape" src="" alt="landscape in this climate">
     </div>
 
-    <div id="cities"></div>
+    <div id="cities">
       <h3>Cities with this climate</h3>
       <p id="climate_cities"></p>
       <br>
@@ -70,25 +70,25 @@
       <br>
     </div>
 
-    <div id="maps_header"></div>      
+    <div id="maps_header">
       <br>
       <h3>Global climate distribution</h3>
       <p><i id="distribution_message"></i></p>
     </div>
 
-    <div id="1900s"></div>
+    <div id="1900s">
       <br> <br>
       <p><b>1960-1900 normals</b></p>
       <img id="climate_map_1900s" src="" alt="climate map in 1900">
     </div>
     
-    <div id="2025"></div>
+    <div id="2025">
       <br> <br>
       <p><b>2025</b></p>
       <img id="climate_map_2025" src="" alt="climate map in 2025">
     </div>
 
-    <div id="2100"></div>
+    <div id="2100">
       <br> <br>
       <p><b>2100 projection</b></p>
       <img id="climate_map_2100" src="" alt="climate map in 2100">
@@ -135,14 +135,6 @@
             const climate_landscape = climate['landscape'];
             const distribution_message = "See the global distribution of " + climate_name + " over time. Note that map data for oceans and Antarctica is not available.";
 
-            Promise.all([
-                new Promise(resolve => checkImageExists(climate_map_2025, resolve)),
-                new Promise(resolve => checkImageExists(climate_map_2100, resolve)),
-                new Promise(resolve => checkImageExists(climate_map_1900s, resolve)),
-                new Promise(resolve => checkImageExists(climate_landscape, resolve))
-            ]).then(results => {
-                const [map2025Exists, map2100Exists, map1900sExists, landscapeExists] = results;
-
             if (!climate) throw new Error(`Climate data for code "${code}" not found`);
 
             document.getElementById('climate_name').textContent = climate_name;
@@ -165,22 +157,6 @@
             function disable_or_omit(value) {
                 return value === "False" || value === "false" || value === false || value === "" || value === undefined || value === null
             }
-
-            function checkImageExists(url, callback) {
-              if (!url) {
-                  callback(false);
-                  return;
-              }
-              
-              const img = new Image();
-              img.onload = function() {
-                  callback(true);
-              };
-              img.onerror = function() {
-                  callback(false);
-              };
-              img.src = url;
-          }
 
             if (disable_or_omit(climate_go_to_hotter_summer)) document.getElementById('climate_go_to_hotter_summer').disabled = true;
             else document.getElementById('climate_go_to_hotter_summer').onclick = () => change_climate(climate_go_to_hotter_summer);
@@ -211,24 +187,6 @@
                 {id: 'climate_map_1900s', src: climate_map_1900s, alt: "climate map in 1961-1990"}
             ];
 
-            const maps = [
-                {id: '1900s', src: climate_map_1900s},
-                {id: '2025', src: climate_map_2025},
-                {id: '2100', src: climate_map_2100}
-            ];
-
-            let has_any_map = false;
-
-            maps.forEach(({id, src}) => {
-                if (src) {
-                    has_any_map = true;
-                } else {
-                    document.getElementById(id).style.display = 'none';
-                }
-            });
-
-            if (!has_any_map) document.getElementById('maps_header').style.display = 'none';
-
             if (!climate_landscape) document.getElementById('landscapes').style.display = 'none';
 
             images.forEach(({id, src, alt}) => {
@@ -243,7 +201,7 @@
         })
         .catch(error => {
             throw new Error("Error loading climate data: " + error.message);
-        });
+        })
   </script>
 </body>
 </html>
