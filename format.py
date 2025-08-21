@@ -1,5 +1,7 @@
 import pandas as pd
 import numpy as np
+import glob
+import os
 
 """ Formatting utilities for the climate data files
 """
@@ -172,6 +174,24 @@ def list_places_by_climate_and_time(df: pd.DataFrame, climate: str) -> list[str]
     for place in a2025: places.append(f"{place} (2025)")
     for place in a2100: places.append(f"{place} (2100)")
     return places
+
+def list_landscapes(climate:str) -> list[str]:
+    """List all landscape images for a given climate code
+
+    Args:
+        climate (str): The climate code to filter by
+
+    Returns:
+        list[str]: A list of all landscape image paths for the specified climate
+    """
+    landscape_dir = 'climates/landscape/'
+    if not os.path.exists(landscape_dir):
+        print(f"Error: Directory does not exist: {landscape_dir}")
+        return []
+    pattern = os.path.join(landscape_dir, f'{climate}*.jpg')
+    return glob.glob(pattern)
+
+
 
 if __name__ == "__main__": # edit this to do whatever formatting you want
     df = get_csv("cities.csv")
