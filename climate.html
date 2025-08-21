@@ -72,7 +72,7 @@
         throw new Error("No climate code specified in URL");
     }
 
-    fetch('data.json')
+    fetch('data/data.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -88,8 +88,6 @@
             const climate_map_2100 = climate['map_2100'];
             const climate_map_1900s = climate['map_1900s'];
             const climate_landscape = climate['landscape'];
-            const climate_arid_plus = climate['arid_plus'];
-            const climate_arid_minus = climate['arid_minus'];
             const climate_warm_plus = climate['warm_plus'];
             const climate_warm_minus = climate['warm_minus'];
             const climate_cold_plus = climate['cold_plus'];
@@ -120,38 +118,8 @@
                 const img = document.getElementById(elementId);
                 img.src = src;
                 img.alt = alt;
-                
-                img.onerror = function() {
-                    // Replace the image with a div containing the error message
-                    const parent = img.parentNode;
-                    const errorDiv = document.createElement('div');
-                    errorDiv.innerHTML = fallbackMessage;
-                    errorDiv.style.padding = '20px';
-                    errorDiv.style.backgroundColor = '#f8d7da';
-                    errorDiv.style.color = '#721c24';
-                    errorDiv.style.border = '1px solid #f5c6cb';
-                    errorDiv.style.borderRadius = '5px';
-                    errorDiv.style.textAlign = 'center';
-                    parent.replaceChild(errorDiv, img);
-                };
             }
 
-            function show_error(message) {
-                const errorDiv = document.createElement('div');
-                errorDiv.innerHTML = message;
-                errorDiv.style.padding = '20px';
-                errorDiv.style.backgroundColor = '#f8d7da';
-                errorDiv.style.color = '#721c24';
-                errorDiv.style.border = '1px solid #f5c6cb';
-                errorDiv.style.borderRadius = '5px';
-                errorDiv.style.textAlign = 'center';
-                document.body.appendChild(errorDiv);
-            }
-
-            // if (climate_arid_plus == "False") document.getElementById('climate_arid_plus').disabled = true;
-            // else document.getElementById('climate_arid+').onclick = () => change_climate(climate_arid_plus);
-            // if (climate_arid_minus == "False") document.getElementById('climate_arid_minus').disabled = true;
-            // else document.getElementById('climate_arid-').onclick = () => change_climate(climate_arid_minus);
             if (is_disabled(climate_warm_plus)) document.getElementById('climate_warm_plus').disabled = true;
             else document.getElementById('climate_warm_plus').onclick = () => change_climate(climate_warm_plus);
             if (is_disabled(climate_warm_minus)) document.getElementById('climate_warm_minus').disabled = true;
@@ -160,13 +128,6 @@
             else document.getElementById('climate_cold_plus').onclick = () => change_climate(climate_cold_plus);
             if (is_disabled(climate_cold_minus)) document.getElementById('climate_cold_minus').disabled = true;
             else document.getElementById('climate_cold_minus').onclick = () => change_climate(climate_cold_minus);
-
-            // if (is_disabled(climate_landscape) || climate_landscape.length === 0) set_image('landscape', 'images/no_image_available.png', 'landscape_container', 'No landscape image available');
-            // else {
-            //     for (let i = 0; i < climate_landscape.length; i++) {
-            //         set_image(climate_landscape[i], 'landscape_container', climate_name + " landscape " + (i + 1));
-            //     }
-            // }
 
             set_image('climate_map_2025', climate_map_2025, "Global distribution (2025)", "Map not available");
             set_image('climate_map_2100', climate_map_2100, "Global distribution (2100)", "Map not available");

@@ -182,11 +182,11 @@ If Caleb Dickinson accepts your pull request, then your changes will be added.
 -  `climates/map_2025/CODE.png` map of `CODE` in 2025
 -  `climates/map_2100/CODE.png` projected map of `CODE` in 2100
 
-`backend/format.py` converts Google Earth Engine outputs to `data/cities.csv` data
+`format.py` converts Google Earth Engine outputs to `data/cities.csv` data
 
-`backend/generate_json.py` constructs the `data/data.json` file
+`generate_json.py` constructs the `data/data.json` file
 
-`backend/climates.py` handles climate code logic
+`climates.py` handles climate code logic
 
 ### Frontend
 
