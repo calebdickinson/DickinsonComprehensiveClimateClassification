@@ -225,8 +225,13 @@ def traverse_codes(code:str, part:str, direction:int) -> str:
         elif direction == -1 and not warm_ordered.index(warm) > 0: return "False"
         warm = warm_ordered[direction + warm_ordered.index(warm)]
 
-    new_climate = combine(cold, arid, warm)
-    if new_climate not in codes: return "False"
+    temp = combine(cold, arid, warm)
+    temp2 = combine(cold, '', warm) # try without aridity (for navigating from climates with aridity values to climates without)
+
+    if temp in codes: new_climate = temp
+    elif temp2 in codes: new_climate = temp2
+    else: new_climate = "False"
+    
     return new_climate
 
 def breakup(code:str):
