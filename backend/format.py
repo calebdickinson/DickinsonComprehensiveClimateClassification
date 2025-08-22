@@ -56,7 +56,6 @@ def remove_commas(dframe:pd.DataFrame, column:int) -> pd.DataFrame:
 
     Args:
         dframe (pd.DataFrame): The DataFrame containing climate zone codes
-        column (int): Time period to remove commas from
 
     Returns:
         pd.DataFrame: The DataFrame with spaces removed from the climate zone codes
@@ -72,7 +71,6 @@ def remove_parentheses_and_contents(dframe: pd.DataFrame, column:int) -> pd.Data
 
     Args:
         dframe (pd.DataFrame): The DataFrame containing verbose data
-        column (int): Time period to remove parentheses and contents from
 
     Returns:
         pd.DataFrame: The DataFrame with the second column simplified
@@ -80,7 +78,7 @@ def remove_parentheses_and_contents(dframe: pd.DataFrame, column:int) -> pd.Data
     dframe.iloc[:, column] = dframe.iloc[:, column].str.replace(r'\(.*?\)', '', regex=True)
     return dframe
 
-def sort_alphabetically(dframe: pd.DataFrame) -> pd.DataFrame:
+def sort_alphabetically(dframe: pd.DataFrame, column:int) -> pd.DataFrame:
     """Sort the DataFrame alphabetically by the first column
 
     Args:
@@ -89,7 +87,7 @@ def sort_alphabetically(dframe: pd.DataFrame) -> pd.DataFrame:
     Returns:
         pd.DataFrame: The sorted DataFrame
     """
-    return dframe.sort_values(by=dframe.columns[0], ignore_index=True)
+    return dframe.sort_values(by=dframe.columns[column], ignore_index=True)
 
 def merge_dataframes(df1: pd.DataFrame, df2: pd.DataFrame, df3: pd.DataFrame) -> pd.DataFrame:
     """Merge three DataFrames on the 'name' column
@@ -194,9 +192,22 @@ def list_landscapes(climate:str) -> list[str]:
     pattern = os.path.join(landscape_dir, f'{climate}*.jpg')
     return glob.glob(pattern)
 
+def generate_cities_list(df1900:pd.DataFrame, df2025:pd.DataFrame, df2100:pd.DataFrame) -> pd.DataFrame:
+    dfs = [df1900, df2025, df2100]
+    for df in dfs:
+        df = sort_alphabetically(df, 0)
+        df = remove_parentheses_and_contents(df, 0)
+        df = remove_parentheses_and_contents(df, 1)
+        df = remove_spaces(df, 0)
+        df = add_space_after_comma(df, 0)
+        df = remove_spaces(df, 1)
+        df = remove_commas(df, 1)
+    
+    dfout = df1900
+    dfout[2] = df2025.iloc[:, 1]
+    dfout[3] = df2100.iloc[:, 1]
 
-
-if __name__ == "__main__": # edit this to do whatever formatting you want
-    df = get_csv("../data/cities.csv")
-    df = remove_rows_with_missing_data(df)
-    df.to_csv("cities.csv", index=False)
+    dfout = merge_duplicate_locations(dfout)
+    dfout = remove_rows_with_missing_data(dfout)
+    
+    return dfout
