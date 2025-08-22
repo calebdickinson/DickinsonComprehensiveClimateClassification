@@ -79,7 +79,7 @@
       </div>
     </div>
 
-    <br><p><i id="distribution_message"></i></p>
+    <br><br><p><i id="distribution_message"></i></p>
 
     <div id="1900s">
       <h3>Global distribution of this climate (1961-1990 normals)</h3>
@@ -249,22 +249,30 @@
             else document.getElementById('climate_go_to_arid_desert').onclick = () => change_climate(climate_go_to_arid_desert);
 
             const images = [
-                {id: 'climate_landscape', src: climate_landscape, alt: "landscape in this climate"},
-                {id: 'climate_map_2025', src: climate_map_2025, alt: "climate map in 2025"},
-                {id: 'climate_map_2100', src: climate_map_2100, alt: "climate map in 2100"},
-                {id: 'climate_map_1900s', src: climate_map_1900s, alt: "climate map in 1961-1990"}
+              { id: 'climate_landscape', src: climate_landscape, alt: 'landscape in this climate' },
+              { id: 'climate_map_1900s', src: climate_map_1900s, alt: 'climate map (1961-1990 normals)' },
+              { id: 'climate_map_2025',  src: climate_map_2025,  alt: 'climate map in 2025' },
+              { id: 'climate_map_2100',  src: climate_map_2100,  alt: 'climate map in 2100' }
             ];
 
-            if (!climate_landscape) document.getElementById('landscapes').style.display = 'none';
+            const FALLBACK_MAP = 'images/maps/nothing.png';
 
-            images.forEach(({id, src, alt}) => {
-                const img = document.getElementById(id);
-                if (img) {
-                    img.src = src;
-                    img.alt = alt;
-                } else {
-                    console.warn(`Element with id '${id}' not found`);
-                }
+            function setImgWithFallback(el, url, alt, fallback) {
+              if (!el) return;
+              el.alt = alt;
+
+              // prevent infinite loop if fallback is missing
+              el.onerror = () => { el.onerror = null; el.src = fallback; };
+
+              // if URL is missing/empty, use fallback immediately
+              el.src = (url && url.trim() !== '') ? url : fallback;
+            }
+
+            images.forEach(({ id, src, alt }) => {
+              const el = document.getElementById(id);
+              // choose correct fallback
+              const fallback = id === 'climate_landscape' ? FALLBACK_LANDSCAPE : FALLBACK_MAP;
+              setImgWithFallback(el, src, alt, fallback);
             });
         })
         .catch(error => {
