@@ -63,11 +63,20 @@
     </div>
 
     <div id="cities">
-        <h3>Cities with this climate:</h3>
-      <p id="climate_cities"></p>
-      <br>
-      <br>
-      <br>
+      <div id="cities_1900s" class="cities-block">
+        <h3>Cities with this climate (1961–1990 normals)</h3>
+        <ul id="climate_cities_1900s"></ul>
+      </div>
+
+      <div id="cities_2025" class="cities-block">
+        <h3>Cities with this climate (2025)</h3>
+        <ul id="climate_cities_2025"></ul>
+      </div>
+
+      <div id="cities_2100" class="cities-block">
+        <h3>Cities with this climate (2100)</h3>
+        <ul id="climate_cities_2100"></ul>
+      </div>
     </div>
 
     <p><i id="distribution_message"></i></p>
@@ -121,7 +130,8 @@
             const climate_go_to_colder_summer = climate['go_to_colder_summer'];
             const climate_go_to_hotter_winter = climate['go_to_hotter_winter'];
             const climate_go_to_colder_winter = climate['go_to_colder_winter'];
-            const climate_cities = climate['cities'];
+            const climate_cities = climate['cities'];   // <-- define it
+                renderCities(climate_cities);    
             const climate_map_2025 = climate['map_2025'];
             const climate_map_2100 = climate['map_2100'];
             const climate_map_1900s = climate['map_1900s'];
@@ -140,8 +150,62 @@
             if (climate_group) document.getElementById('ariditySection').style.display = 'block';
             else document.getElementById('ariditySection').style.display = 'none';
 
-            if (climate_cities && climate_cities.length > 0) document.getElementById('climate_cities').innerHTML = climate_cities.join("<br>");
-            else document.getElementById('cities').style.display = 'none';
+            function renderCities(cities) {
+              // Support both old (flat array with "(...)" suffixes) and future (grouped) formats.
+              // If `cities` is already an object like { "1900s": [...], "2025": [...], "2100": [...] } use it directly.
+              let groups = { "1900s": [], "2025": [], "2100": [] };
+
+              if (Array.isArray(cities)) {
+                // Parse the time suffix and strip it from the display text
+                const re = /\s*\((1961-1990 normals|2025|2100)\)\s*$/;
+                cities.forEach((entry) => {
+                  if (typeof entry !== 'string') return;
+                  const m = entry.match(re);
+                  if (m) {
+                    const period = m[1] === '1961-1990 normals' ? '1900s' : m[1];
+                    const clean = entry.replace(re, '');
+                    groups[period].push(clean);
+                  } else {
+                    // If no suffix, drop it into 2025 by default (or choose another default)
+                    groups['2025'].push(entry);
+                  }
+                });
+              } else if (cities && typeof cities === 'object') {
+                // Already grouped (optional future backend format)
+                if (Array.isArray(cities['1900s'])) groups['1900s'] = cities['1900s'];
+                if (Array.isArray(cities['2025']))  groups['2025']  = cities['2025'];
+                if (Array.isArray(cities['2100']))  groups['2100']  = cities['2100'];
+              }
+
+              // Helper to render one group into a UL; hide block if empty
+              function fillList(blockId, listId, arr) {
+                const block = document.getElementById(blockId);
+                const ul = document.getElementById(listId);
+                if (!arr || arr.length === 0) {
+                  if (block) block.style.display = 'none';
+                  return;
+                }
+                if (ul) {
+                  ul.innerHTML = ''; // clear
+                  arr.sort((a, b) => a.localeCompare(b)).forEach((city) => {
+                    const li = document.createElement('li');
+                    li.textContent = city; // dates already stripped
+                    ul.appendChild(li);
+                  });
+                }
+              }
+
+              fillList('cities_1900s', 'climate_cities_1900s', groups['1900s']);
+              fillList('cities_2025',  'climate_cities_2025',  groups['2025']);
+              fillList('cities_2100',  'climate_cities_2100',  groups['2100']);
+
+              // If all three are empty, hide the whole section
+              if (groups['1900s'].length + groups['2025'].length + groups['2100'].length === 0) {
+                const whole = document.getElementById('cities');
+                if (whole) whole.style.display = 'none';
+              }
+            }
+
 
             function change_climate(code) {
                 window.location.href = window.location.pathname + '?code=' + code;
