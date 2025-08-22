@@ -255,7 +255,11 @@
               { id: 'climate_map_2100',  src: climate_map_2100,  alt: 'climate map in 2100' }
             ];
 
+
             const FALLBACK_MAP = 'images/maps/nothing.png';
+            // No idea why the fallback landscape makes it work
+            // but the code crashes if it doesn't have both maps and landscape.
+            const FALLBACK_LANDSCAPE = 'images/landscapes/nothing.png'; // optional
 
             function setImgWithFallback(el, url, alt, fallback) {
               if (!el) return;
