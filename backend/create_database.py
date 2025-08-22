@@ -21,10 +21,10 @@ def generate_json() -> dict[str, dict]: #type:ignore
             'go_to_colder_summer': climates.traverse_codes(code, 'cold', 1),
             'go_to_hotter_winter': climates.traverse_codes(code, 'warm', -1),
             'go_to_colder_winter': climates.traverse_codes(code, 'warm', 1),
-            'map_1900s': f'climates/map_1900s/{code}.png',
-            'map_2025': f'climates/map_2025/{code}.png',
-            'map_2100': f'climates/map_2100/{code}.png',
-            'landscape': f'climates/landscape/{code}.jpg',
+            'map_1900s': f'images/maps/{code}map.png',
+            'map_2025': f'images/maps/2025{code}map.png',
+            'map_2100': f'images/maps/2100{code}map.png',
+            'landscape': f'images/landscapes/{code}.jpg',
             'cities': format.list_places_by_climate_and_time(format.get_csv("data/cities.csv"), code),
         }
     return database #type:ignore
