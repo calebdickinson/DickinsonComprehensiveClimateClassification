@@ -290,7 +290,3 @@ def combine(cold:str, arid:str, warm:str) -> str:
     """
 
     return cold + arid + warm # arid may be ""
-
-
-if __name__ == "__main__": # these tests will fail. Instead, we're trusting that the values on the website are correct
-    pass
