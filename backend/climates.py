@@ -152,7 +152,19 @@ def does_exist(code: str) -> bool:
     Returns:
         bool: True if the code exists, False otherwise
     """
-    return code not in ['HH', 'XH', 'ZH', 'AH', 'BH', 'CH', 'DH', 'EH', 'XX', 'CX', 'DX', 'EX', 'EZ2']
+    return code not in [
+        'HH',
+        'XH', 'XX'
+        'ZH', 
+        'AH', 
+        'BH', 
+        'CH', 'CX',
+        'DH', 'DX',
+        'EH', 'EX',
+        'FH', 'FX', 'FZ2', 'FZ1',
+        'GH', 'GX', 'GZ2', 'GZ1',
+        'YH', 'YX', 'YZ2', 'YZ1', 'YA2', 'YA1'
+        ]
 
 def is_code_group(code: str) -> bool:
     """Check if a climate code is a code group
