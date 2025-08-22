@@ -187,7 +187,7 @@ def list_landscapes(climate:str) -> list[str]:
     Returns:
         list[str]: A list of all landscape image paths for the specified climate
     """
-    landscape_dir = '../images/landscape/'
+    landscape_dir = 'images/landscapes/'
     if not os.path.exists(landscape_dir):
         print(f"Error: Directory does not exist: {landscape_dir}")
         return []

@@ -1,7 +1,6 @@
 import json
 
-from . import climates
-from . import format
+from backend import climates, format
 
 def generate_json() -> dict[str, dict]: #type:ignore
     database = {}
