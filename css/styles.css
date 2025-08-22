@@ -250,6 +250,7 @@ box-shadow:
 0 0 0 5px #bbbbbb,
 0 0 0 10px black;
 }
+
 .cities-block ul {
   list-style-type: none;   /* remove bullets */
   padding-left: 0;         /* remove left indent */
