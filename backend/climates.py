@@ -158,7 +158,7 @@ def does_exist(code: str) -> bool:
         'ZH', 
         'AH', 
         'BH', 
-        'CH', 'CX',
+        'CH',
         'DH', 'DX',
         'EH', 'EX',
         'FH', 'FX', 'FZ2', 'FZ1',
