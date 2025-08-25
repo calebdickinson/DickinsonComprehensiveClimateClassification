@@ -154,7 +154,7 @@ def does_exist(code: str) -> bool:
     """
     return code not in [
         'HH',
-        'XH', 'XX'
+        'XH', 'XX',
         'ZH', 
         'AH', 
         'BH', 
