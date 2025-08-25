@@ -140,12 +140,15 @@
 
             if (!climate) throw new Error(`Climate data for code "${code}" not found`);
 
-            document.getElementById('climate_name').textContent = climate_name;
+            const nameSuffix = climate_group ? " Climate Group" : " Climate";
+            document.getElementById('climate_name').textContent = climate_name + nameSuffix;
             document.getElementById('climate_code').textContent = climate_code;
             document.getElementById('distribution_message').textContent = distribution_message;
 
+            
             if (!climate_exists) {
-              document.getElementById('climate_exists').textContent = "THIS CLIMATE DOES NOT EXIST";
+              document.getElementById('climate_exists').textContent =
+              'THIS ' + (climate_group ? 'CLIMATE GROUP' : 'CLIMATE') + ' DOES NOT EXIST';
 
               // Hide everything except the message, climate code, and navigation buttons
               document.getElementById('landscapes').style.display = 'none';
@@ -154,12 +157,13 @@
               document.getElementById('1900s').style.display = 'none';
               document.getElementById('2025').style.display = 'none';
               document.getElementById('2100').style.display = 'none';
+              document.getElementById('ariditySection').style.display = 'none';
             } else {
               document.getElementById('climate_exists').style.display = 'none';
             }
 
-            if (climate_group) document.getElementById('ariditySection').style.display = 'block';
-            else document.getElementById('ariditySection').style.display = 'none';
+            const aridityEl = document.getElementById('ariditySection');
+              aridityEl.style.display = (climate_group && climate_exists) ? 'block' : 'none';
 
             function renderCities(cities) {
               // Support both old (flat array with "(...)" suffixes) and future (grouped) formats.

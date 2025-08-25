@@ -49,6 +49,14 @@ codes = {
 }
 
 code_groups = {
+    'HH',
+    'XH', 'XX',
+    'ZH', 
+    'AH', 
+    'BH', 
+    'CH',
+    'DH', 'DX',
+    'EH', 'EX',
     'ZX', 'AX', 'BX', 
     'ZZ2', 'AZ2', 'BZ2', 'CZ2', 'DZ2',
     'ZZ1', 'AZ1', 'BZ1', 'CZ1', 'DZ1',
