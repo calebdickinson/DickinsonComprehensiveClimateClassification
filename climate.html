@@ -43,7 +43,7 @@
       </div>
     </div>
 
-    <div class="box" id="ariditySection">
+    <div class="box" id="ariditySection" hidden>
         <div class="ariditybox-border-outer">
             <div class="ariditybox-border-inner">
                 <div class="ariditybox-grid">
@@ -62,18 +62,18 @@
       <img id="climate_landscape" src="" alt="landscape in this climate">
     </div>
 
-    <div id="cities">
-      <div id="cities_1900s" class="cities-block">
+    <div id="cities" hidden>
+      <div id="cities_1900s" class="cities-block" hidden>
         <h3>Cities with this climate (1961–1990 normals)</h3>
         <ul id="climate_cities_1900s"></ul>
       </div>
 
-      <div id="cities_2025" class="cities-block">
+      <div id="cities_2025" class="cities-block" hidden>
         <h3>Cities with this climate (2025)</h3>
         <ul id="climate_cities_2025"></ul>
       </div>
 
-      <div id="cities_2100" class="cities-block">
+      <div id="cities_2100" class="cities-block" hidden>
         <h3>Cities with this climate (2100)</h3>
         <ul id="climate_cities_2100"></ul>
       </div>
@@ -151,19 +151,31 @@
               'THIS ' + (climate_group ? 'CLIMATE GROUP' : 'CLIMATE') + ' DOES NOT EXIST';
 
               // Hide everything except the message, climate code, and navigation buttons
+              document.getElementById('ariditySection').style.display = 'none';
               document.getElementById('landscapes').style.display = 'none';
               document.getElementById('cities').style.display = 'none';
               document.getElementById('distribution_message').style.display = 'none';
               document.getElementById('1900s').style.display = 'none';
               document.getElementById('2025').style.display = 'none';
               document.getElementById('2100').style.display = 'none';
-              document.getElementById('ariditySection').style.display = 'none';
-            } else {
               document.getElementById('climate_exists').style.display = 'none';
             }
 
             const aridityEl = document.getElementById('ariditySection');
-              aridityEl.style.display = (climate_group && climate_exists) ? 'block' : 'none';
+
+            // compute once
+            const aridityTargets = [
+              climate_go_to_humid,
+              climate_go_to_semihumid,
+              climate_go_to_monsoon,
+              climate_go_to_mediterranean,
+              climate_go_to_semiarid,
+              climate_go_to_arid_desert,
+            ];
+            const anyAvailable = aridityTargets.some(v => !disable_or_omit(v));
+
+            // show only if (group AND exists AND at least one button is available)
+            aridityEl.hidden = !(climate_group && climate_exists && anyAvailable);
 
             function renderCities(cities) {
               // Support both old (flat array with "(...)" suffixes) and future (grouped) formats.
