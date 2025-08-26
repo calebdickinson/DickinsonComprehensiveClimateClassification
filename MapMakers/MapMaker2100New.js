@@ -150,3 +150,4 @@ Map.addLayer(
   {min: 0, max: indices.length - 1, palette: palette},
   'Climate',
   true, 0.7
+);
