@@ -51,34 +51,35 @@ def generate_json() -> dict[str, dict]:  # type: ignore
         hotter_winter = climates.traverse_codes(code, 'cold', -1)
         colder_winter = climates.traverse_codes(code, 'cold',  1)
 
-        code_lower = code.lower()
-
         database[code] = {
             'code': code,
             'name': climates.decode(code),
             'exists': climates.does_exist(code),
             'group': is_group,
-            'go_to_humid':         group_parts[0],
-            'go_to_semihumid':     group_parts[1],
-            'go_to_monsoon':       group_parts[2],
-            'go_to_mediterranean': group_parts[3],
-            'go_to_semiarid':      group_parts[4],
-            'go_to_arid_desert':   group_parts[5],
+
+            # Only meaningful for code-groups; otherwise "False"
+            'go_to_humid':           group_parts[0],
+            'go_to_semihumid':       group_parts[1],
+            'go_to_monsoon':         group_parts[2],
+            'go_to_mediterranean':   group_parts[3],
+            'go_to_semiarid':        group_parts[4],
+            'go_to_arid_desert':     group_parts[5],
+
             'go_to_hotter_summer': hotter_summer,
             'go_to_colder_summer': colder_summer,
             'go_to_hotter_winter': hotter_winter,
             'go_to_colder_winter': colder_winter,
 
-            # use the LOWERCASE code in paths
-            'map_1900s': f'images/maps/{code_lower}map.png',
-            'map_2025':  f'images/maps/2025{code_lower}map.png',
-            'map_2100':  f'images/maps/2100{code_lower}map.png',
+            'map_1900s': f'images/maps/{code}map.png',
+            'map_2025':  f'images/maps/2025{code}map.png',
+            'map_2100':  f'images/maps/2100{code}map.png',
             'landscape': f'images/landscapes/{code}.jpg',
 
+            # Load CSV once; just pass the df each time
             'cities': format.list_places_by_climate_and_time(cities_df, code),
         }
 
-        return database
+    return database
 
 
 if __name__ == "__main__":
