@@ -88,31 +88,30 @@ var clim = aridBase
 
 function classifySummer(tC) {
   return ee.Image.constant(0)
-    .where(tC.gte(40).and(tC.lt(50)),  9)
-    .where(tC.gte(35).and(tC.lt(40)),  8)
-    .where(tC.gte(30).and(tC.lt(35)),  7)
-    .where(tC.gte(25).and(tC.lt(30)),  6)
-    .where(tC.gte(20).and(tC.lt(25)),  5)
-    .where(tC.gte(15).and(tC.lt(20)),  4)
-    .where(tC.gte(10).and(tC.lt(15)),  3)
-    .where(tC.gte(5).and(tC.lt(10)),   2)
-    .where(tC.gte(0).and(tC.lt(5)),    1)
-    .where(tC.lt(0),                   0);
+    .where(tC.gte(40).and(tC.lt(50)),  9)  // Extreme Hyperthermal Summer
+    .where(tC.gte(35).and(tC.lt(40)),  8)  // Hyperthermal Summer
+    .where(tC.gte(30).and(tC.lt(35)),  7)  // Scorching Hot Summer
+    .where(tC.gte(25).and(tC.lt(30)),  6)  // Very Hot Summer
+    .where(tC.gte(20).and(tC.lt(25)),  5)  // Hot Summer
+    .where(tC.gte(15).and(tC.lt(20)),  4)  // Mild Summer
+    .where(tC.gte(10).and(tC.lt(15)),  3)  // Cold Summer
+    .where(tC.gte(5).and(tC.lt(10)),   2)  // Very Cold Summer
+    .where(tC.gte(0).and(tC.lt(5)),    1)  // Freezing Summer
+    .where(tC.lt(0),                   0); // Frigid Summer
 }
 
 function classifyCold(tC) {
   return ee.Image.constant(0)
-    .where(tC.gte(30).and(tC.lt(40)),   9)
-    .where(tC.gte(20).and(tC.lt(30)),   8)
-    .where(tC.gte(10).and(tC.lt(20)),   7)
-    .where(tC.gte(0).and(tC.lt(10)),    6)
-    .where(tC.gte(-10).and(tC.lt(0)),   5)
-    .where(tC.gte(-20).and(tC.lt(-10)), 4)
-    .where(tC.gte(-30).and(tC.lt(-20)), 3)
-    .where(tC.gte(-40).and(tC.lt(-30)), 2)
-    .where(tC.lt(-40),                  1);
+    .where(tC.gte(30).and(tC.lt(40)),   9)  // Ultratropical
+    .where(tC.gte(20).and(tC.lt(30)),   8)  // Supertropical
+    .where(tC.gte(10).and(tC.lt(20)),   7)  // Tropical
+    .where(tC.gte(0).and(tC.lt(10)),    6)  // Subtropical
+    .where(tC.gte(-10).and(tC.lt(0)),   5)  // Temperate
+    .where(tC.gte(-20).and(tC.lt(-10)), 4)  // Continental
+    .where(tC.gte(-30).and(tC.lt(-20)), 3)  // Subarctic
+    .where(tC.gte(-40).and(tC.lt(-30)), 2)  // Arctic
+    .where(tC.lt(-40),                  1); // Superarctic
 }
-
 var summerClass = classifySummer(hottestC);
 var coldClass   = classifyCold(coldestC);
 
