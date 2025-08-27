@@ -235,28 +235,28 @@
 
     let climateVar, summerVar;
 
-    if      (winterAvgC < -40) climateVar = 'H';
-    else if (winterAvgC < -30) climateVar = 'X';
-    else if (winterAvgC < -20) climateVar = 'Z';
-    else if (winterAvgC < -10) climateVar = 'A';
-    else if (winterAvgC <   0) climateVar = 'B';
-    else if (winterAvgC <  10) climateVar = 'C';
-    else if (winterAvgC <  20) climateVar = 'D';
-    else if (winterAvgC <  30) climateVar = 'E';
-    else if (winterAvgC <  40) climateVar = 'F';
-    else if (winterAvgC <  50) climateVar = 'G';
+    if      (winterAvgC >= 50) climateVar = 'H';
+    else if (winterAvgC >= 40) climateVar = 'X';
+    else if (winterAvgC >= 30) climateVar = 'Z';
+    else if (winterAvgC >= 20) climateVar = 'A';
+    else if (winterAvgC >= 10) climateVar = 'B';
+    else if (winterAvgC >= 0) climateVar = 'C';
+    else if (winterAvgC >= -10) climateVar = 'D';
+    else if (winterAvgC >= -20) climateVar = 'E';
+    else if (winterAvgC >= -30) climateVar = 'F';
+    else if (winterAvgC >= -40) climateVar = 'G';
     else                       climateVar = 'Y';
 
-    if      (summerAvgC <  0) summerVar = 'H';
-    else if (summerAvgC <  5) summerVar = 'X';
-    else if (summerAvgC < 10) summerVar = 'Z2';
-    else if (summerAvgC < 15) summerVar = 'Z1';
-    else if (summerAvgC < 20) summerVar = 'A2';
-    else if (summerAvgC < 25) summerVar = 'A1';
-    else if (summerAvgC < 30) summerVar = 'B2';
-    else if (summerAvgC < 35) summerVar = 'B1';
-    else if (summerAvgC < 40) summerVar = 'C2';
-    else if (summerAvgC < 50) summerVar = 'C1';
+    if      (summerAvgC >= 50) summerVar = 'H';
+    else if (summerAvgC >= 40) summerVar = 'X';
+    else if (summerAvgC >= 35) summerVar = 'Z2';
+    else if (summerAvgC >= 30) summerVar = 'Z1';
+    else if (summerAvgC >= 25) summerVar = 'A2';
+    else if (summerAvgC >= 20) summerVar = 'A1';
+    else if (summerAvgC >= 15) summerVar = 'B2';
+    else if (summerAvgC >= 10) summerVar = 'B1';
+    else if (summerAvgC >= 5) summerVar = 'C2';
+    else if (summerAvgC >= 0) summerVar = 'C1';
     else                      summerVar = 'Y';
 
     // build a URL like "climate.html?code=AZ2"
