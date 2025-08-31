@@ -146,7 +146,7 @@ def generate_json() -> Dict[str, Dict[str, Any]]:  # type: ignore
     def _ensure_page(dest_code: str):
         if dest_code in database:
             return
-        # Minimal stub so navigation never breaks; you can fill assets later
+
         database[dest_code] = {
             'code': dest_code,
             'name': dest_code,
