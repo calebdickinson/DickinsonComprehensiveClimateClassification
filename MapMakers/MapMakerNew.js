@@ -79,10 +79,6 @@ var P_hs = monthlyClim
 
 var HS = P_hs.divide(P_ann).rename('HS_ratio');
 
-// 1: Desert (D), 2: Semiarid (S), 3: Mediterranean (M), 4: Monsoon (W),
-// 5: Semihumid (G), 6: Humid (H), 7: "no aridity" override for cold/cool
-var landMask = WC.first().select('tavg').mask().gt(0);
-
 var clim = aridBase
   .where(northMask.and(aridBase.neq(1)).and(HS.gte(0.8)), 4) // Monsoon
   .where(northMask.and(aridBase.neq(1)).and(HS.lt(0.4)),  3) // Mediterranean
@@ -90,8 +86,6 @@ var clim = aridBase
   .where(tropic.and(aridBase.neq(1)).and(HS.gte(0.8)),    4) // Monsoon
   .where(southMask.and(aridBase.neq(1)).and(HS.lt(0.2)),  4) // Monsoon
   .where(southMask.and(aridBase.neq(1)).and(HS.gte(0.6)), 3) // Mediterranean
-  .where(hottestC.lt(15).or(coldestC.lt(-20)), 7)
-  .updateMask(landMask)
   .rename('climateClass');
 
 // ===========================
@@ -134,7 +128,6 @@ var combined = coldClass
   .multiply(100)
   .add(clim.multiply(10))
   .add(summerClass)
-  .updateMask(landMask)
   .rename('combined');
 
 var codeColorMap = {
@@ -144,6 +137,8 @@ var codeColorMap = {
   545: "#ff00ff",
   555: "#00ff00",
   565: "#008800",
+  
+  //634: "#000000",
 };
 
 var keys    = Object.keys(codeColorMap);
