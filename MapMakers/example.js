@@ -183,7 +183,7 @@ var indices = codes.map(function(_, i){ return i; });
 
 var discrete = combined.remap(codes, indices).rename('classIndex');
 
-var STATE_NAME = 'Kansas';  // <- change me
+var STATE_NAME = 'Oklahoma';  // <- change me
 
 var states = ee.FeatureCollection('TIGER/2018/States');
 var aoi = states.filter(ee.Filter.eq('NAME', STATE_NAME)).geometry();
