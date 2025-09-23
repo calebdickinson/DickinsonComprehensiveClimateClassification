@@ -7,8 +7,24 @@
     h2 {
       text-align: center;
     }
+    details summary {
+    font-weight: 600;
+    cursor: pointer;
+    margin: 6px 0;
+      list-style: none;
+    }
+    details summary::-webkit-details-marker { display: none; }
+    details summary::before {
+      content: "▶ ";
+      display: inline-block;
+      transition: transform 0.15s ease;
+    }
+    details[open] summary::before { transform: rotate(90deg); }
+    .block { margin: 10px 0 16px 18px; }
+    .entry h3 { margin: 8px 0 4px; font-size: 1rem; }
+    .entry img { max-width: 100%; height: auto; display: block; margin-bottom: 10px; }
   </style>
-    <title>"maps"</title>
+  <title>"maps"</title>
 </head>
 <body>
   <div id="header">
@@ -27,73 +43,6 @@
        we have limited our analysis to land-based (non-Antarctic) data.
        Current oceanic and Antarctic datasets lack the accuracy necessary for the standards of this website.
     </p>
-    
-    <h1>Winter Maps</h1>
-    
-    <h2>Global distribution of winter categories — 1961-1990 normals</h2>
-    <img src="images/climatemap.png" alt="World Winter map">
-    <h2>Global distribution of winter categories — 2025 High Emissions scenario (business as usual)</h2>
-    <img src="images/climatemap2025.png" alt="World Winter map in 2025">
-    <h2>Global distribution of winter categories — 2100 High Emissions scenario (business as usual)</h2>
-    <img src="images/climatemap2100.png" alt="World Winter map in 2100">
-    
-    <h2>USA distribution of winter categories — 1961-1990 normals</h2>
-    <img src="images/climatemapusa.png" alt="USA Winter map">
-    <h2>USA distribution of winter categories — 2025 High Emissions scenario (business as usual)</h2>
-    <img src="images/climatemapusa2025.png" alt="USA Winter map in 2025">
-    <h2>USA distribution of winter categories — 2100 High Emissions scenario (business as usual)</h2>
-    <img src="images/climatemapusa2100.png" alt="USA Winter map in 2100">
-    
-    <h1>Aridity Maps</h1>
-    
-    <h2>Global distribution of aridity categories — 1961-1990 normals</h2>
-    <img src="images/ariditymap.png" alt="World Aridity map">
-    <h2>Global distribution of aridity categories — 2025 High Emissions scenario (business as usual)</h2>
-    <img src="images/ariditymap2025.png" alt="World Aridity map in 2025">
-    <h2>Global distribution of aridity categories — 2100 High Emissions scenario (business as usual)</h2>
-    <img src="images/ariditymap2100.png" alt="World Aridity map for 2100">
-    
-    <h2>USA distribution of aridity categories — 1961-1990 normals</h2>
-    <img src="images/ariditymapusa.png" alt="USA Aridity map">
-    <h2>USA distribution of aridity categories — 2025 High Emissions scenario (business as usual)</h2>
-    <img src="images/ariditymapusa2025.png" alt="USA Aridity map for 2025">
-    <h2>USA distribution of aridity categories — 2100 High Emissions scenario (business as usual)</h2>
-    <img src="images/ariditymapusa2100.png" alt="USA Aridity map for 2100">
-    
-    <h1>Summer Maps</h1>
-    
-    <h2>Global distribution of summer categories — 1961-1990 normals</h2>
-    <img src="images/summermap.png" alt="World Summer map">
-    <h2>Global distribution of summer categories — 2025 High Emissions scenario (business as usual)</h2>
-    <img src="images/summermap2025.png" alt="World Summer map for 2025">
-    <h2>Global distribution of summer categories — 2100 High Emissions scenario (business as usual)</h2>
-    <img src="images/summermap2100.png" alt="World Summer map for 2100">
-    
-    <h2>USA distribution of summer categories — 1961-1990 normals</h2>
-    <img src="images/summermapusa.png" alt="USA Summer map">
-    <h2>USA distribution of summer categories — 2025 High Emissions scenario (business as usual)</h2>
-    <img src="images/summermapusa2025.png" alt="World Summer map for 2025">
-    <h2>USA distribution of summer categories — 2100 High Emissions scenario (business as usual)</h2>
-    <img src="images/summermapusa2100.png" alt="USA Summer map for 2100"><br><br>
-    
-        <style>
-  details summary {
-    font-weight: 600;
-    cursor: pointer;
-    margin: 6px 0;
-    list-style: none;
-  }
-  details summary::-webkit-details-marker { display: none; }
-  details summary::before {
-    content: "▶ ";
-    display: inline-block;
-    transition: transform 0.15s ease;
-  }
-  details[open] summary::before { transform: rotate(90deg); }
-  .block { margin: 10px 0 16px 18px; }
-  .entry h3 { margin: 8px 0 4px; font-size: 1rem; }
-  .entry img { max-width: 100%; height: auto; display: block; margin-bottom: 10px; }
-</style>
 
 <!-- CONTINENT: AFRICA -->
 <details>
@@ -828,7 +777,53 @@
   </div>
 </details>
 
-<br><br><br>
+<h1>Global Winter Maps</h1>
+    
+    <h2>Global distribution of winter categories — 1961-1990 normals</h2>
+    <img src="images/climatemap.png" alt="World Winter map">
+    <h2>Global distribution of winter categories — 2025 High Emissions scenario (business as usual)</h2>
+    <img src="images/climatemap2025.png" alt="World Winter map in 2025">
+    <h2>Global distribution of winter categories — 2100 High Emissions scenario (business as usual)</h2>
+    <img src="images/climatemap2100.png" alt="World Winter map in 2100">
+    
+    <h2>USA distribution of winter categories — 1961-1990 normals</h2>
+    <img src="images/climatemapusa.png" alt="USA Winter map">
+    <h2>USA distribution of winter categories — 2025 High Emissions scenario (business as usual)</h2>
+    <img src="images/climatemapusa2025.png" alt="USA Winter map in 2025">
+    <h2>USA distribution of winter categories — 2100 High Emissions scenario (business as usual)</h2>
+    <img src="images/climatemapusa2100.png" alt="USA Winter map in 2100">
+    
+    <h1>Global Aridity Maps</h1>
+    
+    <h2>Global distribution of aridity categories — 1961-1990 normals</h2>
+    <img src="images/ariditymap.png" alt="World Aridity map">
+    <h2>Global distribution of aridity categories — 2025 High Emissions scenario (business as usual)</h2>
+    <img src="images/ariditymap2025.png" alt="World Aridity map in 2025">
+    <h2>Global distribution of aridity categories — 2100 High Emissions scenario (business as usual)</h2>
+    <img src="images/ariditymap2100.png" alt="World Aridity map for 2100">
+    
+    <h2>USA distribution of aridity categories — 1961-1990 normals</h2>
+    <img src="images/ariditymapusa.png" alt="USA Aridity map">
+    <h2>USA distribution of aridity categories — 2025 High Emissions scenario (business as usual)</h2>
+    <img src="images/ariditymapusa2025.png" alt="USA Aridity map for 2025">
+    <h2>USA distribution of aridity categories — 2100 High Emissions scenario (business as usual)</h2>
+    <img src="images/ariditymapusa2100.png" alt="USA Aridity map for 2100">
+    
+    <h1>Global Summer Maps</h1>
+    
+    <h2>Global distribution of summer categories — 1961-1990 normals</h2>
+    <img src="images/summermap.png" alt="World Summer map">
+    <h2>Global distribution of summer categories — 2025 High Emissions scenario (business as usual)</h2>
+    <img src="images/summermap2025.png" alt="World Summer map for 2025">
+    <h2>Global distribution of summer categories — 2100 High Emissions scenario (business as usual)</h2>
+    <img src="images/summermap2100.png" alt="World Summer map for 2100">
+    
+    <h2>USA distribution of summer categories — 1961-1990 normals</h2>
+    <img src="images/summermapusa.png" alt="USA Summer map">
+    <h2>USA distribution of summer categories — 2025 High Emissions scenario (business as usual)</h2>
+    <img src="images/summermapusa2025.png" alt="World Summer map for 2025">
+    <h2>USA distribution of summer categories — 2100 High Emissions scenario (business as usual)</h2>
+    <img src="images/summermapusa2100.png" alt="USA Summer map for 2100"><br><br>
   </main>
 </body>
 </html>
