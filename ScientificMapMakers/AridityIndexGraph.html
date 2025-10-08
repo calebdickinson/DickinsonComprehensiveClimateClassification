@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>AI = P / PET — Aridity Index</title>
+
+<!-- MathJax -->
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<style>
+  html,body{margin:0;background:#fafafa;color:#111;font:14px/1.45 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial}
+  .wrap{max-width:1200px;margin:30px auto;padding:0 16px}
+  .card{
+    background:#fff;border:1px solid #e5e7eb;border-radius:12px;
+    padding:18px 18px 22px; box-shadow:0 1px 10px #0001
+  }
+  .eq-box{
+    text-align:center; border:1px solid #ddd; border-radius:10px;
+    padding:10px 16px; box-shadow:0 2px 8px #0001; width:fit-content; margin:0 auto 10px;
+  }
+  .eq{font-size:24px}
+  .eq-sub{font-size:15px;color:#444;margin-top:4px;font-style:italic}
+
+  svg{width:100%;height:auto;display:block}
+  .axis{stroke:#111;stroke-width:2;marker-end:url(#axisArrow)}
+  .tick5{stroke:#444;stroke-width:1}
+  .tick10{stroke:#111;stroke-width:2}
+  .num{font-size:20px;fill:#222}
+  .title-large{text-anchor:middle;font-size:20px;font-weight:700;fill:#111}
+  .cat{font-size:12px;fill:#111}
+  .bar-outline{stroke:#d0d0d0;stroke-width:1;fill:none}
+
+  /* Colors */
+  .darkred    { fill:#880000; }
+  .red        { fill:#ff0000; }
+  .orange     { fill:#ff8800; }
+  .lightgreen { fill:#00cc00; }
+  .darkgreen  { fill:#008800; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <div class="eq-box">
+      <div class="eq">$$AI = \frac{P}{PET}$$</div>
+      <div class="eq-sub">(aridity index units = precipitation / potential evapotranspiration)</div>
+    </div>
+
+    <svg viewBox="0 0 1200 340" role="img" aria-label="UNEP and Dickinson aridity indices">
+      <defs>
+        <g id="tick5"><line class="tick5" x1="0" y1="128" x2="0" y2="152"/></g>
+        <g id="tick10"><line class="tick10" x1="0" y1="125" x2="0" y2="155"/></g>
+      </defs>
+
+      <!-- Axis -->
+      <line class="axis" x1="70" y1="140" x2="1130" y2="140"/>
+
+      <!-- Ticks & labels -->
+      <g class="num">
+        <use href="#tick10" x="70"/><text x="70" y="118" text-anchor="middle">.00</text>
+        <use href="#tick5"  x="123"/><text x="123" y="118" text-anchor="middle">.05</text>
+        <use href="#tick10" x="176"/><text x="176" y="118" text-anchor="middle">.10</text>
+        <use href="#tick5"  x="229"/><text x="229" y="118" text-anchor="middle">.15</text>
+        <use href="#tick10" x="282"/><text x="282" y="118" text-anchor="middle">.20</text>
+        <use href="#tick5"  x="335"/><text x="335" y="118" text-anchor="middle">.25</text>
+        <use href="#tick10" x="388"/><text x="388" y="118" text-anchor="middle">.30</text>
+        <use href="#tick5"  x="441"/><text x="441" y="118" text-anchor="middle">.35</text>
+        <use href="#tick10" x="494"/><text x="494" y="118" text-anchor="middle">.40</text>
+        <use href="#tick5"  x="547"/><text x="547" y="118" text-anchor="middle">.45</text>
+        <use href="#tick10" x="600"/><text x="600" y="118" text-anchor="middle">.50</text>
+        <use href="#tick5"  x="653"/><text x="653" y="118" text-anchor="middle">.55</text>
+        <use href="#tick10" x="706"/><text x="706" y="118" text-anchor="middle">.60</text>
+        <use href="#tick5"  x="759"/><text x="759" y="118" text-anchor="middle">.65</text>
+        <use href="#tick10" x="812"/><text x="812" y="118" text-anchor="middle">.70</text>
+        <use href="#tick5"  x="865"/><text x="865" y="118" text-anchor="middle">.75</text>
+        <use href="#tick10" x="918"/><text x="918" y="118" text-anchor="middle">.80</text>
+        <use href="#tick5"  x="971"/><text x="971" y="118" text-anchor="middle">.85</text>
+        <use href="#tick10" x="1024"/><text x="1024" y="118" text-anchor="middle">.90</text>
+        <use href="#tick5"  x="1077"/><text x="1077" y="118" text-anchor="middle">.95</text>
+        <use href="#tick10" x="1130"/><text x="1130" y="118" text-anchor="middle">1.00</text>
+      </g>
+
+      <!-- UNEP -->
+      <text class="title-large" x="600" y="36">United Nations Environment Programme (UNEP) Aridity Index</text>
+      <rect class="bar-outline" x="70" y="56" width="1060" height="28" rx="4"/>
+      <rect class="darkred" x="70"  y="56" width="53" height="28"/>
+      <rect class="red"   x="123" y="56" width="159" height="28"/>
+      <rect class="orange" x="282" y="56" width="318" height="28"/>
+      <rect class="lightgreen"     x="600" y="56" width="159" height="28"/>
+      <rect class="darkgreen"     x="759" y="56" width="371" height="28"/>
+      <polygon class="darkgreen" points="1130,56 1130,84 1148,70"/>
+      <g class="cat">
+        <text x="96.5"  y="75" text-anchor="middle" fill="#fff">Hyperarid</text>
+        <text x="202.5" y="75" text-anchor="middle" fill="#fff">Arid</text>
+        <text x="441"   y="75" text-anchor="middle" fill="#fff">Semi-arid</text>
+        <text x="679.5" y="75" text-anchor="middle" fill="#fff">Dry subhumid</text>
+        <text x="944.5" y="75" text-anchor="middle" fill="#fff">Humid</text>
+      </g>
+
+      <!-- Dickinson -->
+      <rect class="bar-outline" x="70" y="195" width="1060" height="28" rx="4"/>
+      <rect class="red"    x="70"  y="195" width="265" height="28"/>
+      <rect class="orange" x="335" y="195" width="265" height="28"/>
+      <rect class="lightgreen"     x="600" y="195" width="265" height="28"/>
+      <rect class="darkgreen"     x="865" y="195" width="265" height="28"/>
+      <polygon class="darkgreen" points="1130,195 1130,223 1148,209"/>
+      <g class="cat">
+        <text x="202.5" y="214" text-anchor="middle" fill="#fff">Arid Desert</text>
+        <text x="467.5" y="214" text-anchor="middle" fill="#fff">Semiarid</text>
+        <text x="732.5" y="214" text-anchor="middle" fill="#fff">Semihumid</text>
+        <text x="997.5" y="214" text-anchor="middle" fill="#fff">Humid</text>
+      </g>
+      <text class="title-large" x="600" y="250">Dickinson Aridity Index</text>
+    </svg>
+  </div>
+</div>
+</body>
+</html>
