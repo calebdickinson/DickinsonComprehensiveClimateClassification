@@ -35,7 +35,12 @@
   .tick10{stroke:#111;stroke-width:2}
   .num{font-size:20px;fill:#222}
   .title-large{text-anchor:middle;font-size:20px;font-weight:700;fill:#111}
-  .cat{font-size:12px;fill:#111}
+
+  /* Category text styles */
+  .cat text { fill:#fff; }
+  .small { font-size:10px; }
+  .large { font-size:15px; font-weight:600; }
+
   .bar-outline{stroke:#d0d0d0;stroke-width:1;fill:none}
 
   /* Colors */
@@ -98,11 +103,11 @@
       <rect class="darkgreen"     x="759" y="56" width="371" height="28"/>
       <polygon class="darkgreen" points="1130,56 1130,84 1148,70"/>
       <g class="cat">
-        <text x="96.5"  y="75" text-anchor="middle" fill="#fff">Hyperarid</text>
-        <text x="202.5" y="75" text-anchor="middle" fill="#fff">Arid</text>
-        <text x="441"   y="75" text-anchor="middle" fill="#fff">Semi-arid</text>
-        <text x="679.5" y="75" text-anchor="middle" fill="#fff">Dry subhumid</text>
-        <text x="944.5" y="75" text-anchor="middle" fill="#fff">Humid</text>
+        <text class="small" x="96.5"  y="75" text-anchor="middle">Hyperarid</text>
+        <text class="large" x="202.5" y="75" text-anchor="middle">Arid</text>
+        <text class="large" x="441"   y="75" text-anchor="middle">Semi-arid</text>
+        <text class="large" x="679.5" y="75" text-anchor="middle">Dry subhumid</text>
+        <text class="large" x="944.5" y="75" text-anchor="middle">Humid</text>
       </g>
 
       <!-- Dickinson -->
@@ -113,10 +118,10 @@
       <rect class="darkgreen"     x="865" y="195" width="265" height="28"/>
       <polygon class="darkgreen" points="1130,195 1130,223 1148,209"/>
       <g class="cat">
-        <text x="202.5" y="214" text-anchor="middle" fill="#fff">Arid Desert</text>
-        <text x="467.5" y="214" text-anchor="middle" fill="#fff">Semiarid</text>
-        <text x="732.5" y="214" text-anchor="middle" fill="#fff">Semihumid</text>
-        <text x="997.5" y="214" text-anchor="middle" fill="#fff">Humid</text>
+        <text class="large" x="202.5" y="214" text-anchor="middle">Arid Desert</text>
+        <text class="large" x="467.5" y="214" text-anchor="middle">Semiarid</text>
+        <text class="large" x="732.5" y="214" text-anchor="middle">Semihumid</text>
+        <text class="large" x="997.5" y="214" text-anchor="middle">Humid</text>
       </g>
       <text class="title-large" x="600" y="250">Dickinson Aridity Index</text>
     </svg>
