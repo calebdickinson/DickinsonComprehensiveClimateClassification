@@ -61,9 +61,9 @@ var AI      = P_ann.divide(PET_ann).rename('AI');
 
 // Latitude zones (unchanged)
 var lat = ee.Image.pixelLonLat().select('latitude');
-var northMask = lat.gt(5);
-var tropic    = lat.abs().lte(5);
-var southMask = lat.lt(-5);
+var northMask = lat.gt(15);
+var tropic    = lat.abs().lte(15);
+var southMask = lat.lt(-15);
 
 // Base aridity classes (your current thresholds)
 var aridBase = ee.Image(6)
