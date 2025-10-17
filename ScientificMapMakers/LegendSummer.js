@@ -1,15 +1,15 @@
 // ---------- CONFIG ----------
 const LEGEND_ITEMS = [
-  { label: "Frigid Summer",              color: "#000000" },
-  { label: "Freezing Summer",            color: "#FF10F0" },
-  { label: "Very Cold Summer",           color: "#0000FF" },
-  { label: "Cold Summer",                color: "#008000" },
-  { label: "Mild Summer",                color: "#FFFF00" },
-  { label: "Hot Summer",                 color: "#FFA500" },
-  { label: "Very Hot Summer",            color: "#FF0000" },
-  { label: "Scorching Hot Summer",       color: "#C71585" },
-  { label: "Hyperthermal Summer",        color: "#550000" },
-  { label: "Extreme Hyperthermal Summer",color: "#000000" }
+  { label: "Frigid Summer (Y)",              color: "#000000" },
+  { label: "Freezing Summer (C1)",            color: "#FF10F0" },
+  { label: "Very Cold Summer (C2)",           color: "#0000FF" },
+  { label: "Cold Summer (B1)",                color: "#008000" },
+  { label: "Mild Summer (B2)",                color: "#FFFF00" },
+  { label: "Hot Summer (A1)",                 color: "#FFA500" },
+  { label: "Very Hot Summer (A2)",            color: "#FF0000" },
+  { label: "Scorching Hot Summer (Z1)",       color: "#C71585" },
+  { label: "Hyperthermal Summer (Z2)",        color: "#550000" },
+  { label: "Extreme Hyperthermal Summer (X)",color: "#000000" }
 ];
 
 // ---------- STYLES ----------
