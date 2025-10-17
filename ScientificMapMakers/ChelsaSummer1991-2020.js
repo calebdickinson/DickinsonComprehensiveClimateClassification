@@ -61,9 +61,17 @@ var warmZone = classifySummer(hottestC);
 
 // 5) Color map & display
 var codeColorMap = {
-  11:"#888888",10:"#0000FF",9:"#000000",8:"#550000",
-  7:"#C71585",6:"#FF0000",5:"#FFA500",4:"#FFFF00",
-  3:"#008000",2:"#0000FF",1:"#FF10F0",0:"#000000"
+  10:"#0000FF",// Hypercaneal Summer
+  9:"#000000", // Extreme Hyperthermal Summer
+  8:"#550000", // Hyperthermal Summer
+  7:"#C71585", // Scorching Hot Summer
+  6:"#FF0000", // Very Hot Summer
+  5:"#FFA500", // Hot Summer
+  4:"#FFFF00", // Mild Summer
+  3:"#008000", // Cold Summer
+  2:"#0000FF", // Very Cold Summer
+  1:"#FF10F0", // Freezing Summer
+  0:"#000000"  // Frigid Summer
 };
 var keys    = Object.keys(codeColorMap);
 var codes   = keys.map(function(k){ return parseInt(k, 10); });
