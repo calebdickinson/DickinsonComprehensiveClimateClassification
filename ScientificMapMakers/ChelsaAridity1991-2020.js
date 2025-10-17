@@ -105,7 +105,7 @@ var codeColorMap = {
   5: "#00FF00", // G: Semihumid
   6: "#006600", // H: Humid
   7: "#0000FF", // no aridity (cold)
-  8: "#00FFFF"  // ocean
+  8: "#008888"  // ocean
 };
 var keys    = Object.keys(codeColorMap);
 var codes   = keys.map(function(k){ return parseInt(k, 10); });
@@ -115,7 +115,7 @@ var indices = codes.map(function(_, i){ return i; });
 var discrete = clim.remap(codes, indices, -1).rename('classIndex');
 
 Map.addLayer(
-  discrete,
+  discrete.updateMask(clim.neq(8)), // remove .updateMask(clim.neq(8)) to show ocean color
   { min: 0, max: indices.length - 1, palette: palette },
   'Climate (CHELSA, oceans included; cold wins)',
   true, 0.7
