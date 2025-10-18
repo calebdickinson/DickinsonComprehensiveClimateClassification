@@ -129,9 +129,9 @@ var hottestC_global = hottest6;
 var coldestC_global = coldest6;
 
 // Latitude masks for seasonality logic
-var northMask = pixelLat.gt(15);
-var tropic    = pixelLat.abs().lte(15);
-var southMask = pixelLat.lt(-15);
+var northMask = pixelLat.gt(23.43594);
+var tropic    = pixelLat.abs().lte(23.43594);
+var southMask = pixelLat.lt(-23.43594);
 
 // -------------------- UNEP Aridity Index (AI = P/PET) ---------------------
 var P_ann   = monthlyClim.select('pr' ).sum().rename('P_ann');      // mm/yr
