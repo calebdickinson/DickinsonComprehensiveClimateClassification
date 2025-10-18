@@ -67,9 +67,9 @@ var oceanMask = AI.mask().not();
 
 // Latitude zones (unchanged)
 var lat = ee.Image.pixelLonLat().select('latitude');
-var northMask = lat.gt(15);
-var tropic    = lat.abs().lte(15);
-var southMask = lat.lt(-15);
+var northMask = lat.gt(23.43594);
+var tropic    = lat.abs().lte(23.43594);
+var southMask = lat.lt(-23.43594);
 
 // Base aridity classes
 var aridBase = ee.Image(6)
