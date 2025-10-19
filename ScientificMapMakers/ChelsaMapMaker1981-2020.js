@@ -149,14 +149,15 @@ var combined = coldClass
 
 // ---------- (Optional) palette for a few example codes ----------
 var codeColorMap = {
-  515: "#ff0000",
-  525: "#ff8800",
-  535: "#ffff00",
-  545: "#ff00ff",
-  555: "#00ff00",
-  565: "#008800",
-  585: "#00ffff"
-  //634: "#000000",
+  //515: "#ff0000",
+  //525: "#ff8800",
+  //535: "#ffff00",
+  //545: "#ff00ff",
+  //555: "#00ff00",
+  //565: "#008800",
+  //585: "#00ffff"
+
+  370: "#000000"
 };
 
 var keys    = Object.keys(codeColorMap);
