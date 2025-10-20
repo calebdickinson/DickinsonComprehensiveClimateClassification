@@ -146,19 +146,24 @@ var combined = coldClass
   .add(clim.multiply(10))
   .add(summerClass)
   .rename('combined');
+  
+// === Adjustable digits ===
+var firstDigit = 4;   // Hundreds place
+var lastDigit  = 4;   // Ones place
 
-// ---------- (Optional) palette for a few example codes ----------
-var codeColorMap = {
-  //515: "#ff0000",
-  //525: "#ff8800",
-  //535: "#ffff00",
-  //545: "#ff00ff",
-  //555: "#00ff00",
-  //565: "#008800",
-  //585: "#00ffff"
+// === Build the color map dynamically ===
+var codeColorMap = {};
 
-  370: "#000000"
-};
+codeColorMap[firstDigit * 100 + 10 + lastDigit] = "#ff0000";
+codeColorMap[firstDigit * 100 + 20 + lastDigit] = "#ff8800";
+codeColorMap[firstDigit * 100 + 30 + lastDigit] = "#ffff00";
+codeColorMap[firstDigit * 100 + 40 + lastDigit] = "#ff00ff";
+codeColorMap[firstDigit * 100 + 50 + lastDigit] = "#00ff00";
+codeColorMap[firstDigit * 100 + 60 + lastDigit] = "#008800";
+codeColorMap[firstDigit * 100 + 80 + lastDigit] = "#00ffff";
+
+// Example of commented-out entry
+// codeColorMap[7 * 100 + 70 + 3] = "#000000";
 
 var keys    = Object.keys(codeColorMap);
 var codes   = keys.map(function(k){ return parseInt(k, 10); });
