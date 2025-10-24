@@ -7,7 +7,8 @@ const LEGEND_ITEMS = [
   { label: "Temperate (D)",   color: "#008800" },
   { label: "Subtropical (C)", color: "#FFA500" },
   { label: "Tropical (B)",    color: "#FF0000" },
-  { label: "Supertropical (A)", color: "#C71585" }
+  { label: "Supertropical (A)", color: "#C71585" },
+  { label: "Ultratropical (Z)", color: "#000000" }
 ];
 
 // ---------- STYLES ----------
@@ -16,7 +17,7 @@ style.textContent = `
   .legend {
     position: fixed; top: 20px; right: 20px; z-index: 9999;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);   /* 4 uniform columns */
+    grid-template-columns: repeat(3, 1fr);   /* 4 uniform columns */
     gap: 16px 28px; padding: 24px; background: #fff;
     border: 2px solid #ccc; border-radius: 16px;
     font-family: system-ui, Arial, sans-serif; color: #222;
