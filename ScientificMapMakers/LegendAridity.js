@@ -6,25 +6,34 @@
   <title>Climate Legend</title>
 
   <style>
+    body {
+      background-color: #000; /* black page background */
+      color: #fff;            /* white text (for anything outside legend) */
+    }
+
     .legend {
       position: fixed; top: 20px; right: 20px; z-index: 9999;
       display: grid;
       grid-template-columns: repeat(3, 1fr);   /* 3 uniform columns */
-      gap: 16px 28px; padding: 24px; background: #fff;
+      gap: 16px 28px; padding: 24px; 
+      background: #fff;                        /* keep legend white */
       border: 2px solid #ccc; border-radius: 16px;
       font-family: system-ui, Arial, sans-serif; color: #222;
       box-shadow: 0 8px 28px rgba(0,0,0,.08);
       max-width: min(96vw, 1600px);
     }
+
     .legend-item {
       display: flex; align-items: center; gap: 20px;
       min-width: 0;
     }
+
     .legend-swatch {
       width: 72px; height: 36px; border: 2px solid #333; border-radius: 6px;
       box-sizing: border-box; opacity: 0.7;
       flex: 0 0 auto;
     }
+
     .legend-label {
       display: block;
       white-space: nowrap; overflow: hidden;
@@ -90,5 +99,3 @@
   </script>
 </body>
 </html>
-
-
