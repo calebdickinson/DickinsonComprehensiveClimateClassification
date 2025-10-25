@@ -1444,6 +1444,69 @@
     <img src="images/usasummermap4.png" alt="United States distribution of summer categories map — 2071 - 2100 High Emission normals">
 
   </main>
-  
+
+      <!-- Lazy loading + on-demand load for <details> content -->
+    <script>
+    (function () {
+      // 1) Mark all images as lazy and async-decode.
+      document.querySelectorAll('img').forEach(img => {
+        // If the HTML already has src=, move it to data-src so the browser doesn't fetch yet
+        // (we'll set src later when visible). If you prefer the simpler native-only approach,
+        // comment out this block and leave the src in place.
+        if (!img.hasAttribute('data-src') && img.hasAttribute('src')) {
+          img.setAttribute('data-src', img.getAttribute('src'));
+          img.removeAttribute('src');
+        }
+        img.setAttribute('loading', 'lazy');
+        img.setAttribute('decoding', 'async');
+        // Helps browser de-prioritize non-critical images
+        if (!img.hasAttribute('fetchpriority')) img.setAttribute('fetchpriority', 'low');
+        // Optional: preserve layout to reduce CLS once natural size is known
+        img.addEventListener('load', () => {
+          if (!img.hasAttribute('width'))  img.setAttribute('width',  img.naturalWidth || 1);
+          if (!img.hasAttribute('height')) img.setAttribute('height', img.naturalHeight || 1);
+        }, { once: true });
+      });
+    
+      // 2) IntersectionObserver to swap data-src -> src when in view.
+      const io = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          const img = entry.target;
+          const src = img.getAttribute('data-src');
+          if (src && !img.getAttribute('src')) {
+            img.src = src;
+          }
+          obs.unobserve(img);
+        });
+      }, { rootMargin: '200px 0px' }); // start a bit early
+    
+      // Observe images that still have data-src
+      function observeVisibleImages(scope = document) {
+        scope.querySelectorAll('img[data-src]').forEach(img => io.observe(img));
+      }
+      observeVisibleImages();
+    
+      // 3) Only start observing images inside a <details> AFTER it opens.
+      //    This avoids kicking off work for closed accordions.
+      document.querySelectorAll('details').forEach(d => {
+        d.addEventListener('toggle', () => {
+          if (d.open) observeVisibleImages(d);
+        });
+      });
+    
+      // 4) Small enhancement: if the very first legend/map is above the fold,
+      //    mark it as high priority to load immediately.
+      const firstAboveFold = document.querySelector('main img');
+      if (firstAboveFold) {
+        // load immediately
+        if (firstAboveFold.hasAttribute('data-src') && !firstAboveFold.getAttribute('src')) {
+          firstAboveFold.setAttribute('fetchpriority', 'high');
+          firstAboveFold.src = firstAboveFold.getAttribute('data-src');
+        }
+      }
+    })();
+    </script>
+
 </body>
 </html>
