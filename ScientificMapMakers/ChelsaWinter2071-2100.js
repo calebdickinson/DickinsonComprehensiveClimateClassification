@@ -1,4 +1,4 @@
-// ==== CHELSA v2.1 tas HOTTEST MONTH climatology (2071–2100) ====
+// ==== CHELSA v2.1 tas COLDEST MONTH climatology (2071–2100) ====
 // Your assets live here (must end with '/'):
 var ASSET_PREFIX = 'projects/ordinal-crowbar-459807-m2/assets/';
 
