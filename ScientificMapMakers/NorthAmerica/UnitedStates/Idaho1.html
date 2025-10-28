@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Climate Legend</title>
+
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+    }
+
+    .legend {
+      position: fixed; top: 20px; right: 20px; z-index: 9999;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 16px 28px; padding: 24px;
+      background: #fff;
+      border: 2px solid #ccc; border-radius: 16px;
+      font-family: system-ui, Arial, sans-serif; color: #222;
+      box-shadow: 0 8px 28px rgba(0,0,0,.08);
+      max-width: min(96vw, 1600px);
+    }
+
+    .legend-item {
+      display: flex; align-items: center; gap: 20px;
+      min-width: 0;
+    }
+
+    .legend-swatch {
+      width: 72px; height: 36px; border: 2px solid #333; border-radius: 6px;
+      box-sizing: border-box; opacity: 0.7;
+      flex: 0 0 auto;
+    }
+
+    .legend-label {
+      display: block;
+      white-space: nowrap; overflow: hidden;
+      text-overflow: clip;
+      flex: 1 1 auto; min-width: 0;
+      line-height: 1.2;
+    }
+
+    /* Invisible placeholder cell (keeps grid alignment) */
+    .legend-blank {
+      width: 100%;
+      height: 36px;
+      visibility: hidden;
+    }
+
+    /* Thicker horizontal black divider (spans full grid width) */
+    .legend-divider {
+      grid-column: span 6;
+      height: 6px;
+      background-color: #000;
+      border-radius: 3px;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    // ---------- CONFIG ----------
+    const LEGEND_ITEMS = [
+      { label: "EB1", color: "#0000ff" },
+      { blank: true, span: 5 },
+      
+      { label: "EHB2", color: "#008888" },
+      { label: "EGB2", color: "#00ffff" },
+      { label: "ESB2", color: "#444444" },
+      { label: "EDB2", color: "#aa00aa" },
+      { blank: true, span: 1 },
+      { label: "DMB2", color: "#333300" },
+      
+	  { blank: true, span: 2 },
+      { label: "ESA1", color: "#000000" },
+      { label: "EDA1", color: "#ffffff" },
+      
+      { divider: true },
+      
+      { label: "DB1", color: "#6666ff" },
+      { blank: true, span: 5 },
+      
+      { label: "DHB2", color: "#004400" },
+      { label: "DGB2", color: "#88ff88" },
+      { label: "DSB2", color: "#ccaa88" },
+      { label: "DDB2", color: "#ff00cc" },
+      { blank: true, span: 1 },
+      { label: "DMB2", color: "#666600" },
+      
+      { label: "DHA1", color: "#008800" },
+      { label: "DGA1", color: "#00ff00" },
+      { label: "DSA1", color: "#aa8866" },
+      { label: "DDA1", color: "#dd0066" },
+      { blank: true, span: 1 },
+      { label: "DMA1", color: "#999900" },
+      
+      { blank: true, span: 2 },
+      { label: "DSA2", color: "#886644" },
+      { label: "DDA2", color: "#aa0044" },
+      { blank: true, span: 1 },
+      { label: "DMA2", color: "#aaaa00" },
+      
+      { divider: true },
+      
+      { label: "CHA1", color: "#00cc88" },
+      { label: "CGA1", color: "#00ffcc" },
+      { label: "CSA1", color: "#ffcc00" },
+      { blank: true, span: 2 },
+      { label: "CMA1", color: "#ffff88" },
+      
+      { blank: true, span: 2 },
+      { label: "CSA2", color: "#ffff88" },
+      { label: "CDA2", color: "#ff0000" },
+      { blank: true, span: 1 },
+      { label: "CMA2", color: "#ffff00" },
+      
+    ];
+
+    // ---------- RENDER ----------
+    const legend = document.createElement('div');
+    legend.className = 'legend';
+    document.body.appendChild(legend);
+
+    LEGEND_ITEMS.forEach(({ label, color, blank, span, divider }) => {
+      if (divider) {
+        const line = document.createElement('div');
+        line.className = 'legend-divider';
+        legend.appendChild(line);
+        return;
+      }
+
+      if (blank) {
+        const count = span || 1;
+        for (let i = 0; i < count; i++) {
+          const spacer = document.createElement('div');
+          spacer.className = 'legend-blank';
+          legend.appendChild(spacer);
+        }
+        return;
+      }
+
+      const item = document.createElement('div');
+      item.className = 'legend-item';
+
+      const swatch = document.createElement('div');
+      swatch.className = 'legend-swatch';
+      swatch.style.background = color;
+
+      const text = document.createElement('span');
+      text.className = 'legend-label';
+      text.textContent = label;
+
+      item.appendChild(swatch);
+      item.appendChild(text);
+      legend.appendChild(item);
+    });
+
+    // ---------- FIT LONG LABELS (auto-shrink) ----------
+    (function fitLabels() {
+      const MAX = 28, MIN = 16, STEP = 1;
+      const labels = Array.from(document.querySelectorAll('.legend-label'));
+      labels.forEach(el => {
+        let size = MAX;
+        el.style.fontSize = `${size}px`;
+        while (size > MIN && el.scrollWidth > el.clientWidth) {
+          size -= STEP;
+          el.style.fontSize = `${size}px`;
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
