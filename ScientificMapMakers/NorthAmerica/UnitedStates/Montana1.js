@@ -245,3 +245,6 @@ Map.addLayer(
   'Climate (' + STATE_NAME + ')',
   true, 0.7
 );
+
+var visImg = discreteAOI.visualize({min: 0, max: indices.length - 1, palette: palette});
+print(ui.Thumbnail(visImg, {region: aoi.bounds(1), dimensions: 3000, format: 'png'}));
