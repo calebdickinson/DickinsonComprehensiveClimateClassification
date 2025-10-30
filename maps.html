@@ -67,119 +67,110 @@
       opacity: 0;
       overflow: hidden;
       transition: max-height .25s ease, padding .25s ease, opacity .2s ease;
-      background: transparent;                /* keep page background showing */
+      background: transparent;
     }
     .accordion details[open] > .block,
     .accordion details[open] > .entry{
       padding: .8rem 1rem 1rem;
       max-height: none;
       opacity: 1;
-      background: transparent;                /* still transparent when open */
-      overflow: visible;                       /* per-map wrapper handles scrolling */
+      background: transparent;
+      overflow: visible;
     }
 
     .entry h3 { margin: 8px 0 4px; font-size: 1rem; }
 
-    /* Base image rule (all images) */
+    /* ===== Base image rule ===== */
     .entry img {
       display: block;
       height: auto;
       margin-bottom: 10px;
       max-width: 100%;
+      max-height: 90vh; /* global limit for all images */
     }
 
-    /* Legends: compact & centered (filenames contain "legend") */
-    .entry img[src*="legend" i], .entry img[alt*="legend" i] {
+    /* Legends: compact and centered */
+    .entry img[src*="legend" i],
+    .entry img[alt*="legend" i] {
       max-width: 520px;
       margin-left: auto;
       margin-right: auto;
     }
 
-    /* Scroll wrapper JS adds around very wide MAPS */
+    /* ===== Scroll wrapper for ultra-wide maps ===== */
     .map-scroll{
       width: 100%;
-      overflow-x: auto;                        /* visible, normal scrollbar */
+      overflow-x: auto;             /* real visible scrollbar */
       overflow-y: hidden;
       white-space: nowrap;
       background: transparent;
 
-      /* Make scrollbar easy to see (cross-browser) */
-      scrollbar-width: auto;                   /* Firefox */
-      scrollbar-color: #888 #e5e5e5;           /* thumb / track */
-      scrollbar-gutter: stable both-edges;     /* reserve gutter space */
+      scrollbar-width: auto;        /* Firefox */
+      scrollbar-color: #888 #e5e5e5;
+      scrollbar-gutter: stable both-edges;
     }
-    .map-scroll::-webkit-scrollbar { height: 12px; }                /* Chrome/Safari */
+    .map-scroll::-webkit-scrollbar { height: 12px; }
     .map-scroll::-webkit-scrollbar-thumb { background: #888; border-radius: 6px; }
     .map-scroll::-webkit-scrollbar-track { background: #e5e5e5; }
 
-    /* Ultra-wide map image inside wrapper:
-       - fixed HEIGHT 50vh
-       - width auto so it scrolls horizontally
-    */
-    .map-scroll img.wide-map{
+    /* Ultra-wide map: 50 vh tall, width auto */
+    .map-scroll img.wide-map {
       height: 50vh !important;
       width: auto !important;
       max-width: none !important;
       display: inline-block;
+      max-height: 90vh !important;
     }
 
     .accordion details details { margin-left: .25rem; }
   </style>
 
   <script>
-    // Wrap ULTRA-WIDE maps (aspect >= 4:1) in a horizontal scroller,
-    // fix their HEIGHT to 50vh, and set an initial scroll position.
+    // Wrap ULTRA-WIDE maps (aspect >= 4:1) in a scroller,
+    // fix HEIGHT to 50 vh, and start slightly scrolled in.
     document.addEventListener("DOMContentLoaded", function () {
-      const START_FRACTION = 0.2; // 20% in from the left
-  
+      const START_FRACTION = 0.18; // ~18% in from left
       const looksLikeLegend = (img) =>
         /legend/i.test(img.src || "") || /legend/i.test(img.alt || "");
-  
+
       const setInitialScroll = (wrapper, img) => {
-        // Only set if user hasn't scrolled yet
         if (wrapper.dataset.userScrolled === "1") return;
-  
         const wrapW = wrapper.clientWidth;
-        const imgW  = img.getBoundingClientRect().width; // rendered width
+        const imgW = img.scrollWidth;
         const maxScroll = Math.max(0, imgW - wrapW);
-  
         wrapper.scrollLeft = maxScroll * START_FRACTION;
       };
-  
+
       const wrapIfUltraWide = (img) => {
         if (!img.closest(".entry") || img.closest(".map-scroll")) return;
         if (looksLikeLegend(img)) return;
-  
+
         const ratio = img.naturalWidth / img.naturalHeight;
         if (!isFinite(ratio) || ratio < 4) return;
-  
+
         const wrapper = document.createElement("div");
         wrapper.className = "map-scroll";
         img.parentNode.insertBefore(wrapper, img);
         wrapper.appendChild(img);
-  
-        // mark as ultra-wide map so CSS sets HEIGHT = 50vh
+
         img.classList.add("wide-map");
-  
-        // after layout, set the initial scroll position
-        const init = () => setInitialScroll(wrapper, img);
-        requestAnimationFrame(() => requestAnimationFrame(init));
-  
-        // if the user scrolls, don't override later
+
+        // set initial scroll after layout
+        requestAnimationFrame(() => requestAnimationFrame(() => setInitialScroll(wrapper, img)));
+
+        // mark user scroll to stop auto adjustment
         const markUserScroll = () => (wrapper.dataset.userScrolled = "1");
         wrapper.addEventListener("scroll", markUserScroll, { once: true });
-  
-        // keep the starting position on resize until user scrolls
+
+        // keep scroll position proportional on resize until user interacts
         const onResize = () => setInitialScroll(wrapper, img);
         window.addEventListener("resize", onResize);
-  
-        // if user scrolls, stop auto-updating on resize
         wrapper.addEventListener("scroll", () => {
           if (wrapper.dataset.userScrolled === "1")
             window.removeEventListener("resize", onResize);
         }, { once: true });
       };
-  
+
       document.querySelectorAll(".entry img").forEach((img) => {
         if (img.complete && img.naturalWidth) {
           wrapIfUltraWide(img);
@@ -189,6 +180,7 @@
       });
     });
   </script>
+</head>
 
 </head>
 
