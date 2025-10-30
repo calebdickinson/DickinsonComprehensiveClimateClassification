@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/styles.css" />
 
   <style>
-    :root {
+    :root{
       --acc-radius: 12px;
       --acc-border: #d8dbe3;
       --acc-hover: #f7f8fb;
@@ -27,11 +27,9 @@
       padding: .8rem 1rem;
       margin: .5rem 0;
       font-weight: 600;
-
       border: 1px solid var(--acc-border);
       border-radius: var(--acc-radius);
       background: #fff;
-
       transition: background .15s ease, border-color .15s ease, box-shadow .15s ease;
     }
     .accordion details > summary:hover { background: var(--acc-hover); }
@@ -41,14 +39,14 @@
       border-color: #8ca7ff;
     }
     .accordion details > summary::-webkit-details-marker { display: none; }
-    .accordion details > summary::before {
-      content: "";
-      inline-size: .6rem; block-size: .6rem;
-      border-right: 2px solid currentColor;
-      border-bottom: 2px solid currentColor;
+    .accordion details > summary::before{
+      content:"";
+      inline-size:.6rem; block-size:.6rem;
+      border-right:2px solid currentColor;
+      border-bottom:2px solid currentColor;
       transform: rotate(-45deg);
       transition: transform .15s ease;
-      margin-right: .25rem;
+      margin-right:.25rem;
     }
     .accordion details[open] > summary {
       border-bottom-left-radius: 0;
@@ -59,7 +57,7 @@
 
     /* ===== Accordion content containers ===== */
     .accordion details > .block,
-    .accordion details > .entry {
+    .accordion details > .entry{
       border: 1px solid var(--acc-border);
       border-top: 0;
       border-bottom-left-radius: var(--acc-radius);
@@ -69,20 +67,18 @@
       opacity: 0;
       overflow: hidden;
       transition: max-height .25s ease, padding .25s ease, opacity .2s ease;
-      background: transparent;  /* transparent when closed */
+      background: transparent;            /* transparent closed */
     }
-
     .accordion details[open] > .block,
-    .accordion details[open] > .entry {
+    .accordion details[open] > .entry{
       padding: .8rem 1rem 1rem;
       max-height: none;
       opacity: 1;
-      background: transparent;  /* transparent when open */
-      overflow-x: visible;
-      overflow-y: visible;
+      background: transparent;            /* transparent open */
+      overflow: visible;                   /* scrolling handled per-map */
     }
 
-    /* ===== Headings inside entries ===== */
+    /* ===== Entry content ===== */
     .entry h3 { margin: 8px 0 4px; font-size: 1rem; }
 
     /* Base image rule */
@@ -93,78 +89,73 @@
       max-width: 100%;
     }
 
-    /* Compact, centered legends (odd images) */
+    /* Legends (odd images) stay compact & centered */
     .entry img:nth-of-type(odd) {
       max-width: 520px;
       margin-left: auto;
       margin-right: auto;
     }
 
-    /* Maps (even images): allow horizontal scroll for wide aspect ratios */
+    /* Maps (even images): use native width (inside scroll wrapper) */
     .entry img:nth-of-type(even) {
+      max-width: none;
       width: auto;
       height: auto;
-      max-width: none;
-      max-height: 90vh;
-      display: block;
+      max-height: 90vh;                    /* optional vertical cap */
     }
 
-    /* Horizontal scroll wrapper for very wide maps */
-    .entry {
-      position: relative;
-    }
-    .entry img:nth-of-type(even) {
-      /* detect wide maps (rough heuristic, aspect ratio >= 4) */
-      aspect-ratio: attr(width) / attr(height);
-    }
-
-    /* Fallback method for browsers without aspect-ratio attr(): use a container */
-    .entry img:nth-of-type(even) {
-      /* browsers can’t read attr() numerically yet, so we use JS assist */
-    }
-
-    /* Provide a generic horizontal scroll zone */
-    .entry {
+    /* Scroll wrapper that JS adds around wide maps */
+    .map-scroll {
+      width: 100%;
       overflow-x: auto;
       overflow-y: hidden;
       -webkit-overflow-scrolling: touch;
+      white-space: nowrap;                 /* enables side scroll */
+      background: transparent;
+    }
+    .map-scroll img {
+      display: inline-block;               /* sit on one line */
     }
 
-    /* Optional styling for scrollbar visibility */
-    .entry::-webkit-scrollbar {
-      height: 10px;
-    }
-    .entry::-webkit-scrollbar-thumb {
-      background-color: #ccc;
-      border-radius: 5px;
-    }
+    /* Make the scrollbar easy to see (where supported) */
+    .map-scroll::-webkit-scrollbar { height: 10px; }
+    .map-scroll::-webkit-scrollbar-thumb { background: #bbb; border-radius: 6px; }
+    .map-scroll::-webkit-scrollbar-track { background: rgba(0,0,0,.05); }
 
     /* Nested details spacing */
     .accordion details details { margin-left: .25rem; }
-
-    /* --- JS helper to add scroll dynamically for 4:1 maps --- */
   </style>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      document.querySelectorAll(".entry img:nth-of-type(even)").forEach(img => {
-        // Wait for each image to load so natural sizes are known
-        img.addEventListener("load", () => {
-          if (img.naturalWidth / img.naturalHeight >= 4) {
-            img.style.display = "inline-block";
-            const parent = img.closest(".entry");
-            if (parent) {
-              parent.style.overflowX = "auto";
-              parent.style.overflowY = "hidden";
-              parent.style.whiteSpace = "nowrap";
-            }
-          }
-        });
+    // Wrap only very wide maps (aspect >= 4:1) in a horizontal scroller.
+    document.addEventListener("DOMContentLoaded", function () {
+      const isMap = (img) => {
+        // In your entries, maps are even-numbered images.
+        const idx = Array.prototype.indexOf.call(img.parentNode.children, img) + 1;
+        return img.closest(".entry") && (idx % 2 === 0);
+      };
+
+      const wrapIfWide = (img) => {
+        if (!isMap(img) || img.closest(".map-scroll")) return;
+        const ratio = img.naturalWidth / img.naturalHeight;
+        if (ratio >= 4) {
+          const wrap = document.createElement("div");
+          wrap.className = "map-scroll";
+          img.parentNode.insertBefore(wrap, img);
+          wrap.appendChild(img);
+        }
+      };
+
+      document.querySelectorAll(".entry img").forEach((img) => {
+        if (img.complete && img.naturalWidth) {
+          wrapIfWide(img);
+        } else {
+          img.addEventListener("load", () => wrapIfWide(img), { once: true });
+        }
       });
     });
   </script>
 </head>
-
 
 <body>
   <div id="header">
