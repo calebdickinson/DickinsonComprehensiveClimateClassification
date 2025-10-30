@@ -80,7 +80,7 @@
 
     .entry h3 { margin: 8px 0 4px; font-size: 1rem; }
 
-    /* Base image rule for everything */
+    /* Base image rule (all images) */
     .entry img {
       display: block;
       height: auto;
@@ -88,87 +88,68 @@
       max-width: 100%;
     }
 
-    /* Legends = direct child images (maps will be moved into a wrapper) */
+    /* Legends = direct child images; maps will be wrapped */
     .entry > img {
-      max-width: 520px;                        /* compact legend */
+      max-width: 520px;                        /* compact, centered legend */
       margin-left: auto;
-      margin-right: auto;                      /* centered legend */
+      margin-right: auto;
     }
 
-    /* Scroll wrapper that JS adds only around very wide MAPS */
-    .map-scroll {
+    /* Scroll wrapper JS adds around wide maps */
+    .map-scroll{
       width: 100%;
-      overflow-x: auto;
+      overflow-x: auto;                        /* real horizontal scrollbar */
       overflow-y: hidden;
-      -webkit-overflow-scrolling: touch;
-      white-space: nowrap;                     /* show a real horizontal scrollbar */
+      white-space: nowrap;
       background: transparent;
+
+      /* Make scrollbar look/feel like a normal one and easy to see */
+      scrollbar-width: auto;                   /* Firefox */
+      scrollbar-color: #888 #e5e5e5;           /* thumb / track */
+      scrollbar-gutter: stable both-edges;     /* reserve gutter so it doesn't overlay */
     }
-    .map-scroll img {
+    .map-scroll::-webkit-scrollbar { height: 12px; }                /* Chrome/Safari */
+    .map-scroll::-webkit-scrollbar-thumb { background: #888; border-radius: 6px; }
+    .map-scroll::-webkit-scrollbar-track { background: #e5e5e5; }
+
+    /* The map inside the scroll wrapper shows at native width by default */
+    .map-scroll img{
       display: inline-block;
-      max-width: none;                          /* show native pixel width */
+      max-width: none;
       width: auto;
       height: auto;
-      max-height: 90vh;                         /* optional vertical cap */
     }
-
-    /* Optional: make scrollbar visible where supported */
-    .map-scroll::-webkit-scrollbar { height: 10px; }
-    .map-scroll::-webkit-scrollbar-thumb { background: #bbb; border-radius: 6px; }
-    .map-scroll::-webkit-scrollbar-track { background: rgba(0,0,0,.05); }
 
     .accordion details details { margin-left: .25rem; }
   </style>
 
   <script>
-    // Wrap only images that are very wide (>= 4:1) in a horizontal scroller.
+    // Wrap maps that are >= 4:1 in a horizontal scroller and set them to 50vh tall.
     document.addEventListener("DOMContentLoaded", function () {
-      const maybeWrap = (img) => {
-        // Skip if already wrapped or not inside an .entry
-        if (img.closest(".map-scroll") || !img.closest(".entry")) return;
+      const wrapIfVeryWide = (img) => {
+        if (!img.closest(".entry") || img.closest(".map-scroll")) return;
 
-        // If image is a legend (direct child of .entry), leave it alone.
-        // We'll treat maps as non-direct children after wrapping.
-        const isLegend = img.parentElement.classList.contains("entry");
-        // Determine aspect ratio after it loads
+        const isLegend = img.parentElement.classList.contains("entry"); // direct child
         const ratio = img.naturalWidth / img.naturalHeight;
 
-        // We only want to wrap MAPS: wide strips (ratio >= 4)
         if (!isLegend && ratio >= 4) {
           const wrap = document.createElement("div");
           wrap.className = "map-scroll";
           img.parentNode.insertBefore(wrap, img);
           wrap.appendChild(img);
+
+          // Set requested 50vh height for very-wide maps; width auto so it scrolls
+          img.style.height = "50vh";
+          img.style.width  = "auto";
+          img.style.maxWidth = "none";
         }
       };
 
-      // Initial pass: treat every image in .entry as candidate.
       document.querySelectorAll(".entry img").forEach((img) => {
-        // If the image is the FIRST (legend) right now, mark it as legend by ensuring it's a direct child.
-        // (Your HTML already places legends as direct children of .entry.)
         if (img.complete && img.naturalWidth) {
-          maybeWrap(img);
+          wrapIfVeryWide(img);
         } else {
-          img.addEventListener("load", () => maybeWrap(img), { once: true });
-        }
-      });
-
-      // Second pass: Antarctica pattern is legend, then map. After first wrap, the next map
-      // remains a direct child until it loads—so we also check direct-child images that are very wide.
-      document.querySelectorAll(".entry > img").forEach((img) => {
-        const ensureWrap = () => {
-          const ratio = img.naturalWidth / img.naturalHeight;
-          if (ratio >= 4) {
-            const wrap = document.createElement("div");
-            wrap.className = "map-scroll";
-            img.parentNode.insertBefore(wrap, img);
-            wrap.appendChild(img);
-          }
-        };
-        if (img.complete && img.naturalWidth) {
-          ensureWrap();
-        } else {
-          img.addEventListener("load", ensureWrap, { once: true });
+          img.addEventListener("load", () => wrapIfVeryWide(img), { once: true });
         }
       });
     });
