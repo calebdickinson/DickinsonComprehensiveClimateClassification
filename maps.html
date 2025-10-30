@@ -123,6 +123,11 @@
     }
 
     .accordion details details { margin-left: .25rem; }
+
+        /* --- prevent tall images from being squished when limited by 90vh --- */
+    .entry img {
+      object-fit: contain;
+    }
   </style>
 
   <script>
