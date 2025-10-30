@@ -67,7 +67,7 @@
       opacity: 0;
       overflow: hidden;
       transition: max-height .25s ease, padding .25s ease, opacity .2s ease;
-      background: transparent;                /* keep page gray visible */
+      background: transparent;                /* keep page background showing */
     }
     .accordion details[open] > .block,
     .accordion details[open] > .entry{
@@ -75,7 +75,7 @@
       max-height: none;
       opacity: 1;
       background: transparent;                /* still transparent when open */
-      overflow: visible;                       /* per-map scroll handles overflow */
+      overflow: visible;                       /* per-map wrapper handles scrolling */
     }
 
     .entry h3 { margin: 8px 0 4px; font-size: 1rem; }
@@ -88,68 +88,72 @@
       max-width: 100%;
     }
 
-    /* Legends = direct child images; maps will be wrapped */
-    .entry > img {
-      max-width: 520px;                        /* compact, centered legend */
+    /* Legends: compact & centered (filenames contain "legend") */
+    .entry img[src*="legend" i], .entry img[alt*="legend" i] {
+      max-width: 520px;
       margin-left: auto;
       margin-right: auto;
     }
 
-    /* Scroll wrapper JS adds around wide maps */
+    /* Scroll wrapper JS adds around very wide MAPS */
     .map-scroll{
       width: 100%;
-      overflow-x: auto;                        /* real horizontal scrollbar */
+      overflow-x: auto;                        /* visible, normal scrollbar */
       overflow-y: hidden;
       white-space: nowrap;
       background: transparent;
 
-      /* Make scrollbar look/feel like a normal one and easy to see */
+      /* Make scrollbar easy to see (cross-browser) */
       scrollbar-width: auto;                   /* Firefox */
       scrollbar-color: #888 #e5e5e5;           /* thumb / track */
-      scrollbar-gutter: stable both-edges;     /* reserve gutter so it doesn't overlay */
+      scrollbar-gutter: stable both-edges;     /* reserve gutter space */
     }
     .map-scroll::-webkit-scrollbar { height: 12px; }                /* Chrome/Safari */
     .map-scroll::-webkit-scrollbar-thumb { background: #888; border-radius: 6px; }
     .map-scroll::-webkit-scrollbar-track { background: #e5e5e5; }
 
-    /* The map inside the scroll wrapper shows at native width by default */
-    .map-scroll img{
+    /* Ultra-wide map image inside wrapper:
+       - fixed HEIGHT 50vh
+       - width auto so it scrolls horizontally
+    */
+    .map-scroll img.wide-map{
+      height: 50vh !important;
+      width: auto !important;
+      max-width: none !important;
       display: inline-block;
-      max-width: none;
-      width: auto;
-      height: auto;
     }
 
     .accordion details details { margin-left: .25rem; }
   </style>
 
   <script>
-    // Wrap maps that are >= 4:1 in a horizontal scroller and set them to 50vh tall.
+    // Wrap only ULTRA-WIDE map images (aspect >= 4:1) in a horizontal scroller,
+    // set their HEIGHT to 50vh, and leave legends unchanged.
     document.addEventListener("DOMContentLoaded", function () {
-      const wrapIfVeryWide = (img) => {
+      const looksLikeLegend = (img) =>
+        /legend/i.test(img.src || "") || /legend/i.test(img.alt || "");
+
+      const wrapIfUltraWide = (img) => {
         if (!img.closest(".entry") || img.closest(".map-scroll")) return;
+        if (looksLikeLegend(img)) return; // don't touch legends
 
-        const isLegend = img.parentElement.classList.contains("entry"); // direct child
         const ratio = img.naturalWidth / img.naturalHeight;
+        if (isFinite(ratio) && ratio >= 4) {
+          const wrapper = document.createElement("div");
+          wrapper.className = "map-scroll";
+          img.parentNode.insertBefore(wrapper, img);
+          wrapper.appendChild(img);
 
-        if (!isLegend && ratio >= 4) {
-          const wrap = document.createElement("div");
-          wrap.className = "map-scroll";
-          img.parentNode.insertBefore(wrap, img);
-          wrap.appendChild(img);
-
-          // Set requested 50vh height for very-wide maps; width auto so it scrolls
-          img.style.height = "50vh";
-          img.style.width  = "auto";
-          img.style.maxWidth = "none";
+          // mark as ultra-wide map so CSS applies 50vh height
+          img.classList.add("wide-map");
         }
       };
 
       document.querySelectorAll(".entry img").forEach((img) => {
         if (img.complete && img.naturalWidth) {
-          wrapIfVeryWide(img);
+          wrapIfUltraWide(img);
         } else {
-          img.addEventListener("load", () => wrapIfVeryWide(img), { once: true });
+          img.addEventListener("load", () => wrapIfUltraWide(img), { once: true });
         }
       });
     });
