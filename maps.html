@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>maps</title>
@@ -17,6 +15,7 @@
 
     h2 { text-align: center; }
 
+    /* ===== Accordion summary ===== */
     .accordion details > summary {
       list-style: none;
       cursor: pointer;
@@ -39,9 +38,7 @@
       box-shadow: 0 0 0 3px var(--focus);
       border-color: #8ca7ff;
     }
-
     .accordion details > summary::-webkit-details-marker { display: none; }
-
     .accordion details > summary::before{
       content:"";
       inline-size:.6rem; block-size:.6rem;
@@ -58,6 +55,7 @@
     }
     .accordion details[open] > summary::before { transform: rotate(45deg); } /* ▾ */
 
+    /* ===== Accordion content containers ===== */
     .accordion details > .block,
     .accordion details > .entry{
       border: 1px solid var(--acc-border);
@@ -66,26 +64,54 @@
       border-bottom-right-radius: var(--acc-radius);
 
       padding: 0 1rem;
-      overflow: hidden;
-
       max-height: 0;
       opacity: 0;
+      overflow: hidden;
       transition: max-height .25s ease, padding .25s ease, opacity .2s ease;
     }
     .accordion details[open] > .block,
     .accordion details[open] > .entry{
       padding: .8rem 1rem 1rem;
       max-height: none;
-  	  overflow: visible; 
       opacity: 1;
+
+      /* enable horizontal scrolling for wide maps when open */
+      overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+      background: var(--acc-open);
     }
 
+    /* ===== Headings inside entries ===== */
     .entry h3 { margin: 8px 0 4px; font-size: 1rem; }
-    .entry img { max-width: 100%; height: auto; display: block; margin-bottom: 10px; }
 
+    /* Base image rule (kept for backward compatibility) */
+    .entry img {
+      display: block;
+      height: auto;
+      margin-bottom: 10px;
+      max-width: 100%;
+    }
+
+    /* Legends: assume every odd image in an .entry is a legend */
+    .entry img:nth-of-type(odd) {
+      max-width: 520px;         /* tidy, compact legend */
+      margin-left: auto;
+      margin-right: auto;       /* centered legend */
+    }
+
+    /* Maps: assume every even image in an .entry is a map */
+    .entry img:nth-of-type(even) {
+      max-width: none;          /* show at native pixel width */
+      width: auto;              /* prevent shrinking */
+      max-height: 90vh;         /* optional: avoid over-tall on small screens */
+    }
+
+    /* Nested details spacing */
     .accordion details details { margin-left: .25rem; }
   </style>
 </head>
+
 <body>
   <div id="header">
     <h1>The Dickinson Comprehensive Climate Classification System</h1>
