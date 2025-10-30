@@ -154,31 +154,31 @@ var combined = coldClass
   .rename('combined');
 
 var codeColorMap = {
-  //372: "#ff99cc", //F-C2 
-  //373: "#ff66cc", //F-B1
-  //364: "#ff00cc", //FHB2
+  //372: "#ff99cc", // F-C2 
+  //373: "#ff66cc", // F-B1
+  //364: "#ff00cc", // FHB2
   
-  //472: "#8888FF", //E-C2
-  //493: "#0000FF", //E-B1
-  //464: "#002200", //EHB2
-            //454: "#ff99cc", //EGB2
-  //465: "#00aa88", //EHA1
-            //455: "#0000ff", //EGA1
+  //472: "#8888FF", // E-C2
+  //493: "#0000FF", // E-B1
+  //464: "#002200", // EHB2
+            //454: "#ff99cc", // EGB2
+  //465: "#00aa88", // EHA1
+            //455: "#0000ff", // EGA1
   
-  //593: "#ff0000", //D-B1
-  //564: "#004400", //DHB2
-            //554: "#00ffcc", //DGB2
-  565: "#008800", //DHA1
-            555: "#00ff00", //DGA1
+  //593: "#ff0000", // D-B1
+  //564: "#004400", // DHB2
+            //554: "#00ffcc", // DGB2
+  565: "#008800", // DHA1
+            555: "#00ff00", // DGA1
   //556: "#88aa88",
-  556: "#ff0000",
+  556: "#ff0000", // DGA2
   //557: "#444444",
-  566: "#006622",
+  566: "#006622", // DHA2
   //655: "#00cccc",
   //664: "#00ffff",
   //665: "#008888",
   //656: "#888888",
-  666: "#004444",
+  666: "#004444", // CHA2
   //657: "#000000",
   //757: "#000088",
   
@@ -223,3 +223,6 @@ Map.addLayer(
   'Climate (' + STATE_NAME + ')',
   true, 0.7
 );
+
+var visImg = discreteAOI.visualize({min: 0, max: indices.length - 1, palette: palette});
+print(ui.Thumbnail(visImg, {region: aoi.bounds(1), dimensions: 3000, format: 'png'}));
