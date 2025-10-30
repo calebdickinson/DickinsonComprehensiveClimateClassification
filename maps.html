@@ -127,28 +127,59 @@
   </style>
 
   <script>
-    // Wrap only ULTRA-WIDE map images (aspect >= 4:1) in a horizontal scroller,
-    // set their HEIGHT to 50vh, and leave legends unchanged.
+    // Wrap ULTRA-WIDE maps (aspect >= 4:1) in a horizontal scroller,
+    // fix their HEIGHT to 50vh, and set an initial scroll position.
     document.addEventListener("DOMContentLoaded", function () {
+      const START_FRACTION = 0.2; // 20% in from the left
+  
       const looksLikeLegend = (img) =>
         /legend/i.test(img.src || "") || /legend/i.test(img.alt || "");
-
+  
+      const setInitialScroll = (wrapper, img) => {
+        // Only set if user hasn't scrolled yet
+        if (wrapper.dataset.userScrolled === "1") return;
+  
+        const wrapW = wrapper.clientWidth;
+        const imgW  = img.getBoundingClientRect().width; // rendered width
+        const maxScroll = Math.max(0, imgW - wrapW);
+  
+        wrapper.scrollLeft = maxScroll * START_FRACTION;
+      };
+  
       const wrapIfUltraWide = (img) => {
         if (!img.closest(".entry") || img.closest(".map-scroll")) return;
-        if (looksLikeLegend(img)) return; // don't touch legends
-
+        if (looksLikeLegend(img)) return;
+  
         const ratio = img.naturalWidth / img.naturalHeight;
-        if (isFinite(ratio) && ratio >= 4) {
-          const wrapper = document.createElement("div");
-          wrapper.className = "map-scroll";
-          img.parentNode.insertBefore(wrapper, img);
-          wrapper.appendChild(img);
-
-          // mark as ultra-wide map so CSS applies 50vh height
-          img.classList.add("wide-map");
-        }
+        if (!isFinite(ratio) || ratio < 4) return;
+  
+        const wrapper = document.createElement("div");
+        wrapper.className = "map-scroll";
+        img.parentNode.insertBefore(wrapper, img);
+        wrapper.appendChild(img);
+  
+        // mark as ultra-wide map so CSS sets HEIGHT = 50vh
+        img.classList.add("wide-map");
+  
+        // after layout, set the initial scroll position
+        const init = () => setInitialScroll(wrapper, img);
+        requestAnimationFrame(() => requestAnimationFrame(init));
+  
+        // if the user scrolls, don't override later
+        const markUserScroll = () => (wrapper.dataset.userScrolled = "1");
+        wrapper.addEventListener("scroll", markUserScroll, { once: true });
+  
+        // keep the starting position on resize until user scrolls
+        const onResize = () => setInitialScroll(wrapper, img);
+        window.addEventListener("resize", onResize);
+  
+        // if user scrolls, stop auto-updating on resize
+        wrapper.addEventListener("scroll", () => {
+          if (wrapper.dataset.userScrolled === "1")
+            window.removeEventListener("resize", onResize);
+        }, { once: true });
       };
-
+  
       document.querySelectorAll(".entry img").forEach((img) => {
         if (img.complete && img.naturalWidth) {
           wrapIfUltraWide(img);
@@ -158,6 +189,7 @@
       });
     });
   </script>
+
 </head>
 
 <body>
