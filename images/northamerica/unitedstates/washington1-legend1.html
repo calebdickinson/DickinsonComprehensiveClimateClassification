@@ -14,7 +14,7 @@
     .legend {
       position: fixed; top: 20px; right: 20px; z-index: 9999;
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 16px 28px; padding: 24px;
       background: #fff;
       border: 2px solid #ccc; border-radius: 16px;
@@ -51,7 +51,7 @@
 
     /* Thicker horizontal black divider (spans full grid width) */
     .legend-divider {
-      grid-column: span 6;
+      grid-column: span 4;
       height: 6px;
       background-color: #000;
       border-radius: 3px;
@@ -82,55 +82,16 @@
       
       { divider: true },
      
+      { blank: true, span: 1 },
       { label: "Dc1", color: "#ff8800" },
-      { blank: true, span: 5 },
-      
       { label: "Dc2", color: "#000000" },
-      { blank: true, span: 5 },
-      
       { label: "Db1", color: "#6666ff" },
-      { blank: true, span: 5 },
-      
-      { label: "Dhb2", color: "#006600" },
-      { label: "Dgb2", color: "#88ff88" },
-      { label: "Dsb2", color: "#ccaa88" },
-      { label: "Ddb2", color: "#ff00cc" },
-      { blank: true, span: 1 },
-      { label: "Dmb2", color: "#666600" },
-      
-      { label: "Dha1", color: "#009900" },
-      { label: "Dga1", color: "#00ff00" },
-      { label: "Dsa1", color: "#aa8866" },
-      { label: "Dda1", color: "#dd0066" },
-      { blank: true, span: 1 },
-      { label: "Dma1", color: "#999900" },
-      
-      { blank: true, span: 3 },
-      { label: "Dda2", color: "#aa0044" },
-      { blank: true, span: 1 },
-      { label: "Dma2", color: "#00ffff" },
       
       { divider: true },
       
+      { blank: true, span: 3 },
       { label: "Cb1", color: "#008888" },
-      { blank: true, span: 5 },
-      
-      { blank: true, span: 5 },
-      { label: "Cmb2", color: "#88ff00" },
-      
-      { blank: true, span: 1 },
-      { label: "Cga1", color: "#ff00ff" },
-      { label: "Csa1", color: "#ffcc00" },
-      { label: "Cda1", color: "#ff5500" },
-      { blank: true, span: 1 },
-      { label: "Cma1", color: "#ffff88" },
-      
-      { blank: true, span: 2 },
-      { label: "Csa2", color: "#cc8800" },
-      { label: "Cda2", color: "#ff0000" },
-      { blank: true, span: 1 },
-      { label: "Cma2", color: "#ffff00" },
-      
+   
     ];
 
     // ---------- RENDER ----------
@@ -188,3 +149,4 @@
   </script>
 </body>
 </html>
+
