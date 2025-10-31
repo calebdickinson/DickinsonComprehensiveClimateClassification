@@ -58,7 +58,7 @@
         </div>
     </div>
 
-    <!--<div id="landscapes">
+    <div id="landscapes">
       <img id="climate_landscape" src="" alt="landscape in this climate">
     </div>
 
@@ -77,11 +77,11 @@
         <h3>Cities with this climate (2100)</h3>
         <ul id="climate_cities_2100"></ul>
       </div>
-    </div>-->
+    </div>
 
     <br><br><p><i id="distribution_message"></i></p>
 
-    <!--<div id="1900s">
+    <div id="1900s">
       <h3>Global distribution of this climate (1961-1990 normals)</h3>
       <img id="climate_map_1900s" src="" alt="climate map (1961-1990 normals)">
     </div>
@@ -94,7 +94,7 @@
     <div id="2100">
       <h3>Global distribution of this climate (2100)</h3>
       <img id="climate_map_2100" src="" alt="climate map in 2100">
-    </div>-->
+    </div>
 
   </main>
 
@@ -107,6 +107,68 @@
         throw new Error("No climate code specified in URL");
     }
 
+    // New period labels for map1..map4 (shown in headings)
+    const PERIOD_LABELS = {
+      map1: "1981-2010 normals",
+      map2: "2011-2040 High Emissions normals",
+      map3: "2041-2070 High Emissions normals",
+      map4: "2071-2100 High Emissions normals",
+    };
+
+    // Utilities used below
+    function ensureCitiesBlock(blockId, ulId, headingText) {
+      let block = document.getElementById(blockId);
+      if (!block) {
+        const container = document.getElementById('cities');
+        block = document.createElement('div');
+        block.id = blockId;
+        block.className = 'cities-block';
+
+        const h3 = document.createElement('h3');
+        h3.textContent = `Cities with this climate (${headingText})`;
+
+        const ul = document.createElement('ul');
+        ul.id = ulId;
+
+        block.appendChild(h3);
+        block.appendChild(ul);
+        container.appendChild(block);
+      } else {
+        const h3 = block.querySelector('h3');
+        if (h3) h3.textContent = `Cities with this climate (${headingText})`;
+      }
+    }
+
+    function ensureMapSection(sectionId, imgId, headingText, altText) {
+      let section = document.getElementById(sectionId);
+      if (!section) {
+        const main = document.querySelector('main');
+        section = document.createElement('div');
+        section.id = sectionId;
+
+        const h3 = document.createElement('h3');
+        h3.textContent = `Global distribution of this climate (${headingText})`;
+
+        const img = document.createElement('img');
+        img.id = imgId;
+        img.alt = altText;
+
+        section.appendChild(h3);
+        section.appendChild(img);
+        main.appendChild(section);
+      } else {
+        const h3 = section.querySelector('h3');
+        if (h3) h3.textContent = `Global distribution of this climate (${headingText})`;
+      }
+    }
+
+    function setImgWithFallback(el, url, alt, fallback) {
+      if (!el) return;
+      el.alt = alt;
+      el.onerror = () => { el.onerror = null; el.src = fallback; };
+      el.src = (url && String(url).trim() !== '') ? url : fallback;
+    }
+
     fetch('data/data.json')
         .then(response => {
             if (!response.ok) {
@@ -116,10 +178,13 @@
         })
         .then(data => {
             const climate = data[code];
+            if (!climate) throw new Error(`Climate data for code "${code}" not found`);
+
             const climate_code = climate['code'];
             const climate_name = climate['name'];
             const climate_exists = climate['exists'];
             const climate_group = climate['group'];
+
             const climate_go_to_humid = climate['go_to_humid'];
             const climate_go_to_semihumid = climate['go_to_semihumid'];
             const climate_go_to_monsoon = climate['go_to_monsoon'];
@@ -130,25 +195,19 @@
             const climate_go_to_colder_summer = climate['go_to_colder_summer'];
             const climate_go_to_hotter_winter = climate['go_to_hotter_winter'];
             const climate_go_to_colder_winter = climate['go_to_colder_winter'];
-            const climate_cities = climate['cities'];   // <-- define it
-                renderCities(climate_cities);    
-            const climate_map_2025 = climate['map_2025'];
-            const climate_map_2100 = climate['map_2100'];
-            const climate_map_1900s = climate['map_1900s'];
+
+            const climate_cities = climate['cities'];   // now expected as {map1:[], map2:[], map3:[], map4:[]}
             const climate_landscape = climate['landscape'];
             const distribution_message = "Please note that map data for oceans and Antarctica is not available.";
-
-            if (!climate) throw new Error(`Climate data for code "${code}" not found`);
 
             const nameSuffix = climate_group ? " Climate Group" : " Climate";
             document.getElementById('climate_name').textContent = climate_name + nameSuffix;
             document.getElementById('climate_code').textContent = climate_code;
             document.getElementById('distribution_message').textContent = distribution_message;
 
-            
             if (!climate_exists) {
               document.getElementById('climate_exists').textContent =
-              'THIS ' + (climate_group ? 'CLIMATE GROUP' : 'CLIMATE') + ' DOES NOT EXIST';
+                'THIS ' + (climate_group ? 'CLIMATE GROUP' : 'CLIMATE') + ' DOES NOT EXIST';
 
               // Hide everything except the message, climate code, and navigation buttons
               document.getElementById('ariditySection').style.display = 'none';
@@ -176,62 +235,70 @@
             // show only if (group AND exists AND at least one button is available)
             aridityEl.hidden = !(climate_group && climate_exists && anyAvailable);
 
-            function renderCities(cities) {
-              // Support both old (flat array with "(...)" suffixes) and future (grouped) formats.
-              // If `cities` is already an object like { "1900s": [...], "2025": [...], "2100": [...] } use it directly.
-              let groups = { "1900s": [], "2025": [], "2100": [] };
+            // ---------- CITIES (map1..map4 only) ----------
+            renderCities(climate_cities);
 
-              if (Array.isArray(cities)) {
-                // Parse the time suffix and strip it from the display text
-                const re = /\s*\((1961-1990 normals|2025|2100)\)\s*$/;
-                cities.forEach((entry) => {
-                  if (typeof entry !== 'string') return;
-                  const m = entry.match(re);
-                  if (m) {
-                    const period = m[1] === '1961-1990 normals' ? '1900s' : m[1];
-                    const clean = entry.replace(re, '');
-                    groups[period].push(clean);
-                  } else {
-                    // If no suffix, drop it into 2025 by default (or choose another default)
-                    groups['2025'].push(entry);
-                  }
-                });
-              } else if (cities && typeof cities === 'object') {
-                // Already grouped (optional future backend format)
-                if (Array.isArray(cities['1900s'])) groups['1900s'] = cities['1900s'];
-                if (Array.isArray(cities['2025']))  groups['2025']  = cities['2025'];
-                if (Array.isArray(cities['2100']))  groups['2100']  = cities['2100'];
-              }
+            function renderCities(cities) {
+              // Expect object with map1..map4; missing keys → empty arrays
+              const groups = {
+                map1: Array.isArray(cities?.map1) ? cities.map1.slice() : [],
+                map2: Array.isArray(cities?.map2) ? cities.map2.slice() : [],
+                map3: Array.isArray(cities?.map3) ? cities.map3.slice() : [],
+                map4: Array.isArray(cities?.map4) ? cities.map4.slice() : [],
+              };
+
+              // Relabel existing 3 headings to the new period labels
+              const idToPeriod = {
+                cities_1900s: 'map1',
+                cities_2025:  'map2',
+                cities_2100:  'map3',
+              };
+              Object.entries(idToPeriod).forEach(([blockId, period]) => {
+                const block = document.getElementById(blockId);
+                if (block) {
+                  const h3 = block.querySelector('h3');
+                  if (h3) h3.textContent = `Cities with this climate (${PERIOD_LABELS[period]})`;
+                }
+              });
 
               // Helper to render one group into a UL; hide block if empty
-              function fillList(blockId, listId, arr) {
-                const block = document.getElementById(blockId);
-                const ul = document.getElementById(listId);
+              function fillList(blockId, listId, arr, periodLabel) {
                 if (!arr || arr.length === 0) {
+                  const block = document.getElementById(blockId);
                   if (block) block.style.display = 'none';
                   return;
                 }
+                // Ensure (& relabel) block exists (for potential map4)
+                ensureCitiesBlock(blockId, listId, periodLabel);
+
+                const ul = document.getElementById(listId);
                 if (ul) {
-                  ul.innerHTML = ''; // clear
+                  ul.innerHTML = '';
                   arr.sort((a, b) => a.localeCompare(b)).forEach((city) => {
                     const li = document.createElement('li');
-                    li.textContent = city; // dates already stripped
+                    li.textContent = city;
                     ul.appendChild(li);
                   });
                 }
               }
 
-              fillList('cities_1900s', 'climate_cities_1900s', groups['1900s']);
-              fillList('cities_2025',  'climate_cities_2025',  groups['2025']);
-              fillList('cities_2100',  'climate_cities_2100',  groups['2100']);
+              // Reuse existing blocks for map1..map3
+              fillList('cities_1900s', 'climate_cities_1900s', groups.map1, PERIOD_LABELS.map1);
+              fillList('cities_2025',  'climate_cities_2025',  groups.map2, PERIOD_LABELS.map2);
+              fillList('cities_2100',  'climate_cities_2100',  groups.map3, PERIOD_LABELS.map3);
 
-              // If all three are empty, hide the whole section
-              if (groups['1900s'].length + groups['2025'].length + groups['2100'].length === 0) {
+              // Add a 4th block only if needed
+              if (groups.map4.length) {
+                fillList('cities_map4', 'climate_cities_map4', groups.map4, PERIOD_LABELS.map4);
+              }
+
+              // Hide entire section if all empty
+              const total = groups.map1.length + groups.map2.length + groups.map3.length + groups.map4.length;
+              if (total === 0) {
                 const whole = document.getElementById('cities');
                 if (whole) whole.style.display = 'none';
               }
             }
-
 
             function change_climate(code) {
                 window.location.href = window.location.pathname + '?code=' + code;
@@ -263,35 +330,45 @@
             if (disable_or_omit(climate_go_to_arid_desert)) document.getElementById('climate_go_to_arid_desert').disabled = true;
             else document.getElementById('climate_go_to_arid_desert').onclick = () => change_climate(climate_go_to_arid_desert);
 
-            const images = [
-              { id: 'climate_landscape', src: climate_landscape, alt: 'landscape in this climate' },
-              { id: 'climate_map_1900s', src: climate_map_1900s, alt: 'climate map (1961-1990 normals)' },
-              { id: 'climate_map_2025',  src: climate_map_2025,  alt: 'climate map in 2025' },
-              { id: 'climate_map_2100',  src: climate_map_2100,  alt: 'climate map in 2100' }
+            // ---------- MAPS (map1..map4) ----------
+            const FALLBACK_MAP = 'images/maps/nothing.png';
+            const FALLBACK_LANDSCAPE = 'images/landscapes/nothing.png'; // optional, keeps your prior behavior
+
+            // Prefer explicit URLs from JSON; else derive from code (CmaX-map#.png)
+            const derive = (n) => `images/maps/${climate_code}-map${n}.png`;
+            const map1 = climate['map1'] || derive(1);
+            const map2 = climate['map2'] || derive(2);
+            const map3 = climate['map3'] || derive(3);
+            const map4 = climate['map4'] || derive(4);
+
+            // Relabel existing 3 headings to new labels and set images
+            const existingSections = [
+              { sectionId: '1900s', id: 'climate_map_1900s', url: map1, label: PERIOD_LABELS.map1, alt: 'climate map (1981-2010 normals)' },
+              { sectionId: '2025',  id: 'climate_map_2025',  url: map2, label: PERIOD_LABELS.map2, alt: 'climate map (2011-2040 High Emissions normals)' },
+              { sectionId: '2100',  id: 'climate_map_2100',  url: map3, label: PERIOD_LABELS.map3, alt: 'climate map (2041-2070 High Emissions normals)' },
             ];
 
-            const FALLBACK_MAP = 'images/maps/nothing.png';
-            // No idea why the fallback landscape makes it work
-            // but the code crashes if it doesn't have both maps and landscape.
-            const FALLBACK_LANDSCAPE = 'images/landscapes/nothing.png'; // optional
+            existingSections.forEach(({ sectionId, id, url, label, alt }) => {
+              const sec = document.getElementById(sectionId);
+              if (sec) {
+                const h3 = sec.querySelector('h3');
+                if (h3) h3.textContent = `Global distribution of this climate (${label})`;
+              }
+              const el = document.getElementById(id);
+              setImgWithFallback(el, url, alt, FALLBACK_MAP);
+              if ((!url || String(url).trim() === '') && sec) sec.style.display = 'none';
+            });
 
-            function setImgWithFallback(el, url, alt, fallback) {
-              if (!el) return;
-              el.alt = alt;
-
-              // prevent infinite loop if fallback is missing
-              el.onerror = () => { el.onerror = null; el.src = fallback; };
-
-              // if URL is missing/empty, use fallback immediately
-              el.src = (url && url.trim() !== '') ? url : fallback;
+            // Add a fourth map section only if we have/assume a URL AND the climate exists
+            if (climate_exists && map4 && String(map4).trim() !== '') {
+              ensureMapSection('map4', 'climate_map_map4', PERIOD_LABELS.map4, 'climate map (2071-2100 High Emissions normals)');
+              const el4 = document.getElementById('climate_map_map4');
+              setImgWithFallback(el4, map4, 'climate map (2071-2100 High Emissions normals)', FALLBACK_MAP);
             }
 
-            images.forEach(({ id, src, alt }) => {
-              const el = document.getElementById(id);
-              // choose correct fallback
-              const fallback = id === 'climate_landscape' ? FALLBACK_LANDSCAPE : FALLBACK_MAP;
-              setImgWithFallback(el, src, alt, fallback);
-            });
+            // Landscape image (unchanged behavior)
+            const landscapeEl = document.getElementById('climate_landscape');
+            setImgWithFallback(landscapeEl, climate_landscape, 'landscape in this climate', FALLBACK_LANDSCAPE);
         })
         .catch(error => {
             throw new Error("Error loading climate data: " + error.message);
@@ -299,3 +376,4 @@
   </script>
 </body>
 </html>
+d
