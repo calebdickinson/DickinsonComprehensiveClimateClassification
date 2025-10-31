@@ -148,7 +148,7 @@
         section.id = sectionId;
 
         const h3 = document.createElement('h3');
-        h3.textContent = `Global distribution of this climate (${headingText})`;
+        h3.innerHTML = `Global distribution of this climate<br>(${headingText})`;
 
         const img = document.createElement('img');
         img.id = imgId;
@@ -159,7 +159,7 @@
         main.appendChild(section);
       } else {
         const h3 = section.querySelector('h3');
-        if (h3) h3.textContent = `Global distribution of this climate (${headingText})`;
+        if (h3) h3.innerHTML = `Global distribution of this climate<br>(${headingText})`;
       }
     }
 
