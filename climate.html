@@ -79,8 +79,6 @@
       </div>
     </div>
 
-    <br><br><p><i id="distribution_message"></i></p>
-
     <div id="1900s">
       <h3>Global distribution of this climate (1961-1990 normals)</h3>
       <img id="climate_map_1900s" src="" alt="climate map (1961-1990 normals)">
@@ -198,7 +196,6 @@
 
             const climate_cities = climate['cities'];   // now expected as {map1:[], map2:[], map3:[], map4:[]}
             const climate_landscape = climate['landscape'];
-            const distribution_message = "Please note that map data for oceans and Antarctica is not available.";
 
             const nameSuffix = climate_group ? " Climate Group" : " Climate";
             document.getElementById('climate_name').textContent = climate_name + nameSuffix;
