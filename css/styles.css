@@ -105,11 +105,13 @@ margin: 0;
 font-family: sans-serif;
 font-weight: bold;
 }
-main img {
-display: block;
-margin: 1rem auto;
-max-width: 90%;
-height: auto;
+img {
+  display: block;
+  margin-inline: auto;   /* centers horizontally in LTR/RTL */
+  max-width: 100%;       /* keep image within viewport width */
+  height: auto;          /* preserve aspect ratio */
+  max-height: 80vh;      /* fallback for older Safari */
+  max-height: 80svh;     /* correct on iOS with browser chrome */
 }
 main h3 {
 font-family: cursive;
@@ -256,12 +258,4 @@ box-shadow:
   padding-left: 0;         /* remove left indent */
   margin: 0 auto;          /* center the block itself */
   text-align: center;      /* center the text */
-}
-
-img {
-  display: block;
-  margin: 0 auto;   /* Centers the image */
-  max-height: 80vh; /* Limits height to 80% of viewport */
-  width: auto;      /* Natural width — no stretching */
-  object-fit: contain;
 }
