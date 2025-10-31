@@ -36,8 +36,11 @@ def _safe(fn, default):
 
 
 def _codes_from_cities_df(df) -> Set[str]:
-    # Collect codes from 1900s/2025/2100 cols (1,2,3). Normalize to UPPER.
-    cols = [1, 2, 3]
+    """
+    Collect codes from climate columns, now supporting 4 slices (cols 1..4).
+    Normalizes to UPPER. Ignores missing columns gracefully.
+    """
+    cols = [1, 2, 3, 4]
     out: Set[str] = set()
     for c in cols:
         if c >= df.shape[1]:
@@ -61,6 +64,23 @@ def _group_targets_from_backend(codes: Iterable[str]) -> Set[str]:
             # If backend can't parse a code, skip it
             pass
     return targets
+
+
+def _cities_grouped_by_maps(df, climate_code: str) -> Dict[str, list]:
+    """
+    Return cities grouped by map1..map4 using df columns:
+      col0 = location name, col1..col4 = climate codes for each slice.
+    Works if col4 is absent (then map4 = []).
+    """
+    name_col = df.columns[0] if df.shape[1] > 0 else 0
+    out = {"map1": [], "map2": [], "map3": [], "map4": []}
+    for i, key in enumerate(["map1", "map2", "map3", "map4"], start=1):
+        if i >= df.shape[1]:
+            continue
+        matches = df[df.iloc[:, i].astype(str).str.strip().str.upper() == climate_code.upper()]
+        if not matches.empty:
+            out[key] = [str(v).strip() for v in matches[name_col].dropna().astype(str)]
+    return out
 
 
 def generate_json() -> Dict[str, Dict[str, Any]]:  # type: ignore
@@ -127,12 +147,15 @@ def generate_json() -> Dict[str, Dict[str, Any]]:  # type: ignore
             'go_to_hotter_winter': hotter_winter,
             'go_to_colder_winter': colder_winter,
 
-            'map_1900s': f'images/maps/{code}map.png',
-            'map_2025':  f'images/maps/2025{code}map.png',
-            'map_2100':  f'images/maps/2100{code}map.png',
+            # NEW: 4-slice map filenames
+            'map1':      f'images/maps/{code}-map1.png',
+            'map2':      f'images/maps/{code}-map2.png',
+            'map3':      f'images/maps/{code}-map3.png',
+            'map4':      f'images/maps/{code}-map4.png',
             'landscape': f'images/landscapes/{code}.jpg',
 
-            'cities': format.list_places_by_climate_and_time(cities_df, code),
+            # NEW: cities grouped by map slice
+            'cities': _cities_grouped_by_maps(cities_df, code),
         }
 
     # --- Guarantee: no go_to_* points at a missing page ---
@@ -162,11 +185,16 @@ def generate_json() -> Dict[str, Dict[str, Any]]:  # type: ignore
             'go_to_colder_summer': "False",
             'go_to_hotter_winter': "False",
             'go_to_colder_winter': "False",
-            'map_1900s': f'images/maps/{dest_code}map.png',
-            'map_2025':  f'images/maps/2025{dest_code}map.png',
-            'map_2100':  f'images/maps/2100{dest_code}map.png',
+
+            # NEW: 4-slice map filenames for stubs as well
+            'map1':      f'images/maps/{dest_code}-map1.png',
+            'map2':      f'images/maps/{dest_code}-map2.png',
+            'map3':      f'images/maps/{dest_code}-map3.png',
+            'map4':      f'images/maps/{dest_code}-map4.png',
             'landscape': f'images/landscapes/{dest_code}.jpg',
-            'cities': format.list_places_by_climate_and_time(cities_df, dest_code),
+
+            # NEW: cities grouped by map slice (likely empty for stubs)
+            'cities': _cities_grouped_by_maps(cities_df, dest_code),
         }
 
     missing = []
