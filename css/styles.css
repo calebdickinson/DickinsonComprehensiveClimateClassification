@@ -107,10 +107,9 @@ font-weight: bold;
 }
 main img {
 display: block;
+margin: 1rem auto;
+max-width: 90%;
 height: auto;
-margin-bottom: 10px;
-max-width: 100%;
-max-height: 80vh; /* global limit for all images */
 }
 main h3 {
 font-family: cursive;
@@ -257,4 +256,12 @@ box-shadow:
   padding-left: 0;         /* remove left indent */
   margin: 0 auto;          /* center the block itself */
   text-align: center;      /* center the text */
+}
+
+img {
+  display: block;
+  margin: 0 auto;   /* Centers the image */
+  max-height: 80vh; /* Limits height to 80% of viewport */
+  width: auto;      /* Natural width — no stretching */
+  object-fit: contain;
 }
