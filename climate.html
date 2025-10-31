@@ -10,23 +10,25 @@
   </script>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="css/styles.css">
-    <title></title>
+  <title></title>
 </head>
 <body>
   <div id="header">
     <h1>The Dickinson Comprehensive Climate Classification System</h1>
   </div>
+
   <nav>
     <a href="home.html">Home</a>
     <a href="classification.html">Classification</a>
     <a href="maps.html">Maps</a>
     <a href="about.html">About</a>
   </nav>
+
   <main>
     <h1 id="climate_name"></h1>
 
     <div class="climate-code">
-        <h2><strong id='climate_exists'></strong></h2>
+      <h2><strong id="climate_exists"></strong></h2>
     </div>
 
     <div class="buttons-with-code">
@@ -44,68 +46,69 @@
     </div>
 
     <div class="box" id="ariditySection" hidden>
-        <div class="ariditybox-border-outer">
-            <div class="ariditybox-border-inner">
-                <div class="ariditybox-grid">
-                    <button id="climate_go_to_humid" class="ariditybox ariditybox-humid">Humid (H)</button>
-                    <button id="climate_go_to_semihumid" class="ariditybox ariditybox-semihumid">Semihumid (G)</button>
-                    <button id="climate_go_to_monsoon" class="ariditybox ariditybox-monsoon">Monsoon<br><br>(W)</button>
-                    <button id="climate_go_to_mediterranean" class="ariditybox ariditybox-mediterranean">Mediter-<br>ranean<br><br>(M)</button>
-                    <button id="climate_go_to_semiarid" class="ariditybox ariditybox-semiarid">Semiarid (S)</button>
-                    <button id="climate_go_to_arid_desert" class="ariditybox ariditybox-arid-desert">Arid Desert (D)</button>
-                </div>
-            </div>
+      <div class="ariditybox-border-outer">
+        <div class="ariditybox-border-inner">
+          <div class="ariditybox-grid">
+            <button id="climate_go_to_humid"           class="ariditybox ariditybox-humid">Humid (H)</button>
+            <button id="climate_go_to_semihumid"       class="ariditybox ariditybox-semihumid">Semihumid (G)</button>
+            <button id="climate_go_to_monsoon"         class="ariditybox ariditybox-monsoon">Monsoon<br><br>(W)</button>
+            <button id="climate_go_to_mediterranean"   class="ariditybox ariditybox-mediterranean">Mediter-<br>ranean<br><br>(M)</button>
+            <button id="climate_go_to_semiarid"        class="ariditybox ariditybox-semiarid">Semiarid (S)</button>
+            <button id="climate_go_to_arid_desert"     class="ariditybox ariditybox-arid-desert">Arid Desert (D)</button>
+          </div>
         </div>
+      </div>
     </div>
 
     <div id="landscapes">
       <img id="climate_landscape" src="" alt="landscape in this climate">
     </div>
 
+    <!-- Cities (neutral four-slot system) -->
     <div id="cities">
-      <div id="cities_1900s" class="cities-block">
-        <h3>Cities with this climate (1961–1990 normals)</h3>
-        <ul id="climate_cities_1900s"></ul>
+      <div id="cities1" class="cities-block">
+        <h3>Cities with this climate (Period 1)</h3>
+        <ul id="climate_cities1"></ul>
       </div>
-
-      <div id="cities_2025" class="cities-block">
-        <h3>Cities with this climate (2025)</h3>
-        <ul id="climate_cities_2025"></ul>
+      <div id="cities2" class="cities-block">
+        <h3>Cities with this climate (Period 2)</h3>
+        <ul id="climate_cities2"></ul>
       </div>
-
-      <div id="cities_2100" class="cities-block">
-        <h3>Cities with this climate (2100)</h3>
-        <ul id="climate_cities_2100"></ul>
+      <div id="cities3" class="cities-block">
+        <h3>Cities with this climate (Period 3)</h3>
+        <ul id="climate_cities3"></ul>
+      </div>
+      <div id="cities4" class="cities-block">
+        <h3>Cities with this climate (Period 4)</h3>
+        <ul id="climate_cities4"></ul>
       </div>
     </div>
 
-    <div id="1900s">
-      <h3>Global distribution of this climate (1961-1990 normals)</h3>
-      <img id="climate_map_1900s" src="" alt="climate map (1961-1990 normals)">
+    <!-- Maps (neutral four-slot system) -->
+    <div id="map1">
+      <h3>Global distribution of this climate (Period 1)</h3>
+      <img id="climate_map_1" src="" alt="climate map (Period 1)">
     </div>
-    
-    <div id="2025">
-      <h3>Global distribution of this climate (2025)</h3>
-      <img id="climate_map_2025" src="" alt="climate map in 2025">
+    <div id="map2">
+      <h3>Global distribution of this climate (Period 2)</h3>
+      <img id="climate_map_2" src="" alt="climate map (Period 2)">
     </div>
-
-    <div id="2100">
-      <h3>Global distribution of this climate (2100)</h3>
-      <img id="climate_map_2100" src="" alt="climate map in 2100">
+    <div id="map3">
+      <h3>Global distribution of this climate (Period 3)</h3>
+      <img id="climate_map_3" src="" alt="climate map (Period 3)">
     </div>
-
+    <div id="map4">
+      <h3>Global distribution of this climate (Period 4)</h3>
+      <img id="climate_map_4" src="" alt="climate map (Period 4)">
+    </div>
   </main>
-
 
   <!-- get data for specific climate code -->
   <script>
     const code = new URLSearchParams(location.search).get('code');
+    if (!code) throw new Error("No climate code specified in URL");
 
-    if (!code) {
-        throw new Error("No climate code specified in URL");
-    }
-
-    // New period labels for map1..map4 (shown in headings)
+    // Neutral labels for the four periods shown in headings
     const PERIOD_LABELS = {
       map1: "1981-2010 normals",
       map2: "2011-2040 High Emissions normals",
@@ -113,7 +116,7 @@
       map4: "2071-2100 High Emissions normals",
     };
 
-    // Utilities used below
+    // ---------- Utilities ----------
     function ensureCitiesBlock(blockId, ulId, headingText) {
       let block = document.getElementById(blockId);
       if (!block) {
@@ -167,207 +170,171 @@
       el.src = (url && String(url).trim() !== '') ? url : fallback;
     }
 
+    function change_climate(nextCode) {
+      window.location.href = window.location.pathname + '?code=' + nextCode;
+    }
+
+    function disable_or_omit(value) {
+      return value === "False" || value === "false" || value === false || value === "" || value === undefined || value === null;
+    }
+
+    // ---------- Data load ----------
     fetch('data/data.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
+      .then(r => {
+        if (!r.ok) throw new Error('Network response was not ok');
+        return r.json();
+      })
+      .then(data => {
+        const climate = data[code];
+        if (!climate) throw new Error(`Climate data for code "${code}" not found`);
+
+        const climate_code = climate['code'];
+        const climate_name = climate['name'];
+        const climate_exists = climate['exists'];
+        const climate_group = climate['group'];
+
+        const climate_go_to_humid = climate['go_to_humid'];
+        const climate_go_to_semihumid = climate['go_to_semihumid'];
+        const climate_go_to_monsoon = climate['go_to_monsoon'];
+        const climate_go_to_mediterranean = climate['go_to_mediterranean'];
+        const climate_go_to_semiarid = climate['go_to_semiarid'];
+        const climate_go_to_arid_desert = climate['go_to_arid_desert'];
+
+        const climate_go_to_hotter_summer = climate['go_to_hotter_summer'];
+        const climate_go_to_colder_summer = climate['go_to_colder_summer'];
+        const climate_go_to_hotter_winter = climate['go_to_hotter_winter'];
+        const climate_go_to_colder_winter = climate['go_to_colder_winter'];
+
+        const climate_cities = climate['cities']; // {map1:[], map2:[], map3:[], map4:[]}
+        const climate_landscape = climate['landscape'];
+
+        const nameSuffix = climate_group ? " Climate Group" : " Climate";
+        document.getElementById('climate_name').textContent = climate_name + nameSuffix;
+        document.getElementById('climate_code').textContent = climate_code;
+
+        if (!climate_exists) {
+          document.getElementById('climate_exists').textContent =
+            'THIS ' + (climate_group ? 'CLIMATE GROUP' : 'CLIMATE') + ' DOES NOT EXIST';
+
+          // Hide everything except the message, climate code, and navigation buttons
+          document.getElementById('ariditySection').style.display = 'none';
+          document.getElementById('landscapes').style.display = 'none';
+          document.getElementById('cities').style.display = 'none';
+          document.getElementById('map1').style.display = 'none';
+          document.getElementById('map2').style.display = 'none';
+          document.getElementById('map3').style.display = 'none';
+          document.getElementById('map4').style.display = 'none';
+        }
+
+        // Aridity box visibility (group + exists + any button available)
+        const aridityTargets = [
+          climate_go_to_humid,
+          climate_go_to_semihumid,
+          climate_go_to_monsoon,
+          climate_go_to_mediterranean,
+          climate_go_to_semiarid,
+          climate_go_to_arid_desert,
+        ];
+        const anyAvailable = aridityTargets.some(v => !disable_or_omit(v));
+        document.getElementById('ariditySection').hidden = !(climate_group && climate_exists && anyAvailable);
+
+        // Wire nav buttons
+        if (disable_or_omit(climate_go_to_hotter_summer)) document.getElementById('climate_go_to_hotter_summer').disabled = true;
+        else document.getElementById('climate_go_to_hotter_summer').onclick = () => change_climate(climate_go_to_hotter_summer);
+        if (disable_or_omit(climate_go_to_colder_summer)) document.getElementById('climate_go_to_colder_summer').disabled = true;
+        else document.getElementById('climate_go_to_colder_summer').onclick = () => change_climate(climate_go_to_colder_summer);
+        if (disable_or_omit(climate_go_to_hotter_winter)) document.getElementById('climate_go_to_hotter_winter').disabled = true;
+        else document.getElementById('climate_go_to_hotter_winter').onclick = () => change_climate(climate_go_to_hotter_winter);
+        if (disable_or_omit(climate_go_to_colder_winter)) document.getElementById('climate_go_to_colder_winter').disabled = true;
+        else document.getElementById('climate_go_to_colder_winter').onclick = () => change_climate(climate_go_to_colder_winter);
+
+        if (disable_or_omit(climate_go_to_humid)) document.getElementById('climate_go_to_humid').disabled = true;
+        else document.getElementById('climate_go_to_humid').onclick = () => change_climate(climate_go_to_humid);
+        if (disable_or_omit(climate_go_to_semihumid)) document.getElementById('climate_go_to_semihumid').disabled = true;
+        else document.getElementById('climate_go_to_semihumid').onclick = () => change_climate(climate_go_to_semihumid);
+        if (disable_or_omit(climate_go_to_monsoon)) document.getElementById('climate_go_to_monsoon').disabled = true;
+        else document.getElementById('climate_go_to_monsoon').onclick = () => change_climate(climate_go_to_monsoon);
+        if (disable_or_omit(climate_go_to_mediterranean)) document.getElementById('climate_go_to_mediterranean').disabled = true;
+        else document.getElementById('climate_go_to_mediterranean').onclick = () => change_climate(climate_go_to_mediterranean);
+        if (disable_or_omit(climate_go_to_semiarid)) document.getElementById('climate_go_to_semiarid').disabled = true;
+        else document.getElementById('climate_go_to_semiarid').onclick = () => change_climate(climate_go_to_semiarid);
+        if (disable_or_omit(climate_go_to_arid_desert)) document.getElementById('climate_go_to_arid_desert').disabled = true;
+        else document.getElementById('climate_go_to_arid_desert').onclick = () => change_climate(climate_go_to_arid_desert);
+
+        // ---------- CITIES (map1..map4 → cities1..cities4) ----------
+        (function renderCities(cities) {
+          const groups = {
+            map1: Array.isArray(cities?.map1) ? cities.map1.slice() : [],
+            map2: Array.isArray(cities?.map2) ? cities.map2.slice() : [],
+            map3: Array.isArray(cities?.map3) ? cities.map3.slice() : [],
+            map4: Array.isArray(cities?.map4) ? cities.map4.slice() : [],
+          };
+
+          function fillList(blockId, listId, arr, periodKey) {
+            const periodLabel = PERIOD_LABELS[periodKey];
+            if (!arr || arr.length === 0) {
+              const block = document.getElementById(blockId);
+              if (block) block.style.display = 'none';
+              return;
             }
-            return response.json();
-        })
-        .then(data => {
-            const climate = data[code];
-            if (!climate) throw new Error(`Climate data for code "${code}" not found`);
-
-            const climate_code = climate['code'];
-            const climate_name = climate['name'];
-            const climate_exists = climate['exists'];
-            const climate_group = climate['group'];
-
-            const climate_go_to_humid = climate['go_to_humid'];
-            const climate_go_to_semihumid = climate['go_to_semihumid'];
-            const climate_go_to_monsoon = climate['go_to_monsoon'];
-            const climate_go_to_mediterranean = climate['go_to_mediterranean'];
-            const climate_go_to_semiarid = climate['go_to_semiarid'];
-            const climate_go_to_arid_desert = climate['go_to_arid_desert'];
-            const climate_go_to_hotter_summer = climate['go_to_hotter_summer'];
-            const climate_go_to_colder_summer = climate['go_to_colder_summer'];
-            const climate_go_to_hotter_winter = climate['go_to_hotter_winter'];
-            const climate_go_to_colder_winter = climate['go_to_colder_winter'];
-
-            const climate_cities = climate['cities'];   // now expected as {map1:[], map2:[], map3:[], map4:[]}
-            const climate_landscape = climate['landscape'];
-
-            const nameSuffix = climate_group ? " Climate Group" : " Climate";
-            document.getElementById('climate_name').textContent = climate_name + nameSuffix;
-            document.getElementById('climate_code').textContent = climate_code;
-
-            if (!climate_exists) {
-              document.getElementById('climate_exists').textContent =
-                'THIS ' + (climate_group ? 'CLIMATE GROUP' : 'CLIMATE') + ' DOES NOT EXIST';
-
-              // Hide everything except the message, climate code, and navigation buttons
-              document.getElementById('ariditySection').style.display = 'none';
-              document.getElementById('landscapes').style.display = 'none';
-              document.getElementById('cities').style.display = 'none';
-              document.getElementById('1900s').style.display = 'none';
-              document.getElementById('2025').style.display = 'none';
-              document.getElementById('2100').style.display = 'none';
-            }
-
-            const aridityEl = document.getElementById('ariditySection');
-
-            // compute once
-            const aridityTargets = [
-              climate_go_to_humid,
-              climate_go_to_semihumid,
-              climate_go_to_monsoon,
-              climate_go_to_mediterranean,
-              climate_go_to_semiarid,
-              climate_go_to_arid_desert,
-            ];
-            const anyAvailable = aridityTargets.some(v => !disable_or_omit(v));
-
-            // show only if (group AND exists AND at least one button is available)
-            aridityEl.hidden = !(climate_group && climate_exists && anyAvailable);
-
-            // ---------- CITIES (map1..map4 only) ----------
-            renderCities(climate_cities);
-
-            function renderCities(cities) {
-              // Expect object with map1..map4; missing keys → empty arrays
-              const groups = {
-                map1: Array.isArray(cities?.map1) ? cities.map1.slice() : [],
-                map2: Array.isArray(cities?.map2) ? cities.map2.slice() : [],
-                map3: Array.isArray(cities?.map3) ? cities.map3.slice() : [],
-                map4: Array.isArray(cities?.map4) ? cities.map4.slice() : [],
-              };
-
-              // Relabel existing 3 headings to the new period labels
-              const idToPeriod = {
-                cities_1900s: 'map1',
-                cities_2025:  'map2',
-                cities_2100:  'map3',
-              };
-              Object.entries(idToPeriod).forEach(([blockId, period]) => {
-                const block = document.getElementById(blockId);
-                if (block) {
-                  const h3 = block.querySelector('h3');
-                  if (h3) h3.textContent = `Cities with this climate (${PERIOD_LABELS[period]})`;
-                }
+            ensureCitiesBlock(blockId, listId, periodLabel);
+            const ul = document.getElementById(listId);
+            if (ul) {
+              ul.innerHTML = '';
+              arr.sort((a, b) => a.localeCompare(b)).forEach(city => {
+                const li = document.createElement('li');
+                li.textContent = city;
+                ul.appendChild(li);
               });
-
-              // Helper to render one group into a UL; hide block if empty
-              function fillList(blockId, listId, arr, periodLabel) {
-                if (!arr || arr.length === 0) {
-                  const block = document.getElementById(blockId);
-                  if (block) block.style.display = 'none';
-                  return;
-                }
-                // Ensure (& relabel) block exists (for potential map4)
-                ensureCitiesBlock(blockId, listId, periodLabel);
-
-                const ul = document.getElementById(listId);
-                if (ul) {
-                  ul.innerHTML = '';
-                  arr.sort((a, b) => a.localeCompare(b)).forEach((city) => {
-                    const li = document.createElement('li');
-                    li.textContent = city;
-                    ul.appendChild(li);
-                  });
-                }
-              }
-
-              // Reuse existing blocks for map1..map3
-              fillList('cities_1900s', 'climate_cities_1900s', groups.map1, PERIOD_LABELS.map1);
-              fillList('cities_2025',  'climate_cities_2025',  groups.map2, PERIOD_LABELS.map2);
-              fillList('cities_2100',  'climate_cities_2100',  groups.map3, PERIOD_LABELS.map3);
-
-              // Add a 4th block only if needed
-              if (groups.map4.length) {
-                fillList('cities_map4', 'climate_cities_map4', groups.map4, PERIOD_LABELS.map4);
-              }
-
-              // Hide entire section if all empty
-              const total = groups.map1.length + groups.map2.length + groups.map3.length + groups.map4.length;
-              if (total === 0) {
-                const whole = document.getElementById('cities');
-                if (whole) whole.style.display = 'none';
-              }
             }
+          }
 
-            function change_climate(code) {
-                window.location.href = window.location.pathname + '?code=' + code;
-            }
+          fillList('cities1', 'climate_cities1', groups.map1, 'map1');
+          fillList('cities2', 'climate_cities2', groups.map2, 'map2');
+          fillList('cities3', 'climate_cities3', groups.map3, 'map3');
+          fillList('cities4', 'climate_cities4', groups.map4, 'map4');
 
-            function disable_or_omit(value) {
-                return value === "False" || value === "false" || value === false || value === "" || value === undefined || value === null
-            }
+          const total = groups.map1.length + groups.map2.length + groups.map3.length + groups.map4.length;
+          if (total === 0) {
+            const whole = document.getElementById('cities');
+            if (whole) whole.style.display = 'none';
+          }
+        })(climate_cities);
 
-            if (disable_or_omit(climate_go_to_hotter_summer)) document.getElementById('climate_go_to_hotter_summer').disabled = true;
-            else document.getElementById('climate_go_to_hotter_summer').onclick = () => change_climate(climate_go_to_hotter_summer);
-            if (disable_or_omit(climate_go_to_colder_summer)) document.getElementById('climate_go_to_colder_summer').disabled = true;
-            else document.getElementById('climate_go_to_colder_summer').onclick = () => change_climate(climate_go_to_colder_summer);
-            if (disable_or_omit(climate_go_to_hotter_winter)) document.getElementById('climate_go_to_hotter_winter').disabled = true;
-            else document.getElementById('climate_go_to_hotter_winter').onclick = () => change_climate(climate_go_to_hotter_winter);
-            if (disable_or_omit(climate_go_to_colder_winter)) document.getElementById('climate_go_to_colder_winter').disabled = true;
-            else document.getElementById('climate_go_to_colder_winter').onclick = () => change_climate(climate_go_to_colder_winter);
+        // ---------- MAPS (map1..map4 sections) ----------
+        const FALLBACK_MAP = 'images/maps/nothing.png';
+        const FALLBACK_LANDSCAPE = 'images/landscapes/nothing.png';
 
-            if (disable_or_omit(climate_go_to_humid)) document.getElementById('climate_go_to_humid').disabled = true;
-            else document.getElementById('climate_go_to_humid').onclick = () => change_climate(climate_go_to_humid);
-            if (disable_or_omit(climate_go_to_semihumid)) document.getElementById('climate_go_to_semihumid').disabled = true;
-            else document.getElementById('climate_go_to_semihumid').onclick = () => change_climate(climate_go_to_semihumid);
-            if (disable_or_omit(climate_go_to_monsoon)) document.getElementById('climate_go_to_monsoon').disabled = true;
-            else document.getElementById('climate_go_to_monsoon').onclick = () => change_climate(climate_go_to_monsoon);
-            if (disable_or_omit(climate_go_to_mediterranean)) document.getElementById('climate_go_to_mediterranean').disabled = true;
-            else document.getElementById('climate_go_to_mediterranean').onclick = () => change_climate(climate_go_to_mediterranean);
-            if (disable_or_omit(climate_go_to_semiarid)) document.getElementById('climate_go_to_semiarid').disabled = true;
-            else document.getElementById('climate_go_to_semiarid').onclick = () => change_climate(climate_go_to_semiarid);
-            if (disable_or_omit(climate_go_to_arid_desert)) document.getElementById('climate_go_to_arid_desert').disabled = true;
-            else document.getElementById('climate_go_to_arid_desert').onclick = () => change_climate(climate_go_to_arid_desert);
+        // Prefer explicit URLs from JSON; else derive from code as <CODE>-map#.png
+        const derive = (n) => `images/maps/${climate_code}-map${n}.png`;
+        const map1 = climate['map1'] || derive(1);
+        const map2 = climate['map2'] || derive(2);
+        const map3 = climate['map3'] || derive(3);
+        const map4 = climate['map4'] || derive(4);
 
-            // ---------- MAPS (map1..map4) ----------
-            const FALLBACK_MAP = 'images/maps/nothing.png';
-            const FALLBACK_LANDSCAPE = 'images/landscapes/nothing.png'; // optional, keeps your prior behavior
+        // Make sure headings reflect neutral period labels
+        const mapSections = [
+          { sectionId: 'map1', imgId: 'climate_map_1', url: map1, label: PERIOD_LABELS.map1, alt: 'climate map (Period 1)' },
+          { sectionId: 'map2', imgId: 'climate_map_2', url: map2, label: PERIOD_LABELS.map2, alt: 'climate map (Period 2)' },
+          { sectionId: 'map3', imgId: 'climate_map_3', url: map3, label: PERIOD_LABELS.map3, alt: 'climate map (Period 3)' },
+          { sectionId: 'map4', imgId: 'climate_map_4', url: map4, label: PERIOD_LABELS.map4, alt: 'climate map (Period 4)' },
+        ];
 
-            // Prefer explicit URLs from JSON; else derive from code (CmaX-map#.png)
-            const derive = (n) => `images/maps/${climate_code}-map${n}.png`;
-            const map1 = climate['map1'] || derive(1);
-            const map2 = climate['map2'] || derive(2);
-            const map3 = climate['map3'] || derive(3);
-            const map4 = climate['map4'] || derive(4);
+        mapSections.forEach(({ sectionId, imgId, url, label, alt }) => {
+          ensureMapSection(sectionId, imgId, label, alt);
+          const sec = document.getElementById(sectionId);
+          const img = document.getElementById(imgId);
+          setImgWithFallback(img, url, alt, FALLBACK_MAP);
+          if ((!url || String(url).trim() === '') && sec) sec.style.display = 'none';
+        });
 
-            // Relabel existing 3 headings to new labels and set images
-            const existingSections = [
-              { sectionId: '1900s', id: 'climate_map_1900s', url: map1, label: PERIOD_LABELS.map1, alt: 'climate map (1981-2010 normals)' },
-              { sectionId: '2025',  id: 'climate_map_2025',  url: map2, label: PERIOD_LABELS.map2, alt: 'climate map (2011-2040 High Emissions normals)' },
-              { sectionId: '2100',  id: 'climate_map_2100',  url: map3, label: PERIOD_LABELS.map3, alt: 'climate map (2041-2070 High Emissions normals)' },
-            ];
-
-            existingSections.forEach(({ sectionId, id, url, label, alt }) => {
-              const sec = document.getElementById(sectionId);
-              if (sec) {
-                const h3 = sec.querySelector('h3');
-                if (h3) h3.textContent = `Global distribution of this climate (${label})`;
-              }
-              const el = document.getElementById(id);
-              setImgWithFallback(el, url, alt, FALLBACK_MAP);
-              if ((!url || String(url).trim() === '') && sec) sec.style.display = 'none';
-            });
-
-            // Add a fourth map section only if we have/assume a URL AND the climate exists
-            if (climate_exists && map4 && String(map4).trim() !== '') {
-              ensureMapSection('map4', 'climate_map_map4', PERIOD_LABELS.map4, 'climate map (2071-2100 High Emissions normals)');
-              const el4 = document.getElementById('climate_map_map4');
-              setImgWithFallback(el4, map4, 'climate map (2071-2100 High Emissions normals)', FALLBACK_MAP);
-            }
-
-            // Landscape image (unchanged behavior)
-            const landscapeEl = document.getElementById('climate_landscape');
-            setImgWithFallback(landscapeEl, climate_landscape, 'landscape in this climate', FALLBACK_LANDSCAPE);
-        })
-        .catch(error => {
-            throw new Error("Error loading climate data: " + error.message);
-        })
+        // Landscape image
+        const landscapeEl = document.getElementById('climate_landscape');
+        setImgWithFallback(landscapeEl, climate_landscape, 'landscape in this climate', FALLBACK_LANDSCAPE);
+      })
+      .catch(err => {
+        throw new Error("Error loading climate data: " + err.message);
+      });
   </script>
 </body>
 </html>
