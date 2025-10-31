@@ -200,7 +200,6 @@
             const nameSuffix = climate_group ? " Climate Group" : " Climate";
             document.getElementById('climate_name').textContent = climate_name + nameSuffix;
             document.getElementById('climate_code').textContent = climate_code;
-            document.getElementById('distribution_message').textContent = distribution_message;
 
             if (!climate_exists) {
               document.getElementById('climate_exists').textContent =
@@ -210,7 +209,6 @@
               document.getElementById('ariditySection').style.display = 'none';
               document.getElementById('landscapes').style.display = 'none';
               document.getElementById('cities').style.display = 'none';
-              document.getElementById('distribution_message').style.display = 'none';
               document.getElementById('1900s').style.display = 'none';
               document.getElementById('2025').style.display = 'none';
               document.getElementById('2100').style.display = 'none';
