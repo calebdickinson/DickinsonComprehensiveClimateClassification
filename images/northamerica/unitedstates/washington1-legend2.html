@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Climate Legend</title>
+
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+    }
+
+    .legend {
+      position: fixed; top: 20px; right: 20px; z-index: 9999;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 16px 28px; padding: 24px;
+      background: #fff;
+      border: 2px solid #ccc; border-radius: 16px;
+      font-family: system-ui, Arial, sans-serif; color: #222;
+      box-shadow: 0 8px 28px rgba(0,0,0,.08);
+      max-width: min(96vw, 1600px);
+    }
+
+    .legend-item {
+      display: flex; align-items: center; gap: 20px;
+      min-width: 0;
+    }
+
+    .legend-swatch {
+      width: 72px; height: 36px; border: 2px solid #333; border-radius: 6px;
+      box-sizing: border-box;
+      flex: 0 0 auto;
+    }
+
+    .legend-label {
+      display: block;
+      white-space: nowrap; overflow: hidden;
+      text-overflow: clip;
+      flex: 1 1 auto; min-width: 0;
+      line-height: 1.2;
+    }
+
+    /* Invisible placeholder cell (keeps grid alignment) */
+    .legend-blank {
+      width: 100%;
+      height: 36px;
+      visibility: hidden;
+    }
+
+    /* Thicker horizontal black divider (spans full grid width) */
+    .legend-divider {
+      grid-column: span 6;
+      height: 6px;
+      background-color: #000;
+      border-radius: 3px;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+	// example of code for blank cell space or spaces
+    // 5 blank cell spaces in the following example
+    // { blank: true, span: 5 },
+    //
+    // code for dividing line
+    // { divider: true },
+    // ---------- CONFIG ----------
+    const LEGEND_ITEMS = [
+      
+      { label: "Dhb2", color: "#006600" },
+      { label: "Dgb2", color: "#88ff88" },
+      { label: "Dsb2", color: "#ccaa88" },
+      { label: "Ddb2", color: "#ff00cc" },
+      { blank: true, span: 1 },
+      { label: "Dmb2", color: "#666600" },
+      
+      { label: "Dha1", color: "#009900" },
+      { label: "Dga1", color: "#00ff00" },
+      { label: "Dsa1", color: "#aa8866" },
+      { label: "Dda1", color: "#dd0066" },
+      { blank: true, span: 1 },
+      { label: "Dma1", color: "#999900" },
+      
+      { blank: true, span: 3 },
+      { label: "Dda2", color: "#aa0044" },
+      { blank: true, span: 1 },
+      { label: "Dma2", color: "#00ffff" },
+      
+      { divider: true },
+      
+      { blank: true, span: 5 },
+      { label: "Cmb2", color: "#88ff00" },
+      
+      { blank: true, span: 1 },
+      { label: "Cga1", color: "#ff00ff" },
+      { label: "Csa1", color: "#ffcc00" },
+      { label: "Cda1", color: "#ff5500" },
+      { blank: true, span: 1 },
+      { label: "Cma1", color: "#ffff88" },
+      
+      { blank: true, span: 2 },
+      { label: "Csa2", color: "#cc8800" },
+      { label: "Cda2", color: "#ff0000" },
+      { blank: true, span: 1 },
+      { label: "Cma2", color: "#ffff00" },
+      
+    ];
+
+    // ---------- RENDER ----------
+    const legend = document.createElement('div');
+    legend.className = 'legend';
+    document.body.appendChild(legend);
+
+    LEGEND_ITEMS.forEach(({ label, color, blank, span, divider }) => {
+      if (divider) {
+        const line = document.createElement('div');
+        line.className = 'legend-divider';
+        legend.appendChild(line);
+        return;
+      }
+
+      if (blank) {
+        const count = span || 1;
+        for (let i = 0; i < count; i++) {
+          const spacer = document.createElement('div');
+          spacer.className = 'legend-blank';
+          legend.appendChild(spacer);
+        }
+        return;
+      }
+
+      const item = document.createElement('div');
+      item.className = 'legend-item';
+
+      const swatch = document.createElement('div');
+      swatch.className = 'legend-swatch';
+      swatch.style.background = color;
+
+      const text = document.createElement('span');
+      text.className = 'legend-label';
+      text.textContent = label;
+
+      item.appendChild(swatch);
+      item.appendChild(text);
+      legend.appendChild(item);
+    });
+
+    // ---------- FIT LONG LABELS (auto-shrink) ----------
+    (function fitLabels() {
+      const MAX = 28, MIN = 16, STEP = 1;
+      const labels = Array.from(document.querySelectorAll('.legend-label'));
+      labels.forEach(el => {
+        let size = MAX;
+        el.style.fontSize = `${size}px`;
+        while (size > MIN && el.scrollWidth > el.clientWidth) {
+          size -= STEP;
+          el.style.fontSize = `${size}px`;
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
