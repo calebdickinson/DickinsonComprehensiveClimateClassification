@@ -172,8 +172,8 @@ def does_exist(code: str) -> bool:
         'CH',
         'DH', 'DX',
         'EH', 'EX',
-        'FH', 'FX', 'FZ2', 'FZ1',
-        'GH', 'GX', 'GZ2', 'GZ1',
+        'FH', 'FX', 'FZ2',
+        'GH', 'GX', 'GZ2',
         'YH', 'YX', 'YZ2', 'YZ1', 'YA2', 'YA1'
         ]
 

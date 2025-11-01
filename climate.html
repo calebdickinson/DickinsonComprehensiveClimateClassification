@@ -86,20 +86,54 @@
 
     <!-- Maps (neutral four-slot system) -->
     <div id="map1">
-      <h3>Global distribution of this climate (Period 1)</h3>
-      <img id="climate_map_1" src="" alt="climate map (Period 1)">
+      <h3>Global distribution of this climate<br>(1981 - 2010 normals)</h3>
+      <img id="climate_map_1" src="" alt="World climate map (1981 - 2010 normals)">
     </div>
     <div id="map2">
-      <h3>Global distribution of this climate (Period 2)</h3>
-      <img id="climate_map_2" src="" alt="climate map (Period 2)">
+      <h3>Global distribution of this climate<br>(2011 - 2040 High Emissions normals)</h3>
+      <img id="climate_map_2" src="" alt="World climate map (2011 - 2040 High Emissions normals)">
     </div>
     <div id="map3">
-      <h3>Global distribution of this climate (Period 3)</h3>
-      <img id="climate_map_3" src="" alt="climate map (Period 3)">
+      <h3>Global distribution of this climate<br>(2041 - 2070 High Emissions normals)</h3>
+      <img id="climate_map_3" src="" alt="World climate map (2041 - 2070 High Emissions normals)">
     </div>
     <div id="map4">
-      <h3>Global distribution of this climate (Period 4)</h3>
-      <img id="climate_map_4" src="" alt="climate map (Period 4)">
+      <h3>Global distribution of this climate<br>(2071 - 2100 High Emissions normals)</h3>
+      <img id="climate_map_4" src="" alt="World climate map (2071 - 2100 High Emissions normals)">
+    </div>
+    <!-- United States maps (optional four-slot system) -->
+    <div id="map1usa">
+      <h3>United States distribution of this climate<br>(1981 - 2010 normals)</h3>
+      <img id="climate_map_1_usa" src="" alt="United States climate map (1981 - 2010 normals)">
+    </div>
+    <div id="map2usa">
+      <h3>United States distribution of this climate<br>(2011 - 2040 High Emissions normals)</h3>
+      <img id="climate_map_2_usa" src="" alt="United States climate map (2011 - 2040 High Emissions normals)">
+    </div>
+    <div id="map3usa">
+      <h3>United States distribution of this climate<br>(2041 - 2070 High Emissions normals)</h3>
+      <img id="climate_map_3_usa" src="" alt="United States climate map (2041 - 2070 High Emissions normals)">
+    </div>
+    <div id="map4usa">
+      <h3>United States distribution of this climate<br>(2071 - 2100 High Emissions normals)</h3>
+      <img id="climate_map_4_usa" src="" alt="United States climate map (2071 - 2100 High Emissions normals)">
+    </div>
+    <!-- Europe maps (optional four-slot system) -->
+    <div id="map1europe">
+      <h3>Europe distribution of this climate<br>(1981 - 2010 normals)</h3>
+      <img id="climate_map_1_europe" src="" alt="Europe climate map (1981 - 2010 normals)">
+    </div>
+    <div id="map2europe">
+      <h3>Europe distribution of this climate<br>(2011 - 2040 High Emissions normals)</h3>
+      <img id="climate_map_2_europe" src="" alt="Europe climate map (2011 - 2040 High Emissions normals)">
+    </div>
+    <div id="map3europe">
+      <h3>Europe distribution of this climate<br>(2041 - 2070 High Emissions normals)</h3>
+      <img id="climate_map_3_europe" src="" alt="Europe climate map (2041 - 2070 High Emissions normals)">
+    </div>
+    <div id="map4europe">
+      <h3>Europe distribution of this climate<br>(2071 - 2100 High Emissions normals)</h3>
+      <img id="climate_map_4_europe" src="" alt="Europe climate map (2071 - 2100 High Emissions normals)">
     </div>
   </main>
 
@@ -224,6 +258,14 @@
           document.getElementById('map2').style.display = 'none';
           document.getElementById('map3').style.display = 'none';
           document.getElementById('map4').style.display = 'none';
+          document.getElementById('map1usa').style.display = 'none';
+          document.getElementById('map2usa').style.display = 'none';
+          document.getElementById('map3usa').style.display = 'none';
+          document.getElementById('map4usa').style.display = 'none';
+          document.getElementById('map1europe').style.display = 'none';
+          document.getElementById('map2europe').style.display = 'none';
+          document.getElementById('map3europe').style.display = 'none';
+          document.getElementById('map4europe').style.display = 'none';
         }
 
         // Aridity box visibility (group + exists + any button available)
@@ -311,6 +353,14 @@
         const map2 = climate['map2'] || derive(2);
         const map3 = climate['map3'] || derive(3);
         const map4 = climate['map4'] || derive(4);
+        const map1usa = climate['map1usa'] || derive(1);
+        const map2usa = climate['map2usa'] || derive(2);
+        const map3usa = climate['map3usa'] || derive(3);
+        const map4usa = climate['map4usa'] || derive(4);
+        const map1europe = climate['map1europe'] || derive(1);
+        const map2europe = climate['map2europe'] || derive(2);
+        const map3europe = climate['map3europe'] || derive(3);
+        const map4europe = climate['map4europe'] || derive(4);
 
         // Make sure headings reflect neutral period labels
         const mapSections = [
