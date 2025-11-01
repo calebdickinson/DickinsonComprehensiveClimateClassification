@@ -197,11 +197,25 @@
       }
     }
 
-    function setImgWithFallback(el, url, alt, fallback) {
-      if (!el) return;
-      el.alt = alt;
-      el.onerror = () => { el.onerror = null; el.src = fallback; };
-      el.src = (url && String(url).trim() !== '') ? url : fallback;
+    function setMapOrHide(sectionId, imgId, url, alt) {
+      const section = document.getElementById(sectionId);
+      const img = document.getElementById(imgId);
+
+      if (!section || !img) return;
+
+      img.alt = alt;
+
+      img.onerror = () => {
+        // Remove the broken image + remove the entire section (heading + space)
+        section.style.display = 'none';
+      };
+
+      // If URL is empty/null → hide section immediately
+      if (!url || String(url).trim() === '') {
+        section.style.display = 'none';
+      } else {
+        img.src = url;
+      }
     }
 
     function change_climate(nextCode) {
@@ -347,20 +361,29 @@
         const FALLBACK_MAP = 'images/maps/nothing.png';
         const FALLBACK_LANDSCAPE = 'images/landscapes/nothing.png';
 
-        // Prefer explicit URLs from JSON; else derive from code as <CODE>-map#.png
-        const derive = (n) => `images/maps/${climate_code}-map${n}.png`;
-        const map1 = climate['map1'] || derive(1);
-        const map2 = climate['map2'] || derive(2);
-        const map3 = climate['map3'] || derive(3);
-        const map4 = climate['map4'] || derive(4);
-        const map1usa = climate['map1usa'] || derive(1);
-        const map2usa = climate['map2usa'] || derive(2);
-        const map3usa = climate['map3usa'] || derive(3);
-        const map4usa = climate['map4usa'] || derive(4);
-        const map1europe = climate['map1europe'] || derive(1);
-        const map2europe = climate['map2europe'] || derive(2);
-        const map3europe = climate['map3europe'] || derive(3);
-        const map4europe = climate['map4europe'] || derive(4);
+        // Where your PNGs live (change to 'images/maps' if that's your layout)
+        const MAP_DIR = 'maps';
+
+        // Filename builders
+        const deriveGlobal = (n) => `${MAP_DIR}/${climate_code}-map${n}.png`;
+        const deriveUSA    = (n) => `${MAP_DIR}/${climate_code}-map${n}usa.png`;
+        const deriveEU     = (n) => `${MAP_DIR}/${climate_code}-map${n}europe.png`;
+
+        // Prefer explicit URLs from JSON; else derive from code
+        const map1 = climate['map1'] || deriveGlobal(1);
+        const map2 = climate['map2'] || deriveGlobal(2);
+        const map3 = climate['map3'] || deriveGlobal(3);
+        const map4 = climate['map4'] || deriveGlobal(4);
+
+        const map1usa = climate['map1usa'] || deriveUSA(1);
+        const map2usa = climate['map2usa'] || deriveUSA(2);
+        const map3usa = climate['map3usa'] || deriveUSA(3);
+        const map4usa = climate['map4usa'] || deriveUSA(4);
+
+        const map1europe = climate['map1europe'] || deriveEU(1);
+        const map2europe = climate['map2europe'] || deriveEU(2);
+        const map3europe = climate['map3europe'] || deriveEU(3);
+        const map4europe = climate['map4europe'] || deriveEU(4);
 
         // Make sure headings reflect neutral period labels
         const mapSections = [
@@ -374,8 +397,31 @@
           ensureMapSection(sectionId, imgId, label, alt);
           const sec = document.getElementById(sectionId);
           const img = document.getElementById(imgId);
-          setImgWithFallback(img, url, alt, FALLBACK_MAP);
-          if ((!url || String(url).trim() === '') && sec) sec.style.display = 'none';
+          setMapOrHide(sectionId, imgId, url, alt);
+        });
+
+        // USA sections
+        [
+          { sectionId: 'map1usa', imgId: 'climate_map_1_usa', url: map1usa, alt: 'United States climate map (Period 1)' },
+          { sectionId: 'map2usa', imgId: 'climate_map_2_usa', url: map2usa, alt: 'United States climate map (Period 2)' },
+          { sectionId: 'map3usa', imgId: 'climate_map_3_usa', url: map3usa, alt: 'United States climate map (Period 3)' },
+          { sectionId: 'map4usa', imgId: 'climate_map_4_usa', url: map4usa, alt: 'United States climate map (Period 4)' },
+        ].forEach(({ sectionId, imgId, url, alt }) => {
+          const sec = document.getElementById(sectionId);
+          const img = document.getElementById(imgId);
+          setMapOrHide(sectionId, imgId, url, alt);
+        });
+
+        // Europe sections
+        [
+          { sectionId: 'map1europe', imgId: 'climate_map_1_europe', url: map1europe, alt: 'Europe climate map (Period 1)' },
+          { sectionId: 'map2europe', imgId: 'climate_map_2_europe', url: map2europe, alt: 'Europe climate map (Period 2)' },
+          { sectionId: 'map3europe', imgId: 'climate_map_3_europe', url: map3europe, alt: 'Europe climate map (Period 3)' },
+          { sectionId: 'map4europe', imgId: 'climate_map_4_europe', url: map4europe, alt: 'Europe climate map (Period 4)' },
+        ].forEach(({ sectionId, imgId, url, alt }) => {
+          const sec = document.getElementById(sectionId);
+          const img = document.getElementById(imgId);
+          setMapOrHide(sectionId, imgId, url, alt);
         });
 
         // Landscape image
