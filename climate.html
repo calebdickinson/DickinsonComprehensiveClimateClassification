@@ -357,10 +357,6 @@
           }
         })(climate_cities);
 
-        // ---------- MAPS (map1..map4 sections) ----------
-        const FALLBACK_MAP = 'images/maps/nothing.png';
-        const FALLBACK_LANDSCAPE = 'images/landscapes/nothing.png';
-
         // Where your PNGs live (change to 'images/maps' if that's your layout)
         const MAP_DIR = 'maps';
 
@@ -426,7 +422,7 @@
 
         // Landscape image
         const landscapeEl = document.getElementById('climate_landscape');
-        setImgWithFallback(landscapeEl, climate_landscape, 'landscape in this climate', FALLBACK_LANDSCAPE);
+        setMapOrHide(sectionId, imgId, url, alt);
       })
       .catch(err => {
         throw new Error("Error loading climate data: " + err.message);
