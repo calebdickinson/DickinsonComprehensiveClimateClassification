@@ -14,7 +14,7 @@ def _domain_sort_key(code: str):
     """
     cold_order = ['H','X','Z','A','B','C','D','E','F','G','Y']
     arid_order = ['', 'H','G','W','M','S','D']  # '' first so non-arid sorts before arid
-    warm_order = ['H','X','Z2','Z1','A2','A1','B2','B1','C2','C1','Y']
+    warm_order = ['H','X','z2','z1','z2','z1','z2','z1','z2','z1','Y']
 
     cold, arid, warm = climates.breakup(code)  # may throw on unknowns (handled by safe wrapper below)
     cold_i = cold_order.index(cold) if cold in cold_order else len(cold_order)

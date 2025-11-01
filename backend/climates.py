@@ -83,12 +83,12 @@ cold_codes = {
 }
 
 arid_codes = {
-    'H': 'Humid',
-    'G': 'Semihumid',
-    'W': 'Monsoon',
-    'M': 'Mediterranean',
-    'S': 'Semiarid',
-    'D': 'Arid Desert'
+    'h': 'Humid',
+    'g': 'Semihumid',
+    'w': 'Monsoon',
+    'm': 'Mediterranean',
+    's': 'Semiarid',
+    'd': 'Arid Desert'
 }
 
 warm_codes = {
