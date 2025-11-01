@@ -13,7 +13,7 @@ def _domain_sort_key(code: str):
     Falls back gracefully if a code is a group or lacks aridity.
     """
     cold_order = ['H','X','Z','A','B','C','D','E','F','G','Y']
-    arid_order = ['', 'H','G','W','M','S','D']  # '' first so non-arid sorts before arid
+    arid_order = ['', 'h','g','w','m','s','d']  # '' first so non-arid sorts before arid
     warm_order = ['H','X','z2','z1','z2','z1','z2','z1','z2','z1','Y']
 
     cold, arid, warm = climates.breakup(code)  # may throw on unknowns (handled by safe wrapper below)
@@ -47,7 +47,7 @@ def _codes_from_cities_df(df) -> Set[str]:
             continue
         s = df.iloc[:, c].dropna().astype(str).str.strip()
         out |= set(s[s != ""])
-    return {c.upper() for c in out}
+    return {c.strip() for c in out}
 
 
 def _group_targets_from_backend(codes: Iterable[str]) -> Set[str]:
