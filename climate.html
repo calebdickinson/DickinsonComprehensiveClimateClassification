@@ -197,6 +197,14 @@
       }
     }
 
+    function setImageOrHide(imgEl, url, alt) {
+      if (!imgEl) return;
+      if (!url || String(url).trim() === '') { imgEl.style.display = 'none'; return; }
+      imgEl.alt = alt;
+      imgEl.onerror = () => { imgEl.style.display = 'none'; };
+      imgEl.src = url;
+    }
+    
     function setMapOrHide(sectionId, imgId, url, alt) {
       const section = document.getElementById(sectionId);
       const img = document.getElementById(imgId);
@@ -420,9 +428,16 @@
           setMapOrHide(sectionId, imgId, url, alt);
         });
 
-        // Landscape image
+        // Landscape image: EXACT pattern images/landscapes/CHA2.png (no "-landscape")
         const landscapeEl = document.getElementById('climate_landscape');
-        setMapOrHide(sectionId, imgId, url, alt);
+
+        // If data.json provides a value, use it; otherwise use the standard pattern.
+        // IMPORTANT: landscapes use uppercase code exactly, so use climate_code as-is.
+        const landscapeUrlFromJson = (climate_landscape && climate_landscape.trim()) ? climate_landscape.trim() : '';
+        const defaultLandscapeUrl  = `images/landscapes/${climate_code}.png`;
+
+        // Prefer JSON if present; else standard path. Hide if it fails.
+        setImageOrHide(landscapeEl, landscapeUrlFromJson || defaultLandscapeUrl, 'landscape in this climate');
       })
       .catch(err => {
         throw new Error("Error loading climate data: " + err.message);
