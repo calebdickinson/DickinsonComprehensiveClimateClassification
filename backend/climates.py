@@ -94,14 +94,14 @@ arid_codes = {
 warm_codes = {
     'H': 'Hypercaneal Summer',
     'X': 'Extreme Hyperthermal Summer',
-    'Z2': 'Hyperthermal Summer',
-    'Z1': 'Scorching Hot Summer',
-    'A2': 'Very Hot Summer',
-    'A1': 'Hot Summer',
-    'B2': 'Mild Summer',
-    'B1': 'Cold Summer',
-    'C2': 'Very Cold Summer',
-    'C1': 'Freezing Summer',
+    'z2': 'Hyperthermal Summer',
+    'z1': 'Scorching Hot Summer',
+    'a2': 'Very Hot Summer',
+    'a1': 'Hot Summer',
+    'b2': 'Mild Summer',
+    'b1': 'Cold Summer',
+    'c2': 'Very Cold Summer',
+    'c1': 'Freezing Summer',
     'Y': 'Frigid Summer',
 }
 
