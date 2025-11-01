@@ -4,68 +4,68 @@
 codes = {
 'HH',
 'XH', 'XX',
-'ZH', 'ZX', 'ZZ2', 'ZZ1',
-'AH', 'AX', 'AZ2', 'AZ1', 'AA2', 'AA1',
-'BH', 'BX', 'BZ2', 'BZ1', 'BA2', 'BA1', 'BB2', 'BB1',
-'CH', 'CX', 'CZ2', 'CZ1', 'CA2', 'CA1', 'CB2', 'CB1', 'CC2', 'CC1',
-'DH', 'DX', 'DZ2', 'DZ1', 'DA2', 'DA1', 'DB2', 'DB1', 'DC2', 'DC1', 'DY',
-'EH', 'EX', 'EZ2', 'EZ1', 'EA2', 'EA1', 'EB2', 'EB1', 'EC2', 'EC1', 'EY',
-'FH', 'FX', 'FZ2', 'FZ1', 'FA2', 'FA1', 'FB2', 'FB1', 'FC2', 'FC1', 'FY',
-'GH', 'GX', 'GZ2', 'GZ1', 'GA2', 'GA1', 'GB2', 'GB1', 'GC2', 'GC1', 'GY',
-'YH', 'YX', 'YZ2', 'YZ1', 'YA2', 'YA1', 'YB2', 'YB1', 'YC2', 'YC1', 'YY',
+'ZH', 'ZX', 'Zz2', 'Zz1',
+'AH', 'AX', 'Az2', 'Az1', 'Aa2', 'Aa1',
+'BH', 'BX', 'Bz2', 'Bz1', 'Ba2', 'Ba1', 'Bb2', 'Bb1',
+'CH', 'CX', 'Cz2', 'Cz1', 'Ca2', 'Ca1', 'Cb2', 'Cb1', 'Cc2', 'Cc1',
+'DH', 'DX', 'Dz2', 'Dz1', 'Da2', 'Da1', 'Db2', 'Db1', 'Dc2', 'Dc1', 'DY',
+'EH', 'EX', 'Ez2', 'Ez1', 'Ea2', 'Ea1', 'Eb2', 'Eb1', 'Ec2', 'Ec1', 'EY',
+'FH', 'FX', 'Fz2', 'Fz1', 'Fa2', 'Fa1', 'Fb2', 'Fb1', 'Fc2', 'Fc1', 'FY',
+'GH', 'GX', 'Gz2', 'Gz1', 'Ga2', 'Ga1', 'Gb2', 'Gb1', 'Gc2', 'Gc1', 'GY',
+'YH', 'YX', 'Yz2', 'Yz1', 'Ya2', 'Ya1', 'Yb2', 'Yb1', 'Yc2', 'Yc1', 'YY',
 
-              'ZHZ1',
-              'AHZ1', 'AHA2', 'AHA1',
-              'BHZ1', 'BHA2', 'BHA1', 'BHB2',
-              'CHZ1', 'CHA2', 'CHA1', 'CHB2',
-                      'DHA2', 'DHA1', 'DHB2',
-                      'EHA2', 'EHA1', 'EHB2',
+              'Zhz1',
+              'Ahz1', 'Aha2', 'Aha1',
+              'Bhz1', 'Bha2', 'Bha1', 'Bhb2',
+              'Chz1', 'Cha2', 'Cha1', 'Chb2',
+                      'Dha2', 'Dha1', 'Dhb2',
+                      'Eha2', 'Eha1', 'Ehb2',
 
-      'ZGZ2', 'ZGZ1',
-      'AGZ2', 'AGZ1', 'AGA2', 'AGA1',
-      'BGZ2', 'BGZ1', 'BGA2', 'BGA1', 'BGB2',
-              'CGZ1', 'CGA2', 'CGA1', 'CGB2',
-              'DGZ1', 'DGA2', 'DGA1', 'DGB2',
-                      'EGA2', 'EGA1', 'EGB2',
+      'Zgz2', 'Zgz1',
+      'Agz2', 'Agz1', 'Aga2', 'Aga1',
+      'Bgz2', 'Bgz1', 'Bga2', 'Bga1', 'Bgb2',
+              'Cgz1', 'Cga2', 'Cga1', 'Cgb2',
+              'Dgz1', 'Dga2', 'Dga1', 'Dgb2',
+                      'Ega2', 'Ega1', 'Egb2',
             
-       'ZWZ2', 'ZWZ1',
-'AWX', 'AWZ2', 'AWZ1', 'AWA2', 'AWA1',
-       'BWZ2', 'BWZ1', 'BWA2', 'BWA1', 'BWB2',
-               'CWZ1', 'CWA2', 'CWA1', 'CWB2',
-               'DWZ1', 'DWA2', 'DWA1', 'DWB2',
-               'EWZ1', 'EWA2', 'EWA1', 'EWB2',
+       'Zwz2', 'Zwz1',
+'AwX', 'Awz2', 'Awz1', 'Awa2', 'Awa1',
+       'Bwz2', 'Bwz1', 'Bwa2', 'Bwa1', 'Bwb2',
+               'Cwz1', 'Cwa2', 'Cwa1', 'Cwb2',
+               'Dwz1', 'Dwa2', 'Dwa1', 'Dwb2',
+               'Ewz1', 'Ewa2', 'Ewa1', 'Ewb2',
 
-       'ZMZ2', 'ZMZ1',
-       'AMZ2', 'AMZ1', 'AMA2', 'AMA1',
-       'BMZ2', 'BMZ1', 'BMA2', 'BMA1', 'BMB2',
-       'CMZ2', 'CMZ1', 'CMA2', 'CMA1', 'CMB2',
-               'DMZ1', 'DMA2', 'DMA1', 'DMB2',
-                               'EMA1', 'EMB2',
+       'Zmz2', 'Zmz1',
+       'Amz2', 'Amz1', 'Ama2', 'Ama1',
+       'Bmz2', 'Bmz1', 'Bma2', 'Bma1', 'Bmb2',
+       'Cmz2', 'Cmz1', 'Cma2', 'Cma1', 'Cmb2',
+               'Dmz1', 'Dma2', 'Dma1', 'Dmb2',
+                               'Ema1', 'Emb2',
 
-'ZSX', 'ZSZ2', 'ZSZ1',
-'ASX', 'ASZ2', 'ASZ1', 'ASA2', 'ASA1',
-       'BSZ2', 'BSZ1', 'BSA2', 'BSA1', 'BSB2',
-       'CSZ2', 'CSZ1', 'CSA2', 'CSA1', 'CSB2',
-               'DSZ1', 'DSA2', 'DSA1', 'DSB2',
-                       'ESA2', 'ESA1', 'ESB2',
+'ZsX', 'Zsz2', 'Zsz1',
+'AsX', 'Asz2', 'Asz1', 'Asa2', 'Asa1',
+       'Bsz2', 'Bsz1', 'Bsa2', 'Bsa1', 'Bsb2',
+       'Csz2', 'Csz1', 'Csa2', 'Csa1', 'Csb2',
+               'Dsz1', 'Dsa2', 'Dsa1', 'Dsb2',
+                       'Esa2', 'Esa1', 'Esb2',
 
-'ZDX', 'ZDZ2', 'ZDZ1',
-'ADX', 'ADZ2', 'ADZ1', 'ADA2', 'ADA1',
-'BDX', 'BDZ2', 'BDZ1', 'BDA2', 'BDA1', 'BDB2',
-'CDX', 'CDZ2', 'CDZ1', 'CDA2', 'CDA1', 'CDB2',
-       'DDZ2', 'DDZ1', 'DDA2', 'DDA1', 'DDB2',
-               'EDZ1', 'EDA2', 'EDA1', 'EDB2',
+'ZdX', 'Zdz2', 'Zdz1',
+'AdX', 'Adz2', 'Adz1', 'Ada2', 'Ada1',
+'BdX', 'Bdz2', 'Bdz1', 'Bda2', 'Bda1', 'Bdb2',
+'CdX', 'Cdz2', 'Cdz1', 'Cda2', 'Cda1', 'Cdb2',
+       'Ddz2', 'Ddz1', 'Dda2', 'Dda1', 'Ddb2',
+               'Edz1', 'Eda2', 'Eda1', 'Edb2',
 }
 
 code_groups = {
     'HH',
     'XH', 'XX',
-    'ZH', 'ZX', 'ZZ2', 'ZZ1',
-    'AH', 'AX', 'AZ2', 'AZ1', 'AA2', 'AA1',
-    'BH', 'BX', 'BZ2', 'BZ1', 'BA2', 'BA1', 'BB2',
-    'CH', 'CX', 'CZ2', 'CZ1', 'CA2', 'CA1', 'CB2',
-    'DH', 'DX', 'DZ2', 'DZ1', 'DA2', 'DA1', 'DB2',
-    'EH', 'EX', 'EZ2', 'EZ1', 'EA2', 'EA1', 'EB2',
+    'ZH', 'ZX', 'Zz2', 'Zz1',
+    'AH', 'AX', 'Az2', 'Az1', 'Aa2', 'Aa1',
+    'BH', 'BX', 'Bz2', 'Bz1', 'Ba2', 'Ba1', 'Bb2',
+    'CH', 'CX', 'Cz2', 'Cz1', 'Ca2', 'Ca1', 'Cb2',
+    'DH', 'DX', 'Dz2', 'Dz1', 'Da2', 'Da1', 'Db2',
+    'EH', 'EX', 'Ez2', 'Ez1', 'Ea2', 'Ea1', 'Eb2',
 }
 
 cold_codes = {
@@ -124,14 +124,14 @@ cold_temps = {
 warm_temps = {
     'H': 51,
     'X': 50,
-    'Z2': 40,
-    'Z1': 35,
-    'A2': 30,
-    'A1': 25,
-    'B2': 20,
-    'B1': 15,
-    'C2': 10,
-    'C1': 5,
+    'z2': 40,
+    'z1': 35,
+    'a2': 30,
+    'a1': 25,
+    'b2': 20,
+    'b1': 15,
+    'c2': 10,
+    'c1': 5,
     'Y': 0,
 }
 
@@ -150,7 +150,7 @@ def has_aridity(cold:str, warm:str) -> bool:
     Returns:
         bool: True if the code has aridity, False otherwise
     """
-    if cold in ['H', 'F', 'G', 'Y'] or warm in ['B1', 'C2', 'C1', 'Y'] or cold + warm in ['XX', 'CX', 'DX', 'EX', 'EZ2']:
+    if cold in ['H', 'F', 'G', 'Y'] or warm in ['b1', 'c2', 'c1', 'Y'] or cold + warm in ['XX', 'CX', 'DX', 'EX', 'Ez2']:
         return False
     return True
 
@@ -172,9 +172,9 @@ def does_exist(code: str) -> bool:
         'CH',
         'DH', 'DX',
         'EH', 'EX',
-        'FH', 'FX', 'FZ2',
-        'GH', 'GX', 'GZ2',
-        'YH', 'YX', 'YZ2', 'YZ1', 'YA2', 'YA1'
+        'FH', 'FX', 'Fz2',
+        'GH', 'GX', 'Gz2',
+        'YH', 'YX', 'Yz2', 'Yz1', 'Ya2', 'Ya1'
         ]
 
 def is_code_group(code: str) -> bool:
