@@ -138,9 +138,10 @@
   </main>
 
   <!-- get data for specific climate code -->
-  <script>
-  const code = new URLSearchParams(location.search).get('code');
-  if (!code) throw new Error("No climate code specified in URL");
+<script>
+  const url = new URL(location.href);
+  const codeParam = url.searchParams.get('code');
+  if (!codeParam) throw new Error("No climate code specified in URL");
 
   const PERIOD_LABELS = {
     map1: "1981-2010 normals",
@@ -149,79 +150,91 @@
     map4: "2071-2100 High Emissions normals",
   };
 
-  function change_climate(nextCode) {
-    window.location.href = window.location.pathname + '?code=' + nextCode;
+  // Navigation that always rewrites to canonical casing
+  function change_climate(nextCode, CANON) {
+    const canon = (s) => CANON.get(String(s).trim().toLowerCase()) || s;
+    const target = canon(nextCode);
+    const u = new URL(location.href);
+    u.searchParams.set('code', target);
+    location.href = u.toString();
   }
 
-  // This version DOES NOT hide the entire section if image fails — it shows heading still
-  function setMapImage(imgId, url) {
-    const img = document.getElementById(imgId);
-    if (!img) return;
-    if (!url || url.trim() === "") {
-      img.style.display = 'none';
-      return;
-    }
-    img.onerror = () => {
-      // Instead of hiding section, show a border or alt text
-      img.style.display = 'none';
-      console.warn(`Map not found: ${url}`);
-    };
-    img.src = url;
-  }
-
+  // Load data and render
   fetch('data/data.json')
     .then(r => r.json())
     .then(data => {
-      const climate = data[code];
-      if (!climate) throw new Error(`Climate code '${code}' not found in data.json`);
+      // Build a case-insensitive map of all valid codes in data.json
+      const CANON = new Map(Object.keys(data).map(k => [k.toLowerCase(), k]));
 
-      const climate_code = climate['code'];  // Keep original capitalization
+      // Resolve the URL code to the exact JSON key (canonicalize)
+      const canonCode = CANON.get(codeParam.toLowerCase());
+      if (!canonCode) {
+        throw new Error(`Climate code '${codeParam}' not found in data.json`);
+      }
+      // If the URL casing is wrong, silently fix it (no new history entry)
+      if (canonCode !== codeParam) {
+        const u = new URL(location.href);
+        u.searchParams.set('code', canonCode);
+        history.replaceState(null, '', u.toString());
+      }
+
+      const climate = data[canonCode];
+      const climate_code = climate['code']; // keep original casing from JSON
+
+      // Basic headings
       document.getElementById('climate_name').textContent = climate['name'] + " Climate";
       document.getElementById('climate_code').textContent = climate_code;
 
-      // Map path builder using EXACT case for climate_code
+      // Map path helpers (exact-case filenames)
       const MAP_DIR = 'images/maps';
-      function g(n) { return `${MAP_DIR}/${climate_code}-map${n}.png`; }
-      function u(n) { return `${MAP_DIR}/${climate_code}-map${n}usa.png`; }
-      function e(n) { return `${MAP_DIR}/${climate_code}-map${n}europe.png`; }
+      const g = n => `${MAP_DIR}/${climate_code}-map${n}.png`;
+      const uS = n => `${MAP_DIR}/${climate_code}-map${n}usa.png`;
+      const eU = n => `${MAP_DIR}/${climate_code}-map${n}europe.png`;
 
-      // Apply images — DO NOT hide sections automatically
+      // Image setter (don’t hide section, just hide broken img)
+      function setMapImage(imgId, url) {
+        const img = document.getElementById(imgId);
+        if (!img) return;
+        if (!url || url.trim() === "") { img.style.display = 'none'; return; }
+        img.onerror = () => { img.style.display = 'none'; console.warn(`Map not found: ${url}`); };
+        img.src = url;
+      }
+
+      // Apply images (fallback to derived paths)
       setMapImage('climate_map_1', climate['map1'] || g(1));
       setMapImage('climate_map_2', climate['map2'] || g(2));
       setMapImage('climate_map_3', climate['map3'] || g(3));
       setMapImage('climate_map_4', climate['map4'] || g(4));
 
-      setMapImage('climate_map_1_usa', climate['map1usa'] || u(1));
-      setMapImage('climate_map_2_usa', climate['map2usa'] || u(2));
-      setMapImage('climate_map_3_usa', climate['map3usa'] || u(3));
-      setMapImage('climate_map_4_usa', climate['map4usa'] || u(4));
+      setMapImage('climate_map_1_usa', climate['map1usa'] || uS(1));
+      setMapImage('climate_map_2_usa', climate['map2usa'] || uS(2));
+      setMapImage('climate_map_3_usa', climate['map3usa'] || uS(3));
+      setMapImage('climate_map_4_usa', climate['map4usa'] || uS(4));
 
-      setMapImage('climate_map_1_europe', climate['map1europe'] || e(1));
-      setMapImage('climate_map_2_europe', climate['map2europe'] || e(2));
-      setMapImage('climate_map_3_europe', climate['map3europe'] || e(3));
-      setMapImage('climate_map_4_europe', climate['map4europe'] || e(4));
+      setMapImage('climate_map_1_europe', climate['map1europe'] || eU(1));
+      setMapImage('climate_map_2_europe', climate['map2europe'] || eU(2));
+      setMapImage('climate_map_3_europe', climate['map3europe'] || eU(3));
+      setMapImage('climate_map_4_europe', climate['map4europe'] || eU(4));
 
-      // Landscape (optional)
+      // Landscape
       const landscape = document.getElementById('climate_landscape');
       landscape.src = climate['landscape'] || `images/landscapes/${climate_code}.jpg`;
-      landscape.onerror = () => landscape.style.display = 'none';
+      landscape.onerror = () => (landscape.style.display = 'none');
 
-      // Navigation buttons wired exactly like before
-      const buttons = [
-        ['climate_go_to_hotter_summer', 'go_to_hotter_summer'],
-        ['climate_go_to_colder_summer', 'go_to_colder_summer'],
-        ['climate_go_to_hotter_winter', 'go_to_hotter_winter'],
-        ['climate_go_to_colder_winter', 'go_to_colder_winter'],
-      ];
-      buttons.forEach(([btnId, key]) => {
+      // Wire nav buttons (canonicalize targets before navigating)
+      const bind = (btnId, key) => {
         const btn = document.getElementById(btnId);
-        if (climate[key] && climate[key] !== "False") {
-          btn.onclick = () => change_climate(climate[key]);
+        const dest = climate[key];
+        if (dest && dest !== "False") {
+          btn.onclick = () => change_climate(dest, CANON);
         } else {
           btn.disabled = true;
         }
-      });
-
+      };
+      bind('climate_go_to_hotter_summer', 'go_to_hotter_summer');
+      bind('climate_go_to_colder_summer', 'go_to_colder_summer');
+      bind('climate_go_to_hotter_winter', 'go_to_hotter_winter');
+      bind('climate_go_to_colder_winter', 'go_to_colder_winter');
     })
     .catch(err => {
       console.error(err);
