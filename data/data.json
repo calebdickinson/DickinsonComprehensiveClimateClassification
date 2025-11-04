@@ -5543,7 +5543,7 @@
     "FZ1": {
         "code": "FZ1",
         "name": "Subarctic Scorching Hot Summer",
-        "exists": false,
+        "exists": true,
         "group": false,
         "go_to_humid": "False",
         "go_to_semihumid": "False",
@@ -5809,7 +5809,7 @@
     "GZ1": {
         "code": "GZ1",
         "name": "Arctic Scorching Hot Summer",
-        "exists": false,
+        "exists": true,
         "group": false,
         "go_to_humid": "False",
         "go_to_semihumid": "False",
