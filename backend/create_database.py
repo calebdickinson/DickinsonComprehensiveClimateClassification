@@ -8,8 +8,8 @@ from backend import climates, format
 def _domain_sort_key(code: str):
     """
     Sort codes in a stable, domain-aware way:
-    cold (H→...→Y), then arid (H,G,W,M,S,D; '' comes before any arid),
-    then warm (H, X, Z2, Z1, A2, A1, B2, B1, C2, C1, Y).
+    cold (H→...→Y), then arid (h,g,w,m,s,d; '' comes before any arid),
+    then warm (H, X, z2, z1, a2, a1, a2, a1, c2, c1, Y).
     Falls back gracefully if a code is a group or lacks aridity.
     """
     cold_order = ['H','X','Z','A','B','C','D','E','F','G','Y']
@@ -149,8 +149,8 @@ def generate_json() -> Dict[str, Dict[str, Any]]:  # type: ignore
 
             # NEW: 4-slice map filenames
             'landscape': f'images/landscapes/{code}.jpg',
-            'landscape': f'images/landscapes/{code}.jpeg',
-            'landscape2': f'images/landscapes/{code}two.jpg',
+            'landscapejpeg': f'images/landscapes/{code}.jpeg',
+            'landscapetwo': f'images/landscapes/{code}two.jpg',
             'map1':      f'images/maps/{code}-map1.png',
             'map2':      f'images/maps/{code}-map2.png',
             'map3':      f'images/maps/{code}-map3.png',
@@ -198,6 +198,8 @@ def generate_json() -> Dict[str, Dict[str, Any]]:  # type: ignore
 
             # NEW: 4-slice map filenames for stubs as well
             'landscape': f'images/landscapes/{dest_code}.jpg',
+            'landscapejpeg': f'images/landscapes/{dest_code}.jpeg',
+            'landscapetwo': f'images/landscapes/{dest_code}two.jpg',
             'map1':      f'images/maps/{dest_code}-map1.png',
             'map2':      f'images/maps/{dest_code}-map2.png',
             'map3':      f'images/maps/{dest_code}-map3.png',
