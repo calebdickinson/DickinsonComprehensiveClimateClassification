@@ -6100,7 +6100,7 @@
     "YA1": {
         "code": "YA1",
         "name": "Superarctic Hot Summer",
-        "exists": false,
+        "exists": true,
         "group": false,
         "go_to_humid": "False",
         "go_to_semihumid": "False",
@@ -6170,7 +6170,7 @@
     "YC2": {
         "code": "YC2",
         "name": "Superarctic Very Cold Summer",
-        "exists": true,
+        "exists": false,
         "group": false,
         "go_to_humid": "False",
         "go_to_semihumid": "False",
@@ -6191,7 +6191,7 @@
     "YC1": {
         "code": "YC1",
         "name": "Superarctic Freezing Summer",
-        "exists": true,
+        "exists": false,
         "group": false,
         "go_to_humid": "False",
         "go_to_semihumid": "False",
