@@ -34,7 +34,7 @@ def _group_targets_from_backend(codes: Iterable[str]) -> Set[str]:
                 if isinstance(parts, (list, tuple)):
                     for p in parts:
                         if p and str(p).lower() != "false":
-                            targets.add(str(p).strip().upper())
+                            targets.add(str(p).strip())
         except Exception:
             pass
     return targets
