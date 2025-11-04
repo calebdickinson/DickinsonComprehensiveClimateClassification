@@ -174,7 +174,7 @@ def does_exist(code: str) -> bool:
         'EH', 'EX',
         'FH', 'FX', 'Fz2',
         'GH', 'GX', 'Gz2',
-        'YH', 'YX', 'Yz2', 'Yz1', 'Ya2', 'Ya1'
+        'YH', 'YX', 'Yz2', 'Yz1',               'Yc2', 'Yc1'
         ]
 
 def is_code_group(code: str) -> bool:
