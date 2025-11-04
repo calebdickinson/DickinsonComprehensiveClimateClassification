@@ -197,12 +197,20 @@ def generate_json() -> Dict[str, Dict[str, Any]]:  # type: ignore
             'go_to_colder_winter': "False",
 
             # NEW: 4-slice map filenames for stubs as well
+            'landscape': f'images/landscapes/{dest_code}.jpg',
             'map1':      f'images/maps/{dest_code}-map1.png',
             'map2':      f'images/maps/{dest_code}-map2.png',
             'map3':      f'images/maps/{dest_code}-map3.png',
             'map4':      f'images/maps/{dest_code}-map4.png',
-            'landscape': f'images/landscapes/{dest_code}.jpg',
-
+            'map1usa':      f'images/maps/{dest_code}-map1usa.png',
+            'map2usa':      f'images/maps/{dest_code}-map2usa.png',
+            'map3usa':      f'images/maps/{dest_code}-map3usa.png',
+            'map4usa':      f'images/maps/{dest_code}-map4usa.png',
+            'map1europe':      f'images/maps/{dest_code}-map1europe.png',
+            'map2europe':      f'images/maps/{dest_code}-map2europe.png',
+            'map3europe':      f'images/maps/{dest_code}-map3europe.png',
+            'map4europe':      f'images/maps/{dest_code}-map4europe.png',
+            
             # NEW: cities grouped by map slice (likely empty for stubs)
             'cities': _cities_grouped_by_maps(cities_df, dest_code),
         }
