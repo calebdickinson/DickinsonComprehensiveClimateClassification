@@ -294,19 +294,19 @@ Map.onClick(function(coords) {
   var cold = coldComb.reduceRegion({
     reducer: ee.Reducer.first(),
     geometry: pt,
-    scale: 10000
+    scale: 500
   }).get('coldZone');
 
   var warm = warmComb.reduceRegion({
     reducer: ee.Reducer.first(),
     geometry: pt,
-    scale: 10000
+    scale: 500
   }).get('warmZone');
 
   var aridity = clim.reduceRegion({
     reducer: ee.Reducer.first(),
     geometry: pt,
-    scale: 10000
+    scale: 500
   }).get('climateClass');
 
   // Evaluate together client-side
