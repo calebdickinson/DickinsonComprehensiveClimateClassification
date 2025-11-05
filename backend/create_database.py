@@ -178,5 +178,5 @@ def generate_json() -> Dict[str, Dict[str, Any]]:
 
 if __name__ == "__main__":
     data = generate_json()
-    with open("data/data.json", "w", encoding="utf-8") as json_file:
+    with open("data/data.json2", "w", encoding="utf-8") as json_file:
         json.dump(data, json_file, indent=4, ensure_ascii=False)

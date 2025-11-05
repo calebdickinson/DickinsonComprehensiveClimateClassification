@@ -12,13 +12,15 @@
   <link rel="stylesheet" href="css/styles.css">
   <title></title>
   <style>
-    /* start every optional section hidden; JS will unhide on successful load */
-    #cities,
+    /* Start hidden; JS unhides only on successful image load */
+    #cities { display: none !important; }
     #map1, #map2, #map3, #map4,
     #map1usa, #map2usa, #map3usa, #map4usa,
     #map1europe, #map2europe, #map3europe, #map4europe {
       display: none;
     }
+    /* Landscape also starts hidden until confirmed */
+    #climate_landscape { display: none; }
   </style>
 </head>
 <body>
@@ -70,11 +72,8 @@
     </div>
 
     <div id="landscapes">
-      <img id="climate_landscape" src="" alt="landscape in this climate" style="display:none;">
+      <img id="climate_landscape" alt="landscape in this climate">
     </div>
-
-    <!-- Cities (disabled) -->
-    <div id="cities"></div>
 
     <!-- Global maps -->
     <div id="map1">
@@ -132,126 +131,122 @@
   </main>
 
   <script>
-    const code = new URLSearchParams(location.search).get('code');
-    if (!code) throw new Error("No climate code specified in URL");
-
+    // --- helpers ---
     function change_climate(nextCode) {
       window.location.href = window.location.pathname + '?code=' + nextCode;
     }
 
-    // Preload an image; resolve(true) if it loads, else resolve(false)
-    function testImage(url) {
-      return new Promise((resolve) => {
-        if (!url || String(url).trim() === '') return resolve(false);
-        const img = new Image();
-        img.onload  = () => resolve(true);
-        img.onerror = () => resolve(false);
-        img.src = url;
-      });
-    }
-
-    // Show a section only if its image actually loads
-    async function showSectionIfImageLoads(sectionId, imgId, url) {
+    // Only unhide a section if its image actually loads (with cache busting)
+    function wireSection(sectionId, imgId, url) {
       const section = document.getElementById(sectionId);
-      const imgEl   = document.getElementById(imgId);
-      if (!section || !imgEl) return;
+      const img = document.getElementById(imgId);
+      if (!section || !img) return;
 
-      const ok = await testImage(url);
-      if (ok) {
-        imgEl.src = url;
-        section.style.display = '';
-      } else {
-        section.style.display = 'none';
-      }
+      section.style.display = 'none';
+      if (!url || String(url).trim() === '') return;
+
+      const busted = url + (url.includes('?') ? '&' : '?') + 'v=' + Date.now();
+
+      img.onload = () => {
+        if (img.naturalWidth > 0 && img.naturalHeight > 0) {
+          section.style.display = '';
+        } else {
+          section.remove();
+        }
+      };
+      img.onerror = () => section.remove();
+      img.decoding = 'async';
+      img.loading  = 'eager';
+      img.src = busted;
     }
 
-    fetch('data/data.json')
-      .then(r => r.json())
-      .then(async data => {
-        const climate = data[code];
-        if (!climate) throw new Error(`Climate code '${code}' not found in data.json`);
+    // --- main ---
+    const codeParam = new URLSearchParams(location.search).get('code');
+    if (!codeParam) throw new Error("No climate code specified in URL");
 
-        const climate_code = climate['code']; // keep exact case
+    fetch('data/data.json?v=' + Date.now(), { cache: 'no-store' })
+      .then(r => r.json())
+      .then(data => {
+        // exact match first, then case-insensitive fallback
+        let climate = data[codeParam];
+        if (!climate) {
+          const wanted = codeParam.toLowerCase();
+          const k = Object.keys(data).find(key => key.toLowerCase() === wanted);
+          if (k) climate = data[k];
+        }
+        if (!climate) throw new Error(`Climate code '${codeParam}' not found in data.json`);
+
+        const climate_code = climate.code; // canonical case from data.json
+
         document.getElementById('climate_name').textContent =
-          climate['name'] + (climate['group'] ? " Climate Group" : " Climate");
+          climate.name + (climate.group ? " Climate Group" : " Climate");
         document.getElementById('climate_code').textContent = climate_code;
 
         // Nav buttons
-        const btns = [
-          ['climate_go_to_hotter_summer', 'go_to_hotter_summer'],
-          ['climate_go_to_colder_summer', 'go_to_colder_summer'],
-          ['climate_go_to_hotter_winter', 'go_to_hotter_winter'],
-          ['climate_go_to_colder_winter', 'go_to_colder_winter'],
-        ];
-        btns.forEach(([id, key]) => {
-          const el = document.getElementById(id);
+        [
+          ['climate_go_to_hotter_summer','go_to_hotter_summer'],
+          ['climate_go_to_colder_summer','go_to_colder_summer'],
+          ['climate_go_to_hotter_winter','go_to_hotter_winter'],
+          ['climate_go_to_colder_winter','go_to_colder_winter'],
+        ].forEach(([btnId, key]) => {
+          const btn = document.getElementById(btnId);
           const dest = climate[key];
-          if (dest && dest !== "False") el.onclick = () => change_climate(dest);
-          else el.disabled = true;
+          if (dest && dest !== "False") btn.onclick = () => change_climate(dest);
+          else btn.disabled = true;
         });
 
-        // Landscape: show only if it loads
-        const landscapeUrl = (climate['landscape'] && climate['landscape'].trim())
-          ? climate['landscape'].trim()
-          : `images/landscapes/${climate_code}.jpg`;
-        if (await testImage(landscapeUrl)) {
-          const l = document.getElementById('climate_landscape');
-          l.src = landscapeUrl;
-          l.style.display = '';
-        }
+        // Landscape (cache-busted)
+        const landscape = document.getElementById('climate_landscape');
+        const landscapeUrl = (climate.landscape?.trim() || `images/landscapes/${climate_code}.jpg`)
+                           + `?v=${Date.now()}`;
+        landscape.onload = () => { landscape.style.display = ''; };
+        landscape.onerror = () => { landscape.remove(); };
+        landscape.src = landscapeUrl;
 
-        // Build expected paths (fallbacks) using exact code case
+        // Build default map paths using exact case
         const MAP_DIR = 'images/maps';
         const g = n => `${MAP_DIR}/${climate_code}-map${n}.png`;
         const u = n => `${MAP_DIR}/${climate_code}-map${n}usa.png`;
         const e = n => `${MAP_DIR}/${climate_code}-map${n}europe.png`;
 
-        // Prefer explicit JSON paths; else derive
-        await Promise.all([
-          showSectionIfImageLoads('map1', 'climate_map_1', climate['map1'] || g(1)),
-          showSectionIfImageLoads('map2', 'climate_map_2', climate['map2'] || g(2)),
-          showSectionIfImageLoads('map3', 'climate_map_3', climate['map3'] || g(3)),
-          showSectionIfImageLoads('map4', 'climate_map_4', climate['map4'] || g(4)),
+        // Global
+        wireSection('map1', 'climate_map_1',  climate.map1  || g(1));
+        wireSection('map2', 'climate_map_2',  climate.map2  || g(2));
+        wireSection('map3', 'climate_map_3',  climate.map3  || g(3));
+        wireSection('map4', 'climate_map_4',  climate.map4  || g(4));
+        // USA
+        wireSection('map1usa','climate_map_1_usa', climate.map1usa || u(1));
+        wireSection('map2usa','climate_map_2_usa', climate.map2usa || u(2));
+        wireSection('map3usa','climate_map_3_usa', climate.map3usa || u(3));
+        wireSection('map4usa','climate_map_4_usa', climate.map4usa || u(4));
+        // Europe
+        wireSection('map1europe','climate_map_1_europe', climate.map1europe || e(1));
+        wireSection('map2europe','climate_map_2_europe', climate.map2europe || e(2));
+        wireSection('map3europe','climate_map_3_europe', climate.map3europe || e(3));
+        wireSection('map4europe','climate_map_4_europe', climate.map4europe || e(4));
 
-          showSectionIfImageLoads('map1usa', 'climate_map_1_usa', climate['map1usa'] || u(1)),
-          showSectionIfImageLoads('map2usa', 'climate_map_2_usa', climate['map2usa'] || u(2)),
-          showSectionIfImageLoads('map3usa', 'climate_map_3_usa', climate['map3usa'] || u(3)),
-          showSectionIfImageLoads('map4usa', 'climate_map_4_usa', climate['map4usa'] || u(4)),
-
-          showSectionIfImageLoads('map1europe', 'climate_map_1_europe', climate['map1europe'] || e(1)),
-          showSectionIfImageLoads('map2europe', 'climate_map_2_europe', climate['map2europe'] || e(2)),
-          showSectionIfImageLoads('map3europe', 'climate_map_3_europe', climate['map3europe'] || e(3)),
-          showSectionIfImageLoads('map4europe', 'climate_map_4_europe', climate['map4europe'] || e(4)),
-        ]);
-
-        // Aridity box visibility (unchanged logic)
+        // Aridity chooser visibility (unrelated to maps)
         const aridityTargets = [
-          climate['go_to_humid'],
-          climate['go_to_semihumid'],
-          climate['go_to_monsoon'],
-          climate['go_to_mediterranean'],
-          climate['go_to_semiarid'],
-          climate['go_to_arid_desert'],
+          climate.go_to_humid, climate.go_to_semihumid,
+          climate.go_to_monsoon, climate.go_to_mediterranean,
+          climate.go_to_semiarid, climate.go_to_arid_desert
         ];
         const anyAridity = aridityTargets.some(v => v && v !== "False");
-        document.getElementById('ariditySection').hidden = !(climate['group'] && climate['exists'] && anyAridity);
+        document.getElementById('ariditySection').hidden = !(climate.group && climate.exists && anyAridity);
 
-        // Existence banner & hard hide everything else if it “does not exist”
-        if (!climate['exists']) {
+        // Non-existent page: show banner and remove optional UI
+        if (!climate.exists) {
           document.getElementById('climate_exists').textContent =
-            `THIS ${climate['group'] ? 'CLIMATE GROUP' : 'CLIMATE'} DOES NOT EXIST`;
+            `THIS ${climate.group ? 'CLIMATE GROUP' : 'CLIMATE'} DOES NOT EXIST`;
           [
             'landscapes','map1','map2','map3','map4',
             'map1usa','map2usa','map3usa','map4usa',
             'map1europe','map2europe','map3europe','map4europe',
             'ariditySection'
-          ].forEach(id => { const el = document.getElementById(id); if (el) el.style.display = 'none'; });
+          ].forEach(id => { const el = document.getElementById(id); if (el) el.remove(); });
         }
       })
-      .catch(err => {
-        console.error(err);
-        alert(err.message);
-      });
+      .catch(err => { console.error(err); alert(err.message); });
   </script>
 </body>
 </html>
