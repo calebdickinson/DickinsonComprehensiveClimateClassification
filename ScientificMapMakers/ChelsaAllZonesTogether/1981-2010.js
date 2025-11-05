@@ -241,7 +241,7 @@ var aridityLetters = {
   4:'w',
   3:'m',
   7:'', // Cold override
-  8:'(ocean)', // Ocean
+  8:'(nodata)', // Ocean or nodata area
   null:''
 };
 
