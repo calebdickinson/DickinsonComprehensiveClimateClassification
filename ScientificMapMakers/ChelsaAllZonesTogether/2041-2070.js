@@ -6,7 +6,7 @@ var PET_MEAN_ID  = ASSET_PREFIX + 'CHELSA_pet_penman_mean_2041-2070'; // u16 mea
 
 var NODATA_U16 = 65535;
 var SCALE_PR   = 0.1;  // CHELSA pr_u16: 0.1 → mm/month
-var SCALE_PET  = 0.1;  // CHELSA pet_u16 mean: 0.1 → mm/month
+var SCALE_PET  = 0.1;  // Should be 1 for projections and 0.1 in baseline do to unit conversion
 
 // ---------- Months helper ----------
 var months = ee.List.sequence(1, 12);
