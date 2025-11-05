@@ -1,4 +1,4 @@
-// === CHELSA v2.1 (2041–2070) — Dickinson rules & your uploaded assets ===
+// === CHELSA UKESM ssp858 (2041–2070) — Dickinson rules & your uploaded assets ===
 
 // ---------- Assets & constants ----------
 var ASSET_PREFIX = 'projects/ordinal-crowbar-459807-m2/assets/';  // ends with '/'
@@ -158,10 +158,9 @@ var aridityDomain = coldCond.not().and(oceanMask.not());
 
 // ==================
 // === UI & TABLE ===
-// (everything below is your original UI/city logic, unchanged)
 // ==================
 
-// HSL→HEX helper & 7-step rainbow
+// HSL→HEX helper
 function hslToHex(h,s,l){
   s/=100; l/=100;
   var c=(1-Math.abs(2*l-1))*s,
@@ -179,25 +178,26 @@ function hslToHex(h,s,l){
       b=Math.round((b1+m)*255);
   return '#'+((1<<24)+(r<<16)+(g<<8)+b).toString(16).slice(1);
 }
-var rainbowHues = [];
-for(var i=0;i<7;i++) rainbowHues.push(i*(360/7));
+
+// Even-contrast color sequence
+function hueAt(i){ return (i * 137.508) % 360; } // Golden angle
+function lightAt(i){ return 50; }                // Keep full vibrancy
 
 // Build code list & matching palette
 var codes=[], palette=[], hueI=0;
-for(var w=1; w<=11; w++){
-  for(var c=2; c<=10; c++){
+for (var w=1; w<=11; w++){
+  for (var c=2; c<=10; c++){
     // temperature-only code
     var codeNoA = w*10 + c;
     codes.push(codeNoA);
-    palette.push(hslToHex(rainbowHues[hueI%7],100,50));
+    palette.push(hslToHex(hueAt(hueI), 100, lightAt(hueI)));
     hueI++;
-    // aridity codes 0–5 (your UI assumes 0–5; our clim uses {1,2,3,4,5,6,7,8} where:
-    // 1=Desert, 2=Semiarid, 3=Mediterranean, 4=Monsoon, 5=Semihumid, 6=Humid, 7=Cold-override, 8=Ocean)
-    // We'll still generate entries 0–5 for the palette block; the map will render whatever codes actually occur.
-    for(var a=0; a<=5; a++){
+
+    // aridity codes 0–5
+    for (var a=0; a<=5; a++){
       var codeA = w*100 + c*10 + a;
       codes.push(codeA);
-      palette.push(hslToHex(rainbowHues[hueI%7],100,50));
+      palette.push(hslToHex(hueAt(hueI), 100, lightAt(hueI)));
       hueI++;
     }
   }
