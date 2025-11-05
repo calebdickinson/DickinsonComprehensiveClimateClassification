@@ -203,6 +203,18 @@ for(var w=1; w<=11; w++){
   }
 }
 
+Map.addLayer(
+  combined,
+  {
+    min: Math.min.apply(null, codes),
+    max: Math.max.apply(null, codes),
+    palette: palette
+  },
+  'Combined Zones',
+  true,
+  0.6
+);
+
 // ————————————————————————
 // LABEL LOOKUPS (unchanged)
 // ————————————————————————
