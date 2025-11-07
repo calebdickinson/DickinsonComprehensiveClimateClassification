@@ -197,6 +197,12 @@
           legendDiv.style.display = '';                     // unhide
         }
 
+        // Hide/remove legend entirely for non-group pages
+        if (!isGroup) {
+          const legendDiv = document.getElementById('groupLegend');
+          if (legendDiv) legendDiv.remove(); // or legendDiv.style.display = 'none';
+        }
+
         document.querySelectorAll('.map-caption').forEach(caption => {
           caption.innerHTML = caption.innerHTML.replace(
             'Global distribution of this climate',
