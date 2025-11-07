@@ -5,16 +5,16 @@ https://www.dickinsonclimate.com/
 
 ## How it works
 
-DCCCS is a new climate classification system inspired by the Köppen system, developed and maintained by Caleb Dickinson.
+The Dickinson climate classification is a new climate classification system inspired by the Köppen system, developed and maintained by Caleb Dickinson.
 
-Unlike Köppen, DCCCS contains hundreds of possible climates, many of which are hypothetical. 
-This allows DCCCS to accurately describe hypothetical climates that may occur in the future due to climate change, but do not currently exist on Earth. 
+Unlike the Köppen system, the Dickinson system contains hundreds of possible climates, many of which are hypothetical. 
+This allows the Dickinson system to accurately describe hypothetical climates that may occur in the future due to climate change, but do not currently exist on Earth. 
 This will be useful in the future as humans continue to warm the Earth with fossil fuels.</p>
 
-Being more generally more granular than Köppen, DCCCS better illustrates the differences between each of the new extreme climates we will see in the future, as well as the climates we see today.
+Being more generally more granular than Köppen, Dickinson better illustrates the differences between each of the new extreme climates we will see in the future, as well as the climates we see today.
 Edge cases illustrate some interesting climate factors not measured in the Köppen system.</p>
 
-DCCCS encodes each climate in 3 (or 2) parts, depending on whether an aridity value is included.
+Dickinson encodes each climate in 3 (or 2) parts, depending on whether an aridity value is included.
 Aridity is not relevant to extremely hot and cold climates. 
 We omit the aridity score in climates that fall within subarctic, arctic, superarctic, cold summer, very cold summer, freezing summer, or frigid summer zones.
 
@@ -74,7 +74,7 @@ We omit the aridity score in climates that fall within subarctic, arctic, supera
 
 <img src="images/screenshot.png" alt=""/>
 
-- All locations on the maps are organized and color-coded according to the Dickinson Comprehensive Climate Classification System (DCCCS).
+- All locations on the maps are organized and color-coded according to the Dickinson climate classification.
 - Clicking on any location of the map will result in the climate classification being shown directly below the "Click map for classification" on the bottom right.
 - Some of these functionalities and category displays may take some time to load.
 - You can also filter by climate codes using the bottom-right dropdown menu.
