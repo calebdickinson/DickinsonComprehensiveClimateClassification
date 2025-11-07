@@ -838,7 +838,7 @@ var cityClasses = combined
   .sampleRegions({
     collection:  cities,
     properties:  ['name'],
-    scale:       10000,
+    scale:       500,
     geometries:  false
   })
   .filter(ee.Filter.notNull(['combinedZone']));
