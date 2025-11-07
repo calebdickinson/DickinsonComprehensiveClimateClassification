@@ -223,6 +223,26 @@
           else btn.disabled = true;
         });
 
+        // Aridity buttons (H, G, W, M, S, D)
+        [
+          ['climate_go_to_humid',         'go_to_humid'],
+          ['climate_go_to_semihumid',     'go_to_semihumid'],
+          ['climate_go_to_monsoon',       'go_to_monsoon'],
+          ['climate_go_to_mediterranean', 'go_to_mediterranean'],
+          ['climate_go_to_semiarid',      'go_to_semiarid'],
+          ['climate_go_to_arid_desert',   'go_to_arid_desert'],
+        ].forEach(([btnId, key]) => {
+          const btn  = document.getElementById(btnId);
+          if (!btn) return; // safety
+
+          const dest = climate[key];
+          if (dest && dest !== "False") {
+            btn.onclick = () => change_climate(dest);
+          } else {
+            btn.disabled = true;
+          }
+        });
+
         // Landscape (cache-busted)
         const landscape = document.getElementById('climate_landscape');
         const landscapeUrl = (climate.landscape?.trim() || `images/landscapes/${climate_code}.jpg`)
