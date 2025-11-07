@@ -12,15 +12,15 @@
   <link rel="stylesheet" href="css/styles.css">
   <title></title>
   <style>
-    /* Start hidden; JS unhides only on successful image load */
-    #cities { display: none !important; }
-    #map1, #map2, #map3, #map4,
-    #map1usa, #map2usa, #map3usa, #map4usa,
-    #map1europe, #map2europe, #map3europe, #map4europe {
-      display: none;
-    }
-    /* Landscape also starts hidden until confirmed */
-    #climate_landscape { display: none; }
+  /* Generic hidden class – JS will remove this when content loads successfully */
+  .hidden {
+    display: none !important;
+  }
+
+  /* Cities section still starts hidden (uses the same class or ID override if needed) */
+  #cities {
+    display: none !important;
+  }
   </style>
 </head>
 <body>
