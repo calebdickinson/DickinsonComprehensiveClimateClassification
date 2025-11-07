@@ -77,55 +77,55 @@
 
     <!-- Global maps -->
     <div id="map1">
-      <h3>Global distribution of this climate<br>(1981 - 2010 normals)</h3>
+      <h3 class="map-caption">Global distribution of this climate<br>(1981 - 2010 normals)</h3>
       <img id="climate_map_1" alt="World climate map (1981 - 2010 normals)">
     </div>
     <div id="map2">
-      <h3>Global distribution of this climate<br>(2011 - 2040 High Emissions normals)</h3>
+      <h3 class="map-caption">Global distribution of this climate<br>(2011 - 2040 High Emissions normals)</h3>
       <img id="climate_map_2" alt="World climate map (2011 - 2040 High Emissions normals)">
     </div>
     <div id="map3">
-      <h3>Global distribution of this climate<br>(2041 - 2070 High Emissions normals)</h3>
+      <h3 class="map-caption">Global distribution of this climate<br>(2041 - 2070 High Emissions normals)</h3>
       <img id="climate_map_3" alt="World climate map (2041 - 2070 High Emissions normals)">
     </div>
     <div id="map4">
-      <h3>Global distribution of this climate<br>(2071 - 2100 High Emissions normals)</h3>
+      <h3 class="map-caption">Global distribution of this climate<br>(2071 - 2100 High Emissions normals)</h3>
       <img id="climate_map_4" alt="World climate map (2071 - 2100 High Emissions normals)">
     </div>
 
     <!-- USA maps -->
     <div id="map1usa">
-      <h3>United States distribution of this climate<br>(1981 - 2010 normals)</h3>
+      <h3 class="map-caption">United States distribution of this climate<br>(1981 - 2010 normals)</h3>
       <img id="climate_map_1_usa" alt="United States climate map (1981 - 2010 normals)">
     </div>
     <div id="map2usa">
-      <h3>United States distribution of this climate<br>(2011 - 2040 High Emissions normals)</h3>
+      <h3 class="map-caption">United States distribution of this climate<br>(2011 - 2040 High Emissions normals)</h3>
       <img id="climate_map_2_usa" alt="United States climate map (2011 - 2040 High Emissions normals)">
     </div>
     <div id="map3usa">
-      <h3>United States distribution of this climate<br>(2041 - 2070 High Emissions normals)</h3>
+      <h3 class="map-caption">United States distribution of this climate<br>(2041 - 2070 High Emissions normals)</h3>
       <img id="climate_map_3_usa" alt="United States climate map (2041 - 2070 High Emissions normals)">
     </div>
     <div id="map4usa">
-      <h3>United States distribution of this climate<br>(2071 - 2100 High Emissions normals)</h3>
+      <h3 class="map-caption">United States distribution of this climate<br>(2071 - 2100 High Emissions normals)</h3>
       <img id="climate_map_4_usa" alt="United States climate map (2071 - 2100 High Emissions normals)">
     </div>
 
     <!-- Europe maps -->
     <div id="map1europe">
-      <h3>Europe distribution of this climate<br>(1981 - 2010 normals)</h3>
+      <h3 class="map-caption">Europe distribution of this climate<br>(1981 - 2010 normals)</h3>
       <img id="climate_map_1_europe" alt="Europe climate map (1981 - 2010 normals)">
     </div>
     <div id="map2europe">
-      <h3>Europe distribution of this climate<br>(2011 - 2040 High Emissions normals)</h3>
+      <h3 class="map-caption">Europe distribution of this climate<br>(2011 - 2040 High Emissions normals)</h3>
       <img id="climate_map_2_europe" alt="Europe climate map (2011 - 2040 High Emissions normals)">
     </div>
     <div id="map3europe">
-      <h3>Europe distribution of this climate<br>(2041 - 2070 High Emissions normals)</h3>
+      <h3 class="map-caption">Europe distribution of this climate<br>(2041 - 2070 High Emissions normals)</h3>
       <img id="climate_map_3_europe" alt="Europe climate map (2041 - 2070 High Emissions normals)">
     </div>
     <div id="map4europe">
-      <h3>Europe distribution of this climate<br>(2071 - 2100 High Emissions normals)</h3>
+      <h3 class="map-caption">Europe distribution of this climate<br>(2071 - 2100 High Emissions normals)</h3>
       <img id="climate_map_4_europe" alt="Europe climate map (2071 - 2100 High Emissions normals)">
     </div>
   </main>
@@ -181,6 +181,21 @@
         document.getElementById('climate_name').textContent =
           climate.name + (climate.group ? " Climate Group" : " Climate");
         document.getElementById('climate_code').textContent = climate_code;
+
+        const isGroup = !!climate.group;
+
+        document.querySelectorAll('.map-caption').forEach(caption => {
+          caption.innerHTML = caption.innerHTML.replace(
+            'Global distribution of this climate',
+            isGroup ? 'Global distribution of this climate group' : 'Global distribution of this climate'
+          ).replace(
+            'United States distribution of this climate',
+            isGroup ? 'United States distribution of this climate group' : 'United States distribution of this climate'
+          ).replace(
+            'Europe distribution of this climate',
+            isGroup ? 'Europe distribution of this climate group' : 'Europe distribution of this climate'
+          );
+        });
 
         // Nav buttons
         [
