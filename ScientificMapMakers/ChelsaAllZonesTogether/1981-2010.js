@@ -783,7 +783,7 @@ var cityList = [
   { name: 'Ust-Nera, Russia',                            lon: 143.2000,  lat: 64.5667 },
   { name: 'Verkhoyansk, Russia',                         lon: 133.3833,  lat: 67.5500 },
   { name: 'Hulunbuir, China',                            lon: 119.7667,  lat: 49.2167 },
-  { name: 'Heard Island and McDonald Islands',           lon: 73.5167,   lat: -53.1000 },
+  { name: 'Heard Island and McDonald Islands (Coast)',   lon: 73.396,    lat: -53.011 },
   { name: 'Bourem, Mali',                                lon: -0.3497,   lat: 16.9667 },
   { name: 'Salango Island, Ecuador',                     lon: -80.8583,  lat: -1.5833 },
   { name: 'Sharmokhiya, Iraq',                           lon: 44.7167,   lat: 35.1167 },
