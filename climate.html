@@ -75,6 +75,11 @@
       <img id="climate_landscape" alt="landscape in this climate">
     </div>
 
+    <!-- Legend shown only for climate group pages -->
+    <div id="groupLegend" style="display:none; text-align:center; margin: 1rem 0;">
+      <img id="group_legend_img" alt="Climate group legend" style="max-width:100%; height:auto;">
+    </div>
+
     <!-- Global maps -->
     <div id="map1">
       <h3 class="map-caption">Global distribution of this climate<br>(1981 - 2010 normals)</h3>
@@ -184,6 +189,14 @@
 
         const isGroup = !!climate.group;
 
+        if (isGroup) {
+          const legendDiv = document.getElementById('groupLegend');
+          const legendImg = document.getElementById('group_legend_img');
+
+          legendImg.src = 'images/climategrouplegend.png';  // exact path
+          legendDiv.style.display = '';                     // unhide
+        }
+
         document.querySelectorAll('.map-caption').forEach(caption => {
           caption.innerHTML = caption.innerHTML.replace(
             'Global distribution of this climate',
@@ -254,7 +267,8 @@
           document.getElementById('climate_exists').textContent =
             `THIS ${climate.group ? 'CLIMATE GROUP' : 'CLIMATE'} DOES NOT EXIST`;
           [
-            'landscapes','map1','map2','map3','map4',
+            'landscapes', 'groupLegend',
+            'map1','map2','map3','map4',
             'map1usa','map2usa','map3usa','map4usa',
             'map1europe','map2europe','map3europe','map4europe',
             'ariditySection'
