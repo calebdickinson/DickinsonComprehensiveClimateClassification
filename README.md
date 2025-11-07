@@ -11,10 +11,10 @@ Unlike the Köppen system, the Dickinson system contains hundreds of possible cl
 This allows the Dickinson system to accurately describe hypothetical climates that may occur in the future due to climate change, but do not currently exist on Earth. 
 This will be useful in the future as humans continue to warm the Earth with fossil fuels.</p>
 
-Being more generally more granular than Köppen, Dickinson better illustrates the differences between each of the new extreme climates we will see in the future, as well as the climates we see today.
+Being more generally more granular than the Köppen system, the Dickinson system better illustrates the differences between each of the new extreme climates we will see in the future, as well as the climates we see today.
 Edge cases illustrate some interesting climate factors not measured in the Köppen system.</p>
 
-Dickinson encodes each climate in 3 (or 2) parts, depending on whether an aridity value is included.
+The Dickinson system encodes each climate in 3 (or 2) parts, depending on whether an aridity value is included.
 Aridity is not relevant to extremely hot and cold climates. 
 We omit the aridity score in climates that fall within subarctic, arctic, superarctic, cold summer, very cold summer, freezing summer, or frigid summer zones.
 
