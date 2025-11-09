@@ -249,13 +249,13 @@
           }
         });
 
-        // Landscape (cache-busted)
-        const landscape = document.getElementById('climate_landscape');
-        const landscapeUrl = (climate.landscape?.trim() || `images/landscapes/${climate_code}.jpg`)
-                           + `?v=${Date.now()}`;
-        landscape.onload = () => { landscape.style.display = ''; };
-        landscape.onerror = () => { landscape.remove(); };
-        landscape.src = landscapeUrl;
+        // --- Landscapes: load exactly like maps ---
+        const LAND_DIR = 'images/landscapes';
+        const landscapeDefault = `${LAND_DIR}/${climate_code}.jpg`;
+        const landscapePath = (climate.landscape && climate.landscape.trim()) || landscapeDefault;
+
+        // Use the same helper the maps use (wireSection does the cache-busting and show/hide)
+        wireSection('landscapes', 'climate_landscape', landscapePath);
 
         // Build default map paths using exact case
         const MAP_DIR = 'images/maps';
