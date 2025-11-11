@@ -21,6 +21,11 @@
   #cities {
     display: none !important;
   }
+
+  #landscape_caption {
+    font-family: Georgia, serif;
+  }
+
   </style>
 </head>
 <body>
@@ -72,7 +77,8 @@
     </div>
 
     <div id="landscapes">
-      <img id="climate_landscape" alt="landscape in this climate">
+      <img id="climate_landscape" alt="landscape in this climate"><br>
+      <p id="landscape_caption" class="hidden"></p>
     </div>
 
     <!-- Legend shown only for climate group pages -->
@@ -256,6 +262,21 @@
 
         // Use the same helper the maps use (wireSection does the cache-busting and show/hide)
         wireSection('landscapes', 'climate_landscape', landscapePath);
+
+        // --- Simple landscape caption loader (HTML allowed) ---
+        fetch('data/landscapetext.json?v=' + Date.now(), { cache: 'no-store' })
+          .then(r => r.json())
+          .then(texts => {
+            const caption = texts[climate_code]; // key must match canonical climate_code
+            if (caption) {
+              const capEl = document.getElementById('landscape_caption');
+              if (capEl) {
+                capEl.innerHTML = caption; // use innerHTML so <a> links render
+                capEl.classList.remove('hidden');
+              }
+            }
+          })
+          .catch(err => console.warn('No landscape caption found:', err));
 
         // Build default map paths using exact case
         const MAP_DIR = 'images/maps';
