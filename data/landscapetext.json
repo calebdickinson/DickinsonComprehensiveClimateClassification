@@ -1,5 +1,10 @@
 {
-  "EY": "Here is a video of typical winter weather at Mawson Station in Antarctica, which has an EY climate: <a href='https://www.youtube.com/watch?v=x5XXF6U6vDQ' target='_blank'>https://www.youtube.com/watch?v=x5XXF6U6vDQ</a>",
-  
-  "FY": "<i>Image of McMurdo Station, Antarctica: <a href='https://commons.wikimedia.org/wiki/File:McMurdo-Station_aus_der_Vogelperspektive_(16481391425).jpg' target='_blank'>Marco Feldmann/FH Aachen</a>, <a href='https://creativecommons.org/licenses/by/2.0/' target='_blank'>CC BY 2.0</a> via Wikimedia Commons.</i><br><br>Here is a video of typical winter weather at McMurdo Station in Antarctica, which has an FY climate: <a href='https://www.youtube.com/watch?v=qz2SeEzxMuE' target='_blank'>https://www.youtube.com/watch?v=qz2SeEzxMuE</a>"
+  "EY": {
+    "video": "Here is a video of typical winter weather at Mawson Station in Antarctica, which has an EY climate: <a href='https://www.youtube.com/watch?v=x5XXF6U6vDQ' target='_blank'>https://www.youtube.com/watch?v=x5XXF6U6vDQ</a>"
+  },
+
+  "FY": {
+    "caption": "<i>Image of McMurdo Station, Antarctica: <a href='https://commons.wikimedia.org/wiki/File:McMurdo-Station_aus_der_Vogelperspektive_(16481391425).jpg' target='_blank'>Marco Feldmann/FH Aachen</a>, <a href='https://creativecommons.org/licenses/by/2.0/' target='_blank'>CC BY 2.0</a> via Wikimedia Commons.</i>",
+    "video": "Here is a video of typical winter weather at McMurdo Station in Antarctica, which has an FY climate: <a href='https://www.youtube.com/watch?v=qz2SeEzxMuE' target='_blank'>https://www.youtube.com/watch?v=qz2SeEzxMuE</a>"
+  }
 }

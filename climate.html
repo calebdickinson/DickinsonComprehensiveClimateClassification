@@ -271,11 +271,17 @@
         fetch('data/landscapetext.json?v=' + Date.now(), { cache: 'no-store' })
           .then(r => r.json())
           .then(texts => {
-            const caption = texts[climate_code]; // key must match canonical climate_code
-            if (caption) {
+            const data = texts[climate_code]; // key must match canonical climate_code
+            if (data) {
               const capEl = document.getElementById('landscape_caption');
               if (capEl) {
-                capEl.innerHTML = caption; // use innerHTML so <a> links render
+                // Combine caption + video with a double line break if both exist
+                const combinedText = [
+                  data.caption || '',
+                  data.video ? '<br><br>' + data.video : ''
+                ].join('');
+                
+                capEl.innerHTML = combinedText;
                 capEl.classList.remove('hidden');
               }
             }
