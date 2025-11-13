@@ -198,13 +198,13 @@ If Caleb Dickinson accepts your pull request, then your changes will be added.
 
 `index.html` landing page lets you search for climates by temperature
 
-`home.html` displays the DCCCS as a set of grids of selectable climates
+`home.html` displays the Dickinson climate classification as a set of grids of selectable climates
 
-`classification.html` provides in-depth explanations and visualizations of how DCCCS works
+`classification.html` provides in-depth explanations and visualizations of how the Dickinson climate classification works
 
 `maps.html` detailed climate maps
 
-`about.html` information about the DCCCS
+`about.html` information about the Dickinson climate classification
 
 `climate.html` information about the selected climate
 
