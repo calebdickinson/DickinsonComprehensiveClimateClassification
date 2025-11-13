@@ -1,22 +1,33 @@
 {
-  "Cb1": {
-    "video": "High quality drone footage of the Faroe Islands: <a href='https://www.youtube.com/watch?v=cD9HEBz_QPs' target='_blank'>Faroe Islands 🇫🇴 - by drone [4K]</a>"
+  "FY": {
+    "caption": "<i>Image of McMurdo Station, Antarctica: <a href='https://commons.wikimedia.org/wiki/File:McMurdo-Station_aus_der_Vogelperspektive_(16481391425).jpg' target='_blank'>Marco Feldmann/FH Aachen</a>, <a href='https://creativecommons.org/licenses/by/2.0/' target='_blank'>CC BY 2.0</a> via Wikimedia Commons.</i>",
+    "video": "Here is a video of typical winter weather at McMurdo Station in Antarctica, which has an FY climate: <a href='https://www.youtube.com/watch?v=qz2SeEzxMuE' target='_blank'>Antarctica Condition 1 Weather</a>"
   },
 
-  "Cc2": {
-    "video": "Footage of wildlife and landscape Macquarie Island. The entire island has a Cc2 climate: <a href='https://www.youtube.com/watch?v=EdcoCl-Pgq0' target='_blank'>Antarctica–Expedition to the Ross Sea EP2: Macquarie Island, Australia</a>"
-  },
 
-  "Cc1": {
-    "video": "Footage of Heard Island. The green coastal areas have a Cc1 climate, one of the rarest climates on earth. The average refrigerater could be said to have a Cc1 \"climate\": <a href='https://www.youtube.com/watch?v=I89I1AkWUkk' target='_blank'>Heard Island 2012 visit</a>"
-  },
 
+  
   "EY": {
     "video": "Here is a video of typical winter weather at Mawson Station in Antarctica, which has an EY climate: <a href='https://www.youtube.com/watch?v=x5XXF6U6vDQ' target='_blank'>Walking the line</a>"
   },
 
-  "FY": {
-    "caption": "<i>Image of McMurdo Station, Antarctica: <a href='https://commons.wikimedia.org/wiki/File:McMurdo-Station_aus_der_Vogelperspektive_(16481391425).jpg' target='_blank'>Marco Feldmann/FH Aachen</a>, <a href='https://creativecommons.org/licenses/by/2.0/' target='_blank'>CC BY 2.0</a> via Wikimedia Commons.</i>",
-    "video": "Here is a video of typical winter weather at McMurdo Station in Antarctica, which has an FY climate: <a href='https://www.youtube.com/watch?v=qz2SeEzxMuE' target='_blank'>Antarctica Condition 1 Weather</a>"
+
+
+
+  "Dc1": {
+    "video": "High quality drone footage of typical summer weather in South Georgia: <a href='https://www.youtube.com/watch?v=sjHrFHLdx9Y' target='_blank'>One of the most amazing places in the world ! AMAZING SOUTH GEORGIA: Amazing Planet (4K) 2023</a>"
+  },
+
+
+
+  
+  "Cc1": {
+    "video": "Footage of Heard Island. The green coastal areas have a Cc1 climate, one of the rarest climates on earth. The average refrigerater could be said to have a Cc1 \"climate\": <a href='https://www.youtube.com/watch?v=I89I1AkWUkk' target='_blank'>Heard Island 2012 visit</a>"
+  },
+  "Cc2": {
+    "video": "Footage of wildlife and landscape Macquarie Island. The entire island has a Cc2 climate: <a href='https://www.youtube.com/watch?v=EdcoCl-Pgq0' target='_blank'>Antarctica–Expedition to the Ross Sea EP2: Macquarie Island, Australia</a>"
+  },
+  "Cb1": {
+    "video": "High quality drone footage of the Faroe Islands: <a href='https://www.youtube.com/watch?v=cD9HEBz_QPs' target='_blank'>Faroe Islands 🇫🇴 - by drone [4K]</a>"
   }
 }
