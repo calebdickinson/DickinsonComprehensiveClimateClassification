@@ -6,7 +6,8 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-L6C1HZ2LBZ');
+    // We’ll send our own page_view after we know which climate is loaded
+    gtag('config', 'G-L6C1HZ2LBZ', { send_page_view: false });
   </script>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="css/styles.css">
@@ -85,6 +86,25 @@
       <p id="landscape_caption" class="hidden"></p>
     </div>
 
+    <div id="cities">
+      <div id="cities1" class="cities-block">
+        <h3>Cities with this climate (1981 - 2010 normals)</h3>
+        <ul id="climate_cities1"></ul>
+      </div>
+      <div id="cities2" class="cities-block">
+        <h3>Cities with this climate (2011 - 2040 normals)</h3>
+        <ul id="climate_cities2"></ul>
+      </div>
+      <div id="cities3" class="cities-block">
+        <h3>Cities with this climate (2041 - 2070 normals)</h3>
+        <ul id="climate_cities3"></ul>
+      </div>
+      <div id="cities4" class="cities-block">
+        <h3>Cities with this climate (2071 - 2100 normals)</h3>
+        <ul id="climate_cities4"></ul>
+      </div>
+    </div>
+
     <!-- Legend shown only for climate group pages -->
     <div id="groupLegend" style="max-width:800px; margin:0 auto 10px; display:block;">
       <img id="group_legend_img" alt="Climate group maps legend" style="max-width:100%; height:auto;">
@@ -151,7 +171,17 @@
       window.location.href = window.location.pathname + '?code=' + nextCode;
     }
 
-    // Only unhide a section if its image actually loads (with cache busting)
+    function trackAndGo(label, dest) {
+      gtag('event', 'select_content', {
+        content_type: 'climate_nav',
+        item_id: dest,
+        link_label: label,
+        from_code: document.getElementById('climate_code')?.textContent || ''
+      });
+      // Navigate on next tick so the event queues
+      setTimeout(() => change_climate(dest), 0);
+    }
+
     function wireSection(sectionId, imgId, url) {
       const section = document.getElementById(sectionId);
       const img = document.getElementById(imgId);
@@ -159,8 +189,6 @@
 
       section.style.display = 'none';
       if (!url || String(url).trim() === '') return;
-
-      const busted = url + (url.includes('?') ? '&' : '?') + 'v=' + Date.now();
 
       img.onload = () => {
         if (img.naturalWidth > 0 && img.naturalHeight > 0) {
@@ -172,7 +200,7 @@
       img.onerror = () => section.remove();
       img.decoding = 'async';
       img.loading  = 'eager';
-      img.src = busted;
+      img.src = url;
     }
 
     // --- main ---
@@ -198,6 +226,27 @@
         document.getElementById('climate_code').textContent = climate_code;
 
         const isGroup = !!climate.group;
+
+        // ---- GA4 tracking for this generated page ----
+        const pageTitle = `${climate.name}${isGroup ? ' Climate Group' : ' Climate'} (${climate_code}) – Dickinson CCS`;
+        document.title = pageTitle;
+
+        // Keep full URL for page_location; use a stable path+query for page_path
+        const pagePath = `${location.pathname}?code=${encodeURIComponent(climate_code)}`;
+
+        gtag('event', 'page_view', {
+          page_title: pageTitle,
+          page_location: location.href,
+          page_path: pagePath
+        });
+
+        // Optional: custom event for easy filtering
+        gtag('event', 'view_climate', {
+          climate_code: climate_code,
+          climate_name: climate.name,
+          is_group: isGroup,
+          exists: !!climate.exists
+        });
 
         if (isGroup) {
           const legendDiv = document.getElementById('groupLegend');
@@ -235,7 +284,7 @@
         ].forEach(([btnId, key]) => {
           const btn = document.getElementById(btnId);
           const dest = climate[key];
-          if (dest && dest !== "False") btn.onclick = () => change_climate(dest);
+          if (dest && dest !== "False") btn.onclick = () => trackAndGo(btn.textContent.trim(), dest);
           else btn.disabled = true;
         });
 
@@ -253,7 +302,7 @@
 
           const dest = climate[key];
           if (dest && dest !== "False") {
-            btn.onclick = () => change_climate(dest);
+            btn.onclick = () => trackAndGo(btn.textContent.trim(), dest);
           } else {
             btn.disabled = true;
           }
