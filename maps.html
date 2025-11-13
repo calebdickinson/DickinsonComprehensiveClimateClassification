@@ -1647,6 +1647,41 @@
       }
     })();
     </script>
+    <script>
+      (function () {
+        // Helper: get summary text from a <details>
+        function summaryText(details) {
+          const s = details.querySelector(':scope > summary');
+          return s ? s.textContent.trim().replace(/\s+/g, ' ') : '(untitled)';
+        }
 
-</body>
+        // Helper: build a full breadcrumb path from nested <details>
+        function detailsPath(details) {
+          const names = [];
+          let node = details;
+          while (node && node.tagName === 'DETAILS') {
+            names.unshift(summaryText(node));
+            node = node.parentElement ? node.parentElement.closest('details') : null;
+          }
+          return names.join(' > ');
+        }
+
+        document.addEventListener('toggle', function (evt) {
+          const d = evt.target;
+          if (!(d instanceof HTMLDetailsElement)) return;
+          if (!d.open) return; // only send on open
+
+          // increment per-session open count for this element
+          d.dataset.gaCount = (parseInt(d.dataset.gaCount || 0) + 1);
+
+          const path = detailsPath(d);
+          gtag('event', 'accordion_open', {
+            accordion_path: path,       // e.g. "North America > United States > Idaho"
+            summary: summaryText(d),    // e.g. "Idaho"
+            open_count: d.dataset.gaCount
+          });
+        });
+      })();
+    </script>
+  </body>
 </html>
