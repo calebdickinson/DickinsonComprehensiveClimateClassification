@@ -14,12 +14,12 @@ codes = {
 'GH', 'GX', 'Gz2', 'Gz1', 'Ga2', 'Ga1', 'Gb2', 'Gb1', 'Gc2', 'Gc1', 'GY',
 'YH', 'YX', 'Yz2', 'Yz1', 'Ya2', 'Ya1', 'Yb2', 'Yb1', 'Yc2', 'Yc1', 'YY',
 
-              'Zhz1',
-              'Ahz1', 'Aha2', 'Aha1',
-              'Bhz1', 'Bha2', 'Bha1', 'Bhb2',
-              'Chz1', 'Cha2', 'Cha1', 'Chb2',
-                      'Dha2', 'Dha1', 'Dhb2',
-                      'Eha2', 'Eha1', 'Ehb2',
+      'Zhz2', 'Zhz1',
+      'Ahz2', 'Ahz1', 'Aha2', 'Aha1',
+      'Bhz2', 'Bhz1', 'Bha2', 'Bha1', 'Bhb2',
+      'Chz2', 'Chz1', 'Cha2', 'Cha1', 'Chb2',
+              'Dhz1', 'Dha2', 'Dha1', 'Dhb2',
+              'Ehz1', 'Eha2', 'Eha1', 'Ehb2',
 
       'Zgz2', 'Zgz1',
       'Agz2', 'Agz1', 'Aga2', 'Aga1',
@@ -150,7 +150,7 @@ def has_aridity(cold:str, warm:str) -> bool:
     Returns:
         bool: True if the code has aridity, False otherwise
     """
-    if cold in ['H', 'F', 'G', 'Y'] or warm in ['b1', 'c2', 'c1', 'Y'] or cold + warm in ['XX', 'CX', 'DX', 'EX', 'Ez2']:
+    if cold in ['H', 'F', 'G', 'Y'] or warm in ['b1', 'c2', 'c1', 'Y'] or cold + warm in ['EX', 'XX']:
         return False
     return True
 
@@ -170,7 +170,7 @@ def does_exist(code: str) -> bool:
         'AH', 
         'BH', 
         'CH',
-        'DH', 'DX',
+        'DH',
         'EH', 'EX',
         'FH', 'FX', 'Fz2',
         'GH', 'GX', 'Gz2',
