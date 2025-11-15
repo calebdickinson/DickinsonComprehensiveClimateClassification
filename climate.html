@@ -221,6 +221,55 @@
 
         const climate_code = climate.code; // canonical case from data.json
 
+        // --- Cities: load from data/cities.json and populate lists ---
+        (function loadCities() {
+          fetch('data/cities.json?v=' + Date.now(), { cache: 'no-store' })
+            .then(r => r.json())
+            .then(allCities => {
+              const citiesWrap = document.getElementById('cities');
+              const entry = allCities[climate_code] || allCities[climate_code.toLowerCase()] || allCities[climate_code.toUpperCase()];
+              if (!entry) return; // nothing for this code
+
+              let any = false;
+
+              const fill = (ulId, arr) => {
+                const ul = document.getElementById(ulId);
+                if (!ul) return;
+
+                // de-dup + sort
+                const items = Array.from(new Set(arr || [])).sort((a, b) => a.localeCompare(b));
+
+                if (items.length === 0) {
+                  // hide the whole block if empty
+                  const block = ul.closest('.cities-block');
+                  if (block) block.remove();
+                  return;
+                }
+
+                any = true;
+                items.forEach(name => {
+                  const li = document.createElement('li');
+                  li.textContent = name;
+                  ul.appendChild(li);
+                });
+              };
+
+              // Periods 1–4
+              fill('climate_cities1', entry["1"]);
+              fill('climate_cities2', entry["2"]);
+              fill('climate_cities3', entry["3"]);
+              fill('climate_cities4', entry["4"]);
+
+              // Only show the section if any list had items.
+              if (any && citiesWrap) {
+                // Your CSS has: #cities { display: none !important; }
+                // Override it explicitly with !important:
+                citiesWrap.style.setProperty('display', 'block', 'important');
+              }
+            })
+            .catch(err => console.warn('Cities load failed:', err));
+        })();
+
         document.getElementById('climate_name').textContent =
           climate.name + (climate.group ? " Climate Group" : " Climate");
         document.getElementById('climate_code').textContent = climate_code;
