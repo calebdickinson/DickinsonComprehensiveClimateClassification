@@ -1,0 +1,497 @@
+name,classification
+"Chandrapur, India",Awz2
+"Bourem, Mali",Adz2
+"Hyderabad, India",Awz1
+"Ouagadougou, Burkina Faso",Awz1
+"N'Djamena, Chad",Awz1
+"Bamako, Mali",Awz1
+"Naypyidaw, Myanmar",Awz1
+"Juba, South Sudan",Agz1
+"Niamey, Niger",Adz1
+"Muscat, Oman",Adz1
+"Khartoum, Sudan",Adz1
+"Bangkok, Thailand",Ahz1
+"Chennai, India",Ahz1
+"Phnom Penh, Cambodia",Ahz1
+"Luanda, Angola",Asa2
+"Honolulu, Hawaii, United States",Asa2
+"Mogadishu, Somalia",Asa2
+"Willemstad, Curaçao (NL)",Asa2
+"Mumbai, India",Awa2
+"Banjul, Gambia",Awa2
+"Conakry, Guinea",Awa2
+"Bissau, Guinea-Bissau",Awa2
+"Vientiane, Laos",Awa2
+"Abuja, Nigeria",Awa2
+"Freetown, Sierra Leone",Awa2
+"Bangalore, India",Aga2
+"St. John's, Antigua and Barbuda",Aga2
+"Bridgetown, Barbados",Aga2
+"Accra, Ghana",Aga2
+"St. George's, Grenada",Aga2
+"Port-au-Prince, Haiti",Aga2
+"Managua, Nicaragua",Aga2
+"Basseterre, Saint Kitts and Nevis",Aga2
+"São Tomé, São Tomé and Príncipe",Aga2
+"Dili, Timor-Leste",Aga2
+"Lomé, Togo",Aga2
+"The Valley, Anguilla (UK)",Aga2
+"Road Town, British Virgin Islands (UK)",Aga2
+"George Town, Cayman Islands (UK)",Aga2
+"Brades, Montserrat (UK)",Aga2
+"Cockburn Town, Turks & Caicos (UK)",Aga2
+"Charlotte Amalie, United States Virgin Islands, United States",Aga2
+"Philipsburg, Sint Maarten (NL)",Aga2
+"The Bottom, Saba (NL)",Aga2
+"Oranjestad, Sint Eustatius (NL)",Aga2
+"Trincomalee, Sri Lanka",Aga2
+"Praia, Cabo Verde",Ada2
+"Nouakchott, Mauritania",Ada2
+"Dakar, Senegal",Ada2
+"Oranjestad, Aruba (NL)",Ada2
+"Kralendijk, Bonaire (NL)",Ada2
+"Salango Island, Ecuador",Ada2
+"Jakarta, Indonesia",Aha2
+"Manila, Philippines",Aha2
+"Ho Chi Minh City, Vietnam",Aha2
+"Lagos, Nigeria",Aha2
+"Kinshasa, DR Congo",Aha2
+"Rio de Janeiro, Brazil",Aha2
+"Kuala Lumpur, Malaysia",Aha2
+"Miami, Florida, United States",Aha2
+"San Juan, Puerto Rico, United States",Aha2
+"Nassau, Bahamas",Aha2
+"Belmopan, Belize",Aha2
+"Porto-Novo, Benin",Aha2
+"Bandar Seri Begawan, Brunei",Aha2
+"Bangui, Central African Republic",Aha2
+"Moroni, Comoros",Aha2
+"Brazzaville, Congo",Aha2
+"Yamoussoukro, Côte d'Ivoire",Aha2
+"Havana, Cuba",Aha2
+"Roseau, Dominica",Aha2
+"Santo Domingo, Dominican Republic",Aha2
+"Malabo, Equatorial Guinea",Aha2
+"Palikir, Federated States of Micronesia",Aha2
+"Suva, Fiji",Aha2
+"Libreville, Gabon",Aha2
+"Georgetown, Guyana",Aha2
+"Kingston, Jamaica",Aha2
+"Tarawa, Kiribati",Aha2
+"Monrovia, Liberia",Aha2
+"Malé, Maldives",Aha2
+"Majuro, Marshall Islands",Aha2
+"Port Louis, Mauritius",Aha2
+"Yaren, Nauru",Aha2
+"Ngerulmud, Palau",Aha2
+"Panama City, Panama",Aha2
+"Port Moresby, Papua New Guinea",Aha2
+"Castries, Saint Lucia",Aha2
+"Kingstown, Saint Vincent and the Grenadines",Aha2
+"Apia, Samoa",Aha2
+"Victoria, Seychelles",Aha2
+"Singapore, Singapore",Aha2
+"Honiara, Solomon Islands",Aha2
+"Sri Jayawardenepura Kotte, Sri Lanka",Aha2
+"Paramaribo, Suriname",Aha2
+"Nukuʻalofa, Tonga",Aha2
+"Port of Spain, Trinidad and Tobago",Aha2
+"Funafuti, Tuvalu",Aha2
+"Port Vila, Vanuatu",Aha2
+"Pago Pago, American Samoa, United States",Aha2
+"Hagåtña, Guam, United States",Aha2
+"Saipan, Northern Mariana Islands, United States",Aha2
+"San Juan, Puerto Rico, United States",Aha2
+"Papeete, French Polynesia (FR)",Aha2
+"Mata-Utu, Wallis & Futuna (FR)",Aha2
+"Avarua, Cook Islands (NZ)",Aha2
+"Alofi, Niue (NZ)",Aha2
+"Nukunonu, Tokelau (NZ)",Aha2
+"San Salvador, El Salvador",Awa1
+"Dodoma, Tanzania",Awa1
+"Tegucigalpa, Honduras",Aga1
+"Caracas, Venezuela",Aga1
+"Yaoundé, Cameroon",Aha1
+"Kampala, Uganda",Aha1
+"Adamstown, Pitcairn Islands (UK)",Aha1
+"Santo Domingo, Ecuador",Aha1
+"Bogotá, Colombia",Bb1
+"Quito, Ecuador",Bb1
+"Nicosia, Cyprus",Bmz1
+"Kota, India",Bwz2
+"Phoenix, Arizona, United States",Bdz2
+"Baghdad, Iraq",Bdz2
+"Kuwait City, Kuwait",Bdz2
+"Riyadh, Saudi Arabia",Bdz2
+"Dubai, United Arab Emirates",Bdz2
+"Lake Havasu City, Arizona, United States",Bdz2
+"Riverside, California, United States",Bma2
+"Algiers, Algeria",Bma2
+"Beirut, Lebanon",Bma2
+"Valletta, Malta",Bma2
+"Tunis, Tunisia",Bma2
+"Melilla, Melilla (ES)",Bma2
+"Crystal City, Texas, United States",Bsz1
+"Delhi, India",Bwz1
+"Kolkata, India",Bwz1
+"Lahore, Pakistan",Bwz1
+"Karachi, Pakistan",Bdz1
+"Manama, Bahrain",Bdz1
+"Doha, Qatar",Bdz1
+"El Menia, Algeria",Bdz1
+"Islamabad, Pakistan",Bhz1
+"Gujrat, Pakistan",Bhz1
+"Los Angeles, California, United States",Bma1
+"Rabat, Morocco",Bma1
+"Lisbon, Portugal",Bma1
+"Gibraltar, Gibraltar (UK)",Bma1
+"Ceuta, Ceuta (ES)",Bma1
+"Ponta Delgada, Azores (PT)",Bma1
+"Funchal, Madeira (PT)",Bma1
+"Hanga Roa, Easter Island (CL)",Bma1
+"Guangzhou, China",Bwa2
+"Dhaka, Bangladesh",Bwa2
+"Shenzhen, China",Bwa2
+"Dongguan, China",Bwa2
+"Gaborone, Botswana",Bwa2
+"Maputo, Mozambique",Bwa2
+"Hanoi, Vietnam",Bwa2
+"San Antonio, Texas, United States",Bga2
+"Austin, Texas, United States",Bga2
+"Cairo, Egypt",Bda2
+"Djibouti, Djibouti",Bda2
+"Tripoli, Libya",Bda2
+"Taipei, Taiwan",Bha2
+"Houston, Texas, United States",Bha2
+"Tampa, Florida, United States",Bha2
+"Orlando, Florida, United States",Bha2
+"Jacksonville, Florida, United States",Bha2
+"New Orleans, Louisiana, United States",Bha2
+"Tallahassee, Florida, United States",Bha2
+"Baton Rouge, Louisiana, United States",Bha2
+"Asunción, Paraguay",Bha2
+"Hamilton, Bermuda (UK)",Bha2
+"Nouméa, New Caledonia (FR)",Bha2
+"Fuzhou, China",Bha2
+"Cape Town, South Africa",Bmb2
+"Lompoc, California, United States",Bmb2
+"Jamestown, St Helena (UK)",Bsa1
+"San José de la Joya, Mexico",Bsa1
+"Brasília, Brazil",Bwa1
+"Guatemala City, Guatemala",Bwa1
+"Antananarivo, Madagascar",Bwa1
+"Lilongwe, Malawi",Bwa1
+"Kathmandu, Nepal",Bwa1
+"Lusaka, Zambia",Bwa1
+"Harare, Zimbabwe",Bwa1
+"Gitega, Burundi",Bga1
+"Nairobi, Kenya",Bga1
+"Kigali, Rwanda",Bga1
+"Lima, Peru",Bda1
+"San Diego, California, United States",Bda1
+"Windhoek, Namibia",Bda1
+"Sana'a, Yemen",Bda1
+"São Paulo, Brazil",Bha1
+"Buenos Aires, Argentina",Bha1
+"San José, Costa Rica",Bha1
+"Montevideo, Uruguay",Bha1
+"Kingston, Norfolk Island (AU)",Bha1
+"Asmara, Eritrea",Bsb2
+"Mexico City, Mexico",Bwb2
+"Sucre, Bolivia",Bwb2
+"Mbabane, Eswatini",Bwb2
+"Addis Ababa, Ethiopia",Bwb2
+"Coronado Islands, Mexico",Bdb2
+Edinburgh of the Seven Seas,Bhb2
+"Stanley, Falkland Islands (UK)",Cb1
+"Tórshavn, Faroe Islands (DK)",Cb1
+"Sitka, Alaska, United States",Cb1
+"Ketchikan, Alaska, United States",Cb1
+Macquarie Island Research Station,Cc2
+"Adak, Alaska, United States",Cc2
+Heard Island and McDonald Islands (Coast),Cc1
+"Sharmokhiya, Iraq",Cmz2
+"Tehran, Iran",Cmz1
+"Batman, Turkey",Cmz1
+"Athens, Greece",Cma2
+"Amman, Jordan",Cma2
+"Podgorica, Montenegro",Cma2
+"Madrid, Spain",Cma2
+"Dushanbe, Tajikistan",Cma2
+"Vatican City, Vatican City",Cma2
+"Las Vegas, Nevada, United States",Cdz1
+"Ashgabat, Turkmenistan",Cdz1
+"Hengyang, China",Chz1
+"Istanbul, Turkey",Cma1
+"Sacramento, California, United States",Cma1
+"Carson City, Nevada, United States",Cma1
+"Salem, Oregon, United States",Cma1
+"Tirana, Albania",Cma1
+"Santiago, Chile",Cma1
+"Jerusalem, Israel",Cma1
+"Rome, Italy",Cma1
+"Monaco, Monaco",Cma1
+"Sedona, Arizona, United States",Csa2
+"Chengdu, China",Cwa2
+"Zhengzhou, China",Cwa2
+"Longnan, China",Cwa2
+"Xi’an, China",Cga2
+"Dallas, Texas, United States",Cga2
+"Oklahoma City, Oklahoma, United States",Cga2
+"Skopje, North Macedonia",Cga2
+"Baku, Azerbaijan",Cda2
+"Damascus, Syria",Cda2
+"Tokyo, Japan",Cha2
+"Shanghai, China",Cha2
+"Osaka, Japan",Cha2
+"Chongqing, China",Cha2
+"Wuhan, China",Cha2
+"Hangzhou, China",Cha2
+"Nagoya, Japan",Cha2
+"Philadelphia, Pennsylvania, United States",Cha2
+"Washington, District of Columbia, United States",Cha2
+"Atlanta, Georgia, United States",Cha2
+"Baltimore, Maryland, United States",Cha2
+"Virginia Beach, Virginia, United States",Cha2
+"Charlotte, North Carolina, United States",Cha2
+"Nashville, Tennessee, United States",Cha2
+"Raleigh, North Carolina, United States",Cha2
+"Richmond, Virginia, United States",Cha2
+"Memphis, Tennessee, United States",Cha2
+"Louisville, Kentucky, United States",Cha2
+"Montgomery, Alabama, United States",Cha2
+"Little Rock, Arkansas, United States",Cha2
+"Dover, Delaware, United States",Cha2
+"Frankfort, Kentucky, United States",Cha2
+"Annapolis, Maryland, United States",Cha2
+"Jackson, Mississippi, United States",Cha2
+"Columbia, South Carolina, United States",Cha2
+"Carbondale, Illinois, United States",Cha2
+"Seattle, Washington, United States",Cmb2
+"San Francisco, California, United States",Cmb2
+"Portland, Oregon, United States",Cmb2
+"San Jose, California, United States",Cmb2
+"Olympia, Washington, United States",Cmb2
+"Vancouver, British Columbia, Canada",Cmb2
+"Surrey, British Columbia, Canada",Cmb2
+"Burnaby, British Columbia, Canada",Cmb2
+"Richmond, British Columbia, Canada",Cmb2
+"Abbotsford, British Columbia, Canada",Cmb2
+"Comodoro Rivadavia, Argentina",Cmb2
+"Maseru, Lesotho",Csa1
+"Bloemfontein, South Africa",Csa1
+"Ankara, Turkey",Csa1
+"Phungling, Nepal",Cwa1
+"Canberra, Australia",Cga1
+"Pristina, Kosovo",Cga1
+"Barcelona, Spain",Cga1
+"Trenton, New Jersey, United States",Cha1
+"Charleston, West Virginia, United States",Cha1
+"Sarajevo, Bosnia and Herzegovina",Cha1
+"Zagreb, Croatia",Cha1
+"San Marino, San Marino",Cha1
+"Belgrade, Serbia",Cha1
+"Ljubljana, Slovenia",Cha1
+"Johannesburg, South Africa",Cwb2
+"Thimphu, Bhutan",Cwb2
+"Paris, France",Chb2
+"London, United Kingdom",Chb2
+"Andorra la Vella, Andorra",Chb2
+"Brussels, Belgium",Chb2
+"Copenhagen, Denmark",Chb2
+"Berlin, Germany",Chb2
+"Dublin, Ireland",Chb2
+"Luxembourg, Luxembourg",Chb2
+"Amsterdam, Netherlands",Chb2
+"Wellington, New Zealand",Chb2
+"Bern, Switzerland",Chb2
+"Juneau, Alaska, United States",Db1
+"Reykjavík, Iceland",Db1
+"Anchorage, Alaska, United States",Db1
+"Kalifornsky, Alaska, United States",Db1
+"Kenai, Alaska, United States",Db1
+"Sterling, Alaska, United States",Db1
+"Ushuaia, Argentina",Db1
+"Primavera Research Station, Antarctica",Dc1
+Bird Island Research Station,Dc1
+"Boise, Idaho, United States",Dma2
+"Tashkent, Uzbekistan",Dma2
+"Borujerd, Iran",Dma2
+"Turpan, China",Ddz1
+"Kabul, Afghanistan",Dma1
+"Salt Lake City, Utah, United States",Dsa2
+"Yerevan, Armenia",Dsa2
+"Seoul, South Korea",Dwa2
+"Beijing, China",Dwa2
+"Tianjin, China",Dwa2
+"Lincoln, Nebraska, United States",Dga2
+"St. Louis, Missouri, United States",Dha2
+"Kansas City, Missouri, United States",Dha2
+"Topeka, Kansas, United States",Dha2
+"Jefferson City, Missouri, United States",Dha2
+"Denver, Colorado, United States",Dsa1
+"Helena, Montana, United States",Dsa1
+"Santa Fe, New Mexico, United States",Dsa1
+"Pierre, South Dakota, United States",Dsa1
+"Cheyenne, Wyoming, United States",Dsa1
+"Rexburg, Idaho, United States",Dsa1
+"Pyongyang, North Korea",Dwa1
+"Sofia, Bulgaria",Dga1
+"Tbilisi, Georgia",Dga1
+"Budapest, Hungary",Dga1
+"Bishkek, Kyrgyzstan",Dga1
+"Chișinău, Moldova",Dga1
+"Bucharest, Romania",Dga1
+"Aksu City, China",Dda1
+"Shoshoni, Wyoming, United States",Dda1
+"Yakima, Washington, United States",Dda1
+"New York, New York, United States",Dha1
+"Chicago, Illinois, United States",Dha1
+"Boston, Massachusetts, United States",Dha1
+"Detroit, Michigan, United States",Dha1
+"Minneapolis, Minnesota, United States",Dha1
+"Pittsburgh, Pennsylvania, United States",Dha1
+"Cleveland, Ohio, United States",Dha1
+"Indianapolis, Indiana, United States",Dha1
+"Cincinnati, Ohio, United States",Dha1
+"Columbus, Ohio, United States",Dha1
+"Milwaukee, Wisconsin, United States",Dha1
+"Providence, Rhode Island, United States",Dha1
+"Hartford, Connecticut, United States",Dha1
+"Buffalo, New York, United States",Dha1
+"Springfield, Illinois, United States",Dha1
+"Des Moines, Iowa, United States",Dha1
+"Augusta, Maine, United States",Dha1
+"Lansing, Michigan, United States",Dha1
+"Concord, New Hampshire, United States",Dha1
+"Albany, New York, United States",Dha1
+"Harrisburg, Pennsylvania, United States",Dha1
+"Montpelier, Vermont, United States",Dha1
+"Madison, Wisconsin, United States",Dha1
+"Vienna, Austria",Dha1
+"Bratislava, Slovakia",Dha1
+"Toronto, Ontario, Canada",Dha1
+"Mississauga, Ontario, Canada",Dha1
+"Brampton, Ontario, Canada",Dha1
+"Hamilton, Ontario, Canada",Dha1
+"Montreal, Quebec, Canada",Dha1
+"Laval, Quebec, Canada",Dha1
+"Longueuil, Quebec, Canada",Dha1
+"Champaign, Illinois, United States",Dha1
+"Lethbridge, Alberta, Canada",Dsb2
+"Meeteetse, Wyoming, United States",Dsb2
+"Calgary, Alberta, Canada",Dwb2
+"Moscow, Russia",Dhb2
+"Minsk, Belarus",Dhb2
+"Prague, Czech Republic",Dhb2
+"Tallinn, Estonia",Dhb2
+"Helsinki, Finland",Dhb2
+"Riga, Latvia",Dhb2
+"Vaduz, Liechtenstein",Dhb2
+"Vilnius, Lithuania",Dhb2
+"Oslo, Norway",Dhb2
+"Warsaw, Poland",Dhb2
+"Stockholm, Sweden",Dhb2
+"Kyiv, Ukraine",Dhb2
+"Saint-Pierre, Saint-Pierre & Miquelon (FR)",Dhb2
+"Halifax, Nova Scotia, Canada",Dhb2
+"Cape Breton Regional Municipality, Nova Scotia, Canada",Dhb2
+"Truro, Nova Scotia, Canada",Dhb2
+"New Glasgow, Nova Scotia, Canada",Dhb2
+"Amherst, Nova Scotia, Canada",Dhb2
+"Moncton, New Brunswick, Canada",Dhb2
+"Saint John, New Brunswick, Canada",Dhb2
+"Fredericton, New Brunswick, Canada",Dhb2
+"Dieppe, New Brunswick, Canada",Dhb2
+"St. John's, Newfoundland and Labrador, Canada",Dhb2
+"Conception Bay South, Newfoundland and Labrador, Canada",Dhb2
+"Mount Pearl, Newfoundland and Labrador, Canada",Dhb2
+"Paradise, Newfoundland and Labrador, Canada",Dhb2
+"Corner Brook, Newfoundland and Labrador, Canada",Dhb2
+"Charlottetown, Prince Edward Island, Canada",Dhb2
+"Casey Research Station, Antarctica",EY
+"Mawson Station, Antarctica",EY
+"Bethel, Alaska, United States",Eb1
+"Nuuk, Greenland (DK)",Ec2
+"Longyearbyen, Svalbard & Jan Mayen (NO)",Ec2
+"West Taijinar Lake, China",Ec2
+"Davis Research Station, Antarctica",Ec1
+"Sharistan, Afghanistan",Ema1
+"Ushmola, Kazakhstan",Eda2
+"Astana, Kazakhstan",Esa1
+"Zhetikara, Kazakhstan",Esa1
+"Shenyang, China",Ewa1
+"Bismarck, North Dakota, United States",Ega1
+"Grand Forks, North Dakota, United States",Ega1
+"Mandalgovi, Mongolia",Eda1
+"Ottawa, Ontario, Canada",Eha1
+"Ottawa, Ontario, Canada",Eha1
+"Gatineau, Quebec, Canada",Eha1
+"Duluth, Minnesota, United States",Eha1
+"Moose Jaw, Saskatchewan, Canada",Esb2
+"Swift Current, Saskatchewan, Canada",Esb2
+"Bulgan, Mongolia",Ewb2
+"Edmonton, Alberta, Canada",Egb2
+"Red Deer, Alberta, Canada",Egb2
+"St. Albert, Alberta, Canada",Egb2
+"Winnipeg, Manitoba, Canada",Egb2
+"Brandon, Manitoba, Canada",Egb2
+"Portage la Prairie, Manitoba, Canada",Egb2
+"Saskatoon, Saskatchewan, Canada",Egb2
+"Regina, Saskatchewan, Canada",Egb2
+"Prince Albert, Saskatchewan, Canada",Egb2
+"Krasnoyarsk, Russia",Egb2
+"Omsk, Russia",Egb2
+"Quebec City, Quebec, Canada",Ehb2
+"Steinbach, Manitoba, Canada",Ehb2
+"Miramichi, New Brunswick, Canada",Ehb2
+"Fairbanks, Alaska, United States",Ehb2
+"Knik-Fairview, Alaska, United States",Ehb2
+"Badger, Alaska, United States",Ehb2
+"College, Alaska, United States",Ehb2
+"North Lakes, Alaska, United States",Ehb2
+"Meadow Lakes, Alaska, United States",Ehb2
+"Wasilla, Alaska, United States",Ehb2
+"Tanaina, Alaska, United States",Ehb2
+"Steele Creek, Alaska, United States",Ehb2
+"Chena Ridge, Alaska, United States",Ehb2
+"Palmer, Alaska, United States",Ehb2
+"Gateway, Alaska, United States",Ehb2
+"Novosibirsk, Russia",Ehb2
+"Lutsen, Minnesota, United States",Ehb2
+"Thunder Bay, Ontario, Canada",Ehb2
+"McMurdo Research Station, Antarctica",FY
+"Hulunbuir, China",Fa1
+"Thompson, Manitoba, Canada",Fb2
+"Yellowknife, Northwest Territories, Canada",Fb2
+"Hay River, Northwest Territories, Canada",Fb2
+"Fort Smith, Northwest Territories, Canada",Fb2
+"Behchoko, Northwest Territories, Canada",Fb2
+"Fort Simpson, Northwest Territories, Canada",Fb2
+"Fort Providence, Northwest Territories, Canada",Fb2
+"Norman Wells, Northwest Territories, Canada",Fb2
+"Fort Good Hope, Northwest Territories, Canada",Fb2
+"Ulaanbaatar, Mongolia",Fb2
+"Inuvik, Northwest Territories, Canada",Fb1
+"Tuktoyaktuk, Northwest Territories, Canada",Fb1
+"Tuktoyaktuk, Northwest Territories, Canada",Fb1
+"Iqaluit, Nunavut, Canada",Fc2
+"Arviat, Nunavut, Canada",Fc2
+"Pangnirtung, Nunavut, Canada",Fc2
+"Coral Harbour, Nunavut, Canada",Fc2
+"Prudhoe Bay, Alaska, United States",Fc2
+"Pond Inlet, Nunavut, Canada",Fc1
+"Qikiqtarjuaq, Nunavut, Canada",Fc1
+"Wainwright, Alaska, United States",Fc1
+"Utqiagvik, Alaska, United States",Fc1
+"Svea Research Station, Antarctica",GY
+"Yakutsk, Russia",Gb2
+"Cambridge Bay, Nunavut, Canada",Gb1
+"Baker Lake, Nunavut, Canada",Gb1
+"Rankin Inlet, Nunavut, Canada",Gc2
+"Igloolik, Nunavut, Canada",Gc2
+"Eureka Research Station, Nunavut, Canada",Gc2
+"Isachsen Research Station, Nunavut, Canada",Gc1
+"Concordia Research Station, Antarctica",YY
+"Ust-Nera, Russia",Yb2
+"Verkhoyansk, Russia",Yb2
