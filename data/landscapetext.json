@@ -1,6 +1,20 @@
 {
+  "YY": {
+    "image": "<i>Image of Concordia Station, Antarctica: <a href='https://commons.wikimedia.org/wiki/File:ConcordiaFromTower.jpg' target='_blank'>Photo by StephenHudson</a> via Wikimedia Commons. This image is in the public domain</i>"
+  },
+
+
+
+  "GY": {
+    "image": "<i>Image of Svea Station, Antarctica in the summer. <a href='https://commons.wikimedia.org/wiki/File:Svea_field_station_in_Antarctica.jpg' target='_blank'>Photo by Wilfred Bauer</a> via Wikimedia Commons, licensed under <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.en' target='_blank'>CC BY-SA 3.0</a> (unmodified)</i>",
+    "video": "<a href='https://www.youtube.com/watch?v=qz2SeEzxMuE' target='_blank'>Video of winter weather at McMurdo Station in Antarctica</a>."
+  },
+
+
+
+
   "FY": {
-    "caption": "<i>Image of McMurdo Station, Antarctica: <a href='https://commons.wikimedia.org/wiki/File:McMurdo-Station_aus_der_Vogelperspektive_(16481391425).jpg' target='_blank'>Marco Feldmann/FH Aachen</a>, <a href='https://creativecommons.org/licenses/by/2.0/' target='_blank'>CC BY 2.0</a> via Wikimedia Commons.</i>",
+    "image": "<i>Image of McMurdo Station, Antarctica. <a href='https://commons.wikimedia.org/wiki/File:McMurdo-Station_aus_der_Vogelperspektive_(16481391425).jpg' target='_blank'>Photo by Marco Feldmann/FH Aachen</a>, via Wikimedia Commons, licensed under <a href='https://creativecommons.org/licenses/by/2.0/' target='_blank'>CC BY 2.0</a> (unmodified)</i>",
     "video": "<a href='https://www.youtube.com/watch?v=qz2SeEzxMuE' target='_blank'>Video of winter weather at McMurdo Station in Antarctica</a>."
   },
 
@@ -8,6 +22,7 @@
 
   
   "EY": {
+    "image": "<i>Image of Casey Station, Antarctica. <a href='https://commons.wikimedia.org/wiki/File:Casey_Station_November_2005.jpg' target='_blank'>Photo by Graham Denyer</a>, via Wikimedia Commons, licensed under <a href='https://creativecommons.org/licenses/by-sa/4.0/deed.en#ref-indicate-changes' target='_blank'>CC BY-SA 4.0</a> (unmodified)</i>",
     "video": "<a href='https://www.youtube.com/watch?v=x5XXF6U6vDQ' target='_blank'>Video of winter weather at Mawson Station in Antarctica</a>."
   },
 
