@@ -222,12 +222,12 @@ var aridBase = ee.Image(6)                      // H: Humid
 var HS = P_hs.divide(P_ann).rename('HS_ratio');
 
 var clim = aridBase
-  .where(northMask.and(aridBase.neq(1)).and(HS.gte(0.8)), 4)
+  .where(northMask.and(aridBase.neq(1)).and(HS.gt(0.8)), 4)
   .where(northMask.and(aridBase.neq(1)).and(HS.lt(0.4)),  3)
   .where(tropic.and(aridBase.neq(1)).and(HS.lt(0.2)),     4)
-  .where(tropic.and(aridBase.neq(1)).and(HS.gte(0.8)),    4)
+  .where(tropic.and(aridBase.neq(1)).and(HS.gt(0.8)),    4)
   .where(southMask.and(aridBase.neq(1)).and(HS.lt(0.2)),  4)
-  .where(southMask.and(aridBase.neq(1)).and(HS.gte(0.6)), 3)
+  .where(southMask.and(aridBase.neq(1)).and(HS.gt(0.6)), 3)
   .where(oceanMask, 8)
   .where(coldCond, 7)
   .rename('climateClass');

@@ -93,12 +93,12 @@ var HS = P_hs.divide(P_ann).rename('HS_ratio');
 
 // ---------- Final class map — oceans included, cold wins ----------
 var clim = aridBase
-  .where(northMask.and(aridBase.neq(1)).and(aridBase.neq(8)).and(HS.gte(0.8)), 4) // Monsoon
+  .where(northMask.and(aridBase.neq(1)).and(aridBase.neq(8)).and(HS.gt(0.8)), 4) // Monsoon
   .where(northMask.and(aridBase.neq(1)).and(aridBase.neq(8)).and(HS.lt(0.4)),  3) // Mediterranean
   .where(tropic.and(aridBase.neq(1)).and(aridBase.neq(8)).and(HS.lt(0.2)),     4) // Monsoon
-  .where(tropic.and(aridBase.neq(1)).and(aridBase.neq(8)).and(HS.gte(0.8)),    4) // Monsoon
+  .where(tropic.and(aridBase.neq(1)).and(aridBase.neq(8)).and(HS.gt(0.8)),    4) // Monsoon
   .where(southMask.and(aridBase.neq(1)).and(aridBase.neq(8)).and(HS.lt(0.2)),  4) // Monsoon
-  .where(southMask.and(aridBase.neq(1)).and(aridBase.neq(8)).and(HS.gte(0.6)), 3) // Mediterranean
+  .where(southMask.and(aridBase.neq(1)).and(aridBase.neq(8)).and(HS.gt(0.6)), 3) // Mediterranean
   // mark masked-AI areas (oceans) as class 8 (cyan)
   .where(oceanMask, 8)
   // ensure cold "no aridity" wins even where AI is missing
@@ -162,7 +162,6 @@ codeColorMap[firstDigit * 100 + 50 + lastDigit] = "#00ff00";
 codeColorMap[firstDigit * 100 + 60 + lastDigit] = "#008800";
 codeColorMap[firstDigit * 100 + 80 + lastDigit] = "#00ffff";
 
-// Example of commented-out entry
 // codeColorMap[7 * 100 + 70 + 3] = "#000000";
 
 var keys    = Object.keys(codeColorMap);

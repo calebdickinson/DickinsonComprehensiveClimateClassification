@@ -98,14 +98,14 @@ var HS = P_hs.divide(P_ann).rename('HS_ratio');
 // ---------- Final climate class: apply Med/Monsoon (non-desert, non-ocean-ish), then oceans(8), then cold(7) ----------
 var clim = aridBase
   // Northern Hemisphere: Med <0.4; Monsoon >=0.8 (except Arid Desert(1) and ocean-ish(8))
-  .where(northMask.and(aridBase.neq(1)).and(aridBase.neq(8)).and(HS.gte(0.8)), 4) // Monsoon
+  .where(northMask.and(aridBase.neq(1)).and(aridBase.neq(8)).and(HS.gt(0.8)), 4) // Monsoon
   .where(northMask.and(aridBase.neq(1)).and(aridBase.neq(8)).and(HS.lt(0.4)),  3) // Mediterranean
   // Tropics: Monsoon at extremes
   .where(tropic.and(aridBase.neq(1)).and(aridBase.neq(8)).and(HS.lt(0.2)),     4) // Monsoon
-  .where(tropic.and(aridBase.neq(1)).and(aridBase.neq(8)).and(HS.gte(0.8)),    4) // Monsoon
+  .where(tropic.and(aridBase.neq(1)).and(aridBase.neq(8)).and(HS.gt(0.8)),    4) // Monsoon
   // Southern Hemisphere: Med >=0.6; Monsoon <0.2
   .where(southMask.and(aridBase.neq(1)).and(aridBase.neq(8)).and(HS.lt(0.2)),  4) // Monsoon
-  .where(southMask.and(aridBase.neq(1)).and(aridBase.neq(8)).and(HS.gte(0.6)), 3) // Mediterranean
+  .where(southMask.and(aridBase.neq(1)).and(aridBase.neq(8)).and(HS.gt(0.6)), 3) // Mediterranean
   // Oceans (AI mask) as 8, then cold wins (7) everywhere regardless of AI
   .where(oceanMask, 8)
   .where(coldCond, 7)

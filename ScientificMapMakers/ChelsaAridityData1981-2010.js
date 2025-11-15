@@ -77,12 +77,12 @@ var HS = P_hs.divide(P_ann).rename('HS_ratio');
 
 // Final class map — then mask out “ocean-like” pixels with absurd AI
 var clim = aridBase
-  .where(northMask.and(aridBase.neq(1)).and(HS.gte(0.8)), 4)
+  .where(northMask.and(aridBase.neq(1)).and(HS.gt(0.8)), 4)
   .where(northMask.and(aridBase.neq(1)).and(HS.lt(0.4)),  3)
   .where(tropic.and(aridBase.neq(1)).and(HS.lt(0.2)),     4)
-  .where(tropic.and(aridBase.neq(1)).and(HS.gte(0.8)),    4)
+  .where(tropic.and(aridBase.neq(1)).and(HS.gt(0.8)),    4)
   .where(southMask.and(aridBase.neq(1)).and(HS.lt(0.2)),  4)
-  .where(southMask.and(aridBase.neq(1)).and(HS.gte(0.6)), 3)
+  .where(southMask.and(aridBase.neq(1)).and(HS.gt(0.6)), 3)
   .where(hottestC_global.lt(15).or(coldestC_global.lt(-20)), 7)
   .rename('climateClass');
 
