@@ -369,29 +369,48 @@
         const landscapeDefault = `${LAND_DIR}/${climate_code}.jpg`;
         const landscapePath = (climate.landscape && climate.landscape.trim()) || landscapeDefault;
 
-        // Use the same helper the maps use (wireSection does the cache-busting and show/hide)
+        // Use the same helper the maps use
         wireSection('landscapes', 'climate_landscape', landscapePath);
 
-        // --- Simple landscape caption loader (HTML allowed) ---
+        // --- Robust landscape caption loader (HTML allowed in JSON fields) ---
         fetch('data/landscapetext.json?v=' + Date.now(), { cache: 'no-store' })
           .then(r => r.json())
           .then(texts => {
-            const data = texts[climate_code]; // key must match canonical climate_code
-            if (data) {
-              const capEl = document.getElementById('landscape_caption');
-              if (capEl) {
-                // Combine caption + video with a double line break if both exist
-                const combinedText = [
-                  data.image || '',
-                  data.video ? '<br><br>' + data.video : ''
-                ].join('');
-                
-                capEl.innerHTML = combinedText;
-                capEl.classList.remove('hidden');
-              }
+            const data = texts[climate_code];
+            if (!data) return;
+
+            const capEl = document.getElementById('landscape_caption');
+            if (!capEl) return;
+
+            // Build caption parts safely
+            const parts = [];
+
+            // 1. Main image caption (HTML allowed)
+            if (data.image) {
+              parts.push(`<i>${data.image}</i>`);
             }
+
+            // 2. Optional credit (HTML allowed)
+            if (data.credit) {
+              parts.push(` <br><i><small>${data.credit}</small></i>`);
+            }
+
+            // 3. Optional video (HTML allowed)
+            if (data.video) {
+              parts.push(`<br><br>${data.video}`);
+            }
+
+            // 3. Optional second video (HTML allowed)
+            if (data.video2) {
+              parts.push(`<br><br>${data.video2}`);
+            }
+
+            // Set final HTML
+            capEl.innerHTML = parts.join('');
+            capEl.classList.remove('hidden');
           })
           .catch(err => console.warn('No landscape caption found:', err));
+
 
         // Build default map paths using exact case
         const MAP_DIR = 'images/maps';

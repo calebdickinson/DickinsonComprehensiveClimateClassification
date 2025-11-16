@@ -1,46 +1,39 @@
 {
   "YY": {
-    "image": "<i>Image of Concordia Station, Antarctica in summer<br><small><a href='https://commons.wikimedia.org/wiki/File:ConcordiaFromTower.jpg' target='_blank'>Photo by StephenHudson</a> via Wikimedia Commons (public domain)</small></i>"
+    "image": "Image of Concordia Station, Antarctica in summer",
+    "credit": "<a href='https://commons.wikimedia.org/wiki/File:ConcordiaFromTower.jpg' target='_blank'>Photo by StephenHudson</a> via Wikimedia Commons (public domain)"
   },
-
-
 
   "GY": {
-    "image": "<i>Image of Svea Station, Antarctica in summer<br><small><a href='https://commons.wikimedia.org/wiki/File:Svea_field_station_in_Antarctica.jpg' target='_blank'>Photo by Wilfred Bauer</a> via Wikimedia Commons, licensed under <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.en' target='_blank'>CC BY-SA 3.0</a> (unmodified)</small></i>"
+    "image": "Image of Svea Station, Antarctica in summer",
+    "credit": "<a href='https://commons.wikimedia.org/wiki/File:Svea_field_station_in_Antarctica.jpg' target='_blank'>Photo by Wilfred Bauer</a> via Wikimedia Commons, licensed under <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.en' target='_blank'>CC BY-SA 3.0</a> (unmodified)"
   },
 
-
-
-
   "FY": {
-    "image": "<i>Image of McMurdo Station, Antarctica in late spring<br><small><a href='https://commons.wikimedia.org/wiki/File:McMurdo-Station_aus_der_Vogelperspektive_(16481391425).jpg' target='_blank'>Photo by Marco Feldmann/FH Aachen</a> via Wikimedia Commons, licensed under <a href='https://creativecommons.org/licenses/by/2.0/' target='_blank'>CC BY 2.0</a> (unmodified)</small></i>",
+    "image": "Image of McMurdo Station, Antarctica in late spring",
+    "credit": "<a href='https://commons.wikimedia.org/wiki/File:McMurdo-Station_aus_der_Vogelperspektive_(16481391425).jpg' target='_blank'>Photo by Marco Feldmann/FH Aachen</a> via Wikimedia Commons, licensed under <a href='https://creativecommons.org/licenses/by/2.0/' target='_blank'>CC BY 2.0</a> (unmodified)",
     "video": "<a href='https://www.youtube.com/watch?v=qz2SeEzxMuE' target='_blank'>Video of winter weather at McMurdo Station in Antarctica</a>."
   },
 
-
-
-  
   "EY": {
-    "image": "<i>Image of Casey Station, Antarctica in spring<br><small><a href='https://commons.wikimedia.org/wiki/File:Casey_Station_November_2005.jpg' target='_blank'>Photo by Graham Denyer</a> via Wikimedia Commons, licensed under <a href='https://creativecommons.org/licenses/by-sa/4.0/deed.en#ref-indicate-changes' target='_blank'>CC BY-SA 4.0</a> (unmodified)</small></i>",
-    "video": "<a href='https://www.youtube.com/watch?v=x5XXF6U6vDQ' target='_blank'>Video of winter weather at Mawson Station, Antarctica</a><br><br><a href='https://www.youtube.com/watch?v=NwEFqdHVwiA' target='_blank'>Video of penguins near Mawson Station, Antarctica in summer</a><br>"
+    "image": "Image of Casey Station, Antarctica in spring",
+    "credit": "<a href='https://commons.wikimedia.org/wiki/File:Casey_Station_November_2005.jpg' target='_blank'>Photo by Graham Denyer</a> via Wikimedia Commons, licensed under <a href='https://creativecommons.org/licenses/by-sa/4.0/deed.en#ref-indicate-changes' target='_blank'>CC BY-SA 4.0</a> (unmodified)",
+    "video": "<a href='https://www.youtube.com/watch?v=x5XXF6U6vDQ' target='_blank'>Video of winter weather at Mawson Station, Antarctica</a>",
+    "video2": "<a href='https://www.youtube.com/watch?v=NwEFqdHVwiA' target='_blank'>Video of penguins near Mawson Station, Antarctica in summer</a>"
   },
-
-
-
 
   "Dc1": {
     "video": "<a href='https://www.youtube.com/watch?v=sjHrFHLdx9Y' target='_blank'>Drone footage of South Georgia in summer</a>.<br>Coastal South Georgia has a Dc1 climate."
   },
 
-
-
-  
   "Cc1": {
     "video": "<a href='https://www.youtube.com/watch?v=I89I1AkWUkk' target='_blank'>Footage of Heard Island</a>. The green coastal areas have a Cc1 climate, one of the rarest climates on earth. The average refrigerater could be said to have a Cc1 \"climate\"."
   },
+
   "Cc2": {
     "video": "<a href='https://www.youtube.com/watch?v=EdcoCl-Pgq0' target='_blank'>Footage of Macquarie Island</a>. The entire island has a Cc2 climate"
   },
+
   "Cb1": {
     "video": "<a href='https://www.youtube.com/watch?v=cD9HEBz_QPs' target='_blank'>Drone footage of the Faroe Islands</a>"
   }
