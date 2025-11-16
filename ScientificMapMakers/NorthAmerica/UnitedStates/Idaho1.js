@@ -154,6 +154,8 @@ var combined = coldClass
   .rename('combined');
 
 var codeColorMap = {
+  393: "ffaa00", // Fb1
+  
   //491: "#ffffff",
   //492: "#8888ff",
   //492: "#ffffff", // Ec2
