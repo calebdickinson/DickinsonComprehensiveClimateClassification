@@ -23,18 +23,26 @@
     display: none !important;
   }
 
-  #landscape_caption {
+  .landscape-figure {
+    margin-top: 0.5em;
+    text-align: center;  
+  }
+
+  #landscape_caption_1,
+  #landscape_caption_2 {
     margin-top: 0.2em;
     font-family: Georgia, serif;
     color: #222222;
     font-size: 1.2em;
   }
 
-  #landscape_caption a {
+  #landscape_caption_1 a,
+  #landscape_caption_2 a {
     text-decoration: none;
   }
 
-  #landscape_caption .credit {
+  #landscape_caption_1 .credit,
+  #landscape_caption_2 .credit {
     font-size: 0.6em;
   }
 
@@ -89,8 +97,15 @@
     </div>
 
     <div id="landscapes">
-      <img id="climate_landscape" alt="landscape in this climate">
-      <p id="landscape_caption" class="hidden"></p>
+      <figure class="landscape-figure">
+        <img id="climate_landscape" alt="landscape in this climate">
+        <figcaption id="landscape_caption_1" class="hidden"></figcaption>
+      </figure>
+
+      <figure class="landscape-figure hidden" id="landscape_two_wrapper">
+        <img id="climate_landscape_two" alt="second landscape in this climate" class="hidden">
+        <figcaption id="landscape_caption_2" class="hidden"></figcaption>
+      </figure>
     </div>
 
     <div id="cities">
@@ -372,6 +387,45 @@
         // Use the same helper the maps use
         wireSection('landscapes', 'climate_landscape', landscapePath);
 
+      // Optional second landscape image: same name as first with "two" before extension
+      (function loadSecondLandscape() {
+        const img2 = document.getElementById('climate_landscape_two');
+        if (!img2) return;
+
+        let landscapePathTwo =
+          (climate.landscape2 && climate.landscape2.trim()) || '';
+
+        if (!landscapePathTwo && landscapePath) {
+          const dot = landscapePath.lastIndexOf('.');
+          if (dot >= 0) {
+            landscapePathTwo =
+              landscapePath.slice(0, dot) + 'two' + landscapePath.slice(dot);
+          } else {
+            landscapePathTwo = landscapePath + 'two.jpg';
+          }
+        }
+
+        if (!landscapePathTwo) return;
+
+        img2.onload = () => {
+          if (img2.naturalWidth > 0 && img2.naturalHeight > 0) {
+            img2.classList.remove('hidden');
+          } else {
+            img2.removeAttribute('alt');  // 🔥 prevent fallback alt text
+            img2.remove();
+          }
+        };
+
+        img2.onerror = () => {
+          img2.removeAttribute('alt');    // 🔥 prevent fallback alt text on error
+          img2.remove();
+        };
+
+        img2.decoding = 'async';
+        img2.loading = 'lazy';
+        img2.src = landscapePathTwo;
+      })();
+
         // --- Robust landscape caption loader (HTML allowed in JSON fields) ---
         fetch('data/landscapetext.json?v=' + Date.now(), { cache: 'no-store' })
           .then(r => r.json())
@@ -379,38 +433,54 @@
             const data = texts[climate_code];
             if (!data) return;
 
-            const capEl = document.getElementById('landscape_caption');
-            if (!capEl) return;
+            const cap1 = document.getElementById('landscape_caption_1');
+            const cap2 = document.getElementById('landscape_caption_2');
+            if (!cap1 && !cap2) return;
 
-            // Build caption parts safely
-            const parts = [];
+            let cap1Html = '';
+            let cap2Html = '';
 
-            // 1. Main image caption (HTML allowed)
+            // First image: caption + credit
             if (data.image) {
-              parts.push(`<i>${data.image}</i>`);
+              cap1Html += `<i>${data.image}</i>`;
             }
-
-            // 2. Optional credit (HTML allowed)
             if (data.credit) {
-              parts.push(`<br><i><span class="credit">${data.credit}</span></i>`);
+              cap1Html += `<br><span class="credit">${data.credit}</span>`;
             }
 
-            // 3. Optional video (HTML allowed)
-            if (data.video) {
-              parts.push(`<br><br>${data.video}`);
+            // Second image: caption + credit
+            if (data.image2) {
+              cap2Html += `<i>${data.image2}</i>`;
+            }
+            if (data.credit2) {
+              cap2Html += `<br><span class="credit">${data.credit2}</span>`;
             }
 
-            // 3. Optional second video (HTML allowed)
-            if (data.video2) {
-              parts.push(`<br><br>${data.video2}`);
+            // Apply HTML and unhide
+            if (cap1 && cap1Html) {
+              cap1.innerHTML = cap1Html;
+              cap1.classList.remove('hidden');
+            }
+            if (cap2 && cap2Html) {
+              cap2.innerHTML = cap2Html;
+              cap2.classList.remove('hidden');
             }
 
-            // Set final HTML
-            capEl.innerHTML = parts.join('');
-            capEl.classList.remove('hidden');
+            // Videos go after all images/captions
+            let videoHtml = '';
+            if (data.video)  videoHtml += `<br><br>${data.video}`;
+            if (data.video2) videoHtml += `<br><br>${data.video2}`;
+
+            if (videoHtml) {
+              // If we have a second caption, attach videos there; otherwise attach to the first.
+              const target = (cap2 && cap2Html) ? cap2 : cap1;
+              if (target) {
+                target.innerHTML += videoHtml;
+                target.classList.remove('hidden');
+              }
+            }
           })
           .catch(err => console.warn('No landscape caption found:', err));
-
 
         // Build default map paths using exact case
         const MAP_DIR = 'images/maps';
