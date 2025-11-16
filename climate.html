@@ -34,7 +34,7 @@
     text-decoration: none;
   }
 
-  #landscape_caption small {
+  #landscape_caption .credit {
     font-size: 0.6em;
   }
 
@@ -392,7 +392,7 @@
 
             // 2. Optional credit (HTML allowed)
             if (data.credit) {
-              parts.push(` <br><i><small>${data.credit}</small></i>`);
+              parts.push(` <br><i>${data.credit}</i>`);
             }
 
             // 3. Optional video (HTML allowed)
