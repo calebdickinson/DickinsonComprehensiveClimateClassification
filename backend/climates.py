@@ -44,17 +44,17 @@ codes = {
 
 'ZsX', 'Zsz2', 'Zsz1',
 'AsX', 'Asz2', 'Asz1', 'Asa2', 'Asa1',
-       'Bsz2', 'Bsz1', 'Bsa2', 'Bsa1', 'Bsb2',
+'BsX', 'Bsz2', 'Bsz1', 'Bsa2', 'Bsa1', 'Bsb2',
        'Csz2', 'Csz1', 'Csa2', 'Csa1', 'Csb2',
                'Dsz1', 'Dsa2', 'Dsa1', 'Dsb2',
-                       'Esa2', 'Esa1', 'Esb2',
+               'Esz1', 'Esa2', 'Esa1', 'Esb2',
 
 'ZdX', 'Zdz2', 'Zdz1',
 'AdX', 'Adz2', 'Adz1', 'Ada2', 'Ada1',
 'BdX', 'Bdz2', 'Bdz1', 'Bda2', 'Bda1', 'Bdb2',
 'CdX', 'Cdz2', 'Cdz1', 'Cda2', 'Cda1', 'Cdb2',
-       'Ddz2', 'Ddz1', 'Dda2', 'Dda1', 'Ddb2',
-               'Edz1', 'Eda2', 'Eda1', 'Edb2',
+'DdX', 'Ddz2', 'Ddz1', 'Dda2', 'Dda1', 'Ddb2',
+       'Edz2', 'Edz1', 'Eda2', 'Eda1', 'Edb2',
 }
 
 code_groups = {
