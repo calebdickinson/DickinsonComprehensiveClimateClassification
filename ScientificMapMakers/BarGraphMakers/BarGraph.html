@@ -167,7 +167,19 @@
     <rect width="${svgWidth}" height="${svgHeight}" fill="#ffffff" />
     <g transform="translate(${margin.left},0)">`;
 
-  // ----- Temperature bars -----
+  // ----- THIN DOTTED REFERENCE LINE (32°F / shared Y) -----
+  const refTemp = 32;
+  const dottedY = tempBaseY - tempScale(refTemp);
+
+  // draw the dotted line *first* so bars/labels render on top of it
+  svg += `
+    <line x1="0" y1="${dottedY}"
+          x2="${plotWidth}" y2="${dottedY}"
+          stroke="#bbb" stroke-width="1"
+          stroke-dasharray="4,3" />
+  `;
+
+  // ----- Temperature bars (drawn AFTER the line, so they can go over it) -----
   for (let i = 0; i < n; i++) {
     const hi = data.highsF[i];
     const lo = data.lowsF[i];
@@ -191,18 +203,7 @@
     `;
   }
 
-  // ----- THIN DOTTED REFERENCE LINE (32°F / shared Y) -----
-  const refTemp = 32;
-  const dottedY = tempBaseY - tempScale(refTemp);
-
-  svg += `
-    <line x1="0" y1="${dottedY}"
-          x2="${plotWidth}" y2="${dottedY}"
-          stroke="#000" stroke-width="1"
-          stroke-dasharray="4,3" />
-  `;
-
-  // ----- Precipitation bars -----
+  // ----- Precipitation bars (also drawn after the line) -----
   for (let i = 0; i < n; i++) {
     const p = data.precipIn[i];
     const barH = precipScale(p);
