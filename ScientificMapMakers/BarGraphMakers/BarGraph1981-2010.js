@@ -4,8 +4,8 @@ var NODATA_U16   = 65535;
 var SCALE_PR     = 0.1;   // CHELSA pr_u16: 0.1 → mm/month
 
 // Point you care about:
-var LAT = 36.1699;      // example: Las Vegas
-var LON = -115.1398;
+var LAT = 37.7273;      // example: Las Vegas
+var LON = -89.2168;
 var pt  = ee.Geometry.Point([LON, LAT]);
 
 // Month numbers 1–12
