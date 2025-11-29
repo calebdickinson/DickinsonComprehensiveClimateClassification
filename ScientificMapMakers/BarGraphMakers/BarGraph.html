@@ -81,26 +81,23 @@
 
 <script>
   // ============================
-  // 1. PASTE YOUR EARTH ENGINE LINES HERE
+  // 1. EARTH ENGINE LINES
   // ============================
   const rawLines = `
-1.0: 51 38 3.5
-2.0: 51 35 3.2
-3.0: 64 45 4.9
-4.0: 76 55 4.4
-5.0: 85 65 5.7
-6.0: 97 76 3.1
-7.0: 100 81 3.8
-8.0: 100 80 3.1
-9.0: 94 75 3.0
-10.0: 81 61 2.9
-11.0: 66 51 4.1
-12.0: 56 43 4.2
+1.0: 44 31 0.4
+2.0: 49 32 0.3
+3.0: 62 40 0.8
+4.0: 75 49 1.6
+5.0: 88 60 2.5
+6.0: 101 72 2.4
+7.0: 116 83 1.1
+8.0: 115 82 0.7
+9.0: 101 72 1.0
+10.0: 83 57 1.1
+11.0: 62 43 0.4
+12.0: 49 36 0.4
   `;
 
-  // ============================
-  // 2. PARSE THE LINES
-  // ============================
   const months = ['J','F','M','A','M','J','J','A','S','O','N','D'];
   const highsF = [], lowsF = [], precipIn = [];
 
@@ -115,8 +112,8 @@
   });
 
   const data = {
-    code: 'Carbondale, Illinois',
-    location: '<b>Chz1</b> (2041-2070 normals)',
+    code: 'Miles City, Montana',
+    location: '<b>Cdz2</b> (2071-2100 normals)',
     months,
     highsF,
     lowsF,
@@ -127,16 +124,18 @@
   document.getElementById('subtitle').innerHTML = data.location;
 
   // ============================
-  // 3. DRAW CHART
+  // 2. DRAW CHART
   // ============================
+
   const svgWidth = 620;
-  const svgHeight = 310;
+  const svgHeight = 540;  // taller overall to fit stretched temp panel
 
   const margin = { top: 20, right: 20, bottom: 32, left: 20 };
 
-  const tempPanelHeight = 110;
-  const gap = 42;                 // SPACE BETWEEN TEMP AND PRECIP (LARGER)
-  const precipPanelHeight = 55;
+  // temp area stretched ×2, precip area compressed ×2
+  const tempPanelHeight = 340;  // 170 * 2
+  const gap = 48;               // space between panels
+  const precipPanelHeight = 55; // 110 / 2
 
   const plotWidth = svgWidth - margin.left - margin.right;
   const tempBaseY = margin.top + tempPanelHeight;
@@ -146,22 +145,22 @@
   const n = data.months.length;
   const colWidth = plotWidth / n;
 
-  function min(arr) { return Math.min(...arr); }
-  function max(arr) { return Math.max(...arr); }
-
-  const tempMin = min(data.lowsF);
-  const tempMax = max(data.highsF);
-  const tempRange = tempMax - tempMin || 1;
+  // ===== FIXED TEMPERATURE SCALE: -30 TO 130°F =====
+  const TEMP_MIN_FIXED = -30;
+  const TEMP_MAX_FIXED = 130;
+  const TEMP_RANGE_FIXED = TEMP_MAX_FIXED - TEMP_MIN_FIXED;
 
   function tempScale(v) {
-    return ((v - tempMin) / tempRange) * (tempPanelHeight * 0.9);
+    return ((v - TEMP_MIN_FIXED) / TEMP_RANGE_FIXED) * (tempPanelHeight * 0.9);
   }
 
-  const precipMax = max(data.precipIn);
-  const precipRange = precipMax || 1;
+  // ===== FIXED PRECIP SCALE: 0 TO 10 INCHES =====
+  const PRECIP_MIN_FIXED = 0;
+  const PRECIP_MAX_FIXED = 10;
+  const PRECIP_RANGE_FIXED = PRECIP_MAX_FIXED - PRECIP_MIN_FIXED;
 
   function precipScale(v) {
-    return (v / precipRange) * (precipPanelHeight * 0.9);
+    return ((v - PRECIP_MIN_FIXED) / PRECIP_RANGE_FIXED) * (precipPanelHeight * 0.9);
   }
 
   let svg = `<svg width="${svgWidth}" height="${svgHeight}">
@@ -170,7 +169,8 @@
 
   // ----- Temperature bars -----
   for (let i = 0; i < n; i++) {
-    const hi = data.highsF[i], lo = data.lowsF[i];
+    const hi = data.highsF[i];
+    const lo = data.lowsF[i];
 
     const hiH = tempScale(hi);
     const loH = tempScale(lo);
@@ -184,17 +184,23 @@
     svg += `
       <rect x="${barX}" y="${hiY}" width="${barW}" height="${hiH - loH}"
             fill="var(--temp)"></rect>
-      <text x="${barX + barW/2}" y="${hiY - 4}" text-anchor="middle"
-            font-size="11">${hi}</text>
-      <text x="${barX + barW/2}" y="${loY + 12}" text-anchor="middle"
-            font-size="10">${lo}</text>`;
+      <text x="${barX + barW/2}" y="${hiY - 4}"
+            text-anchor="middle" font-size="11">${hi}</text>
+      <text x="${barX + barW/2}" y="${loY + 12}"
+            text-anchor="middle" font-size="10">${lo}</text>
+    `;
   }
 
-  // ----- THICK LINE BETWEEN TEMP → PRECIP -----
+  // ----- THIN DOTTED REFERENCE LINE (32°F / shared Y) -----
+  const refTemp = 32;
+  const dottedY = tempBaseY - tempScale(refTemp);
+
   svg += `
-    <line x1="0" y1="${precipTopY - 12}" 
-          x2="${plotWidth}" y2="${precipTopY - 12}" 
-          stroke="#000" stroke-width="2" />`;
+    <line x1="0" y1="${dottedY}"
+          x2="${plotWidth}" y2="${dottedY}"
+          stroke="#000" stroke-width="1"
+          stroke-dasharray="4,3" />
+  `;
 
   // ----- Precipitation bars -----
   for (let i = 0; i < n; i++) {
@@ -211,21 +217,26 @@
       <text x="${barX + barW/2}" 
             y="${precipBaseY + 14}" 
             text-anchor="middle"
-            font-size="10">${p}</text>`;
+            font-size="10">${p}</text>
+    `;
   }
 
-  // ----- THICK LINE BETWEEN PRECIP → MONTH LABELS -----
+  // ----- LINE BETWEEN PRECIP & MONTH LABELS -----
   const lowerLineY = precipBaseY + 20;
+
   svg += `
-    <line x1="0" y1="${lowerLineY}" 
-          x2="${plotWidth}" y2="${lowerLineY}" 
-          stroke="#000" stroke-width="2" />`;
+    <line x1="0" y1="${lowerLineY}"
+          x2="${plotWidth}" y2="${lowerLineY}"
+          stroke="#000" stroke-width="2" />
+  `;
 
   // ----- Month labels -----
   for (let i = 0; i < n; i++) {
     const x = colWidth * i + colWidth * 0.43;
     const y = lowerLineY + 16;
-    svg += `<text x="${x}" y="${y}" text-anchor="middle"
+
+    svg += `<text x="${x}" y="${y}"
+                  text-anchor="middle"
                   font-size="11">${data.months[i]}</text>`;
   }
 
