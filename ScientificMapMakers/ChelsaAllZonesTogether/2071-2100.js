@@ -786,7 +786,6 @@ var cityList = [
   { name: 'Heard Island and McDonald Islands (Coast)',                     lon: 73.396,    lat: -53.011 },
   { name: 'Bourem, Mali',                                                  lon: -0.3497,   lat: 16.9667 },
   { name: 'Salango Island, Ecuador',                                       lon: -80.8583,  lat: -1.5833 },
-  { name: 'Sharmokhiya, Iraq',                                             lon: 44.7167,   lat: 35.1167 },
   { name: 'Coronado Islands, Mexico',                                      lon: -117.3000, lat: 32.4167 },
   { name: 'El Menia, Algeria',                                             lon: 3.5333,    lat: 30.5667 },
   { name: 'Comodoro Rivadavia, Argentina',                                 lon: -67.4975,  lat: -45.8642 },
