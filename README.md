@@ -28,8 +28,8 @@ We omit the aridity score in climates that fall within subarctic, arctic, supera
 |:-----|:--------------|:----------------------------|
 | H    | Hypercaneal   | 50 and above (hypothetical) |
 | X    | Uninhabitable | 40 - 50 (hypothetical)      |
-| Z    | Ultratropical | 30 - 40 (hypothetical)      |
-| A    | Supertropical | 20 - 30                     |
+| Z    | Hyperequatorial | 30 - 40 (hypothetical)      |
+| A    | Equatorial    | 20 - 30                     |
 | B    | Tropical      | 10 - 20                     |
 | C    | Subtropical   | 0 - 10                      |
 | D    | Temperate     | -10 - 0                     |
