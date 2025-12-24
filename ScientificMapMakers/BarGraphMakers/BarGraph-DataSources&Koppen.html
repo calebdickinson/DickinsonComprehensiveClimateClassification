@@ -1,265 +1,348 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Climate Chart</title>
-  <style>
-    :root {
-      --temp:   #c5352b;
-      --precip: #3f7fd8;
-      --border: #c8ccd1;
-      --page-bg:#f8f9fa;
-    }
+// ====== CONFIG ======
+var ASSET_PREFIX = 'projects/ordinal-crowbar-459807-m2/assets/';  // ends with '/'
+var NODATA_U16   = 65535;
+var SCALE_PR     = 0.1;   // CHELSA pr_u16: 0.1 → mm/month
 
-    body {
-      margin: 0;
-      padding: 24px;
-      background: var(--page-bg);
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-                   sans-serif;
-      color: #111;
-    }
+var LAT = 39.7392;
+var LON = -104.9903;
 
-    .chart-wrapper {
-      width: 650px;
-      margin: 0 auto;
-      background: #fff;
-      border: 1px solid var(--border);
-      box-sizing: border-box;
-      padding: 14px 18px 14px;
-    }
+var pt  = ee.Geometry.Point([LON, LAT]);
 
-    .chart-title {
-      font-weight: 700;
-      font-size: 20px;
-      margin-bottom: 2px;
-    }
+// Month numbers 1–12
+var months = ee.List.sequence(1, 12);
 
-    .chart-subtitle {
-      font-size: 14px;
-      color: #555;
-      margin-bottom: 10px;
-    }
-    
-    .data-sources {
-      margin-top: 10px;
-      padding-top: 6px;
-      border-top: 1px solid var(--border);
-      font-size: 10.5px;
-      line-height: 1.35;
-      color: #555;
-    }
+// ====================================
+// Load monthly tasmax / tasmin (°C)
+// ====================================
+var tasmaxImgs = [];
+var tasminImgs = [];
 
-    .legend {
-      font-size: 11px;
-      margin-top: 8px;
-    }
+for (var m = 1; m <= 12; m++) {
+  var mm = (m < 10 ? '0' + m : '' + m);
 
-    .legend-row {
-      display: flex;
-      align-items: center;
-      margin-bottom: 2px;
-    }
+  // tasmax (K*0.1 → °C)
+  var rawMax = ee.Image(ASSET_PREFIX + 'CHELSA_ukesm1-0-ll_r1i1p1f1_w5e5_ssp585_tasmax_' + mm + '_2071_2100_norm');
+  var tmaxC  = rawMax
+    .updateMask(rawMax.neq(NODATA_U16))
+    .multiply(0.1)
+    .subtract(273.15)
+    .rename('tmaxC')
+    .set('month', m);
+  tasmaxImgs.push(tmaxC);
 
-    .swatch {
-      width: 11px;
-      height: 11px;
-      border-radius: 2px;
-      margin-right: 4px;
-    }
-  </style>
-</head>
-<body>
+  // tasmin (K*0.1 → °C)
+  var rawMin = ee.Image(ASSET_PREFIX + 'CHELSA_ukesm1-0-ll_r1i1p1f1_w5e5_ssp585_tasmin_' + mm + '_2071_2100_norm');
+  var tminC  = rawMin
+    .updateMask(rawMin.neq(NODATA_U16))
+    .multiply(0.1)
+    .subtract(273.15)
+    .rename('tminC')
+    .set('month', m);
+  tasminImgs.push(tminC);
+}
 
-<div class="chart-wrapper">
-  <div class="chart-title" id="title"></div>
-  <div class="chart-subtitle" id="subtitle"></div>
-  <div id="chart-container"></div>
+var tasmaxMonthly = ee.ImageCollection(tasmaxImgs);
+var tasminMonthly = ee.ImageCollection(tasminImgs);
 
-  <div class="legend">
-    <div class="legend-row">
-      <div class="swatch" style="background: var(--temp);"></div>
-      <span>Average max. and min. temperatures in °F</span>
-    </div>
-    <div class="legend-row">
-      <div class="swatch" style="background: var(--precip);"></div>
-      <span>Precipitation totals in inches</span>
-    </div>
-  </div>
-  <div class="data-sources">
-    <strong>Data sources:</strong>
-    Baseline climate conditions are derived from CHELSA v2.1 climatological normals (1981–2010).
-    Future projections use CHELSA-downscaled UKESM1-0-LL SSP5-8.5 projection normals
-    for 2011–2040, 2041–2070, and 2071–2100.
-  </div>
-</div>
+// =====================================
+// Load monthly precipitation (mm/month)
+// =====================================
+var prImgs = [];
+for (var n = 1; n <= 12; n++) {
+  var nn = (n < 10 ? '0' + n : '' + n);
+  var rawPr = ee.Image(ASSET_PREFIX + 'CHELSA_ukesm1-0-ll_r1i1p1f1_w5e5_ssp585_pr_' + nn + '_2071_2100_norm');
+  var pr = rawPr
+    .updateMask(rawPr.neq(NODATA_U16))
+    .multiply(SCALE_PR)
+    .rename('pr')
+    .set('month', n);
+  prImgs.push(pr);
+}
+var prMonthly = ee.ImageCollection(prImgs);
 
-<script>
-  // ============================
-  // 1. EARTH ENGINE LINES
-  // ============================
-  const rawLines = `
-1.0: 60 42 0.8
-2.0: 63 42 0.9
-3.0: 71 45 2.1
-4.0: 78 47 2.4
-5.0: 86 56 2.4
-6.0: 97 67 1.7
-7.0: 99 74 2.3
-8.0: 97 71 1.6
-9.0: 90 66 1.6
-10.0: 86 57 1.1
-11.0: 72 47 0.8
-12.0: 59 40 1.0
-  `;
-
-  const months = ['J','F','M','A','M','J','J','A','S','O','N','D'];
-  const highsF = [], lowsF = [], precipIn = [];
-
-  rawLines.trim().split(/\n+/).forEach(line => {
-    const parts = line.split(':');
-    if (parts.length < 2) return;
-
-    const nums = parts[1].trim().split(/\s+/);
-    highsF.push(parseFloat(nums[0]));
-    lowsF.push(parseFloat(nums[1]));
-    precipIn.push(parseFloat(nums[2]));
+// ====== Helpers ======
+function atPoint(img, band) {
+  var dict = img.reduceRegion({
+    reducer: ee.Reducer.first(),
+    geometry: pt,
+    scale: 1000,
+    maxPixels: 1e9
   });
+  return ee.Number(dict.get(band));
+}
 
-  const data = {
-    code: 'Denver, Colorado',
-    location: '2071 - 2100 normals<br>Köppen Classification: BSh<br>Dickinson Classification: Csa2 (bordering on Csz1)',
-    months,
-    highsF,
-    lowsF,
-    precipIn
-  };
+// °C → °F, rounded to nearest whole number
+function cToF_rounded(num) {
+  return num.multiply(9).divide(5).add(32).round();
+}
 
-  document.getElementById('title').textContent = data.code;
-  document.getElementById('subtitle').innerHTML = data.location;
+// mm → inches, rounded to nearest tenth
+function mmToIn_rounded(num) {
+  return num.divide(25.4).multiply(10).round().divide(10);
+}
 
-  // ============================
-  // 2. DRAW CHART
-  // ============================
+// ====================================
+// Build lists of monthly values
+// ====================================
 
-  const svgWidth = 620;
-  const svgHeight = 540;  // taller overall to fit stretched temp panel
+// --- Fahrenheit / inches (existing output) ---
+var tmaxF = months.map(function(m) {
+  var img = tasmaxMonthly.filter(ee.Filter.eq('month', m)).first();
+  return cToF_rounded(atPoint(img, 'tmaxC'));
+});
 
-  const margin = { top: 20, right: 20, bottom: 32, left: 20 };
+var tminF = months.map(function(m) {
+  var img = tasminMonthly.filter(ee.Filter.eq('month', m)).first();
+  return cToF_rounded(atPoint(img, 'tminC'));
+});
 
-  // temp area stretched ×2, precip area compressed ×2
-  const tempPanelHeight = 340;  // 170 * 2
-  const gap = 48;               // space between panels
-  const precipPanelHeight = 55; // 110 / 2
+var precipIn = months.map(function(m) {
+  var img = prMonthly.filter(ee.Filter.eq('month', m)).first();
+  return mmToIn_rounded(atPoint(img, 'pr'));
+});
 
-  const plotWidth = svgWidth - margin.left - margin.right;
-  const tempBaseY = margin.top + tempPanelHeight;
-  const precipTopY = tempBaseY + gap;
-  const precipBaseY = precipTopY + precipPanelHeight;
+// --- Celsius / millimeters (new output) ---
+var tmaxC = months.map(function(m) {
+  var img = tasmaxMonthly.filter(ee.Filter.eq('month', m)).first();
+  return atPoint(img, 'tmaxC').round();
+});
 
-  const n = data.months.length;
-  const colWidth = plotWidth / n;
+var tminC = months.map(function(m) {
+  var img = tasminMonthly.filter(ee.Filter.eq('month', m)).first();
+  return atPoint(img, 'tminC').round();
+});
 
-  // ===== FIXED TEMPERATURE SCALE: -30 TO 130°F =====
-  const TEMP_MIN_FIXED = -30;
-  const TEMP_MAX_FIXED = 130;
-  const TEMP_RANGE_FIXED = TEMP_MAX_FIXED - TEMP_MIN_FIXED;
+var precipMM = months.map(function(m) {
+  var img = prMonthly.filter(ee.Filter.eq('month', m)).first();
+  return atPoint(img, 'pr').round();
+});
 
-  function tempScale(v) {
-    return ((v - TEMP_MIN_FIXED) / TEMP_RANGE_FIXED) * (tempPanelHeight * 0.9);
-  }
+// ====================================
+// Print Fahrenheit / inches
+// ====================================
+var combinedF = months.map(function(m) {
+  m = ee.Number(m);
 
-  // ===== FIXED PRECIP SCALE: 0 TO 10 INCHES =====
-  const PRECIP_MIN_FIXED = 0;
-  const PRECIP_MAX_FIXED = 10;
-  const PRECIP_RANGE_FIXED = PRECIP_MAX_FIXED - PRECIP_MIN_FIXED;
+  return ee.String(m).cat(': ')
+    .cat(ee.Number(tmaxF.get(m.subtract(1))).format('%.0f')).cat(' ')
+    .cat(ee.Number(tminF.get(m.subtract(1))).format('%.0f')).cat(' ')
+    .cat(ee.Number(precipIn.get(m.subtract(1))).format('%.1f'));
+});
 
-  function precipScale(v) {
-    return ((v - PRECIP_MIN_FIXED) / PRECIP_RANGE_FIXED) * (precipPanelHeight * 0.9);
-  }
+combinedF.evaluate(function(list) {
+  list.forEach(function(line) {
+    print(line);
+  });
+});
 
-  let svg = `<svg width="${svgWidth}" height="${svgHeight}">
-    <rect width="${svgWidth}" height="${svgHeight}" fill="#ffffff" />
-    <g transform="translate(${margin.left},0)">`;
+// ====================================
+// Print Celsius / millimeters
+// ====================================
 
-  // ----- THIN DOTTED REFERENCE LINE (32°F / shared Y) -----
-  const refTemp = 32;
-  const dottedY = tempBaseY - tempScale(refTemp);
+var combinedC = months.map(function(m) {
+  m = ee.Number(m);
 
-  // draw the dotted line *first* so bars/labels render on top of it
-  svg += `
-    <line x1="0" y1="${dottedY}"
-          x2="${plotWidth}" y2="${dottedY}"
-          stroke="#bbb" stroke-width="1"
-          stroke-dasharray="4,3" />
-  `;
+  return ee.String(m).cat(': ')
+    .cat(ee.Number(tmaxC.get(m.subtract(1))).format('%.0f')).cat(' ')
+    .cat(ee.Number(tminC.get(m.subtract(1))).format('%.0f')).cat(' ')
+    .cat(ee.Number(precipMM.get(m.subtract(1))).format('%.0f'));
+});
 
-  // ----- Temperature bars (drawn AFTER the line, so they can go over it) -----
-  for (let i = 0; i < n; i++) {
-    const hi = data.highsF[i];
-    const lo = data.lowsF[i];
+combinedC.evaluate(function(list) {
+  list.forEach(function(line) {
+    print(line);
+  });
+});
 
-    const hiH = tempScale(hi);
-    const loH = tempScale(lo);
+// ====================================
+// Map
+// ====================================
+Map.addLayer(
+  ee.FeatureCollection([ee.Feature(pt)]),
+  {color: 'black'},
+  'Selected point'
+);
+Map.centerObject(pt, 7);
 
-    const barX = colWidth * i + colWidth * 0.28;
-    const barW = colWidth * 0.30;
+// ====================================
+// Köppen–Geiger classification (UNROUNDED, SCIENTIFIC)
+// Uses CHELSA tas (monthly mean temperature)
+// ====================================
 
-    const hiY = tempBaseY - hiH;
-    const loY = tempBaseY - loH;
+var tasC_raw = [];
 
-    svg += `
-      <rect x="${barX}" y="${hiY}" width="${barW}" height="${hiH - loH}"
-            fill="var(--temp)"></rect>
-      <text x="${barX + barW/2}" y="${hiY - 4}"
-            text-anchor="middle" font-size="11">${hi}</text>
-      <text x="${barX + barW/2}" y="${loY + 12}"
-            text-anchor="middle" font-size="10">${lo}</text>
-    `;
-  }
+for (var m = 1; m <= 12; m++) {
+  var mm = (m < 10 ? '0' + m : '' + m);
 
-  // ----- Precipitation bars (also drawn after the line) -----
-  for (let i = 0; i < n; i++) {
-    const p = data.precipIn[i];
-    const barH = precipScale(p);
+  var id = ASSET_PREFIX +
+    'CHELSA_ukesm1-0-ll_r1i1p1f1_w5e5_ssp585_tas_' +
+    mm +
+    '_2071_2100_norm';
 
-    const barX = colWidth * i + colWidth * 0.28;
-    const barW = colWidth * 0.30;
-    const barY = precipBaseY - barH;
+  var raw = ee.Image(id);
 
-    svg += `
-      <rect x="${barX}" y="${barY}" width="${barW}" height="${barH}"
-            fill="var(--precip)"></rect>
-      <text x="${barX + barW/2}" 
-            y="${precipBaseY + 14}" 
-            text-anchor="middle"
-            font-size="10">${p}</text>
-    `;
-  }
+  var tasC = raw
+    .updateMask(raw.neq(NODATA_U16))   
+    .multiply(0.1)                     // 0.1 K
+    .subtract(273.15)                  // → °C
+    .rename('tmeanC');
 
-  // ----- LINE BETWEEN PRECIP & MONTH LABELS -----
-  const lowerLineY = precipBaseY + 20;
+  tasC_raw.push(atPoint(tasC, 'tmeanC'));
+}
 
-  svg += `
-    <line x1="0" y1="${lowerLineY}"
-          x2="${plotWidth}" y2="${lowerLineY}"
-          stroke="#000" stroke-width="2" />
-  `;
+// Convert to ee.List
+tasC_raw = ee.List(tasC_raw);
 
-  // ----- Month labels -----
-  for (let i = 0; i < n; i++) {
-    const x = colWidth * i + colWidth * 0.43;
-    const y = lowerLineY + 16;
 
-    svg += `<text x="${x}" y="${y}"
-                  text-anchor="middle"
-                  font-size="11">${data.months[i]}</text>`;
-  }
+// Monthly precipitation
+var precipMM_raw = months.map(function(m) {
+  var img = prMonthly.filter(ee.Filter.eq('month', m)).first();
+  return atPoint(img, 'pr');
+});
 
-  svg += `</g></svg>`;
+// -------- Temperature metrics --------
+var coldestMonth   = ee.Number(tasC_raw.reduce(ee.Reducer.min()));
+var warmestMonth   = ee.Number(tasC_raw.reduce(ee.Reducer.max()));
+var meanAnnualTemp = ee.Number(tasC_raw.reduce(ee.Reducer.mean()));
+var monthsAbove10  = ee.Number(
+  tasC_raw.map(function(t){ return ee.Number(t).gte(10); })
+          .reduce(ee.Reducer.sum())
+);
 
-  document.getElementById('chart-container').innerHTML = svg;
-</script>
+// -------- Precipitation metrics --------
+var annualPr = ee.Number(precipMM_raw.reduce(ee.Reducer.sum()));
+var minPr    = ee.Number(precipMM_raw.reduce(ee.Reducer.min()));
 
-</body>
-</html>
+// -------- Hemisphere-aware seasons --------
+// Indices: Jan=0 ... Dec=11
+var isSH = ee.Number(LAT).lt(0);
+var idxAprSep = ee.List([3,4,5,6,7,8]);
+var idxOctMar = ee.List([9,10,11,0,1,2]);
+
+var summerIdx = ee.List(ee.Algorithms.If(isSH, idxOctMar, idxAprSep));
+var winterIdx = ee.List(ee.Algorithms.If(isSH, idxAprSep, idxOctMar));
+
+function pick(idx, data) {
+  return ee.List(idx.map(function(i){ return ee.Number(data.get(i)); }));
+}
+
+var summerPr = pick(summerIdx, precipMM_raw);
+var winterPr = pick(winterIdx, precipMM_raw);
+
+var minSummer  = ee.Number(summerPr.reduce(ee.Reducer.min()));
+var maxSummer  = ee.Number(summerPr.reduce(ee.Reducer.max()));
+var minWinter  = ee.Number(winterPr.reduce(ee.Reducer.min()));
+var maxWinter  = ee.Number(winterPr.reduce(ee.Reducer.max()));
+
+var summerTotal = ee.Number(summerPr.reduce(ee.Reducer.sum()));
+var winterTotal = ee.Number(winterPr.reduce(ee.Reducer.sum()));
+
+// -------- Köppen aridity threshold --------
+var aridThresh = ee.Number(
+  ee.Algorithms.If(
+    summerTotal.divide(annualPr).gte(0.7),
+    meanAnnualTemp.multiply(20).add(280),
+    ee.Algorithms.If(
+      winterTotal.divide(annualPr).gte(0.7),
+      meanAnnualTemp.multiply(20),
+      meanAnnualTemp.multiply(20).add(140)
+    )
+  )
+);
+
+// ====================================
+// Köppen decision tree (canonical order)
+// ====================================
+
+// ---- POLAR (E) ----
+var isPolar = warmestMonth.lt(10);
+var polarCode = ee.String(
+  ee.Algorithms.If(warmestMonth.gt(0), 'ET', 'EF')
+);
+
+// ---- DRY (B) ----
+var isDry = annualPr.lt(aridThresh);
+var dryCode = ee.String(
+  ee.Algorithms.If(
+    annualPr.lt(aridThresh.divide(2)),
+    ee.String('BW').cat(ee.Algorithms.If(meanAnnualTemp.gte(18),'h','k')),
+    ee.String('BS').cat(ee.Algorithms.If(meanAnnualTemp.gte(18),'h','k'))
+  )
+);
+
+// ---- TROPICAL (A) ----
+var isTropical = coldestMonth.gte(18);
+
+var tropicalCode = ee.String(
+  ee.Algorithms.If(
+    minPr.gte(60),
+    'Af',
+    ee.Algorithms.If(
+      minPr.gte(ee.Number(100).subtract(annualPr.divide(25))),
+      'Am',
+      ee.Algorithms.If(
+        ee.Number(
+          summerPr.map(function(p){ return ee.Number(p).eq(minPr); })
+                  .reduce(ee.Reducer.anyNonZero())
+        ).eq(1),
+        'As','Aw'
+      )
+    )
+  )
+);
+
+// ---- TEMPERATE (C) / CONTINENTAL (D) ----
+// 0 °C boundary
+var isC = coldestMonth.gt(0).and(warmestMonth.gte(10));
+var isD = coldestMonth.lte(0).and(warmestMonth.gte(10));
+
+var cdSecond = ee.String(
+  ee.Algorithms.If(
+    minSummer.lt(40).and(minSummer.lt(maxWinter.divide(3))),
+    's',
+    ee.Algorithms.If(
+      minWinter.lt(maxSummer.divide(10)),
+      'w',
+      'f'
+    )
+  )
+);
+
+var cThird = ee.String(
+  ee.Algorithms.If(
+    warmestMonth.gte(22),'a',
+    ee.Algorithms.If(monthsAbove10.gte(4),'b','c')
+  )
+);
+
+var dThird = ee.String(
+  ee.Algorithms.If(
+    coldestMonth.lte(-38),'d',
+    ee.Algorithms.If(
+      warmestMonth.gte(22),'a',
+      ee.Algorithms.If(monthsAbove10.gte(4),'b','c')
+    )
+  )
+);
+
+var cCode = ee.String('C').cat(cdSecond).cat(cThird);
+var dCode = ee.String('D').cat(cdSecond).cat(dThird);
+
+// ---- FINAL Köppen ----
+var koppen = ee.String(
+  ee.Algorithms.If(
+    isPolar, polarCode,
+    ee.Algorithms.If(
+      isDry, dryCode,
+      ee.Algorithms.If(
+        isTropical, tropicalCode,
+        ee.Algorithms.If(isC, cCode, dCode)
+      )
+    )
+  )
+);
+
+// ---- PRINT RESULT ----
+koppen.evaluate(function(k){
+  print('Köppen climate:', k);
+});
