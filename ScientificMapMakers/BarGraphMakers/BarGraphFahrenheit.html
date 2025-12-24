@@ -40,6 +40,15 @@
       color: #555;
       margin-bottom: 10px;
     }
+    
+    .data-sources {
+      margin-top: 10px;
+      padding-top: 6px;
+      border-top: 1px solid var(--border);
+      font-size: 10.5px;
+      line-height: 1.35;
+      color: #555;
+    }
 
     .legend {
       font-size: 11px;
@@ -77,6 +86,13 @@
       <span>Precipitation totals in inches</span>
     </div>
   </div>
+  <div class="data-sources">
+    <strong>Data sources:</strong>
+    Baseline climate conditions are derived from CHELSA v2.1 climatological normals (1981–2010).
+    Future projections use CHELSA-downscaled UKESM1-0-LL SSP5-8.5 projection normals
+    for 2011–2040, 2041–2070, and 2071–2100.
+    SSP5-8.5 represents a high-growth, energy-intensive future dominated by fossil fuel use, resulting in very high greenhouse gas emissions—making it a widely used analogue for present-day trajectories under minimal mitigation efforts. UKESM1-0-LL was selected due to its higher climate sensitivity and stronger land–atmosphere coupling, which makes it useful for bounding upper-risk habitability outcomes.
+  </div>
 </div>
 
 <script>
@@ -84,18 +100,18 @@
   // 1. EARTH ENGINE LINES
   // ============================
   const rawLines = `
-1.0: 44 31 0.4
-2.0: 49 32 0.3
-3.0: 62 40 0.8
-4.0: 75 49 1.6
-5.0: 88 60 2.5
-6.0: 101 72 2.4
-7.0: 116 83 1.1
-8.0: 115 82 0.7
-9.0: 101 72 1.0
-10.0: 83 57 1.1
-11.0: 62 43 0.4
-12.0: 49 36 0.4
+1.0: 60 42 0.8
+2.0: 63 42 0.9
+3.0: 71 45 2.1
+4.0: 78 47 2.4
+5.0: 86 56 2.4
+6.0: 97 67 1.7
+7.0: 99 74 2.3
+8.0: 97 71 1.6
+9.0: 90 66 1.6
+10.0: 86 57 1.1
+11.0: 72 47 0.8
+12.0: 59 40 1.0
   `;
 
   const months = ['J','F','M','A','M','J','J','A','S','O','N','D'];
@@ -112,16 +128,16 @@
   });
 
   const data = {
-    code: 'Miles City, Montana',
-    location: '<b>Cdz2</b> (2071-2100 normals)',
+    location: 'Denver, Colorado',
+    code: '2071 - 2100 normals<br>Köppen Classification: BSh (hot semiarid)<br>Dickinson Classification: Csa2 (subtropical humid with very hot summer) bordering on Csz1 (subtropical semiarid with scorching hot summer)',
     months,
     highsF,
     lowsF,
     precipIn
   };
 
-  document.getElementById('title').textContent = data.code;
-  document.getElementById('subtitle').innerHTML = data.location;
+  document.getElementById('title').textContent = data.location;
+  document.getElementById('subtitle').innerHTML = data.code;
 
   // ============================
   // 2. DRAW CHART
