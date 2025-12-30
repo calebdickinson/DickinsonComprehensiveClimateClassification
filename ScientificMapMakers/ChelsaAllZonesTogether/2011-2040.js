@@ -1,4 +1,4 @@
-// === CHELSA UKESM ssp858 (2071–2100) — Dickinson rules & uploaded assets ===
+// === CHELSA UKESM ssp858 (2011–2070) — Dickinson rules & uploaded assets ===
 
 // ---------- Assets & constants ----------
 var ASSET_PREFIX = 'projects/ordinal-crowbar-459807-m2/assets/';  // ends with '/'
