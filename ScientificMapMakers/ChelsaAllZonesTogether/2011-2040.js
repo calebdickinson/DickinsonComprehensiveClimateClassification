@@ -1,4 +1,4 @@
-// === CHELSA UKESM ssp858 (2011–2040) — Dickinson rules & your uploaded assets ===
+// === CHELSA UKESM ssp858 (2071–2100) — Dickinson rules & uploaded assets ===
 
 // ---------- Assets & constants ----------
 var ASSET_PREFIX = 'projects/ordinal-crowbar-459807-m2/assets/';  // ends with '/'
@@ -6,7 +6,7 @@ var PET_MEAN_ID  = ASSET_PREFIX + 'CHELSA_pet_penman_mean_2011-2040'; // u16 mea
 
 var NODATA_U16 = 65535;
 var SCALE_PR   = 0.1;  // CHELSA pr_u16: 0.1 → mm/month
-var SCALE_PET  = 1;  // Should be 1 for projections and 0.1 in baseline do to unit conversion
+var SCALE_PET  = 1;  // Should be 1 for projections and 0.1 in baseline due to unit conversion issue
 
 // ---------- Months helper ----------
 var months = ee.List.sequence(1, 12);
@@ -42,7 +42,7 @@ var coldestC = monthlyClim
   .select('tmeanC')
   .rename('coldestC');
 
-// Dickinson “no-aridity due to cold” condition (same as your working code)
+// Dickinson “no-aridity due to cold” condition
 var coldCond = hottestC.lt(15).or(coldestC.lt(-20));
 
 // ---------- Monthly precipitation from CHELSA pr_u16 (0.1 → mm/month) ----------
@@ -74,7 +74,7 @@ var P_hs    = prMonthly.filter(ee.Filter.inList('month', [4,5,6,7,8,9]))
 var PET_ann = petMeanMm.multiply(12).rename('PET_ann');         // mm/year
 var AI      = P_ann.divide(PET_ann).rename('AI');               // UNEP-style ratio
 
-// Treat masked AI (from PET mask) as ocean (like your working code)
+// Treat masked AI (from PET mask) as ocean
 var oceanMask = AI.mask().not();
 
 // ---------- Latitude zones (±23.43594°) ----------
@@ -83,10 +83,10 @@ var northMask = pixelLat.gt(23.43594);
 var tropic    = pixelLat.abs().lte(23.43594);
 var southMask = pixelLat.lt(-23.43594);
 
-// ---------- Base aridity classes (your thresholds from the “good” code) ----------
+// ---------- Base aridity classes ----------
 // Start as Humid(6); special ocean-ish guard at AI<=0.01; then SH/S/Desert
 var aridBase = ee.Image(6)       // 6 = Humid
-  .where(AI.lte(0.01), 8)        // 8 = (we'll keep as "ocean-ish" placeholder; real oceans set later)
+  .where(AI.lte(0.01), 8)        // 8 = ("ocean-ish" placeholder; real oceans set later)
   .where(AI.lt(0.075), 5)        // 5 = Semihumid
   .where(AI.lt(0.050), 2)        // 2 = Semiarid
   .where(AI.lt(0.025), 1)        // 1 = Arid Desert
@@ -95,18 +95,51 @@ var aridBase = ee.Image(6)       // 6 = Humid
 // ---------- HS ratio (Apr–Sep share) ----------
 var HS = P_hs.divide(P_ann).rename('HS_ratio');
 
-// ---------- Final climate class: apply Med/Monsoon (non-desert, non-ocean-ish), then oceans(8), then cold(7) ----------
+// ---------- Rolling 6-month precipitation dominance (global) ----------
+var prList = prMonthly.sort('month').toList(12);
+
+var sixMonthSums = ee.List.sequence(0, 11).map(function(start){
+  start = ee.Number(start);
+
+  var idx = ee.List.sequence(start, start.add(5))
+    .map(function(i){ return ee.Number(i).mod(12); });
+
+  return ee.ImageCollection(
+    idx.map(function(i){ return ee.Image(prList.get(i)); })
+  ).sum();
+});
+
+var P6ratio = ee.ImageCollection.fromImages(sixMonthSums)
+  .max()
+  .divide(P_ann)
+  .rename('P6ratio');
+
+// ---------- Final climate class: Med first, then global monsoon, then oceans, then cold ----------
 var clim = aridBase
-  // Northern Hemisphere: Med <0.4; Monsoon >=0.8 (except Arid Desert(1) and ocean-ish(8))
-  .where(northMask.and(aridBase.neq(1)).and(aridBase.neq(8)).and(HS.gt(0.8)), 4) // Monsoon
-  .where(northMask.and(aridBase.neq(1)).and(aridBase.neq(8)).and(HS.lt(0.4)),  3) // Mediterranean
-  // Tropics: Monsoon at extremes
-  .where(tropic.and(aridBase.neq(1)).and(aridBase.neq(8)).and(HS.lt(0.2)),     4) // Monsoon
-  .where(tropic.and(aridBase.neq(1)).and(aridBase.neq(8)).and(HS.gt(0.8)),    4) // Monsoon
-  // Southern Hemisphere: Med >=0.6; Monsoon <0.2
-  .where(southMask.and(aridBase.neq(1)).and(aridBase.neq(8)).and(HS.lt(0.2)),  4) // Monsoon
-  .where(southMask.and(aridBase.neq(1)).and(aridBase.neq(8)).and(HS.gt(0.6)), 3) // Mediterranean
-  // Oceans (AI mask) as 8, then cold wins (7) everywhere regardless of AI
+  // Mediterranean (unchanged logic)
+  .where(
+    northMask.and(HS.lt(0.4))
+      .or(southMask.and(HS.gt(0.6)))
+      .and(aridBase.neq(1))
+      .and(aridBase.neq(8)),
+    3
+  )
+
+  // Global monsoon: ≥80% precip in ANY 6 consecutive months,
+  // not Mediterranean, not Arid Desert, not ocean
+  .where(
+    P6ratio.gte(0.8)
+      .and(aridBase.neq(1))
+      .and(aridBase.neq(8))
+      .and(
+        northMask.and(HS.lt(0.4))
+          .or(southMask.and(HS.gt(0.6)))
+          .not()
+      ),
+    4
+  )
+
+  // Oceans, then cold override (unchanged)
   .where(oceanMask, 8)
   .where(coldCond, 7)
   .rename('climateClass');
@@ -117,8 +150,8 @@ var clim = aridBase
 // (Keeping YOUR current binning from this file; if you want the other bins, paste them here.)
 function classifySummer(tC) {
   return ee.Image.constant(0)
-    .where( tC.gte(40).and(tC.lt(50)),  1) // X
-    .where( tC.gte(35).and(tC.lt(40)),  2) // Z2
+    .where( tC.gte(42).and(tC.lt(50)),  1) // X
+    .where( tC.gte(35).and(tC.lt(42)),  2) // Z2
     .where( tC.gte(30).and(tC.lt(35)),  3) // Z1
     .where( tC.gte(25).and(tC.lt(30)),  4) // A2
     .where( tC.gte(20).and(tC.lt(25)),  5) // A1
