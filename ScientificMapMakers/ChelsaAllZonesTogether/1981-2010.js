@@ -95,21 +95,55 @@ var aridBase = ee.Image(6)       // 6 = Humid
 // ---------- HS ratio (Apr–Sep share) ----------
 var HS = P_hs.divide(P_ann).rename('HS_ratio');
 
-// ---------- Final climate class: apply Med/Monsoon (non-desert, non-ocean-ish), then oceans(8), then cold(7) ----------
+// ---------- Rolling 6-month precipitation dominance (global) ----------
+var prList = prMonthly.sort('month').toList(12);
+
+var sixMonthSums = ee.List.sequence(0, 11).map(function(start){
+  start = ee.Number(start);
+
+  var idx = ee.List.sequence(start, start.add(5))
+    .map(function(i){ return ee.Number(i).mod(12); });
+
+  return ee.ImageCollection(
+    idx.map(function(i){ return ee.Image(prList.get(i)); })
+  ).sum();
+});
+
+var P6ratio = ee.ImageCollection.fromImages(sixMonthSums)
+  .max()
+  .divide(P_ann)
+  .rename('P6ratio');
+
+// ---------- Final climate class: Med first, then global monsoon, then oceans, then cold ----------
 var clim = aridBase
-  // Northern Hemisphere: Med <0.4; Monsoon >=0.8 (except Arid Desert(1) and ocean-ish(8))
-  .where(northMask.and(aridBase.neq(1)).and(aridBase.neq(8)).and(HS.gt(0.8)), 4) // Monsoon
-  .where(northMask.and(aridBase.neq(1)).and(aridBase.neq(8)).and(HS.lt(0.4)),  3) // Mediterranean
-  // Tropics: Monsoon at extremes
-  .where(tropic.and(aridBase.neq(1)).and(aridBase.neq(8)).and(HS.lt(0.2)),     4) // Monsoon
-  .where(tropic.and(aridBase.neq(1)).and(aridBase.neq(8)).and(HS.gt(0.8)),    4) // Monsoon
-  // Southern Hemisphere: Med >=0.6; Monsoon <0.2
-  .where(southMask.and(aridBase.neq(1)).and(aridBase.neq(8)).and(HS.lt(0.2)),  4) // Monsoon
-  .where(southMask.and(aridBase.neq(1)).and(aridBase.neq(8)).and(HS.gt(0.6)), 3) // Mediterranean
-  // Oceans (AI mask) as 8, then cold wins (7) everywhere regardless of AI
+  // Mediterranean (unchanged logic)
+  .where(
+    northMask.and(HS.lt(0.4))
+      .or(southMask.and(HS.gt(0.6)))
+      .and(aridBase.neq(1))
+      .and(aridBase.neq(8)),
+    3
+  )
+
+  // Global monsoon: ≥80% precip in ANY 6 consecutive months,
+  // not Mediterranean, not Arid Desert, not ocean
+  .where(
+    P6ratio.gte(0.8)
+      .and(aridBase.neq(1))
+      .and(aridBase.neq(8))
+      .and(
+        northMask.and(HS.lt(0.4))
+          .or(southMask.and(HS.gt(0.6)))
+          .not()
+      ),
+    4
+  )
+
+  // Oceans, then cold override (unchanged)
   .where(oceanMask, 8)
   .where(coldCond, 7)
   .rename('climateClass');
+
 
 // ===========================
 // Temperature class functions
