@@ -50,7 +50,7 @@ var tasminMonthly = ee.ImageCollection(tasminImgs);
 var prImgs = [];
 for (var n = 1; n <= 12; n++) {
   var nn = (n < 10 ? '0' + n : '' + n);
-  var rawPr = ee.Image(ASSET_PREFIX + 'CHELSA_pr_' + mm + '_1981-2010_V2-1_u16');
+  var rawPr = ee.Image(ASSET_PREFIX + 'CHELSA_pr_' + nn + '_1981-2010_V2-1_u16');
   var pr = rawPr
     .updateMask(rawPr.neq(NODATA_U16))
     .multiply(SCALE_PR)
