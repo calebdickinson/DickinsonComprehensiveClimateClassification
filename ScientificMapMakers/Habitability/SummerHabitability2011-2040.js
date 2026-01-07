@@ -109,21 +109,21 @@ var hottest = ee.ImageCollection(
 var hi = hottest.select('hiF');
 
 var hiCategory = ee.Image(0)
-  .where(hi.gte(80).and(hi.lt(90)), 1)      // Caution
-  .where(hi.gte(90).and(hi.lt(103)), 2)     // Extreme Caution
-  .where(hi.gte(103).and(hi.lt(125)), 3)    // Danger
-  .where(hi.gte(125).and(hi.lt(160)), 4)    // Extreme Danger
-  .where(hi.gte(160), 5)                    // Uninhabitable
+  .where(hi.gte(80).and(hi.lt(95)), 1)      // Caution
+  .where(hi.gte(95).and(hi.lt(110)), 2)     // Extreme Caution
+  .where(hi.gte(110).and(hi.lt(125)), 3)    // Danger
+  .where(hi.gte(125).and(hi.lt(140)), 4)    // Extreme Danger
+  .where(hi.gte(140), 5)                    // Uninhabitable
   .updateMask(hi.gte(80))
   .rename('hiCat');
 
 // ---------- PALETTE ----------
 var noaaPalette = [
-  '#ffcc00', // Caution
-  '#ff0000', // Extreme Caution
-  '#990099', // Danger
-  '#000000', // Extreme Danger
-  '#ffffff'  // Uninhabitable
+  '#ffcc00', // Category 1 Summer - Mildly Dangerous
+  '#ff0000', // Category 2 Summer - Moderately Dangerous
+  '#990099', // Category 3 Summer - Extremely Dangerous
+  '#000000', // Category 4 Summer - Mostly Uninhabitable
+  '#ffffff'  // Category 5 Summer - Fully Uninhabitable
 ];
 
 // ---------- MAP ----------
