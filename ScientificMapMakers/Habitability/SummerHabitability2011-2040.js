@@ -1,5 +1,5 @@
 // =====================================================
-// HOTTEST-MONTH HEAT INDEX (°F) — 5°F BANDS + CLICK INFO
+// HOTTEST-MONTH HEAT INDEX (°F) — CATEGORY MAP + CLICK INFO
 // =====================================================
 
 // ---------- SETTINGS ----------
@@ -46,10 +46,16 @@ for (var m = 1; m <= 12; m++) {
     .updateMask(pr.neq(NODATA_U16))
     .multiply(0.1); // mm
 
-  // ---------- ESTIMATE DEW POINT (°C) ----------
+  // =====================================================
+  // ESTIMATE DEW POINT (°C) — CONTINUOUS, HUMIDITY-AWARE
+  // =====================================================
+  // Td ≈ Tmin in humid climates
+  // Td drops sharply in arid climates
+  // Penalty ranges smoothly from 0–6 °C
+
   var tdC = tminC.subtract(
     pr_mm.expression(
-      "(p <= 0) ? 5 : (p < 25) ? 3 : (p < 100) ? 1 : -1",
+      'clamp(6 * exp(-0.02 * p), 0, 6)',
       { p: pr_mm }
     )
   );
@@ -58,28 +64,25 @@ for (var m = 1; m <= 12; m++) {
   var tC = tmaxF.subtract(32).multiply(5 / 9);
 
   var es = tC.expression(
-    "6.112 * exp((17.67 * T) / (T + 243.5))",
+    '6.112 * exp((17.67 * T) / (T + 243.5))',
     { T: tC }
   );
 
   var e = tdC.expression(
-    "6.112 * exp((17.67 * Td) / (Td + 243.5))",
+    '6.112 * exp((17.67 * Td) / (Td + 243.5))',
     { Td: tdC }
   );
 
   var rh = e.divide(es).multiply(100).clamp(1, 100);
 
   // ---------- HEAT INDEX (°F) ----------
-  var T = tmaxF;
-  var R = rh;
-
-  var HI = T.expression(
-    "-42.379 + 2.04901523*T + 10.14333127*R" +
-    " - 0.22475541*T*R - 0.00683783*T*T" +
-    " - 0.05481717*R*R + 0.00122874*T*T*R" +
-    " + 0.00085282*T*R*R - 0.00000199*T*T*R*R",
-    { T: T, R: R }
-  ).where(T.lt(80), T); // HI undefined below 80°F
+  var HI = tmaxF.expression(
+    '-42.379 + 2.04901523*T + 10.14333127*R' +
+    ' - 0.22475541*T*R - 0.00683783*T*T' +
+    ' - 0.05481717*R*R + 0.00122874*T*T*R' +
+    ' + 0.00085282*T*R*R - 0.00000199*T*T*R*R',
+    { T: tmaxF, R: rh }
+  ).where(tmaxF.lt(80), tmaxF); // HI undefined < 80°F
 
   imgs.push(
     HI.rename('hiF')
@@ -89,7 +92,9 @@ for (var m = 1; m <= 12; m++) {
 
 var hiMonthly = ee.ImageCollection(imgs);
 
-// ---------- HOTTEST MONTH BY TASMAX ----------
+// =====================================================
+// MONTH WITH HIGHEST HEAT INDEX
+// =====================================================
 var hottest = ee.ImageCollection(
   hiMonthly.map(function (img) {
     return img.addBands(
@@ -98,41 +103,43 @@ var hottest = ee.ImageCollection(
   })
 ).qualityMosaic('hiF');
 
-// ---------- NOAA HEAT INDEX CATEGORY BANDING ----------
+// =====================================================
+// NOAA + UNINHABITABLE CATEGORY BANDING
+// =====================================================
 var hi = hottest.select('hiF');
 
 var hiCategory = ee.Image(0)
-  .where(hi.gte(80).and(hi.lt(90)), 1)     // Caution
-  .where(hi.gte(90).and(hi.lt(103)), 2)    // Extreme Caution
-  .where(hi.gte(103).and(hi.lt(125)), 3)   // Danger
-  .where(hi.gte(125), 4)                   // Extreme Danger
-  .updateMask(hi.gte(80))                  // mask <80°F
+  .where(hi.gte(80).and(hi.lt(90)), 1)      // Caution
+  .where(hi.gte(90).and(hi.lt(103)), 2)     // Extreme Caution
+  .where(hi.gte(103).and(hi.lt(125)), 3)    // Danger
+  .where(hi.gte(125).and(hi.lt(160)), 4)    // Extreme Danger
+  .where(hi.gte(160), 5)                    // Uninhabitable
+  .updateMask(hi.gte(80))
   .rename('hiCat');
 
-// ---------- NOAA PALETTE ----------
+// ---------- PALETTE ----------
 var noaaPalette = [
   '#ffcc00', // Caution
   '#ff0000', // Extreme Caution
   '#990099', // Danger
   '#000000', // Extreme Danger
+  '#ffffff'  // Uninhabitable
 ];
 
 // ---------- MAP ----------
 Map.addLayer(
   hiCategory,
-  {
-    min: 1,
-    max: 4,
-    palette: noaaPalette
-  },
-  'NOAA Heat Index Stress Categories (Hottest Month)',
+  { min: 1, max: 5, palette: noaaPalette },
+  'NOAA Heat Index Stress Categories (Month of Maximum HI)',
   true,
   0.85
 );
 
 Map.centerObject(ee.Geometry.Point([0, 0]), 2);
 
-// ---------- UI ----------
+// =====================================================
+// UI PANEL
+// =====================================================
 var panel = ui.Panel({
   style: {
     position: 'bottom-left',
@@ -141,7 +148,7 @@ var panel = ui.Panel({
   }
 });
 
-panel.add(ui.Label('Hottest Month Heat Index', {
+panel.add(ui.Label('Peak Heat Index (Hottest Month)', {
   fontWeight: 'bold',
   fontSize: '14px'
 }));
@@ -154,7 +161,7 @@ var label = ui.Label('', {
 panel.add(label);
 ui.root.add(panel);
 
-// ---------- CLICK ----------
+// ---------- CLICK HANDLER ----------
 Map.onClick(function (coords) {
   var pt = ee.Geometry.Point([coords.lon, coords.lat]);
 
