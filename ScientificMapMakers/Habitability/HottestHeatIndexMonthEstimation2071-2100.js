@@ -46,10 +46,16 @@ for (var m = 1; m <= 12; m++) {
     .updateMask(pr.neq(NODATA_U16))
     .multiply(0.1); // mm
 
-  // ---------- ESTIMATE DEW POINT (°C) ----------
+  // =====================================================
+  // ESTIMATE DEW POINT (°C) — CONTINUOUS, HUMIDITY-AWARE
+  // =====================================================
+  // Td ≈ Tmin in humid climates
+  // Td drops sharply in arid climates
+  // Penalty ranges smoothly from 0–6 °C
+
   var tdC = tminC.subtract(
     pr_mm.expression(
-      "(p <= 0) ? 5 : (p < 25) ? 3 : (p < 100) ? 1 : -1",
+      'clamp(6 * exp(-0.02 * p), 0, 6)',
       { p: pr_mm }
     )
   );
@@ -58,28 +64,25 @@ for (var m = 1; m <= 12; m++) {
   var tC = tmaxF.subtract(32).multiply(5 / 9);
 
   var es = tC.expression(
-    "6.112 * exp((17.67 * T) / (T + 243.5))",
+    '6.112 * exp((17.67 * T) / (T + 243.5))',
     { T: tC }
   );
 
   var e = tdC.expression(
-    "6.112 * exp((17.67 * Td) / (Td + 243.5))",
+    '6.112 * exp((17.67 * Td) / (Td + 243.5))',
     { Td: tdC }
   );
 
   var rh = e.divide(es).multiply(100).clamp(1, 100);
 
   // ---------- HEAT INDEX (°F) ----------
-  var T = tmaxF;
-  var R = rh;
-
-  var HI = T.expression(
-    "-42.379 + 2.04901523*T + 10.14333127*R" +
-    " - 0.22475541*T*R - 0.00683783*T*T" +
-    " - 0.05481717*R*R + 0.00122874*T*T*R" +
-    " + 0.00085282*T*R*R - 0.00000199*T*T*R*R",
-    { T: T, R: R }
-  ).where(T.lt(80), T); // HI undefined below 80°F
+  var HI = tmaxF.expression(
+    '-42.379 + 2.04901523*T + 10.14333127*R' +
+    ' - 0.22475541*T*R - 0.00683783*T*T' +
+    ' - 0.05481717*R*R + 0.00122874*T*T*R' +
+    ' + 0.00085282*T*R*R - 0.00000199*T*T*R*R',
+    { T: tmaxF, R: rh }
+  ).where(tmaxF.lt(80), tmaxF); // HI undefined < 80°F
 
   imgs.push(
     HI.rename('hiF')
@@ -89,7 +92,9 @@ for (var m = 1; m <= 12; m++) {
 
 var hiMonthly = ee.ImageCollection(imgs);
 
-// ---------- HOTTEST MONTH BY TASMAX ----------
+// =====================================================
+// MONTH WITH HIGHEST HEAT INDEX
+// =====================================================
 var hottest = ee.ImageCollection(
   hiMonthly.map(function (img) {
     return img.addBands(
