@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Heat Index Comparison</title>
+
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<style>
+  html,body{margin:0;background:#fafafa;color:#111;
+    font:14px/1.45 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial}
+  .wrap{max-width:1200px;margin:30px auto;padding:0 16px}
+  .card{
+    background:#fff;border:1px solid #e5e7eb;border-radius:12px;
+    padding:18px 18px 22px; box-shadow:0 1px 10px #0001
+  }
+
+  svg{width:100%;height:auto;display:block}
+
+  .axis{stroke:#111;stroke-width:2}
+  .tick5{stroke:#444;stroke-width:1}
+  .tick10{stroke:#111;stroke-width:2}
+  .num{font-size:20px;fill:#222}
+
+  .title-large{text-anchor:middle;font-size:20px;font-weight:700;fill:#111}
+
+  .cat text{fill:#fff}
+  .large{font-size:15px;font-weight:600}
+
+  .bar-outline{stroke:#d0d0d0;stroke-width:1;fill:none}
+
+  /* COLORS */
+  .yellow{fill:#ffd400}
+  .orange{fill:#ff8800}
+  .red{fill:#ff0000}
+  .purple{fill:#6a00a8}
+  .black{fill:#000000}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+<div class="card">
+
+<svg viewBox="0 0 1200 340">
+
+  <defs>
+    <g id="tick5"><line class="tick5" x1="0" y1="128" x2="0" y2="152"/></g>
+    <g id="tick10"><line class="tick10" x1="0" y1="125" x2="0" y2="155"/></g>
+  </defs>
+
+  <!-- Axis -->
+  <line class="axis" x1="70" y1="140" x2="1060" y2="140"/>
+
+  <!-- Ticks -->
+  <g class="num">
+    <use href="#tick10" x="70"/><text x="70" y="118" text-anchor="middle">80</text>
+    <use href="#tick5" x="136"/><text x="136" y="118" text-anchor="middle">85</text>
+    <use href="#tick10" x="202"/><text x="202" y="118" text-anchor="middle">90</text>
+    <use href="#tick5" x="268"/><text x="268" y="118" text-anchor="middle">95</text>
+    <use href="#tick10" x="334"/><text x="334" y="118" text-anchor="middle">100</text>
+    <use href="#tick5" x="400"/><text x="400" y="118" text-anchor="middle">105</text>
+    <use href="#tick10" x="466"/><text x="466" y="118" text-anchor="middle">110</text>
+    <use href="#tick5" x="532"/><text x="532" y="118" text-anchor="middle">115</text>
+    <use href="#tick10" x="598"/><text x="598" y="118" text-anchor="middle">120</text>
+    <use href="#tick5" x="664"/><text x="664" y="118" text-anchor="middle">125</text>
+    <use href="#tick10" x="730"/><text x="730" y="118" text-anchor="middle">130</text>
+    <use href="#tick5" x="796"/><text x="796" y="118" text-anchor="middle">135</text>
+    <use href="#tick10" x="862"/><text x="862" y="118" text-anchor="middle">140</text>
+    <use href="#tick5" x="928"/><text x="928" y="118" text-anchor="middle">145</text>
+    <use href="#tick10" x="994"/><text x="994" y="118" text-anchor="middle">150</text>
+    <use href="#tick5" x="1060"/><text x="1060" y="118" text-anchor="middle">155</text>
+  </g>
+
+  <!-- NOAA -->
+  <text class="title-large" x="565" y="36">NOAA Heat Index</text>
+  <rect class="bar-outline" x="70" y="56" width="990" height="28" rx="4"/>
+
+  <rect class="yellow" x="70" y="56" width="132" height="28"/>
+  <rect class="orange" x="202" y="56" width="171.6" height="28"/>
+  <rect class="red" x="373.6" y="56" width="290.4" height="28"/>
+  <rect class="purple" x="664" y="56" width="396" height="28"/>
+
+  <!-- NOAA triangle -->
+  <polygon class="purple"
+    points="1060,56 1060,84 1078,70"/>
+
+  <g class="cat">
+    <text class="large" x="136" y="75" text-anchor="middle">Caution</text>
+    <text class="large" x="287.8" y="75" text-anchor="middle">Extreme Caution</text>
+    <text class="large" x="518.8" y="75" text-anchor="middle">Danger</text>
+    <text class="large" x="862" y="75" text-anchor="middle">Extreme Danger</text>
+  </g>
+
+  <!-- Dickinson -->
+  <text class="title-large" x="565" y="182">Dickinson Heat Index</text>
+  <rect class="bar-outline" x="70" y="195" width="990" height="28" rx="4"/>
+
+  <rect class="yellow" x="70" y="195" width="198" height="28"/>
+  <rect class="orange" x="268" y="195" width="198" height="28"/>
+  <rect class="red" x="466" y="195" width="198" height="28"/>
+  <rect class="purple" x="664" y="195" width="198" height="28"/>
+  <rect class="black" x="862" y="195" width="198" height="28"/>
+
+  <!-- Dickinson triangle -->
+  <polygon class="black"
+    points="1060,195 1060,223 1078,209"/>
+
+  <g class="cat">
+    <text class="large" x="169" y="214" text-anchor="middle">Category 1</text>
+    <text class="large" x="367" y="214" text-anchor="middle">Category 2</text>
+    <text class="large" x="565" y="214" text-anchor="middle">Category 3</text>
+    <text class="large" x="763" y="214" text-anchor="middle">Category 4</text>
+    <text class="large" x="961" y="214" text-anchor="middle">Category 5</text>
+  </g>
+
+</svg>
+
+</div>
+</div>
+</body>
+</html>
