@@ -130,8 +130,6 @@ Map.addLayer(
   0.75
 );
 
-Map.centerObject(ee.Geometry.Point([0, 0]), 2);
-
 // ---------- UI ----------
 var panel = ui.Panel({
   style: {
