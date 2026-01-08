@@ -47,16 +47,20 @@ for (var m = 1; m <= 12; m++) {
     .multiply(0.1); // mm
 
   // =====================================================
-  // ESTIMATE DEW POINT (°C) — CONTINUOUS, HUMIDITY-AWARE
+  // ESTIMATE DEW POINT (°C) — LOGARITHMIC ARIDITY RESPONSE
   // =====================================================
   // Td ≈ Tmin in humid climates
-  // Td drops sharply in arid climates
-  // Penalty ranges smoothly from 0–6 °C
-
+  // Dew-point depression increases logarithmically as precipitation decreases
+  // Penalty ranges smoothly from 0–12 °C
+  
   var tdC = tminC.subtract(
     pr_mm.expression(
-      'clamp(6 * exp(-0.02 * p), 0, 6)',
-      { p: pr_mm }
+      'clamp(a - b * log(p + 1), 0, 12)',
+      {
+        p: pr_mm,
+        a: 12,   // maximum penalty in extremely dry months
+        b: 2.5   // logarithmic sensitivity
+      }
     )
   );
 
