@@ -49,7 +49,7 @@ var coldCond = hottestC.lt(15).or(coldestC.lt(-20));
 var prImgs = [];
 for (var n = 1; n <= 12; n++) {
   var nn  = (n < 10 ? '0' + n : '' + n);
-  var pid = ASSET_PREFIX + 'CHELSA_pr_' + nn + '_1981-2010_V2-1_u16';
+  var pid = ASSET_PREFIX + 'CHELSA_ukesm1-0-ll_r1i1p1f1_w5e5_ssp585_pr_' + nn + '_2011_2040_norm';
 
   var rawPr = ee.Image(pid);
   var pr = rawPr
