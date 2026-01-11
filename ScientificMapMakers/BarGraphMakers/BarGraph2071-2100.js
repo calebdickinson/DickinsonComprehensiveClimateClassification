@@ -352,7 +352,7 @@ koppen.evaluate(function(k){
 // ====================================
 
 var PET_MEAN_ID = ASSET_PREFIX + 'CHELSA_pet_penman_mean_2071-2100';
-var SCALE_PET   = 1;  // projections = 1 (baseline would be 0.1)
+var SCALE_PET   = 0.1;
 
 // PET mean image (mm/month), masked
 var petMeanMmImg = ee.Image(PET_MEAN_ID)
