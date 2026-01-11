@@ -344,3 +344,31 @@ var koppen = ee.String(
 koppen.evaluate(function(k){
   print('Köppen climate:', k);
 });
+
+// ====================================
+// AI (P / PET) — numeric printout (POINT-BASED)
+// ====================================
+
+var PET_MEAN_ID = ASSET_PREFIX + 'CHELSA_pet_penman_mean_2071-2100';
+var SCALE_PET   = 1;  // projections = 1 (baseline would be 0.1)
+
+// PET mean image (mm/month), masked
+var petMeanMmImg = ee.Image(PET_MEAN_ID)
+  .updateMask(ee.Image(PET_MEAN_ID).neq(NODATA_U16))
+  .multiply(SCALE_PET)
+  .rename('pet_mm_month');
+
+// Sample PET mean at the point (mm/month)
+var petMeanAtPoint = atPoint(petMeanMmImg, 'pet_mm_month');
+
+// Annual PET (mm/year)
+var petAnnAtPoint = petMeanAtPoint.multiply(12);
+
+// AI = P / PET (dimensionless)
+var aiAtPoint = annualPr.divide(petAnnAtPoint);
+
+// Print (rounded for display only)
+print('Annual precipitation (mm):', annualPr.round());
+print('Annual PET (mm):', petAnnAtPoint.round());
+print('Aridity Index (P/PET):', aiAtPoint.multiply(1000).round().divide(1000));
+
