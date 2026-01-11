@@ -24,19 +24,19 @@ We omit the aridity score in climates that fall within subarctic, arctic, supera
 
 ### Coldest Month
 
-| Code | Name          | Temperature Range (Celsius) |
-|:-----|:--------------|:----------------------------|
-| H    | Hypercaneal   | 50 and above (hypothetical) |
-| X    | Uninhabitable | 40 - 50 (hypothetical)      |
-| Z    | Hyperequatorial | 30 - 40 (hypothetical)      |
-| A    | Equatorial    | 20 - 30                     |
-| B    | Tropical      | 10 - 20                     |
-| C    | Subtropical   | 0 - 10                      |
-| D    | Temperate     | -10 - 0                     |
-| E    | Continental   | -20 - -10                   |
-| F    | Subarctic     | -30 - -20                   |
-| G    | Arctic        | -40 - -30                   |
-| Y    | Superarctic   | Below -40                   |
+| Code | Name            | Temperature Range (Celsius) |
+|:-----|:----------------|:----------------------------|
+| H    | Hypercaneal     | 50 and above (hypothetical) |
+| X    | Uninhabitable   | 40 - 50      (hypothetical) |
+| Z    | Hyperequatorial | 30 - 40                     |
+| A    | Equatorial      | 20 - 30                     |
+| B    | Tropical        | 10 - 20                     |
+| C    | Subtropical     | 0 - 10                      |
+| D    | Temperate       | -10 - 0                     |
+| E    | Continental     | -20 - -10                   |
+| F    | Subarctic       | -30 - -20                   |
+| G    | Arctic          | -40 - -30                   |
+| Y    | Superarctic     | Below -40                   |
 
 ### Aridity
 
@@ -47,23 +47,23 @@ We omit the aridity score in climates that fall within subarctic, arctic, supera
 | W    | Monsoon       |
 | M    | Mediterranean |
 | S    | Semiarid      |
-| D    | Arid Desert   |
+| D    | Arid          |
 
 ### Hottest Month
 
-| Code | Name                        | Temperature Range (Celsius) |
-|:-----|:----------------------------|:----------------------------|
-| H    | Hypercaneal Summer          | 50 and above (hypothetical) |
-| X    | Extreme Hyperthermal Summer | 40 - 50 (hypothetical)      |
-| Z2   | Hyperthermal Summer         | 35 - 40                     |
-| Z1   | Scorching Hot Summer        | 30 - 35                     |
-| A2   | Very Hot Summer             | 25 - 30                     |
-| A1   | Hot Summer                  | 20 - 25                     |
-| B2   | Mild Summer                 | 15 - 20                     |
-| B1   | Cold Summer                 | 10 - 15                     |
-| C2   | Very Cold Summer            | 5 - 10                      |
-| C1   | Freezing Summer             | 0 - 5                       |
-| Y    | Frigid Summer               | Below 0                     |
+| Code | Name                | Temperature Range (Celsius) |
+|:-----|:--------------------|:----------------------------|
+| H    | Hypercaneal Summer  | 50 and above (hypothetical) |
+| X    | Hyperthermal Summer | 40 - 50                     |
+| Z2   | Scorching Summer    | 35 - 40                     |
+| Z1   | Very Hot Summer     | 30 - 35                     |
+| A2   | Hot Summer          | 25 - 30                     |
+| A1   | Warm Summer         | 20 - 25                     |
+| B2   | Cool Summer         | 15 - 20                     |
+| B1   | Cold Summer         | 10 - 15                     |
+| C2   | Very Cold Summer    | 5 - 10                      |
+| C1   | Freezing Summer     | 0 - 5                       |
+| Y    | Frigid Summer       | Below 0                     |
 
 
 # How to run the JavaScript Google Earth Engine files in this repository
