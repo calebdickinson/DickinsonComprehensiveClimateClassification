@@ -144,6 +144,20 @@ var clim = aridBase
   .where(coldCond, 7)
   .rename('climateClass');
 
+// ===========================
+// Special rule:
+// Temperate rainforest with Mediterranean percipitation seasonality ratio → reclassified as humid
+// ===========================
+
+// Driest-month precipitation (mm/month)
+var P_driest = prMonthly.min();
+
+// Apply override AFTER Mediterranean logic
+clim = clim.where(
+  clim.eq(3) // Mediterranean only
+    .and(P_driest.gte(PET_ann.divide(240))),
+  6          // Reclassify as Humid
+);
 
 // ===========================
 // Temperature class functions
