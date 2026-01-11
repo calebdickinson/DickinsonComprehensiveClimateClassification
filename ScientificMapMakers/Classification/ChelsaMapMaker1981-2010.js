@@ -42,19 +42,22 @@ var coldestC = monthlyMeans
   .select('monthlyMean')
   .rename('coldestC');
 
-// Precompute the "no aridity" cold condition once (same thresholds as your CHELSA code)
+// Dickinson “no-aridity due to cold” condition
 var coldCond = hottestC.lt(15).or(coldestC.lt(-20));
 
 // ---------- Monthly precipitation from CHELSA pr_u16 (0.1 → mm/month) ----------
 var prImgs = [];
 for (var n = 1; n <= 12; n++) {
-  var nn = (n < 10 ? '0' + n : '' + n);
+  var nn  = (n < 10 ? '0' + n : '' + n);
   var pid = ASSET_PREFIX + 'CHELSA_pr_' + nn + '_1981-2010_V2-1_u16';
-  var pr = ee.Image(pid)
-    .updateMask(ee.Image(pid).neq(NODATA_U16))
+
+  var rawPr = ee.Image(pid);
+  var pr = rawPr
+    .updateMask(rawPr.neq(NODATA_U16))
     .multiply(SCALE_PR)   // → mm/month
     .rename('pr')
     .set('month', n);
+
   prImgs.push(pr);
 }
 var prMonthly = ee.ImageCollection(prImgs);
@@ -71,51 +74,103 @@ var P_hs    = prMonthly.filter(ee.Filter.inList('month', [4,5,6,7,8,9]))
 var PET_ann = petMeanMm.multiply(12).rename('PET_ann');         // mm/year
 var AI      = P_ann.divide(PET_ann).rename('AI');               // UNEP-style ratio
 
-// Treat masked AI (from PET mask) as ocean
+// Treat masked AI (from PET mask) as ocean (like your working code)
 var oceanMask = AI.mask().not();
 
 // ---------- Latitude zones (±23.43594°) ----------
-var lat = ee.Image.pixelLonLat().select('latitude');
-var northMask = lat.gt(23.43594);
-var tropic    = lat.abs().lte(23.43594);
-var southMask = lat.lt(-23.43594);
+var pixelLat = ee.Image.pixelLonLat().select('latitude');
+var northMask = pixelLat.gt(23.43594);
+var tropic    = pixelLat.abs().lte(23.43594);
+var southMask = pixelLat.lt(-23.43594);
 
-// ---------- Base aridity classes (your thresholds) ----------
-var aridBase = ee.Image(6)       // start as Humid (6)
-  .where(AI.lte(0.01), 8)        // ocean-ish rule
-  .where(AI.lt(0.075), 5)        // Semihumid
-  .where(AI.lt(0.050), 2)        // Semiarid
-  .where(AI.lt(0.025), 1)        // Arid Desert
+// ---------- Base aridity classes (your thresholds from the “good” code) ----------
+// Start as Humid(6); special ocean-ish guard at AI<=0.01; then SH/S/Desert
+var aridBase = ee.Image(6)       // 6 = Humid
+  .where(AI.lte(0.01), 8)        // 8 = (we'll keep as "ocean-ish" placeholder; real oceans set later)
+  .where(AI.lt(0.075), 5)        // 5 = Semihumid
+  .where(AI.lt(0.050), 2)        // 2 = Semiarid
+  .where(AI.lt(0.025), 1)        // 1 = Arid Desert
   .rename('aridity');
 
 // ---------- HS ratio (Apr–Sep share) ----------
 var HS = P_hs.divide(P_ann).rename('HS_ratio');
 
-// ---------- Final class map — oceans included, cold wins ----------
+// ---------- Rolling 6-month precipitation dominance (global) ----------
+var prList = prMonthly.sort('month').toList(12);
+
+var sixMonthSums = ee.List.sequence(0, 11).map(function(start){
+  start = ee.Number(start);
+
+  var idx = ee.List.sequence(start, start.add(5))
+    .map(function(i){ return ee.Number(i).mod(12); });
+
+  return ee.ImageCollection(
+    idx.map(function(i){ return ee.Image(prList.get(i)); })
+  ).sum();
+});
+
+var P6ratio = ee.ImageCollection.fromImages(sixMonthSums)
+  .max()
+  .divide(P_ann)
+  .rename('P6ratio');
+
+// ---------- Final climate class: Med first, then global monsoon, then oceans, then cold ----------
 var clim = aridBase
-  .where(northMask.and(aridBase.neq(1)).and(aridBase.neq(8)).and(HS.gt(0.8)), 4) // Monsoon
-  .where(northMask.and(aridBase.neq(1)).and(aridBase.neq(8)).and(HS.lt(0.4)),  3) // Mediterranean
-  .where(tropic.and(aridBase.neq(1)).and(aridBase.neq(8)).and(HS.lt(0.2)),     4) // Monsoon
-  .where(tropic.and(aridBase.neq(1)).and(aridBase.neq(8)).and(HS.gt(0.8)),    4) // Monsoon
-  .where(southMask.and(aridBase.neq(1)).and(aridBase.neq(8)).and(HS.lt(0.2)),  4) // Monsoon
-  .where(southMask.and(aridBase.neq(1)).and(aridBase.neq(8)).and(HS.gt(0.6)), 3) // Mediterranean
-  // mark masked-AI areas (oceans) as class 8 (cyan)
+  // Mediterranean (unchanged logic)
+  .where(
+    northMask.and(HS.lt(0.4))
+      .or(southMask.and(HS.gt(0.6)))
+      .and(aridBase.neq(1))
+      .and(aridBase.neq(8)),
+    3
+  )
+
+  // Global monsoon: ≥80% precip in ANY 6 consecutive months,
+  // not Mediterranean, not Arid Desert, not ocean
+  .where(
+    P6ratio.gte(0.8)
+      .and(aridBase.neq(1))
+      .and(aridBase.neq(8))
+      .and(
+        northMask.and(HS.lt(0.4))
+          .or(southMask.and(HS.gt(0.6)))
+          .not()
+      ),
+    4
+  )
+
+
+  // Oceans, then cold override (unchanged)
   .where(oceanMask, 8)
-  // ensure cold "no aridity" wins even where AI is missing
   .where(coldCond, 7)
   .rename('climateClass');
+  
+// ===========================
+// Special rule:
+// Temperate rainforest with Mediterranean percipitation seasonality ratio → reclassified as humid
+// ===========================
+
+// Driest-month precipitation (mm/month)
+var P_driest = prMonthly.min();
+
+// Apply override AFTER Mediterranean logic
+clim = clim.where(
+  clim.eq(3) // Mediterranean only
+    .and(P_driest.gte(PET_ann.divide(240))),
+  6          // Reclassify as Humid
+);
 
 // ===========================
 // Temperature class functions
 // ===========================
 function classifySummer(tC) {
   return ee.Image.constant(0)
-    .where(tC.gte(40).and(tC.lt(50)),  9)  // Extreme Hyperthermal Summer
-    .where(tC.gte(35).and(tC.lt(40)),  8)  // Hyperthermal Summer
-    .where(tC.gte(30).and(tC.lt(35)),  7)  // Scorching Hot Summer
-    .where(tC.gte(25).and(tC.lt(30)),  6)  // Very Hot Summer
-    .where(tC.gte(20).and(tC.lt(25)),  5)  // Hot Summer
-    .where(tC.gte(15).and(tC.lt(20)),  4)  // Mild Summer
+    .where(tC.gte(40).and(tC.lt(50)),  9)  // Hyperthermal Summer
+    .where(tC.gte(35).and(tC.lt(40)),  8)  // Scorching Summer
+    .where(tC.gte(30).and(tC.lt(35)),  7)  // Very Hot Summer
+    .where(tC.gte(25).and(tC.lt(30)),  6)  // Hot Summer
+    .where(tC.gte(20).and(tC.lt(25)),  5)  // Warm Summer
+    .where(tC.gte(15).and(tC.lt(20)),  4)  // Cool Summer
     .where(tC.gte(10).and(tC.lt(15)),  3)  // Cold Summer
     .where(tC.gte(5).and(tC.lt(10)),   2)  // Very Cold Summer
     .where(tC.gte(0).and(tC.lt(5)),    1)  // Freezing Summer
@@ -124,8 +179,8 @@ function classifySummer(tC) {
 
 function classifyCold(tC) {
   return ee.Image.constant(0)
-    .where(tC.gte(30).and(tC.lt(40)),   9)  // Ultratropical
-    .where(tC.gte(20).and(tC.lt(30)),   8)  // Supertropical
+    .where(tC.gte(30).and(tC.lt(40)),   9)  // Hyperequatorial
+    .where(tC.gte(20).and(tC.lt(30)),   8)  // Equatorial
     .where(tC.gte(10).and(tC.lt(20)),   7)  // Tropical
     .where(tC.gte(0).and(tC.lt(10)),    6)  // Subtropical
     .where(tC.gte(-10).and(tC.lt(0)),   5)  // Temperate
@@ -148,21 +203,21 @@ var combined = coldClass
   .rename('combined');
   
 // === Adjustable digits ===
-var firstDigit = 4;   // Hundreds place
+var firstDigit = 6;   // Hundreds place
 var lastDigit  = 4;   // Ones place
 
 // === Build the color map dynamically ===
 var codeColorMap = {};
 
-codeColorMap[firstDigit * 100 + 10 + lastDigit] = "#ff0000";
-codeColorMap[firstDigit * 100 + 20 + lastDigit] = "#ff8800";
-codeColorMap[firstDigit * 100 + 30 + lastDigit] = "#ffff00";
-codeColorMap[firstDigit * 100 + 40 + lastDigit] = "#ff00ff";
-codeColorMap[firstDigit * 100 + 50 + lastDigit] = "#00ff00";
-codeColorMap[firstDigit * 100 + 60 + lastDigit] = "#008800";
-codeColorMap[firstDigit * 100 + 80 + lastDigit] = "#00ffff";
+codeColorMap[firstDigit * 100 + 10 + lastDigit] = "#ff0000"; // Arid ---------- ff0000
+codeColorMap[firstDigit * 100 + 20 + lastDigit] = "#ff8800"; // Semiarid ------ ff8800
+codeColorMap[firstDigit * 100 + 30 + lastDigit] = "#ffff00"; // Mediterranean - ffff00
+codeColorMap[firstDigit * 100 + 40 + lastDigit] = "#ff00ff"; // Monsoon ------- ff00ff
+codeColorMap[firstDigit * 100 + 50 + lastDigit] = "#00ff00"; // Semihumid ----- 00ff00
+codeColorMap[firstDigit * 100 + 60 + lastDigit] = "#008800"; // Humid --------- 008800
+codeColorMap[firstDigit * 100 + 80 + lastDigit] = "#00ffff"; // Ocean --------- 00ffff
 
-// codeColorMap[7 * 100 + 70 + 3] = "#000000";
+// codeColorMap[7 * 100 + 70 + 3] = "#000000"; // Polar/Subpolar/Alpine ------- 000000
 
 var keys    = Object.keys(codeColorMap);
 var codes   = keys.map(function(k){ return parseInt(k, 10); });
