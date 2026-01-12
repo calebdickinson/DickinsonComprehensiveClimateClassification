@@ -92,17 +92,17 @@ arid_codes = {
 }
 
 warm_codes = {
-    'H': 'Hypercaneal Summer',
-    'X': 'Hyperthermal Summer',
-    'z2': 'Scorching Summer',
-    'z1': 'Very Hot Summer',
-    'a2': 'Hot Summer',
-    'a1': 'Warm Summer',
-    'b2': 'Cool Summer',
-    'b1': 'Cold Summer',
-    'c2': 'Very Cold Summer',
-    'c1': 'Freezing Summer',
-    'Y': 'Frigid Summer',
+    'H': 'with Hypercaneal Summer',
+    'X': 'with Hyperthermal Summer',
+    'z2': 'with Scorching Summer',
+    'z1': 'with Very Hot Summer',
+    'a2': 'with Hot Summer',
+    'a1': 'with Warm Summer',
+    'b2': 'with Cool Summer',
+    'b1': 'with Cold Summer',
+    'c2': 'with Very Cold Summer',
+    'c1': 'with Freezing Summer',
+    'Y': 'with Frigid Summer',
 }
 
 # use the coldest end of cold temperatures
