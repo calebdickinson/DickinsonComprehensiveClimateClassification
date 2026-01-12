@@ -1,5 +1,4 @@
-// === Aridity Map (CHELSA v2.1, 1981–2010) — using YOUR uploaded assets ===
-// No ocean masking
+// === Aridity Map (CHELSA v2.1, 1981–2010)
 
 var PREFIX      = 'projects/ordinal-crowbar-459807-m2/assets/';  // ends with '/'
 var PET_MEAN_ID = PREFIX + 'CHELSA_pet_penman_mean_1981-2010_V2-1'; // adjust if needed
