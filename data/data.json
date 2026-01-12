@@ -71,7 +71,7 @@
     },
     "XX": {
         "code": "XX",
-        "name": "Uninhabitable Extreme Hyperthermal Summer",
+        "name": "Uninhabitable Hyperthermal Summer",
         "exists": false,
         "group": true,
         "go_to_humid": "False",
@@ -106,7 +106,7 @@
     },
     "ZH": {
         "code": "ZH",
-        "name": "Ultratropical Hypercaneal Summer",
+        "name": "Hyperequatorial Hypercaneal Summer",
         "exists": false,
         "group": true,
         "go_to_humid": "False",
@@ -141,7 +141,7 @@
     },
     "ZX": {
         "code": "ZX",
-        "name": "Ultratropical Extreme Hyperthermal Summer",
+        "name": "Hyperequatorial Hyperthermal Summer",
         "exists": true,
         "group": true,
         "go_to_humid": "False",
@@ -176,7 +176,7 @@
     },
     "Zz2": {
         "code": "Zz2",
-        "name": "Ultratropical Hyperthermal Summer",
+        "name": "Hyperequatorial Scorching Summer",
         "exists": true,
         "group": true,
         "go_to_humid": "Zhz2",
@@ -211,7 +211,7 @@
     },
     "Zz1": {
         "code": "Zz1",
-        "name": "Ultratropical Scorching Hot Summer",
+        "name": "Hyperequatorial Very Hot Summer",
         "exists": true,
         "group": true,
         "go_to_humid": "Zhz1",
@@ -246,7 +246,7 @@
     },
     "Zhz2": {
         "code": "Zhz2",
-        "name": "Ultratropical Humid Hyperthermal Summer",
+        "name": "Hyperequatorial Humid Scorching Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -281,7 +281,7 @@
     },
     "Zhz1": {
         "code": "Zhz1",
-        "name": "Ultratropical Humid Scorching Hot Summer",
+        "name": "Hyperequatorial Humid Very Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -316,7 +316,7 @@
     },
     "ZgX": {
         "code": "ZgX",
-        "name": "Ultratropical Semihumid Extreme Hyperthermal Summer",
+        "name": "Hyperequatorial Semihumid Hyperthermal Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -351,7 +351,7 @@
     },
     "Zgz2": {
         "code": "Zgz2",
-        "name": "Ultratropical Semihumid Hyperthermal Summer",
+        "name": "Hyperequatorial Semihumid Scorching Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -386,7 +386,7 @@
     },
     "Zgz1": {
         "code": "Zgz1",
-        "name": "Ultratropical Semihumid Scorching Hot Summer",
+        "name": "Hyperequatorial Semihumid Very Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -421,7 +421,7 @@
     },
     "Zwz2": {
         "code": "Zwz2",
-        "name": "Ultratropical Monsoon Hyperthermal Summer",
+        "name": "Hyperequatorial Monsoon Scorching Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -456,7 +456,7 @@
     },
     "Zwz1": {
         "code": "Zwz1",
-        "name": "Ultratropical Monsoon Scorching Hot Summer",
+        "name": "Hyperequatorial Monsoon Very Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -491,7 +491,7 @@
     },
     "Zmz2": {
         "code": "Zmz2",
-        "name": "Ultratropical Mediterranean Hyperthermal Summer",
+        "name": "Hyperequatorial Mediterranean Scorching Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -526,7 +526,7 @@
     },
     "Zmz1": {
         "code": "Zmz1",
-        "name": "Ultratropical Mediterranean Scorching Hot Summer",
+        "name": "Hyperequatorial Mediterranean Very Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -561,7 +561,7 @@
     },
     "ZsX": {
         "code": "ZsX",
-        "name": "Ultratropical Semiarid Extreme Hyperthermal Summer",
+        "name": "Hyperequatorial Semiarid Hyperthermal Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -596,7 +596,7 @@
     },
     "Zsz2": {
         "code": "Zsz2",
-        "name": "Ultratropical Semiarid Hyperthermal Summer",
+        "name": "Hyperequatorial Semiarid Scorching Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -631,7 +631,7 @@
     },
     "Zsz1": {
         "code": "Zsz1",
-        "name": "Ultratropical Semiarid Scorching Hot Summer",
+        "name": "Hyperequatorial Semiarid Very Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -666,7 +666,7 @@
     },
     "ZdX": {
         "code": "ZdX",
-        "name": "Ultratropical Arid Desert Extreme Hyperthermal Summer",
+        "name": "Hyperequatorial Arid Hyperthermal Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -701,7 +701,7 @@
     },
     "Zdz2": {
         "code": "Zdz2",
-        "name": "Ultratropical Arid Desert Hyperthermal Summer",
+        "name": "Hyperequatorial Arid Scorching Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -736,7 +736,7 @@
     },
     "Zdz1": {
         "code": "Zdz1",
-        "name": "Ultratropical Arid Desert Scorching Hot Summer",
+        "name": "Hyperequatorial Arid Very Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -771,7 +771,7 @@
     },
     "AH": {
         "code": "AH",
-        "name": "Supertropical Hypercaneal Summer",
+        "name": "Equatorial Hypercaneal Summer",
         "exists": false,
         "group": true,
         "go_to_humid": "False",
@@ -806,7 +806,7 @@
     },
     "AX": {
         "code": "AX",
-        "name": "Supertropical Extreme Hyperthermal Summer",
+        "name": "Equatorial Hyperthermal Summer",
         "exists": true,
         "group": true,
         "go_to_humid": "False",
@@ -841,7 +841,7 @@
     },
     "Az2": {
         "code": "Az2",
-        "name": "Supertropical Hyperthermal Summer",
+        "name": "Equatorial Scorching Summer",
         "exists": true,
         "group": true,
         "go_to_humid": "Ahz2",
@@ -876,7 +876,7 @@
     },
     "Az1": {
         "code": "Az1",
-        "name": "Supertropical Scorching Hot Summer",
+        "name": "Equatorial Very Hot Summer",
         "exists": true,
         "group": true,
         "go_to_humid": "Ahz1",
@@ -911,7 +911,7 @@
     },
     "Aa1": {
         "code": "Aa1",
-        "name": "Supertropical Hot Summer",
+        "name": "Equatorial Warm Summer",
         "exists": true,
         "group": true,
         "go_to_humid": "Aha1",
@@ -946,7 +946,7 @@
     },
     "Aa2": {
         "code": "Aa2",
-        "name": "Supertropical Very Hot Summer",
+        "name": "Equatorial Hot Summer",
         "exists": true,
         "group": true,
         "go_to_humid": "Aha2",
@@ -981,7 +981,7 @@
     },
     "Ahz2": {
         "code": "Ahz2",
-        "name": "Supertropical Humid Hyperthermal Summer",
+        "name": "Equatorial Humid Scorching Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -1016,7 +1016,7 @@
     },
     "Ahz1": {
         "code": "Ahz1",
-        "name": "Supertropical Humid Scorching Hot Summer",
+        "name": "Equatorial Humid Very Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -1051,7 +1051,7 @@
     },
     "Aha1": {
         "code": "Aha1",
-        "name": "Supertropical Humid Hot Summer",
+        "name": "Equatorial Humid Warm Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -1086,7 +1086,7 @@
     },
     "Aha2": {
         "code": "Aha2",
-        "name": "Supertropical Humid Very Hot Summer",
+        "name": "Equatorial Humid Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -1121,7 +1121,7 @@
     },
     "AgX": {
         "code": "AgX",
-        "name": "Supertropical Semihumid Extreme Hyperthermal Summer",
+        "name": "Equatorial Semihumid Hyperthermal Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -1156,7 +1156,7 @@
     },
     "Agz2": {
         "code": "Agz2",
-        "name": "Supertropical Semihumid Hyperthermal Summer",
+        "name": "Equatorial Semihumid Scorching Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -1191,7 +1191,7 @@
     },
     "Agz1": {
         "code": "Agz1",
-        "name": "Supertropical Semihumid Scorching Hot Summer",
+        "name": "Equatorial Semihumid Very Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -1226,7 +1226,7 @@
     },
     "Aga1": {
         "code": "Aga1",
-        "name": "Supertropical Semihumid Hot Summer",
+        "name": "Equatorial Semihumid Warm Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -1261,7 +1261,7 @@
     },
     "Aga2": {
         "code": "Aga2",
-        "name": "Supertropical Semihumid Very Hot Summer",
+        "name": "Equatorial Semihumid Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -1296,7 +1296,7 @@
     },
     "AwX": {
         "code": "AwX",
-        "name": "Supertropical Monsoon Extreme Hyperthermal Summer",
+        "name": "Equatorial Monsoon Hyperthermal Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -1331,7 +1331,7 @@
     },
     "Awz2": {
         "code": "Awz2",
-        "name": "Supertropical Monsoon Hyperthermal Summer",
+        "name": "Equatorial Monsoon Scorching Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -1366,7 +1366,7 @@
     },
     "Awz1": {
         "code": "Awz1",
-        "name": "Supertropical Monsoon Scorching Hot Summer",
+        "name": "Equatorial Monsoon Very Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -1401,7 +1401,7 @@
     },
     "Awa1": {
         "code": "Awa1",
-        "name": "Supertropical Monsoon Hot Summer",
+        "name": "Equatorial Monsoon Warm Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -1436,7 +1436,7 @@
     },
     "Awa2": {
         "code": "Awa2",
-        "name": "Supertropical Monsoon Very Hot Summer",
+        "name": "Equatorial Monsoon Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -1471,7 +1471,7 @@
     },
     "Amz2": {
         "code": "Amz2",
-        "name": "Supertropical Mediterranean Hyperthermal Summer",
+        "name": "Equatorial Mediterranean Scorching Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -1506,7 +1506,7 @@
     },
     "Amz1": {
         "code": "Amz1",
-        "name": "Supertropical Mediterranean Scorching Hot Summer",
+        "name": "Equatorial Mediterranean Very Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -1541,7 +1541,7 @@
     },
     "Ama1": {
         "code": "Ama1",
-        "name": "Supertropical Mediterranean Hot Summer",
+        "name": "Equatorial Mediterranean Warm Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -1576,7 +1576,7 @@
     },
     "Ama2": {
         "code": "Ama2",
-        "name": "Supertropical Mediterranean Very Hot Summer",
+        "name": "Equatorial Mediterranean Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -1611,7 +1611,7 @@
     },
     "AsX": {
         "code": "AsX",
-        "name": "Supertropical Semiarid Extreme Hyperthermal Summer",
+        "name": "Equatorial Semiarid Hyperthermal Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -1646,7 +1646,7 @@
     },
     "Asz2": {
         "code": "Asz2",
-        "name": "Supertropical Semiarid Hyperthermal Summer",
+        "name": "Equatorial Semiarid Scorching Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -1681,7 +1681,7 @@
     },
     "Asz1": {
         "code": "Asz1",
-        "name": "Supertropical Semiarid Scorching Hot Summer",
+        "name": "Equatorial Semiarid Very Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -1716,7 +1716,7 @@
     },
     "Asa1": {
         "code": "Asa1",
-        "name": "Supertropical Semiarid Hot Summer",
+        "name": "Equatorial Semiarid Warm Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -1751,7 +1751,7 @@
     },
     "Asa2": {
         "code": "Asa2",
-        "name": "Supertropical Semiarid Very Hot Summer",
+        "name": "Equatorial Semiarid Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -1786,7 +1786,7 @@
     },
     "AdX": {
         "code": "AdX",
-        "name": "Supertropical Arid Desert Extreme Hyperthermal Summer",
+        "name": "Equatorial Arid Hyperthermal Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -1821,7 +1821,7 @@
     },
     "Adz2": {
         "code": "Adz2",
-        "name": "Supertropical Arid Desert Hyperthermal Summer",
+        "name": "Equatorial Arid Scorching Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -1856,7 +1856,7 @@
     },
     "Adz1": {
         "code": "Adz1",
-        "name": "Supertropical Arid Desert Scorching Hot Summer",
+        "name": "Equatorial Arid Very Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -1891,7 +1891,7 @@
     },
     "Ada1": {
         "code": "Ada1",
-        "name": "Supertropical Arid Desert Hot Summer",
+        "name": "Equatorial Arid Warm Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -1926,7 +1926,7 @@
     },
     "Ada2": {
         "code": "Ada2",
-        "name": "Supertropical Arid Desert Very Hot Summer",
+        "name": "Equatorial Arid Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -1996,7 +1996,7 @@
     },
     "BX": {
         "code": "BX",
-        "name": "Tropical Extreme Hyperthermal Summer",
+        "name": "Tropical Hyperthermal Summer",
         "exists": true,
         "group": true,
         "go_to_humid": "False",
@@ -2031,7 +2031,7 @@
     },
     "Bz2": {
         "code": "Bz2",
-        "name": "Tropical Hyperthermal Summer",
+        "name": "Tropical Scorching Summer",
         "exists": true,
         "group": true,
         "go_to_humid": "Bhz2",
@@ -2066,7 +2066,7 @@
     },
     "Bz1": {
         "code": "Bz1",
-        "name": "Tropical Scorching Hot Summer",
+        "name": "Tropical Very Hot Summer",
         "exists": true,
         "group": true,
         "go_to_humid": "Bhz1",
@@ -2101,7 +2101,7 @@
     },
     "Ba1": {
         "code": "Ba1",
-        "name": "Tropical Hot Summer",
+        "name": "Tropical Warm Summer",
         "exists": true,
         "group": true,
         "go_to_humid": "Bha1",
@@ -2136,7 +2136,7 @@
     },
     "Ba2": {
         "code": "Ba2",
-        "name": "Tropical Very Hot Summer",
+        "name": "Tropical Hot Summer",
         "exists": true,
         "group": true,
         "go_to_humid": "Bha2",
@@ -2206,7 +2206,7 @@
     },
     "Bb2": {
         "code": "Bb2",
-        "name": "Tropical Mild Summer",
+        "name": "Tropical Cool Summer",
         "exists": true,
         "group": true,
         "go_to_humid": "Bhb2",
@@ -2241,7 +2241,7 @@
     },
     "Bhz2": {
         "code": "Bhz2",
-        "name": "Tropical Humid Hyperthermal Summer",
+        "name": "Tropical Humid Scorching Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -2276,7 +2276,7 @@
     },
     "Bhz1": {
         "code": "Bhz1",
-        "name": "Tropical Humid Scorching Hot Summer",
+        "name": "Tropical Humid Very Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -2311,7 +2311,7 @@
     },
     "Bha1": {
         "code": "Bha1",
-        "name": "Tropical Humid Hot Summer",
+        "name": "Tropical Humid Warm Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -2346,7 +2346,7 @@
     },
     "Bha2": {
         "code": "Bha2",
-        "name": "Tropical Humid Very Hot Summer",
+        "name": "Tropical Humid Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -2381,7 +2381,7 @@
     },
     "Bhb2": {
         "code": "Bhb2",
-        "name": "Tropical Humid Mild Summer",
+        "name": "Tropical Humid Cool Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -2416,7 +2416,7 @@
     },
     "BgX": {
         "code": "BgX",
-        "name": "Tropical Semihumid Extreme Hyperthermal Summer",
+        "name": "Tropical Semihumid Hyperthermal Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -2451,7 +2451,7 @@
     },
     "Bgz2": {
         "code": "Bgz2",
-        "name": "Tropical Semihumid Hyperthermal Summer",
+        "name": "Tropical Semihumid Scorching Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -2486,7 +2486,7 @@
     },
     "Bgz1": {
         "code": "Bgz1",
-        "name": "Tropical Semihumid Scorching Hot Summer",
+        "name": "Tropical Semihumid Very Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -2521,7 +2521,7 @@
     },
     "Bga1": {
         "code": "Bga1",
-        "name": "Tropical Semihumid Hot Summer",
+        "name": "Tropical Semihumid Warm Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -2556,7 +2556,7 @@
     },
     "Bga2": {
         "code": "Bga2",
-        "name": "Tropical Semihumid Very Hot Summer",
+        "name": "Tropical Semihumid Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -2591,7 +2591,7 @@
     },
     "Bgb2": {
         "code": "Bgb2",
-        "name": "Tropical Semihumid Mild Summer",
+        "name": "Tropical Semihumid Cool Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -2626,7 +2626,7 @@
     },
     "Bwz2": {
         "code": "Bwz2",
-        "name": "Tropical Monsoon Hyperthermal Summer",
+        "name": "Tropical Monsoon Scorching Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -2661,7 +2661,7 @@
     },
     "Bwz1": {
         "code": "Bwz1",
-        "name": "Tropical Monsoon Scorching Hot Summer",
+        "name": "Tropical Monsoon Very Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -2696,7 +2696,7 @@
     },
     "Bwa1": {
         "code": "Bwa1",
-        "name": "Tropical Monsoon Hot Summer",
+        "name": "Tropical Monsoon Warm Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -2731,7 +2731,7 @@
     },
     "Bwa2": {
         "code": "Bwa2",
-        "name": "Tropical Monsoon Very Hot Summer",
+        "name": "Tropical Monsoon Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -2766,7 +2766,7 @@
     },
     "Bwb2": {
         "code": "Bwb2",
-        "name": "Tropical Monsoon Mild Summer",
+        "name": "Tropical Monsoon Cool Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -2801,7 +2801,7 @@
     },
     "Bmz2": {
         "code": "Bmz2",
-        "name": "Tropical Mediterranean Hyperthermal Summer",
+        "name": "Tropical Mediterranean Scorching Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -2836,7 +2836,7 @@
     },
     "Bmz1": {
         "code": "Bmz1",
-        "name": "Tropical Mediterranean Scorching Hot Summer",
+        "name": "Tropical Mediterranean Very Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -2871,7 +2871,7 @@
     },
     "Bma1": {
         "code": "Bma1",
-        "name": "Tropical Mediterranean Hot Summer",
+        "name": "Tropical Mediterranean Warm Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -2906,7 +2906,7 @@
     },
     "Bma2": {
         "code": "Bma2",
-        "name": "Tropical Mediterranean Very Hot Summer",
+        "name": "Tropical Mediterranean Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -2941,7 +2941,7 @@
     },
     "Bmb2": {
         "code": "Bmb2",
-        "name": "Tropical Mediterranean Mild Summer",
+        "name": "Tropical Mediterranean Cool Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -2976,7 +2976,7 @@
     },
     "BsX": {
         "code": "BsX",
-        "name": "Tropical Semiarid Extreme Hyperthermal Summer",
+        "name": "Tropical Semiarid Hyperthermal Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -3011,7 +3011,7 @@
     },
     "Bsz2": {
         "code": "Bsz2",
-        "name": "Tropical Semiarid Hyperthermal Summer",
+        "name": "Tropical Semiarid Scorching Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -3046,7 +3046,7 @@
     },
     "Bsz1": {
         "code": "Bsz1",
-        "name": "Tropical Semiarid Scorching Hot Summer",
+        "name": "Tropical Semiarid Very Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -3081,7 +3081,7 @@
     },
     "Bsa1": {
         "code": "Bsa1",
-        "name": "Tropical Semiarid Hot Summer",
+        "name": "Tropical Semiarid Warm Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -3116,7 +3116,7 @@
     },
     "Bsa2": {
         "code": "Bsa2",
-        "name": "Tropical Semiarid Very Hot Summer",
+        "name": "Tropical Semiarid Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -3151,7 +3151,7 @@
     },
     "Bsb2": {
         "code": "Bsb2",
-        "name": "Tropical Semiarid Mild Summer",
+        "name": "Tropical Semiarid Cool Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -3186,7 +3186,7 @@
     },
     "BdX": {
         "code": "BdX",
-        "name": "Tropical Arid Desert Extreme Hyperthermal Summer",
+        "name": "Tropical Arid Hyperthermal Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -3221,7 +3221,7 @@
     },
     "Bdz2": {
         "code": "Bdz2",
-        "name": "Tropical Arid Desert Hyperthermal Summer",
+        "name": "Tropical Arid Scorching Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -3256,7 +3256,7 @@
     },
     "Bdz1": {
         "code": "Bdz1",
-        "name": "Tropical Arid Desert Scorching Hot Summer",
+        "name": "Tropical Arid Very Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -3291,7 +3291,7 @@
     },
     "Bda1": {
         "code": "Bda1",
-        "name": "Tropical Arid Desert Hot Summer",
+        "name": "Tropical Arid Warm Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -3326,7 +3326,7 @@
     },
     "Bda2": {
         "code": "Bda2",
-        "name": "Tropical Arid Desert Very Hot Summer",
+        "name": "Tropical Arid Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -3361,7 +3361,7 @@
     },
     "Bdb2": {
         "code": "Bdb2",
-        "name": "Tropical Arid Desert Mild Summer",
+        "name": "Tropical Arid Cool Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -3431,7 +3431,7 @@
     },
     "CX": {
         "code": "CX",
-        "name": "Subtropical Extreme Hyperthermal Summer",
+        "name": "Subtropical Hyperthermal Summer",
         "exists": true,
         "group": true,
         "go_to_humid": "False",
@@ -3466,7 +3466,7 @@
     },
     "Cz2": {
         "code": "Cz2",
-        "name": "Subtropical Hyperthermal Summer",
+        "name": "Subtropical Scorching Summer",
         "exists": true,
         "group": true,
         "go_to_humid": "Chz2",
@@ -3501,7 +3501,7 @@
     },
     "Cz1": {
         "code": "Cz1",
-        "name": "Subtropical Scorching Hot Summer",
+        "name": "Subtropical Very Hot Summer",
         "exists": true,
         "group": true,
         "go_to_humid": "Chz1",
@@ -3536,7 +3536,7 @@
     },
     "Ca1": {
         "code": "Ca1",
-        "name": "Subtropical Hot Summer",
+        "name": "Subtropical Warm Summer",
         "exists": true,
         "group": true,
         "go_to_humid": "Cha1",
@@ -3571,7 +3571,7 @@
     },
     "Ca2": {
         "code": "Ca2",
-        "name": "Subtropical Very Hot Summer",
+        "name": "Subtropical Hot Summer",
         "exists": true,
         "group": true,
         "go_to_humid": "Cha2",
@@ -3641,7 +3641,7 @@
     },
     "Cb2": {
         "code": "Cb2",
-        "name": "Subtropical Mild Summer",
+        "name": "Subtropical Cool Summer",
         "exists": true,
         "group": true,
         "go_to_humid": "Chb2",
@@ -3746,7 +3746,7 @@
     },
     "Chz2": {
         "code": "Chz2",
-        "name": "Subtropical Humid Hyperthermal Summer",
+        "name": "Subtropical Humid Scorching Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -3781,7 +3781,7 @@
     },
     "Chz1": {
         "code": "Chz1",
-        "name": "Subtropical Humid Scorching Hot Summer",
+        "name": "Subtropical Humid Very Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -3816,7 +3816,7 @@
     },
     "Cha1": {
         "code": "Cha1",
-        "name": "Subtropical Humid Hot Summer",
+        "name": "Subtropical Humid Warm Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -3851,7 +3851,7 @@
     },
     "Cha2": {
         "code": "Cha2",
-        "name": "Subtropical Humid Very Hot Summer",
+        "name": "Subtropical Humid Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -3886,7 +3886,7 @@
     },
     "Chb2": {
         "code": "Chb2",
-        "name": "Subtropical Humid Mild Summer",
+        "name": "Subtropical Humid Cool Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -3921,7 +3921,7 @@
     },
     "Cgz2": {
         "code": "Cgz2",
-        "name": "Subtropical Semihumid Hyperthermal Summer",
+        "name": "Subtropical Semihumid Scorching Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -3956,7 +3956,7 @@
     },
     "Cgz1": {
         "code": "Cgz1",
-        "name": "Subtropical Semihumid Scorching Hot Summer",
+        "name": "Subtropical Semihumid Very Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -3991,7 +3991,7 @@
     },
     "Cga1": {
         "code": "Cga1",
-        "name": "Subtropical Semihumid Hot Summer",
+        "name": "Subtropical Semihumid Warm Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -4026,7 +4026,7 @@
     },
     "Cga2": {
         "code": "Cga2",
-        "name": "Subtropical Semihumid Very Hot Summer",
+        "name": "Subtropical Semihumid Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -4061,7 +4061,7 @@
     },
     "Cgb2": {
         "code": "Cgb2",
-        "name": "Subtropical Semihumid Mild Summer",
+        "name": "Subtropical Semihumid Cool Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -4096,7 +4096,7 @@
     },
     "Cwz1": {
         "code": "Cwz1",
-        "name": "Subtropical Monsoon Scorching Hot Summer",
+        "name": "Subtropical Monsoon Very Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -4131,7 +4131,7 @@
     },
     "Cwa1": {
         "code": "Cwa1",
-        "name": "Subtropical Monsoon Hot Summer",
+        "name": "Subtropical Monsoon Warm Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -4166,7 +4166,7 @@
     },
     "Cwa2": {
         "code": "Cwa2",
-        "name": "Subtropical Monsoon Very Hot Summer",
+        "name": "Subtropical Monsoon Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -4201,7 +4201,7 @@
     },
     "Cwb2": {
         "code": "Cwb2",
-        "name": "Subtropical Monsoon Mild Summer",
+        "name": "Subtropical Monsoon Cool Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -4236,7 +4236,7 @@
     },
     "Cmz2": {
         "code": "Cmz2",
-        "name": "Subtropical Mediterranean Hyperthermal Summer",
+        "name": "Subtropical Mediterranean Scorching Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -4271,7 +4271,7 @@
     },
     "Cmz1": {
         "code": "Cmz1",
-        "name": "Subtropical Mediterranean Scorching Hot Summer",
+        "name": "Subtropical Mediterranean Very Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -4306,7 +4306,7 @@
     },
     "Cma1": {
         "code": "Cma1",
-        "name": "Subtropical Mediterranean Hot Summer",
+        "name": "Subtropical Mediterranean Warm Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -4341,7 +4341,7 @@
     },
     "Cma2": {
         "code": "Cma2",
-        "name": "Subtropical Mediterranean Very Hot Summer",
+        "name": "Subtropical Mediterranean Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -4376,7 +4376,7 @@
     },
     "Cmb2": {
         "code": "Cmb2",
-        "name": "Subtropical Mediterranean Mild Summer",
+        "name": "Subtropical Mediterranean Cool Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -4411,7 +4411,7 @@
     },
     "Csz2": {
         "code": "Csz2",
-        "name": "Subtropical Semiarid Hyperthermal Summer",
+        "name": "Subtropical Semiarid Scorching Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -4446,7 +4446,7 @@
     },
     "Csz1": {
         "code": "Csz1",
-        "name": "Subtropical Semiarid Scorching Hot Summer",
+        "name": "Subtropical Semiarid Very Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -4481,7 +4481,7 @@
     },
     "Csa1": {
         "code": "Csa1",
-        "name": "Subtropical Semiarid Hot Summer",
+        "name": "Subtropical Semiarid Warm Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -4516,7 +4516,7 @@
     },
     "Csa2": {
         "code": "Csa2",
-        "name": "Subtropical Semiarid Very Hot Summer",
+        "name": "Subtropical Semiarid Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -4551,7 +4551,7 @@
     },
     "Csb2": {
         "code": "Csb2",
-        "name": "Subtropical Semiarid Mild Summer",
+        "name": "Subtropical Semiarid Cool Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -4586,7 +4586,7 @@
     },
     "CdX": {
         "code": "CdX",
-        "name": "Subtropical Arid Desert Extreme Hyperthermal Summer",
+        "name": "Subtropical Arid Hyperthermal Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -4621,7 +4621,7 @@
     },
     "Cdz2": {
         "code": "Cdz2",
-        "name": "Subtropical Arid Desert Hyperthermal Summer",
+        "name": "Subtropical Arid Scorching Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -4656,7 +4656,7 @@
     },
     "Cdz1": {
         "code": "Cdz1",
-        "name": "Subtropical Arid Desert Scorching Hot Summer",
+        "name": "Subtropical Arid Very Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -4691,7 +4691,7 @@
     },
     "Cda1": {
         "code": "Cda1",
-        "name": "Subtropical Arid Desert Hot Summer",
+        "name": "Subtropical Arid Warm Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -4726,7 +4726,7 @@
     },
     "Cda2": {
         "code": "Cda2",
-        "name": "Subtropical Arid Desert Very Hot Summer",
+        "name": "Subtropical Arid Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -4761,7 +4761,7 @@
     },
     "Cdb2": {
         "code": "Cdb2",
-        "name": "Subtropical Arid Desert Mild Summer",
+        "name": "Subtropical Arid Cool Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -4831,7 +4831,7 @@
     },
     "DX": {
         "code": "DX",
-        "name": "Temperate Extreme Hyperthermal Summer",
+        "name": "Temperate Hyperthermal Summer",
         "exists": true,
         "group": true,
         "go_to_humid": "False",
@@ -4866,7 +4866,7 @@
     },
     "Dz2": {
         "code": "Dz2",
-        "name": "Temperate Hyperthermal Summer",
+        "name": "Temperate Scorching Summer",
         "exists": true,
         "group": true,
         "go_to_humid": "False",
@@ -4901,7 +4901,7 @@
     },
     "Dz1": {
         "code": "Dz1",
-        "name": "Temperate Scorching Hot Summer",
+        "name": "Temperate Very Hot Summer",
         "exists": true,
         "group": true,
         "go_to_humid": "Dhz1",
@@ -4971,7 +4971,7 @@
     },
     "Da1": {
         "code": "Da1",
-        "name": "Temperate Hot Summer",
+        "name": "Temperate Warm Summer",
         "exists": true,
         "group": true,
         "go_to_humid": "Dha1",
@@ -5006,7 +5006,7 @@
     },
     "Da2": {
         "code": "Da2",
-        "name": "Temperate Very Hot Summer",
+        "name": "Temperate Hot Summer",
         "exists": true,
         "group": true,
         "go_to_humid": "Dha2",
@@ -5076,7 +5076,7 @@
     },
     "Db2": {
         "code": "Db2",
-        "name": "Temperate Mild Summer",
+        "name": "Temperate Cool Summer",
         "exists": true,
         "group": true,
         "go_to_humid": "Dhb2",
@@ -5181,7 +5181,7 @@
     },
     "Dhz1": {
         "code": "Dhz1",
-        "name": "Temperate Humid Scorching Hot Summer",
+        "name": "Temperate Humid Very Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -5216,7 +5216,7 @@
     },
     "Dha1": {
         "code": "Dha1",
-        "name": "Temperate Humid Hot Summer",
+        "name": "Temperate Humid Warm Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -5251,7 +5251,7 @@
     },
     "Dha2": {
         "code": "Dha2",
-        "name": "Temperate Humid Very Hot Summer",
+        "name": "Temperate Humid Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -5286,7 +5286,7 @@
     },
     "Dhb2": {
         "code": "Dhb2",
-        "name": "Temperate Humid Mild Summer",
+        "name": "Temperate Humid Cool Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -5321,7 +5321,7 @@
     },
     "Dgz1": {
         "code": "Dgz1",
-        "name": "Temperate Semihumid Scorching Hot Summer",
+        "name": "Temperate Semihumid Very Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -5356,7 +5356,7 @@
     },
     "Dga1": {
         "code": "Dga1",
-        "name": "Temperate Semihumid Hot Summer",
+        "name": "Temperate Semihumid Warm Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -5391,7 +5391,7 @@
     },
     "Dga2": {
         "code": "Dga2",
-        "name": "Temperate Semihumid Very Hot Summer",
+        "name": "Temperate Semihumid Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -5426,7 +5426,7 @@
     },
     "Dgb2": {
         "code": "Dgb2",
-        "name": "Temperate Semihumid Mild Summer",
+        "name": "Temperate Semihumid Cool Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -5461,7 +5461,7 @@
     },
     "Dwz1": {
         "code": "Dwz1",
-        "name": "Temperate Monsoon Scorching Hot Summer",
+        "name": "Temperate Monsoon Very Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -5496,7 +5496,7 @@
     },
     "Dwa1": {
         "code": "Dwa1",
-        "name": "Temperate Monsoon Hot Summer",
+        "name": "Temperate Monsoon Warm Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -5531,7 +5531,7 @@
     },
     "Dwa2": {
         "code": "Dwa2",
-        "name": "Temperate Monsoon Very Hot Summer",
+        "name": "Temperate Monsoon Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -5566,7 +5566,7 @@
     },
     "Dwb2": {
         "code": "Dwb2",
-        "name": "Temperate Monsoon Mild Summer",
+        "name": "Temperate Monsoon Cool Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -5601,7 +5601,7 @@
     },
     "Dmz1": {
         "code": "Dmz1",
-        "name": "Temperate Mediterranean Scorching Hot Summer",
+        "name": "Temperate Mediterranean Very Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -5636,7 +5636,7 @@
     },
     "Dma1": {
         "code": "Dma1",
-        "name": "Temperate Mediterranean Hot Summer",
+        "name": "Temperate Mediterranean Warm Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -5671,7 +5671,7 @@
     },
     "Dma2": {
         "code": "Dma2",
-        "name": "Temperate Mediterranean Very Hot Summer",
+        "name": "Temperate Mediterranean Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -5706,7 +5706,7 @@
     },
     "Dmb2": {
         "code": "Dmb2",
-        "name": "Temperate Mediterranean Mild Summer",
+        "name": "Temperate Mediterranean Cool Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -5741,7 +5741,7 @@
     },
     "Dsz1": {
         "code": "Dsz1",
-        "name": "Temperate Semiarid Scorching Hot Summer",
+        "name": "Temperate Semiarid Very Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -5776,7 +5776,7 @@
     },
     "Dsa1": {
         "code": "Dsa1",
-        "name": "Temperate Semiarid Hot Summer",
+        "name": "Temperate Semiarid Warm Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -5811,7 +5811,7 @@
     },
     "Dsa2": {
         "code": "Dsa2",
-        "name": "Temperate Semiarid Very Hot Summer",
+        "name": "Temperate Semiarid Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -5846,7 +5846,7 @@
     },
     "Dsb2": {
         "code": "Dsb2",
-        "name": "Temperate Semiarid Mild Summer",
+        "name": "Temperate Semiarid Cool Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -5881,7 +5881,7 @@
     },
     "DdX": {
         "code": "DdX",
-        "name": "Temperate Arid Desert Extreme Hyperthermal Summer",
+        "name": "Temperate Arid Hyperthermal Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -5916,7 +5916,7 @@
     },
     "Ddz2": {
         "code": "Ddz2",
-        "name": "Temperate Arid Desert Hyperthermal Summer",
+        "name": "Temperate Arid Scorching Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -5951,7 +5951,7 @@
     },
     "Ddz1": {
         "code": "Ddz1",
-        "name": "Temperate Arid Desert Scorching Hot Summer",
+        "name": "Temperate Arid Very Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -5986,7 +5986,7 @@
     },
     "Dda1": {
         "code": "Dda1",
-        "name": "Temperate Arid Desert Hot Summer",
+        "name": "Temperate Arid Warm Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -6021,7 +6021,7 @@
     },
     "Dda2": {
         "code": "Dda2",
-        "name": "Temperate Arid Desert Very Hot Summer",
+        "name": "Temperate Arid Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -6056,7 +6056,7 @@
     },
     "Ddb2": {
         "code": "Ddb2",
-        "name": "Temperate Arid Desert Mild Summer",
+        "name": "Temperate Arid Cool Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -6126,7 +6126,7 @@
     },
     "EX": {
         "code": "EX",
-        "name": "Continental Extreme Hyperthermal Summer",
+        "name": "Continental Hyperthermal Summer",
         "exists": false,
         "group": true,
         "go_to_humid": "False",
@@ -6161,7 +6161,7 @@
     },
     "Ez2": {
         "code": "Ez2",
-        "name": "Continental Hyperthermal Summer",
+        "name": "Continental Scorching Summer",
         "exists": true,
         "group": true,
         "go_to_humid": "False",
@@ -6196,7 +6196,7 @@
     },
     "Ez1": {
         "code": "Ez1",
-        "name": "Continental Scorching Hot Summer",
+        "name": "Continental Very Hot Summer",
         "exists": true,
         "group": true,
         "go_to_humid": "Ehz1",
@@ -6266,7 +6266,7 @@
     },
     "Ea1": {
         "code": "Ea1",
-        "name": "Continental Hot Summer",
+        "name": "Continental Warm Summer",
         "exists": true,
         "group": true,
         "go_to_humid": "Eha1",
@@ -6301,7 +6301,7 @@
     },
     "Ea2": {
         "code": "Ea2",
-        "name": "Continental Very Hot Summer",
+        "name": "Continental Hot Summer",
         "exists": true,
         "group": true,
         "go_to_humid": "Eha2",
@@ -6371,7 +6371,7 @@
     },
     "Eb2": {
         "code": "Eb2",
-        "name": "Continental Mild Summer",
+        "name": "Continental Cool Summer",
         "exists": true,
         "group": true,
         "go_to_humid": "Ehb2",
@@ -6476,7 +6476,7 @@
     },
     "Ehz1": {
         "code": "Ehz1",
-        "name": "Continental Humid Scorching Hot Summer",
+        "name": "Continental Humid Very Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -6511,7 +6511,7 @@
     },
     "Eha1": {
         "code": "Eha1",
-        "name": "Continental Humid Hot Summer",
+        "name": "Continental Humid Warm Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -6546,7 +6546,7 @@
     },
     "Eha2": {
         "code": "Eha2",
-        "name": "Continental Humid Very Hot Summer",
+        "name": "Continental Humid Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -6581,7 +6581,7 @@
     },
     "Ehb2": {
         "code": "Ehb2",
-        "name": "Continental Humid Mild Summer",
+        "name": "Continental Humid Cool Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -6616,7 +6616,7 @@
     },
     "Egz1": {
         "code": "Egz1",
-        "name": "Continental Semihumid Scorching Hot Summer",
+        "name": "Continental Semihumid Very Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -6651,7 +6651,7 @@
     },
     "Ega1": {
         "code": "Ega1",
-        "name": "Continental Semihumid Hot Summer",
+        "name": "Continental Semihumid Warm Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -6686,7 +6686,7 @@
     },
     "Ega2": {
         "code": "Ega2",
-        "name": "Continental Semihumid Very Hot Summer",
+        "name": "Continental Semihumid Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -6721,7 +6721,7 @@
     },
     "Egb2": {
         "code": "Egb2",
-        "name": "Continental Semihumid Mild Summer",
+        "name": "Continental Semihumid Cool Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -6756,7 +6756,7 @@
     },
     "Ewz1": {
         "code": "Ewz1",
-        "name": "Continental Monsoon Scorching Hot Summer",
+        "name": "Continental Monsoon Very Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -6791,7 +6791,7 @@
     },
     "Ewa1": {
         "code": "Ewa1",
-        "name": "Continental Monsoon Hot Summer",
+        "name": "Continental Monsoon Warm Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -6826,7 +6826,7 @@
     },
     "Ewa2": {
         "code": "Ewa2",
-        "name": "Continental Monsoon Very Hot Summer",
+        "name": "Continental Monsoon Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -6861,7 +6861,7 @@
     },
     "Ewb2": {
         "code": "Ewb2",
-        "name": "Continental Monsoon Mild Summer",
+        "name": "Continental Monsoon Cool Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -6896,7 +6896,7 @@
     },
     "Ema1": {
         "code": "Ema1",
-        "name": "Continental Mediterranean Hot Summer",
+        "name": "Continental Mediterranean Warm Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -6931,7 +6931,7 @@
     },
     "Emb2": {
         "code": "Emb2",
-        "name": "Continental Mediterranean Mild Summer",
+        "name": "Continental Mediterranean Cool Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -6966,7 +6966,7 @@
     },
     "Esz1": {
         "code": "Esz1",
-        "name": "Continental Semiarid Scorching Hot Summer",
+        "name": "Continental Semiarid Very Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -7001,7 +7001,7 @@
     },
     "Esa1": {
         "code": "Esa1",
-        "name": "Continental Semiarid Hot Summer",
+        "name": "Continental Semiarid Warm Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -7036,7 +7036,7 @@
     },
     "Esa2": {
         "code": "Esa2",
-        "name": "Continental Semiarid Very Hot Summer",
+        "name": "Continental Semiarid Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -7071,7 +7071,7 @@
     },
     "Esb2": {
         "code": "Esb2",
-        "name": "Continental Semiarid Mild Summer",
+        "name": "Continental Semiarid Cool Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -7106,7 +7106,7 @@
     },
     "Edz2": {
         "code": "Edz2",
-        "name": "Continental Arid Desert Hyperthermal Summer",
+        "name": "Continental Arid Scorching Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -7141,7 +7141,7 @@
     },
     "Edz1": {
         "code": "Edz1",
-        "name": "Continental Arid Desert Scorching Hot Summer",
+        "name": "Continental Arid Very Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -7176,7 +7176,7 @@
     },
     "Eda1": {
         "code": "Eda1",
-        "name": "Continental Arid Desert Hot Summer",
+        "name": "Continental Arid Warm Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -7211,7 +7211,7 @@
     },
     "Eda2": {
         "code": "Eda2",
-        "name": "Continental Arid Desert Very Hot Summer",
+        "name": "Continental Arid Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -7246,7 +7246,7 @@
     },
     "Edb2": {
         "code": "Edb2",
-        "name": "Continental Arid Desert Mild Summer",
+        "name": "Continental Arid Cool Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -7316,7 +7316,7 @@
     },
     "FX": {
         "code": "FX",
-        "name": "Subarctic Extreme Hyperthermal Summer",
+        "name": "Subarctic Hyperthermal Summer",
         "exists": false,
         "group": false,
         "go_to_humid": "False",
@@ -7351,7 +7351,7 @@
     },
     "Fz2": {
         "code": "Fz2",
-        "name": "Subarctic Hyperthermal Summer",
+        "name": "Subarctic Scorching Summer",
         "exists": false,
         "group": false,
         "go_to_humid": "False",
@@ -7386,7 +7386,7 @@
     },
     "Fz1": {
         "code": "Fz1",
-        "name": "Subarctic Scorching Hot Summer",
+        "name": "Subarctic Very Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -7456,7 +7456,7 @@
     },
     "Fa1": {
         "code": "Fa1",
-        "name": "Subarctic Hot Summer",
+        "name": "Subarctic Warm Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -7491,7 +7491,7 @@
     },
     "Fa2": {
         "code": "Fa2",
-        "name": "Subarctic Very Hot Summer",
+        "name": "Subarctic Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -7561,7 +7561,7 @@
     },
     "Fb2": {
         "code": "Fb2",
-        "name": "Subarctic Mild Summer",
+        "name": "Subarctic Cool Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -7701,7 +7701,7 @@
     },
     "GX": {
         "code": "GX",
-        "name": "Arctic Extreme Hyperthermal Summer",
+        "name": "Arctic Hyperthermal Summer",
         "exists": false,
         "group": false,
         "go_to_humid": "False",
@@ -7736,7 +7736,7 @@
     },
     "Gz2": {
         "code": "Gz2",
-        "name": "Arctic Hyperthermal Summer",
+        "name": "Arctic Scorching Summer",
         "exists": false,
         "group": false,
         "go_to_humid": "False",
@@ -7771,7 +7771,7 @@
     },
     "Gz1": {
         "code": "Gz1",
-        "name": "Arctic Scorching Hot Summer",
+        "name": "Arctic Very Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -7841,7 +7841,7 @@
     },
     "Ga1": {
         "code": "Ga1",
-        "name": "Arctic Hot Summer",
+        "name": "Arctic Warm Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -7876,7 +7876,7 @@
     },
     "Ga2": {
         "code": "Ga2",
-        "name": "Arctic Very Hot Summer",
+        "name": "Arctic Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -7946,7 +7946,7 @@
     },
     "Gb2": {
         "code": "Gb2",
-        "name": "Arctic Mild Summer",
+        "name": "Arctic Cool Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -8086,7 +8086,7 @@
     },
     "YX": {
         "code": "YX",
-        "name": "Superarctic Extreme Hyperthermal Summer",
+        "name": "Superarctic Hyperthermal Summer",
         "exists": false,
         "group": false,
         "go_to_humid": "False",
@@ -8121,7 +8121,7 @@
     },
     "Yz2": {
         "code": "Yz2",
-        "name": "Superarctic Hyperthermal Summer",
+        "name": "Superarctic Scorching Summer",
         "exists": false,
         "group": false,
         "go_to_humid": "False",
@@ -8156,7 +8156,7 @@
     },
     "Yz1": {
         "code": "Yz1",
-        "name": "Superarctic Scorching Hot Summer",
+        "name": "Superarctic Very Hot Summer",
         "exists": false,
         "group": false,
         "go_to_humid": "False",
@@ -8226,7 +8226,7 @@
     },
     "Ya1": {
         "code": "Ya1",
-        "name": "Superarctic Hot Summer",
+        "name": "Superarctic Warm Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -8261,7 +8261,7 @@
     },
     "Ya2": {
         "code": "Ya2",
-        "name": "Superarctic Very Hot Summer",
+        "name": "Superarctic Hot Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",
@@ -8331,7 +8331,7 @@
     },
     "Yb2": {
         "code": "Yb2",
-        "name": "Superarctic Mild Summer",
+        "name": "Superarctic Cool Summer",
         "exists": true,
         "group": false,
         "go_to_humid": "False",

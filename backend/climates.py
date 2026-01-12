@@ -71,8 +71,8 @@ code_groups = {
 cold_codes = {
     'H': 'Hypercaneal',
     'X': 'Uninhabitable',
-    'Z': 'Ultratropical',
-    'A': 'Supertropical',
+    'Z': 'Hyperequatorial',
+    'A': 'Equatorial',
     'B': 'Tropical',
     'C': 'Subtropical',
     'D': 'Temperate',
@@ -88,17 +88,17 @@ arid_codes = {
     'w': 'Monsoon',
     'm': 'Mediterranean',
     's': 'Semiarid',
-    'd': 'Arid Desert'
+    'd': 'Arid'
 }
 
 warm_codes = {
     'H': 'Hypercaneal Summer',
-    'X': 'Extreme Hyperthermal Summer',
-    'z2': 'Hyperthermal Summer',
-    'z1': 'Scorching Hot Summer',
-    'a2': 'Very Hot Summer',
-    'a1': 'Hot Summer',
-    'b2': 'Mild Summer',
+    'X': 'Hyperthermal Summer',
+    'z2': 'Scorching Summer',
+    'z1': 'Very Hot Summer',
+    'a2': 'Hot Summer',
+    'a1': 'Warm Summer',
+    'b2': 'Cool Summer',
     'b1': 'Cold Summer',
     'c2': 'Very Cold Summer',
     'c1': 'Freezing Summer',
