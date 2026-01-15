@@ -1,4 +1,4 @@
-\documentclass[11pt]{article}
+\documentclass[12pt]{article}
 
 % =========================
 % Packages
@@ -34,15 +34,14 @@
 \begin{document}
 
 \begin{center}
-{\LARGE \textbf{The Dickinson Climate Classification}}\\
+{\LARGE \textbf{The Dickinson Climate Classification: A Taxonomic Thermal-Hydrological Partition of Climate State Space}}\\
 \vspace{0.25em}
 {\large Caleb Dickinson}
 \end{center}
 
-% ============================================================
 \section*{Abstract}
 
-We introduce the Dickinson Climate Classification, a thermodynamically grounded, species-independent framework for classifying past, present, future, and hypothetical climates. The system explicitly separates thermal constraints from hydrological constraints, restricts aridity classification to climates that are neither polar, subpolar, nor alpine, and defines all classification boundaries using evenly spaced physical thresholds. Importantly, the system does not attempt to define the absolute limits of life; instead, it partitions climate space into analytically useful categories for comparative and predictive analysis across Earth’s paleoclimates, present climates, projected future warming scenarios, and ecologically relevant climatic states that may never occur on Earth.
+This paper introduces the Dickinson Climate Classification, a thermodynamically grounded taxonomy that partitions climate state space using invariant thermal and hydrological metrics rather than biological criteria. Unlike widely used frameworks such as the Köppen classification or the UNEP aridity index, which are calibrated to present-day vegetation distributions or land-degradation objectives, the Dickinson system is formulated as a taxonomic division of climates relevant to physically possible life. Cold-month and warm-month thermal zones are defined using evenly spaced climatological temperature intervals, while moisture regimes are determined exclusively by dimensionless precipitation-to–potential evapotranspiration (P/PET) ratios and precipitation seasonality metrics, ensuring invariance under uniform rescaling of hydrological fluxes. The resulting framework provides a stable, internally consistent classification applicable across paleoclimates, present-day conditions, extreme future warming scenarios, and hypothetical climate states without requiring recalibration as biological tolerances evolve. This system is particularly suited for identifying emergent climates with no modern analogues and situating Earth’s climates within a broader, formally defined climate state space.
 
 \section*{Introduction}
 
@@ -98,6 +97,8 @@ stability across paleoclimatic variability, evolutionary adaptation, and
 extreme future warming scenarios, without requiring revision in response
 to newly discovered extremophiles or altered biological tolerances.
 
+This framework is particularly useful for tracking climate regime transitions under strong warming, identifying emergent climates with no present-day analogues, and comparing paleoclimatic and future states within a single, invariant classification scheme.
+
 The system is defined only over the subset of climate space in which life
 is physically possible. Outside this domain, the classification is not
 meaningful and no interpretation is implied.
@@ -110,6 +111,8 @@ monthly mean near-surface air temperatures, computed over a standard
 30-year normal period. For each location, the coldest-month mean
 temperature is taken as the minimum of the twelve climatological monthly
 means, while the warmest-month mean temperature is taken as the maximum.
+
+The thermal intervals are defined in uniform increments of 10 °C, with 5 °C resolution used for all but one warm-month category; the \textit{hyperthermal summer} category retains 10 °C spacing. These intervals correspond to simple fractional subdivisions of the 100 °C temperature span between the freezing and boiling points of water at standard pressure. The lowest and highest warm-month and cold-month thermal categories are unbounded. This choice provides a transparent and reproducible normalization scale without implying special physical thresholds at category boundaries.
 
 Cold-month thermal zones are assigned using the climatological
 coldest-month mean temperature ($T_{\min,\text{mean}}$), which provides a
@@ -175,12 +178,14 @@ CHELSA BIOCLIM+ v2.1 1981-2010 temperature fields.
 % ============================================================
 \section{Aridity Relevance and Aridity Regimes}
 
+Previous climate classification frameworks have implicitly recognized that aridity diagnostics are meaningful only within a limited thermal domain. In the Köppen system, aridity-based categories are restricted to climates whose climatological warmest-month mean temperature exceeds 10 °C, thereby excluding cold-summer and polar regimes in which surface processes are primarily energy-limited rather than moisture-limited. Similarly, the United Nations Environment Programme (UNEP) aridity framework distinguishes “cold” regions (annual PET < 400 mm) from aridity regimes defined by precipitation-to-evapotranspiration ratios, acknowledging that water-balance diagnostics lose interpretive value where evaporative demand is minimal.
+
 Moisture regime classification in the Dickinson system is applied only to
 climates in which aridity meaningfully structures surface–atmosphere
 interactions. Specifically, aridity diagnostics are evaluated only at
 locations where the climatological warmest-month mean temperature is at
 least $15^\circ$C and the climatological coldest-month mean temperature is
-at least $-30^\circ$C. These thresholds exclude climates in which potential evapotranspiration is minimal or poorly defined and precipitation seasonality does not exert a first-order control on climatic or ecological differentiation.
+at least $-30^\circ$C. Together, these warm- and cold-season constraints define a conservative thermal envelope within which aridity diagnostics exert first-order influence on climate differentiation. Outside this envelope, climates are classified exclusively on thermal grounds.
 
 At locations that do not satisfy these thermal screening criteria, no
 aridity regime is assigned and the moisture classification is not evaluated within the Dickinson framework.
@@ -217,13 +222,14 @@ index defines the following regimes:
 \]
 
 The Dickinson aridity thresholds are deliberately modified from the UNEP
-scheme to provide a more uniform partition of climate space and to avoid
-subdividing extremely arid regimes that are thermodynamically similar at
-large scales. In particular, UNEP's \textit{hyper-arid} environments are incorporated into a single arid category, while the other ranges are
+scheme to provide a more uniform partition of climate space. UNEP's \textit{hyper-arid} and \textit{arid} are incorporated into a single arid category, and each range is
 repartitioned to produce evenly spaced, analytically comparable moisture
 regimes. This design choice emphasizes thermodynamic consistency and
 stability across paleoclimates and future warming scenarios rather than
 land-degradation or development-focused classification objectives.
+
+\paragraph{Note}
+Aridity classifications are defined only for terrestrial climates and are not evaluated over the open ocean. Temperature-based classifications, by contrast, are defined globally.
 
 % ============================================================
 \section{Seasonality Diagnostics and Aridity Overrides}
@@ -236,8 +242,7 @@ precipitation fraction and a rolling six-month precipitation dominance
 metric.
 
 The high-sun precipitation fraction ($HS$) quantifies the proportion of
-annual precipitation occurring during the six highest-insolation months.
-Annual precipitation during this period ($P_{\text{hs}}$) is divided by
+annual precipitation occurring during the six highest-insolation months; April-September in the Northern Hemisphere extratropics, and October-March in the Southern Hemisphere extratropics. Annual precipitation during this period ($P_{\text{hs}}$) is divided by
 total annual precipitation ($P_{\text{ann}}$) to yield
 \[
 HS = \frac{P_{\text{hs}}}{P_{\text{ann}}}.
@@ -257,15 +262,11 @@ precipitation occurs within a contiguous portion of the year, regardless
 of its seasonal timing.
 
 These seasonality diagnostics are applied as overrides to the baseline
-aridity regimes to distinguish Mediterranean, monsoonal, and temperate
-rainforest climates.
+aridity regimes to distinguish Mediterranean and monsoonal climates.
 
 Mediterranean climates are identified as non-arid regimes
 ($AI > 0.25$) exhibiting strong winter precipitation dominance in the
-extratropics. In the Northern Hemisphere extratropics, climates with
-$HS < 0.4$ are classified as Mediterranean, while in the Southern
-Hemisphere extratropics, the corresponding threshold is $HS > 0.6$,
-reflecting the inversion of seasonal insolation between hemispheres.
+extratropics ($HS < 0.4$).
 
 Monsoonal climates are identified using the rolling six-month precipitation
 dominance metric. Climates in which at least 80\% of annual precipitation
@@ -337,11 +338,8 @@ Polar / Subpolar / Alpine};
 % =====================================================
 
 \node[decision, below=of aridcheck] (medcheck)
-{$(\phi > +\varepsilon \text{ and }
- HS < 0.4)?$\\
-$\text{ OR }$\\
-$(\phi < -\varepsilon \text{ and }
- HS > 0.6)?$};
+{$(\phi > +\varepsilon \text{ or } \phi < -\varepsilon)$\\
+\text{and} $HS < 0.4$};
 
 \draw[arrow] (aridcheck) -- node[left,font=\small]{No} (medcheck);
 
