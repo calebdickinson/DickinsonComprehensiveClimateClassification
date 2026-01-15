@@ -15,6 +15,7 @@
 \usepackage{tikz}
 \usetikzlibrary{positioning,arrows.meta}
 \usepackage{graphicx}
+\usepackage{placeins}
 
 \hypersetup{
   colorlinks=true,
@@ -141,6 +142,17 @@ represent thermodynamic regimes rather than ecological boundaries. As a
 result, the classification remains applicable across paleoclimates,
 projected future climates, and hypothetical climate states without
 requiring recalibration to present-day biological distributions.
+
+\paragraph{Note on hypercanes.}
+The term \emph{hypercaneal} is used here strictly as a thermal descriptor for extremely hot
+climatological monthly mean temperatures. Hypercaneal climates or hypercaneal summers should be
+understood as a \emph{necessary but not sufficient} condition for the formation of hypercane
+vortices. While such extreme thermal states are a prerequisite, hypercane development also
+depends on additional dynamical and oceanic factors—such as sea-surface temperature structure,
+atmospheric stratification, and ventilation—that are not represented in a monthly-mean thermal
+classification. Accordingly, classification as hypercaneal does not imply the existence,
+frequency, or persistence of hypercanes; it indicates only that the thermal prerequisite is
+satisfied within the broader climate state space.
 
 \begin{figure}[htbp]
 \centering
@@ -275,12 +287,10 @@ throughout the year. For climates initially identified as Mediterranean,
 the minimum monthly precipitation ($P_{\text{driest}}$) is compared to
 annual potential evapotranspiration. If
 \[
-P_{\text{driest}} \ge \frac{PET_{\text{ann}}}{12 \cdot 20},
+P_{\text{driest}} \ge \frac{PET_{\text{ann}}}{24},
 \]
 the climate is reclassified as humid. This criterion corresponds to a
-minimum monthly precipitation of at least 5\% of mean monthly PET,
-expressed in a dimensionally explicit form to avoid reliance on opaque
-constants.
+minimum monthly precipitation of at least 50\% of mean monthly PET.
 
 \begin{figure}[htp]
 \centering
@@ -344,7 +354,7 @@ $(\phi < -\varepsilon \text{ and }
 \draw[arrow] (aridcheck) -- node[left,font=\small]{No} (medcheck);
 
 \node[decision, right=of medcheck] (medoverride)
-{$P_{\text{driest}} < \dfrac{PET_{\text{ann}}}{12 \cdot 20}$?};
+{$P_{\text{driest}} < \dfrac{PET_{\text{ann}}}{24}$?};
 
 \node[outcome, below=of medoverride] (humid)
 {Humid (h)};
@@ -416,13 +426,14 @@ defined as latitudes poleward of the tropics (i.e., exceeding the Earth's axial 
 \centering
 \includegraphics[width=\textwidth]{aridity_legend}
 \caption{
-Global distribution of cold-month thermal zones under the
+Global distribution of aridity zones under the
 Dickinson Climate Classification, based on 1981--2010 climatological normals.
 Data were processed and plotted in Google Earth Engine (GEE) using
 CHELSA BIOCLIM+ v2.1 1981-2010 precipitation and Penman-Monteith PET fields.
 }
 \label{fig:example}
 \end{figure}
+\FloatBarrier
 
 % ============================================================
 \section{Warm-Month Thermal Zones}
