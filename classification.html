@@ -9,45 +9,88 @@
     gtag('js', new Date());
     gtag('config', 'G-L6C1HZ2LBZ');
   </script>
+
   <meta charset="UTF-8">
   <link rel="stylesheet" href="css/styles.css">
+
   <style>
-      @media screen and (min-width: 1024px) {
-        main img {
-          max-width: 50vw;
-        }
+    @media screen and (min-width: 1024px) {
+      main img {
+        max-width: 50vw;
       }
+    }
+
+    /* ---- PDF handling: desktop embed, mobile link ---- */
+    .pdf-mobile-link {
+      display: none;
+      text-align: center;
+      font-size: 1.2rem;
+      margin: 1rem 0;
+    }
+
+    @media (max-width: 768px) {
+      .pdf-embed {
+        display: none;
+      }
+      .pdf-mobile-link {
+        display: block;
+      }
+    }
   </style>
-    <title>"Classification"</title>
+
+  <title>"Classification"</title>
 </head>
-<body>
+
+<body class="about-page">
+
   <div id="header">
     <h1>The Dickinson Comprehensive Climate Classification System</h1>
   </div>
+
   <nav>
     <a href="home.html">Home</a>
     <a href="classification.html">Classification</a>
     <a href="maps.html">Maps</a>
     <a href="about.html">About</a>
   </nav>
+
   <main>
+
     <p>
-      The following paper can be cited as:<br>
-      Dickinson, C. (2026).<br>
-      <em>The Dickinson Climate Classification: A Taxonomic Thermal-Hydrological Partition of Climate State Space</em> [Preprint].<br>
-      Zenodo. <a href="https://doi.org/10.5281/zenodo.18264771">https://doi.org/10.5281/zenodo.18264771</a>
+      <strong>Suggested citation:</strong><br>
+      Dickinson, C. (2026).
+      <em>The Dickinson Climate Classification: A Taxonomic Thermal–Hydrological Partition of Climate State Space</em>
+      [Preprint]. Zenodo.
+      <a href="https://doi.org/10.5281/zenodo.18264771">
+        https://doi.org/10.5281/zenodo.18264771
+      </a>
     </p>
-    <embed
-    src="Dickinson_climates.pdf"
-    type="application/pdf"
-    width="100%"
-    height="1000px"
-    />
+
+    <!-- Desktop PDF embed -->
+    <div class="pdf-embed">
+      <embed
+        src="Dickinson_climates.pdf"
+        type="application/pdf"
+        width="100%"
+        height="1000px"
+      />
+    </div>
+
+    <!-- Mobile PDF link -->
+    <div class="pdf-mobile-link">
+      <a href="Dickinson_climates.pdf" target="_blank">
+        Open paper (PDF)
+      </a>
+    </div>
+
     <h1>Supplemental Figure 1 of 2: Dickinson Temperature Classification</h1>
     <img src="images/temperature.png" alt="Formal temperature classification of climates">
+
     <h1>Supplemental Figure 2 of 2: Dickinson Aridity Index (modified from UNEP aridity index)</h1>
     <img src="images/aridityone.png" alt="Formal aridity classification of climates part one">
+
     <br><br><br>
+
   </main>
 </body>
 </html>
