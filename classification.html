@@ -31,34 +31,12 @@
     <a href="about.html">About</a>
   </nav>
   <main>
-    <!-- PDF container -->
-    <div id="viewer"></div>
-
-    <!-- PDF.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-
-    <!-- Render PDF -->
-    <script>
-    const url = "Dickinson_climates.pdf";
-
-    pdfjsLib.getDocument(url).promise.then(pdf => {
-      const viewer = document.getElementById("viewer");
-
-      for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
-        pdf.getPage(pageNum).then(page => {
-          const viewport = page.getViewport({ scale: 1.4 });
-          const canvas = document.createElement("canvas");
-          const ctx = canvas.getContext("2d");
-
-          canvas.width = viewport.width;
-          canvas.height = viewport.height;
-
-          page.render({ canvasContext: ctx, viewport });
-          viewer.appendChild(canvas);
-        });
-      }
-    });
-  </script>
+    <embed
+    src="Dickinson_climates.pdf"
+    type="application/pdf"
+    width="100%"
+    height="1000px"
+    />
     <h1>Supplemental Figure 1 of 2: Dickinson Temperature Classification</h1>
     <img src="images/temperature.png" alt="Formal temperature classification of climates">
     <h1>Supplemental Figure 2 of 2: Dickinson Aridity Index (modified from UNEP aridity index)</h1>
