@@ -154,7 +154,7 @@ The cold-month thermal intervals are defined in uniform increments of 10 °C, wi
 
 The choice of thermal binning reflects a balance between physical
 interpretability and classification stability, with asymmetric resolution
-applied to cold- and warm-season metrics. Cold-month thermal zones are
+applied to cold- and warm-month metrics. Cold-month thermal zones are
 defined using uniform 10~$^\circ$C intervals, as winter temperature
 primarily acts as a threshold constraint on surface processes, cryospheric
 state, and large-scale habitability. Differences smaller than this scale do
@@ -162,9 +162,9 @@ not typically distinguish fundamentally different winter regimes at the
 global level, while coarser intervals would collapse thermodynamically
 distinct cold states.
 
-By contrast, the warm-month thermal axis is partitioned at higher resolution, using 5~$^\circ$C intervals when a given temperature occurs as a warmest-month mean rather than as a coldest-month mean, across the range of monthly mean temperatures from $\geq 0$ to $<40~^\circ$C. This reflects the continuous and highly sensitive influence of summer warmth on surface energy balance, evapotranspiration, and heat stress. Accordingly, cold-month thermal classes C, B, A, and Z—defined by their coldest-month means—are each subdivided into paired warm-season categories when their warmest-month means fall within these same numerical temperature intervals (e.g., C into c$_1$ and c$_2$, B into b$_1$ and b$_2$, with analogous subdivisions for A and Z).
+By contrast, the warm-month thermal axis is partitioned at higher resolution, using 5~$^\circ$C intervals when a given temperature occurs as a warmest-month mean rather than as a coldest-month mean, across the range of monthly mean temperatures from $\geq 0$ to $<40~^\circ$C. This reflects the continuous and highly sensitive influence of summer warmth on surface energy balance, evapotranspiration, and heat stress. Accordingly, cold-month thermal classes C, B, A, and Z—defined by their coldest-month means—are each subdivided into paired warm-month categories when their warmest-month means fall within these same numerical temperature intervals (e.g., C into c$_1$ and c$_2$, B into b$_1$ and b$_2$, with analogous subdivisions for A and Z).
 
-This asymmetric treatment follows long-standing precedent in climate classification. In the Köppen system, for example, the temperature spacing between winter-regime isotherms is substantially broader than that separating summer heat regimes (Köppen, 1884). The combined use of uniform 10~$^\circ$C cold-month bins and finer warm-season subdivisions therefore produces a transparent, scale-consistent partition of climate space that remains robust across paleoclimates, projected future warming scenarios, and hypothetical climate states.
+This asymmetric treatment follows long-standing precedent in climate classification. In the Köppen system, for example, the temperature spacing between winter-regime isotherms is substantially broader than that separating summer heat regimes (Köppen, 1884). The combined use of uniform 10~$^\circ$C cold-month bins and finer warm-month subdivisions therefore produces a transparent, scale-consistent partition of climate space that remains robust across paleoclimates, projected future warming scenarios, and hypothetical climate states.
 
 Cold-month thermal zones are assigned using the climatological
 coldest-month mean temperature ($T_{\min,\text{mean}}$), which provides a
@@ -295,14 +295,14 @@ CHELSA BIOCLIM+ v2.1 1981-2010 temperature fields (Karger et al., 2017; Brun et 
 % ============================================================
 \section{Aridity Relevance and Aridity Regimes}
 
-Previous climate classification frameworks have implicitly recognized that aridity diagnostics are meaningful only within a limited thermal domain. In the Köppen system (Köppen, 1884), aridity-based categories are restricted to climates whose climatological warmest-month mean temperature exceeds 10 °C, thereby excluding cold-summer and polar regimes in which surface processes are primarily energy-limited rather than moisture-limited. Similarly, the United Nations Environment Programme (UNEP) aridity framework (UNEP, 1992) distinguishes “cold” regions (annual PET $< 400\,\mathrm{mm}$) from aridity regimes defined by precipitation-to-evapotranspiration ratios, acknowledging that water-balance diagnostics lose interpretive value where evaporative demand is minimal.
+Previous climate classification frameworks have implicitly recognized that aridity diagnostics are meaningful only within a limited thermal domain. In the Köppen system (Köppen, 1884), aridity-based categories are restricted to climates whose climatological warmest-month mean temperature exceeds 10 °C, thereby excluding cold-summer and polar regimes in which surface processes are primarily energy-limited rather than moisture-limited. Similarly, the United Nations Environment Programme (UNEP) aridity framework (UNEP, 1992) distinguishes “cold” regions (annual PET $< 400\,\mathrm{mm}$) from aridity regimes defined by P/PET ratios, acknowledging that water-balance diagnostics lose interpretive value where evaporative demand is minimal.
 
 Moisture regime classification in the Dickinson system is applied only to
 climates in which aridity meaningfully structures surface–atmosphere
 interactions. Specifically, aridity diagnostics are evaluated only at
 locations where the climatological warmest-month mean temperature is at
 least $15^\circ$C and the climatological coldest-month mean temperature is
-at least $-30^\circ$C. Together, these warm- and cold-season constraints define a conservative thermal envelope within which aridity diagnostics exert first-order influence on climate differentiation. Outside this envelope, climates are classified exclusively on thermal grounds.
+at least $-30^\circ$C. Together, these warm- and cold-month constraints define a conservative thermal envelope within which aridity diagnostics exert first-order influence on climate differentiation. Outside this envelope, climates are classified exclusively on thermal grounds.
 
 At locations that do not satisfy these thermal screening criteria, no
 aridity regime is assigned and the moisture classification is not evaluated within the Dickinson framework.
@@ -319,10 +319,10 @@ Based on the annual aridity index, climates are assigned to one of four
 baseline aridity regimes in the Dickinson classification:
 \[
 \begin{array}{ll}
-\text{Humid (h)}        & AI > 0.75 \\
-\text{Semihumid (g)}    & 0.50 < AI \le 0.75 \\
-\text{Semiarid (s)}     & 0.25 < AI \le 0.50 \\
-\text{Arid Desert (d)}  & AI \le 0.25
+\text{Humid (h)}        & AI \ge 0.75 \\
+\text{Semihumid (g)}    & 0.50 \le AI < 0.75 \\
+\text{Semiarid (s)}     & 0.25 \le AI < 0.50 \\
+\text{Arid Desert (d)}  & AI < 0.25
 \end{array}
 \]
 
@@ -330,11 +330,11 @@ For comparison, the United Nations Environment Programme (UNEP) aridity
 index defines the following regimes:
 \[
 \begin{array}{ll}
-\text{Humid}            & AI > 0.65 \\
-\text{Dry subhumid}     & 0.50 < AI \le 0.65 \\
-\text{Semi-arid}        & 0.20 < AI \le 0.50 \\
-\text{Arid}             & 0.05 < AI \le 0.20 \\
-\text{Hyper-arid}       & AI \le 0.05
+\text{Humid}            & AI \ge 0.65 \\
+\text{Dry subhumid}     & 0.50 \le AI < 0.65 \\
+\text{Semi-arid}        & 0.20 \le AI < 0.50 \\
+\text{Arid}             & 0.05 \le AI < 0.20 \\
+\text{Hyper-arid}       & AI < 0.05
 \end{array}
 \]
 
@@ -382,7 +382,7 @@ These seasonality diagnostics are applied as overrides to the baseline
 aridity regimes to distinguish Mediterranean and monsoonal climates.
 
 Mediterranean climates are identified as non-arid regimes
-($AI > 0.25$) exhibiting strong winter precipitation dominance in the
+($AI \ge 0.25$) exhibiting strong winter precipitation dominance in the
 extratropics ($HS < 0.4$).
 
 Monsoonal climates are identified using the rolling six-month precipitation
