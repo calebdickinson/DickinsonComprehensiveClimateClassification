@@ -51,8 +51,10 @@ This paper introduces the Dickinson Climate Classification, a thermodynamically 
 This manuscript presents a formal climate classification framework.
 It is not a predictive climate model, attribution study, or impact assessment.
 The system is intended as a taxonomic and analytical tool for
-comparing climate regimes across paleoclimates, present conditions,
-future projections, and hypothetical climate states.
+comparing climate regimes across paleoclimates, future warming
+scenarios, and ecologically relevant climatic states that may never be
+realized on Earth, without requiring revision of thresholds or category
+definitions.
 
 \section*{Data and Implementation Notes}
 
@@ -63,15 +65,11 @@ The classification logic is deterministic and reproducible.
 \section*{Introduction}
 
 The Dickinson Climate Classification differs fundamentally in both purpose
-and structure from widely used systems such as the Köppen classification (Köppen, 1884) or the UNEP aridity index (UNEP, 1992). The Köppen system is explicitly ecological and biogeographic, with classification thresholds calibrated to the present-day distribution of vegetation and climatic analogues on Earth. The UNEP aridity index, by contrast, is development-oriented, designed primarily to assess land
+and structure from widely used systems. The Köppen system (Köppen, 1884) is explicitly ecological and biogeographic, with classification thresholds calibrated to the present-day distribution of vegetation and climatic analogues on Earth. The UNEP aridity index (UNEP, 1992) is development-oriented, designed primarily to assess land
 degradation and desertification risk rather than to partition climate
 space as a whole. In contrast, the Dickinson classification is formulated
 as a thermodynamic partition of climate state space, independent of
-biological distributions and socioeconomic objectives. This distinction
-permits consistent classification across paleoclimates, future warming
-scenarios, and ecologically relevant climatic states that may never be
-realized on Earth, without requiring revision of thresholds or category
-definitions.
+biological distributions and socioeconomic objectives.
 
 The Dickinson system conceptualizes Earth’s climates as a subset of a broader, hypothetical climate space. Let $\mathcal{C}$ denote the set of all climate regimes in which life is physically possible. Observed Earth climates occupy a proper subset of $\mathcal{C}$, but the classification itself is defined over the full domain. This framing does not assert that all regions of climate space described by the system are
 realizable on Earth; rather, it establishes a formal state space within
@@ -79,24 +77,13 @@ which Earth’s past, present, and future climates may be situated,
 compared, and extended under paleoclimatic and projected boundary
 conditions.
 
-Classification thresholds in the Dickinson system are deliberately
-independent of the present-day distribution limits of biological taxa.
 Biological tolerances are not fixed: they shift over evolutionary time as
 lineages diverge from common ancestors and adapt to changing environmental
 conditions. Systems calibrated to contemporary species distributions
 therefore embed historical contingency and lose validity when applied to
-deep-time climates or extreme future scenarios. By avoiding taxon-based
-thresholds, the Dickinson classification remains stable under evolutionary
-adaptation and biological turnover.
+deep-time climates or extreme future scenarios. Thus, classification thresholds in the Dickinson system are deliberately independent of the present-day distribution limits of biological taxa.
 
-Aridity regimes within the system are defined exclusively using
-dimensionless ratios of hydrological quantities. No aridity boundary is
-specified in terms of absolute precipitation totals, absolute
-evapotranspiration totals, or fixed millimeter thresholds. As a result,
-aridity classification is invariant under uniform rescaling of hydrological
-fluxes and depends solely on relative water balance. This property ensures
-internal consistency across climates with vastly different absolute
-hydrological magnitudes.
+Millimeter-based precipitation thresholds do not represent equivalent hydrological constraints across climates with different thermal regimes: a fixed precipitation total implies fundamentally different surface water availability in cold versus hot environments due to large differences in evaporative demand. For this reason, aridity regimes in the Dickinson system are defined exclusively using dimensionless ratios of hydrological quantities. No aridity boundary is specified in terms of absolute precipitation totals, absolute evapotranspiration totals, or fixed millimeter thresholds. Instead, aridity classification depends solely on relative water balance and is therefore invariant under uniform rescaling of hydrological fluxes.
 
 The Dickinson classification is intended as a partition of continuous
 climate space rather than as a definition of habitability limits. It does
@@ -110,7 +97,9 @@ stability across paleoclimatic variability, evolutionary adaptation, and
 extreme future warming scenarios, without requiring revision in response
 to newly discovered extremophiles or altered biological tolerances.
 
-This framework is particularly useful for tracking climate regime transitions under strong warming, identifying emergent climates with no present-day analogues, and comparing paleoclimatic and future states within a single, invariant classification scheme.
+Under strong anthropogenic warming, Earth is expected to enter climatic regimes with no present-day analogues, characterized by combinations of thermal and hydrological conditions not historically observed. Classification systems calibrated to modern Earth climate distributions perform well for climates resembling those present at the time of their formulation, but can yield misleading classifications under novel conditions. For example, a hypothetical location with constant rainfall and identical monthly mean temperatures to present-day Phoenix, Arizona would be classified as humid subtropical (Cfa) under Köppen, despite occupying a far more thermodynamically extreme regime than locations such as Tokyo or Atlanta. The Dickinson Climate Classification is designed to address this limitation, providing a framework for tracking climate regime transitions under strong warming, identifying emergent climates with no modern analogues, and comparing paleoclimatic and future states within a single, invariant classification scheme.
+
+Additionally, the structure of this system permits substantially higher spatial and semantic resolution than most legacy climate classification frameworks. Because thermal and hydrological categories are defined using invariant, evenly spaced physical metrics rather than empirically tuned ecological thresholds, the classification can be applied meaningfully at fine spatial scales wherever reliable climatological normals are available. This property makes the framework well suited to resolving sharp climatic gradients, topographic microclimates, and human-relevant thermal regimes without requiring additional calibration or region-specific adjustment.
 
 The system is defined only over the subset of climate space in which life
 is physically possible. Outside this domain, the classification is not
@@ -150,6 +139,7 @@ Paleoclimates, future climates, hypothetical states \\
 \hline
 \end{tabular}
 \end{table}
+\FloatBarrier
 
 % ============================================================
 \section{Thermal Metrics and Cold-Month Thermal Zones}
@@ -172,23 +162,9 @@ not typically distinguish fundamentally different winter regimes at the
 global level, while coarser intervals would collapse thermodynamically
 distinct cold states.
 
-By contrast, the warm-season thermal axis is subdivided more finely, using
-5~$^\circ$C intervals within each cold-month zone, to reflect the
-continuous and highly sensitive role of summer warmth in governing surface
-energy balance, evapotranspiration, and heat stress. Accordingly, each
-cold-month thermal class is resolved into multiple warm-month
-subcategories (e.g., C into c$_1$ and c$_2$, B into b$_1$ and b$_2$, and
-analogously for A and Z), allowing climates with similar winter
-constraints but markedly different summer regimes to be distinguished.
+By contrast, the warm-month thermal axis is partitioned at higher resolution, using 5~$^\circ$C intervals when a given temperature occurs as a warmest-month mean rather than as a coldest-month mean, across the range of monthly mean temperatures from $\geq 0$ to $<40~^\circ$C. This reflects the continuous and highly sensitive influence of summer warmth on surface energy balance, evapotranspiration, and heat stress. Accordingly, cold-month thermal classes C, B, A, and Z—defined by their coldest-month means—are each subdivided into paired warm-season categories when their warmest-month means fall within these same numerical temperature intervals (e.g., C into c$_1$ and c$_2$, B into b$_1$ and b$_2$, with analogous subdivisions for A and Z).
 
-This asymmetric treatment follows long-standing precedent in climate
-classification; for example, the Köppen system resolves multiple
-summer-heat categories while employing comparatively coarser
-winter-temperature thresholds (Köppen, 1884). The combined use of
-10~$^\circ$C cold-month bins and finer warm-month subdivisions thus
-provides a transparent, scale-consistent partition that remains robust
-across paleoclimates, projected future warming, and hypothetical climate
-states.
+This asymmetric treatment follows long-standing precedent in climate classification. In the Köppen system, for example, the temperature spacing between winter-regime isotherms is substantially broader than that separating summer heat regimes (Köppen, 1884). The combined use of uniform 10~$^\circ$C cold-month bins and finer warm-season subdivisions therefore produces a transparent, scale-consistent partition of climate space that remains robust across paleoclimates, projected future warming scenarios, and hypothetical climate states.
 
 Cold-month thermal zones are assigned using the climatological
 coldest-month mean temperature ($T_{\min,\text{mean}}$), which provides a
@@ -233,7 +209,7 @@ thermal regulation strategies than large mammals, nor technologically
 mediated habitation.
 
 \paragraph{Note on hypercanes.}
-The term \emph{hypercaneal} is used here strictly as a thermal descriptor for extremely hot climatological monthly mean temperatures. Hypercaneal cold-month and/or warm-month thermal zones should be understood as a \emph{necessary but not sufficient} condition for the formation of hypercane vortices (Emanuel, 1988). While such extreme thermal states are a prerequisite, hypercane development also depends on additional dynamical and oceanic factors that are not represented in a monthly-mean thermal
+The term \emph{hypercaneal} is used here strictly as a thermal descriptor for extremely hot climatological monthly mean temperatures. Hypercaneal cold-month and/or warm-month thermal zones should be understood as a \emph{necessary but not sufficient} condition for the formation of hypercane vortices (Emanuel, 1988). Hypercane development also depends on additional dynamical and oceanic factors that are not represented in a monthly-mean thermal
 classification. Accordingly, classification as hypercaneal does not imply the existence, frequency, or persistence of hypercanes.
 
 \begin{figure}[htbp]
