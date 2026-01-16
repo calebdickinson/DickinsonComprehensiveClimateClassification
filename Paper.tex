@@ -16,6 +16,7 @@
 \usetikzlibrary{positioning,arrows.meta}
 \usepackage{graphicx}
 \usepackage{placeins}
+\usepackage{array}
 
 \hypersetup{
   colorlinks=true,
@@ -27,6 +28,8 @@
 \setlength{\parskip}{0.6em}
 \setlength{\parindent}{0pt}
 \onehalfspacing
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
 
 % =========================
 % Document
@@ -43,14 +46,24 @@
 
 This paper introduces the Dickinson Climate Classification, a thermodynamically grounded taxonomy that partitions climate state space using invariant thermal and hydrological metrics rather than biological criteria. Unlike widely used frameworks such as the Köppen classification or the UNEP aridity index, which are calibrated to present-day vegetation distributions or land-degradation objectives, the Dickinson system is formulated as a taxonomic division of climates relevant to physically possible life. Cold-month and warm-month thermal zones are defined using evenly spaced climatological temperature intervals, while moisture regimes are determined exclusively by dimensionless precipitation-to–potential evapotranspiration (P/PET) ratios and precipitation seasonality metrics, ensuring invariance under uniform rescaling of hydrological fluxes. The resulting framework provides a stable, internally consistent classification applicable across paleoclimates, present-day conditions, extreme future warming scenarios, and hypothetical climate states without requiring recalibration as biological tolerances evolve. This system is particularly suited for identifying emergent climates with no modern analogues and situating Earth’s climates within a broader, formally defined climate state space.
 
+\section*{Document Status and Scope}
+
+This manuscript presents a formal climate classification framework.
+It is not a predictive climate model, attribution study, or impact assessment.
+The system is intended as a taxonomic and analytical tool for
+comparing climate regimes across paleoclimates, present conditions,
+future projections, and hypothetical climate states.
+
+\section*{Data and Implementation Notes}
+
+All illustrative maps were generated using Google Earth Engine
+from CHELSA BIOCLIM+ v2.1 1981-2010 climatological normals (Karger et al., 2017; Brun et al., 2022). No new climate model simulations were performed for this work.
+The classification logic is deterministic and reproducible.
+
 \section*{Introduction}
 
 The Dickinson Climate Classification differs fundamentally in both purpose
-and structure from widely used systems such as Köppen and the UNEP aridity
-index. The Köppen system is explicitly ecological and biogeographic, with
-classification thresholds calibrated to the present-day distribution of
-vegetation and climatic analogues on Earth. The UNEP aridity index, by
-contrast, is development-oriented, designed primarily to assess land
+and structure from widely used systems such as the Köppen classification (Köppen, 1884) or the UNEP aridity index (UNEP, 1992). The Köppen system is explicitly ecological and biogeographic, with classification thresholds calibrated to the present-day distribution of vegetation and climatic analogues on Earth. The UNEP aridity index, by contrast, is development-oriented, designed primarily to assess land
 degradation and desertification risk rather than to partition climate
 space as a whole. In contrast, the Dickinson classification is formulated
 as a thermodynamic partition of climate state space, independent of
@@ -103,6 +116,41 @@ The system is defined only over the subset of climate space in which life
 is physically possible. Outside this domain, the classification is not
 meaningful and no interpretation is implied.
 
+\begin{table}[htbp]
+\centering
+\caption{Conceptual comparison of major climate classification frameworks, including the Dickinson system, the Köppen classification, the Holdridge bioclimatic life-zone scheme (Holdridge, 1947), and the UNEP aridity index.
+}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{|C{3.1cm}|C{3.8cm}|C{4.1cm}|C{3.8cm}|}
+\hline
+\textbf{Framework} &
+\textbf{Primary variables} &
+\textbf{Calibration basis} &
+\textbf{Applicability} \\
+\hline
+Köppen (1884) &
+Temperature and precipitation thresholds &
+Observed vegetation distributions &
+Present-day Earth climates; limited extrapolation \\
+\hline
+Holdridge (1947) &
+Biotemperature, precipitation, $P/PET$ &
+Plant physiological response &
+Ecological zoning; biologically contingent \\
+\hline
+UNEP (1992) &
+Annual $P/PET$ &
+Land degradation and desertification risk &
+Development-oriented; aridity only \\
+\hline
+Dickinson\par\vspace{0.2\baselineskip}(this work) &
+Cold-month $T_{\min}$, warm-month $T_{\max}$, $P/PET$, seasonality &
+Thermodynamic partition of climate state space &
+Paleoclimates, future climates, hypothetical states \\
+\hline
+\end{tabular}
+\end{table}
+
 % ============================================================
 \section{Thermal Metrics and Cold-Month Thermal Zones}
 
@@ -112,7 +160,35 @@ monthly mean near-surface air temperatures, computed over a standard
 temperature is taken as the minimum of the twelve climatological monthly
 means, while the warmest-month mean temperature is taken as the maximum.
 
-The thermal intervals are defined in uniform increments of 10 °C, with 5 °C resolution used for all but one warm-month category; the \textit{hyperthermal summer} category retains 10 °C spacing. These intervals correspond to simple fractional subdivisions of the 100 °C temperature span between the freezing and boiling points of water at standard pressure. The lowest and highest warm-month and cold-month thermal categories are unbounded. This choice provides a transparent and reproducible normalization scale without implying special physical thresholds at category boundaries.
+The cold-month thermal intervals are defined in uniform increments of 10 °C, with 5 °C resolution used for all but one warm-month category; the \textit{hyperthermal summer} category retains 10 °C spacing. These intervals correspond to simple fractional subdivisions of the 100 °C temperature span between the freezing and boiling points of water at standard pressure. The lowest and highest warm-month and cold-month thermal categories are unbounded. This choice provides a transparent and reproducible normalization scale without implying special physical thresholds at category boundaries.
+
+The choice of thermal binning reflects a balance between physical
+interpretability and classification stability, with asymmetric resolution
+applied to cold- and warm-season metrics. Cold-month thermal zones are
+defined using uniform 10~$^\circ$C intervals, as winter temperature
+primarily acts as a threshold constraint on surface processes, cryospheric
+state, and large-scale habitability. Differences smaller than this scale do
+not typically distinguish fundamentally different winter regimes at the
+global level, while coarser intervals would collapse thermodynamically
+distinct cold states.
+
+By contrast, the warm-season thermal axis is subdivided more finely, using
+5~$^\circ$C intervals within each cold-month zone, to reflect the
+continuous and highly sensitive role of summer warmth in governing surface
+energy balance, evapotranspiration, and heat stress. Accordingly, each
+cold-month thermal class is resolved into multiple warm-month
+subcategories (e.g., C into c$_1$ and c$_2$, B into b$_1$ and b$_2$, and
+analogously for A and Z), allowing climates with similar winter
+constraints but markedly different summer regimes to be distinguished.
+
+This asymmetric treatment follows long-standing precedent in climate
+classification; for example, the Köppen system resolves multiple
+summer-heat categories while employing comparatively coarser
+winter-temperature thresholds (Köppen, 1884). The combined use of
+10~$^\circ$C cold-month bins and finer warm-month subdivisions thus
+provides a transparent, scale-consistent partition that remains robust
+across paleoclimates, projected future warming, and hypothetical climate
+states.
 
 Cold-month thermal zones are assigned using the climatological
 coldest-month mean temperature ($T_{\min,\text{mean}}$), which provides a
@@ -146,39 +222,104 @@ result, the classification remains applicable across paleoclimates,
 projected future climates, and hypothetical climate states without
 requiring recalibration to present-day biological distributions.
 
+\paragraph{Note on the term ``Uninhabitable''.}
+\emph{Uninhabitable} denotes climates for which the coldest-month
+climatological mean temperature satisfies
+$40^\circ\mathrm{C} \le T_{\min,\mathrm{mean}} < 50^\circ\mathrm{C}$, implying
+that all monthly means exceed the core body temperature of humans and other
+large mammals. The term is thermodynamic in scope and does not preclude
+habitation by organisms with substantially different size, physiology, or
+thermal regulation strategies than large mammals, nor technologically
+mediated habitation.
+
 \paragraph{Note on hypercanes.}
-The term \emph{hypercaneal} is used here strictly as a thermal descriptor for extremely hot
-climatological monthly mean temperatures. Hypercaneal cold-month and/or warm-month thermal zones should be
-understood as a \emph{necessary but not sufficient} condition for the formation of hypercane
-vortices. While such extreme thermal states are a prerequisite, hypercane development also
-depends on additional dynamical and oceanic factors that are not represented in a monthly-mean thermal
-classification. Accordingly, classification as hypercaneal does not imply the existence,
-frequency, or persistence of hypercanes; it indicates only that the thermal prerequisite is
-satisfied within the broader climate state space.
+The term \emph{hypercaneal} is used here strictly as a thermal descriptor for extremely hot climatological monthly mean temperatures. Hypercaneal cold-month and/or warm-month thermal zones should be understood as a \emph{necessary but not sufficient} condition for the formation of hypercane vortices (Emanuel, 1988). While such extreme thermal states are a prerequisite, hypercane development also depends on additional dynamical and oceanic factors that are not represented in a monthly-mean thermal
+classification. Accordingly, classification as hypercaneal does not imply the existence, frequency, or persistence of hypercanes.
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{global_cold_month_1981-2010.png}
-\label{fig:example}
+\label{fig:global_cold_month}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\textwidth]{cold_month_legend}
+\includegraphics[width=\textwidth]{cold_month_legend.png}
 \caption{
 Global distribution of cold-month thermal zones under the
 Dickinson Climate Classification, based on 1981--2010 climatological normals.
 Data were processed and plotted in Google Earth Engine (GEE) using
-CHELSA BIOCLIM+ v2.1 1981-2010 temperature fields.
+CHELSA BIOCLIM+ v2.1 1981-2010 temperature fields (Karger et al., 2017; Brun et al., 2022).
 }
-\label{fig:example}
+\label{fig:cold_month_legend}
+\end{figure}
+\FloatBarrier
+
+% ============================================================
+\section{Warm-Month Thermal Zones}
+
+In addition to cold-season thermal constraints, the Dickinson
+classification characterizes the intensity of the warm season using the
+climatological warmest-month mean near-surface air temperature
+($T_{\max,\text{mean}}$). This metric provides a stable measure of summer
+thermal conditions that reflects seasonal energy balance rather than
+short-lived extreme events.
+
+Warm-month thermal zones are assigned based on $T_{\max,\text{mean}}$ and
+are intended to distinguish climates with similar winter conditions but
+substantially different summer heat regimes. The resulting categories span
+the full range of plausible summer thermal environments, from persistently
+cold summers to extreme hyperthermal regimes that may occur under deep-time
+or future warming scenarios.
+
+Based on the warmest-month mean temperature, climates are assigned to one
+of the following warm-month thermal zones:
+\[
+\begin{array}{ll}
+\text{Hypercaneal Summer (H)}      & T_{\max,\text{mean}} \ge 50^\circ\text{C} \\
+\text{Hyperthermal Summer (X)}     & 40 \le T_{\max,\text{mean}} < 50^\circ\text{C} \\
+\text{Scorching Summer (z2)}       & 35 \le T_{\max,\text{mean}} < 40^\circ\text{C} \\
+\text{Very Hot Summer (z1)}        & 30 \le T_{\max,\text{mean}} < 35^\circ\text{C} \\
+\text{Hot Summer (a2)}             & 25 \le T_{\max,\text{mean}} < 30^\circ\text{C} \\
+\text{Warm Summer (a1)}            & 20 \le T_{\max,\text{mean}} < 25^\circ\text{C} \\
+\text{Cool Summer (b2)}            & 15 \le T_{\max,\text{mean}} < 20^\circ\text{C} \\
+\text{Cold Summer (b1)}            & 10 \le T_{\max,\text{mean}} < 15^\circ\text{C} \\
+\text{Very Cold Summer (c2)}       & 5 \le T_{\max,\text{mean}} < 10^\circ\text{C} \\
+\text{Freezing Summer (c1)}        & 0 \le T_{\max,\text{mean}} < 5^\circ\text{C} \\
+\text{Frigid Summer (Y)}           & T_{\max,\text{mean}} < 0^\circ\text{C}
+\end{array}
+\]
+
+As with the cold-month thermal zones, warm-month thresholds are evenly
+spaced in temperature and are intended to represent thermodynamic regimes
+rather than biological or impact-based categories. This approach ensures
+consistency across paleoclimates, present-day climates, and projected
+future warming scenarios without reliance on species-specific tolerance
+limits or human comfort thresholds.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{global_warm_month_1981-2010.png}
+\label{fig:global_warm_month}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{warm_month_legend.png}
+\caption{
+Global distribution of warm-month thermal zones under the
+Dickinson Climate Classification, based on 1981--2010 climatological normals.
+Data were processed and plotted in Google Earth Engine (GEE) using
+CHELSA BIOCLIM+ v2.1 1981-2010 temperature fields (Karger et al., 2017; Brun et al., 2022).
+}
+\label{fig:warm_month_legend}
 \end{figure}
 \FloatBarrier
 
 % ============================================================
 \section{Aridity Relevance and Aridity Regimes}
 
-Previous climate classification frameworks have implicitly recognized that aridity diagnostics are meaningful only within a limited thermal domain. In the Köppen system, aridity-based categories are restricted to climates whose climatological warmest-month mean temperature exceeds 10 °C, thereby excluding cold-summer and polar regimes in which surface processes are primarily energy-limited rather than moisture-limited. Similarly, the United Nations Environment Programme (UNEP) aridity framework distinguishes “cold” regions (annual PET < 400 mm) from aridity regimes defined by precipitation-to-evapotranspiration ratios, acknowledging that water-balance diagnostics lose interpretive value where evaporative demand is minimal.
+Previous climate classification frameworks have implicitly recognized that aridity diagnostics are meaningful only within a limited thermal domain. In the Köppen system (Köppen, 1884), aridity-based categories are restricted to climates whose climatological warmest-month mean temperature exceeds 10 °C, thereby excluding cold-summer and polar regimes in which surface processes are primarily energy-limited rather than moisture-limited. Similarly, the United Nations Environment Programme (UNEP) aridity framework (UNEP, 1992) distinguishes “cold” regions (annual PET $< 400\,\mathrm{mm}$) from aridity regimes defined by precipitation-to-evapotranspiration ratios, acknowledging that water-balance diagnostics lose interpretive value where evaporative demand is minimal.
 
 Moisture regime classification in the Dickinson system is applied only to
 climates in which aridity meaningfully structures surface–atmosphere
@@ -196,7 +337,7 @@ defined using the annual aridity index
 AI = \frac{P_{\text{ann}}}{PET_{\text{ann}}},
 \]
 where annual precipitation is computed as the sum of monthly precipitation
-totals and where PET denotes annual potential evapotranspiration.. All aridity regimes are defined using this dimensionless ratio, ensuring invariance under uniform rescaling of hydrological fluxes.
+totals and where PET denotes annual potential evapotranspiration. All aridity regimes are defined using this dimensionless ratio, ensuring invariance under uniform rescaling of hydrological fluxes.
 
 Based on the annual aridity index, climates are assigned to one of four
 baseline aridity regimes in the Dickinson classification:
@@ -228,7 +369,7 @@ regimes. This design choice emphasizes thermodynamic consistency and
 stability across paleoclimates and future warming scenarios rather than
 land-degradation or development-focused classification objectives.
 
-\paragraph{Note}
+\paragraph{Note.}
 Aridity classifications are defined only for terrestrial climates and are not evaluated over the open ocean. Temperature-based classifications, by contrast, are defined globally.
 
 % ============================================================
@@ -252,7 +393,7 @@ This diagnostic captures hemispherically asymmetric seasonal regimes, particular
 To identify strongly concentrated wet seasons independent of calendar
 alignment, a rolling six-month precipitation dominance metric is also
 computed. For each possible six-month window, cumulative precipitation is
-evaluated, and the maximum such total ($P6$) is normalized by annual
+evaluated, and the maximum total ($P6$) is normalized by annual
 precipitation to yield
 \[
 P6_{\text{ratio}} = \frac{P6}{P_{\text{ann}}}.
@@ -401,88 +542,33 @@ Polar / Subpolar / Alpine};
 Decision tree for assigning aridity regimes in the Dickinson
 classification.\\\\
 \textbf{Note:} $\phi$ denotes geographic latitude in degrees.
-Mediterranean seasonality is evaluated only at extratropical locations,
-defined as latitudes poleward of the tropics (i.e., exceeding the Earth's axial tilt).
+$\varepsilon$ denotes the Earth’s axial tilt (obliquity), defined as the
+instantaneous angle between the Earth’s rotational axis and the normal
+to its orbital plane. For present-day Earth, $\varepsilon \approx 23.44^\circ$,
+but $\varepsilon$ is treated here as a physical parameter rather than a fixed
+constant, allowing for secular variation over geological timescales.
+In this context, extratropical locations are defined as latitudes poleward
+of the astronomical tropics (i.e., $|\phi| > \varepsilon$).
+Mediterranean seasonality is evaluated only at such locations.
 }
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{global_aridity_1981-2010.png}
-\label{fig:example}
+\label{fig:global_aridity}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\textwidth]{aridity_legend}
+\includegraphics[width=\textwidth]{aridity_legend.png}
 \caption{
 Global distribution of aridity zones under the
 Dickinson Climate Classification, based on 1981--2010 climatological normals.
 Data were processed and plotted in Google Earth Engine (GEE) using
-CHELSA BIOCLIM+ v2.1 1981-2010 precipitation and Penman-Monteith PET fields.
+CHELSA BIOCLIM+ v2.1 1981-2010 precipitation and Penman-Monteith PET fields (Karger et al., 2017; Brun et al., 2022).
 }
-\label{fig:example}
-\end{figure}
-\FloatBarrier
-
-% ============================================================
-\section{Warm-Month Thermal Zones}
-
-In addition to cold-season thermal constraints, the Dickinson
-classification characterizes the intensity of the warm season using the
-climatological warmest-month mean near-surface air temperature
-($T_{\max,\text{mean}}$). This metric provides a stable measure of summer
-thermal conditions that reflects seasonal energy balance rather than
-short-lived extreme events.
-
-Warm-month thermal zones are assigned based on $T_{\max,\text{mean}}$ and
-are intended to distinguish climates with similar winter conditions but
-substantially different summer heat regimes. The resulting categories span
-the full range of plausible summer thermal environments, from persistently
-cold summers to extreme hyperthermal regimes that may occur under deep-time
-or future warming scenarios.
-
-Based on the warmest-month mean temperature, climates are assigned to one
-of the following warm-month thermal zones:
-\[
-\begin{array}{ll}
-\text{Hypercaneal Summer (H)}      & T_{\max,\text{mean}} \ge 50^\circ\text{C} \\
-\text{Hyperthermal Summer (X)}     & 40 \le T_{\max,\text{mean}} < 50^\circ\text{C} \\
-\text{Scorching Summer (z2)}       & 35 \le T_{\max,\text{mean}} < 40^\circ\text{C} \\
-\text{Very Hot Summer (z1)}        & 30 \le T_{\max,\text{mean}} < 35^\circ\text{C} \\
-\text{Hot Summer (a2)}             & 25 \le T_{\max,\text{mean}} < 30^\circ\text{C} \\
-\text{Warm Summer (a1)}            & 20 \le T_{\max,\text{mean}} < 25^\circ\text{C} \\
-\text{Cool Summer (b2)}            & 15 \le T_{\max,\text{mean}} < 20^\circ\text{C} \\
-\text{Cold Summer (b1)}            & 10 \le T_{\max,\text{mean}} < 15^\circ\text{C} \\
-\text{Very Cold Summer (c2)}       & 5 \le T_{\max,\text{mean}} < 10^\circ\text{C} \\
-\text{Freezing Summer (c1)}        & 0 \le T_{\max,\text{mean}} < 5^\circ\text{C} \\
-\text{Frigid Summer (Y)}           & T_{\max,\text{mean}} < 0^\circ\text{C}
-\end{array}
-\]
-
-As with the cold-month thermal zones, warm-month thresholds are evenly
-spaced in temperature and are intended to represent thermodynamic regimes
-rather than biological or impact-based categories. This approach ensures
-consistency across paleoclimates, present-day climates, and projected
-future warming scenarios without reliance on species-specific tolerance
-limits or human comfort thresholds.
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\textwidth]{global_warm_month_1981-2010.png}
-\label{fig:example}
-\end{figure}
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\textwidth]{cold_month_legend}
-\caption{
-Global distribution of warm-month thermal zones under the
-Dickinson Climate Classification, based on 1981--2010 climatological normals.
-Data were processed and plotted in Google Earth Engine (GEE) using
-CHELSA BIOCLIM+ v2.1 1981-2010 temperature fields.
-}
-\label{fig:example}
+\label{fig:aridity_legend}
 \end{figure}
 \FloatBarrier
 
@@ -526,11 +612,12 @@ These examples are illustrative only and do not necessarily exist on Earth.
 The Dickinson Comprehensive Climate Classification provides a complete, thermodynamically grounded partition of climate space without imposing biological assumptions or temporal constraints. By formalizing aridity relevance, seasonality diagnostics, and exception handling, the system remains stable under extreme warming, deep-time climates, and hypothetical planetary environments.
 
 % ============================================================
+
 \section*{References}
 
-Brun P., Zimmermann N. E., Hari C., Pellissier L., Karger D. N. (2022).
+Brun, P., Zimmermann, N. E., Hari, C., Pellissier, L., \& Karger, D. N. (2022).
 Global climate-related predictors at kilometre resolution for the past and future.
-\textit{Earth System Science Data}, 14, 5573–5603.
+\textit{Earth System Science Data}, 14, 5573--5603.
 https://doi.org/10.5194/essd-14-5573-2022
 
 Emanuel, K. A. (1988).
@@ -538,17 +625,24 @@ The maximum intensity of hurricanes.
 \textit{Journal of the Atmospheric Sciences}, 45(7), 1143--1155.
 https://doi.org/10.1175/1520-0469(1988)045<1143:TMIOH>2.0.CO;2
 
-Karger D.N., Conrad O., Böhner J., Kawohl T., Kreft H., Soria-Auza R.W., Zimmermann N.E., Linder P., Kessler M. (2017).
-Climatologies at high resolution for the earth’s land surface areas.
-\textit{Scientific Data} 4:170122.
+Holdridge, L. R. (1947).
+Determination of world plant formations from simple climatic data.
+\textit{Science}, 105(2727), 367--368.
+https://doi.org/10.1126/science.105.2727.367
+
+Karger, D. N., Conrad, O., Böhner, J., Kawohl, T., Kreft, H., Soria-Auza, R. W.,
+Zimmermann, N. E., Linder, P., \& Kessler, M. (2017).
+Climatologies at high resolution for the Earth's land surface areas.
+\textit{Scientific Data}, 4, 170122.
 https://doi.org/10.1038/sdata.2017.122
 
-Köppen W. 
-Die Wärmezonen der Erde, nach der Dauer der heissen, gemässigten und kalten Zeit und nach der Wirkung der Wärme auf die organische Welt betrachtet.
-\textit{Meteorologische Zeitschrift} 1884;1:215–26.
+Köppen, W. (1884).
+Die Wärmezonen der Erde, nach der Dauer der heissen, gemässigten und kalten Zeit
+und nach der Wirkung der Wärme auf die organische Welt betrachtet.
+\textit{Meteorologische Zeitschrift}, 1, 215--226.
 
 United Nations Environment Programme. (1992).
 \textit{World Atlas of Desertification} (2nd ed.).
-Edward Arnold, London.
+Edward Arnold.
 
 \end{document}
