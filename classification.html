@@ -31,23 +31,27 @@
     <a href="about.html">About</a>
   </nav>
   <main>
-    <h1>The Dickinson Climate Classification: A Taxonomic Thermal-Hydrological Partition of Climate State Space</h1>
-    <img src="images/page1.png" alt="Paper page 1">
-    <img src="images/page2.png" alt="Paper page 2">
-    <img src="images/page3.png" alt="Paper page 3">
-    <img src="images/page4.png" alt="Paper page 4">
-    <img src="images/page5.png" alt="Paper page 5">
-    <img src="images/page6.png" alt="Paper page 6">
-    <img src="images/page7.png" alt="Paper page 7">
-    <img src="images/page8.png" alt="Paper page 8">
-    <img src="images/page9.png" alt="Paper page 9">
-    <img src="images/page10.png" alt="Paper page 10">
-    <img src="images/page11.png" alt="Paper page 11">
-    <img src="images/page12.png" alt="Paper page 12">
-    <img src="images/page13.png" alt="Paper page 13">
-    <img src="images/page14.png" alt="Paper page 14">
-    <img src="images/page15.png" alt="Paper page 15">
-    <img src="images/page16.png" alt="Paper page 16">
+    <script>
+    const url = "Dickinson_climates.pdf";
+
+    pdfjsLib.getDocument(url).promise.then(pdf => {
+      const viewer = document.getElementById("viewer");
+
+      for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+        pdf.getPage(pageNum).then(page => {
+          const viewport = page.getViewport({ scale: 1.4 });
+          const canvas = document.createElement("canvas");
+          const ctx = canvas.getContext("2d");
+
+          canvas.width = viewport.width;
+          canvas.height = viewport.height;
+
+          page.render({ canvasContext: ctx, viewport });
+          viewer.appendChild(canvas);
+        });
+      }
+    });
+  </script>
     <h1>Supplemental Figure 1 of 2: Dickinson Temperature Classification</h1>
     <img src="images/temperature.png" alt="Formal temperature classification of climates">
     <h1>Supplemental Figure 2 of 2: Dickinson Aridity Index (modified from UNEP aridity index)</h1>
