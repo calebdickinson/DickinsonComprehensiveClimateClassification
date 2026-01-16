@@ -6,46 +6,48 @@ name,classification
 "Dubai, United Arab Emirates",Adz2
 "Bourem, Mali",Adz2
 "Mumbai, India",Awz1
+"Manila, Philippines",Awz1
+"Bangkok, Thailand",Awz1
+"Ho Chi Minh City, Vietnam",Awz1
+"Chennai, India",Awz1
 "Hyderabad, India",Awz1
 "Ouagadougou, Burkina Faso",Awz1
+"Phnom Penh, Cambodia",Awz1
 "N'Djamena, Chad",Awz1
 "Vientiane, Laos",Awz1
 "Bamako, Mali",Awz1
 "Naypyidaw, Myanmar",Awz1
+"Managua, Nicaragua",Awz1
 "Abuja, Nigeria",Awz1
+"Trincomalee, Sri Lanka",Awz1
 "Port-au-Prince, Haiti",Agz1
-"Managua, Nicaragua",Agz1
 "Juba, South Sudan",Agz1
 "Karachi, Pakistan",Adz1
-"Manila, Philippines",Ahz1
-"Bangkok, Thailand",Ahz1
-"Ho Chi Minh City, Vietnam",Ahz1
-"Chennai, India",Ahz1
-"Phnom Penh, Cambodia",Ahz1
-"Trincomalee, Sri Lanka",Ahz1
-"Luanda, Angola",Asa2
 "Honolulu, Hawaii, United States",Asa2
 "Mogadishu, Somalia",Asa2
 "Willemstad, Curaçao (NL)",Asa2
+"Bangalore, India",Awa2
+"Lagos, Nigeria",Awa2
+"Luanda, Angola",Awa2
 "San Salvador, El Salvador",Awa2
 "Banjul, Gambia",Awa2
 "Conakry, Guinea",Awa2
 "Bissau, Guinea-Bissau",Awa2
+"Tegucigalpa, Honduras",Awa2
+"Monrovia, Liberia",Awa2
 "Maputo, Mozambique",Awa2
 "Freetown, Sierra Leone",Awa2
 "Dodoma, Tanzania",Awa2
-"Bangalore, India",Aga2
+"Dili, Timor-Leste",Awa2
 "St. John's, Antigua and Barbuda",Aga2
 "Nassau, Bahamas",Aga2
 "Bridgetown, Barbados",Aga2
 "Yamoussoukro, Côte d'Ivoire",Aga2
 "Accra, Ghana",Aga2
 "St. George's, Grenada",Aga2
-"Tegucigalpa, Honduras",Aga2
 "Kingston, Jamaica",Aga2
 "Basseterre, Saint Kitts and Nevis",Aga2
 "São Tomé, São Tomé and Príncipe",Aga2
-"Dili, Timor-Leste",Aga2
 "Lomé, Togo",Aga2
 "The Valley, Anguilla (UK)",Aga2
 "Road Town, British Virgin Islands (UK)",Aga2
@@ -64,7 +66,6 @@ name,classification
 "Kralendijk, Bonaire (NL)",Ada2
 "Salango Island, Ecuador",Ada2
 "Jakarta, Indonesia",Aha2
-"Lagos, Nigeria",Aha2
 "Kinshasa, DR Congo",Aha2
 "Rio de Janeiro, Brazil",Aha2
 "Kuala Lumpur, Malaysia",Aha2
@@ -86,7 +87,6 @@ name,classification
 "Libreville, Gabon",Aha2
 "Georgetown, Guyana",Aha2
 "Tarawa, Kiribati",Aha2
-"Monrovia, Liberia",Aha2
 "Malé, Maldives",Aha2
 "Majuro, Marshall Islands",Aha2
 "Port Louis, Mauritius",Aha2
@@ -119,11 +119,11 @@ name,classification
 "Nukunonu, Tokelau (NZ)",Aha2
 "Jamestown, St Helena (UK)",Asa1
 "Brasília, Brazil",Awa1
+"Santo Domingo, Ecuador",Awa1
 "Caracas, Venezuela",Aga1
 "San José, Costa Rica",Aha1
 "Kigali, Rwanda",Aha1
 "Kampala, Uganda",Aha1
-"Santo Domingo, Ecuador",Aha1
 "Quito, Ecuador",Bb1
 "Nicosia, Cyprus",Bmz1
 "Athens, Greece",Bmz1
@@ -152,6 +152,7 @@ name,classification
 "Kolkata, India",Bwz1
 "Shenzhen, China",Bwz1
 "Dongguan, China",Bwz1
+"Hanoi, Vietnam",Bwz1
 "Lahore, Pakistan",Bgz1
 "Dallas, Texas, United States",Bgz1
 "San Antonio, Texas, United States",Bgz1
@@ -159,7 +160,6 @@ name,classification
 "Cairo, Egypt",Bdz1
 "Taipei, Taiwan",Bhz1
 "Islamabad, Pakistan",Bhz1
-"Hanoi, Vietnam",Bhz1
 "Gujrat, Pakistan",Bhz1
 "Fuzhou, China",Bhz1
 "San Jose, California, United States",Bma1
@@ -192,13 +192,13 @@ name,classification
 "Hamilton, Bermuda (UK)",Bha2
 "San Francisco, California, United States",Bmb2
 "Lompoc, California, United States",Bmb2
-"San José de la Joya, Mexico",Bsa1
 "Mexico City, Mexico",Bwa1
 "Mbabane, Eswatini",Bwa1
 "Guatemala City, Guatemala",Bwa1
 "Antananarivo, Madagascar",Bwa1
 "Kathmandu, Nepal",Bwa1
 "Harare, Zimbabwe",Bwa1
+"San José de la Joya, Mexico",Bwa1
 "Gitega, Burundi",Bga1
 "Asmara, Eritrea",Bga1
 "Nairobi, Kenya",Bga1
@@ -222,7 +222,6 @@ Edinburgh of the Seven Seas,Bhb2
 "Adak, Alaska, United States",Cb1
 Macquarie Island Research Station,Cc2
 Heard Island and McDonald Islands (Coast),Cc1
-"Sharmokhiya, Iraq",Cmz2
 "Tehran, Iran",Cmz1
 "Batman, Turkey",Cmz1
 "Istanbul, Turkey",Cma2
@@ -237,7 +236,7 @@ Heard Island and McDonald Islands (Coast),Cc1
 "Tashkent, Uzbekistan",Cma2
 "Vatican City, Vatican City",Cma2
 "Borujerd, Iran",Cma2
-"Xi’an, China",Cgz1
+"Xi’an, China",Cwz1
 "Oklahoma City, Oklahoma, United States",Cgz1
 "Ashgabat, Turkmenistan",Cdz1
 "Shanghai, China",Chz1
@@ -254,11 +253,6 @@ Heard Island and McDonald Islands (Coast),Cc1
 "Carson City, Nevada, United States",Cma1
 "Salem, Oregon, United States",Cma1
 "Olympia, Washington, United States",Cma1
-"Vancouver, British Columbia, Canada",Cma1
-"Surrey, British Columbia, Canada",Cma1
-"Burnaby, British Columbia, Canada",Cma1
-"Richmond, British Columbia, Canada",Cma1
-"Abbotsford, British Columbia, Canada",Cma1
 "Denver, Colorado, United States",Csa2
 "Salt Lake City, Utah, United States",Csa2
 "Yerevan, Armenia",Csa2
@@ -306,8 +300,6 @@ Heard Island and McDonald Islands (Coast),Cc1
 "Charleston, West Virginia, United States",Cha2
 "Zagreb, Croatia",Cha2
 "Carbondale, Illinois, United States",Cha2
-"Sitka, Alaska, United States",Cmb2
-"Ketchikan, Alaska, United States",Cmb2
 "Comodoro Rivadavia, Argentina",Cmb2
 "Santa Fe, New Mexico, United States",Csa1
 "Cheyenne, Wyoming, United States",Csa1
@@ -334,12 +326,19 @@ Heard Island and McDonald Islands (Coast),Cc1
 "San Marino, San Marino",Cha1
 "Ljubljana, Slovenia",Cha1
 "Bern, Switzerland",Cha1
+"Vancouver, British Columbia, Canada",Cha1
+"Surrey, British Columbia, Canada",Cha1
+"Burnaby, British Columbia, Canada",Cha1
+"Richmond, British Columbia, Canada",Cha1
+"Abbotsford, British Columbia, Canada",Cha1
 "Thimphu, Bhutan",Cwb2
 "London, United Kingdom",Chb2
 "Copenhagen, Denmark",Chb2
 "Dublin, Ireland",Chb2
 "Amsterdam, Netherlands",Chb2
 "Saint-Pierre, Saint-Pierre & Miquelon (FR)",Chb2
+"Sitka, Alaska, United States",Chb2
+"Ketchikan, Alaska, United States",Chb2
 "Nuuk, Greenland (DK)",Dc2
 "Longyearbyen, Svalbard & Jan Mayen (NO)",Dc2
 "Primavera Research Station, Antarctica",Dc1

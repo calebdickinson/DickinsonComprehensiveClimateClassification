@@ -18,10 +18,14 @@
     ],
     "4": [
       "Guangzhou, China",
+      "Chennai, India",
       "Hyderabad, India",
       "Vientiane, Laos",
       "Naypyidaw, Myanmar",
-      "Abuja, Nigeria"
+      "Abuja, Nigeria",
+      "Hanoi, Vietnam",
+      "Chandrapur, India",
+      "Kota, India"
     ]
   },
   "Adz2": {
@@ -44,50 +48,83 @@
     ],
     "4": [
       "Karachi, Pakistan",
-      "Manama, Bahrain"
+      "Manama, Bahrain",
+      "Muscat, Oman",
+      "Doha, Qatar",
+      "Khartoum, Sudan",
+      "Dubai, United Arab Emirates"
     ]
   },
   "Awz1": {
     "1": [
+      "Bangkok, Thailand",
+      "Chennai, India",
       "Hyderabad, India",
       "Ouagadougou, Burkina Faso",
+      "Phnom Penh, Cambodia",
       "N'Djamena, Chad",
       "Bamako, Mali",
       "Naypyidaw, Myanmar"
     ],
     "2": [
       "Mumbai, India",
+      "Manila, Philippines",
+      "Bangkok, Thailand",
+      "Ho Chi Minh City, Vietnam",
+      "Chennai, India",
       "Hyderabad, India",
       "Ouagadougou, Burkina Faso",
+      "Phnom Penh, Cambodia",
       "N'Djamena, Chad",
       "Vientiane, Laos",
       "Bamako, Mali",
       "Naypyidaw, Myanmar",
-      "Abuja, Nigeria"
+      "Managua, Nicaragua",
+      "Abuja, Nigeria",
+      "Trincomalee, Sri Lanka"
     ],
     "3": [
       "Mumbai, India",
+      "Manila, Philippines",
       "Kolkata, India",
       "Dhaka, Bangladesh",
+      "Bangkok, Thailand",
       "Shenzhen, China",
+      "Ho Chi Minh City, Vietnam",
+      "Lagos, Nigeria",
+      "Chennai, India",
+      "Luanda, Angola",
+      "Phnom Penh, Cambodia",
       "Banjul, Gambia",
       "Bissau, Guinea-Bissau",
       "Vientiane, Laos",
       "Naypyidaw, Myanmar",
-      "Abuja, Nigeria"
+      "Abuja, Nigeria",
+      "Dili, Timor-Leste",
+      "Hanoi, Vietnam",
+      "Trincomalee, Sri Lanka"
     ],
     "4": [
       "Kolkata, India",
       "Dhaka, Bangladesh",
       "Shenzhen, China",
+      "Bangalore, India",
+      "Lagos, Nigeria",
+      "Kinshasa, DR Congo",
+      "Luanda, Angola",
       "Dongguan, China",
       "Brasília, Brazil",
+      "San Salvador, El Salvador",
       "Banjul, Gambia",
       "Conakry, Guinea",
+      "Tegucigalpa, Honduras",
+      "Monrovia, Liberia",
       "Lilongwe, Malawi",
       "Maputo, Mozambique",
       "Freetown, Sierra Leone",
-      "Lusaka, Zambia"
+      "Lusaka, Zambia",
+      "Salango Island, Ecuador",
+      "Trincomalee, Sri Lanka"
     ]
   },
   "Agz1": {
@@ -96,11 +133,9 @@
     ],
     "2": [
       "Port-au-Prince, Haiti",
-      "Managua, Nicaragua",
       "Juba, South Sudan"
     ],
     "3": [
-      "Bangkok, Thailand",
       "San Juan, Puerto Rico, United States",
       "Nassau, Bahamas",
       "Yamoussoukro, Côte d'Ivoire",
@@ -108,13 +143,11 @@
       "Port-au-Prince, Haiti",
       "Kingston, Jamaica",
       "Juba, South Sudan",
-      "Dili, Timor-Leste",
       "George Town, Cayman Islands (UK)",
       "Cockburn Town, Turks & Caicos (UK)",
       "San Juan, Puerto Rico, United States"
     ],
     "4": [
-      "Bangalore, India",
       "Miami, Florida, United States",
       "San Juan, Puerto Rico, United States",
       "Nassau, Bahamas",
@@ -123,7 +156,6 @@
       "Havana, Cuba",
       "Roseau, Dominica",
       "Santo Domingo, Dominican Republic",
-      "San Salvador, El Salvador",
       "Kingston, Jamaica",
       "Castries, Saint Lucia",
       "Kingstown, Saint Vincent and the Grenadines",
@@ -131,8 +163,7 @@
       "Port of Spain, Trinidad and Tobago",
       "Road Town, British Virgin Islands (UK)",
       "George Town, Cayman Islands (UK)",
-      "San Juan, Puerto Rico, United States",
-      "Trincomalee, Sri Lanka"
+      "San Juan, Puerto Rico, United States"
     ]
   },
   "Adz1": {
@@ -157,95 +188,24 @@
       "Kralendijk, Bonaire (NL)"
     ]
   },
-  "Ahz1": {
-    "1": [
-      "Bangkok, Thailand",
-      "Chennai, India",
-      "Phnom Penh, Cambodia"
-    ],
-    "2": [
-      "Manila, Philippines",
-      "Bangkok, Thailand",
-      "Ho Chi Minh City, Vietnam",
-      "Chennai, India",
-      "Phnom Penh, Cambodia",
-      "Trincomalee, Sri Lanka"
-    ],
-    "3": [
-      "Jakarta, Indonesia",
-      "Manila, Philippines",
-      "Ho Chi Minh City, Vietnam",
-      "Lagos, Nigeria",
-      "Chennai, India",
-      "Kuala Lumpur, Malaysia",
-      "Miami, Florida, United States",
-      "Belmopan, Belize",
-      "Porto-Novo, Benin",
-      "Bandar Seri Begawan, Brunei",
-      "Phnom Penh, Cambodia",
-      "Bangui, Central African Republic",
-      "Brazzaville, Congo",
-      "Georgetown, Guyana",
-      "Tarawa, Kiribati",
-      "Malé, Maldives",
-      "Yaren, Nauru",
-      "Victoria, Seychelles",
-      "Singapore, Singapore",
-      "Sri Jayawardenepura Kotte, Sri Lanka",
-      "Paramaribo, Suriname",
-      "Hanoi, Vietnam",
-      "Trincomalee, Sri Lanka"
-    ],
-    "4": [
-      "Lagos, Nigeria",
-      "Kinshasa, DR Congo",
-      "Rio de Janeiro, Brazil",
-      "Taipei, Taiwan",
-      "Porto-Novo, Benin",
-      "Yaoundé, Cameroon",
-      "Moroni, Comoros",
-      "Malabo, Equatorial Guinea",
-      "Suva, Fiji",
-      "Libreville, Gabon",
-      "Monrovia, Liberia",
-      "Port Louis, Mauritius",
-      "Port Moresby, Papua New Guinea",
-      "Asunción, Paraguay",
-      "Apia, Samoa",
-      "Victoria, Seychelles",
-      "Honiara, Solomon Islands",
-      "Nukuʻalofa, Tonga",
-      "Port Vila, Vanuatu",
-      "Hamilton, Bermuda (UK)",
-      "Pago Pago, American Samoa, United States",
-      "Saipan, Northern Mariana Islands, United States",
-      "Nouméa, New Caledonia (FR)",
-      "Mata-Utu, Wallis & Futuna (FR)",
-      "Alofi, Niue (NZ)"
-    ]
-  },
   "Asa2": {
     "1": [
-      "Luanda, Angola",
       "Honolulu, Hawaii, United States",
       "Mogadishu, Somalia",
       "Willemstad, Curaçao (NL)"
     ],
     "2": [
-      "Luanda, Angola",
       "Honolulu, Hawaii, United States",
       "Mogadishu, Somalia",
       "Willemstad, Curaçao (NL)"
     ],
     "3": [
       "Honolulu, Hawaii, United States",
-      "Tegucigalpa, Honduras",
       "Jamestown, St Helena (UK)",
       "Willemstad, Curaçao (NL)",
       "Oranjestad, Sint Eustatius (NL)"
     ],
     "4": [
-      "Guatemala City, Guatemala",
       "Caracas, Venezuela",
       "Jamestown, St Helena (UK)",
       "The Bottom, Saba (NL)"
@@ -254,45 +214,64 @@
   "Awa2": {
     "1": [
       "Mumbai, India",
+      "Manila, Philippines",
+      "Bangalore, India",
+      "Ho Chi Minh City, Vietnam",
+      "Luanda, Angola",
+      "Malabo, Equatorial Guinea",
       "Banjul, Gambia",
       "Conakry, Guinea",
       "Bissau, Guinea-Bissau",
       "Vientiane, Laos",
+      "Monrovia, Liberia",
+      "Managua, Nicaragua",
       "Abuja, Nigeria",
-      "Freetown, Sierra Leone"
+      "Freetown, Sierra Leone",
+      "Dili, Timor-Leste"
     ],
     "2": [
+      "Bangalore, India",
+      "Lagos, Nigeria",
+      "Luanda, Angola",
       "San Salvador, El Salvador",
       "Banjul, Gambia",
       "Conakry, Guinea",
       "Bissau, Guinea-Bissau",
+      "Tegucigalpa, Honduras",
+      "Monrovia, Liberia",
       "Maputo, Mozambique",
       "Freetown, Sierra Leone",
-      "Dodoma, Tanzania"
+      "Dodoma, Tanzania",
+      "Dili, Timor-Leste"
     ],
     "3": [
+      "Bangalore, India",
+      "Kinshasa, DR Congo",
       "Brasília, Brazil",
+      "San Salvador, El Salvador",
       "Conakry, Guinea",
+      "Tegucigalpa, Honduras",
+      "Monrovia, Liberia",
       "Maputo, Mozambique",
       "Freetown, Sierra Leone",
-      "Dodoma, Tanzania"
+      "Dodoma, Tanzania",
+      "Santo Domingo, Ecuador"
     ],
     "4": [
-      "Dodoma, Tanzania"
+      "Guatemala City, Guatemala",
+      "Dodoma, Tanzania",
+      "Santo Domingo, Ecuador"
     ]
   },
   "Aga2": {
     "1": [
-      "Bangalore, India",
       "St. John's, Antigua and Barbuda",
       "Bridgetown, Barbados",
       "Accra, Ghana",
       "St. George's, Grenada",
       "Port-au-Prince, Haiti",
-      "Managua, Nicaragua",
       "Basseterre, Saint Kitts and Nevis",
       "São Tomé, São Tomé and Príncipe",
-      "Dili, Timor-Leste",
       "Lomé, Togo",
       "The Valley, Anguilla (UK)",
       "Road Town, British Virgin Islands (UK)",
@@ -306,18 +285,15 @@
       "Trincomalee, Sri Lanka"
     ],
     "2": [
-      "Bangalore, India",
       "St. John's, Antigua and Barbuda",
       "Nassau, Bahamas",
       "Bridgetown, Barbados",
       "Yamoussoukro, Côte d'Ivoire",
       "Accra, Ghana",
       "St. George's, Grenada",
-      "Tegucigalpa, Honduras",
       "Kingston, Jamaica",
       "Basseterre, Saint Kitts and Nevis",
       "São Tomé, São Tomé and Príncipe",
-      "Dili, Timor-Leste",
       "Lomé, Togo",
       "The Valley, Anguilla (UK)",
       "Road Town, British Virgin Islands (UK)",
@@ -330,7 +306,6 @@
       "Oranjestad, Sint Eustatius (NL)"
     ],
     "3": [
-      "Bangalore, India",
       "St. John's, Antigua and Barbuda",
       "Bridgetown, Barbados",
       "St. George's, Grenada",
@@ -387,8 +362,6 @@
   "Aha2": {
     "1": [
       "Jakarta, Indonesia",
-      "Manila, Philippines",
-      "Ho Chi Minh City, Vietnam",
       "Lagos, Nigeria",
       "Kinshasa, DR Congo",
       "Rio de Janeiro, Brazil",
@@ -406,14 +379,12 @@
       "Havana, Cuba",
       "Roseau, Dominica",
       "Santo Domingo, Dominican Republic",
-      "Malabo, Equatorial Guinea",
       "Palikir, Federated States of Micronesia",
       "Suva, Fiji",
       "Libreville, Gabon",
       "Georgetown, Guyana",
       "Kingston, Jamaica",
       "Tarawa, Kiribati",
-      "Monrovia, Liberia",
       "Malé, Maldives",
       "Majuro, Marshall Islands",
       "Port Louis, Mauritius",
@@ -445,7 +416,6 @@
     ],
     "2": [
       "Jakarta, Indonesia",
-      "Lagos, Nigeria",
       "Kinshasa, DR Congo",
       "Rio de Janeiro, Brazil",
       "Kuala Lumpur, Malaysia",
@@ -467,7 +437,6 @@
       "Libreville, Gabon",
       "Georgetown, Guyana",
       "Tarawa, Kiribati",
-      "Monrovia, Liberia",
       "Malé, Maldives",
       "Majuro, Marshall Islands",
       "Port Louis, Mauritius",
@@ -500,18 +469,15 @@
       "Nukunonu, Tokelau (NZ)"
     ],
     "3": [
-      "Kinshasa, DR Congo",
       "Rio de Janeiro, Brazil",
       "Yaoundé, Cameroon",
       "Moroni, Comoros",
       "Roseau, Dominica",
       "Santo Domingo, Dominican Republic",
-      "San Salvador, El Salvador",
       "Malabo, Equatorial Guinea",
       "Palikir, Federated States of Micronesia",
       "Suva, Fiji",
       "Libreville, Gabon",
-      "Monrovia, Liberia",
       "Majuro, Marshall Islands",
       "Port Louis, Mauritius",
       "Ngerulmud, Palau",
@@ -531,8 +497,7 @@
       "Mata-Utu, Wallis & Futuna (FR)",
       "Avarua, Cook Islands (NZ)",
       "Alofi, Niue (NZ)",
-      "Nukunonu, Tokelau (NZ)",
-      "Santo Domingo, Ecuador"
+      "Nukunonu, Tokelau (NZ)"
     ],
     "4": [
       "São Paulo, Brazil",
@@ -542,34 +507,36 @@
       "Kampala, Uganda",
       "Adamstown, Pitcairn Islands (UK)",
       "Papeete, French Polynesia (FR)",
-      "Avarua, Cook Islands (NZ)",
-      "Santo Domingo, Ecuador"
+      "Avarua, Cook Islands (NZ)"
     ]
   },
   "Awa1": {
     "1": [
       "San Salvador, El Salvador",
-      "Dodoma, Tanzania"
+      "Tegucigalpa, Honduras",
+      "Dodoma, Tanzania",
+      "Santo Domingo, Ecuador"
     ],
     "2": [
-      "Brasília, Brazil"
+      "Brasília, Brazil",
+      "Santo Domingo, Ecuador"
     ],
-    "3": [],
+    "3": [
+      "Guatemala City, Guatemala"
+    ],
     "4": [
       "Addis Ababa, Ethiopia"
     ]
   },
   "Aga1": {
     "1": [
-      "Tegucigalpa, Honduras",
       "Caracas, Venezuela"
     ],
     "2": [
       "Caracas, Venezuela"
     ],
     "3": [
-      "Gitega, Burundi",
-      "Guatemala City, Guatemala"
+      "Gitega, Burundi"
     ],
     "4": []
   },
@@ -577,14 +544,12 @@
     "1": [
       "Yaoundé, Cameroon",
       "Kampala, Uganda",
-      "Adamstown, Pitcairn Islands (UK)",
-      "Santo Domingo, Ecuador"
+      "Adamstown, Pitcairn Islands (UK)"
     ],
     "2": [
       "San José, Costa Rica",
       "Kigali, Rwanda",
-      "Kampala, Uganda",
-      "Santo Domingo, Ecuador"
+      "Kampala, Uganda"
     ],
     "3": [
       "San José, Costa Rica",
@@ -654,6 +619,7 @@
     "4": [
       "Delhi, India",
       "Lahore, Pakistan",
+      "Xi’an, China",
       "Zhengzhou, China"
     ]
   },
@@ -679,11 +645,18 @@
     ],
     "3": [
       "Phoenix, Arizona, United States",
-      "Las Vegas, Nevada, United States"
+      "Las Vegas, Nevada, United States",
+      "Kuwait City, Kuwait",
+      "Riyadh, Saudi Arabia",
+      "El Menia, Algeria",
+      "Lake Havasu City, Arizona, United States"
     ],
     "4": [
       "Cairo, Egypt",
-      "Damascus, Syria"
+      "Phoenix, Arizona, United States",
+      "Las Vegas, Nevada, United States",
+      "Damascus, Syria",
+      "Ashgabat, Turkmenistan"
     ]
   },
   "Bma2": {
@@ -735,7 +708,6 @@
       "Funchal, Madeira (PT)",
       "Vancouver, British Columbia, Canada",
       "Surrey, British Columbia, Canada",
-      "Burnaby, British Columbia, Canada",
       "Richmond, British Columbia, Canada",
       "Abbotsford, British Columbia, Canada",
       "Coronado Islands, Mexico",
@@ -768,7 +740,8 @@
       "Guangzhou, China",
       "Kolkata, India",
       "Shenzhen, China",
-      "Dongguan, China"
+      "Dongguan, China",
+      "Hanoi, Vietnam"
     ],
     "3": [
       "Chengdu, China",
@@ -815,7 +788,6 @@
     "2": [
       "Taipei, Taiwan",
       "Islamabad, Pakistan",
-      "Hanoi, Vietnam",
       "Gujrat, Pakistan",
       "Fuzhou, China"
     ],
@@ -913,13 +885,15 @@
       "Harare, Zimbabwe"
     ],
     "4": [
+      "Mexico City, Mexico",
       "Johannesburg, South Africa",
       "Mbabane, Eswatini",
       "Maseru, Lesotho",
       "Antananarivo, Madagascar",
       "Kathmandu, Nepal",
       "Harare, Zimbabwe",
-      "Phungling, Nepal"
+      "Phungling, Nepal",
+      "San José de la Joya, Mexico"
     ]
   },
   "Bga2": {
@@ -993,7 +967,8 @@
       "Hamilton, Bermuda (UK)"
     ],
     "4": [
-      "Buenos Aires, Argentina"
+      "Buenos Aires, Argentina",
+      "Burnaby, British Columbia, Canada"
     ]
   },
   "Bmb2": {
@@ -1010,15 +985,10 @@
   },
   "Bsa1": {
     "1": [
-      "Jamestown, St Helena (UK)",
-      "San José de la Joya, Mexico"
+      "Jamestown, St Helena (UK)"
     ],
-    "2": [
-      "San José de la Joya, Mexico"
-    ],
-    "3": [
-      "San José de la Joya, Mexico"
-    ],
+    "2": [],
+    "3": [],
     "4": []
   },
   "Bwa1": {
@@ -1029,7 +999,8 @@
       "Lilongwe, Malawi",
       "Kathmandu, Nepal",
       "Lusaka, Zambia",
-      "Harare, Zimbabwe"
+      "Harare, Zimbabwe",
+      "San José de la Joya, Mexico"
     ],
     "2": [
       "Mexico City, Mexico",
@@ -1037,7 +1008,8 @@
       "Guatemala City, Guatemala",
       "Antananarivo, Madagascar",
       "Kathmandu, Nepal",
-      "Harare, Zimbabwe"
+      "Harare, Zimbabwe",
+      "San José de la Joya, Mexico"
     ],
     "3": [
       "Mexico City, Mexico",
@@ -1046,7 +1018,8 @@
       "Addis Ababa, Ethiopia",
       "Maseru, Lesotho",
       "Antananarivo, Madagascar",
-      "Phungling, Nepal"
+      "Phungling, Nepal",
+      "San José de la Joya, Mexico"
     ],
     "4": [
       "Thimphu, Bhutan",
@@ -1214,20 +1187,6 @@
     "3": [],
     "4": []
   },
-  "Cmz2": {
-    "1": [],
-    "2": [],
-    "3": [
-      "Tehran, Iran",
-      "Batman, Turkey"
-    ],
-    "4": [
-      "Tehran, Iran",
-      "Boise, Idaho, United States",
-      "Tashkent, Uzbekistan",
-      "Borujerd, Iran"
-    ]
-  },
   "Cmz1": {
     "1": [
       "Tehran, Iran",
@@ -1279,8 +1238,7 @@
       "Portland, Oregon, United States",
       "Carson City, Nevada, United States",
       "Salem, Oregon, United States",
-      "Kabul, Afghanistan",
-      "Abbotsford, British Columbia, Canada"
+      "Kabul, Afghanistan"
     ],
     "4": [
       "London, United Kingdom",
@@ -1402,7 +1360,6 @@
       "Sacramento, California, United States",
       "Carson City, Nevada, United States",
       "Salem, Oregon, United States",
-      "Tirana, Albania",
       "Santiago, Chile",
       "Jerusalem, Israel",
       "Rome, Italy",
@@ -1413,27 +1370,15 @@
       "Portland, Oregon, United States",
       "Carson City, Nevada, United States",
       "Salem, Oregon, United States",
-      "Olympia, Washington, United States",
-      "Vancouver, British Columbia, Canada",
-      "Surrey, British Columbia, Canada",
-      "Burnaby, British Columbia, Canada",
-      "Richmond, British Columbia, Canada",
-      "Abbotsford, British Columbia, Canada"
+      "Olympia, Washington, United States"
     ],
     "3": [
       "Seattle, Washington, United States",
       "Olympia, Washington, United States",
-      "Vancouver, British Columbia, Canada",
       "Surrey, British Columbia, Canada",
-      "Burnaby, British Columbia, Canada",
       "Richmond, British Columbia, Canada"
     ],
-    "4": [
-      "Dublin, Ireland",
-      "Amsterdam, Netherlands",
-      "Sitka, Alaska, United States",
-      "Ketchikan, Alaska, United States"
-    ]
+    "4": []
   },
   "Csa2": {
     "1": [
@@ -1463,6 +1408,7 @@
   "Cwa2": {
     "1": [
       "Chengdu, China",
+      "Xi’an, China",
       "Zhengzhou, China",
       "Longnan, China"
     ],
@@ -1476,7 +1422,6 @@
   },
   "Cga2": {
     "1": [
-      "Xi’an, China",
       "Dallas, Texas, United States",
       "Oklahoma City, Oklahoma, United States",
       "Skopje, North Macedonia"
@@ -1611,6 +1556,7 @@
       "Mississauga, Ontario, Canada",
       "Brampton, Ontario, Canada",
       "Hamilton, Ontario, Canada",
+      "Abbotsford, British Columbia, Canada",
       "Halifax, Nova Scotia, Canada",
       "Truro, Nova Scotia, Canada",
       "New Glasgow, Nova Scotia, Canada",
@@ -1646,26 +1592,13 @@
       "Portland, Oregon, United States",
       "San Jose, California, United States",
       "Olympia, Washington, United States",
-      "Vancouver, British Columbia, Canada",
-      "Surrey, British Columbia, Canada",
-      "Burnaby, British Columbia, Canada",
-      "Richmond, British Columbia, Canada",
-      "Abbotsford, British Columbia, Canada",
       "Comodoro Rivadavia, Argentina"
     ],
     "2": [
-      "Sitka, Alaska, United States",
-      "Ketchikan, Alaska, United States",
       "Comodoro Rivadavia, Argentina"
     ],
-    "3": [
-      "Sitka, Alaska, United States",
-      "Ketchikan, Alaska, United States",
-      "Adak, Alaska, United States"
-    ],
-    "4": [
-      "Tórshavn, Faroe Islands (DK)"
-    ]
+    "3": [],
+    "4": []
   },
   "Csa1": {
     "1": [
@@ -1722,6 +1655,7 @@
     "1": [
       "Trenton, New Jersey, United States",
       "Charleston, West Virginia, United States",
+      "Tirana, Albania",
       "Sarajevo, Bosnia and Herzegovina",
       "Zagreb, Croatia",
       "San Marino, San Marino",
@@ -1740,7 +1674,12 @@
       "Warsaw, Poland",
       "San Marino, San Marino",
       "Ljubljana, Slovenia",
-      "Bern, Switzerland"
+      "Bern, Switzerland",
+      "Vancouver, British Columbia, Canada",
+      "Surrey, British Columbia, Canada",
+      "Burnaby, British Columbia, Canada",
+      "Richmond, British Columbia, Canada",
+      "Abbotsford, British Columbia, Canada"
     ],
     "3": [
       "London, United Kingdom",
@@ -1753,6 +1692,8 @@
       "Amsterdam, Netherlands",
       "Stockholm, Sweden",
       "Saint-Pierre, Saint-Pierre & Miquelon (FR)",
+      "Vancouver, British Columbia, Canada",
+      "Burnaby, British Columbia, Canada",
       "Saint John, New Brunswick, Canada",
       "St. John's, Newfoundland and Labrador, Canada",
       "Conception Bay South, Newfoundland and Labrador, Canada",
@@ -1762,12 +1703,16 @@
     ],
     "4": [
       "Juneau, Alaska, United States",
+      "Dublin, Ireland",
+      "Amsterdam, Netherlands",
       "St. John's, Newfoundland and Labrador, Canada",
       "Conception Bay South, Newfoundland and Labrador, Canada",
       "Mount Pearl, Newfoundland and Labrador, Canada",
       "Paradise, Newfoundland and Labrador, Canada",
       "Anchorage, Alaska, United States",
       "Kalifornsky, Alaska, United States",
+      "Sitka, Alaska, United States",
+      "Ketchikan, Alaska, United States",
       "Kenai, Alaska, United States",
       "Bethel, Alaska, United States",
       "Sterling, Alaska, United States"
@@ -1782,7 +1727,9 @@
       "Thimphu, Bhutan"
     ],
     "3": [],
-    "4": []
+    "4": [
+      "Wainwright, Alaska, United States"
+    ]
   },
   "Chb2": {
     "1": [
@@ -1796,26 +1743,36 @@
       "Luxembourg, Luxembourg",
       "Amsterdam, Netherlands",
       "Wellington, New Zealand",
-      "Bern, Switzerland"
+      "Bern, Switzerland",
+      "Vancouver, British Columbia, Canada",
+      "Surrey, British Columbia, Canada",
+      "Burnaby, British Columbia, Canada",
+      "Richmond, British Columbia, Canada",
+      "Abbotsford, British Columbia, Canada"
     ],
     "2": [
       "London, United Kingdom",
       "Copenhagen, Denmark",
       "Dublin, Ireland",
       "Amsterdam, Netherlands",
-      "Saint-Pierre, Saint-Pierre & Miquelon (FR)"
+      "Saint-Pierre, Saint-Pierre & Miquelon (FR)",
+      "Sitka, Alaska, United States",
+      "Ketchikan, Alaska, United States"
     ],
     "3": [
       "Reykjavík, Iceland",
       "Dublin, Ireland",
       "Kalifornsky, Alaska, United States",
-      "Kenai, Alaska, United States"
+      "Sitka, Alaska, United States",
+      "Ketchikan, Alaska, United States",
+      "Kenai, Alaska, United States",
+      "Adak, Alaska, United States"
     ],
     "4": [
       "Reykjavík, Iceland",
+      "Tórshavn, Faroe Islands (DK)",
       "Longyearbyen, Svalbard & Jan Mayen (NO)",
-      "Adak, Alaska, United States",
-      "Wainwright, Alaska, United States"
+      "Adak, Alaska, United States"
     ]
   },
   "Db1": {
@@ -2736,14 +2693,32 @@
     ],
     "4": []
   },
+  "Cwz1": {
+    "1": [],
+    "2": [
+      "Xi’an, China"
+    ],
+    "3": [
+      "Seoul, South Korea",
+      "Beijing, China",
+      "Xi’an, China",
+      "Zhengzhou, China",
+      "Tianjin, China",
+      "Longnan, China"
+    ],
+    "4": [
+      "Seoul, South Korea",
+      "Beijing, China",
+      "Tianjin, China",
+      "Pyongyang, North Korea"
+    ]
+  },
   "Cgz1": {
     "1": [],
     "2": [
-      "Xi’an, China",
       "Oklahoma City, Oklahoma, United States"
     ],
     "3": [
-      "Xi’an, China",
       "Oklahoma City, Oklahoma, United States"
     ],
     "4": [
@@ -2833,34 +2808,36 @@
     ],
     "4": []
   },
-  "Zgz1": {
+  "Zwz1": {
     "1": [],
     "2": [],
     "3": [
       "Managua, Nicaragua"
     ],
     "4": [
-      "Georgetown, Guyana"
+      "Jakarta, Indonesia",
+      "Mumbai, India",
+      "Brazzaville, Congo",
+      "Bissau, Guinea-Bissau",
+      "Panama City, Panama",
+      "Dili, Timor-Leste"
     ]
   },
   "Asz1": {
     "1": [],
     "2": [],
     "3": [
-      "Luanda, Angola",
       "Accra, Ghana",
       "Mogadishu, Somalia",
       "Lomé, Togo"
     ],
     "4": [
-      "Luanda, Angola",
       "Honolulu, Hawaii, United States",
       "St. John's, Antigua and Barbuda",
       "Bridgetown, Barbados",
       "Djibouti, Djibouti",
       "Accra, Ghana",
       "St. George's, Grenada",
-      "Tegucigalpa, Honduras",
       "Basseterre, Saint Kitts and Nevis",
       "Mogadishu, Somalia",
       "Lomé, Togo",
@@ -2868,37 +2845,63 @@
       "Cockburn Town, Turks & Caicos (UK)",
       "Charlotte Amalie, United States Virgin Islands, United States",
       "Philipsburg, Sint Maarten (NL)",
-      "Oranjestad, Sint Eustatius (NL)",
-      "Salango Island, Ecuador"
+      "Oranjestad, Sint Eustatius (NL)"
     ]
   },
-  "Bmz2": {
+  "Ahz1": {
     "1": [],
     "2": [],
-    "3": [],
+    "3": [
+      "Jakarta, Indonesia",
+      "Kuala Lumpur, Malaysia",
+      "Miami, Florida, United States",
+      "Belmopan, Belize",
+      "Porto-Novo, Benin",
+      "Bandar Seri Begawan, Brunei",
+      "Bangui, Central African Republic",
+      "Brazzaville, Congo",
+      "Georgetown, Guyana",
+      "Tarawa, Kiribati",
+      "Malé, Maldives",
+      "Yaren, Nauru",
+      "Victoria, Seychelles",
+      "Singapore, Singapore",
+      "Sri Jayawardenepura Kotte, Sri Lanka",
+      "Paramaribo, Suriname"
+    ],
     "4": [
-      "Nicosia, Cyprus",
-      "Athens, Greece",
-      "Podgorica, Montenegro",
-      "Dushanbe, Tajikistan",
-      "Batman, Turkey"
+      "Rio de Janeiro, Brazil",
+      "Taipei, Taiwan",
+      "Porto-Novo, Benin",
+      "Yaoundé, Cameroon",
+      "Moroni, Comoros",
+      "Malabo, Equatorial Guinea",
+      "Suva, Fiji",
+      "Libreville, Gabon",
+      "Port Louis, Mauritius",
+      "Port Moresby, Papua New Guinea",
+      "Asunción, Paraguay",
+      "Apia, Samoa",
+      "Victoria, Seychelles",
+      "Honiara, Solomon Islands",
+      "Nukuʻalofa, Tonga",
+      "Port Vila, Vanuatu",
+      "Hamilton, Bermuda (UK)",
+      "Pago Pago, American Samoa, United States",
+      "Saipan, Northern Mariana Islands, United States",
+      "Nouméa, New Caledonia (FR)",
+      "Mata-Utu, Wallis & Futuna (FR)",
+      "Alofi, Niue (NZ)"
     ]
   },
   "BdX": {
     "1": [],
     "2": [],
     "3": [
-      "Baghdad, Iraq",
-      "Kuwait City, Kuwait",
-      "Riyadh, Saudi Arabia",
-      "El Menia, Algeria",
-      "Lake Havasu City, Arizona, United States"
+      "Baghdad, Iraq"
     ],
     "4": [
-      "Phoenix, Arizona, United States",
-      "Las Vegas, Nevada, United States",
       "Baghdad, Iraq",
-      "Ashgabat, Turkmenistan",
       "El Menia, Algeria",
       "Lake Havasu City, Arizona, United States"
     ]
@@ -2926,6 +2929,20 @@
       "Gujrat, Pakistan",
       "Fuzhou, China",
       "Hengyang, China"
+    ]
+  },
+  "Cmz2": {
+    "1": [],
+    "2": [],
+    "3": [
+      "Tehran, Iran",
+      "Batman, Turkey"
+    ],
+    "4": [
+      "Tehran, Iran",
+      "Boise, Idaho, United States",
+      "Tashkent, Uzbekistan",
+      "Borujerd, Iran"
     ]
   },
   "Cdz2": {
@@ -2960,23 +2977,6 @@
       "Bratislava, Slovakia",
       "Lethbridge, Alberta, Canada",
       "Rexburg, Idaho, United States"
-    ]
-  },
-  "Cwz1": {
-    "1": [],
-    "2": [],
-    "3": [
-      "Seoul, South Korea",
-      "Beijing, China",
-      "Zhengzhou, China",
-      "Tianjin, China",
-      "Longnan, China"
-    ],
-    "4": [
-      "Seoul, South Korea",
-      "Beijing, China",
-      "Tianjin, China",
-      "Pyongyang, North Korea"
     ]
   },
   "Cda1": {
@@ -3073,38 +3073,20 @@
       "Verkhoyansk, Russia"
     ]
   },
-  "ZwX": {
-    "1": [],
-    "2": [],
-    "3": [],
-    "4": [
-      "Bamako, Mali",
-      "Niamey, Niger"
-    ]
-  },
-  "Zsz2": {
-    "1": [],
-    "2": [],
-    "3": [],
-    "4": [
-      "Managua, Nicaragua"
-    ]
-  },
   "Zwz2": {
     "1": [],
     "2": [],
     "3": [],
     "4": [
+      "Manila, Philippines",
+      "Bangkok, Thailand",
+      "Ho Chi Minh City, Vietnam",
       "Ouagadougou, Burkina Faso",
-      "N'Djamena, Chad"
-    ]
-  },
-  "Zgz2": {
-    "1": [],
-    "2": [],
-    "3": [],
-    "4": [
-      "Bangkok, Thailand"
+      "Phnom Penh, Cambodia",
+      "N'Djamena, Chad",
+      "Bamako, Mali",
+      "Managua, Nicaragua",
+      "Niamey, Niger"
     ]
   },
   "Zhz2": {
@@ -3112,9 +3094,6 @@
     "2": [],
     "3": [],
     "4": [
-      "Manila, Philippines",
-      "Ho Chi Minh City, Vietnam",
-      "Phnom Penh, Cambodia",
       "Juba, South Sudan"
     ]
   },
@@ -3126,14 +3105,12 @@
       "Port-au-Prince, Haiti"
     ]
   },
-  "Zwz1": {
+  "Zgz1": {
     "1": [],
     "2": [],
     "3": [],
     "4": [
-      "Mumbai, India",
-      "Bissau, Guinea-Bissau",
-      "Dili, Timor-Leste"
+      "Georgetown, Guyana"
     ]
   },
   "Zhz1": {
@@ -3141,18 +3118,15 @@
     "2": [],
     "3": [],
     "4": [
-      "Jakarta, Indonesia",
       "Kuala Lumpur, Malaysia",
       "Bandar Seri Begawan, Brunei",
       "Bangui, Central African Republic",
-      "Brazzaville, Congo",
       "Palikir, Federated States of Micronesia",
       "Tarawa, Kiribati",
       "Malé, Maldives",
       "Majuro, Marshall Islands",
       "Yaren, Nauru",
       "Ngerulmud, Palau",
-      "Panama City, Panama",
       "Singapore, Singapore",
       "Sri Jayawardenepura Kotte, Sri Lanka",
       "Paramaribo, Suriname",
@@ -3161,36 +3135,14 @@
       "Nukunonu, Tokelau (NZ)"
     ]
   },
-  "AwX": {
-    "1": [],
-    "2": [],
-    "3": [],
-    "4": [
-      "Chandrapur, India",
-      "Kota, India"
-    ]
-  },
   "AdX": {
     "1": [],
     "2": [],
     "3": [],
     "4": [
       "Kuwait City, Kuwait",
-      "Muscat, Oman",
-      "Doha, Qatar",
       "Riyadh, Saudi Arabia",
-      "Khartoum, Sudan",
-      "Dubai, United Arab Emirates",
       "Bourem, Mali"
-    ]
-  },
-  "Ahz2": {
-    "1": [],
-    "2": [],
-    "3": [],
-    "4": [
-      "Chennai, India",
-      "Hanoi, Vietnam"
     ]
   },
   "Ama2": {
@@ -3201,11 +3153,17 @@
       "Hanga Roa, Easter Island (CL)"
     ]
   },
-  "BmX": {
+  "Bmz2": {
     "1": [],
     "2": [],
     "3": [],
-    "4": []
+    "4": [
+      "Nicosia, Cyprus",
+      "Athens, Greece",
+      "Podgorica, Montenegro",
+      "Dushanbe, Tajikistan",
+      "Batman, Turkey"
+    ]
   },
   "Bsz2": {
     "1": [],
@@ -3221,20 +3179,10 @@
     "2": [],
     "3": [],
     "4": [
-      "Xi’an, China",
       "Dallas, Texas, United States",
       "San Antonio, Texas, United States",
       "Austin, Texas, United States",
       "Oklahoma City, Oklahoma, United States"
-    ]
-  },
-  "Bsa2": {
-    "1": [],
-    "2": [],
-    "3": [],
-    "4": [
-      "Mexico City, Mexico",
-      "San José de la Joya, Mexico"
     ]
   },
   "CdX": {

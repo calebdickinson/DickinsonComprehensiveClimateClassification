@@ -1,6 +1,6 @@
 import csv, json, os
 
-folder = os.path.expanduser("~/Documents")
+folder = os.path.dirname(os.path.abspath(__file__))
 
 files = {
     "citydata1.csv": "1",

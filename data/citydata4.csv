@@ -1,64 +1,62 @@
 name,classification
-"Bamako, Mali",ZwX
-"Niamey, Niger",ZwX
-"Managua, Nicaragua",Zsz2
+"Manila, Philippines",Zwz2
+"Bangkok, Thailand",Zwz2
+"Ho Chi Minh City, Vietnam",Zwz2
 "Ouagadougou, Burkina Faso",Zwz2
+"Phnom Penh, Cambodia",Zwz2
 "N'Djamena, Chad",Zwz2
-"Bangkok, Thailand",Zgz2
-"Manila, Philippines",Zhz2
-"Ho Chi Minh City, Vietnam",Zhz2
-"Phnom Penh, Cambodia",Zhz2
+"Bamako, Mali",Zwz2
+"Managua, Nicaragua",Zwz2
+"Niamey, Niger",Zwz2
 "Juba, South Sudan",Zhz2
 "Port-au-Prince, Haiti",Zsz1
+"Jakarta, Indonesia",Zwz1
 "Mumbai, India",Zwz1
+"Brazzaville, Congo",Zwz1
 "Bissau, Guinea-Bissau",Zwz1
+"Panama City, Panama",Zwz1
 "Dili, Timor-Leste",Zwz1
 "Georgetown, Guyana",Zgz1
-"Jakarta, Indonesia",Zhz1
 "Kuala Lumpur, Malaysia",Zhz1
 "Bandar Seri Begawan, Brunei",Zhz1
 "Bangui, Central African Republic",Zhz1
-"Brazzaville, Congo",Zhz1
 "Palikir, Federated States of Micronesia",Zhz1
 "Tarawa, Kiribati",Zhz1
 "Malé, Maldives",Zhz1
 "Majuro, Marshall Islands",Zhz1
 "Yaren, Nauru",Zhz1
 "Ngerulmud, Palau",Zhz1
-"Panama City, Panama",Zhz1
 "Singapore, Singapore",Zhz1
 "Sri Jayawardenepura Kotte, Sri Lanka",Zhz1
 "Paramaribo, Suriname",Zhz1
 "Funafuti, Tuvalu",Zhz1
 "Hagåtña, Guam, United States",Zhz1
 "Nukunonu, Tokelau (NZ)",Zhz1
-"Chandrapur, India",AwX
-"Kota, India",AwX
 "Kuwait City, Kuwait",AdX
-"Muscat, Oman",AdX
-"Doha, Qatar",AdX
 "Riyadh, Saudi Arabia",AdX
-"Khartoum, Sudan",AdX
-"Dubai, United Arab Emirates",AdX
 "Bourem, Mali",AdX
 "Guangzhou, China",Awz2
+"Chennai, India",Awz2
 "Hyderabad, India",Awz2
 "Vientiane, Laos",Awz2
 "Naypyidaw, Myanmar",Awz2
 "Abuja, Nigeria",Awz2
+"Hanoi, Vietnam",Awz2
+"Chandrapur, India",Awz2
+"Kota, India",Awz2
 "Karachi, Pakistan",Adz2
 "Manama, Bahrain",Adz2
-"Chennai, India",Ahz2
-"Hanoi, Vietnam",Ahz2
+"Muscat, Oman",Adz2
+"Doha, Qatar",Adz2
+"Khartoum, Sudan",Adz2
+"Dubai, United Arab Emirates",Adz2
 "Hanga Roa, Easter Island (CL)",Ama2
-"Luanda, Angola",Asz1
 "Honolulu, Hawaii, United States",Asz1
 "St. John's, Antigua and Barbuda",Asz1
 "Bridgetown, Barbados",Asz1
 "Djibouti, Djibouti",Asz1
 "Accra, Ghana",Asz1
 "St. George's, Grenada",Asz1
-"Tegucigalpa, Honduras",Asz1
 "Basseterre, Saint Kitts and Nevis",Asz1
 "Mogadishu, Somalia",Asz1
 "Lomé, Togo",Asz1
@@ -67,19 +65,26 @@ name,classification
 "Charlotte Amalie, United States Virgin Islands, United States",Asz1
 "Philipsburg, Sint Maarten (NL)",Asz1
 "Oranjestad, Sint Eustatius (NL)",Asz1
-"Salango Island, Ecuador",Asz1
 "Kolkata, India",Awz1
 "Dhaka, Bangladesh",Awz1
 "Shenzhen, China",Awz1
+"Bangalore, India",Awz1
+"Lagos, Nigeria",Awz1
+"Kinshasa, DR Congo",Awz1
+"Luanda, Angola",Awz1
 "Dongguan, China",Awz1
 "Brasília, Brazil",Awz1
+"San Salvador, El Salvador",Awz1
 "Banjul, Gambia",Awz1
 "Conakry, Guinea",Awz1
+"Tegucigalpa, Honduras",Awz1
+"Monrovia, Liberia",Awz1
 "Lilongwe, Malawi",Awz1
 "Maputo, Mozambique",Awz1
 "Freetown, Sierra Leone",Awz1
 "Lusaka, Zambia",Awz1
-"Bangalore, India",Agz1
+"Salango Island, Ecuador",Awz1
+"Trincomalee, Sri Lanka",Awz1
 "Miami, Florida, United States",Agz1
 "San Juan, Puerto Rico, United States",Agz1
 "Nassau, Bahamas",Agz1
@@ -88,7 +93,6 @@ name,classification
 "Havana, Cuba",Agz1
 "Roseau, Dominica",Agz1
 "Santo Domingo, Dominican Republic",Agz1
-"San Salvador, El Salvador",Agz1
 "Kingston, Jamaica",Agz1
 "Castries, Saint Lucia",Agz1
 "Kingstown, Saint Vincent and the Grenadines",Agz1
@@ -97,14 +101,11 @@ name,classification
 "Road Town, British Virgin Islands (UK)",Agz1
 "George Town, Cayman Islands (UK)",Agz1
 "San Juan, Puerto Rico, United States",Agz1
-"Trincomalee, Sri Lanka",Agz1
 "Nouakchott, Mauritania",Adz1
 "Dakar, Senegal",Adz1
 "Oranjestad, Aruba (NL)",Adz1
 "Willemstad, Curaçao (NL)",Adz1
 "Kralendijk, Bonaire (NL)",Adz1
-"Lagos, Nigeria",Ahz1
-"Kinshasa, DR Congo",Ahz1
 "Rio de Janeiro, Brazil",Ahz1
 "Taipei, Taiwan",Ahz1
 "Porto-Novo, Benin",Ahz1
@@ -113,7 +114,6 @@ name,classification
 "Malabo, Equatorial Guinea",Ahz1
 "Suva, Fiji",Ahz1
 "Libreville, Gabon",Ahz1
-"Monrovia, Liberia",Ahz1
 "Port Louis, Mauritius",Ahz1
 "Port Moresby, Papua New Guinea",Ahz1
 "Asunción, Paraguay",Ahz1
@@ -128,11 +128,12 @@ name,classification
 "Nouméa, New Caledonia (FR)",Ahz1
 "Mata-Utu, Wallis & Futuna (FR)",Ahz1
 "Alofi, Niue (NZ)",Ahz1
-"Guatemala City, Guatemala",Asa2
 "Caracas, Venezuela",Asa2
 "Jamestown, St Helena (UK)",Asa2
 "The Bottom, Saba (NL)",Asa2
+"Guatemala City, Guatemala",Awa2
 "Dodoma, Tanzania",Awa2
+"Santo Domingo, Ecuador",Awa2
 "Gitega, Burundi",Aga2
 "Brades, Montserrat (UK)",Aga2
 "Kingston, Norfolk Island (AU)",Aga2
@@ -147,18 +148,13 @@ name,classification
 "Adamstown, Pitcairn Islands (UK)",Aha2
 "Papeete, French Polynesia (FR)",Aha2
 "Avarua, Cook Islands (NZ)",Aha2
-"Santo Domingo, Ecuador",Aha2
 "Addis Ababa, Ethiopia",Awa1
-"Sharmokhiya, Iraq",BmX
 "Nicosia, Cyprus",Bmz2
 "Athens, Greece",Bmz2
 "Podgorica, Montenegro",Bmz2
 "Dushanbe, Tajikistan",Bmz2
 "Batman, Turkey",Bmz2
-"Phoenix, Arizona, United States",BdX
-"Las Vegas, Nevada, United States",BdX
 "Baghdad, Iraq",BdX
-"Ashgabat, Turkmenistan",BdX
 "El Menia, Algeria",BdX
 "Lake Havasu City, Arizona, United States",BdX
 "Los Angeles, California, United States",Bmz1
@@ -179,14 +175,17 @@ name,classification
 "Crystal City, Texas, United States",Bsz2
 "Delhi, India",Bwz2
 "Lahore, Pakistan",Bwz2
+"Xi’an, China",Bwz2
 "Zhengzhou, China",Bwz2
-"Xi’an, China",Bgz2
 "Dallas, Texas, United States",Bgz2
 "San Antonio, Texas, United States",Bgz2
 "Austin, Texas, United States",Bgz2
 "Oklahoma City, Oklahoma, United States",Bgz2
 "Cairo, Egypt",Bdz2
+"Phoenix, Arizona, United States",Bdz2
+"Las Vegas, Nevada, United States",Bdz2
 "Damascus, Syria",Bdz2
+"Ashgabat, Turkmenistan",Bdz2
 "Shanghai, China",Bhz2
 "Osaka, Japan",Bhz2
 "Chongqing, China",Bhz2
@@ -216,7 +215,6 @@ name,classification
 "Funchal, Madeira (PT)",Bma2
 "Vancouver, British Columbia, Canada",Bma2
 "Surrey, British Columbia, Canada",Bma2
-"Burnaby, British Columbia, Canada",Bma2
 "Richmond, British Columbia, Canada",Bma2
 "Abbotsford, British Columbia, Canada",Bma2
 "Coronado Islands, Mexico",Bma2
@@ -248,8 +246,7 @@ name,classification
 "Tallahassee, Florida, United States",Bhz1
 "Baton Rouge, Louisiana, United States",Bhz1
 "Cape Town, South Africa",Bma1
-"Mexico City, Mexico",Bsa2
-"San José de la Joya, Mexico",Bsa2
+"Mexico City, Mexico",Bwa2
 "Johannesburg, South Africa",Bwa2
 "Mbabane, Eswatini",Bwa2
 "Maseru, Lesotho",Bwa2
@@ -257,10 +254,12 @@ name,classification
 "Kathmandu, Nepal",Bwa2
 "Harare, Zimbabwe",Bwa2
 "Phungling, Nepal",Bwa2
+"San José de la Joya, Mexico",Bwa2
 "Asmara, Eritrea",Bga2
 "Montevideo, Uruguay",Bga2
 "Rabat, Morocco",Bda2
 "Buenos Aires, Argentina",Bha2
+"Burnaby, British Columbia, Canada",Bha2
 "Thimphu, Bhutan",Bwa1
 "Sucre, Bolivia",Bwa1
 "Bogotá, Colombia",Bga1
@@ -370,10 +369,6 @@ Heard Island and McDonald Islands (Coast),Cc2
 "Fredericton, New Brunswick, Canada",Chz1
 "Dieppe, New Brunswick, Canada",Chz1
 "Champaign, Illinois, United States",Chz1
-"Dublin, Ireland",Cma1
-"Amsterdam, Netherlands",Cma1
-"Sitka, Alaska, United States",Cma1
-"Ketchikan, Alaska, United States",Cma1
 "Denver, Colorado, United States",Csa2
 "Santa Fe, New Mexico, United States",Csa2
 "Cheyenne, Wyoming, United States",Csa2
@@ -405,23 +400,27 @@ Heard Island and McDonald Islands (Coast),Cc2
 "Miramichi, New Brunswick, Canada",Cha2
 "Corner Brook, Newfoundland and Labrador, Canada",Cha2
 "Charlottetown, Prince Edward Island, Canada",Cha2
-"Tórshavn, Faroe Islands (DK)",Cmb2
 "Prudhoe Bay, Alaska, United States",Cga1
 "Juneau, Alaska, United States",Cha1
+"Dublin, Ireland",Cha1
+"Amsterdam, Netherlands",Cha1
 "St. John's, Newfoundland and Labrador, Canada",Cha1
 "Conception Bay South, Newfoundland and Labrador, Canada",Cha1
 "Mount Pearl, Newfoundland and Labrador, Canada",Cha1
 "Paradise, Newfoundland and Labrador, Canada",Cha1
 "Anchorage, Alaska, United States",Cha1
 "Kalifornsky, Alaska, United States",Cha1
+"Sitka, Alaska, United States",Cha1
+"Ketchikan, Alaska, United States",Cha1
 "Kenai, Alaska, United States",Cha1
 "Bethel, Alaska, United States",Cha1
 "Sterling, Alaska, United States",Cha1
 "Utqiagvik, Alaska, United States",Csb2
+"Wainwright, Alaska, United States",Cwb2
 "Reykjavík, Iceland",Chb2
+"Tórshavn, Faroe Islands (DK)",Chb2
 "Longyearbyen, Svalbard & Jan Mayen (NO)",Chb2
 "Adak, Alaska, United States",Chb2
-"Wainwright, Alaska, United States",Chb2
 "Isachsen Research Station, Nunavut, Canada",Db1
 "Primavera Research Station, Antarctica",Dc2
 "Sharistan, Afghanistan",Dma2
