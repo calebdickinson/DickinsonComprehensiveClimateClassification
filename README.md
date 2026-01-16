@@ -5,6 +5,8 @@ https://www.dickinsonclimate.com/
 
 ## How it works
 
+Note: much of this workflow is very much out of date and has yet to be updated.
+
 The Dickinson climate classification is a new climate classification system inspired by the Köppen system, developed and maintained by Caleb Dickinson.
 
 Unlike the Köppen system, the Dickinson system contains hundreds of possible climates, many of which are hypothetical. 
