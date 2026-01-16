@@ -5,8 +5,6 @@ https://www.dickinsonclimate.com/
 
 ## How it works
 
-Note: much of this workflow is very much out of date and has yet to be updated.
-
 The Dickinson climate classification is a new climate classification system inspired by the Köppen system, developed and maintained by Caleb Dickinson.
 
 Unlike the Köppen system, the Dickinson system contains hundreds of possible climates, many of which are hypothetical. 
@@ -67,6 +65,7 @@ We omit the aridity score in climates that fall within subarctic, arctic, supera
 | C1   | Freezing Summer     | 0 - 5                       |
 | Y    | Frigid Summer       | Below 0                     |
 
+# Note: much of the following workflow is very much out of date and has yet to be updated.
 
 # How to run the JavaScript Google Earth Engine files in this repository
 
