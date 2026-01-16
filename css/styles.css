@@ -265,3 +265,9 @@ box-shadow:
   margin: 0 auto;          /* center the block itself */
   text-align: center;      /* center the text */
 }
+
+.no-transforms nav a:hover,
+.no-transforms .buttons-group button:hover,
+.no-transforms .box .ariditybox:not(.disabled):hover {
+  transform: none !important;
+}
