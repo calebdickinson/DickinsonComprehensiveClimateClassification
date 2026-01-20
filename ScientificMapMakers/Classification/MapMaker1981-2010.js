@@ -138,7 +138,6 @@ var clim = aridBase
     4
   )
 
-
   // Oceans, then cold override
   .where(oceanMask, 8)
   .where(coldCond, 7)
