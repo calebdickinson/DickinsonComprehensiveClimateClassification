@@ -1,4 +1,4 @@
-// === CHELSA UKESM ssp858 (2011–2040)
+// === CHELSA UKESM ssp858 (1981–2010)
 
 // ---------- Assets & constants ----------
 var ASSET_PREFIX = 'projects/ordinal-crowbar-459807-m2/assets/';  // ends with '/'
