@@ -114,9 +114,8 @@ var P6ratio = ee.ImageCollection.fromImages(sixMonthSums)
   .divide(P_ann)
   .rename('P6ratio');
 
-// ---------- Final climate class: Med first, then global monsoon, then oceans, then cold ----------
 var clim = aridBase
-  // Mediterranean (unchanged logic)
+  // Mediterranean
   .where(
     northMask.and(HS.lt(0.4))
       .or(southMask.and(HS.gt(0.6)))
@@ -138,7 +137,6 @@ var clim = aridBase
       ),
     4
   )
-
 
   // Oceans, then cold override
   .where(oceanMask, 8)
