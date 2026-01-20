@@ -1,4 +1,4 @@
-// === CHELSA v2.1 (1981–2010) — Aridity via CHELSA methods, not WorldClim ===
+// === CHELSA v2.1 (1981–2010) ===
 
 // ---------- Assets & constants ----------
 var ASSET_PREFIX = 'projects/ordinal-crowbar-459807-m2/assets/';  // ends with '/'
@@ -6,7 +6,7 @@ var PET_MEAN_ID  = ASSET_PREFIX + 'CHELSA_pet_penman_mean_1981-2010_V2-1'; // u1
 
 var NODATA_U16 = 65535;
 var SCALE_PR   = 0.1;  // CHELSA pr_u16: 0.1 → mm/month
-var SCALE_PET  = 0.1;  // Should be 1 for projections and 0.1 in baseline do to unit conversion
+var SCALE_PET  = 0.1;  // Should be 1 for projections and 0.1 in baseline due to unit conversion
 
 // ---------- Months helper ----------
 var months = ee.List.sequence(1, 12);
@@ -74,7 +74,7 @@ var P_hs    = prMonthly.filter(ee.Filter.inList('month', [4,5,6,7,8,9]))
 var PET_ann = petMeanMm.multiply(12).rename('PET_ann');         // mm/year
 var AI      = P_ann.divide(PET_ann).rename('AI');               // UNEP-style ratio
 
-// Treat masked AI (from PET mask) as ocean (like your working code)
+// Treat masked AI (from PET mask) as ocean
 var oceanMask = AI.mask().not();
 
 // ---------- Latitude zones (±23.43594°) ----------
@@ -83,10 +83,10 @@ var northMask = pixelLat.gt(23.43594);
 var tropic    = pixelLat.abs().lte(23.43594);
 var southMask = pixelLat.lt(-23.43594);
 
-// ---------- Base aridity classes (your thresholds from the “good” code) ----------
+// ---------- Base aridity classes ----------
 // Start as Humid(6); special ocean-ish guard at AI<=0.01; then SH/S/Desert
 var aridBase = ee.Image(6)       // 6 = Humid
-  .where(AI.lte(0.01), 8)        // 8 = (we'll keep as "ocean-ish" placeholder; real oceans set later)
+  .where(AI.lte(0.01), 8)        // 8 = ("ocean-ish" placeholder; real oceans set later)
   .where(AI.lt(0.075), 5)        // 5 = Semihumid
   .where(AI.lt(0.050), 2)        // 2 = Semiarid
   .where(AI.lt(0.025), 1)        // 1 = Arid Desert
@@ -114,9 +114,8 @@ var P6ratio = ee.ImageCollection.fromImages(sixMonthSums)
   .divide(P_ann)
   .rename('P6ratio');
 
-// ---------- Final climate class: Med first, then global monsoon, then oceans, then cold ----------
 var clim = aridBase
-  // Mediterranean (unchanged logic)
+  // Mediterranean
   .where(
     northMask.and(HS.lt(0.4))
       .or(southMask.and(HS.gt(0.6)))
@@ -140,7 +139,7 @@ var clim = aridBase
   )
 
 
-  // Oceans, then cold override (unchanged)
+  // Oceans, then cold override
   .where(oceanMask, 8)
   .where(coldCond, 7)
   .rename('climateClass');
@@ -152,8 +151,6 @@ var clim = aridBase
 
 // Driest-month precipitation (mm/month)
 var P_driest = prMonthly.min();
-
-// Apply override AFTER Mediterranean logic
 clim = clim.where(
   clim.eq(3) // Mediterranean only
     .and(P_driest.gte(PET_ann.divide(240))),
