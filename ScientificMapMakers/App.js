@@ -346,6 +346,7 @@ function getCodeAtPoint(pt, callback) {
 // 4. DISPLAY & UI
 // ————————————————————————
 
+var lastKnownSpeechText = null;
 var audioEnabled = false;
 var lastSpokenClimate = null;
 
@@ -422,25 +423,14 @@ var audioBtn = ui.Button({
 
     if (!audioEnabled) return;
 
-    // 🔓 Single synchronous utterance unlocks iOS audio
-    speechSynthesis.cancel();
-
-    ui.util.getCurrentPosition(function(pt) {
-      getCodeAtPoint(pt, function(full) {
-        if (!full) return;
-
-        var parts = splitCodeAndDescription(full);
-        lastSpokenClimate = parts.code;
-
-        speechSynthesis.speak(
-          new SpeechSynthesisUtterance(
-            'Welcome to ' +
-            spellClimateCode(parts.code) +
-            (parts.desc ? '. ' + parts.desc : '')
-          )
-        );
-      });
-    });
+    // 🔒 iOS-safe: speak ONLY cached text, synchronously
+    if (lastKnownSpeechText) {
+      speechSynthesis.cancel();
+      speechSynthesis.speak(
+        new SpeechSynthesisUtterance(lastKnownSpeechText)
+      );
+      lastSpokenClimate = lastKnownSpeechText;
+    }
   }
 });
 info.add(audioBtn);
@@ -501,13 +491,15 @@ function checkClimateAtCurrentLocation() {
       var parts = splitCodeAndDescription(full);
       var codeOnly = parts.code;
 
-      // Speak ONLY if climate actually changes
-      if (codeOnly !== lastSpokenClimate) {
-        speak(
-          'Welcome to ' +
-          spellClimateCode(codeOnly) +
-          (parts.desc ? '. ' + parts.desc : '')
-        );
+      // 🔹 CACHE speech text (no speaking yet)
+      lastKnownSpeechText =
+        'Welcome to ' +
+        spellClimateCode(parts.code) +
+        (parts.desc ? '. ' + parts.desc : '');
+
+      // Speak only if audio already enabled AND climate changed
+      if (audioEnabled && codeOnly !== lastSpokenClimate) {
+        speak(lastKnownSpeechText);
         lastSpokenClimate = codeOnly;
       }
     });
