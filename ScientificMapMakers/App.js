@@ -477,7 +477,11 @@ function checkClimateAtCurrentLocation() {
 }
 
 // Auto-request once on load
-ui.util.getCurrentPosition(showUserLocationFromPoint);
+ui.util.getCurrentPosition(function(pt){
+  showUserLocationFromPoint(pt);
+  checkClimateAtCurrentLocation(); // first narrated fix
+  startClimatePolling();           // then continue every 30s
+});
 
 // Check location every 30 seconds
 function startClimatePolling() {
@@ -533,7 +537,3 @@ function speak(text) {
     new SpeechSynthesisUtterance(text)
   );
 }
-
-// Start the climate narrator
-startClimatePolling();
-
