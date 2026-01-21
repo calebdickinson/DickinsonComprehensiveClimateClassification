@@ -525,9 +525,20 @@ function spellClimateCode(code) {
     .join(' ');
 }
 
+function normalizePronunciationForSpeech(text) {
+  if (!text) return text;
+
+  return text
+    // Force arid pronunciations
+    .replace(/\bSemiarid\b/gi, 'semi airid')
+    .replace(/\bArid\b/gi, 'airid');
+}
+
 function speak(text) {
   if (!text) return;
   if (typeof speechSynthesis === 'undefined') return;
+
+  text = normalizePronunciationForSpeech(text);
 
   speechSynthesis.cancel();
   speechSynthesis.speak(
