@@ -416,29 +416,20 @@ var audioBtn = ui.Button({
   label: '🔇 Audio off',
   style: { stretch: 'horizontal', margin: '6px 0 0 0' },
   onClick: function () {
+
     audioEnabled = !audioEnabled;
     audioBtn.setLabel(audioEnabled ? '🔊 Audio on' : '🔇 Audio off');
 
     if (!audioEnabled) return;
 
-    // Unlock iOS audio with a real utterance
-    ui.util.getCurrentPosition(function(pt) {
-      getCodeAtPoint(pt, function(full) {
-        if (!full) return;
+    // ✅ MUST be synchronous — this unlocks iOS audio
+    speechSynthesis.cancel();
+    speechSynthesis.speak(
+      new SpeechSynthesisUtterance('Audio enabled')
+    );
 
-        var parts = splitCodeAndDescription(full);
-        lastSpokenClimate = parts.code; // sync state
-
-        speechSynthesis.cancel();
-        speechSynthesis.speak(
-          new SpeechSynthesisUtterance(
-            'Welcome to ' +
-            spellClimateCode(parts.code) +
-            (parts.desc ? '. ' + parts.desc : '')
-          )
-        );
-      });
-    });
+    // Now that audio is unlocked, we can do async work
+    speakWelcomeAtCurrentLocation();
   }
 });
 info.add(audioBtn);
@@ -459,6 +450,23 @@ Map.onClick(function(coords) {
     );
   });
 });
+
+function speakWelcomeAtCurrentLocation() {
+  ui.util.getCurrentPosition(function(pt) {
+    getCodeAtPoint(pt, function(full) {
+      if (!full) return;
+
+      var parts = splitCodeAndDescription(full);
+      lastSpokenClimate = parts.code;
+
+      speak(
+        'Welcome to ' +
+        spellClimateCode(parts.code) +
+        (parts.desc ? '. ' + parts.desc : '')
+      );
+    });
+  });
+}
 
 // -------- Browser geolocation (Apps) --------
 var userLayer;
