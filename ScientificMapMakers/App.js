@@ -346,8 +346,8 @@ function getCodeAtPoint(pt, callback) {
 // 4. DISPLAY & UI
 // ————————————————————————
 
+var audioEnabled = false;
 var lastSpokenClimate = null;
-var hasWelcomed = false;
 
 // -------- Centered UI Panel --------
 var info = ui.Panel({
@@ -412,6 +412,37 @@ var youCodeLbl = ui.Label({
 });
 info.add(youCodeLbl);
 
+var audioBtn = ui.Button({
+  label: '🔇 Audio off',
+  style: { stretch: 'horizontal', margin: '6px 0 0 0' },
+  onClick: function () {
+    audioEnabled = !audioEnabled;
+    audioBtn.setLabel(audioEnabled ? '🔊 Audio on' : '🔇 Audio off');
+
+    if (!audioEnabled) return;
+
+    // Unlock iOS audio with a real utterance
+    ui.util.getCurrentPosition(function(pt) {
+      getCodeAtPoint(pt, function(full) {
+        if (!full) return;
+
+        var parts = splitCodeAndDescription(full);
+        lastSpokenClimate = parts.code; // sync state
+
+        speechSynthesis.cancel();
+        speechSynthesis.speak(
+          new SpeechSynthesisUtterance(
+            'Welcome to ' +
+            spellClimateCode(parts.code) +
+            (parts.desc ? '. ' + parts.desc : '')
+          )
+        );
+      });
+    });
+  }
+});
+info.add(audioBtn);
+
 ui.root.add(info);
 
 // -------- Map click → update top label --------
@@ -450,18 +481,6 @@ function checkClimateAtCurrentLocation() {
 
       var parts = splitCodeAndDescription(full);
       var codeOnly = parts.code;
-
-      // First successful fix → speak once
-      if (!hasWelcomed) {
-        speak(
-          'Welcome to ' +
-          spellClimateCode(codeOnly) +
-          (parts.desc ? '. ' + parts.desc : '')
-        );
-        lastSpokenClimate = codeOnly;
-        hasWelcomed = true;
-        return;
-      }
 
       // Speak ONLY if climate actually changes
       if (codeOnly !== lastSpokenClimate) {
@@ -529,6 +548,7 @@ function normalizePronunciationForSpeech(text) {
 function speak(text) {
   if (!text) return;
   if (typeof speechSynthesis === 'undefined') return;
+  if (!audioEnabled) return; // ← critical
 
   text = normalizePronunciationForSpeech(text);
 
@@ -537,3 +557,4 @@ function speak(text) {
     new SpeechSynthesisUtterance(text)
   );
 }
+
