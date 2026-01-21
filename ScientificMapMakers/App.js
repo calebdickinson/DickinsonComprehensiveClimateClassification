@@ -422,14 +422,25 @@ var audioBtn = ui.Button({
 
     if (!audioEnabled) return;
 
-    // ✅ MUST be synchronous — this unlocks iOS audio
+    // 🔓 Single synchronous utterance unlocks iOS audio
     speechSynthesis.cancel();
-    speechSynthesis.speak(
-      new SpeechSynthesisUtterance('Audio enabled')
-    );
 
-    // Now that audio is unlocked, we can do async work
-    speakWelcomeAtCurrentLocation();
+    ui.util.getCurrentPosition(function(pt) {
+      getCodeAtPoint(pt, function(full) {
+        if (!full) return;
+
+        var parts = splitCodeAndDescription(full);
+        lastSpokenClimate = parts.code;
+
+        speechSynthesis.speak(
+          new SpeechSynthesisUtterance(
+            'Welcome to ' +
+            spellClimateCode(parts.code) +
+            (parts.desc ? '. ' + parts.desc : '')
+          )
+        );
+      });
+    });
   }
 });
 info.add(audioBtn);
