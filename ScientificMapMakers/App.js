@@ -382,11 +382,12 @@ var clickCodeLbl = ui.Label({
 info.add(clickCodeLbl);
 
 // Divider
-info.add(ui.Label('────────────', {
+info.add(ui.Label('──────────────', {
+  fontWeight: 'bold',
+  fontSize: '30px',
   textAlign: 'center',
   stretch: 'horizontal',
-  color: '#777',
-  margin: '4px 0'
+  color: '#333'
 }));
 
 // Location header
@@ -410,13 +411,6 @@ var youCodeLbl = ui.Label({
   }
 });
 info.add(youCodeLbl);
-
-// Button
-info.add(ui.Button({
-  label: 'Use my location',
-  style: { stretch: 'horizontal', margin: '6px 0 0 0' },
-  onClick: requestUserLocation
-}));
 
 ui.root.add(info);
 
@@ -445,11 +439,6 @@ function showUserLocationFromPoint(pt) {
   getCodeAtPoint(pt, function(code) {
     youCodeLbl.setValue(code || '(no data)');
   });
-}
-
-function requestUserLocation() {
-  youCodeLbl.setValue('…');
-  ui.util.getCurrentPosition(showUserLocationFromPoint);
 }
 
 function checkClimateAtCurrentLocation() {
@@ -487,9 +476,8 @@ function checkClimateAtCurrentLocation() {
   });
 }
 
-
 // Auto-request once on load
-requestUserLocation();
+ui.util.getCurrentPosition(showUserLocationFromPoint);
 
 // Check location every 30 seconds
 function startClimatePolling() {
