@@ -425,3 +425,55 @@ warmestMonth.evaluate(function(v) {
 coldestMonth.evaluate(function(v) {
   print('Coldest month mean (°C):', ee.Number(v).multiply(10).round().divide(10));
 });
+
+// ====================================
+// Hottest and coldest month means
+// ====================================
+
+var tasMonthlyImgs = [];
+
+for (var m = 1; m <= 12; m++) {
+  var mm = (m < 10 ? '0' + m : '' + m);
+
+  var tas = ee.Image(
+      ASSET_PREFIX +
+      'CHELSA_ukesm1-0-ll_r1i1p1f1_w5e5_ssp585_tas_' +
+      mm + '_2071_2100_norm'
+    )
+    .updateMask(ee.Image(
+      ASSET_PREFIX +
+      'CHELSA_ukesm1-0-ll_r1i1p1f1_w5e5_ssp585_tas_' +
+      mm + '_2071_2100_norm'
+    ).neq(NODATA_U16))
+    .multiply(0.1)
+    .subtract(273.15)
+    .rename('tmeanC');
+
+  tasMonthlyImgs.push(tas);
+}
+
+var tasMonthlyIC = ee.ImageCollection(tasMonthlyImgs);
+
+// Reduce safely
+var warmestMonth = tasMonthlyIC.max().reduceRegion({
+  reducer: ee.Reducer.first(),
+  geometry: pt,
+  scale: 1000,
+  maxPixels: 1e9
+}).getNumber('tmeanC');
+
+var coldestMonth = tasMonthlyIC.min().reduceRegion({
+  reducer: ee.Reducer.first(),
+  geometry: pt,
+  scale: 1000,
+  maxPixels: 1e9
+}).getNumber('tmeanC');
+
+// Print (1 decimal)
+warmestMonth.evaluate(function(v) {
+  print('Hottest month mean (°C):', ee.Number(v).multiply(10).round().divide(10));
+});
+
+coldestMonth.evaluate(function(v) {
+  print('Coldest month mean (°C):', ee.Number(v).multiply(10).round().divide(10));
+});
