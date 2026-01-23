@@ -3,8 +3,8 @@ var ASSET_PREFIX = 'projects/ordinal-crowbar-459807-m2/assets/';  // ends with '
 var NODATA_U16   = 65535;
 var SCALE_PR     = 0.1;   // CHELSA pr_u16: 0.1 → mm/month
 
-var LAT = 39.7392;
-var LON = -104.9903;
+var LAT = -30.0346;
+var LON = -51.2177;
 
 var pt  = ee.Geometry.Point([LON, LAT]);
 
@@ -21,7 +21,7 @@ for (var m = 1; m <= 12; m++) {
   var mm = (m < 10 ? '0' + m : '' + m);
 
   // tasmax (K*0.1 → °C)
-  var rawMax = ee.Image(ASSET_PREFIX + 'CHELSA_tasmax_' + mm + '_1981-2010_V2-1');
+  var rawMax = ee.Image(ASSET_PREFIX + 'CHELSA_ukesm1-0-ll_r1i1p1f1_w5e5_ssp585_tasmax_' + mm + '_2071_2100_norm');
   var tmaxC  = rawMax
     .updateMask(rawMax.neq(NODATA_U16))
     .multiply(0.1)
@@ -31,7 +31,7 @@ for (var m = 1; m <= 12; m++) {
   tasmaxImgs.push(tmaxC);
 
   // tasmin (K*0.1 → °C)
-  var rawMin = ee.Image(ASSET_PREFIX + 'CHELSA_tasmin_' + mm + '_1981-2010_V2-1');
+  var rawMin = ee.Image(ASSET_PREFIX + 'CHELSA_ukesm1-0-ll_r1i1p1f1_w5e5_ssp585_tasmin_' + mm + '_2071_2100_norm');
   var tminC  = rawMin
     .updateMask(rawMin.neq(NODATA_U16))
     .multiply(0.1)
@@ -50,7 +50,7 @@ var tasminMonthly = ee.ImageCollection(tasminImgs);
 var prImgs = [];
 for (var n = 1; n <= 12; n++) {
   var nn = (n < 10 ? '0' + n : '' + n);
-  var rawPr = ee.Image(ASSET_PREFIX + 'CHELSA_pr_' + nn + '_1981-2010_V2-1_u16');
+  var rawPr = ee.Image(ASSET_PREFIX + 'CHELSA_ukesm1-0-ll_r1i1p1f1_w5e5_ssp585_pr_' + nn + '_2071_2100_norm');
   var pr = rawPr
     .updateMask(rawPr.neq(NODATA_U16))
     .multiply(SCALE_PR)
@@ -175,7 +175,9 @@ for (var m = 1; m <= 12; m++) {
   var mm = (m < 10 ? '0' + m : '' + m);
 
   var id = ASSET_PREFIX +
-  'CHELSA_tas_' + mm + '_1981-2010_V2-1_u16';
+    'CHELSA_ukesm1-0-ll_r1i1p1f1_w5e5_ssp585_tas_' +
+    mm +
+    '_2071_2100_norm';
 
   var raw = ee.Image(id);
 
@@ -349,8 +351,8 @@ koppen.evaluate(function(k){
 // AI (P / PET) — numeric printout (POINT-BASED)
 // ====================================
 
-var PET_MEAN_ID = ASSET_PREFIX + 'CHELSA_pet_penman_mean_1981-2010_V2-1';
-var SCALE_PET   = 0.01;
+var PET_MEAN_ID = ASSET_PREFIX + 'CHELSA_pet_penman_mean_2071-2100';
+var SCALE_PET   = 0.1;  // projections = 1 (baseline would be 0.1)
 
 // PET mean image (mm/month), masked
 var petMeanMmImg = ee.Image(PET_MEAN_ID)
@@ -371,3 +373,55 @@ var aiAtPoint = annualPr.divide(petAnnAtPoint);
 print('Annual precipitation (mm):', annualPr.round());
 print('Annual PET (mm):', petAnnAtPoint.round());
 print('Aridity Index (P/PET):', aiAtPoint.multiply(1000).round().divide(1000));
+
+// ====================================
+// Hottest and coldest month means
+// ====================================
+
+var tasMonthlyImgs = [];
+
+for (var m = 1; m <= 12; m++) {
+  var mm = (m < 10 ? '0' + m : '' + m);
+
+  var tas = ee.Image(
+      ASSET_PREFIX +
+      'CHELSA_ukesm1-0-ll_r1i1p1f1_w5e5_ssp585_tas_' +
+      mm + '_2071_2100_norm'
+    )
+    .updateMask(ee.Image(
+      ASSET_PREFIX +
+      'CHELSA_ukesm1-0-ll_r1i1p1f1_w5e5_ssp585_tas_' +
+      mm + '_2071_2100_norm'
+    ).neq(NODATA_U16))
+    .multiply(0.1)
+    .subtract(273.15)
+    .rename('tmeanC');
+
+  tasMonthlyImgs.push(tas);
+}
+
+var tasMonthlyIC = ee.ImageCollection(tasMonthlyImgs);
+
+// Reduce safely
+var warmestMonth = tasMonthlyIC.max().reduceRegion({
+  reducer: ee.Reducer.first(),
+  geometry: pt,
+  scale: 1000,
+  maxPixels: 1e9
+}).getNumber('tmeanC');
+
+var coldestMonth = tasMonthlyIC.min().reduceRegion({
+  reducer: ee.Reducer.first(),
+  geometry: pt,
+  scale: 1000,
+  maxPixels: 1e9
+}).getNumber('tmeanC');
+
+// Print (1 decimal)
+warmestMonth.evaluate(function(v) {
+  print('Hottest month mean (°C):', ee.Number(v).multiply(10).round().divide(10));
+});
+
+coldestMonth.evaluate(function(v) {
+  print('Coldest month mean (°C):', ee.Number(v).multiply(10).round().divide(10));
+});
