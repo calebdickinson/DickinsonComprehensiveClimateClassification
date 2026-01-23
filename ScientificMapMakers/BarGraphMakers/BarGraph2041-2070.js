@@ -386,12 +386,12 @@ for (var m = 1; m <= 12; m++) {
   var tas = ee.Image(
       ASSET_PREFIX +
       'CHELSA_ukesm1-0-ll_r1i1p1f1_w5e5_ssp585_tas_' +
-      mm + '_2071_2100_norm'
+      mm + '_2041_2070_norm'
     )
     .updateMask(ee.Image(
       ASSET_PREFIX +
       'CHELSA_ukesm1-0-ll_r1i1p1f1_w5e5_ssp585_tas_' +
-      mm + '_2071_2100_norm'
+      mm + '_2041_2070_norm'
     ).neq(NODATA_U16))
     .multiply(0.1)
     .subtract(273.15)
