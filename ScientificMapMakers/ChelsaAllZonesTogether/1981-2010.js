@@ -162,8 +162,8 @@ clim = clim.where(
 // ===========================
 function classifySummer(tC) {
   return ee.Image.constant(0)
-    .where( tC.gte(42).and(tC.lt(50)),  1) // X
-    .where( tC.gte(35).and(tC.lt(42)),  2) // Z2
+    .where( tC.gte(40).and(tC.lt(50)),  1) // X
+    .where( tC.gte(35).and(tC.lt(40)),  2) // Z2
     .where( tC.gte(30).and(tC.lt(35)),  3) // Z1
     .where( tC.gte(25).and(tC.lt(30)),  4) // A2
     .where( tC.gte(20).and(tC.lt(25)),  5) // A1
