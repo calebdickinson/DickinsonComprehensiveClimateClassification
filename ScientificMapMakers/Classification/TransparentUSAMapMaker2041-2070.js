@@ -205,13 +205,13 @@ var lastDigit  = 4;   // Ones place
 // === Build the color map dynamically ===
 var codeColorMap = {};
 
-//codeColorMap[firstDigit * 100 + 10 + lastDigit] = "#ff0000"; // Arid ---------- ff0000
+codeColorMap[firstDigit * 100 + 10 + lastDigit] = "#ff0000"; // Arid ---------- ff0000
 codeColorMap[firstDigit * 100 + 20 + lastDigit] = "#ff8800"; // Semiarid ------ ff8800
-//codeColorMap[firstDigit * 100 + 30 + lastDigit] = "#ffff00"; // Mediterranean - ffff00
-//codeColorMap[firstDigit * 100 + 40 + lastDigit] = "#ff00ff"; // Monsoon ------- ff00ff
-//codeColorMap[firstDigit * 100 + 50 + lastDigit] = "#00ff00"; // Semihumid ----- 00ff00
-//codeColorMap[firstDigit * 100 + 60 + lastDigit] = "#008800"; // Humid --------- 008800
-//codeColorMap[firstDigit * 100 + 80 + lastDigit] = "#00ffff"; // Ocean --------- 00ffff
+codeColorMap[firstDigit * 100 + 30 + lastDigit] = "#ffff00"; // Mediterranean - ffff00
+codeColorMap[firstDigit * 100 + 40 + lastDigit] = "#ff00ff"; // Monsoon ------- ff00ff
+codeColorMap[firstDigit * 100 + 50 + lastDigit] = "#00ff00"; // Semihumid ----- 00ff00
+codeColorMap[firstDigit * 100 + 60 + lastDigit] = "#008800"; // Humid --------- 008800
+codeColorMap[firstDigit * 100 + 80 + lastDigit] = "#00ffff"; // Ocean --------- 00ffff
 
 // codeColorMap[7 * 100 + 70 + 3] = "#000000"; // Polar/Subpolar/Alpine ------- 000000
 
