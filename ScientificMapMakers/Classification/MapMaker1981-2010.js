@@ -244,8 +244,7 @@ var world = ee.Geometry.Rectangle(
 var climateRGB = discrete.visualize({
   min: 0,
   max: indices.length - 1,
-  palette: palette,
-  opacity: 0.85
+  palette: palette
 });
 
 // ---------- Admin-1 borders ----------
@@ -254,10 +253,9 @@ var admin1 =
 
 var admin1RGB = ee.Image()
   .byte()
-  .paint(admin1, 1, 1)      // 1 px
+  .paint(admin1, 1, 1) // 1 px wide border lines
   .visualize({
-    palette: ['888888'],    // gray
-    opacity: 0.25
+    palette: ['888888']
   });
 
 // =======================================================
@@ -266,8 +264,7 @@ var admin1RGB = ee.Image()
 
 // ---------- Black background (fills transparency) ----------
 var blackBG = ee.Image(1).visualize({
-  palette: ['000000'],
-  opacity: 1.0
+  palette: ['000000']
 });
 
 var composite = ee.ImageCollection([
