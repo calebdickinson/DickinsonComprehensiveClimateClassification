@@ -231,3 +231,68 @@ Map.addLayer(
   'Climate (CHELSA inputs & method)',
   true, 0.7
 );
+
+// =======================================================
+// World thumbnail: climate + admin-0 and admin-1 borders
+// =======================================================
+
+// ---------- Non-geodesic world rectangle ----------
+var world = ee.Geometry.Rectangle(
+  [-180, -90, 180, 90],
+  null,
+  false
+);
+
+// ---------- Climate overlay ----------
+var climateRGB = discrete.visualize({
+  min: 0,
+  max: indices.length - 1,
+  palette: palette,
+  opacity: 0.85
+});
+
+// ---------- Country borders  ----------
+var countries =
+  ee.FeatureCollection('FAO/GAUL_SIMPLIFIED_500m/2015/level0');
+
+var countryRGB = ee.Image()
+  .byte()
+  .paint(countries, 1, 1)   // 1 px
+  .visualize({
+    palette: ['444444'],
+    opacity: 0.6
+  });
+
+// ---------- Admin-1 borders ----------
+var admin1 =
+  ee.FeatureCollection('FAO/GAUL_SIMPLIFIED_500m/2015/level1');
+
+var admin1RGB = ee.Image()
+  .byte()
+  .paint(admin1, 1, 1)      // 1 px
+  .visualize({
+    palette: ['777777'],    // lighter gray
+    opacity: 0.25
+  });
+
+// =======================================================
+// Composite (background → climate → admin-0 → admin-1)
+// =======================================================
+
+var composite = ee.ImageCollection([
+  climateRGB,
+  countryRGB,
+  admin1RGB
+]).mosaic();
+
+// =======================================================
+// PNG thumbnail
+// =======================================================
+
+var thumbUrl = composite.getThumbURL({
+  region: world,
+  dimensions: '4096x2048',
+  format: 'png'
+});
+
+print('World thumbnail URL:', thumbUrl);
