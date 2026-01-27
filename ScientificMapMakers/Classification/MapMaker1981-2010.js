@@ -248,18 +248,6 @@ var climateRGB = discrete.visualize({
   opacity: 0.85
 });
 
-// ---------- Country borders  ----------
-var countries =
-  ee.FeatureCollection('FAO/GAUL_SIMPLIFIED_500m/2015/level0');
-
-var countryRGB = ee.Image()
-  .byte()
-  .paint(countries, 1, 1)   // 1 px
-  .visualize({
-    palette: ['444444'],
-    opacity: 0.6
-  });
-
 // ---------- Admin-1 borders ----------
 var admin1 =
   ee.FeatureCollection('FAO/GAUL_SIMPLIFIED_500m/2015/level1');
@@ -268,7 +256,7 @@ var admin1RGB = ee.Image()
   .byte()
   .paint(admin1, 1, 1)      // 1 px
   .visualize({
-    palette: ['777777'],    // lighter gray
+    palette: ['444444'],    // gray
     opacity: 0.25
   });
 
@@ -276,10 +264,16 @@ var admin1RGB = ee.Image()
 // Composite (background → climate → admin-0 → admin-1)
 // =======================================================
 
+// ---------- Black background (fills transparency) ----------
+var blackBG = ee.Image(1).visualize({
+  palette: ['000000'],
+  opacity: 1.0
+});
+
 var composite = ee.ImageCollection([
-  climateRGB,
-  countryRGB,
-  admin1RGB
+  blackBG,
+  admin1RGB,
+  climateRGB
 ]).mosaic();
 
 // =======================================================
