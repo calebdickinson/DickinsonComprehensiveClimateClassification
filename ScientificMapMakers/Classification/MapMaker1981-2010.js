@@ -256,7 +256,7 @@ var admin1RGB = ee.Image()
   .byte()
   .paint(admin1, 1, 1)      // 1 px
   .visualize({
-    palette: ['444444'],    // gray
+    palette: ['888888'],    // gray
     opacity: 0.25
   });
 
