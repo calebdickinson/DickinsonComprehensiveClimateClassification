@@ -258,7 +258,7 @@ var admin1RGB = ee.Image()
   .byte()
   .paint(admin1, 1, 1) // 1 px wide border lines
   .visualize({
-    palette: ['666666']
+    palette: ['bbbbbb']
   });
 
 // =======================================================
