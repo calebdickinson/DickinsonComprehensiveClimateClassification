@@ -229,9 +229,9 @@ Map.addLayer(
   true, 0.7
 );
 
-// =======================================================
+// ======================================================
 // World thumbnail: climate + admin-0 and admin-1 borders
-// =======================================================
+// ======================================================
 
 // ---------- Non-geodesic world rectangle ----------
 var world = ee.Geometry.Rectangle(
@@ -247,36 +247,36 @@ var climateRGB = discrete.visualize({
   palette: palette
 });
 
-// ---------- Admin-1 borders ----------
-var admin1 =
-  ee.FeatureCollection('FAO/GAUL_SIMPLIFIED_500m/2015/level1');
+// ---------- Admin-0 borders ----------
+var admin0Clean = ee.Image(
+  'projects/ordinal-crowbar-459807-m2/assets/gaul0_georef'
+);
 
-var admin1RGB = ee.Image()
-  .byte()
-  .paint(admin1, 1, 1) // 1 px wide border lines
+var admin0RGB = admin0Clean
+  .select(['b1', 'b2', 'b3'])            // RGB
+  .updateMask(admin0Clean.select('b4'))  // alpha
+  .rename(['vis-red', 'vis-green', 'vis-blue']);
+  
+// ---------- Admin-1 borders (CLEAN raster asset) ----------
+var admin1Clean = ee.Image(
+  'projects/ordinal-crowbar-459807-m2/assets/gaul1_georef'
+);
+
+var admin1RGB = ee.Image(1)
+  .updateMask(admin1Clean.select('b4')) // alpha
   .visualize({
-    palette: ['bbbbbb']
+    palette: ['#888888'],
+    opacity: 0.5
   });
 
-// =======================================================
-// Composite (background → climate → admin-0 → admin-1)
-// =======================================================
-
-// ---------- Black background (fills transparency) ----------
-var blackBG = ee.Image(1).visualize({
-  palette: ['000000']
-});
-
+// ---------- Composite ----------
 var composite = ee.ImageCollection([
-  blackBG,
+  climateRGB,
   admin1RGB,
-  climateRGB
+  admin0RGB,
 ]).mosaic();
 
-// =======================================================
-// PNG thumbnail
-// =======================================================
-
+// ---------- PNG thumbnail ----------
 var thumbUrl = composite.getThumbURL({
   region: world,
   dimensions: '4096x2048',
