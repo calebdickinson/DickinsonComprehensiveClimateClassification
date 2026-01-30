@@ -1,102 +1,88 @@
 // === Aridity Map (CHELSA v2.1, 1981–2010)
 
 var PREFIX      = 'projects/ordinal-crowbar-459807-m2/assets/';  // ends with '/'
-var PET_MEAN_ID = PREFIX + 'CHELSA_pet_penman_mean_1981-2010_V2-1';
+var PET_MEAN_ID = PREFIX + 'CHELSA_pet_penman_mean_1981-2010_V2-1'; // adjust if needed
 
-var SCALE_PR  = 0.1;   // pr_u16 → mm/month
-var SCALE_PET = 0.1;   // pet_u16 mean → mm/month
+var SCALE_PR  = 0.1;  // pr_u16: 0.1 → mm/month (set to 1.0 if already mm)
+var SCALE_PET = 0.1;  // pet_u16 mean: 0.1 → mm/month (set to 1.0 if float)
 var NODATA_U16 = 65535;
 
-// =====================================================
-// TEMPERATURE (°C)
-// =====================================================
+// ----- tas (°C) from your u16 monthly files -----
 var tasImgs = [];
 for (var m = 1; m <= 12; m++) {
   var mm = (m < 10 ? '0' + m : '' + m);
   var id = PREFIX + 'CHELSA_tas_' + mm + '_1981-2010_V2-1_u16';
-
   var tasC = ee.Image(id)
     .updateMask(ee.Image(id).neq(NODATA_U16))
-    .multiply(0.1).subtract(273.15)
+    .multiply(0.1).subtract(273.15)   // 0.1 K → °C
     .rename('monthlyMean')
     .set('month', m);
-
   tasImgs.push(tasC);
 }
-
 var tasMonthly = ee.ImageCollection(tasImgs);
 
 var hottestC_global = tasMonthly
   .qualityMosaic('monthlyMean')
+  .select('monthlyMean')
   .rename('hottestC');
 
 var coldestC_global = tasMonthly
-  .map(function(img){ return img.multiply(-1); })
+  .map(function (img) { return img.multiply(-1).copyProperties(img); })
   .qualityMosaic('monthlyMean')
   .multiply(-1)
+  .select('monthlyMean')
   .rename('coldestC');
 
-// No-aridity (cold) condition
+// Precompute the "no aridity" cold condition once
 var coldCond = hottestC_global.lt(15).or(coldestC_global.lt(-20));
 
-// =====================================================
-// PRECIPITATION (mm/month)
-// =====================================================
+// ----- pr (mm/month) from your u16 monthly files -----
 var prImgs = [];
 for (var n = 1; n <= 12; n++) {
   var nn = (n < 10 ? '0' + n : '' + n);
   var pid = PREFIX + 'CHELSA_pr_' + nn + '_1981-2010_V2-1_u16';
-
   var pr = ee.Image(pid)
     .updateMask(ee.Image(pid).neq(NODATA_U16))
     .multiply(SCALE_PR)
     .rename('pr')
     .set('month', n);
-
   prImgs.push(pr);
 }
 var prMonthly = ee.ImageCollection(prImgs);
 
-// =====================================================
-// PET (mm/month)
-// =====================================================
-var petRaw    = ee.Image(PET_MEAN_ID);
-var petMasked = petRaw.updateMask(petRaw.neq(NODATA_U16));
-var petMeanMm = petMasked.multiply(SCALE_PET).rename('pet_mm');
+// ----- PET mean (mm/month) from your uploaded asset -----
+var petRaw     = ee.Image(PET_MEAN_ID);
+var petMasked  = petRaw.updateMask(petRaw.neq(NODATA_U16));
+var petMeanMm  = petMasked.multiply(SCALE_PET).rename('pet_mean_mm_per_month');
 
-// =====================================================
-// ANNUAL TOTALS & RATIOS
-// =====================================================
-var P_ann   = prMonthly.sum().rename('P_ann');
-var P_hs    = prMonthly.filter(ee.Filter.inList('month', [4,5,6,7,8,9])).sum();
-var PET_ann = petMeanMm.multiply(12).rename('PET_ann');
+// Annual sums / ratios
+var P_ann   = prMonthly.sum().rename('P_ann');          // mm/year
+var P_hs    = prMonthly.filter(ee.Filter.inList('month', [4,5,6,7,8,9])).sum().rename('P_highSun');
+var PET_ann = petMeanMm.multiply(12).rename('PET_ann'); // mm/year
 var AI      = P_ann.divide(PET_ann).rename('AI');
 
-// Ocean from PET mask
+// Treat masked AI (from PET mask) as ocean
 var oceanMask = AI.mask().not();
 
-// =====================================================
-// LATITUDE ZONES
-// =====================================================
-var lat = ee.Image.pixelLonLat().select('latitude');
-var northMask = lat.gt(23.43594);
-var southMask = lat.lt(-23.43594);
+// ---------- Latitude zones (±23.43594°) ----------
+var pixelLat = ee.Image.pixelLonLat().select('latitude');
+var northMask = pixelLat.gt(23.43594);
+var tropic    = pixelLat.abs().lte(23.43594);
+var southMask = pixelLat.lt(-23.43594);
 
-// =====================================================
-// BASE ARIDITY CLASSES
-// =====================================================
+// ---------- Base aridity classes (your thresholds from the “good” code) ----------
+// Start as Humid(6); special ocean-ish guard at AI<=0.01; then SH/S/Desert
 var aridBase = ee.Image(6)       // 6 = Humid
-  .where(AI.lte(0.01), 8)        // ocean-ish guard
-  .where(AI.lt(0.075), 5)        // Semihumid
-  .where(AI.lt(0.050), 2)        // Semiarid
-  .where(AI.lt(0.025), 1)        // Arid desert
+  .where(AI.lte(0.01), 8)        // 8 = (we'll keep as "ocean-ish" placeholder; real oceans set later)
+  .where(AI.lt(0.075), 5)        // 5 = Semihumid
+  .where(AI.lt(0.050), 2)        // 2 = Semiarid
+  .where(AI.lt(0.025), 1)        // 1 = Arid Desert
   .rename('aridity');
 
-// =====================================================
-// SEASONALITY METRICS
-// =====================================================
-var HS = P_hs.divide(P_ann).rename('HS');
+// ---------- HS ratio (Apr–Sep share) ----------
+var HS = P_hs.divide(P_ann).rename('HS_ratio');
 
+// ---------- Rolling 6-month precipitation dominance (global) ----------
 var prList = prMonthly.sort('month').toList(12);
 
 var sixMonthSums = ee.List.sequence(0, 11).map(function(start){
@@ -115,12 +101,9 @@ var P6ratio = ee.ImageCollection.fromImages(sixMonthSums)
   .divide(P_ann)
   .rename('P6ratio');
 
-// =====================================================
-// FINAL CLIMATE CLASS
-// =====================================================
+// ---------- Final climate class: Med first, then global monsoon, then oceans, then cold ----------
 var clim = aridBase
-
-  // Mediterranean
+  // Mediterranean (unchanged logic)
   .where(
     northMask.and(HS.lt(0.4))
       .or(southMask.and(HS.gt(0.6)))
@@ -129,7 +112,8 @@ var clim = aridBase
     3
   )
 
-  // Global monsoon
+  // Global monsoon: ≥80% precip in ANY 6 consecutive months,
+  // not Mediterranean, not Arid Desert, not ocean
   .where(
     P6ratio.gte(0.8)
       .and(aridBase.neq(1))
@@ -142,46 +126,37 @@ var clim = aridBase
     4
   )
 
-  // Oceans and cold override
+  // Oceans, then cold override (unchanged)
   .where(oceanMask, 8)
   .where(coldCond, 7)
   .rename('climateClass');
 
-// =====================================================
-// SPECIAL OVERRIDE: Mediterranean rainforest → humid
-// =====================================================
+// ===========================
+// Special rule:
+// Temperate rainforest with Mediterranean percipitation seasonality ratio → reclassified as humid
+// ===========================
+
+// Driest-month precipitation (mm/month)
 var P_driest = prMonthly.min();
 
+// Apply override AFTER Mediterranean logic
 clim = clim.where(
-  clim.eq(3)
+  clim.eq(3) // Mediterranean only
     .and(P_driest.gte(PET_ann.divide(240))),
-  6
+  6          // Reclassify as Humid
 );
 
-// =====================================================
-// VISIBILITY MASK (KEY PART)
-// =====================================================
-var allowedMask = clim.eq(1)
-  .or(clim.eq(2))
-  .or(clim.eq(3))
-  .or(clim.eq(4))
-  .or(clim.eq(5))
-  .or(clim.eq(6));
-
-// =====================================================
-// VISUALIZATION
-// =====================================================
+// Visualization
 var codeColorMap = {
-  1: "#FF0000", // Arid desert
-  2: "#FFA500", // Semiarid
-  3: "#FFFF00", // Mediterranean
-  4: "#FF00FF", // Monsoon
-  5: "#00FF00", // Semihumid
-  6: "#006600", // Humid
-  7: "#0000FF", // cold (hidden)
-  8: "#008888"  // ocean (hidden)
+  1: "#FF0000", // D: Arid Desert
+  2: "#FFA500", // S: Semiarid
+  3: "#FFFF00", // M: Mediterranean
+  4: "#FF00FF", // W: Monsoon
+  5: "#00FF00", // G: Semihumid
+  6: "#006600", // H: Humid
+  7: "#0000FF", // no aridity (cold)
+  8: "#008888"  // ocean
 };
-
 var keys    = Object.keys(codeColorMap);
 var codes   = keys.map(function(k){ return parseInt(k, 10); });
 var palette = keys.map(function(k){ return codeColorMap[k]; });
@@ -190,9 +165,8 @@ var indices = codes.map(function(_, i){ return i; });
 var discrete = clim.remap(codes, indices, -1).rename('classIndex');
 
 Map.addLayer(
-  discrete.updateMask(allowedMask),
+  discrete.updateMask(clim.neq(8)), // remove .updateMask(clim.neq(8)) to show ocean color
   { min: 0, max: indices.length - 1, palette: palette },
-  'Aridity & seasonality climates only (CHELSA 1981–2010)',
-  true,
-  0.8
+  'Climate (CHELSA, oceans included; cold wins)',
+  true, 0.7
 );
