@@ -1,40 +1,40 @@
 {
   "YY": {
-    "image": "Image of Concordia Station, Antarctica in summer",
-    "credit": "<a href='https://commons.wikimedia.org/wiki/File:ConcordiaFromTower.jpg' target='_blank'>Photo by StephenHudson</a> via Wikimedia Commons (public domain)"
+    "media": "<a href=\"https://commons.wikimedia.org/wiki/File:ConcordiaFromTower.jpg\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/ConcordiaFromTower.jpg/1024px-ConcordiaFromTower.jpg\"></a>"
+  },
+
+  "Yb2": {
+    "media": "<a href=\"https://commons.wikimedia.org/wiki/File:Oymyakon_forests.jpg\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Oymyakon_forests.jpg/1024px-Oymyakon_forests.jpg\"></a>",
+    "media2": "<iframe src=\"https://www.youtube.com/embed/w6fyb46Z-SM\" allowfullscreen></iframe>"
   },
 
   "GY": {
-    "image": "Image of Svea Station, Antarctica in summer",
-    "credit": "<a href='https://commons.wikimedia.org/wiki/File:Svea_field_station_in_Antarctica.jpg' target='_blank'>Photo by Wilfred Bauer</a> via Wikimedia Commons, licensed under <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.en' target='_blank'>CC BY-SA 3.0</a> (unmodified)"
+    "media": "<a href=\"https://commons.wikimedia.org/wiki/File:Svea_field_station_in_Antarctica.jpg\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Svea_field_station_in_Antarctica.jpg/1024px-Svea_field_station_in_Antarctica.jpg\"></a>"
   },
 
   "FY": {
-    "image": "Image of McMurdo Station, Antarctica in late spring",
-    "credit": "<a href='https://commons.wikimedia.org/wiki/File:McMurdo-Station_aus_der_Vogelperspektive_(16481391425).jpg' target='_blank'>Photo by Marco Feldmann/FH Aachen</a> via Wikimedia Commons, licensed under <a href='https://creativecommons.org/licenses/by/2.0/' target='_blank'>CC BY 2.0</a> (unmodified)",
-    "video": "<a href='https://www.youtube.com/watch?v=qz2SeEzxMuE' target='_blank'>Video of winter weather at McMurdo Station in Antarctica</a>."
+    "media": "<a href=\"https://commons.wikimedia.org/wiki/File:McMurdo-Station_aus_der_Vogelperspektive_(16481391425).jpg\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/McMurdo-Station_aus_der_Vogelperspektive_(16481391425).jpg/1024px-McMurdo-Station_aus_der_Vogelperspektive_(16481391425).jpg\"></a>",
+    "media2": "<iframe src=\"https://www.youtube.com/embed/qz2SeEzxMuE\" allowfullscreen></iframe>"
   },
 
   "EY": {
-    "image": "Image of Casey Station, Antarctica in spring",
-    "credit": "<a href='https://commons.wikimedia.org/wiki/File:Casey_Station_November_2005.jpg' target='_blank'>Photo by Graham Denyer</a> via Wikimedia Commons, licensed under <a href='https://creativecommons.org/licenses/by-sa/4.0/deed.en#ref-indicate-changes' target='_blank'>CC BY-SA 4.0</a> (unmodified)",
-    "video": "<a href='https://www.youtube.com/watch?v=x5XXF6U6vDQ' target='_blank'>Video of winter weather at Mawson Station, Antarctica</a>",
-    "video2": "<a href='https://www.youtube.com/watch?v=NwEFqdHVwiA' target='_blank'>Video of penguins near Mawson Station, Antarctica in summer</a>"
+    "media": "<a href=\"https://commons.wikimedia.org/wiki/File:Casey_Station_November_2005.jpg\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Casey_Station_November_2005.jpg/1024px-Casey_Station_November_2005.jpg\"></a>",
+    "media2": "<iframe src=\"https://www.youtube.com/embed/x5XXF6U6vDQ\" allowfullscreen></iframe><br><br><iframe src=\"https://www.youtube.com/embed/NwEFqdHVwiA\" allowfullscreen></iframe>"
   },
 
   "Dc1": {
-    "video": "<a href='https://www.youtube.com/watch?v=sjHrFHLdx9Y' target='_blank'>Drone footage of South Georgia in summer</a>.<br>Coastal South Georgia has a Dc1 climate."
+    "media": "<iframe src=\"https://www.youtube.com/embed/sjHrFHLdx9Y\" allowfullscreen></iframe>"
   },
 
   "Cc1": {
-    "video": "<a href='https://www.youtube.com/watch?v=I89I1AkWUkk' target='_blank'>Footage of Heard Island</a>. The green coastal areas have a Cc1 climate, one of the rarest climates on earth. The average refrigerater could be said to have a Cc1 \"climate\"."
+    "media": "<iframe src=\"https://www.youtube.com/embed/I89I1AkWUkk\" allowfullscreen></iframe>"
   },
 
   "Cc2": {
-    "video": "<a href='https://www.youtube.com/watch?v=EdcoCl-Pgq0' target='_blank'>Footage of Macquarie Island</a>. The entire island has a Cc2 climate"
+    "media": "<iframe src=\"https://www.youtube.com/embed/EdcoCl-Pgq0\" allowfullscreen></iframe>"
   },
 
   "Cb1": {
-    "video": "<a href='https://www.youtube.com/watch?v=cD9HEBz_QPs' target='_blank'>Drone footage of the Faroe Islands</a>"
+    "media": "<iframe src=\"https://www.youtube.com/embed/cD9HEBz_QPs\" allowfullscreen></iframe>"
   }
 }
