@@ -382,108 +382,27 @@
           }
         });
 
-        // --- Landscapes: load exactly like maps ---
-        const LAND_DIR = 'images/landscapes';
-        const landscapeDefault = `${LAND_DIR}/${climate_code}.jpg`;
-        const landscapePath = (climate.landscape && climate.landscape.trim()) || landscapeDefault;
-
-        // Use the same helper the maps use
-        wireSection('landscapes', 'climate_landscape', landscapePath);
-
-      // Optional second landscape image: same name as first with "two" before extension
-      (function loadSecondLandscape() {
-        const img2 = document.getElementById('climate_landscape_two');
-        if (!img2) return;
-
-        let landscapePathTwo =
-          (climate.landscape2 && climate.landscape2.trim()) || '';
-
-        if (!landscapePathTwo && landscapePath) {
-          const dot = landscapePath.lastIndexOf('.');
-          if (dot >= 0) {
-            landscapePathTwo =
-              landscapePath.slice(0, dot) + 'two' + landscapePath.slice(dot);
-          } else {
-            landscapePathTwo = landscapePath + 'two.jpg';
-          }
-        }
-
-        if (!landscapePathTwo) return;
-
-        img2.onload = () => {
-          if (img2.naturalWidth > 0 && img2.naturalHeight > 0) {
-            img2.classList.remove('hidden');
-          } else {
-            img2.removeAttribute('alt');  // 🔥 prevent fallback alt text
-            img2.remove();
-          }
-        };
-
-        img2.onerror = () => {
-          img2.removeAttribute('alt');    // 🔥 prevent fallback alt text on error
-          img2.remove();
-        };
-
-        img2.decoding = 'async';
-        img2.loading = 'lazy';
-        img2.src = landscapePathTwo;
-      })();
-
-        // --- Robust landscape caption loader (HTML allowed in JSON fields) ---
+        // --- Media embeds (Wikimedia images / YouTube iframes) ---
         fetch('data/landscapetext.json?v=' + Date.now(), { cache: 'no-store' })
           .then(r => r.json())
           .then(texts => {
             const data = texts[climate_code];
             if (!data) return;
-
-            const cap1 = document.getElementById('landscape_caption_1');
-            const cap2 = document.getElementById('landscape_caption_2');
-            if (!cap1 && !cap2) return;
-
-            let cap1Html = '';
-            let cap2Html = '';
-
-            // First image: caption + credit
-            if (data.image) {
-              cap1Html += `<i>${data.image}</i>`;
+        
+            const fig1 = document.querySelector('#landscapes .landscape-figure');
+            const fig2 = document.getElementById('landscape_two_wrapper');
+        
+            if (data.media && fig1) {
+              fig1.innerHTML = data.media;
+              fig1.classList.remove('hidden');
             }
-            if (data.credit) {
-              cap1Html += `<br><span class="credit">${data.credit}</span>`;
-            }
-
-            // Second image: caption + credit
-            if (data.image2) {
-              cap2Html += `<i>${data.image2}</i>`;
-            }
-            if (data.credit2) {
-              cap2Html += `<br><span class="credit">${data.credit2}</span>`;
-            }
-
-            // Apply HTML and unhide
-            if (cap1 && cap1Html) {
-              cap1.innerHTML = cap1Html;
-              cap1.classList.remove('hidden');
-            }
-            if (cap2 && cap2Html) {
-              cap2.innerHTML = cap2Html;
-              cap2.classList.remove('hidden');
-            }
-
-            // Videos go after all images/captions
-            let videoHtml = '';
-            if (data.video)  videoHtml += `<br><br>${data.video}`;
-            if (data.video2) videoHtml += `<br><br>${data.video2}`;
-
-            if (videoHtml) {
-              // If we have a second caption, attach videos there; otherwise attach to the first.
-              const target = (cap2 && cap2Html) ? cap2 : cap1;
-              if (target) {
-                target.innerHTML += videoHtml;
-                target.classList.remove('hidden');
-              }
+        
+            if (data.media2 && fig2) {
+              fig2.innerHTML = data.media2;
+              fig2.classList.remove('hidden');
             }
           })
-          .catch(err => console.warn('No landscape caption found:', err));
+          .catch(() => {});
 
         // Build default map paths using exact case
         const MAP_DIR = 'images/maps';
