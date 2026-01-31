@@ -214,12 +214,13 @@ var statesRGB = ee.Image()
   
 // ---------- Climate overlay ----------
 var climateRGB = discrete
+  .updateMask(clim.neq(8))   // remove non-cold oceans
   .updateMask(stateMask)
   .visualize({
     min: 0,
     max: indices.length - 1,
     palette: palette
-  });
+});
 
 // ---------- Composite ----------
 
