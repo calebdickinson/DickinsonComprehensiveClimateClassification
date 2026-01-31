@@ -184,11 +184,12 @@ var world = ee.Geometry.Rectangle(
 
 // ---------- Climate overlay ----------
 var climateRGB = discrete
+  .updateMask(clim.neq(8))   // remove non-cold oceans
   .visualize({
     min: 0,
     max: indices.length - 1,
     palette: palette
-  });
+});
 
 // ---------- Admin-0 borders ----------
 var admin0Clean = ee.Image(
