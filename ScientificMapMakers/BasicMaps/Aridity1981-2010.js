@@ -169,7 +169,7 @@ Map.addLayer(
   { min: 0, max: indices.length - 1, palette: palette },
   'Climate (CHELSA, oceans included; cold wins)',
   true, 0.7
-
+);
 // ======================================================
 // World thumbnail: climate + admin-0 and admin-1 borders
 // ======================================================
@@ -183,7 +183,6 @@ var world = ee.Geometry.Rectangle(
 
 // ---------- Climate overlay ----------
 var climateRGB = discrete
-  .updateMask(clim.neq(8))   // remove non-cold oceans
   .visualize({
     min: 0,
     max: indices.length - 1,
