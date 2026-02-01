@@ -34,8 +34,12 @@
 
   "Dc1": {
     "media": [
+      "<a title='Rob Oo from NL, CC BY 2.0 &lt;https://creativecommons.org/licenses/by/2.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Stranded_(31909462331).jpg'><img width='1280' alt='Stranded (31909462331)' src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Stranded_%2831909462331%29.jpg/2048px-Stranded_%2831909462331%29.jpg?20201212165101'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Stranded_(31909462331).jpg'>Rob Oo from NL</a>, <a href='https://creativecommons.org/licenses/by/2.0'>CC BY 2.0</a>, via Wikimedia Commons",
+      "<br><br>",
       "<a title='Rob Oo from NL, CC BY 2.0 &lt;https://creativecommons.org/licenses/by/2.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Mossy_(31934018615).jpg'><img width='1280' alt='Mossy (31934018615)' src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Mossy_%2831934018615%29.jpg/2048px-Mossy_%2831934018615%29.jpg?20201212165033'></a>",
       "<a href='https://commons.wikimedia.org/wiki/File:Mossy_(31934018615).jpg'>Rob Oo from NL</a>, <a href='https://creativecommons.org/licenses/by/2.0'>CC BY 2.0</a>, via Wikimedia Commons",
+      "<br><br>",
       "<iframe width='1280' height='720' src='https://www.youtube.com/embed/sjHrFHLdx9Y?si=3xJpLwZHI60fwQi2' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>"
     ]
   },
@@ -51,19 +55,19 @@
     "media": [
       "<a title='Hullwarren, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:MacquarieIslandGreenGORGE.JPG'><img width='1280' alt='MacquarieIslandGreenGORGE' src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/MacquarieIslandGreenGORGE.JPG/1024px-MacquarieIslandGreenGORGE.JPG?20090704122727'></a>",
       "<a href='https://commons.wikimedia.org/wiki/File:MacquarieIslandGreenGORGE.JPG'>Hullwarren</a>, <a href='https://creativecommons.org/licenses/by-sa/3.0'>CC BY-SA 3.0</a>, via Wikimedia Commons",
-      "<br>",
+      "<br><br>",
       "<a title='Hullwarren, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:MacquarieIslandElephantSeal.JPG'><img width='1280' alt='MacquarieIslandElephantSeal' src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/MacquarieIslandElephantSeal.JPG/1024px-MacquarieIslandElephantSeal.JPG?20090627124113'></a>",
       "<a href='https://commons.wikimedia.org/wiki/File:MacquarieIslandElephantSeal.JPG'>Hullwarren</a>, <a href='https://creativecommons.org/licenses/by-sa/3.0'>CC BY-SA 3.0</a>, via Wikimedia Commons",
-      "<br>",
+      "<br><br>",
       "<iframe width='1280' height='720' src='https://www.youtube.com/embed/yvyf4LQjn6o?si=57K3WVWdv_qhmasZ' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>"
     ]
   },
 
   "Cb1": {
     "media": [
-      "<a title='kallerna, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Faroese_sheep_Sumba_1.jpg'><img width='1280' alt='Faroese sheep Sumba 1' src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Faroese_sheep_Sumba_1.jpg/512px-Faroese_sheep_Sumba_1.jpg?20190725093255'></a>",
+      "<a title='kallerna, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Faroese_sheep_Sumba_1.jpg'><img width='1280' alt='Faroese sheep Sumba 1' src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Faroese_sheep_Sumba_1.jpg/2048px-Faroese_sheep_Sumba_1.jpg?20190725093255'></a>",
       "<a href='https://commons.wikimedia.org/wiki/File:Faroese_sheep_Sumba_1.jpg'>kallerna</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
-      "<br>",
+      "<br><br>",
       "<iframe width='1280' height='720' src='https://www.youtube.com/embed/cD9HEBz_QPs?si=lLPaduMZ1qThfadn' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>"
     ]
   }
