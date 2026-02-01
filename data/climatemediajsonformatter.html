@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Embed → JSON converter</title>
+
+<style>
+body {
+  font-family: system-ui;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+textarea {
+  width: 100%;
+  height: 160px;
+  font-family: monospace;
+  margin-bottom: 12px;
+}
+
+button {
+  padding: 10px 18px;
+  font-size: 16px;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Paste embed HTML → get JSON-safe media</h2>
+
+<b>Input (paste YouTube/Wikimedia embed):</b>
+<textarea id="input"></textarea>
+
+<button onclick="convert()">Convert</button>
+
+<br><br>
+
+<b>Output (ready for climatemedia.json):</b>
+<textarea id="output"></textarea>
+
+<script>
+function convert() {
+  let html = document.getElementById('input').value.trim();
+
+  // force HD size if width/height exist
+  html = html.replace(/width=['"][^'"]*['"]/i,  "width='1280'");
+  html = html.replace(/height=['"][^'"]*['"]/i, "height='720'");
+
+  // convert all double quotes → single quotes (JSON safe)
+  html = html.replace(/"/g, "'");
+
+  // wrap as JSON media array
+  const result =
+`"${html}"`;
+
+  document.getElementById('output').value = result;
+}
+</script>
+
+
+</body>
+</html>
