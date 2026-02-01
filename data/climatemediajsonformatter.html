@@ -44,7 +44,17 @@ button {
 function convert() {
   let html = document.getElementById('input').value.trim();
 
-  // ONLY change width/height inside <iframe ...>
+  // -----------------------------
+  // REMOVE width ONLY from <img>
+  // -----------------------------
+  html = html.replace(
+    /<img[^>]*>/gi,
+    tag => tag.replace(/\swidth=['"][^'"]*['"](?=\salt)/i, '')
+  );
+
+  // -----------------------------
+  // ONLY change width/height inside <iframe>
+  // -----------------------------
   html = html.replace(
     /<iframe[^>]*>/gi,
     tag => tag
