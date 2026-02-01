@@ -34,25 +34,25 @@
 
   "Dc1": {
     "media": [
-      "<iframe width='560' height='315' src='https://www.youtube.com/embed/sjHrFHLdx9Y?si=3xJpLwZHI60fwQi2' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>"
+      "<iframe width='1920' height='1080' src='https://www.youtube.com/embed/sjHrFHLdx9Y?si=3xJpLwZHI60fwQi2' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>"
     ]
   },
 
   "Cc1": {
    "media": [
-     "<iframe width='560' height='315' src='https://www.youtube.com/embed/I89I1AkWUkk?si=A5eumvXHNNyH8AEc' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>"
+     "<iframe width='1920' height='1080' src='https://www.youtube.com/embed/I89I1AkWUkk?si=A5eumvXHNNyH8AEc' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>"
    ]
   },
 
   "Cc2": {
     "media": [
-      "<iframe width='560' height='315' src='https://www.youtube.com/embed/yvyf4LQjn6o?si=57K3WVWdv_qhmasZ' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>"
+      "<iframe width='1920' height='1080' src='https://www.youtube.com/embed/yvyf4LQjn6o?si=57K3WVWdv_qhmasZ' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>"
     ]
   },
 
   "Cb1": {
     "media": [
-      "<iframe src='https://www.youtube.com/embed/cD9HEBz_QPs?si=lLPaduMZ1qThfadn' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>"
+      "<iframe width='1920' height='1080' src='https://www.youtube.com/embed/cD9HEBz_QPs?si=lLPaduMZ1qThfadn' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>"
     ]
   }
 }
