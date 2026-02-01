@@ -265,13 +265,3 @@ box-shadow:
   margin: 0 auto;          /* center the block itself */
   text-align: center;      /* center the text */
 }
-
-iframe {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-  width: min(100%, 900px);
-  aspect-ratio: 16 / 9;
-  height: auto;
-}
-
