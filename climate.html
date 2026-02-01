@@ -327,7 +327,7 @@
           .then(r => r.json())
           .then(t => {
             const m = t[climate_code]?.media;
-            if (m) document.getElementById('climatemedia').innerHTML = m.join('');
+            document.getElementById('climatemedia').innerHTML = m.join('<br>');
           });
 
         // Build default map paths using exact case
