@@ -71,17 +71,7 @@
       </div>
     </div>
 
-    <div id="landscapes">
-      <figure class="landscape-figure">
-        <img id="climate_landscape" alt="landscape in this climate">
-        <figcaption id="landscape_caption_1" class="hidden"></figcaption>
-      </figure>
-
-      <figure class="landscape-figure hidden" id="landscape_two_wrapper">
-        <img id="climate_landscape_two" alt="second landscape in this climate" class="hidden">
-        <figcaption id="landscape_caption_2" class="hidden"></figcaption>
-      </figure>
-    </div>
+    <div id="climatemedia"></div>
 
     <div id="cities">
       <div id="cities1" class="cities-block">
@@ -111,9 +101,6 @@
     <div id="map1">
       <h3 class="map-caption">Global distribution of this climate<br>(1981 - 2010 normals)</h3>
       <img id="climate_map_1" alt="World climate map (1981 - 2010 normals)">
-    </div>
-    <div id="map1two">
-      <br><br><img id="climate_map_1two" alt="Second world climate map (1981 - 2010 normals)">
     </div>
     <div id="map2">
       <h3 class="map-caption">Global distribution of this climate<br>(2011 - 2040 High Emissions normals)</h3>
@@ -145,25 +132,6 @@
       <h3 class="map-caption">United States distribution of this climate<br>(2071 - 2100 High Emissions normals)</h3>
       <img id="climate_map_4_usa" alt="United States climate map (2071 - 2100 High Emissions normals)">
     </div>
-
-    <!-- Europe maps -->
-    <div id="map1europe">
-      <h3 class="map-caption">Europe distribution of this climate<br>(1981 - 2010 normals)</h3>
-      <img id="climate_map_1_europe" alt="Europe climate map (1981 - 2010 normals)">
-    </div>
-    <div id="map2europe">
-      <h3 class="map-caption">Europe distribution of this climate<br>(2011 - 2040 High Emissions normals)</h3>
-      <img id="climate_map_2_europe" alt="Europe climate map (2011 - 2040 High Emissions normals)">
-    </div>
-    <div id="map3europe">
-      <h3 class="map-caption">Europe distribution of this climate<br>(2041 - 2070 High Emissions normals)</h3>
-      <img id="climate_map_3_europe" alt="Europe climate map (2041 - 2070 High Emissions normals)">
-    </div>
-    <div id="map4europe">
-      <h3 class="map-caption">Europe distribution of this climate<br>(2071 - 2100 High Emissions normals)</h3>
-      <img id="climate_map_4_europe" alt="Europe climate map (2071 - 2100 High Emissions normals)">
-    </div>
-  </main>
 
   <script>
     // --- helpers ---
@@ -318,9 +286,6 @@
           ).replace(
             'United States distribution of this climate',
             isGroup ? 'United States distribution of this climate group' : 'United States distribution of this climate'
-          ).replace(
-            'Europe distribution of this climate',
-            isGroup ? 'Europe distribution of this climate group' : 'Europe distribution of this climate'
           );
         });
 
@@ -357,38 +322,21 @@
           }
         });
 
-        // --- Media embeds (Wikimedia images / YouTube iframes) ---
-        fetch('data/landscapetext.json?v=' + Date.now(), { cache: 'no-store' })
+        // --- Media embeds ---
+        fetch('data/climatemedia.json')
           .then(r => r.json())
-          .then(texts => {
-            const data = texts[climate_code];
-            if (!data) return;
-        
-            const fig1 = document.querySelector('#landscapes .landscape-figure');
-            const fig2 = document.getElementById('landscape_two_wrapper');
-        
-            if (data.media && fig1) {
-              fig1.innerHTML = data.media;
-              fig1.classList.remove('hidden');
-            }
-        
-            if (data.media2 && fig2) {
-              fig2.innerHTML = data.media2;
-              fig2.classList.remove('hidden');
-            }
-          })
-          .catch(() => {});
+          .then(t => {
+            const m = t[climate_code]?.media;
+            if (m) document.getElementById('climatemedia').innerHTML = m.join('');
+          });
 
         // Build default map paths using exact case
         const MAP_DIR = 'images/maps';
         const g = n => `${MAP_DIR}/${climate_code}-map${n}.png`;
-        const gtwo = n => `${MAP_DIR}/${climate_code}-map${n}two.png`;
         const u = n => `${MAP_DIR}/${climate_code}-map${n}usa.png`;
-        const e = n => `${MAP_DIR}/${climate_code}-map${n}europe.png`;
 
         // Global
         wireSection('map1', 'climate_map_1',  climate.map1  || g(1));
-        wireSection('map1two', 'climate_map_1two',  climate.map1two  || gtwo(1));
         wireSection('map2', 'climate_map_2',  climate.map2  || g(2));
         wireSection('map3', 'climate_map_3',  climate.map3  || g(3));
         wireSection('map4', 'climate_map_4',  climate.map4  || g(4));
@@ -397,11 +345,6 @@
         wireSection('map2usa','climate_map_2_usa', climate.map2usa || u(2));
         wireSection('map3usa','climate_map_3_usa', climate.map3usa || u(3));
         wireSection('map4usa','climate_map_4_usa', climate.map4usa || u(4));
-        // Europe
-        wireSection('map1europe','climate_map_1_europe', climate.map1europe || e(1));
-        wireSection('map2europe','climate_map_2_europe', climate.map2europe || e(2));
-        wireSection('map3europe','climate_map_3_europe', climate.map3europe || e(3));
-        wireSection('map4europe','climate_map_4_europe', climate.map4europe || e(4));
 
         // Aridity chooser visibility (unrelated to maps)
         const aridityTargets = [
@@ -417,10 +360,9 @@
           document.getElementById('climate_exists').textContent =
             `THIS ${climate.group ? 'CLIMATE GROUP' : 'CLIMATE'} DOES NOT EXIST`;
           [
-            'landscapes', 'groupLegend',
+            'climatemedia', 'groupLegend',
             'map1','map2','map3','map4',
             'map1usa','map2usa','map3usa','map4usa',
-            'map1europe','map2europe','map3europe','map4europe',
             'ariditySection'
           ].forEach(id => { const el = document.getElementById(id); if (el) el.remove(); });
         }
