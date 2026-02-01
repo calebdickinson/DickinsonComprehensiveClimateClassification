@@ -265,3 +265,8 @@ box-shadow:
   margin: 0 auto;          /* center the block itself */
   text-align: center;      /* center the text */
 }
+
+#climatemedia {
+  height: 80vh;
+  text-align: center;
+}
