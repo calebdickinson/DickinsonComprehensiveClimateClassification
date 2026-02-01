@@ -51,7 +51,7 @@
   },
 
   "Cb1": {
-    "media":
+    "media": [
       "<a title='kallerna, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Faroese_sheep_Sumba_1.jpg'><img width='1280' alt='Faroese sheep Sumba 1' src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Faroese_sheep_Sumba_1.jpg/512px-Faroese_sheep_Sumba_1.jpg?20190725093255'></a>",
       "<a href='https://commons.wikimedia.org/wiki/File:Faroese_sheep_Sumba_1.jpg'>kallerna</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
       "<iframe width='1280' height='720' src='https://www.youtube.com/embed/cD9HEBz_QPs?si=lLPaduMZ1qThfadn' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>"
