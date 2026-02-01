@@ -44,16 +44,18 @@ button {
 function convert() {
   let html = document.getElementById('input').value.trim();
 
-  // force HD size if width/height exist
-  html = html.replace(/width=['"][^'"]*['"]/i,  "width='1280'");
-  html = html.replace(/height=['"][^'"]*['"]/i, "height='720'");
+  // ONLY change width/height inside <iframe ...>
+  html = html.replace(
+    /<iframe[^>]*>/gi,
+    tag => tag
+      .replace(/width=['"][^'"]*['"]/i,  "width='1280'")
+      .replace(/height=['"][^'"]*['"]/i, "height='720'")
+  );
 
-  // convert all double quotes → single quotes (JSON safe)
+  // convert quotes for JSON
   html = html.replace(/"/g, "'");
 
-  // wrap as JSON media array
-  const result =
-`"${html}"`;
+  const result = `"${html}"`;
 
   document.getElementById('output').value = result;
 }
