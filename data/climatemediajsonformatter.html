@@ -45,32 +45,42 @@ function convert() {
   let html = document.getElementById('input').value.trim();
 
   // -----------------------------
-  // REMOVE width ONLY from <img>
+  // REMOVE width ONLY from <img> tags (keep <img ...> intact)
   // -----------------------------
   html = html.replace(
-    /<img[^>]*>/gi,
-    tag => tag.replace(/\swidth=['"][^'"]*['"](?=\salt)/i, '')
+    /<img\b[^>]*>/gi,
+    tag => tag.replace(/\swidth\s*=\s*(['"])[^'"]*\1/i, '')
   );
 
   // -----------------------------
-  // ONLY change width/height inside <iframe>
+  // ONLY change width/height inside <iframe ...>
   // -----------------------------
   html = html.replace(
-    /<iframe[^>]*>/gi,
-    tag => tag
-      .replace(/width=['"][^'"]*['"]/i,  "width='1280'")
-      .replace(/height=['"][^'"]*['"]/i, "height='720'")
+    /<iframe\b[^>]*>/gi,
+    tag => {
+      // If width/height exist, overwrite them; if missing, add them.
+      if (/width\s*=/.test(tag)) {
+        tag = tag.replace(/width\s*=\s*(['"])[^'"]*\1/i, "width='1280'");
+      } else {
+        tag = tag.replace(/^<iframe\b/i, "<iframe width='1280'");
+      }
+
+      if (/height\s*=/.test(tag)) {
+        tag = tag.replace(/height\s*=\s*(['"])[^'"]*\1/i, "height='720'");
+      } else {
+        tag = tag.replace(/^<iframe\b/i, "<iframe height='720'");
+      }
+
+      return tag;
+    }
   );
 
   // convert quotes for JSON
   html = html.replace(/"/g, "'");
 
-  const result = `"${html}"`;
-
-  document.getElementById('output').value = result;
+  document.getElementById('output').value = `"${html}"`;
 }
 </script>
-
 
 </body>
 </html>
