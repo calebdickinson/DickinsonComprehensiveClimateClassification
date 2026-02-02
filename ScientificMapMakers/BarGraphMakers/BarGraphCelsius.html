@@ -52,7 +52,6 @@
 
     .legend {
       font-size: 11px;
-      margin-top: 8px;
     }
 
     .legend-row {
@@ -103,18 +102,18 @@
   // 1. EARTH ENGINE LINES (°C / mm INPUT)
   // ============================
   const rawLines = `
-1.0: 14 8 79
-2.0: 16 8 56
-3.0: 18 9 68
-4.0: 21 11 66
-5.0: 27 16 53
-6.0: 31 20 45
-7.0: 33 22 39
-8.0: 34 23 33
-9.0: 32 20 45
-10.0: 27 17 66
-11.0: 19 12 80
-12.0: 15 8 98
+1.0: -24 -28 12
+2.0: -17 -25 10
+3.0: -3 -12 8
+4.0: 8 2 11
+5.0: 22 12 32
+6.0: 35 21 44
+7.0: 38 25 42
+8.0: 34 21 51
+9.0: 24 13 43
+10.0: 10 7 32
+11.0: -6 -10 35
+12.0: -21 -26 17
   `;
 
   const months = ['J','F','M','A','M','J','J','A','S','O','N','D'];
@@ -149,8 +148,8 @@
   // ↔
 
   const data = {
-    location: 'Cognac, France',
-    code: '2071 - 2100 normals<br>Köppen Classification: Csa (hot summer mediterranean)<br>Dickinson Classification: Bma2 (tropical mediterranean with hot summer)',
+    location: 'Yakutsk, Russia',
+    code: '2071 - 2100 normals<br><br>Köppen Classification: Dsa (mediterranean-influenced hot summer humid continental) bordering Dfa (hot summer humid continental) and Dwa (monsoon-influenced hot summer humid continental) <i>Note: The Köppen system was not designed to handle extreme hypothetical climates that may occur in the future, leading to unusual boundary classifications.</i><br><br>Dickinson Classification: Fz1 (subarctic with very hot summer)',
     months,
     highsF,      // scaling
     lowsF,
@@ -167,9 +166,9 @@
   // 3. DRAW CHART (UNCHANGED)
   // ============================
   const svgWidth = 620;
-  const svgHeight = 540;
+  const svgHeight = 500;
 
-  const margin = { top: 20, right: 20, bottom: 32, left: 20 };
+  const margin = { top: 0, right: 20, bottom: 32, left: 20 };
   const tempPanelHeight = 340;
   const gap = 48;
   const precipPanelHeight = 55;
@@ -183,7 +182,7 @@
   const colWidth = plotWidth / n;
 
   const TEMP_MIN_FIXED = -30;
-  const TEMP_MAX_FIXED = 130;
+  const TEMP_MAX_FIXED = 125;
   const TEMP_RANGE_FIXED = TEMP_MAX_FIXED - TEMP_MIN_FIXED;
 
   const PRECIP_MAX_FIXED = 10;
