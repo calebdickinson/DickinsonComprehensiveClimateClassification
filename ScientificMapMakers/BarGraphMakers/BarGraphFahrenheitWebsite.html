@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Climate Chart</title>
+  <style>
+    :root {
+      --temp:   #c5352b;
+      --precip: #3f7fd8;
+      --border: #c8ccd1;
+      --page-bg:#f8f9fa;
+    }
+
+    body {
+      margin: 0;
+      padding: 24px;
+      background: var(--page-bg);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   sans-serif;
+      color: #111;
+    }
+
+    .chart-wrapper {
+      width: 650px;
+      margin: 0 auto;
+      background: #fff;
+      border: 1px solid var(--border);
+      box-sizing: border-box;
+      padding: 14px 18px 14px;
+    }
+
+    .chart-title {
+      font-weight: 700;
+      font-size: 20px;
+      margin-bottom: 2px;
+    }
+
+    .chart-subtitle {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+    
+    .data-sources {
+      margin-top: 10px;
+      padding-top: 6px;
+      border-top: 1px solid var(--border);
+      font-size: 10.5px;
+      line-height: 1.35;
+      color: #555;
+    }
+
+    .legend {
+      font-size: 11px;
+    }
+
+    .legend-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2px;
+    }
+
+    .swatch {
+      width: 11px;
+      height: 11px;
+      border-radius: 2px;
+      margin-right: 4px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="chart-wrapper">
+  <div class="chart-title" id="title"></div>
+  <div class="chart-subtitle" id="subtitle"></div>
+  <div id="chart-container"></div>
+
+  <div class="legend">
+    <div class="legend-row">
+      <div class="swatch" style="background: var(--temp);"></div>
+      <span>Average max. and min. temperatures in °F</span>
+    </div>
+    <div class="legend-row">
+      <div class="swatch" style="background: var(--precip);"></div>
+      <span>Precipitation totals in inches</span>
+    </div>
+  </div>
+  <div class="data-sources">
+    <strong>Data sources:</strong>
+    Baseline climate conditions are derived from CHELSA v2.1 climatological normals (1981–2010).
+    Future projections use CHELSA-downscaled UKESM1-0-LL SSP5-8.5 projection normals
+    for 2011–2040, 2041–2070, and 2071–2100.
+    SSP5-8.5 represents a high-growth, energy-intensive future dominated by fossil fuel use, resulting in very high greenhouse gas emissions—making it a widely used analogue for present-day trajectories under minimal mitigation efforts. UKESM1-0-LL was selected due to its higher climate sensitivity and stronger land–atmosphere coupling, which makes it useful for bounding upper-risk habitability outcomes. This data has a spatial resolution of 30 arc-seconds (≈1 km at the equator).
+<br><br>
+    <strong>Note:</strong> "Dickinson Classification" refers to the system introduced in Dickinson, C. (2026). The Dickinson Climate Classification: A Taxonomic Thermal-Hydrological Partition of Climate State Space [Preprint]. Zenodo. https://doi.org/10.5281/zenodo.18264771
+  </div>
+</div>
+
+<script>
+  // ============================
+  // 1. EARTH ENGINE LINES
+  // ============================
+  const rawLines = `
+1.0: -10 -19 0.5
+2.0: 1 -13 0.4
+3.0: 27 10 0.3
+4.0: 46 35 0.4
+5.0: 71 53 1.3
+6.0: 95 69 1.7
+7.0: 101 77 1.7
+8.0: 93 70 2.0
+9.0: 76 55 1.7
+10.0: 50 44 1.3
+11.0: 21 14 1.4
+12.0: -6 -14 0.7
+  `;
+
+  const months = ['J','F','M','A','M','J','J','A','S','O','N','D'];
+  const highsF = [], lowsF = [], precipIn = [];
+
+  rawLines.trim().split(/\n+/).forEach(line => {
+    const parts = line.split(':');
+    if (parts.length < 2) return;
+
+    const nums = parts[1].trim().split(/\s+/);
+    highsF.push(parseFloat(nums[0]));
+    lowsF.push(parseFloat(nums[1]));
+    precipIn.push(parseFloat(nums[2]));
+  });
+  
+  // left-right arrow symbol here for easy copy-paste if needed
+  // ↔
+
+  const data = {
+    location: 'Yakutsk, Russia',
+    code: '2071 - 2100 normals<br><br>Dickinson Classification: <b>Fz1</b> (subarctic with very hot summer)<br><br>Köppen Classification: <b>Dsa</b> (Mediterranean-influenced hot-summer humid continental) bordering <b>Dfa</b> (hot-summer humid continental) and <b>Dwa</b> (monsoon-influenced hot-summer humid continental) <i>Note: The Köppen system was not designed to handle this extreme hypothetical climate, leading to unusual boundary classifications.</i>',
+    months,
+    highsF,
+    lowsF,
+    precipIn
+  };
+
+  document.getElementById('title').textContent = data.location;
+  document.getElementById('subtitle').innerHTML = data.code;
+
+  // ============================
+  // 2. DRAW CHART
+  // ============================
+
+  const svgWidth = 620;
+  const svgHeight = 500;  // taller overall to fit stretched temp panel
+
+  const margin = { top: 0, right: 20, bottom: 32, left: 20 };
+
+  // temp area stretched ×2, precip area compressed ×2
+  const tempPanelHeight = 340;  // 170 * 2
+  const gap = 48;               // space between panels
+  const precipPanelHeight = 55; // 110 / 2
+
+  const plotWidth = svgWidth - margin.left - margin.right;
+  const tempBaseY = margin.top + tempPanelHeight;
+  const precipTopY = tempBaseY + gap;
+  const precipBaseY = precipTopY + precipPanelHeight;
+
+  const n = data.months.length;
+  const colWidth = plotWidth / n;
+
+  // ===== FIXED TEMPERATURE SCALE: -30 TO 130°F =====
+  const TEMP_MIN_FIXED = -30;
+  const TEMP_MAX_FIXED = 125;
+  const TEMP_RANGE_FIXED = TEMP_MAX_FIXED - TEMP_MIN_FIXED;
+
+  function tempScale(v) {
+    return ((v - TEMP_MIN_FIXED) / TEMP_RANGE_FIXED) * (tempPanelHeight * 0.9);
+  }
+
+  // ===== FIXED PRECIP SCALE: 0 TO 10 INCHES =====
+  const PRECIP_MIN_FIXED = 0;
+  const PRECIP_MAX_FIXED = 10;
+  const PRECIP_RANGE_FIXED = PRECIP_MAX_FIXED - PRECIP_MIN_FIXED;
+
+  function precipScale(v) {
+    return ((v - PRECIP_MIN_FIXED) / PRECIP_RANGE_FIXED) * (precipPanelHeight * 0.9);
+  }
+
+  let svg = `<svg width="${svgWidth}" height="${svgHeight}">
+    <rect width="${svgWidth}" height="${svgHeight}" fill="#ffffff" />
+    <g transform="translate(${margin.left},0)">`;
+
+  // ----- THIN DOTTED REFERENCE LINE (32°F / shared Y) -----
+  const refTemp = 32;
+  const dottedY = tempBaseY - tempScale(refTemp);
+
+  // draw the dotted line *first* so bars/labels render on top of it
+  svg += `
+    <line x1="0" y1="${dottedY}"
+          x2="${plotWidth}" y2="${dottedY}"
+          stroke="#bbb" stroke-width="1"
+          stroke-dasharray="4,3" />
+  `;
+
+  // ----- Temperature bars (drawn AFTER the line, so they can go over it) -----
+  for (let i = 0; i < n; i++) {
+    const hi = data.highsF[i];
+    const lo = data.lowsF[i];
+
+    const hiH = tempScale(hi);
+    const loH = tempScale(lo);
+
+    const barX = colWidth * i + colWidth * 0.28;
+    const barW = colWidth * 0.30;
+
+    const hiY = tempBaseY - hiH;
+    const loY = tempBaseY - loH;
+
+    svg += `
+      <rect x="${barX}" y="${hiY}" width="${barW}" height="${hiH - loH}"
+            fill="var(--temp)"></rect>
+      <text x="${barX + barW/2}" y="${hiY - 4}"
+            text-anchor="middle" font-size="11">${hi}</text>
+      <text x="${barX + barW/2}" y="${loY + 12}"
+            text-anchor="middle" font-size="10">${lo}</text>
+    `;
+  }
+
+  // ----- Precipitation bars (also drawn after the line) -----
+  for (let i = 0; i < n; i++) {
+    const p = data.precipIn[i];
+    const barH = precipScale(p);
+
+    const barX = colWidth * i + colWidth * 0.28;
+    const barW = colWidth * 0.30;
+    const barY = precipBaseY - barH;
+
+    svg += `
+      <rect x="${barX}" y="${barY}" width="${barW}" height="${barH}"
+            fill="var(--precip)"></rect>
+      <text x="${barX + barW/2}" 
+            y="${precipBaseY + 14}" 
+            text-anchor="middle"
+            font-size="10">${p}</text>
+    `;
+  }
+
+  // ----- LINE BETWEEN PRECIP & MONTH LABELS -----
+  const lowerLineY = precipBaseY + 20;
+
+  svg += `
+    <line x1="0" y1="${lowerLineY}"
+          x2="${plotWidth}" y2="${lowerLineY}"
+          stroke="#000" stroke-width="2" />
+  `;
+
+  // ----- Month labels -----
+  for (let i = 0; i < n; i++) {
+    const x = colWidth * i + colWidth * 0.43;
+    const y = lowerLineY + 16;
+
+    svg += `<text x="${x}" y="${y}"
+                  text-anchor="middle"
+                  font-size="11">${data.months[i]}</text>`;
+  }
+
+  svg += `</g></svg>`;
+
+  document.getElementById('chart-container').innerHTML = svg;
+</script>
+
+</body>
+</html>
