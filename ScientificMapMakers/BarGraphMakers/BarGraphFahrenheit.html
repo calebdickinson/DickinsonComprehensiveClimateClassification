@@ -52,7 +52,6 @@
 
     .legend {
       font-size: 11px;
-      margin-top: 8px;
     }
 
     .legend-row {
@@ -102,18 +101,18 @@
   // 1. EARTH ENGINE LINES
   // ============================
   const rawLines = `
-1.0: 55 42 3.3
-2.0: 57 41 3.7
-3.0: 68 50 5.2
-4.0: 81 60 5.1
-5.0: 92 71 5.7
-6.0: 101 81 3.1
-7.0: 106 87 4.4
-8.0: 106 87 2.9
-9.0: 99 81 3.2
-10.0: 88 69 3.1
-11.0: 72 57 5.0
-12.0: 60 48 5.0
+1.0: -10 -19 0.5
+2.0: 1 -13 0.4
+3.0: 27 10 0.3
+4.0: 46 35 0.4
+5.0: 71 53 1.3
+6.0: 95 69 1.7
+7.0: 101 77 1.7
+8.0: 93 70 2.0
+9.0: 76 55 1.7
+10.0: 50 44 1.3
+11.0: 21 14 1.4
+12.0: -6 -14 0.7
   `;
 
   const months = ['J','F','M','A','M','J','J','A','S','O','N','D'];
@@ -133,8 +132,8 @@
   // ↔
 
   const data = {
-    location: 'Carterville, Illinois',
-    code: '2071 - 2100 normals<br>Köppen Classification: Cfa (humid subtropical)<br>Dickinson Classification: Chz2 (subtropical humid with scorching summer) bordering on Cgz2 (subtropical semihumid with scorching summer)',
+    location: 'Yakutsk, Russia',
+    code: '2071 - 2100 normals<br><br>Köppen Classification: Dsa (mediterranean-influenced hot summer humid continental) bordering Dfa (hot summer humid continental) and Dwa (monsoon-influenced hot summer humid continental) <i>Note: The Köppen system was not designed to handle this extreme hypothetical climate, leading to unusual boundary classifications.</i><br><br>Dickinson Classification: Fz1 (subarctic with very hot summer)',
     months,
     highsF,
     lowsF,
@@ -149,9 +148,9 @@
   // ============================
 
   const svgWidth = 620;
-  const svgHeight = 540;  // taller overall to fit stretched temp panel
+  const svgHeight = 500;  // taller overall to fit stretched temp panel
 
-  const margin = { top: 20, right: 20, bottom: 32, left: 20 };
+  const margin = { top: 0, right: 20, bottom: 32, left: 20 };
 
   // temp area stretched ×2, precip area compressed ×2
   const tempPanelHeight = 340;  // 170 * 2
@@ -168,7 +167,7 @@
 
   // ===== FIXED TEMPERATURE SCALE: -30 TO 130°F =====
   const TEMP_MIN_FIXED = -30;
-  const TEMP_MAX_FIXED = 130;
+  const TEMP_MAX_FIXED = 125;
   const TEMP_RANGE_FIXED = TEMP_MAX_FIXED - TEMP_MIN_FIXED;
 
   function tempScale(v) {
