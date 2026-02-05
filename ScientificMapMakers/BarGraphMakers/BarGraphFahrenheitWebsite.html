@@ -24,7 +24,6 @@
       width: 650px;
       margin: 0 auto;
       background: #fff;
-      border: 1px solid var(--border);
       box-sizing: border-box;
       padding: 14px 18px 14px;
       position: relative;
@@ -72,6 +71,8 @@
       margin-right: 4px;
     }
   </style>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
 </head>
 <body>
 
@@ -268,6 +269,48 @@
   svg += `</g></svg>`;
 
   document.getElementById('chart-container').innerHTML = svg;
+  
+// ============================
+// AUTO EXPORT ENTIRE WRAPPER
+// ============================
+
+setTimeout(() => {
+  const el = document.querySelector('.chart-wrapper');
+
+  // ---------- LOCATION ----------
+  let name = data.location.split(',')[0].trim();
+
+  // remove ALL spaces
+  name = name.replace(/\s+/g, '');
+
+  // remove illegal filename characters
+  name = name.replace(/[<>:"/\\|?*]+/g, '');
+
+  // ---------- PERIOD SUFFIX ----------
+  const plainCode = data.code.replace(/<[^>]*>/g, '');
+
+  let suffix = "";
+
+  if (plainCode.startsWith("2071 - 2100")) suffix = "4-F";
+  else if (plainCode.startsWith("2041 - 2070")) suffix = "3-F";
+  else if (plainCode.startsWith("2011 - 2040")) suffix = "2-F";
+  else if (plainCode.startsWith("1981 - 2010")) suffix = "1-F";
+
+  const fileName = `${name}${suffix}.png`;
+
+  // ---------- EXPORT ----------
+  html2canvas(el, {
+    scale: 3,
+    backgroundColor: "#ffffff"
+  }).then(canvas => {
+    const link = document.createElement('a');
+    link.download = fileName;
+    link.href = canvas.toDataURL("image/png");
+    link.click();
+  });
+
+}, 100);
+
 </script>
 
 </body>
