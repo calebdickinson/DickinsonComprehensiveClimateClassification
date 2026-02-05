@@ -330,6 +330,13 @@
             if (m) {
               const el = document.getElementById('climatemedia');
               el.innerHTML = "<br>" + m.join('') + "<br>";
+              /* side-by-side ONLY if both items are graphs */
+              if (
+                m.length === 2 &&
+                m.every(html => html.includes('../graphs/'))
+              ) {
+                el.classList.add('two-column');
+              }
             }
           });
 
