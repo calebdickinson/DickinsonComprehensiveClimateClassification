@@ -336,17 +336,11 @@
             if (m) {
               const el = document.getElementById('climatemedia');
               el.innerHTML = "<br>" + m.join('') + "<br>";
-              if (m.length === 2) {
-                const isGraph = html => {
-                  const div = document.createElement('div');
-                  div.innerHTML = html;
-                  const img = div.querySelector('img');
-                  return img && img.src.includes('/graphs/');
-                };
-              
-                if (m.every(isGraph)) {
-                  el.classList.add('two-column');
-                }
+              if (
+                m.length === 2 &&
+                m.every(html => html.includes('../graphs/'))
+              ) {
+                el.classList.add('two-column');
               }
             }
           });
