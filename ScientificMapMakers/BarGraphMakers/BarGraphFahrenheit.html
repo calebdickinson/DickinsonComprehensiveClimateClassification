@@ -90,6 +90,7 @@
       <span>Precipitation totals in inches</span>
     </div>
   </div>
+  
   <div class="data-sources">
     <strong>Data sources:</strong>
     Baseline climate conditions are derived from CHELSA v2.1 climatological normals (1981–2010) to ensure methodological consistency with the downscaled projections. Individual station observations may provide higher local accuracy at specific sites.
@@ -158,10 +159,9 @@
 
   const margin = { top: 80, right: 20, bottom: 32, left: 20 };
 
-  // temp area stretched ×2, precip area compressed ×2
-  const tempPanelHeight = 340;    // 170 * 2
-  const gap = 63 + stretchPercip; // space between panels
-  const precipPanelHeight = 55;   // 110 / 2
+  const tempPanelHeight = 340;
+  const gap = 63 + stretchPercip;
+  const precipPanelHeight = 55;
 
   const plotWidth = svgWidth - margin.left - margin.right;
   const tempBaseY = margin.top + tempPanelHeight;
@@ -171,7 +171,6 @@
   const n = data.months.length;
   const colWidth = plotWidth / n;
 
-  // ===== FIXED TEMPERATURE SCALE: -30 TO 130°F =====
   const TEMP_MIN_FIXED = -30;
   const TEMP_MAX_FIXED = 125;
   const TEMP_RANGE_FIXED = TEMP_MAX_FIXED - TEMP_MIN_FIXED;
@@ -180,7 +179,6 @@
     return ((v - TEMP_MIN_FIXED) / TEMP_RANGE_FIXED) * (tempPanelHeight * 0.9);
   }
 
-  // ===== FIXED PRECIP SCALE: 0 TO 10 INCHES =====
   const PRECIP_MIN_FIXED = 0;
   const PRECIP_MAX_FIXED = 10;
   const PRECIP_RANGE_FIXED = PRECIP_MAX_FIXED - PRECIP_MIN_FIXED;
