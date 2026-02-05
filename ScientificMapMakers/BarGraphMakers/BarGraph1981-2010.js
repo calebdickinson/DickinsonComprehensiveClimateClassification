@@ -400,7 +400,6 @@ for (var m = 1; m <= 12; m++) {
 
 var tasMonthlyIC = ee.ImageCollection(tasMonthlyImgs);
 
-// Reduce safely
 var warmestMonth = tasMonthlyIC.max().reduceRegion({
   reducer: ee.Reducer.first(),
   geometry: pt,
@@ -415,6 +414,13 @@ var coldestMonth = tasMonthlyIC.min().reduceRegion({
   maxPixels: 1e9
 }).getNumber('tmeanC');
 
+var annualMean = tasMonthlyIC.mean().reduceRegion({
+  reducer: ee.Reducer.first(),
+  geometry: pt,
+  scale: 1000,
+  maxPixels: 1e9
+}).getNumber('tmeanC');
+
 // Print (1 decimal)
 warmestMonth.evaluate(function(v) {
   print('Hottest month mean (°C):', ee.Number(v).multiply(10).round().divide(10));
@@ -422,4 +428,8 @@ warmestMonth.evaluate(function(v) {
 
 coldestMonth.evaluate(function(v) {
   print('Coldest month mean (°C):', ee.Number(v).multiply(10).round().divide(10));
+});
+
+annualMean.evaluate(function(v) {
+  print('Annual mean (°C):', ee.Number(v).multiply(10).round().divide(10));
 });
