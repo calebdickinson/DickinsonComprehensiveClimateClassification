@@ -33,7 +33,7 @@
       "<br><br>",
       "<iframe width='1280' height='720' src='https://www.youtube.com/embed/qz2SeEzxMuE?si=rSdj2JY2AuHk2mXx' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
       "<br><br>",
-      "<img src='../graphs/McMurdo1-F.png' alt='graph of McMurdo climate in 1981-2010'>",
+      "<img src='../graphs/McMurdoStation1-F.png' alt='graph of McMurdo Station climate in 1981-2010'>",
       "<img src='../graphs/MountRainer1-F.png' alt='graph of Mount Rainer climate in 1981-2010'>"
     ]
   },
@@ -52,6 +52,12 @@
       "<iframe width='1280' height='720' src='https://www.youtube.com/embed/NwEFqdHVwiA?si=CkukELBPKa9e4N_P' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
       "<br><br>",
       "<iframe width='1280' height='720' src='https://www.youtube.com/embed/x5XXF6U6vDQ?si=gwg_4pJRTYKz9fnM' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>"
+    ]
+  },
+
+  "Ega1": {
+    "media": [
+      "<img src='../graphs/Fargo1-F.png' alt='graph of Fargo climate in 1981-2010'>"
     ]
   },
 
@@ -74,6 +80,13 @@
     ]
   },
 
+  "Dha1": {
+    "media": [
+      "<img src='../graphs/Chicago1-F.png' alt='graph of Chicago climate in 1981-2010'>",
+      "<img src='../graphs/Boston1-F.png' alt='graph of Boston climate in 1981-2010'>"
+    ]
+  },
+
   "Dga2": {
     "media": [
       "<a title='English:  NPS, Public domain, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Sunset_falls_across_the_beautiful_Flint_Hills_(f0f6c731-1dd8-b71b-0b88-d326127c9973).jpg'><img alt='Sunset falls across the beautiful Flint Hills (f0f6c731-1dd8-b71b-0b88-d326127c9973)' src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Sunset_falls_across_the_beautiful_Flint_Hills_%28f0f6c731-1dd8-b71b-0b88-d326127c9973%29.jpg/2048px-Sunset_falls_across_the_beautiful_Flint_Hills_%28f0f6c731-1dd8-b71b-0b88-d326127c9973%29.jpg?20240516212133'></a>",
@@ -85,7 +98,9 @@
 
   "Dsa2": {
     "media": [
-      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/a2kUeLBHYKg?si=cI7HSKuyWL8fHCUj' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>"
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/a2kUeLBHYKg?si=cI7HSKuyWL8fHCUj' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img src='../graphs/SaltLakeCity1-F.png' alt='graph of Salt Lake City climate in 1981-2010'>",
     ]
   },
 
@@ -126,4 +141,30 @@
       "<iframe width='1280' height='720' src='https://www.youtube.com/embed/cD9HEBz_QPs?si=lLPaduMZ1qThfadn' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>"
     ]
   }
+
+  "Cmb2": {
+    "media": [
+      "<img src='../graphs/Seattle1-F.png' alt='graph of Seattle climate in 1981-2010'>"
+    ]
+  },
+
+  "Cma1": {
+    "media": [
+      "<img src='../graphs/LosAngeles1-F.png' alt='graph of Los Angeles climate in 1981-2010'>",
+      "<img src='../graphs/Casablanca1-F.png' alt='graph of Casablanca climate in 1981-2010'>"
+    ]
+  },
+
+  "Cha2": {
+    "media": [
+      "<img src='../graphs/Memphis1-F.png' alt='graph of Memphis climate in 1981-2010'>"
+    ]
+  },
+  
+  "Cga2": {
+    "media": [
+      "<img src='../graphs/OklahomaCity1-F.png' alt='graph of Oklahoma City climate in 1981-2010'>",
+      "<img src='../graphs/FortWorth1-F.png' alt='graph of Fort Worth climate in 1981-2010'>"
+    ]
+  },
 }
