@@ -21,26 +21,12 @@
   #cities {
     display: none !important;
   }
-  #climatemedia {
-  display: grid;
-  grid-template-columns: 1fr;  /* mobile = single column */
-  gap: 18px;
-  max-width: 900px;
-  margin: 0 auto;
-  }
-  /* desktop: two columns */
   @media (min-width: 900px) {
-    #climatemedia {
-      grid-template-columns: 1fr 1fr;
+    #climatemedia img[src*="graphs/"] {
+      width: 48%;
+      display: inline-block;
+      vertical-align: top;
     }
-  }
-  /* ONLY graph images should use half width */
-  #climatemedia img[src*="graphs/"] {
-    width: 100%;
-  }
-  /* everything else spans full width */
-  #climatemedia > *:not(img[src*="graphs/"]) {
-    grid-column: 1 / -1;
   }
   </style>
 </head>
@@ -351,12 +337,6 @@
             if (m) {
               const el = document.getElementById('climatemedia');
               el.innerHTML = "<br>" + m.join('') + "<br>";
-              if (
-                m.length === 2 &&
-                m.every(html => html.includes('../graphs/'))
-              ) {
-                el.classList.add('two-column');
-              }
             }
           });
 
