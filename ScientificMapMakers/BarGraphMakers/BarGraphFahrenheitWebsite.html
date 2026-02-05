@@ -27,6 +27,7 @@
       border: 1px solid var(--border);
       box-sizing: border-box;
       padding: 14px 18px 14px;
+      position: relative;
     }
 
     .chart-title {
@@ -36,9 +37,13 @@
     }
 
     .chart-subtitle {
+      position: absolute;
+      top: 40px;  
+      left: 18px;
+      right: 18px;
       font-size: 14px;
       color: #555;
-      margin-bottom: 10px;
+      margin: 0;
     }
     
     .data-sources {
@@ -101,18 +106,18 @@
   // 1. EARTH ENGINE LINES
   // ============================
   const rawLines = `
-1.0: -10 -19 0.5
-2.0: 1 -13 0.4
-3.0: 27 10 0.3
-4.0: 46 35 0.4
-5.0: 71 53 1.3
-6.0: 95 69 1.7
-7.0: 101 77 1.7
-8.0: 93 70 2.0
-9.0: 76 55 1.7
-10.0: 50 44 1.3
-11.0: 21 14 1.4
-12.0: -6 -14 0.7
+1.0: 20 3 0.7
+2.0: 27 9 0.6
+3.0: 39 21 1.3
+4.0: 56 34 1.5
+5.0: 68 47 3.0
+6.0: 77 57 4.1
+7.0: 82 63 3.3
+8.0: 80 61 2.9
+9.0: 70 52 2.7
+10.0: 56 39 2.3
+11.0: 38 24 1.0
+12.0: 23 9 0.8
   `;
 
   const months = ['J','F','M','A','M','J','J','A','S','O','N','D'];
@@ -132,8 +137,8 @@
   // ↔
 
   const data = {
-    location: 'Yakutsk, Russia',
-    code: '2071 - 2100 normals<br><br>Dickinson Classification: <b>Fz1</b> (subarctic with very hot summer)<br><br>Köppen Classification: <b>Dsa</b> (Mediterranean-influenced hot-summer humid continental) bordering <b>Dfa</b> (hot-summer humid continental) and <b>Dwa</b> (monsoon-influenced hot-summer humid continental) <i>Note: The Köppen system was not designed to handle this extreme hypothetical climate, leading to unusual boundary classifications.</i>',
+    location: 'Fargo, North Dakota, United States',
+    code: '1981 - 2010 normals<br><br>Dickinson Classification: <b>Ega1</b> (continental semihumid with warm summer)<br><br>Köppen Classification: <b>Dfb</b> (warm-summer humid continental) bordering on <b>Dfa</b> (hot-summer humid continental)',
     months,
     highsF,
     lowsF,
@@ -148,14 +153,15 @@
   // ============================
 
   const svgWidth = 620;
-  const svgHeight = 500;  // taller overall to fit stretched temp panel
+  const stretchPercip = 0; // CHANGE for extreme percipitation
+  const svgHeight = 590 + stretchPercip;
 
-  const margin = { top: 0, right: 20, bottom: 32, left: 20 };
+  const margin = { top: 80, right: 20, bottom: 32, left: 20 };
 
   // temp area stretched ×2, precip area compressed ×2
-  const tempPanelHeight = 340;  // 170 * 2
-  const gap = 48;               // space between panels
-  const precipPanelHeight = 55; // 110 / 2
+  const tempPanelHeight = 340;    // 170 * 2
+  const gap = 63 + stretchPercip; // space between panels
+  const precipPanelHeight = 55;   // 110 / 2
 
   const plotWidth = svgWidth - margin.left - margin.right;
   const tempBaseY = margin.top + tempPanelHeight;
