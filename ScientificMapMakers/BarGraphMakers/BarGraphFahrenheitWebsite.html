@@ -108,18 +108,18 @@
   // 1. EARTH ENGINE LINES
   // ============================
   const rawLines = `
-1.0: 20 3 0.7
-2.0: 27 9 0.6
-3.0: 39 21 1.3
-4.0: 56 34 1.5
-5.0: 68 47 3.0
-6.0: 77 57 4.1
-7.0: 82 63 3.3
-8.0: 80 61 2.9
-9.0: 70 52 2.7
-10.0: 56 39 2.3
-11.0: 38 24 1.0
-12.0: 23 9 0.8
+1.0: 36 21 3.6
+2.0: 38 24 3.8
+3.0: 45 30 4.6
+4.0: 55 40 4.2
+5.0: 64 49 3.9
+6.0: 74 59 3.8
+7.0: 80 65 3.8
+8.0: 78 64 3.7
+9.0: 71 58 3.6
+10.0: 60 47 4.1
+11.0: 50 39 4.7
+12.0: 40 28 4.3
   `;
 
   const months = ['J','F','M','A','M','J','J','A','S','O','N','D'];
@@ -139,8 +139,8 @@
   // ↔
 
   const data = {
-    location: 'Fargo, North Dakota, United States',
-    code: '1981 - 2010 normals<br><br>Dickinson Classification: <b>Ega1</b> (continental semihumid with warm summer)<br><br>Köppen Classification: <b>Dfb</b> (warm-summer humid continental) bordering on <b>Dfa</b> (hot-summer humid continental)',
+    location: 'Boston, Massachusetts',
+    code: '1981 - 2010 normals<br><br>Dickinson Classification: <b>Dha1</b> (temperate humid with warm summer)<br><br>Köppen Classification: <b>Dfa</b> (hot-summer humid continental) bordering on <b>Dfb</b> (warm-summer humid continental)',
     months,
     highsF,
     lowsF,
@@ -270,46 +270,50 @@
 
   document.getElementById('chart-container').innerHTML = svg;
   
-// ============================
-// AUTO EXPORT ENTIRE WRAPPER
-// ============================
+  // ============================
+  // 3. EXPORT CHART
+  // ============================
+  
+const AUTO_EXPORT = false; // Change to true to export png
 
-setTimeout(() => {
-  const el = document.querySelector('.chart-wrapper');
+if (AUTO_EXPORT) {
+  setTimeout(() => {
+    const el = document.querySelector('.chart-wrapper');
 
-  // ---------- LOCATION ----------
-  let name = data.location.split(',')[0].trim();
+    // ---------- LOCATION ----------
+    let name = data.location.split(',')[0].trim();
 
-  // remove ALL spaces
-  name = name.replace(/\s+/g, '');
+    // remove ALL spaces
+    name = name.replace(/\s+/g, '');
 
-  // remove illegal filename characters
-  name = name.replace(/[<>:"/\\|?*]+/g, '');
+    // remove illegal filename characters
+    name = name.replace(/[<>:"/\\|?*]+/g, '');
 
-  // ---------- PERIOD SUFFIX ----------
-  const plainCode = data.code.replace(/<[^>]*>/g, '');
+    // ---------- PERIOD SUFFIX ----------
+    const plainCode = data.code.replace(/<[^>]*>/g, '');
 
-  let suffix = "";
+    let suffix = "";
 
-  if (plainCode.startsWith("2071 - 2100")) suffix = "4-F";
-  else if (plainCode.startsWith("2041 - 2070")) suffix = "3-F";
-  else if (plainCode.startsWith("2011 - 2040")) suffix = "2-F";
-  else if (plainCode.startsWith("1981 - 2010")) suffix = "1-F";
+    if (plainCode.startsWith("2071 - 2100")) suffix = "4-F";
+    else if (plainCode.startsWith("2041 - 2070")) suffix = "3-F";
+    else if (plainCode.startsWith("2011 - 2040")) suffix = "2-F";
+    else if (plainCode.startsWith("1981 - 2010")) suffix = "1-F";
 
-  const fileName = `${name}${suffix}.png`;
+    const fileName = `${name}${suffix}.png`;
 
-  // ---------- EXPORT ----------
-  html2canvas(el, {
-    scale: 3,
-    backgroundColor: "#ffffff"
-  }).then(canvas => {
-    const link = document.createElement('a');
-    link.download = fileName;
-    link.href = canvas.toDataURL("image/png");
-    link.click();
-  });
+    // ---------- EXPORT ----------
+    html2canvas(el, {
+      scale: 3,
+      backgroundColor: "#ffffff"
+    }).then(canvas => {
+      const link = document.createElement('a');
+      link.download = fileName;
+      link.href = canvas.toDataURL("image/png");
+      link.click();
+    });
 
-}, 100);
+  }, 100);
+}
 
 </script>
 
