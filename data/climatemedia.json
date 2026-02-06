@@ -100,7 +100,7 @@
     "media": [
       "<iframe width='1280' height='720' src='https://www.youtube.com/embed/a2kUeLBHYKg?si=cI7HSKuyWL8fHCUj' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
       "<br><br>",
-      "<img src='../graphs/SaltLakeCity1-F.png' alt='graph of Salt Lake City climate in 1981-2010'>",
+      "<img src='../graphs/SaltLakeCity1-F.png' alt='graph of Salt Lake City climate in 1981-2010'>"
     ]
   },
 
@@ -140,7 +140,7 @@
       "<br><br>",
       "<iframe width='1280' height='720' src='https://www.youtube.com/embed/cD9HEBz_QPs?si=lLPaduMZ1qThfadn' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>"
     ]
-  }
+  },
 
   "Cmb2": {
     "media": [
@@ -166,5 +166,5 @@
       "<img src='../graphs/OklahomaCity1-F.png' alt='graph of Oklahoma City climate in 1981-2010'>",
       "<img src='../graphs/FortWorth1-F.png' alt='graph of Fort Worth climate in 1981-2010'>"
     ]
-  },
+  }
 }
