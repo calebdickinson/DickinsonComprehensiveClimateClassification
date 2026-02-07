@@ -40,7 +40,7 @@ codes = {
 'BmX', 'Bmz2', 'Bmz1', 'Bma2', 'Bma1', 'Bmb2',
 'CmX', 'Cmz2', 'Cmz1', 'Cma2', 'Cma1', 'Cmb2',
                'Dmz1', 'Dma2', 'Dma1', 'Dmb2',
-                               'Ema1', 'Emb2',
+                       'Ema2', 'Ema1', 'Emb2',
 
 'ZsX', 'Zsz2', 'Zsz1',
 'AsX', 'Asz2', 'Asz1', 'Asa2', 'Asa1',
