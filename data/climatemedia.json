@@ -6,7 +6,10 @@
       "<br><br>",
       "<p>Note: Because the poles are not inlcuded in my dataset, it is not possible to say with certainty what climate it would be in future projections, especially in end of century high emissions projections. However, the 1981-2010 normals on wikipedia show that the South Pole is clearly within the YY climate for that time period.</p>",
       "<br>",
-      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/GbpMa5cXjp8?si=yBRUVt2Z-_Cl-PJ8' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>"
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/GbpMa5cXjp8?si=yBRUVt2Z-_Cl-PJ8' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img src='../graphs/ConcordiaStation1-F.png' alt='graph of McMurdo Station climate in 1981-2010'>",
+      "<img src='../graphs/VostokStation1-F.png' alt='graph of Vostok Station climate in 1981-2010'>"
     ]
   },
     
@@ -22,7 +25,10 @@
   "GY": {
     "media": [
       "<a href=\"https://commons.wikimedia.org/wiki/File:Svea_field_station_in_Antarctica.jpg\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Svea_field_station_in_Antarctica.jpg/512px-Svea_field_station_in_Antarctica.jpg\"></a>",
-      "<a href='https://commons.wikimedia.org/wiki/File:Svea_field_station_in_Antarctica.jpg'>Diorit</a>, <a href='http://creativecommons.org/licenses/by-sa/3.0/'>CC BY-SA 3.0</a>, via Wikimedia Commons"
+      "<a href='https://commons.wikimedia.org/wiki/File:Svea_field_station_in_Antarctica.jpg'>Diorit</a>, <a href='http://creativecommons.org/licenses/by-sa/3.0/'>CC BY-SA 3.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<img src='../graphs/SummitStation1-F.png' alt='graph of Summit Station climate in 1981-2010'>",
+      "<img src='../graphs/SveaStation1-F.png' alt='graph of Svea Station climate in 1981-2010'>"
     ]
   },
 
@@ -165,6 +171,18 @@
     "media": [
       "<img src='../graphs/OklahomaCity1-F.png' alt='graph of Oklahoma City climate in 1981-2010'>",
       "<img src='../graphs/FortWorth1-F.png' alt='graph of Fort Worth climate in 1981-2010'>"
+    ]
+  },
+
+  "BdX": {
+    "media": [
+      "<img src='../graphs/FurnaceCreek4-F.png' alt='graph of Furnace Creek climate in 2071-2100'>"
+    ]
+  },
+
+  "AdX": {
+    "media": [
+      "<img src='../graphs/Basrah4-F.png' alt='graph of Basrah climate in 2071-2100'>"
     ]
   }
 }
