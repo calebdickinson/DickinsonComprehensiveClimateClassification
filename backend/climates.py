@@ -21,14 +21,14 @@ codes = {
                'Dhz1', 'Dha2', 'Dha1', 'Dhb2',
                'Ehz1', 'Eha2', 'Eha1', 'Ehb2',
 
-'ZgX', 'Zgz2', 'Zgz1',
+       'Zgz2', 'Zgz1',
        'Agz2', 'Agz1', 'Aga2', 'Aga1',
 'BgX', 'Bgz2', 'Bgz1', 'Bga2', 'Bga1', 'Bgb2',
        'Cgz2', 'Cgz1', 'Cga2', 'Cga1', 'Cgb2',
                'Dgz1', 'Dga2', 'Dga1', 'Dgb2',
                'Egz1', 'Ega2', 'Ega1', 'Egb2',
             
-       'Zwz2', 'Zwz1',
+'ZwX', 'Zwz2', 'Zwz1',
 'AwX', 'Awz2', 'Awz1', 'Awa2', 'Awa1',
 'BwX', 'Bwz2', 'Bwz1', 'Bwa2', 'Bwa1', 'Bwb2',
        'Cwz2', 'Cwz1', 'Cwa2', 'Cwa1', 'Cwb2',
