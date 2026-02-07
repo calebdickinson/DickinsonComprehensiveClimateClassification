@@ -36,7 +36,7 @@ codes = {
                'Ewz1', 'Ewa2', 'Ewa1', 'Ewb2',
 
        'Zmz2', 'Zmz1',
-       'Amz2', 'Amz1', 'Ama2', 'Ama1',
+       'Amz2', 'Amz1', 'Ama2',
        'Bmz2', 'Bmz1', 'Bma2', 'Bma1', 'Bmb2',
        'Cmz2', 'Cmz1', 'Cma2', 'Cma1', 'Cmb2',
                'Dmz1', 'Dma2', 'Dma1', 'Dmb2',
