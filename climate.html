@@ -342,8 +342,9 @@
 
         // Build default map paths using exact case
         const MAP_DIR = 'images/maps';
+        const USA_DIR = `images/maps/usa`;
         const g = n => `${MAP_DIR}/${climate_code}-map${n}.png`;
-        const u = n => `${MAP_DIR}/${climate_code}-map${n}usa.png`;
+        const u = n => `${USA_DIR}/${climate_code}-map${n}usa.png`;
 
         // Global
         wireSection('map1', 'climate_map_1',  climate.map1  || g(1));
