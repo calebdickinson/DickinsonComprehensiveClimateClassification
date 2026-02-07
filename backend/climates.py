@@ -46,7 +46,7 @@ codes = {
 'AsX', 'Asz2', 'Asz1', 'Asa2', 'Asa1',
 'BsX', 'Bsz2', 'Bsz1', 'Bsa2', 'Bsa1', 'Bsb2',
        'Csz2', 'Csz1', 'Csa2', 'Csa1', 'Csb2',
-               'Dsz1', 'Dsa2', 'Dsa1', 'Dsb2',
+       'Dsz2', 'Dsz1', 'Dsa2', 'Dsa1', 'Dsb2',
                'Esz1', 'Esa2', 'Esa1', 'Esb2',
 
 'ZdX', 'Zdz2', 'Zdz1',
