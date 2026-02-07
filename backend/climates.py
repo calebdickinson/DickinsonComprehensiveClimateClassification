@@ -30,14 +30,14 @@ codes = {
             
        'Zwz2', 'Zwz1',
 'AwX', 'Awz2', 'Awz1', 'Awa2', 'Awa1',
-       'Bwz2', 'Bwz1', 'Bwa2', 'Bwa1', 'Bwb2',
+'BwX', 'Bwz2', 'Bwz1', 'Bwa2', 'Bwa1', 'Bwb2',
                'Cwz1', 'Cwa2', 'Cwa1', 'Cwb2',
                'Dwz1', 'Dwa2', 'Dwa1', 'Dwb2',
                'Ewz1', 'Ewa2', 'Ewa1', 'Ewb2',
 
        'Zmz2', 'Zmz1',
        'Amz2', 'Amz1', 'Ama2',
-       'Bmz2', 'Bmz1', 'Bma2', 'Bma1', 'Bmb2',
+'BmX', 'Bmz2', 'Bmz1', 'Bma2', 'Bma1', 'Bmb2',
        'Cmz2', 'Cmz1', 'Cma2', 'Cma1', 'Cmb2',
                'Dmz1', 'Dma2', 'Dma1', 'Dmb2',
                                'Ema1', 'Emb2',
