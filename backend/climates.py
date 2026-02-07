@@ -22,7 +22,7 @@ codes = {
                'Ehz1', 'Eha2', 'Eha1', 'Ehb2',
 
 'ZgX', 'Zgz2', 'Zgz1',
-'AgX', 'Agz2', 'Agz1', 'Aga2', 'Aga1',
+       'Agz2', 'Agz1', 'Aga2', 'Aga1',
 'BgX', 'Bgz2', 'Bgz1', 'Bga2', 'Bga1', 'Bgb2',
        'Cgz2', 'Cgz1', 'Cga2', 'Cga1', 'Cgb2',
                'Dgz1', 'Dga2', 'Dga1', 'Dgb2',
@@ -36,7 +36,7 @@ codes = {
                'Ewz1', 'Ewa2', 'Ewa1', 'Ewb2',
 
        'Zmz2', 'Zmz1',
-       'Amz2', 'Amz1', 'Ama2',
+               'Amz1', 'Ama2',
 'BmX', 'Bmz2', 'Bmz1', 'Bma2', 'Bma1', 'Bmb2',
 'CmX', 'Cmz2', 'Cmz1', 'Cma2', 'Cma1', 'Cmb2',
                'Dmz1', 'Dma2', 'Dma1', 'Dmb2',
