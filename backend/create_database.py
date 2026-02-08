@@ -112,14 +112,10 @@ def generate_json() -> Dict[str, Dict[str, Any]]:
             'map2':       f'images/maps/{code}-map2.png',
             'map3':       f'images/maps/{code}-map3.png',
             'map4':       f'images/maps/{code}-map4.png',
-            'map1usa':    f'images/maps/{code}-map1usa.png',
-            'map2usa':    f'images/maps/{code}-map2usa.png',
-            'map3usa':    f'images/maps/{code}-map3usa.png',
-            'map4usa':    f'images/maps/{code}-map4usa.png',
-            'map1europe': f'images/maps/{code}-map1europe.png',
-            'map2europe': f'images/maps/{code}-map2europe.png',
-            'map3europe': f'images/maps/{code}-map3europe.png',
-            'map4europe': f'images/maps/{code}-map4europe.png',
+            'map1usa':    f'images/maps/usa/{code}-map1usa.png',
+            'map2usa':    f'images/maps/usa/{code}-map2usa.png',
+            'map3usa':    f'images/maps/usa/{code}-map3usa.png',
+            'map4usa':    f'images/maps/usa/{code}-map4usa.png',
 
             'cities': {"map1": [], "map2": [], "map3": [], "map4": []},
         }
@@ -156,15 +152,10 @@ def generate_json() -> Dict[str, Dict[str, Any]]:
             'map2':       f'images/maps/{dc}-map2.png',
             'map3':       f'images/maps/{dc}-map3.png',
             'map4':       f'images/maps/{dc}-map4.png',
-            'map1usa':    f'images/maps/{dc}-map1usa.png',
-            'map2usa':    f'images/maps/{dc}-map2usa.png',
-            'map3usa':    f'images/maps/{dc}-map3usa.png',
-            'map4usa':    f'images/maps/{dc}-map4usa.png',
-            'map1europe': f'images/maps/{dc}-map1europe.png',
-            'map2europe': f'images/maps/{dc}-map2europe.png',
-            'map3europe': f'images/maps/{dc}-map3europe.png',
-            'map4europe': f'images/maps/{dc}-map4europe.png',
-
+            'map1usa':    f'images/maps/usa/{dc}-map1usa.png',
+            'map2usa':    f'images/maps/usa/{dc}-map2usa.png',
+            'map3usa':    f'images/maps/usa/{dc}-map3usa.png',
+            'map4usa':    f'images/maps/usa/{dc}-map4usa.png',
             'cities': {"map1": [], "map2": [], "map3": [], "map4": []},
         }
 
