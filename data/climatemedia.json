@@ -18,17 +18,24 @@
       "<a title='Maarten Takens, CC BY-SA 2.0 &lt;https://creativecommons.org/licenses/by-sa/2.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Oymyakon_forests.jpg'><img alt='Oymyakon forests' src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Oymyakon_forests.jpg/1024px-Oymyakon_forests.jpg?20140915211437'></a>",
       "<a href='https://commons.wikimedia.org/wiki/File:Oymyakon_forests.jpg'>Maarten Takens</a>, <a href='https://creativecommons.org/licenses/by-sa/2.0'>CC BY-SA 2.0</a>, via Wikimedia Commons",
       "<br><br>",
-      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/w6fyb46Z-SM?si=w10mR3gQruKTgh2V' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>"
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/w6fyb46Z-SM?si=w10mR3gQruKTgh2V' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img src='../graphs/Oymyakon1-F.png' alt='graph of Oymyakon climate in 1981-2010'>",
+      "<img src='../graphs/Verkhoyansk1-F.png' alt='graph of Verkhoyansk climate in 1981-2010'>"
     ]
   },
 
   "GY": {
     "media": [
-      "<a href=\"https://commons.wikimedia.org/wiki/File:Svea_field_station_in_Antarctica.jpg\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Svea_field_station_in_Antarctica.jpg/512px-Svea_field_station_in_Antarctica.jpg\"></a>",
-      "<a href='https://commons.wikimedia.org/wiki/File:Svea_field_station_in_Antarctica.jpg'>Diorit</a>, <a href='http://creativecommons.org/licenses/by-sa/3.0/'>CC BY-SA 3.0</a>, via Wikimedia Commons",
+      "<p>The summit of Mount Everest has a GY climate.</p>",
+      "<a title='Bijay Chaurasia, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Close_Up_View_of_Mount_Everest_from_Kala_Patthar_(5644_m)_in_2023-IMG-3485.jpg'><img alt='Close Up View of Mount Everest from Kala Patthar (5644 m) in 2023' src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Close_Up_View_of_Mount_Everest_from_Kala_Patthar_%285644_m%29_in_2023-IMG-3485.jpg/2048px-Close_Up_View_of_Mount_Everest_from_Kala_Patthar_%285644_m%29_in_2023-IMG-3485.jpg?20230514111609'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Close_Up_View_of_Mount_Everest_from_Kala_Patthar_(5644_m)_in_2023-IMG-3485.jpg'>Bijay Chaurasia</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
       "<br><br>",
-      "<img src='../graphs/SummitStation1-F.png' alt='graph of Summit Station climate in 1981-2010'>",
-      "<img src='../graphs/SveaStation1-F.png' alt='graph of Svea Station climate in 1981-2010'>"
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/A-iVxaFhr7s?si=FqISXApDyTO0mgH8' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img src='../graphs/MountEverest1-F.png' alt='graph of Mount Everest climate in 1981-2010'>",
+      "<img src='../graphs/SveaStation1-F.png' alt='graph of Svea Station climate in 1981-2010'>",
+      "<img src='../graphs/SummitStation1-F.png' alt='graph of Summit Station climate in 1981-2010'>"
     ]
   },
 
@@ -57,7 +64,10 @@
       "<br><br>",
       "<iframe width='1280' height='720' src='https://www.youtube.com/embed/NwEFqdHVwiA?si=CkukELBPKa9e4N_P' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
       "<br><br>",
-      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/x5XXF6U6vDQ?si=gwg_4pJRTYKz9fnM' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>"
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/x5XXF6U6vDQ?si=gwg_4pJRTYKz9fnM' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img src='../graphs/CaseyStation1-F.png' alt='graph of Casey Station climate in 1981-2010'>",
+      "<img src='../graphs/MawsonStation1-F.png' alt='graph of Mawson Station climate in 1981-2010'>"
     ]
   },
 
@@ -123,7 +133,9 @@
    "media": [
      "<p>Cc1 is a very rare, almost theoretical climate that typically occurs near the boundary with another climate category. It is found on Heard Island in the coastal, mossy areas, bordering the Dc1 climate.</p>",
      "<br>",
-     "<iframe width='1280' height='720' src='https://www.youtube.com/embed/I89I1AkWUkk?si=A5eumvXHNNyH8AEc' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>"
+     "<iframe width='1280' height='720' src='https://www.youtube.com/embed/I89I1AkWUkk?si=A5eumvXHNNyH8AEc' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+     "<br><br>",
+     "<img src='../graphs/HeardIsland1-F.png' alt='graph of Heard Island climate in 1981-2010'>"
    ]
   },
 
@@ -135,7 +147,9 @@
       "<a title='Hullwarren, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:MacquarieIslandElephantSeal.JPG'><img alt='MacquarieIslandElephantSeal' src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/MacquarieIslandElephantSeal.JPG/1024px-MacquarieIslandElephantSeal.JPG?20090627124113'></a>",
       "<a href='https://commons.wikimedia.org/wiki/File:MacquarieIslandElephantSeal.JPG'>Hullwarren</a>, <a href='https://creativecommons.org/licenses/by-sa/3.0'>CC BY-SA 3.0</a>, via Wikimedia Commons",
       "<br><br>",
-      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/yvyf4LQjn6o?si=57K3WVWdv_qhmasZ' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>"
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/yvyf4LQjn6o?si=57K3WVWdv_qhmasZ' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img src='../graphs/MacquarieIsland1-F.png' alt='graph of Macquarie Island climate in 1981-2010'>"
     ]
   },
 
@@ -144,7 +158,15 @@
       "<a title='kallerna, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Faroese_sheep_Sumba_1.jpg'><img alt='Faroese sheep Sumba 1' src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Faroese_sheep_Sumba_1.jpg/2048px-Faroese_sheep_Sumba_1.jpg?20190725093255'></a>",
       "<a href='https://commons.wikimedia.org/wiki/File:Faroese_sheep_Sumba_1.jpg'>kallerna</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
       "<br><br>",
-      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/cD9HEBz_QPs?si=lLPaduMZ1qThfadn' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>"
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/cD9HEBz_QPs?si=lLPaduMZ1qThfadn' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img src='../graphs/Tórshavn1-F.png' alt='graph of Tórshavn climate in 1981-2010'>"
+    ]
+  },
+
+  "Chb2": {
+    "media": [
+      "<img src='../graphs/Dublin1-F.png' alt='graph of Dublin climate in 1981-2010'>"
     ]
   },
 
@@ -174,9 +196,23 @@
     ]
   },
 
+  "Bb1": {
+    "media": [
+      "<img src='../graphs/Quito1-F.png' alt='graph of Quito climate in 1981-2010'>",
+      "<img src='../graphs/Bogotá1-F.png' alt='graph of Bogotá climate in 1981-2010'>"
+    ]
+  },
+
   "Bda1": {
     "media": [
       "<iframe width='1280' height='720' src='https://www.youtube.com/embed/f6gVTfmNKGc?si=tuTp86JoFoJimWF6' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>"
+    ]
+  },
+
+  "BdX": {
+    "media": [
+      "<img src='../graphs/LakeHavasuCity1-F.png' alt='graph of Lake Havasu City climate in 1981-2010'>",
+      "<img src='../graphs/FurnaceCreek1-F.png' alt='graph of Furnace Creek climate in 1981-2010'>"
     ]
   },
 
