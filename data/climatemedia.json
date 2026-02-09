@@ -83,7 +83,8 @@
       "<a title='Morgen Mills, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Chimborazo_2022-12-05.jpg'><img alt='Aerial photo of Chimborazo from the southeast' src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Chimborazo_2022-12-05.jpg/2048px-Chimborazo_2022-12-05.jpg?20221206185148'></a>",
       "<a href='https://commons.wikimedia.org/wiki/File:Chimborazo_2022-12-05.jpg'>Morgen Mills</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
       "<br><br>",
-      "<img src='../graphs/Chimborazo1-F.png' alt='graph of Chimborazo climate in 1981-2010'>"
+      "<img src='../graphs/Chimborazo1-F.png' alt='graph of Chimborazo climate in 1981-2010'>",
+      "<img src='../graphs/MountKilimanjaro1-F.png' alt='graph of Mount Kilimanjaro climate in 1981-2010'>"
     ]
   },
 
@@ -95,7 +96,9 @@
       "<a title='Rob Oo from NL, CC BY 2.0 &lt;https://creativecommons.org/licenses/by/2.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Mossy_(31934018615).jpg'><img alt='Mossy (31934018615)' src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Mossy_%2831934018615%29.jpg/2048px-Mossy_%2831934018615%29.jpg?20201212165033'></a>",
       "<a href='https://commons.wikimedia.org/wiki/File:Mossy_(31934018615).jpg'>Rob Oo from NL</a>, <a href='https://creativecommons.org/licenses/by/2.0'>CC BY 2.0</a>, via Wikimedia Commons",
       "<br><br>",
-      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/sjHrFHLdx9Y?si=3xJpLwZHI60fwQi2' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>"
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/sjHrFHLdx9Y?si=3xJpLwZHI60fwQi2' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img src='../graphs/KingEdwardpoint1-F.png' alt='graph of King Edward Point climate in 1981-2010'>"
     ]
   },
 
