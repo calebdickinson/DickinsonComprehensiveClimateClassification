@@ -33,9 +33,9 @@
       "<br><br>",
       "<iframe width='1280' height='720' src='https://www.youtube.com/embed/A-iVxaFhr7s?si=FqISXApDyTO0mgH8' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
       "<br><br>",
-      "<img src='../graphs/MountEverest1-F.png' alt='graph of Mount Everest climate in 1981-2010'>",
-      "<img src='../graphs/SveaStation1-F.png' alt='graph of Svea Station climate in 1981-2010'>",
-      "<img src='../graphs/SummitStation1-F.png' alt='graph of Summit Station climate in 1981-2010'>"
+      "<img class='three' src='../graphs/SummitStation1-F.png' alt='graph of Summit Station climate in 1981-2010'>",
+      "<img class='three' src='../graphs/MountEverest1-F.png' alt='graph of Mount Everest climate in 1981-2010'>",
+      "<img class='three' src='../graphs/SveaStation1-F.png' alt='graph of Svea Station climate in 1981-2010'>"
     ]
   },
 
