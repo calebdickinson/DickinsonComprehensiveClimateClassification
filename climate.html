@@ -14,6 +14,44 @@
   <link rel="stylesheet" href="css/styles.css">
   <title></title>
   <style>
+  button {
+    width: 12rem;
+    height: 2.5rem;
+    font-size: 1.3rem;
+    color: #222222;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+  .humid           { background: #008800; }
+  .semihumid       { background: #00ff00; }
+  .monsoon         { background: #ff00ff; }
+  .mediterranean   { background: #fff000; }
+  .semiarid        { background: #ff8800; }
+  .arid-desert     { background: #ff0000; }
+
+  button:disabled {
+    background: #444 !important;
+    color: transparent !important;  /* hide text */
+    cursor: default !important;
+    pointer-events: none !important;
+    transform: none !important;
+  }
+
+  .year-btn.disabled {
+    background: #444 !important;
+    color: transparent !important;
+    cursor: default !important;
+    pointer-events: none !important;
+    transform: none !important;
+  }
+
+  .year-btn.active {
+    border: 3px solid black !important;
+  }
+
   /* Generic hidden class – JS will remove this when content loads successfully */
   .hidden {
     display: none !important;
@@ -21,6 +59,18 @@
   /* Cities section still starts hidden (uses the same class or ID override if needed) */
   #cities {
     display: none !important;
+  }
+  #map2, #map3, #map4 {
+    display: none;
+  }
+  #climate_name {
+    margin-top: -27px;
+  }
+  .climatecode {
+    margin-top: -50px;
+  }
+  .buttons-with-code > .climate-code {
+    transform: translateY(-35px);
   }
   @media (min-width: 900px) {
     #climatemedia > img {
@@ -49,7 +99,7 @@
 </head>
 <body>
   <div id="header">
-    <h1>The Dickinson Climate Classification</h1>
+    <p>The Dickinson Climate Classification</p>
   </div>
 
   <nav>
@@ -68,75 +118,60 @@
 
     <div class="buttons-with-code">
       <div class="buttons-group">
-        <button class="warmer" id="climate_go_to_hotter_summer"><-- Warmer Summers</button>
-        <button class="warmer" id="climate_go_to_hotter_winter"><-- Warmer Winters</button>
+        <button class="warmer" id="climate_go_to_hotter_summer">⬅ Warmer Summers</button>
+        <button class="warmer" id="climate_go_to_hotter_winter">⬅ Warmer Winters</button>
       </div>
-      <div class="climate-code">
-        <h2>Climate Code: <strong id="climate_code"></strong></h2>
-      </div>
-      <div class="buttons-group buttons-group_right">
-        <button class="colder" id="climate_go_to_colder_summer">Colder Summers --></button>
-        <button class="colder" id="climate_go_to_colder_winter">Colder Winters --></button>
-      </div>
-    </div>
-
-    <div class="box" id="ariditySection" hidden>
-      <div class="ariditybox-border-outer">
-        <div class="ariditybox-border-inner">
-          <div class="ariditybox-grid">
-            <button id="climate_go_to_humid"           class="ariditybox ariditybox-humid">Humid (H)</button>
-            <button id="climate_go_to_semihumid"       class="ariditybox ariditybox-semihumid">Semihumid (G)</button>
-            <button id="climate_go_to_monsoon"         class="ariditybox ariditybox-monsoon">Monsoon<br><br>(W)</button>
-            <button id="climate_go_to_mediterranean"   class="ariditybox ariditybox-mediterranean">Mediter-<br>ranean<br><br>(M)</button>
-            <button id="climate_go_to_semiarid"        class="ariditybox ariditybox-semiarid">Semiarid (S)</button>
-            <button id="climate_go_to_arid_desert"     class="ariditybox ariditybox-arid-desert">Arid (D)</button>
+      <div class="box" id="ariditySection" hidden>
+        <div class="ariditybox-border-outer">
+          <div class="ariditybox-border-inner">
+            <div class="ariditybox-grid">
+              <button id="climate_go_to_humid"           class="ariditybox ariditybox-humid">Humid (H)</button>
+              <button id="climate_go_to_semihumid"       class="ariditybox ariditybox-semihumid">Semihumid (G)</button>
+              <button id="climate_go_to_monsoon"         class="ariditybox ariditybox-monsoon">Monsoon<br><br>(W)</button>
+              <button id="climate_go_to_mediterranean"   class="ariditybox ariditybox-mediterranean">Mediter-<br>ranean<br><br>(M)</button>
+              <button id="climate_go_to_semiarid"        class="ariditybox ariditybox-semiarid">Semiarid (S)</button>
+              <button id="climate_go_to_arid_desert"     class="ariditybox ariditybox-arid-desert">Arid (D)</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-
-    <div id="climatemedia"></div>
-
-    <!-- Legend shown only for climate group pages -->
-    <div id="groupLegend" style="max-width:800px; margin:0 auto 10px; display:block;">
-      <img id="group_legend_img" alt="Climate group maps legend" style="max-width:100%; height:auto;">
+      <div class="buttons-group buttons-group_right">
+        <button class="colder" id="climate_go_to_colder_summer">Colder Summers ⮕</button>
+        <button class="colder" id="climate_go_to_colder_winter">Colder Winters ⮕</button>
+      </div>
     </div>
 
     <!-- Global maps -->
-    <div id="map1">
-      <h3 class="map-caption">Global distribution of this climate (Projections are RCP8.5 high emissions normals)<br>1981 - 2010</h3>
-      <img id="climate_map_1" alt="World climate map (1981 - 2010 normals)">
-    </div>
-    <div id="map2">
-      <h3 class="map-caption">Global distribution of this climate (Projections are RCP8.5 high emissions normals)<br>2011 - 2040</h3>
-      <img id="climate_map_2" alt="World climate map (2011 - 2040 High Emissions normals)">
-    </div>
-    <div id="map3">
-      <h3 class="map-caption">Global distribution of this climate (Projections are RCP8.5 high emissions normals)<br>2041 - 2070</h3>
-      <img id="climate_map_3" alt="World climate map (2041 - 2070 High Emissions normals)">
-    </div>
-    <div id="map4">
-      <h3 class="map-caption">Global distribution of this climate (Projections are RCP8.5 high emissions normals)<br>2071 - 2100</h3>
-      <img id="climate_map_4" alt="World climate map (2071 - 2100 High Emissions normals)">
+    <div id="globalSection">
+      <h3 class="map-caption">Global distribution of this climate (Projections are RCP8.5 high emissions normals)</h3>
+      <div style="text-align:center; margin:10px 0;">
+        <button id="gbtn1" class="year-btn" onclick="showMapGlobal(1)">1981 - 2010</button>
+        <button id="gbtn2" class="year-btn" onclick="showMapGlobal(2)">2011 - 2040</button>
+        <button id="gbtn3" class="year-btn" onclick="showMapGlobal(3)">2041 - 2070</button>
+        <button id="gbtn4" class="year-btn" onclick="showMapGlobal(4)">2071 - 2100</button>
+      </div>
+      <div id="map1"><img id="climate_map_1"></div>
+      <div id="map2"><img id="climate_map_2"></div>
+      <div id="map3"><img id="climate_map_3"></div>
+      <div id="map4"><img id="climate_map_4"></div>
     </div>
 
     <!-- USA maps -->
-    <div id="map1usa">
-      <h3 class="map-caption">United States distribution of this climate (Projections are RCP8.5 high emissions normals)<br>1981 - 2010</h3>
-      <img id="climate_map_1_usa" alt="United States climate map (1981 - 2010 normals)">
+    <div id="usaSection">
+      <h3 class="map-caption">United States distribution of this climate (Projections are RCP8.5 high emissions normals)</h3>
+      <div style="text-align:center; margin:10px 0;">
+        <button id="ubtn1" class="year-btn" onclick="showMapUSA(1)">1981 - 2010</button>
+        <button id="ubtn2" class="year-btn" onclick="showMapUSA(2)">2011 - 2040</button>
+        <button id="ubtn3" class="year-btn" onclick="showMapUSA(3)">2041 - 2070</button>
+        <button id="ubtn4" class="year-btn" onclick="showMapUSA(4)">2071 - 2100</button>
+      </div>
+      <div id="map1usa"><img id="climate_map_1_usa"></div>
+      <div id="map2usa"><img id="climate_map_2_usa"></div>
+      <div id="map3usa"><img id="climate_map_3_usa"></div>
+      <div id="map4usa"><img id="climate_map_4_usa"></div>
     </div>
-    <div id="map2usa">
-      <h3 class="map-caption">United States distribution of this climate (Projections are RCP8.5 high emissions normals)<br>2011 - 2040</h3>
-      <img id="climate_map_2_usa" alt="United States climate map (2011 - 2040 High Emissions normals)">
-    </div>
-    <div id="map3usa">
-      <h3 class="map-caption">United States distribution of this climate (Projections are RCP8.5 high emissions normals)<br>2041 - 2070</h3>
-      <img id="climate_map_3_usa" alt="United States climate map (2041 - 2070 High Emissions normals)">
-    </div>
-    <div id="map4usa">
-      <h3 class="map-caption">United States distribution of this climate (Projections are RCP8.5 high emissions normals)<br>2071 - 2100</h3>
-      <img id="climate_map_4_usa" alt="United States climate map (2071 - 2100 High Emissions normals)">
-    </div>
+
+    <div id="climatemedia"></div>
 
     <div id="cities">
       <div id="cities1" class="cities-block">
@@ -159,6 +194,41 @@
 
   <script>
     // --- helpers ---
+    function showMapGlobal(n) {
+      // hide maps
+      for (let i = 1; i <= 4; i++) {
+        const m = document.getElementById('map' + i);
+        if (m) m.style.display = 'none';
+      }
+
+      // show chosen
+      const chosen = document.getElementById('map' + n);
+      if (chosen) chosen.style.display = 'block';
+
+      // update buttons
+      for (let i = 1; i <= 4; i++) {
+        const btn = document.getElementById('gbtn' + i);
+        if (!btn) continue;
+        btn.classList.toggle('active', i === n);
+      }
+    }
+
+    function showMapUSA(n) {
+      for (let i = 1; i <= 4; i++) {
+        const m = document.getElementById('map' + i + 'usa');
+        if (m) m.style.display = 'none';
+      }
+
+      const chosen = document.getElementById('map' + n + 'usa');
+      if (chosen) chosen.style.display = 'block';
+
+      for (let i = 1; i <= 4; i++) {
+        const btn = document.getElementById('ubtn' + i);
+        if (!btn) continue;
+        btn.classList.toggle('active', i === n);
+      }
+    }
+
     function change_climate(nextCode) {
       window.location.href = window.location.pathname + '?code=' + nextCode;
     }
@@ -175,24 +245,39 @@
     }
 
     function wireSection(sectionId, imgId, url) {
-      const section = document.getElementById(sectionId);
-      const img = document.getElementById(imgId);
-      if (!section || !img) return;
+      return new Promise(resolve => {
+        const section = document.getElementById(sectionId);
+        const img = document.getElementById(imgId);
+        if (!section || !img) return resolve(false);
 
-      section.style.display = 'none';
-      if (!url || String(url).trim() === '') return;
+        section.style.display = 'none';
 
-      img.onload = () => {
-        if (img.naturalWidth > 0 && img.naturalHeight > 0) {
-          section.style.display = '';
-        } else {
+        if (!url || String(url).trim() === '') {
+          // no URL provided => treat as missing
           section.remove();
+          return resolve(false);
         }
-      };
-      img.onerror = () => section.remove();
-      img.decoding = 'async';
-      img.loading  = 'eager';
-      img.src = url;
+
+        img.onload = () => {
+          const ok = img.naturalWidth > 0 && img.naturalHeight > 0;
+          if (ok) {
+            section.style.display = '';
+            resolve(true);
+          } else {
+            section.remove();
+            resolve(false);
+          }
+        };
+
+        img.onerror = () => {
+          section.remove();
+          resolve(false);
+        };
+
+        img.decoding = 'async';
+        img.loading = 'eager';
+        img.src = url;
+      });
     }
 
     // --- main ---
@@ -212,6 +297,22 @@
         if (!climate) throw new Error(`Climate code '${codeParam}' not found in data.json`);
 
         const climate_code = climate.code; // canonical case from data.json
+
+        // Map buttons color selecter
+        const aridityLetter = climate_code.charAt(1);
+        const map = {
+          h: 'humid',
+          g: 'semihumid',
+          w: 'monsoon',
+          m: 'mediterranean',
+          s: 'semiarid',
+          d: 'arid'
+        };
+        const aridityClass = map[aridityLetter];
+        if (aridityClass) {
+          document.querySelectorAll('.year-btn')
+            .forEach(b => b.classList.add('year-' + aridityClass));
+        }
 
         // --- Cities: load from data/cities.json and populate lists ---
         (function loadCities() {
@@ -262,9 +363,7 @@
             .catch(err => console.warn('Cities load failed:', err));
         })();
 
-        document.getElementById('climate_name').textContent =
-          climate.name + (climate.group ? " Climate Group" : " Climate");
-        document.getElementById('climate_code').textContent = climate_code;
+        document.getElementById('climate_name').textContent = climate_code + ": " + climate.name;
 
         const isGroup = !!climate.group;
 
@@ -288,20 +387,6 @@
           is_group: isGroup,
           exists: !!climate.exists
         });
-
-        if (isGroup) {
-          const legendDiv = document.getElementById('groupLegend');
-          const legendImg = document.getElementById('group_legend_img');
-
-          legendImg.src = 'images/climategrouplegend.png';  // exact path
-          legendDiv.style.display = '';                     // unhide
-        }
-
-        // Hide/remove legend entirely for non-group pages
-        if (!isGroup) {
-          const legendDiv = document.getElementById('groupLegend');
-          if (legendDiv) legendDiv.remove(); // or legendDiv.style.display = 'none';
-        }
 
         document.querySelectorAll('.map-caption').forEach(caption => {
           caption.innerHTML = caption.innerHTML.replace(
@@ -364,15 +449,52 @@
         const u = n => `${USA_DIR}/${climate_code}-map${n}usa.png`;
 
         // Global
-        wireSection('map1', 'climate_map_1',  climate.map1  || g(1));
-        wireSection('map2', 'climate_map_2',  climate.map2  || g(2));
-        wireSection('map3', 'climate_map_3',  climate.map3  || g(3));
-        wireSection('map4', 'climate_map_4',  climate.map4  || g(4));
+        Promise.all([
+          wireSection('map1', 'climate_map_1',  climate.map1  || g(1)),
+          wireSection('map2', 'climate_map_2',  climate.map2  || g(2)),
+          wireSection('map3', 'climate_map_3',  climate.map3  || g(3)),
+          wireSection('map4', 'climate_map_4',  climate.map4  || g(4)),
+        ]).then(results => {
+          // grey out buttons with missing maps
+          results.forEach((exists, i) => {
+            if (!exists) {
+              const btn = document.getElementById('gbtn' + (i + 1));
+              if (btn) btn.classList.add('disabled');
+            }
+          });
+          const globalSection = document.getElementById('globalSection');
+          // find first available map
+          const first = results.findIndex(Boolean);
+          if (first === -1) {
+            if (globalSection) globalSection.remove();
+          } else {
+            showMapGlobal(first + 1);
+          }
+        });
+
         // USA
-        wireSection('map1usa','climate_map_1_usa', climate.map1usa || u(1));
-        wireSection('map2usa','climate_map_2_usa', climate.map2usa || u(2));
-        wireSection('map3usa','climate_map_3_usa', climate.map3usa || u(3));
-        wireSection('map4usa','climate_map_4_usa', climate.map4usa || u(4));
+        Promise.all([
+          wireSection('map1usa', 'climate_map_1_usa', climate.map1usa || u(1)),
+          wireSection('map2usa', 'climate_map_2_usa', climate.map2usa || u(2)),
+          wireSection('map3usa', 'climate_map_3_usa', climate.map3usa || u(3)),
+          wireSection('map4usa', 'climate_map_4_usa', climate.map4usa || u(4)),
+        ]).then(results => {
+          // grey out buttons with missing maps
+          results.forEach((exists, i) => {
+            if (!exists) {
+              const btn = document.getElementById('ubtn' + (i + 1));
+              if (btn) btn.classList.add('disabled');
+            }
+          });
+          const usaSection = document.getElementById('usaSection');
+          // find first available map
+          const first = results.findIndex(Boolean);
+          if (first === -1) {
+            if (usaSection) usaSection.remove();
+          } else {
+            showMapUSA(first + 1);
+          }
+        });
 
         // Aridity chooser visibility (unrelated to maps)
         const aridityTargets = [
@@ -388,7 +510,7 @@
           document.getElementById('climate_exists').textContent =
             `THIS ${climate.group ? 'CLIMATE GROUP' : 'CLIMATE'} DOES NOT EXIST`;
           [
-            'climatemedia', 'groupLegend',
+            'climatemedia',
             'map1','map2','map3','map4',
             'map1usa','map2usa','map3usa','map4usa',
             'ariditySection'

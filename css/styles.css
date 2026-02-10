@@ -1,9 +1,13 @@
 html { font-size: 150%; }
 /* light gray page–wide background */
 body {
+font-family: sans-serif;
 background-color: #bbbbbb;
-margin: 5;
+margin: 0;
 padding: 0;
+}
+h1, h2, h3 {
+  font-weight: 350;
 }
 
 /* HEADER / FAVICON BANNER */
@@ -14,11 +18,10 @@ border-top: 1px solid transparent;
 border-bottom: 1px solid transparent;
 text-align: center;
 }
-#header h1 {
-margin: .5rem;
-font-family: cursive;
-font-size: 2rem;
-color: #eeeeee;
+#header p {
+color: #222222;
+margin: 0;
+padding: .1rem 0;
 }
 
 /* NAVBAR */
@@ -26,10 +29,9 @@ nav {
 background: #006600;
 display: flex;
 justify-content: center;
-padding: 0.5rem 0;
+padding: 0.1rem 0;
 }
 nav a {
-font-family: cursive;
 color: #eeeeee;
 margin: 0 1rem;
 text-decoration: none;
@@ -60,9 +62,7 @@ align-items: flex-end;
 width: 12rem;
 height: 2.5rem;
 padding: .5rem 1rem;
-font-family: sans-serif;
 font-size: 1rem;
-color: #eeeeee;
 border: none;
 border-radius: 999px;
 cursor: pointer;
@@ -71,10 +71,10 @@ cursor: pointer;
 transform: scale(1.1);
 }
 .buttons-group button.warmer {
-background-color: #e74c3c;
+background-color: #ff0000;
 }
 .buttons-group button.colder {
-background-color: #3498db;
+background-color: #0088ff;
 }
 
 button:disabled {
@@ -90,21 +90,17 @@ main {
 padding: 2rem 1rem;
 }
 main h1 {
-font-family: cursive;
-font-size: 2.5rem;
 text-align: center;
 margin: 0.5rem 0;
 color: #222222;
 }
 .climate-code h2 {
-font-family: cursive;
 font-size: 2rem;
 text-align: center;
 margin: 0;
 color: #222222;
 }
 .climate-code h2 strong {
-font-family: sans-serif;
 font-weight: bold;
 color: #222222;
 }
@@ -117,19 +113,16 @@ img {
   max-height: 80svh;     /* correct on iOS with browser chrome */
 }
 main h3 {
-font-family: cursive;
 font-size: 1.6rem;
 text-align: center;
 margin: 1.5rem 0 0.5rem;
 color: #222222;
 }
 main h3 strong {
-font-family: sans-serif;
 font-weight: bold;
 color: #222222;
 }
 main p {
-font-family: sans-serif;
 font-size: 1rem;
 text-align: center;
 margin: 0;
@@ -141,11 +134,15 @@ color: #222222;
 /* custom properties must start with -- */
 --outer-col-width: 150px;
 --center-col-width: 225px;
---btn-height: 75px;
+--btn-height: 60px;
 --gap: 15px;
 --radius: 30px;
 width: fit-content;
 margin: 0 auto;   
+transform: scale(0.5);   /* try 0.9, 0.8, etc */
+transform-origin: top center;
+margin-top: -40px;     /* adjust until perfect */
+margin-bottom: -270px;
 }
 .box .ariditybox-border-outer {
 margin: 50px auto;
@@ -181,7 +178,6 @@ align-items: center;
 width: 100%;
 height: 100%;
 border-radius: var(--radius);
-font-family: sans-serif;
 font-size: 1.2rem;
 color: black;
 text-align: center;
@@ -195,7 +191,7 @@ transform: scale(1.05);
 .box .ariditybox-humid {
 grid-row: 1;
 grid-column: 2;
-background: #007500;
+background: #008800;
 }
 .box .ariditybox-humid.disabled {
 background: #444444 !important;
@@ -205,7 +201,7 @@ cursor: default;
 .box .ariditybox-semihumid {
 grid-row: 2;
 grid-column: 2;
-background: lightgreen;
+background: #00ff00;
 }
 .box .ariditybox-semihumid.disabled {
 background: #444444 !important;
@@ -215,7 +211,7 @@ cursor: default;
 .box .ariditybox-semiarid {
 grid-row: 3;
 grid-column: 2;
-background: orange;
+background: #ff8800;
 }
 .box .ariditybox-semiarid.disabled {
 background: #444444 !important;
@@ -225,7 +221,7 @@ cursor: default;
 .box .ariditybox-mediterranean {
 grid-row: 1 / span 3;
 grid-column: 1;
-background: #eeee00;
+background: #ffff00;
 }
 .box .ariditybox-mediterranean.disabled {
 background: #444444 !important;
@@ -233,10 +229,9 @@ pointer-events: none;
 cursor: default;
 }
 .box .ariditybox-monsoon {
-color: white;
 grid-row: 1 / span 3;
 grid-column: 3;
-background: purple;
+background: #ff00ff;
 }
 .box .ariditybox-monsoon.disabled {
 background: #444444 !important;
@@ -246,7 +241,7 @@ cursor: default;
 .box .ariditybox-arid-desert {
 grid-row: 4;
 grid-column: 1 / span 3;
-background: red;
+background: #ff0000;
 }
 .box .ariditybox-arid-desert.disabled {
 background: #444444 !important;
