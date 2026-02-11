@@ -98,7 +98,7 @@
       "<br><br>",
       "<iframe width='1280' height='720' src='https://www.youtube.com/embed/sjHrFHLdx9Y?si=3xJpLwZHI60fwQi2' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
       "<br><br>",
-      "<img src='../graphs/KingEdwardpoint1-F.png' alt='graph of King Edward Point climate in 1981-2010'>"
+      "<img src='../graphs/KingEdwardPoint1-F.png' alt='graph of King Edward Point climate in 1981-2010'>"
     ]
   },
 
@@ -209,18 +209,6 @@
     ]
   },
 
-  "Cma2": {
-    "media": [
-      "<a title='Bellina 09, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Experience_the_Majjistral_Park.jpg'><img alt='Visitors can walk along kilometres of trails that will take you through a myriad of habitats synonymous with the Mediterranean climate.' src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Experience_the_Majjistral_Park.jpg/2048px-Experience_the_Majjistral_Park.jpg?20250624094752'></a>",
-      "<br><br>",
-      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/72F1-OMZjyY?si=lTQkApddacUXS_H6' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
-      "<br><br>",
-      "<img class='three' src='../graphs/Algiers1-F.png' alt='graph of Algiers climate in 1981-2010'>",
-      "<img class='three' src='../graphs/Tunis1-F.png' alt='graph of Tunis climate in 1981-2010'>",
-      "<img class='three' src='../graphs/Riverside1-F.png' alt='graph of Riverside climate in 1981-2010'>"
-    ]
-  },
-
   "Bb1": {
     "media": [
       "<img src='../graphs/Quito1-F.png' alt='graph of Quito climate in 1981-2010'>",
@@ -231,6 +219,18 @@
   "Bda1": {
     "media": [
       "<iframe width='1280' height='720' src='https://www.youtube.com/embed/f6gVTfmNKGc?si=tuTp86JoFoJimWF6' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>"
+    ]
+  },
+
+  "Bma2": {
+    "media": [
+      "<a title='Bellina 09, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Experience_the_Majjistral_Park.jpg'><img alt='Visitors can walk along kilometres of trails that will take you through a myriad of habitats synonymous with the Mediterranean climate.' src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Experience_the_Majjistral_Park.jpg/2048px-Experience_the_Majjistral_Park.jpg?20250624094752'></a>",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/72F1-OMZjyY?si=lTQkApddacUXS_H6' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img class='three' src='../graphs/Algiers1-F.png' alt='graph of Algiers climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Tunis1-F.png' alt='graph of Tunis climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Riverside1-F.png' alt='graph of Riverside climate in 1981-2010'>"
     ]
   },
 
