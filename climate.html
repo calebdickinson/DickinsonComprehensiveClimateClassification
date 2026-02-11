@@ -30,7 +30,8 @@
   .monsoon         { background: #ff00ff; }
   .mediterranean   { background: #fff000; }
   .semiarid        { background: #ff8800; }
-  .arid-desert     { background: #ff0000; }
+  .arid            { background: #ff0000; }
+  .cold            { background: #4444ff; }
 
   button:disabled {
     background: #444 !important;
@@ -50,6 +51,15 @@
 
   .year-btn.active {
     border: 3px solid black !important;
+  }
+
+  .ariditybox.current {
+    border: 3px solid black;
+  }
+
+  #ariditySection[hidden] {
+    visibility: hidden;
+    pointer-events: none;
   }
 
   /* Generic hidden class – JS will remove this when content loads successfully */
@@ -300,18 +310,36 @@
 
         // Map buttons color selecter
         const aridityLetter = climate_code.charAt(1);
-        const map = {
+        const aridityMap = {
           h: 'humid',
           g: 'semihumid',
           w: 'monsoon',
           m: 'mediterranean',
           s: 'semiarid',
-          d: 'arid'
+          d: 'arid',
+          b: 'cold',
+          c: 'cold',
+          Y: 'cold'
         };
-        const aridityClass = map[aridityLetter];
+        const aridityClass = aridityMap[aridityLetter];
         if (aridityClass) {
-          document.querySelectorAll('.year-btn')
-            .forEach(b => b.classList.add('year-' + aridityClass));
+          document.querySelectorAll('button')
+            .forEach(btn => btn.classList.add(aridityClass));
+        }
+        
+        const currentAridityButton = {
+          h: 'climate_go_to_humid',
+          g: 'climate_go_to_semihumid',
+          w: 'climate_go_to_monsoon',
+          m: 'climate_go_to_mediterranean',
+          s: 'climate_go_to_semiarid',
+          d: 'climate_go_to_arid_desert'
+        };
+
+        const btnId = currentAridityButton[aridityLetter];
+        if (btnId) {
+          const btn = document.getElementById(btnId);
+          if (btn) btn.classList.add('current');
         }
 
         // --- Cities: load from data/cities.json and populate lists ---
@@ -363,7 +391,7 @@
             .catch(err => console.warn('Cities load failed:', err));
         })();
 
-        document.getElementById('climate_name').textContent = climate_code + ": " + climate.name;
+        document.getElementById('climate_name').innerHTML = `<strong>${climate_code}</strong>: ${climate.name}`;
 
         const isGroup = !!climate.group;
 
@@ -496,14 +524,16 @@
           }
         });
 
-        // Aridity chooser visibility (unrelated to maps)
+        // Aridity chooser visibility
         const aridityTargets = [
           climate.go_to_humid, climate.go_to_semihumid,
           climate.go_to_monsoon, climate.go_to_mediterranean,
           climate.go_to_semiarid, climate.go_to_arid_desert
         ];
         const anyAridity = aridityTargets.some(v => v && v !== "False");
-        document.getElementById('ariditySection').hidden = !(climate.group && climate.exists && anyAridity);
+        const aridityLetters = ['h','g','s','d','m','w'];
+        document.getElementById('ariditySection').hidden =
+          !(climate.exists && (climate.group || aridityLetters.includes(aridityLetter)));
 
         // Non-existent page: show banner and remove optional UI
         if (!climate.exists) {

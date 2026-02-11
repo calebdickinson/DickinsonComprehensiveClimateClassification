@@ -31,7 +31,9 @@ def _canon(code: Any, canon_map: Dict[str, str]) -> str:
     s = code.strip()
     if not s or s.lower() == "false":
         return "False"
-    return canon_map.get(s.lower(), s)  # keep original if unknown
+    c = canon_map.get(s.lower(), s)
+    return c if c in canon_map.values() else "False"
+
 
 def _group_targets_from_backend(codes: Iterable[str], canon_map: Dict[str, str]) -> Set[str]:
     targets: Set[str] = set()
@@ -68,8 +70,42 @@ def generate_json() -> Dict[str, Dict[str, Any]]:
     database: Dict[str, Dict[str, Any]] = OrderedDict()
 
     for code in codes_sorted:
-        is_group     = _safe(lambda: climates.is_code_group(code), False)
-        group_parts  = _safe(lambda: climates.breakup_code_group(code) if is_group else ["False"]*6, ["False"]*6)
+        is_group = _safe(lambda: climates.is_code_group(code), False)
+
+        if is_group:
+            group_parts = _safe(lambda: climates.breakup_code_group(code), ["False"]*6)
+
+        else:
+            # FIRST: try asking backend which group this climate belongs to
+            parent_group = _safe(lambda: climates.get_code_group(code), None)
+
+            if parent_group:
+                group_parts = _safe(lambda: climates.breakup_code_group(parent_group), ["False"]*6)
+
+            else:
+                # FALLBACK: build siblings ourselves
+                parts = _safe(lambda: climates.breakup(code), None)
+
+                if parts and len(parts) == 3:
+                    cold, arid, warm = parts
+
+                    siblings = [
+                        f"{cold}h{warm}",
+                        f"{cold}g{warm}",
+                        f"{cold}w{warm}",
+                        f"{cold}m{warm}",
+                        f"{cold}s{warm}",
+                        f"{cold}d{warm}",
+                    ]
+
+                    group_parts = [
+                        s if _safe(lambda s=s: climates.does_exist(s), False) else "False"
+                        for s in siblings
+                    ]
+                else:
+                    group_parts = ["False"]*6
+
+        # final safety net
         if not isinstance(group_parts, (list, tuple)) or len(group_parts) != 6:
             group_parts = ["False"]*6
 
