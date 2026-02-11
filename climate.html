@@ -93,18 +93,34 @@
       margin-bottom: 1em;
     }
   }
-  @media (max-width: 1300px) {
-    iframe {
-      width: 100%;
-      height: auto;
-      aspect-ratio: 16 / 9;
+  @media (max-width: 1400px) {
+    /* aridity disappears on mobile */
+    #ariditySection {
+      display: none !important;
     }
+    /* 2 × 2 grid */
+    .buttons-with-code {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      row-gap: 12px;
+      column-gap: 12px;
+    }
+    /* make wrapper groups vanish from layout */
+    .buttons-group,
+    .buttons-group_right {
+      display: contents;
+    }
+    /* exact placement */
+    #climate_go_to_hotter_summer { grid-column: 1; grid-row: 1; }
+    #climate_go_to_colder_summer { grid-column: 2; grid-row: 1; }
+    #climate_go_to_hotter_winter { grid-column: 1; grid-row: 2; }
+    #climate_go_to_colder_winter { grid-column: 2; grid-row: 2; }
   }
-  #ariditySection[hidden] {
-  display: block !important;   /* keep its size */
-  visibility: hidden !important;  /* but make it invisible */
-}
 
+  #ariditySection[hidden] {
+    display: block !important;   /* keep its size */
+    visibility: hidden !important;  /* but make it invisible */
+  }
   </style>
 </head>
 <body>
