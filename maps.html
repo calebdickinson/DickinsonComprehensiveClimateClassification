@@ -38,7 +38,35 @@
       margin-bottom: -15px;
     }
 
-    .limit80vh {
+    button {
+      width: 12rem;
+      height: 2.5rem;
+      font-size: 1.3rem;
+      color: #222222;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      margin-left: 1%;
+      margin-right: 1%;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+    }
+
+    .year-btn.active {
+      border: 3px solid black !important;
+    }
+
+    .map-block {
+      text-align: center;
+    }
+
+    .map-block > div {
+      display: none;
+    }
+
+    .map-block img {
       max-height: 80vh;
       width: auto;
       height: auto;
@@ -47,9 +75,33 @@
       margin: 0 auto;
     }
   </style>
+  <script>
+    function showMap(prefix, n) {
+      for (let i = 1; i <= 4; i++) {
+        const m = document.getElementById(prefix + i);
+        if (m) m.style.display = 'none';
+      }
 
+      const chosen = document.getElementById(prefix + n);
+      if (chosen) chosen.style.display = 'block';
+
+      for (let i = 1; i <= 4; i++) {
+        const btn = document.getElementById(prefix + 'btn' + i);
+        if (!btn) continue;
+        btn.classList.toggle('active', i === n);
+      }
+    }
+    // default visible maps on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      showMap('winterg',1);
+      showMap('winteru',1);
+      showMap('aridityg',1);
+      showMap('aridityu',1);
+      showMap('summerg',1);
+      showMap('summeru',1);
+    });
+  </script>
 </head>
-
 <body>
   <div id="header">
     <p>The Dickinson Climate Classification</p>
@@ -63,49 +115,78 @@
   </nav>
   
   <main>
-    <h1 style="margin-top: -30px;">Global Winter Maps</h1>
+    <h1 style="margin-top: -30px;">Winter Maps</h1>
     <img src="images/winterlegend.png" alt="Winter map legend" style="max-width:800px; display:block;">
+    
+    <h2>Global distribution of winter categories (projections are RCP8.5 high emissions normals)</h2>
 
-    <h2>Global distribution of winter categories: 1981 - 2010 normals</h2>
-    <img src="images/wintermap1.png" class="limit80vh" alt="Global distribution of winter categories map — 1981 - 2010 normals">
-    <h2>Global distribution of winter categories: 2011 - 2040 High Emission normals</h2>
-    <img src="images/wintermap2.png" class="limit80vh" alt="Global distribution of winter categories map — 2011 - 2040 High Emission normals">
-    <h2>Global distribution of winter categories: 2041 - 2070 High Emission normals</h2>
-    <img src="images/wintermap3.png" class="limit80vh" alt="Global distribution of winter categories map — 2041 - 2070 High Emission normals">
-    <h2>Global distribution of winter categories: 2071 - 2100 High Emission normals</h2>
-    <img src="images/wintermap4.png" class="limit80vh" alt="Global distribution of winter categories map — 2071 - 2100 High Emission normals">
+    <div style="text-align:center; margin:10px 0;">
+      <button id="wintergbtn1" class="year-btn" onclick="showMap('winterg',1)">1981 - 2010</button>
+      <button id="wintergbtn2" class="year-btn" onclick="showMap('winterg',2)">2011 - 2040</button>
+      <button id="wintergbtn3" class="year-btn" onclick="showMap('winterg',3)">2041 - 2070</button>
+      <button id="wintergbtn4" class="year-btn" onclick="showMap('winterg',4)">2071 - 2100</button>
+    </div>
 
-    <h2>United States distribution of winter categories: 1981 - 2010 normals</h2>
-    <img src="images/wintermap1usa.png" class="limit80vh" alt="United States distribution of winter categories map — 1981 - 2010 normals">
-    <h2>United States distribution of winter categories: 2011 - 2040 High Emission normals</h2>
-    <img src="images/wintermap2usa.png" class="limit80vh" alt="United States distribution of winter categories map — 2011 - 2040 High Emission normals">
-    <h2>United States distribution of winter categories: 2041 - 2070 High Emission normals</h2>
-    <img src="images/wintermap3usa.png" class="limit80vh" alt="United States distribution of winter categories map — 2041 - 2070 High Emission normals">
-    <h2>United States distribution of winter categories: 2071 - 2100 High Emission normals</h2>
-    <img src="images/wintermap4usa.png" class="limit80vh" alt="United States distribution of winter categories map — 2071 - 2100 High Emission normals">
+    <div class="map-block">
+      <div id="winterg1"><img src="images/wintermap1.png"></div>
+      <div id="winterg2"><img src="images/wintermap2.png"></div>
+      <div id="winterg3"><img src="images/wintermap3.png"></div>
+      <div id="winterg4"><img src="images/wintermap4.png"></div>
+    </div>
 
-    <h1>Global Aridity Maps</h1>
+    <h2>United States distribution of winter categories (projections are RCP8.5 high emissions normals)</h2>
+
+    <div style="text-align:center; margin:10px 0;">
+      <button id="winterubtn1" class="year-btn" onclick="showMap('winteru',1)">1981 - 2010</button>
+      <button id="winterubtn2" class="year-btn" onclick="showMap('winteru',2)">2011 - 2040</button>
+      <button id="winterubtn3" class="year-btn" onclick="showMap('winteru',3)">2041 - 2070</button>
+      <button id="winterubtn4" class="year-btn" onclick="showMap('winteru',4)">2071 - 2100</button>
+    </div>
+
+    <div class="map-block">
+      <div id="winteru1"><img src="images/wintermap1usa.png"></div>
+      <div id="winteru2"><img src="images/wintermap2usa.png"></div>
+      <div id="winteru3"><img src="images/wintermap3usa.png"></div>
+      <div id="winteru4"><img src="images/wintermap4usa.png"></div>
+    </div>
+
+
+    <h1>Aridity Maps</h1>
     <img src="images/ariditylegend.png" alt="Aridity map legend" style="max-width:800px; display:block;">
 
-    <h2>Global distribution of aridity categories: 1981 - 2010 normals</h2>
-    <img src="images/ariditymap1.png" class="limit80vh" alt="Global distribution of aridity categories map — 1981 - 2010 normals">
-    <h2>Global distribution of aridity categories: 2011 - 2040 High Emission normals</h2>
-    <img src="images/ariditymap2.png" class="limit80vh" alt="Global distribution of aridity categories map — 2011 - 2040 High Emission normals">
-    <h2>Global distribution of aridity categories: 2041 - 2070 High Emission normals</h2>
-    <img src="images/ariditymap3.png" class="limit80vh" alt="Global distribution of aridity categories map — 2041 - 2070 High Emission normals">
-    <h2>Global distribution of aridity categories: 2071 - 2100 High Emission normals</h2>
-    <img src="images/ariditymap4.png" class="limit80vh" alt="Global distribution of aridity categories map — 2071 - 2100 High Emission normals">
+    <h2>Global distribution of aridity categories (projections are RCP8.5 high emissions normals)</h2>
 
-    <h2>United States distribution of aridity categories: 1981 - 2010 normals</h2>
-    <img src="images/ariditymap1usa.png" class="limit80vh" alt="United States distribution of aridity categories map — 1981 - 2010 normals">
-    <h2>United States distribution of aridity categories: 2011 - 2040 High Emission normals</h2>
-    <img src="images/ariditymap2usa.png" class="limit80vh" alt="United States distribution of aridity categories map — 2041 - 2070 High Emission normals">
-    <h2>United States distribution of aridity categories: 2041 - 2070 High Emission normals</h2>
-    <img src="images/ariditymap3usa.png" class="limit80vh" alt="United States distribution of aridity categories map — 2041 - 2070 High Emission normals">
-    <h2>United States distribution of aridity categories: 2071 - 2100 High Emission normals</h2>
-    <img src="images/ariditymap4usa.png" class="limit80vh" alt="United States distribution of aridity categories map — 2071 - 2100 High Emission normals">
+    <div style="text-align:center; margin:10px 0;">
+      <button id="ariditygbtn1" class="year-btn" onclick="showMap('aridityg',1)">1981 - 2010</button>
+      <button id="ariditygbtn2" class="year-btn" onclick="showMap('aridityg',2)">2011 - 2040</button>
+      <button id="ariditygbtn3" class="year-btn" onclick="showMap('aridityg',3)">2041 - 2070</button>
+      <button id="ariditygbtn4" class="year-btn" onclick="showMap('aridityg',4)">2071 - 2100</button>
+    </div>
 
-    <h1>Global Summer Maps</h1>
+    <div class="map-block">
+      <div id="aridityg1"><img src="images/ariditymap1.png"></div>
+      <div id="aridityg2"><img src="images/ariditymap2.png"></div>
+      <div id="aridityg3"><img src="images/ariditymap3.png"></div>
+      <div id="aridityg4"><img src="images/ariditymap4.png"></div>
+    </div>
+
+    <h2>United States distribution of aridity categories (projections are RCP8.5 high emissions normals)</h2>
+
+    <div style="text-align:center; margin:10px 0;">
+      <button id="aridityubtn1" class="year-btn" onclick="showMap('aridityu',1)">1981 - 2010</button>
+      <button id="aridityubtn2" class="year-btn" onclick="showMap('aridityu',2)">2011 - 2040</button>
+      <button id="aridityubtn3" class="year-btn" onclick="showMap('aridityu',3)">2041 - 2070</button>
+      <button id="aridityubtn4" class="year-btn" onclick="showMap('aridityu',4)">2071 - 2100</button>
+    </div>
+
+    <div class="map-block">
+      <div id="aridityu1"><img src="images/ariditymap1usa.png"></div>
+      <div id="aridityu2"><img src="images/ariditymap2usa.png"></div>
+      <div id="aridityu3"><img src="images/ariditymap3usa.png"></div>
+      <div id="aridityu4"><img src="images/ariditymap4usa.png"></div>
+    </div>
+
+    <h1>Summer Maps</h1>
     <img src="images/summerlegend.png" alt="Summer map legend" style="max-width:800px; display:block;">
 
     <p>
@@ -114,23 +195,37 @@
       Therefore, It could reasonably said that <i>places with scorching summers (z2) are hotter than Pheonix</i>, and <i>places with hyperthermal summers (X) are hotter than Death Valley</i>.
     </p>
 
-    <h2>Global distribution of summer categories — 1981 - 2010 normals</h2>
-    <img src="images/summermap1.png" class="limit80vh" alt="Global distribution of summer categories map — 1981 - 2010 normals">
-    <h2>Global distribution of summer categories — 2011 - 2040 High Emission normals</h2>
-    <img src="images/summermap2.png" class="limit80vh" alt="Global distribution of summer categories map — 2011 - 2040 High Emission normals">
-    <h2>Global distribution of summer categories — 2041 - 2070 High Emission normals</h2>
-    <img src="images/summermap3.png" class="limit80vh" alt="Global distribution of summer categories map — 2041 - 2070 High Emission normals">
-    <h2>Global distribution of summer categories — 2071 - 2100 High Emission normals</h2>
-    <img src="images/summermap4.png" class="limit80vh" alt="Global distribution of summer categories map — 2071 - 2100 High Emission normals">
+    <h2>Global distribution of summer categories (projections are RCP8.5 high emissions normals)</h2>
 
-    <h2>United States distribution of summer categories — 1981 - 2010 normals</h2>
-    <img src="images/summermap1usa.png" class="limit80vh" alt="United States distribution of summer categories map — 1981 - 2010 normals">
-    <h2>United States distribution of summer categories — 2011 - 2040 High Emission normals</h2>
-    <img src="images/summermap2usa.png" class="limit80vh" alt="United States distribution of summer categories map — 2011 - 2040 High Emission normals">
-    <h2>United States distribution of summer categories — 2041 - 2070 High Emission normals</h2>
-    <img src="images/summermap3usa.png" class="limit80vh" alt="United States distribution of summer categories map — 2041 - 2070 High Emission normals">
-    <h2>United States distribution of summer categories — 2071 - 2100 High Emission normals</h2>
-    <img src="images/summermap4usa.png" class="limit80vh" alt="United States distribution of summer categories map — 2071 - 2100 High Emission normals">
+    <div style="text-align:center; margin:10px 0;">
+      <button id="summergbtn1" class="year-btn" onclick="showMap('summerg',1)">1981 - 2010</button>
+      <button id="summergbtn2" class="year-btn" onclick="showMap('summerg',2)">2011 - 2040</button>
+      <button id="summergbtn3" class="year-btn" onclick="showMap('summerg',3)">2041 - 2070</button>
+      <button id="summergbtn4" class="year-btn" onclick="showMap('summerg',4)">2071 - 2100</button>
+    </div>
+
+    <div class="map-block">
+      <div id="summerg1"><img src="images/summermap1.png"></div>
+      <div id="summerg2"><img src="images/summermap2.png"></div>
+      <div id="summerg3"><img src="images/summermap3.png"></div>
+      <div id="summerg4"><img src="images/summermap4.png"></div>
+    </div>
+
+    <h2>United States distribution of summer categories (projections are RCP8.5 high emissions normals)</h2>
+
+    <div style="text-align:center; margin:10px 0;">
+      <button id="summerubtn1" class="year-btn" onclick="showMap('summeru',1)">1981 - 2010</button>
+      <button id="summerubtn2" class="year-btn" onclick="showMap('summeru',2)">2011 - 2040</button>
+      <button id="summerubtn3" class="year-btn" onclick="showMap('summeru',3)">2041 - 2070</button>
+      <button id="summerubtn4" class="year-btn" onclick="showMap('summeru',4)">2071 - 2100</button>
+    </div>
+
+    <div class="map-block">
+      <div id="summeru1"><img src="images/summermap1usa.png"></div>
+      <div id="summeru2"><img src="images/summermap2usa.png"></div>
+      <div id="summeru3"><img src="images/summermap3usa.png"></div>
+      <div id="summeru4"><img src="images/summermap4usa.png"></div>
+    </div>
     <br><br><br>
   </main>
 </body>
