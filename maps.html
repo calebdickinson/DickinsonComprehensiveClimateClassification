@@ -74,6 +74,15 @@
       display: block;
       margin: 0 auto;
     }
+
+    @media (max-width: 1400px) {
+      .year-row {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        justify-content: center;
+        gap: 12px;
+      }
+    }
   </style>
   <script>
     function showMap(prefix, n) {
@@ -120,7 +129,7 @@
     
     <h2>Global distribution of winter categories (projections are RCP8.5 high emissions normals)</h2>
 
-    <div style="text-align:center; margin:10px 0;">
+    <div class="year-row" style="text-align:center; margin:10px 0;">
       <button id="wintergbtn1" class="year-btn" onclick="showMap('winterg',1)">1981 - 2010</button>
       <button id="wintergbtn2" class="year-btn" onclick="showMap('winterg',2)">2011 - 2040</button>
       <button id="wintergbtn3" class="year-btn" onclick="showMap('winterg',3)">2041 - 2070</button>
@@ -136,7 +145,7 @@
 
     <h2>United States distribution of winter categories (projections are RCP8.5 high emissions normals)</h2>
 
-    <div style="text-align:center; margin:10px 0;">
+    <div class="year-row" style="text-align:center; margin:10px 0;">
       <button id="winterubtn1" class="year-btn" onclick="showMap('winteru',1)">1981 - 2010</button>
       <button id="winterubtn2" class="year-btn" onclick="showMap('winteru',2)">2011 - 2040</button>
       <button id="winterubtn3" class="year-btn" onclick="showMap('winteru',3)">2041 - 2070</button>
@@ -156,7 +165,7 @@
 
     <h2>Global distribution of aridity categories (projections are RCP8.5 high emissions normals)</h2>
 
-    <div style="text-align:center; margin:10px 0;">
+    <div class="year-row" style="text-align:center; margin:10px 0;">
       <button id="ariditygbtn1" class="year-btn" onclick="showMap('aridityg',1)">1981 - 2010</button>
       <button id="ariditygbtn2" class="year-btn" onclick="showMap('aridityg',2)">2011 - 2040</button>
       <button id="ariditygbtn3" class="year-btn" onclick="showMap('aridityg',3)">2041 - 2070</button>
@@ -172,7 +181,7 @@
 
     <h2>United States distribution of aridity categories (projections are RCP8.5 high emissions normals)</h2>
 
-    <div style="text-align:center; margin:10px 0;">
+    <div class="year-row" style="text-align:center; margin:10px 0;">
       <button id="aridityubtn1" class="year-btn" onclick="showMap('aridityu',1)">1981 - 2010</button>
       <button id="aridityubtn2" class="year-btn" onclick="showMap('aridityu',2)">2011 - 2040</button>
       <button id="aridityubtn3" class="year-btn" onclick="showMap('aridityu',3)">2041 - 2070</button>
@@ -197,7 +206,7 @@
 
     <h2>Global distribution of summer categories (projections are RCP8.5 high emissions normals)</h2>
 
-    <div style="text-align:center; margin:10px 0;">
+    <div class="year-row" style="text-align:center; margin:10px 0;">
       <button id="summergbtn1" class="year-btn" onclick="showMap('summerg',1)">1981 - 2010</button>
       <button id="summergbtn2" class="year-btn" onclick="showMap('summerg',2)">2011 - 2040</button>
       <button id="summergbtn3" class="year-btn" onclick="showMap('summerg',3)">2041 - 2070</button>
@@ -213,7 +222,7 @@
 
     <h2>United States distribution of summer categories (projections are RCP8.5 high emissions normals)</h2>
 
-    <div style="text-align:center; margin:10px 0;">
+    <div class="year-row" style="text-align:center; margin:10px 0;">
       <button id="summerubtn1" class="year-btn" onclick="showMap('summeru',1)">1981 - 2010</button>
       <button id="summerubtn2" class="year-btn" onclick="showMap('summeru',2)">2011 - 2040</button>
       <button id="summerubtn3" class="year-btn" onclick="showMap('summeru',3)">2041 - 2070</button>
