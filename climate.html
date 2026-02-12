@@ -14,6 +14,12 @@
   <link rel="stylesheet" href="css/styles.css">
   <title></title>
   <style>
+
+  .map-caption {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
   button {
     width: 12rem;
     height: 2.5rem;
@@ -25,6 +31,7 @@
     margin-left: 1%;
     margin-right: 1%;
   }
+
   .humid           { background: #008800; }
   .semihumid       { background: #00ff00; }
   .monsoon         { background: #ff00ff; }
@@ -61,6 +68,14 @@
     border: 3px solid black;
   }
 
+  .buttons-with-code {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-content: center;
+    column-gap: 40px;
+  }
+
   /* Generic hidden class – JS will remove this when content loads successfully */
   .hidden {
     display: none !important;
@@ -81,6 +96,7 @@
   .buttons-with-code > .climate-code {
     transform: translateY(-35px);
   }
+
   @media (min-width: 900px) {
     #climatemedia > img {
       display: inline-block !important;
@@ -92,39 +108,74 @@
     height: auto;
     }
   }
+
   @media (min-width: 899px) {
     img {
       margin-bottom: 1em;
     }
   }
+
   @media (max-width: 1400px) {
-    /* aridity disappears on mobile */
-    #ariditySection {
+    body[class*="climate-"] #ariditySection[hidden] {
       display: none !important;
+    }
+    #ariditySection {
+      display: block !important;
+      grid-column: 1 / span 2;   /* full width */
+      grid-row: 3;               /* below the arrows */
+      justify-self: center;
+      margin-top: 10px;
+      margin-bottom: -250px;;
+    }
+    #ariditySection[hidden] {
+      margin-top: -120px !important;
+      margin-bottom: -120px !important;
+    }
+    .box {
+      transform: scale(.75); 
+      position: relative;
+      top: -80px; 
     }
     /* 2 × 2 grid */
     .buttons-with-code {
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto;
-      row-gap: 12px;
-      column-gap: 12px;
+      row-gap: 30px;
+      column-gap: 30px;
     }
-    /* make wrapper groups vanish from layout */
     .buttons-group,
     .buttons-group_right {
-      display: contents;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
     }
-    /* exact placement */
+    /* explicit placement */
     #climate_go_to_hotter_summer { grid-column: 1; grid-row: 1; }
     #climate_go_to_colder_summer { grid-column: 2; grid-row: 1; }
     #climate_go_to_hotter_winter { grid-column: 1; grid-row: 2; }
     #climate_go_to_colder_winter { grid-column: 2; grid-row: 2; }
+    .year-row {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        justify-content: center;
+        gap: 30px;
+    }
   }
 
   #ariditySection[hidden] {
     display: block !important;   /* keep its size */
     visibility: hidden !important;  /* but make it invisible */
   }
+
+  #usaSection {
+    margin-top: -15px;
+  }
+
+  /* Bb2 exception */
+  body.climate-Bb2 .year-btn {
+    background: white !important;
+  }
+
   </style>
 </head>
 <body>
@@ -174,7 +225,7 @@
     <!-- Global maps -->
     <div id="globalSection">
       <h3 class="map-caption">Global distribution of this climate (projections are RCP8.5 high emissions normals)</h3>
-      <div style="text-align:center; margin:10px 0;">
+      <div class="year-row" style="text-align:center; margin:10px 0;">
         <button id="gbtn1" class="year-btn" onclick="showMapGlobal(1)">1981 - 2010</button>
         <button id="gbtn2" class="year-btn" onclick="showMapGlobal(2)">2011 - 2040</button>
         <button id="gbtn3" class="year-btn" onclick="showMapGlobal(3)">2041 - 2070</button>
@@ -189,7 +240,7 @@
     <!-- USA maps -->
     <div id="usaSection">
       <h3 class="map-caption">United States distribution of this climate (projections are RCP8.5 high emissions normals)</h3>
-      <div style="text-align:center; margin:10px 0;">
+      <div class="year-row" style="text-align:center; margin:10px 0;">
         <button id="ubtn1" class="year-btn" onclick="showMapUSA(1)">1981 - 2010</button>
         <button id="ubtn2" class="year-btn" onclick="showMapUSA(2)">2011 - 2040</button>
         <button id="ubtn3" class="year-btn" onclick="showMapUSA(3)">2041 - 2070</button>
@@ -327,6 +378,8 @@
         if (!climate) throw new Error(`Climate code '${codeParam}' not found in data.json`);
 
         const climate_code = climate.code; // canonical case from data.json
+        // add page-level hook for CSS overrides
+        document.body.classList.add('climate-' + climate_code);
 
         // Map buttons color selecter
         const aridityLetter = climate_code.charAt(1);
