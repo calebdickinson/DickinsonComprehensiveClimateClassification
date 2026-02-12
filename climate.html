@@ -97,6 +97,15 @@
     transform: translateY(-35px);
   }
 
+  #climatemedia iframe {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    display: block;
+    margin: 0 auto 18px;
+  }
+
   @media (min-width: 900px) {
     #climatemedia > img {
       display: inline-block !important;
@@ -109,7 +118,7 @@
     }
   }
 
-  @media (min-width: 899px) {
+  @media (max-width: 899px) {
     img {
       margin-bottom: 1em;
     }
