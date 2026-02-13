@@ -17,7 +17,7 @@
     #map {
 				aspect-ratio: 3 / 2;
         margin: 0 auto 25px;
-				width: min(80vw, 1280px);
+				width: min(90vw, 1280px);
     }
 
     .year-row {
@@ -63,6 +63,12 @@
         gap: 30px;
       }
     }
+
+		@media (max-width: 899px) {
+				.leaflet-tile {
+			margin: -0.5px;
+		}
+
   </style>
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
