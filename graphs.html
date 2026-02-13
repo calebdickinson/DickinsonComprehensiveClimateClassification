@@ -68,6 +68,20 @@
       }
     }
 
+		@media (max-width: 900px) {
+			/* overall box */
+			.leaflet-control-zoom {
+				transform: scale(1.4);
+				transform-origin: top left;
+			}
+			/* button size */
+			.leaflet-control-zoom a {
+				width: 44px;
+				height: 44px;
+				line-height: 44px;
+				font-size: 22px;
+			}
+		}
   </style>
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
