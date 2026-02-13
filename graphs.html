@@ -11,10 +11,127 @@
     gtag('config', 'G-L6C1HZ2LBZ');
   </script>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="css/styles.css">
-  <style>
-  </style>
   <title>"Graphs"</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style> 
+    #map {
+				aspect-ratio: 3 / 2;
+        margin: 0 auto 25px;
+				width: min(80vw, 1280px);
+    }
+
+    .year-row {
+        text-align: center;
+        margin: 15px 0;
+    }
+
+    .year-btn {
+        width: 12rem;
+        height: 2.5rem;
+        font-size: 1.1rem;
+        border-radius: 999px;
+        border: none;
+        cursor: pointer;
+        margin: 0 6px;
+    }
+
+    .year-btn:hover {
+        transform: scale(1.08);
+    }
+
+    .year-btn.active {
+        border: 3px solid black;
+    }
+
+    .graph-block > div {
+        display: none;
+    }
+
+    .graph-block img {
+        max-height: 80vh;
+        width: auto;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    @media (max-width: 1400px) {
+      .year-row {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        justify-content: center;
+        gap: 30px;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    let currentStation = "ConcordiaStation";
+
+    function showGraph(n) {
+    for (let i = 1; i <= 4; i++) {
+        const g = document.getElementById('graph' + i);
+        if (g) g.style.display = 'none';
+
+        const btn = document.getElementById('graphbtn' + i);
+        if (btn) btn.classList.toggle('active', i === n);
+    }
+
+    const chosen = document.getElementById('graph' + n);
+    if (chosen) chosen.style.display = 'block';
+    }
+
+    function setLocation(name) {
+    currentLocation = name;
+
+    // swap all four images
+    document.querySelector("#graph1 img").src = `graphs/${name}1-F.png`;
+    document.querySelector("#graph2 img").src = `graphs/${name}2-F.png`;
+    document.querySelector("#graph3 img").src = `graphs/${name}3-F.png`;
+    document.querySelector("#graph4 img").src = `graphs/${name}4-F.png`;
+
+    showGraph(1); // reset to first period
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+    showGraph(1);
+    });
+  </script>
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+			// create map AFTER element exists
+			var map = L.map('map', {
+				worldCopyJump: false,
+				maxBoundsViscosity: 1.0
+			});
+
+			map.setView([39, -98], 4);
+			setTimeout(() => map.invalidateSize(), 0);
+
+			// satellite
+			L.tileLayer(
+				'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
+			).addTo(map);
+
+			// labels overlay
+			L.tileLayer(
+				'https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}'
+			).addTo(map);
+
+			// stations
+			var locations = [
+				{name: "ConcordiaStation", lat: -75.1, lon: 123.35}
+			];
+
+			locations.forEach(function(s) {
+				L.marker([s.lat, s.lon]).addTo(map)
+				.on('click', function () {
+					setLocation(s.name);
+				});
+			});
+    });
+  </script>
 </head>
 <body>
   <div id="header">
@@ -28,6 +145,23 @@
     <a href="about.html">About</a>
   </nav>
   <main>
+
+    <div id="map"></div>
+
+    <div class="year-row" style="text-align:center; margin:30px 0;">
+      <button id="graphbtn1" class="year-btn" onclick="showGraph(1)">1981 - 2010</button>
+      <button id="graphbtn2" class="year-btn" onclick="showGraph(2)">2011 - 2040</button>
+      <button id="graphbtn3" class="year-btn" onclick="showGraph(3)">2041 - 2070</button>
+      <button id="graphbtn4" class="year-btn" onclick="showGraph(4)">2071 - 2100</button>
+    </div>
+
+    <div class="graph-block">
+      <div id="graph1"><img src="graphs/ConcordiaStation1-F.png"></div>
+      <div id="graph2"><img src="graphs/ConcordiaStation2-F.png"></div>
+      <div id="graph3"><img src="graphs/ConcordiaStation3-F.png"></div>
+      <div id="graph4"><img src="graphs/ConcordiaStation4-F.png"></div>
+    </div>
+
     <br><br><br>
   </main>
 </body>
