@@ -1125,11 +1125,14 @@ var finalLines = metaLines
   .cat(combinedF.map(function(line){
     return ee.String('    ').cat(line);
   }))
+  .cat(combinedC.map(function(line){
+    return ee.String('    ').cat(line);
+  }))
   .cat(ee.List(['  `;']))
-  .cat(combinedC);
   
 finalLines.evaluate(function(list) {
   list.forEach(function(line) {
     print(line);
   });
 });
+
