@@ -578,6 +578,34 @@ var koppenBorderingStr = ee.String(
   )
 );
 
+// ------------------------------------
+// Subtropical highland override
+// ------------------------------------
+
+var elevImg = ee.Image('USGS/SRTMGL1_003').rename('elev');
+var elevation = atPoint(elevImg, 'elev');
+var isHighland = elevation.gte(1500);
+var eligibleForH = ee.List([
+  'Cfb','Cfc','Csb','Csc','Cwb','Cwc'
+]);
+koppen = ee.String(
+  ee.Algorithms.If(
+    isHighland.and(eligibleForH.contains(koppen)),
+    koppen.cat('h'),
+    koppen
+  )
+);
+bordering = bordering.map(function(code){
+  code = ee.String(code);
+  return ee.String(
+    ee.Algorithms.If(
+      isHighland.and(eligibleForH.contains(code)),
+      code.cat('h'),
+      code
+    )
+  );
+});
+
 // ====================================
 // AI (P / PET) — numeric printout (POINT-BASED)
 // ====================================

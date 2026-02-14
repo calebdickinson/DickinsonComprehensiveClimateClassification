@@ -243,15 +243,21 @@
     // Temperate
     Csa: 'hot-summer Mediterranean',
     Csb: 'warm-summer Mediterranean',
+    Csbh: 'subtropical highland Mediterranean',
     Csc: 'cold-summer Mediterranean',
+    Csch: 'cold subtropical highland Mediterranean',
 
-    Cwa: 'humid subtropical',
-    Cwb: 'subtropical highland (dry winter)',
-    Cwc: 'cold subtropical highland (dry winter)',
+    Cwa: 'humid subtropical monsoon',
+    Cwb: 'subtropical highland monsoon',
+    Csbh: 'subtropical highland monsoon',
+    Cwc: 'cold subtropical highland monsoon',
+    Cwch: 'cold subtropical highland monsoon',
 
     Cfa: 'humid subtropical',
-    Cfb: 'oceanic',
+    Cfb: 'temperate oceanic',
+    Csbh: 'subtropical highland',
     Cfc: 'subpolar oceanic',
+    Csch: 'cold subtropical highland',
 
     // Continental
     Dsa: 'hot-summer continental (dry summer)',
@@ -273,6 +279,29 @@
     ET: 'tundra',
     EF: 'ice cap'
   };
+  
+  const subtropicalHighland = {
+    Cfbh: 'Cfb',
+    Cfch: 'Cfc',
+    Csbh: 'Csb',
+    Csch: 'Csc',
+    Cwbh: 'Cwb',
+    Cwch: 'Cwc'
+  };
+
+  function stripHighland(code) {
+    return subtropicalHighland [code] || code;
+  }
+
+  function stripHighlandList(str) {
+    if (!str || str === 'none') return str;
+
+    return str
+      .trim()
+      .split(/\s+/)
+      .map(stripHighland)
+      .join(' ');
+  }
 
   // ============================
   // Köppen decoder
@@ -328,28 +357,28 @@
     return 'humid';
   }
   
-    function formatAI(aiValue, petValue) {
+  function formatAI(aiValue, petValue) {
 
-      // if either is N/A → print N/A
-      if (aiValue === 'N/A' || petValue === 'N/A') {
-        return 'UNEP Aridity Index: <b>N/A</b>';
-      }
-
-      const ai  = parseFloat(aiValue);
-      const pet = parseFloat(petValue);
-
-      if (isNaN(ai) || isNaN(pet)) {
-        return 'UNEP Aridity Index: <b>N/A</b>';
-      }
-
-      // ----- cold override -----
-      if (pet < 400) {
-        return 'UNEP Aridity Index: <b>cold</b> (PET < 400mm)';
-      }
-
-      // ----- normal output -----
-      return `UNEP Aridity Index: <b>${p_pet}</b> (${decodeAI(ai)})`;
+    // if either is N/A → print N/A
+    if (aiValue === 'N/A' || petValue === 'N/A') {
+      return 'UNEP Aridity Index: <b>N/A</b>';
     }
+
+    const ai  = parseFloat(aiValue);
+    const pet = parseFloat(petValue);
+
+    if (isNaN(ai) || isNaN(pet)) {
+      return 'UNEP Aridity Index: <b>N/A</b>';
+    }
+
+    // ----- cold override -----
+    if (pet < 400) {
+      return 'UNEP Aridity Index: <b>cold</b> (PET < 400mm)';
+    }
+
+    // ----- normal output -----
+    return `UNEP Aridity Index: <b>${p_pet}</b> (${decodeAI(ai)})`;
+  }
 
   // ============================
   // Classification outputs
@@ -365,10 +394,10 @@
       ? ` (bordering ${decodeBorderList(dickinson_bordering)})`
       : '') +
     `<br><br>` +
-    `Köppen Classification: <b>${koppen}</b>
-    (${decodeKoppen(koppen)})` +
+    `Köppen Classification: <b>${stripHighland(koppen)}</b>
+    (${decodeKoppen(stripHighland(koppen))})` +
 	(koppen_bordering !== 'none'
-      ? ` (bordering ${decodeKoppenBorderList(koppen_bordering)})`
+      ? ` (bordering ${decodeKoppenBorderList(stripHighlandList(koppen_bordering))})`
       : '') +
     `<br><br>` +
     formatAI(p_pet_unrounded, annual_pet_mm),
