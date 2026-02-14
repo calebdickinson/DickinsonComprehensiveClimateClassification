@@ -638,15 +638,15 @@ if (AUTO_EXPORT) {
       await new Promise(r => setTimeout(r, 250));
     }
 
-    // -------- F --------
-    useFahrenheit();
-    buildChart();
-    await snap("F");
-
     // -------- C --------
     useCelsius();
     buildChart();
     await snap("C");
+    
+    // -------- F --------
+    useFahrenheit();
+    buildChart();
+    await snap("F");
 
   }, 200);
 }
