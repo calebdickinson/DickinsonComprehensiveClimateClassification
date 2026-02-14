@@ -1,7 +1,7 @@
 // ====== CONFIG ======
 var ASSET_PREFIX = 'projects/ordinal-crowbar-459807-m2/assets/';  // ends with '/'
 var NODATA_U16   = 65535;
-var SCALE_PR     = 0.1;   // CHELSA pr_u16: 0.1 → mm/month
+var SCALE_PR     = 0.1;
 var NORMAL_PERIOD = '2041-2070';
 
 var LAT = 34.05223;
@@ -644,7 +644,7 @@ bordering = bordering.map(function(code) {
 // ====================================
 
 var PET_MEAN_ID = ASSET_PREFIX + 'CHELSA_pet_penman_mean_2041-2070';
-var SCALE_PET   = 0.1;  // projections = 1 (baseline would be 0.1)
+var SCALE_PET   = 0.1;  // projections = 0.1 (baseline would be 0.01)
 
 // PET mean image (mm/month), masked
 var petMeanMmImg = ee.Image(PET_MEAN_ID)
