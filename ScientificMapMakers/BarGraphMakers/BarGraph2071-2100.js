@@ -579,27 +579,60 @@ var koppenBorderingStr = ee.String(
 );
 
 // ------------------------------------
+// Elevation at point (meters)
+// ------------------------------------
+var elevImg = ee.Image('USGS/SRTMGL1_003').rename('elev');
+
+var elevation = ee.Number(
+  elevImg.reduceRegion({
+    reducer: ee.Reducer.first(),
+    geometry: pt,
+    scale: 1000,
+    maxPixels: 1e9
+  }).get('elev')
+);
+
+// ------------------------------------
 // Subtropical highland override
 // ------------------------------------
 
-var elevImg = ee.Image('USGS/SRTMGL1_003').rename('elev');
-var elevation = atPoint(elevImg, 'elev');
 var isHighland = elevation.gte(1500);
-var eligibleForH = ee.List([
-  'Cfb','Cfc','Cwb','Cwc'
+
+// ONLY the climates you currently use
+var highlandEligible = ee.List([
+  'Cfb',
+  'Cfc',
+  'Cwb',
+  'Cwc'
 ]);
+
+// function → is this code eligible?
+function eligibleForHighland(code) {
+  code = ee.String(code);
+
+  return ee.Number(
+    highlandEligible
+      .map(function(x){ return ee.String(x).compareTo(code).eq(0); })
+      .reduce(ee.Reducer.anyNonZero())
+  ).eq(1);
+}
+
+// ---- main classification ----
 koppen = ee.String(
   ee.Algorithms.If(
-    isHighland.and(eligibleForH.contains(koppen)),
+    isHighland.and(eligibleForHighland(koppen)),
     koppen.cat('h'),
     koppen
   )
 );
-bordering = bordering.map(function(code){
+
+// ---- bordering classifications ----
+bordering = bordering.map(function(code) {
   code = ee.String(code);
+
   return ee.String(
     ee.Algorithms.If(
-      isHighland.and(eligibleForH.contains(code)),
+      isHighland.and(eligibleForHighland(code)),
       code.cat('h'),
       code
     )
@@ -948,8 +981,8 @@ function swapArid(newA) {
 
 // Adjacent swaps around each base threshold
 dBordering = dBordering
-  .cat(addBorder(notCold.and(nearAI000),  swapArid('')))   // '' ↔ d
-  .cat(addBorder(notCold.and(nearAI000),  swapArid('d')))
+  .cat(addBorder(notCold.and(nearAI000), swapArid('')))   // '' ↔ d
+  .cat(addBorder(notCold.and(nearAI000), swapArid('d')))
   .cat(addBorder(notCold.and(nearAI025), swapArid('d')))  // d ↔ s
   .cat(addBorder(notCold.and(nearAI025), swapArid('s')))
   .cat(addBorder(notCold.and(nearAI050), swapArid('s')))  // s ↔ g
@@ -1030,6 +1063,9 @@ var dickinsonBorderingStr = ee.String(
 // ====================================
 
 var metaLines = ee.List([
+  
+  ee.String('elevation_meters: ')
+  .cat(elevation.round().format('%.0f')),
   
   ee.String('hottest_month_C: ')
     .cat(warmestMonth.multiply(10).round().divide(10).format('%.1f')),
