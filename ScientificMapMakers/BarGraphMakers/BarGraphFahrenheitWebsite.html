@@ -107,19 +107,26 @@
   // ============================
   // 1. EARTH ENGINE LINES
   // ============================
+  var period = '2071-2100';
+  var dickinson= 'Bmz1';
+  var dickinson_bordering = 'none';
+  var koppen = 'As';
+  var koppen_bordering = 'none';
+  p_pet = '0.42';
+  p_pet_unrounded = '0.415';
   const rawLines = `
-1.0: 36 21 3.6
-2.0: 38 24 3.8
-3.0: 45 30 4.6
-4.0: 55 40 4.2
-5.0: 64 49 3.9
-6.0: 74 59 3.8
-7.0: 80 65 3.8
-8.0: 78 64 3.7
-9.0: 71 58 3.6
-10.0: 60 47 4.1
-11.0: 50 39 4.7
-12.0: 40 28 4.3
+    1.0: 79 57 5.6
+    2.0: 78 56 4.6
+    3.0: 80 58 4.1
+    4.0: 85 60 1.3
+    5.0: 88 66 0.4
+    6.0: 94 71 0.1
+    7.0: 100 77 0.0
+    8.0: 102 79 0.1
+    9.0: 101 80 0.4
+    10.0: 95 75 1.3
+    11.0: 87 65 1.6
+    12.0: 78 55 2.8
   `;
 
   const months = ['J','F','M','A','M','J','J','A','S','O','N','D'];
@@ -135,12 +142,211 @@
     precipIn.push(parseFloat(nums[2]));
   });
   
+  // ============================
+  // Dickinson lookup tables
+  // ============================
+
+  const coldMap = {
+    X: 'uninhabitable',
+    Z: 'hyperequatorial',
+    A: 'equatorial',
+    B: 'tropical',
+    C: 'subtropical',
+    D: 'temperate',
+    E: 'continental',
+    F: 'subarctic',
+    G: 'arctic',
+    Y: 'superarctic'
+  };
+
+  const aridMap = {
+    '':  '',
+    h: 'humid',
+    g: 'semihumid',
+    s: 'semiarid',
+    d: 'arid',
+    m: 'Mediterranean',
+    w: 'monsoon'
+  };
+
+  const summerMap = {
+    H:  'hypercaneal',
+    X:  'hyperthermal',
+    z2: 'scorching',
+    z1: 'very hot',
+    a2: 'hot',
+    a1: 'warm',
+    b2: 'cool',
+    b1: 'cold',
+    c2: 'very cold',
+    c1: 'freezing',
+    Y:  'frigid'
+  };
+
+
+  // ============================
+  // Dickinson decoder
+  // ============================
+
+  function decodeDickinson(code) {
+    const cold = code.charAt(0);
+    const arid = code.length === 2 ? '' : code.charAt(1);
+    const summer = code.slice(arid ? 2 : 1);
+
+    const coldText = coldMap[cold] || '';
+    const aridText = aridMap[arid] || '';
+    const summerText = summerMap[summer] || '';
+
+    let phrase = coldText;
+
+    if (aridText) phrase += ' ' + aridText;
+    if (summerText) phrase += ' with ' + summerText + ' summer';
+
+    return phrase;
+  }
+  
+  function decodeBorderList(str) {
+    if (!str || str === 'none') return '';
+
+    const parts = str.trim().split(/\s+/);
+
+    const decoded = parts.map(c =>
+      `${c} (${decodeDickinson(c)})`
+    );
+
+    if (decoded.length === 1) return decoded[0];
+
+    return decoded.slice(0, -1).join(', ') + ' and ' + decoded.slice(-1);
+  }
+  
+  // ============================
+  // Köppen lookup table
+  // ============================
+
+  const koppenMap = {
+
+    // Tropical
+    Af: 'tropical rainforest',
+    Am: 'tropical monsoon',
+    Aw: 'tropical savanna',
+    As: 'tropical savanna with dry summer',
+
+    // Dry
+    BWh: 'hot desert',
+    BWk: 'cold desert',
+    BSh: 'hot semi-arid',
+    BSk: 'cold semi-arid',
+
+    // Temperate
+    Csa: 'hot-summer Mediterranean',
+    Csb: 'warm-summer Mediterranean',
+    Csc: 'cold-summer Mediterranean',
+
+    Cwa: 'humid subtropical',
+    Cwb: 'subtropical highland (dry winter)',
+    Cwc: 'cold subtropical highland (dry winter)',
+
+    Cfa: 'humid subtropical',
+    Cfb: 'oceanic',
+    Cfc: 'subpolar oceanic',
+
+    // Continental
+    Dsa: 'hot-summer continental (dry summer)',
+    Dsb: 'warm-summer continental (dry summer)',
+    Dsc: 'subarctic (dry summer)',
+    Dsd: 'extremely continental (dry summer)',
+
+    Dwa: 'hot-summer continental (dry winter)',
+    Dwb: 'warm-summer continental (dry winter)',
+    Dwc: 'subarctic (dry winter)',
+    Dwd: 'extremely continental (dry winter)',
+
+    Dfa: 'hot-summer continental',
+    Dfb: 'warm-summer continental',
+    Dfc: 'subarctic',
+    Dfd: 'extremely continental',
+
+    // Polar
+    ET: 'tundra',
+    EF: 'ice cap'
+  };
+
+  // ============================
+  // Köppen decoder
+  // ============================
+
+  function decodeKoppen(code) {
+    return koppenMap[code] || '';
+  }
+
+  // ============================
+  // Decode bordering list
+  // ============================
+
+  function decodeKoppenBorderList(str) {
+    if (!str || str === 'none') return '';
+
+    const parts = str.trim().split(/\s+/);
+
+    const decoded = parts.map(c =>
+      `${c} (${decodeKoppen(c)})`
+    );
+
+    if (decoded.length === 1) return decoded[0];
+
+    return decoded.slice(0, -1).join(', ') + ' and ' + decoded.slice(-1);
+  }
+  
+  // ============================
+  // UNEP Aridity phrase
+  // ============================
+
+  function decodeAI(value) {
+    const ai = parseFloat(value);
+    if (isNaN(ai)) return '';
+
+    if (ai < 0.04) return 'hyper-arid';
+    if (ai < 0.05) return 'hyper-arid bordering on arid';
+
+    if (ai < 0.06) return 'arid bordering on hyper-arid';
+    if (ai < 0.19) return 'arid';
+    if (ai < 0.20) return 'arid bordering on semiarid';
+
+    if (ai < 0.21) return 'semi-arid bordering on arid';
+    if (ai < 0.49) return 'semi-arid';
+    if (ai < 0.50) return 'semi-arid bordering on dry subhumid';
+
+    if (ai < 0.51) return 'dry subhumid bordering on semi-arid';
+    if (ai < 0.74) return 'dry subhumid';
+    if (ai < 0.75) return 'dry subhumid bordering on humid';
+
+    if (ai >= 0.75) return 'humid bordering on semihumid';
+
+    return 'humid';
+  }
+  
   // left-right arrow symbol here for easy copy-paste if needed
   // ↔
 
   const data = {
-    location: 'Boston, Massachusetts',
-    code: '1981 - 2010 normals<br><br>Dickinson Classification: <b>Dha1</b> (temperate humid with warm summer)<br><br>Köppen Classification: <b>Dfa</b> (hot-summer humid continental) bordering on <b>Dfb</b> (warm-summer humid continental)',
+  location: 'Los Angeles (city center), California, United States',
+  code:
+    `${period} normals<br><br>` +
+    `Dickinson Classification: <b>${dickinson}</b>
+    (${decodeDickinson(dickinson)})` +
+    (dickinson_bordering !== 'none'
+      ? ` (bordering ${decodeBorderList(dickinson_bordering)})`
+      : '') +
+    `<br><br>` +
+    `Köppen Classification: <b>${koppen}</b>
+    (${decodeKoppen(koppen)})` +
+	(koppen_bordering !== 'none'
+      ? ` (bordering ${decodeKoppenBorderList(koppen_bordering)})`
+      : '') +
+    `<br><br>` +
+    
+    `UNEP Aridity Index: <b>${p_pet}</b>
+    (${decodeAI(p_pet_unrounded)})`,
     months,
     highsF,
     lowsF,
@@ -156,9 +362,9 @@
 
   const svgWidth = 620;
   const stretchPercip = 0; // CHANGE for extreme percipitation
-  const svgHeight = 590 + stretchPercip;
+  const svgHeight = 620 + stretchPercip;
 
-  const margin = { top: 80, right: 20, bottom: 32, left: 20 };
+  const margin = { top: 100, right: 20, bottom: 32, left: 20 };
 
   const tempPanelHeight = 340;
   const gap = 63 + stretchPercip;
