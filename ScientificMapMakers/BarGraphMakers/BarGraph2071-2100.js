@@ -586,7 +586,7 @@ var elevImg = ee.Image('USGS/SRTMGL1_003').rename('elev');
 var elevation = atPoint(elevImg, 'elev');
 var isHighland = elevation.gte(1500);
 var eligibleForH = ee.List([
-  'Cfb','Cfc','Csb','Csc','Cwb','Cwc'
+  'Cfb','Cfc','Cwb','Cwc'
 ]);
 koppen = ee.String(
   ee.Algorithms.If(
