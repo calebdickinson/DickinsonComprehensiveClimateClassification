@@ -1003,49 +1003,67 @@ var dickinsonBorderingStr = ee.String(
 
 var metaLines = ee.List([
   
-  ee.String('HOTTEST_MONTH_C: ')
+  ee.String('hottest_month_C: ')
     .cat(warmestMonth.multiply(10).round().divide(10).format('%.1f')),
 
-  ee.String('COLDEST_MONTH_C: ')
+  ee.String('coldest_month_C: ')
     .cat(coldestMonth.multiply(10).round().divide(10).format('%.1f')),
 
-  ee.String('ANNUAL_MEAN_C: ')
+  ee.String('annual_mean_C: ')
     .cat(annualMean.multiply(10).round().divide(10).format('%.1f')),
     
-  ee.String('ANNUAL_PR_MM: ')
+  ee.String('annual_pr_mm: ')
     .cat(annualPr.round().format('%.0f')),
-
-  ee.String('ANNUAL_PET_MM: ')
-    .cat(petAnnAtPoint.round().format('%.0f')),
-    
-  ee.String('P/PET UNROUNDED: ')
-    .cat(aiAtPoint.multiply(1000).round().divide(1000).format('%.3f')),
     
   ee.String('/////////////////////////////////////////////////'),
   
-  ee.String('NORMAL_PERIOD: ').cat(NORMAL_PERIOD),
+  ee.String('  var period = \'').cat(NORMAL_PERIOD).cat('\';'),
   
-  ee.String('DICKINSON: ').cat(dickinsonCode),
+  ee.String('  var dickinson= \'').cat(dickinsonCode).cat('\';'),
   
-  ee.String('DICKINSON_BORDERING: ').cat(dickinsonBorderingStr),
+  ee.String('  var dickinson_bordering = \'').cat(dickinsonBorderingStr).cat('\';'),
 
-  ee.String('KOPPEN: ').cat(koppen),
+  ee.String('  var koppen = \'').cat(koppen).cat('\';'),
   
-  ee.String('KOPPEN_BORDERING: ').cat(koppenBorderingStr),
+  ee.String('  var koppen_bordering = \'').cat(koppenBorderingStr).cat('\';'),
 
-  ee.String('P/PET: ')
-    .cat(aiAtPoint.multiply(1000).round().divide(1000).format('%.2f'))
+  ee.String('  p_pet = \'')
+  .cat(
+    ee.Algorithms.If(
+      aiAtPoint,
+      aiAtPoint.multiply(1000).round().divide(1000).format('%.2f'),
+      'N/A'
+    )
+  ).cat('\';'),
+    
+  ee.String('  p_pet_unrounded = \'')
+  .cat(
+    ee.Algorithms.If(
+      aiAtPoint,
+      aiAtPoint.multiply(1000).round().divide(1000).format('%.3f'),
+      'N/A'
+    )
+  ).cat('\';'),
+    
+  ee.String('  annual_pet_mm = \'')
+  .cat(
+    ee.Algorithms.If(
+      petAnnAtPoint,
+      petAnnAtPoint.round().format('%.0f'),
+      'N/A'
+    )
+  ).cat('\';')
 
 ]);
 
-// ====================================
-// FINAL ORDER
-// ====================================
-
-var finalLines = metaLines      // first
-  .cat(combinedF)               // then Fahrenheit block
-  .cat(combinedC);              // then Celsius block
-
+var finalLines = metaLines
+  .cat(ee.List(['  const rawLines = `']))
+  .cat(combinedF.map(function(line){
+    return ee.String('    ').cat(line);
+  }))
+  .cat(ee.List(['  `;']))
+  .cat(combinedC);
+  
 finalLines.evaluate(function(list) {
   list.forEach(function(line) {
     print(line);

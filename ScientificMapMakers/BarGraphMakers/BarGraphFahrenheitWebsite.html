@@ -99,13 +99,15 @@
     for 2011–2040, 2041–2070, and 2071–2100.
     SSP5-8.5 represents a high-growth, energy-intensive future dominated by fossil fuel use, resulting in very high greenhouse gas emissions—making it a widely used analogue for present-day trajectories under minimal mitigation efforts. UKESM1-0-LL was selected due to its higher climate sensitivity and stronger land–atmosphere coupling, which makes it useful for bounding upper-risk habitability outcomes. This data has a spatial resolution of 30 arc-seconds (≈1 km at the equator).
     <br><br>
-    <strong>Note:</strong> "Dickinson Classification" refers to the system introduced in Dickinson, C. (2026). The Dickinson Climate Classification: A Taxonomic Thermal-Hydrological Partition of Climate State Space [Preprint]. Zenodo. https://doi.org/10.5281/zenodo.18264771
+    <strong>Note on Köppen:</strong> We use the 0 °C coldest-month isotherm for the Köppen C/D boundary.
+    <br><br>
+    <strong>Note on Dickinson:</strong> "Dickinson Classification" refers to the system introduced in Dickinson, C. (2026). The Dickinson Climate Classification: A Taxonomic Thermal-Hydrological Partition of Climate State Space [Preprint]. Zenodo. https://doi.org/10.5281/zenodo.18264771
   </div>
 </div>
 
 <script>
   // ============================
-  // 1. EARTH ENGINE LINES
+  // EARTH ENGINE OUTPUT
   // ============================
   var period = '2071-2100';
   var dickinson= 'Bmz1';
@@ -114,6 +116,7 @@
   var koppen_bordering = 'none';
   p_pet = '0.42';
   p_pet_unrounded = '0.415';
+  annual_pet_mm = '1359';
   const rawLines = `
     1.0: 79 57 5.6
     2.0: 78 56 4.6
@@ -298,7 +301,7 @@
   }
   
   // ============================
-  // UNEP Aridity phrase
+  // UNEP Aridity
   // ============================
 
   function decodeAI(value) {
@@ -325,9 +328,33 @@
     return 'humid';
   }
   
-  // left-right arrow symbol here for easy copy-paste if needed
-  // ↔
+    function formatAI(aiValue, petValue) {
 
+      // if either is N/A → print N/A
+      if (aiValue === 'N/A' || petValue === 'N/A') {
+        return 'UNEP Aridity Index: <b>N/A</b>';
+      }
+
+      const ai  = parseFloat(aiValue);
+      const pet = parseFloat(petValue);
+
+      if (isNaN(ai) || isNaN(pet)) {
+        return 'UNEP Aridity Index: <b>N/A</b>';
+      }
+
+      // ----- cold override -----
+      if (pet < 400) {
+        return 'UNEP Aridity Index: <b>cold</b> (PET < 400mm)';
+      }
+
+      // ----- normal output -----
+      return `UNEP Aridity Index: <b>${p_pet}</b> (${decodeAI(ai)})`;
+    }
+
+  // ============================
+  // Classification outputs
+  // ============================
+  
   const data = {
   location: 'Los Angeles (city center), California, United States',
   code:
@@ -344,9 +371,7 @@
       ? ` (bordering ${decodeKoppenBorderList(koppen_bordering)})`
       : '') +
     `<br><br>` +
-    
-    `UNEP Aridity Index: <b>${p_pet}</b>
-    (${decodeAI(p_pet_unrounded)})`,
+    formatAI(p_pet_unrounded, annual_pet_mm),
     months,
     highsF,
     lowsF,
@@ -357,7 +382,7 @@
   document.getElementById('subtitle').innerHTML = data.code;
 
   // ============================
-  // 2. DRAW CHART
+  // DRAW CHART
   // ============================
 
   const svgWidth = 620;
@@ -477,7 +502,7 @@
   document.getElementById('chart-container').innerHTML = svg;
   
   // ============================
-  // 3. EXPORT CHART
+  // EXPORT CHART
   // ============================
   
 const AUTO_EXPORT = false; // Change to true to export png
