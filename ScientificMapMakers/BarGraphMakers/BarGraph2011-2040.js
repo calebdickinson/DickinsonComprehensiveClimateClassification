@@ -1038,8 +1038,6 @@ dBordering = dBordering.cat(
   )
 );
 
-dBordering = dBordering.removeAll(ILLEGAL);
-
 // --------------------
 // Finalize bordering list
 // --------------------
