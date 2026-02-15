@@ -112,43 +112,39 @@
   // EARTH ENGINE OUTPUT
   // ============================
  var period = '1981-2010';
-  var dickinson= 'Cc1';
-  var dickinson_bordering = 'Dc1';
-  var koppen = 'ET';
+  var dickinson= 'Bb1';
+  var dickinson_bordering = 'Bb2 Bhb1';
+  var koppen = 'Cfbh';
   var koppen_bordering = 'none';
-  p_pet = 'N/A';
-  p_pet_unrounded = 'N/A';
-  annual_pet_mm = 'N/A';
+  p_pet = '0.52';
+  p_pet_unrounded = '0.521';
+  annual_pet_mm = '1771';
   const rawLines = `
-    1.0: 38 35 4.6
-    2.0: 38 36 4.5
-    3.0: 39 36 6.3
-    4.0: 37 34 5.8
-    5.0: 36 32 6.2
-    6.0: 35 31 5.8
-    7.0: 34 30 6.0
-    8.0: 33 29 5.5
-    9.0: 33 29 4.8
-    10.0: 33 30 4.4
-    11.0: 34 32 4.2
-    12.0: 36 34 4.4
-    1.0: 3 2 116
-    2.0: 4 2 114
-    3.0: 4 2 161
-    4.0: 3 1 148
-    5.0: 2 0 157
-    6.0: 1 -1 148
-    7.0: 1 -1 153
-    8.0: 1 -2 140
-    9.0: 1 -2 123
-    10.0: 1 -1 111
-    11.0: 1 0 106
-    12.0: 2 1 112
+    1.0: 67 50 1.8
+    2.0: 68 50 2.3
+    3.0: 67 51 3.3
+    4.0: 65 52 4.5
+    5.0: 65 51 4.1
+    6.0: 64 51 2.3
+    7.0: 65 50 2.1
+    8.0: 67 50 1.8
+    9.0: 68 50 2.2
+    10.0: 66 50 4.5
+    11.0: 65 50 4.7
+    12.0: 66 50 2.5
+    1.0: 20 10 47
+    2.0: 20 10 59
+    3.0: 19 11 85
+    4.0: 19 11 113
+    5.0: 18 11 103
+    6.0: 18 10 59
+    7.0: 18 10 52
+    8.0: 19 10 47
+    9.0: 20 10 57
+    10.0: 19 10 115
+    11.0: 19 10 120
+    12.0: 19 10 64
   `;
-
-
-
-
   
   const months = ['J','F','M','A','M','J','J','A','S','O','N','D'];
 
@@ -442,6 +438,61 @@
     // ----- normal output -----
     return `UNEP Aridity Index: <b>${p_pet}</b> (${decodeAI(ai)})`;
   }
+  
+  // ============================
+  // Repair specific EE diagonal artifacts
+  // Only:
+  //   • b1/b2
+  //   • E/F winter swaps
+  // ============================
+
+  function repairBorders(main, str) {
+    if (!str || str === 'none') return str;
+
+    let parts = str.trim().split(/\s+/);
+
+    // -------------------------------------------------
+    // b1/b2 diagonal
+    // -------------------------------------------------
+    if (parts.length === 2) {
+
+      const a = parts[0];
+      const b = parts[1];
+
+      // same winter as main
+      if (a.charAt(0) === main.charAt(0) &&
+          b.charAt(0) === main.charAt(0)) {
+
+        const mainArid = aridMap.hasOwnProperty(main.charAt(1)) ? main.charAt(1) : '';
+        const mainSummer = mainArid ? main.slice(2) : main.slice(1);
+
+        let newArid = mainArid;
+        let newSummer = mainSummer;
+
+        [a,b].forEach(c => {
+          const cArid = aridMap.hasOwnProperty(c.charAt(1)) ? c.charAt(1) : '';
+          const cSummer = cArid ? c.slice(2) : c.slice(1);
+
+          if (cArid !== mainArid && cArid !== '') newArid = cArid;
+          if (cSummer !== mainSummer) newSummer = cSummer;
+        });
+
+        return main.charAt(0) + (newArid || '') + newSummer;
+      }
+    }
+
+    // -------------------------------------------------
+    // E/F winter diagonal
+    // -------------------------------------------------
+    if (parts.length === 2) {
+      const other = parts.find(c => c.charAt(0) !== main.charAt(0));
+      if (other) return other;
+    }
+
+    return str;
+  }
+
+dickinson_bordering = repairBorders(dickinson, dickinson_bordering);
 
   // ============================
   // Classification outputs
