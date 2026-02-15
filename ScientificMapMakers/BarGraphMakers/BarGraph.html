@@ -107,44 +107,45 @@
 
 <script>
   var locationName =
-  'New York City, New York, United States';
+  'Heard Island (Atlas Cove Station), Australia';
   // ============================
   // EARTH ENGINE OUTPUT
   // ============================
-  var period = '1981-2010';
-  var dickinson= 'Dha1';
-  var dickinson_bordering = 'Cha1 Dha2';
-  var koppen = 'Dfa';
-  var koppen_bordering = 'Cfa';
-  p_pet = '1.19';
-  p_pet_unrounded = '1.186';
-  annual_pet_mm = '1008';
+ var period = '1981-2010';
+  var dickinson= 'Cc1';
+  var dickinson_bordering = 'Dc1';
+  var koppen = 'ET';
+  var koppen_bordering = 'none';
+  p_pet = 'N/A';
+  p_pet_unrounded = 'N/A';
+  annual_pet_mm = 'N/A';
   const rawLines = `
-    1.0: 38 25 3.3
-    2.0: 41 27 3.0
-    3.0: 48 34 4.1
-    4.0: 59 44 4.2
-    5.0: 69 54 4.1
-    6.0: 78 64 4.0
-    7.0: 83 70 4.5
-    8.0: 81 69 4.3
-    9.0: 74 62 3.9
-    10.0: 63 51 4.0
-    11.0: 53 42 3.8
-    12.0: 42 32 3.9
-    1.0: 3 -4 84
-    2.0: 5 -3 77
-    3.0: 9 1 105
-    4.0: 15 7 106
-    5.0: 20 12 103
-    6.0: 26 18 101
-    7.0: 28 21 115
-    8.0: 27 20 110
-    9.0: 23 17 99
-    10.0: 17 11 103
-    11.0: 11 5 95
-    12.0: 6 0 99
+    1.0: 38 35 4.6
+    2.0: 38 36 4.5
+    3.0: 39 36 6.3
+    4.0: 37 34 5.8
+    5.0: 36 32 6.2
+    6.0: 35 31 5.8
+    7.0: 34 30 6.0
+    8.0: 33 29 5.5
+    9.0: 33 29 4.8
+    10.0: 33 30 4.4
+    11.0: 34 32 4.2
+    12.0: 36 34 4.4
+    1.0: 3 2 116
+    2.0: 4 2 114
+    3.0: 4 2 161
+    4.0: 3 1 148
+    5.0: 2 0 157
+    6.0: 1 -1 148
+    7.0: 1 -1 153
+    8.0: 1 -2 140
+    9.0: 1 -2 123
+    10.0: 1 -1 111
+    11.0: 1 0 106
+    12.0: 2 1 112
   `;
+
 
 
 
@@ -221,8 +222,13 @@
 
   function decodeDickinson(code) {
     const cold = code.charAt(0);
-    const arid = code.length === 2 ? '' : code.charAt(1);
-    const summer = code.slice(arid ? 2 : 1);
+
+    // is the second character an aridity code?
+    const maybeArid = code.charAt(1);
+    const hasArid = aridMap.hasOwnProperty(maybeArid);
+
+    const arid = hasArid ? maybeArid : '';
+    const summer = hasArid ? code.slice(2) : code.slice(1);
 
     const coldText = coldMap[cold] || '';
     const aridText = aridMap[arid] || '';
