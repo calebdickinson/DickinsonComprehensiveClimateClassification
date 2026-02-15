@@ -531,7 +531,14 @@ bordering = bordering.cat(
 // b ↔ c
 // ------------------------------------
 
-var near_bc = monthsAbove10.subtract(4).abs().lt(1);
+// sort descending (warmest first)
+var sortedTemps = tasC_raw.sort().reverse();
+
+// 4th warmest month
+var fourthWarmest = ee.Number(sortedTemps.get(3));
+
+// how close it is to 10 °C
+var near_bc = fourthWarmest.subtract(10).abs().lt(EPS_TEMP);
 
 bordering = bordering.cat(
   ee.List(ee.Algorithms.If(
