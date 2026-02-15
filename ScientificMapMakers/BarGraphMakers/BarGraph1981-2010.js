@@ -766,10 +766,10 @@ var P6ratio = ee.Number(
 
 // ---- Base AI classes ----
 var baseLetter = ee.String(
-  ee.Algorithms.If(aiAtPoint.lte(0.01), '',
-  ee.Algorithms.If(aiAtPoint.lt(0.025), 'd',
-  ee.Algorithms.If(aiAtPoint.lt(0.050), 's',
-  ee.Algorithms.If(aiAtPoint.lt(0.075), 'g','h'))))
+  ee.Algorithms.If(aiAtPoint.lte(0.0), '',
+  ee.Algorithms.If(aiAtPoint.lt(0.25), 'd',
+  ee.Algorithms.If(aiAtPoint.lt(0.50), 's',
+  ee.Algorithms.If(aiAtPoint.lt(0.75), 'g','h'))))
 );
 
 // baseLetter != 'd'
