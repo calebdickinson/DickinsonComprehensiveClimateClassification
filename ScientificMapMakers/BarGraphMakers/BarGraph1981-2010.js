@@ -806,9 +806,9 @@ var P_driest = minPr;
 // aridityLetter == 'm'  (as 0/1)
 var isMedLetter = aridityLetter.compareTo('m').eq(0);
 
-// rainforestCancel = (aridityLetter == 'm') AND (P_driest >= PET/240)
+// rainforestCancel = (aridityLetter == 'm') AND (P_driest >= PET/24)
 var rainforestCancel = isMedLetter.multiply(
-  P_driest.gte(petAnnAtPoint.divide(240))
+  P_driest.gte(petAnnAtPoint.divide(24))
 ).eq(1);
 
 aridityLetter = ee.String(
@@ -829,7 +829,7 @@ var dBordering = ee.List([]);
 var EPS_D_TEMP  = 0.5;   // °C near a temperature boundary
 var EPS_AI      = 0.01;  // AI near boundary
 var EPS_RATIO   = 0.02;  // HS or P6ratio near boundary
-var EPS_MM      = 5;     // mm for rainforest cancel boundary (P_driest vs PET/240)
+var EPS_MM      = 5;     // mm for rainforest cancel boundary (P_driest vs PET/24)
 
 // Helper to append list if condition true
 function addBorder(cond, listOrEmpty) {
@@ -938,7 +938,7 @@ var aridityNoCold = ee.String(
 aridityNoCold = ee.String(
   ee.Algorithms.If(
     aridityNoCold.compareTo('m').eq(0)
-      .multiply(P_driest.gte(petAnnAtPoint.divide(240)))
+      .multiply(P_driest.gte(petAnnAtPoint.divide(24)))
       .eq(1),
     'h',
     aridityNoCold
