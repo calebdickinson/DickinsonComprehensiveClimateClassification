@@ -4,8 +4,8 @@ var NODATA_U16   = 65535;
 var SCALE_PR     = 0.1;
 var NORMAL_PERIOD = '2011-2040';
 
-var LAT = -75.0990;
-var LON = 123.3320;
+var LAT = -53.0333;
+var LON = 73.4000;
 
 var pt  = ee.Geometry.Point([LON, LAT]);
 
@@ -589,13 +589,13 @@ for (var m = 1; m <= 12; m++) {
 
   var tas = ee.Image(
       ASSET_PREFIX +
-      'CHELSA_tas_' +
-      mm + '_1981-2010_V2-1_u16'
+      'CHELSA_ukesm1-0-ll_r1i1p1f1_w5e5_ssp585_tas_' +
+      mm + '_2011_2040_norm'
     )
     .updateMask(ee.Image(
       ASSET_PREFIX +
-      'CHELSA_tas_' +
-      mm + '_1981-2010_V2-1_u16'
+      'CHELSA_ukesm1-0-ll_r1i1p1f1_w5e5_ssp585_tas_' +
+      mm + '_2011_2040_norm'
     ).neq(NODATA_U16))
     .multiply(0.1)
     .subtract(273.15)
@@ -701,7 +701,7 @@ var dBordering = ee.List([]);
 var EPS_D_TEMP  = 0.5;   // °C near a temperature boundary
 var EPS_AI      = 0.01;  // AI near boundary
 var EPS_RATIO   = 0.02;  // HS or P6ratio near boundary
-var EPS_MM      = 5;     // mm for rainforest cancel boundary (P_driest vs PET/24)
+var EPS_MM      = 5;     // mm for rainforest cancel boundary (P_driest vs PET/240)
 
 // Helper to append list if condition true
 function addBorder(cond, listOrEmpty) {

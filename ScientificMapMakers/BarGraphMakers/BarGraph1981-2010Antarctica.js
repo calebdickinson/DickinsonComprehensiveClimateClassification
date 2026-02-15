@@ -4,8 +4,8 @@ var NODATA_U16   = 65535;
 var SCALE_PR     = 0.1;
 var NORMAL_PERIOD = '1981-2010';
 
-var LAT = -75.0990;
-var LON = 123.3320;
+var LAT = -53.0333;
+var LON = 73.4000;
 
 var pt  = ee.Geometry.Point([LON, LAT]);
 
@@ -701,7 +701,7 @@ var dBordering = ee.List([]);
 var EPS_D_TEMP  = 0.5;   // °C near a temperature boundary
 var EPS_AI      = 0.01;  // AI near boundary
 var EPS_RATIO   = 0.02;  // HS or P6ratio near boundary
-var EPS_MM      = 5;     // mm for rainforest cancel boundary (P_driest vs PET/24)
+var EPS_MM      = 5;     // mm for rainforest cancel boundary (P_driest vs PET/240)
 
 // Helper to append list if condition true
 function addBorder(cond, listOrEmpty) {
