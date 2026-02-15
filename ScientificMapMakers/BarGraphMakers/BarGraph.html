@@ -107,44 +107,47 @@
 
 <script>
   var locationName =
-  'Los Angeles, California, United States';
+  'New York City, New York, United States';
   // ============================
   // EARTH ENGINE OUTPUT
   // ============================
-  var period = '2071-2100';
-  var dickinson= 'Bmz1';
-  var dickinson_bordering = 'none';
-  var koppen = 'As';
-  var koppen_bordering = 'none';
-  p_pet = '0.42';
-  p_pet_unrounded = '0.415';
-  annual_pet_mm = '1359';
+  var period = '1981-2010';
+  var dickinson= 'Dha1';
+  var dickinson_bordering = 'Cha1 Dha2';
+  var koppen = 'Dfa';
+  var koppen_bordering = 'Cfa';
+  p_pet = '1.19';
+  p_pet_unrounded = '1.186';
+  annual_pet_mm = '1008';
   const rawLines = `
-    1.0: 79 57 5.6
-    2.0: 78 56 4.6
-    3.0: 80 58 4.1
-    4.0: 85 60 1.3
-    5.0: 88 66 0.4
-    6.0: 94 71 0.1
-    7.0: 100 77 0.0
-    8.0: 102 79 0.1
-    9.0: 101 80 0.4
-    10.0: 95 75 1.3
-    11.0: 87 65 1.6
-    12.0: 78 55 2.8
-    1.0: 26 14 143
-    2.0: 25 13 117
-    3.0: 27 14 103
-    4.0: 29 16 33
-    5.0: 31 19 10
-    6.0: 34 21 3
-    7.0: 38 25 1
-    8.0: 39 26 2
-    9.0: 38 27 10
-    10.0: 35 24 32
-    11.0: 31 18 40
-    12.0: 26 13 72
+    1.0: 38 25 3.3
+    2.0: 41 27 3.0
+    3.0: 48 34 4.1
+    4.0: 59 44 4.2
+    5.0: 69 54 4.1
+    6.0: 78 64 4.0
+    7.0: 83 70 4.5
+    8.0: 81 69 4.3
+    9.0: 74 62 3.9
+    10.0: 63 51 4.0
+    11.0: 53 42 3.8
+    12.0: 42 32 3.9
+    1.0: 3 -4 84
+    2.0: 5 -3 77
+    3.0: 9 1 105
+    4.0: 15 7 106
+    5.0: 20 12 103
+    6.0: 26 18 101
+    7.0: 28 21 115
+    8.0: 27 20 110
+    9.0: 23 17 99
+    10.0: 17 11 103
+    11.0: 11 5 95
+    12.0: 6 0 99
   `;
+
+
+
   
   const months = ['J','F','M','A','M','J','J','A','S','O','N','D'];
 
@@ -233,19 +236,50 @@
     return phrase;
   }
   
-  function decodeBorderList(str) {
-    if (!str || str === 'none') return '';
+  function decodeBorderList(main, str) {
+  if (!str || str === 'none') return '';
 
-    const parts = str.trim().split(/\s+/);
+  const parts = str.trim().split(/\s+/);
 
-    const decoded = parts.map(c =>
-      `${c} (${decodeDickinson(c)})`
-    );
-
-    if (decoded.length === 1) return decoded[0];
-
-    return decoded.slice(0, -1).join(', ') + ' and ' + decoded.slice(-1);
+  // =========================
+  // SINGLE BORDER → OLD STYLE
+  // =========================
+  if (parts.length === 1) {
+    const c = parts[0];
+    return `<b>${c}</b> (${decodeDickinson(c)})`;
   }
+
+  // =========================
+  // MULTIPLE BORDERS → AXES
+  // =========================
+  function boundaryText(a, b) {
+    // winter
+    if (a.charAt(0) !== b.charAt(0)) {
+      return `${coldMap[a.charAt(0)]}/${coldMap[b.charAt(0)]} boundary`;
+    }
+
+    // aridity
+    if (a.charAt(1) !== b.charAt(1)) {
+      return `${aridMap[a.charAt(1)]}/${aridMap[b.charAt(1)]} boundary`;
+    }
+
+    // summer
+    const aS = a.slice(2);
+    const bS = b.slice(2);
+    if (aS !== bS) {
+      return `${summerMap[aS]}/${summerMap[bS]} summer boundary`;
+    }
+
+    return 'boundary';
+  }
+
+  const decoded = parts.map(c =>
+    `the ${boundaryText(main, c)} (<b>${main}</b> ↔ <b>${c}</b>)`
+  );
+
+  return decoded.slice(0, -1).join(' and ') + ' and ' + decoded.slice(-1);
+}
+
   
   // ============================
   // Köppen lookup table
@@ -343,7 +377,7 @@
     const parts = str.trim().split(/\s+/);
 
     const decoded = parts.map(c =>
-      `${c} (${decodeKoppen(c)})`
+      `<b>${c}</b> (${decodeKoppen(c)})`
     );
 
     if (decoded.length === 1) return decoded[0];
@@ -374,7 +408,8 @@
     if (ai < 0.74) return 'dry subhumid';
     if (ai < 0.75) return 'dry subhumid bordering on humid';
 
-    if (ai >= 0.75) return 'humid bordering on semihumid';
+	if (ai < 0.76) return 'humid bordering on semihumid';
+    if (ai >= 0.76) return 'humid';
 
     return 'humid';
   }
@@ -414,13 +449,13 @@
     `Dickinson Classification: <b>${dickinson}</b>
     (${decodeDickinson(dickinson)})` +
     (dickinson_bordering !== 'none'
-      ? ` (bordering ${decodeBorderList(dickinson_bordering)})`
+      ? ` bordering on ${decodeBorderList(dickinson, dickinson_bordering)}`
       : '') +
     `<br><br>` +
     `Köppen Classification: <b>${stripHighland(koppen)}</b>
     (${decodeKoppen(stripHighland(koppen))})` +
     (koppen_bordering !== 'none'
-      ? ` (bordering ${decodeKoppenBorderList(stripHighlandList(koppen_bordering))})`
+      ? ` bordering on ${decodeKoppenBorderList(stripHighlandList(koppen_bordering))}`
       : '') +
     `<br><br>` +
     formatAI(p_pet_unrounded, annual_pet_mm),
@@ -600,7 +635,7 @@
   // EXPORT CHART
   // ============================
   
-const AUTO_EXPORT = true;
+const AUTO_EXPORT = false;
 
 if (AUTO_EXPORT) {
   setTimeout(async () => {
