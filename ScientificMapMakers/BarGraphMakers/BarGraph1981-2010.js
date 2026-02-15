@@ -667,8 +667,8 @@ bordering = bordering.map(function(code) {
 // AI (P / PET) — numeric printout (POINT-BASED)
 // ====================================
 
-var PET_MEAN_ID = ASSET_PREFIX + 'CHELSA_pet_penman_mean_2071-2100';
-var SCALE_PET   = 0.1;  // projections = 0.1 (baseline would be 0.01)
+var PET_MEAN_ID = ASSET_PREFIX + 'CHELSA_pet_penman_mean_1981-2010_V2-1';
+var SCALE_PET   = 0.01;  // projections = 0.1 (baseline would be 0.01)
 
 // PET mean image (mm/month), masked
 var petMeanMmImg = ee.Image(PET_MEAN_ID)

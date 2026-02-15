@@ -193,7 +193,7 @@ var warmComb = classifySummer(hottestC),
     coldComb = classifyCold(coldestC);
 
 // --------------------------------------------------
-// Combined code (match the “good” logic): cold*100 + climate*10 + summer
+// Combined code: cold*100 + climate*10 + summer
 // --------------------------------------------------
 var combined = coldComb.multiply(100).add(clim.multiply(10)).add(warmComb).rename('combinedZone');
 
