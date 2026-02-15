@@ -1038,27 +1038,6 @@ dBordering = dBordering.cat(
   )
 );
 
-// ------------------------------------
-// Remove impossible bordering codes like Bhb1, Bgb1 etc
-// ------------------------------------
-
-var ILLEGAL = ee.List([
-  'Bhb1','Bgb1','Bsb1','Bdb1', 'Bmb1', 'Bwb1',
-  'Chb1','Cgb1','Csb1','Cdb1', 'Cmb1', 'Cwb1',
-  'Dhb1','Dgb1','Dsb1','Ddb1', 'Dmb1', 'Dwb1',
-  'Ehb1','Egb1','Esb1','Edb1', 'Emb1', 'Ewb1',
-  'Fhb1','Fgb1','Fsb1','Fdb1', 'Fmb1', 'Fwb1',
-  'Fhb2','Fgb2','Fsb2','Fdb2', 'Fmb2', 'Fwb2',
-  'Fha1','Fga1','Fsa1','Fda1', 'Fma1', 'Fwa1',
-  'Fha2','Fga2','Fsa2','Fda2', 'Fma2', 'Fwa2',
-  'Fhz1','Fgz1','Fsz1','Fdz1', 'Fmz1', 'Fwz1',
-  'Fhz2','Fgz2','Fsz2','Fdz2', 'Fmz2', 'Fwz2',
-  'FhX','FgX','FsX','FdX', 'FmX', 'FwX',
-  'FhH','FgH','FsH','FdH', 'FmH', 'FwH',
-]);
-
-dBordering = dBordering.removeAll(ILLEGAL);
-
 // --------------------
 // Finalize bordering list
 // --------------------
