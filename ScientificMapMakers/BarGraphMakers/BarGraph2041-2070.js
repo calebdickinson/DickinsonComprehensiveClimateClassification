@@ -63,12 +63,16 @@ var prMonthly = ee.ImageCollection(prImgs);
 
 // ====== Helpers ======
 function atPoint(img, band) {
+  var proj = img.projection();
+
   var dict = img.reduceRegion({
     reducer: ee.Reducer.first(),
     geometry: pt,
-    scale: 1000,
+    crs: proj,
+    scale: proj.nominalScale(),
     maxPixels: 1e9
   });
+
   return ee.Number(dict.get(band));
 }
 
