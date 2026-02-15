@@ -107,13 +107,13 @@
 
 <script>
   var locationName =
-  'Heard Island (Atlas Cove Station), Australia';
+  'Bogotá, Colombia';
   // ============================
   // EARTH ENGINE OUTPUT
   // ============================
  var period = '1981-2010';
   var dickinson= 'Bb1';
-  var dickinson_bordering = 'Bb2 Bhb1';
+  var dickinson_bordering = 'Csb1 Cb2';
   var koppen = 'Cfbh';
   var koppen_bordering = 'none';
   p_pet = '0.52';
@@ -440,63 +440,109 @@
   }
   
   // ============================
-  // Repair specific EE diagonal artifacts
-  // Only:
-  //   • b1/b2
-  //   • E/F winter swaps
+  // Fix all nonsensical codes
   // ============================
 
-  function repairBorders(main, str) {
+  function hardRepairBorders(str) {
     if (!str || str === 'none') return str;
 
-    let parts = str.trim().split(/\s+/);
+    const parts = str.trim().split(/\s+/);
 
-    // -------------------------------------------------
-    // b1/b2 diagonal
-    // -------------------------------------------------
-    if (parts.length === 2) {
+    // helper
+    const has = c => parts.includes(c);
 
-      const a = parts[0];
-      const b = parts[1];
+    // --------------------------------
+    // b1/b2 diagonals
+    // --------------------------------
+    if (has('Bb2') && has('Bhb1')) return 'Bhb2';
+    if (has('Bb2') && has('Bgb1')) return 'Bgb2';
+    if (has('Bb2') && has('Bsb1')) return 'Bsb2';
+    if (has('Bb2') && has('Bdb1')) return 'Bdb2';
+    if (has('Bb2') && has('Bmb1')) return 'Bmb2';
+    if (has('Bb2') && has('Bwb1')) return 'Bwb2';
 
-      // same winter as main
-      if (a.charAt(0) === main.charAt(0) &&
-          b.charAt(0) === main.charAt(0)) {
+    if (has('Cb2') && has('Chb1')) return 'Chb2';
+    if (has('Cb2') && has('Cgb1')) return 'Cgb2';
+    if (has('Cb2') && has('Csb1')) return 'Csb2';
+    if (has('Cb2') && has('Cdb1')) return 'Cdb2';
+    if (has('Cb2') && has('Cmb1')) return 'Cmb2';
+    if (has('Cb2') && has('Cwb1')) return 'Cwb2';
+    
+    if (has('Db2') && has('Dhb1')) return 'Dhb2';
+    if (has('Db2') && has('Dgb1')) return 'Dgb2';
+    if (has('Db2') && has('Dsb1')) return 'Dsb2';
+    if (has('Db2') && has('Ddb1')) return 'Ddb2';
+    if (has('Db2') && has('Dmb1')) return 'Dmb2';
+    if (has('Db2') && has('Dwb1')) return 'Dwb2';
+    
+    if (has('Eb2') && has('Ehb1')) return 'Ehb2';
+    if (has('Eb2') && has('Egb1')) return 'Egb2';
+    if (has('Eb2') && has('Esb1')) return 'Esb2';
+    if (has('Eb2') && has('Edb1')) return 'Edb2';
+    if (has('Eb2') && has('Emb1')) return 'Emb2';
+    if (has('Eb2') && has('Ewb1')) return 'Ewb2';
 
-        const mainArid = aridMap.hasOwnProperty(main.charAt(1)) ? main.charAt(1) : '';
-        const mainSummer = mainArid ? main.slice(2) : main.slice(1);
+    // --------------------------------
+    // E/F winter diagonals
+    // --------------------------------
+    if (has('Eb2') && has('Fhb2')) return 'Ehb2';
+    if (has('Eb2') && has('Fgb2')) return 'Egb2';
+    if (has('Eb2') && has('Fsb2')) return 'Esb2';
+    if (has('Eb2') && has('Fdb2')) return 'Edb2';
+    if (has('Eb2') && has('Fmb2')) return 'Emb2';
+    if (has('Eb2') && has('Fwb2')) return 'Ewb2';
 
-        let newArid = mainArid;
-        let newSummer = mainSummer;
+    if (has('Ea1') && has('Fha1')) return 'Eha1';
+    if (has('Ea1') && has('Fga1')) return 'Ega1';
+    if (has('Ea1') && has('Fsa1')) return 'Esa1';
+    if (has('Ea1') && has('Fda1')) return 'Eda1';
+    if (has('Ea1') && has('Fma1')) return 'Ema1';
+    if (has('Ea1') && has('Fwa1')) return 'Ewa1';
 
-        [a,b].forEach(c => {
-          const cArid = aridMap.hasOwnProperty(c.charAt(1)) ? c.charAt(1) : '';
-          const cSummer = cArid ? c.slice(2) : c.slice(1);
+    if (has('Ea2') && has('Fha2')) return 'Eha2';
+    if (has('Ea2') && has('Fga2')) return 'Ega2';
+    if (has('Ea2') && has('Fsa2')) return 'Esa2';
+    if (has('Ea2') && has('Fda2')) return 'Eda2';
+    if (has('Ea2') && has('Fma2')) return 'Ema2';
+    if (has('Ea2') && has('Fwa2')) return 'Ewa2';
 
-          if (cArid !== mainArid && cArid !== '') newArid = cArid;
-          if (cSummer !== mainSummer) newSummer = cSummer;
-        });
+    if (has('Ez1') && has('Fhz1')) return 'Ehz1';
+    if (has('Ez1') && has('Fgz1')) return 'Egz1';
+    if (has('Ez1') && has('Fsz1')) return 'Esz1';
+    if (has('Ez1') && has('Fdz1')) return 'Edz1';
+    if (has('Ez1') && has('Fmz1')) return 'Emz1';
+    if (has('Ez1') && has('Fwz1')) return 'Ewz1';
 
-        return main.charAt(0) + (newArid || '') + newSummer;
-      }
-    }
+    if (has('Ez2') && has('Fhz2')) return 'Ehz2';
+    if (has('Ez2') && has('Fgz2')) return 'Egz2';
+    if (has('Ez2') && has('Fsz2')) return 'Esz2';
+    if (has('Ez2') && has('Fdz2')) return 'Edz2';
+    if (has('Ez2') && has('Fmz2')) return 'Emz2';
+    if (has('Ez2') && has('Fwz2')) return 'Ewz2';
 
-    // -------------------------------------------------
-    // E/F winter diagonal
-    // -------------------------------------------------
-    if (parts.length === 2) {
-      const other = parts.find(c => c.charAt(0) !== main.charAt(0));
-      if (other) return other;
-    }
+    if (has('EX') && has('FhX')) return 'EhX';
+    if (has('EX') && has('FgX')) return 'EgX';
+    if (has('EX') && has('FsX')) return 'EsX';
+    if (has('EX') && has('FdX')) return 'EdX';
+    if (has('EX') && has('FmX')) return 'EmX';
+    if (has('EX') && has('FwX')) return 'EwX';
+
+    if (has('EH') && has('FhH')) return 'EhH';
+    if (has('EH') && has('FgH')) return 'EgH';
+    if (has('EH') && has('FsH')) return 'EsH';
+    if (has('EH') && has('FdH')) return 'EdH';
+    if (has('EH') && has('FmH')) return 'EmH';
+    if (has('EH') && has('FwH')) return 'EwH';
 
     return str;
   }
 
-dickinson_bordering = repairBorders(dickinson, dickinson_bordering);
 
   // ============================
   // Classification outputs
   // ============================
+  
+  dickinson_bordering = hardRepairBorders(dickinson_bordering);
   
   const data = {
   location: locationName,
