@@ -4,8 +4,8 @@ var NODATA_U16   = 65535;
 var SCALE_PR     = 0.1;
 var NORMAL_PERIOD = '2011-2040';
 
-var LAT = 34.05223;
-var LON = -118.24368;
+var LAT = -53.0333;
+var LON = 73.4000;
 
 var pt  = ee.Geometry.Point([LON, LAT]);
 
@@ -583,13 +583,26 @@ var koppenBorderingStr = ee.String(
 // ------------------------------------
 var elevImg = ee.Image('USGS/SRTMGL1_003').rename('elev');
 
+var rawElevation = elevImg.reduceRegion({
+  reducer: ee.Reducer.first(),
+  geometry: pt,
+  scale: 1000,
+  maxPixels: 1e9
+}).get('elev');
+
+// STEP 1 — replace null BEFORE turning into Number
+rawElevation = ee.Algorithms.If(rawElevation, rawElevation, -5000);
+
+// STEP 2 — now it is safe forever
+rawElevation = ee.Number(rawElevation);
+
+// STEP 3 — optional range sanity
 var elevation = ee.Number(
-  elevImg.reduceRegion({
-    reducer: ee.Reducer.first(),
-    geometry: pt,
-    scale: 1000,
-    maxPixels: 1e9
-  }).get('elev')
+  ee.Algorithms.If(
+    rawElevation.gte(-500).and(rawElevation.lte(9000)),
+    rawElevation,
+    -9999
+  )
 );
 
 // ------------------------------------
@@ -643,7 +656,7 @@ bordering = bordering.map(function(code) {
 // AI (P / PET) — numeric printout (POINT-BASED)
 // ====================================
 
-var PET_MEAN_ID = ASSET_PREFIX + 'CHELSA_pet_penman_mean_2011-2040';
+var PET_MEAN_ID = ASSET_PREFIX + 'CHELSA_pet_penman_mean_2071-2100';
 var SCALE_PET   = 0.1;  // projections = 0.1 (baseline would be 0.01)
 
 // PET mean image (mm/month), masked
@@ -652,63 +665,33 @@ var petMeanMmImg = ee.Image(PET_MEAN_ID)
   .multiply(SCALE_PET)
   .rename('pet_mm_month');
 
-// Sample PET mean at the point (mm/month)
-var petMeanAtPoint = atPoint(petMeanMmImg, 'pet_mm_month');
+// Sample PET at point — SAFE
+var rawPet = petMeanMmImg.reduceRegion({
+  reducer: ee.Reducer.first(),
+  geometry: pt,
+  scale: 1000,
+  maxPixels: 1e9
+}).get('pet_mm_month');
+
+// kill null immediately
+var petMeanAtPoint = ee.Number(
+  ee.Algorithms.If(rawPet, rawPet, 0)
+);
 
 // Annual PET (mm/year)
 var petAnnAtPoint = petMeanAtPoint.multiply(12);
 
-// AI = P / PET (dimensionless)
+// Aridity Index (dimensionless)
 var aiAtPoint = annualPr.divide(petAnnAtPoint);
 
 // ====================================
 // Hottest and coldest month means
+// (reuse earlier tasC_raw)
 // ====================================
 
-var tasMonthlyImgs = [];
-
-for (var m = 1; m <= 12; m++) {
-  var mm = (m < 10 ? '0' + m : '' + m);
-
-  var tas = ee.Image(
-      ASSET_PREFIX +
-      'CHELSA_ukesm1-0-ll_r1i1p1f1_w5e5_ssp585_tas_' +
-      mm + '_2011_2040_norm'
-    )
-    .updateMask(ee.Image(
-      ASSET_PREFIX +
-      'CHELSA_ukesm1-0-ll_r1i1p1f1_w5e5_ssp585_tas_' +
-      mm + '_2011_2040_norm'
-    ).neq(NODATA_U16))
-    .multiply(0.1)
-    .subtract(273.15)
-    .rename('tmeanC');
-
-  tasMonthlyImgs.push(tas);
-}
-
-var tasMonthlyIC = ee.ImageCollection(tasMonthlyImgs);
-
-var warmestMonth = tasMonthlyIC.max().reduceRegion({
-  reducer: ee.Reducer.first(),
-  geometry: pt,
-  scale: 1000,
-  maxPixels: 1e9
-}).getNumber('tmeanC');
-
-var coldestMonth = tasMonthlyIC.min().reduceRegion({
-  reducer: ee.Reducer.first(),
-  geometry: pt,
-  scale: 1000,
-  maxPixels: 1e9
-}).getNumber('tmeanC');
-
-var annualMean = tasMonthlyIC.mean().reduceRegion({
-  reducer: ee.Reducer.first(),
-  geometry: pt,
-  scale: 1000,
-  maxPixels: 1e9
-}).getNumber('tmeanC');
+var warmestMonth = ee.Number(tasC_raw.reduce(ee.Reducer.max()));
+var coldestMonth = ee.Number(tasC_raw.reduce(ee.Reducer.min()));
+var annualMean   = ee.Number(tasC_raw.reduce(ee.Reducer.mean()));
 
 // ====================================
 // Dickinson climate code (POINT)
@@ -1065,7 +1048,13 @@ var dickinsonBorderingStr = ee.String(
 var metaLines = ee.List([
   
   ee.String('elevation_meters: ')
-  .cat(elevation.round().format('%.0f')),
+  .cat(
+    ee.Algorithms.If(
+      elevation.eq(-9999),
+      'N/A',
+      elevation.round().format('%.0f')
+    )
+  ),
   
   ee.String('hottest_month_C: ')
     .cat(warmestMonth.multiply(10).round().divide(10).format('%.1f')),
@@ -1135,4 +1124,3 @@ finalLines.evaluate(function(list) {
     print(line);
   });
 });
-

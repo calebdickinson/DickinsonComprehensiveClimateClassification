@@ -4,8 +4,8 @@ var NODATA_U16   = 65535;
 var SCALE_PR     = 0.1;
 var NORMAL_PERIOD = '2071-2100';
 
-var LAT = -66.2818;
-var LON = 110.5286;
+var LAT = -53.0333;
+var LON = 73.4000;
 
 var pt  = ee.Geometry.Point([LON, LAT]);
 
