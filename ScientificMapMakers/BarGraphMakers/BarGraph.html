@@ -111,14 +111,14 @@
   // ============================
   // EARTH ENGINE OUTPUT
   // ============================
- 	var period = '1981-2010';
+  var period = '1981-2010';
   var dickinson= 'Bb1';
-  var dickinson_bordering = 'Bb2 Bhb1';
+  var dickinson_bordering = 'Bb2 Bgb1';
   var koppen = 'Cfbh';
   var koppen_bordering = 'none';
-  p_pet = '0.52';
-  p_pet_unrounded = '0.521';
-  annual_pet_mm = '1771';
+  p_pet = '0.63';
+  p_pet_unrounded = '0.626';
+  annual_pet_mm = '1474';
   const rawLines = `
     1.0: 67 50 1.8
     2.0: 68 50 2.3
@@ -556,7 +556,7 @@
       : '') +
     `<br><br>` +
     `Köppen Classification: <b>${stripHighland(koppen)}</b>
-    (${decodeKoppen(stripHighland(koppen))})` +
+    (${decodeKoppen(koppen)})` +
     (koppen_bordering !== 'none'
       ? ` bordering on ${decodeKoppenBorderList(stripHighlandList(koppen_bordering))}`
       : '') +
