@@ -701,7 +701,7 @@ var dBordering = ee.List([]);
 var EPS_D_TEMP  = 0.5;   // °C near a temperature boundary
 var EPS_AI      = 0.01;  // AI near boundary
 var EPS_RATIO   = 0.02;  // HS or P6ratio near boundary
-var EPS_MM      = 5;     // mm for rainforest cancel boundary (P_driest vs PET/240)
+var EPS_MM      = 5;     // mm for rainforest cancel boundary (P_driest vs PET/24)
 
 // Helper to append list if condition true
 function addBorder(cond, listOrEmpty) {
