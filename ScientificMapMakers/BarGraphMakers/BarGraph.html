@@ -107,44 +107,47 @@
 
 <script>
   var locationName =
-  'Bogotá, Colombia';
+  'Fargo, North Dakota, United States';
   // ============================
   // EARTH ENGINE OUTPUT
   // ============================
   var period = '1981-2010';
-  var dickinson= 'Bb1';
-  var dickinson_bordering = 'Bb2 Bgb1';
-  var koppen = 'Cfbh';
-  var koppen_bordering = 'none';
-  p_pet = '0.63';
-  p_pet_unrounded = '0.626';
-  annual_pet_mm = '1474';
+  var dickinson= 'Ega1';
+  var dickinson_bordering = 'none';
+  var koppen = 'Dfb';
+  var koppen_bordering = 'Dfa';
+  p_pet = '0.71';
+  p_pet_unrounded = '0.711';
+  annual_pet_mm = '871';
   const rawLines = `
-    1.0: 67 50 1.8
-    2.0: 68 50 2.3
-    3.0: 67 51 3.3
-    4.0: 65 52 4.5
-    5.0: 65 51 4.1
-    6.0: 64 51 2.3
-    7.0: 65 50 2.1
-    8.0: 67 50 1.8
-    9.0: 68 50 2.2
-    10.0: 66 50 4.5
-    11.0: 65 50 4.7
-    12.0: 66 50 2.5
-    1.0: 20 10 47
-    2.0: 20 10 59
-    3.0: 19 11 85
-    4.0: 19 11 113
-    5.0: 18 11 103
-    6.0: 18 10 59
-    7.0: 18 10 52
-    8.0: 19 10 47
-    9.0: 20 10 57
-    10.0: 19 10 115
-    11.0: 19 10 120
-    12.0: 19 10 64
+    1.0: 20 3 0.7
+    2.0: 27 9 0.6
+    3.0: 39 21 1.3
+    4.0: 56 34 1.5
+    5.0: 68 47 3.0
+    6.0: 77 57 4.1
+    7.0: 82 63 3.3
+    8.0: 80 61 2.9
+    9.0: 70 52 2.7
+    10.0: 56 39 2.4
+    11.0: 38 24 1.0
+    12.0: 23 9 0.8
+    1.0: -7 -16 18
+    2.0: -3 -13 16
+    3.0: 4 -6 32
+    4.0: 13 1 39
+    5.0: 20 9 77
+    6.0: 25 14 104
+    7.0: 28 17 85
+    8.0: 27 16 73
+    9.0: 21 11 69
+    10.0: 13 4 60
+    11.0: 3 -4 25
+    12.0: -5 -13 22
   `;
+
+
+
   
   const months = ['J','F','M','A','M','J','J','A','S','O','N','D'];
 
@@ -407,11 +410,11 @@
     if (ai < 0.50) return 'semi-arid bordering on dry subhumid';
 
     if (ai < 0.51) return 'dry subhumid bordering on semi-arid';
-    if (ai < 0.74) return 'dry subhumid';
-    if (ai < 0.75) return 'dry subhumid bordering on humid';
+    if (ai < 0.64) return 'dry subhumid';
+    if (ai < 0.65) return 'dry subhumid bordering on humid';
 
-	if (ai < 0.76) return 'humid bordering on semihumid';
-    if (ai >= 0.76) return 'humid';
+	if (ai < 0.66) return 'humid bordering on semihumid';
+    if (ai >= 0.66) return 'humid';
 
     return 'humid';
   }
