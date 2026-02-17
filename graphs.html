@@ -37,7 +37,7 @@
     }
 
     .year-btn:hover {
-        transform: scale(1.08);
+        transform: scale(1.1);
     }
 
     .year-btn.active {
@@ -68,7 +68,18 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script>
-    let currentStation = "ConcordiaStation";
+    let currentStation = "LosAngeles";
+    let currentUnit = "F";
+
+    function toggleUnits() {
+      currentUnit = currentUnit === "F" ? "C" : "F";
+
+      // Update button text
+      document.getElementById("unitBtn").textContent =
+        currentUnit === "F" ? "Switch to Celsius" : "Switch to Fahrenheit";
+
+      updateGraphs();
+    }
 
     function showGraph(n) {
     for (let i = 1; i <= 4; i++) {
@@ -83,20 +94,24 @@
     if (chosen) chosen.style.display = 'block';
     }
 
+    function updateGraphs() {
+      for (let i = 1; i <= 4; i++) {
+        const img = document.querySelector(`#graph${i} img`);
+        if (img) {
+          img.src = `graphs/${currentStation}${i}-${currentUnit}.png`;
+        }
+      }
+    }
+
     function setLocation(name) {
-    currentLocation = name;
-
-    // swap all four images
-    document.querySelector("#graph1 img").src = `graphs/${name}1-F.png`;
-    document.querySelector("#graph2 img").src = `graphs/${name}2-F.png`;
-    document.querySelector("#graph3 img").src = `graphs/${name}3-F.png`;
-    document.querySelector("#graph4 img").src = `graphs/${name}4-F.png`;
-
-    showGraph(1); // reset to first period
+      currentStation = name;
+      updateGraphs();
+      showGraph(1);
     }
 
     window.addEventListener('DOMContentLoaded', () => {
-    showGraph(1);
+      updateGraphs();
+      showGraph(1);
     });
   </script>
   <script>
@@ -296,6 +311,12 @@
   </nav>
   <main>
     <div id="map"></div>
+
+    <div style="text-align:center; margin: 20px 0;">
+      <button id="unitBtn" class="year-btn" onclick="toggleUnits()">
+        Switch to °C
+      </button>
+    </div>
 
     <div class="year-row" style="text-align:center; margin:30px 0;">
       <button id="graphbtn1" class="year-btn" onclick="showGraph(1)">1981 - 2010</button>
