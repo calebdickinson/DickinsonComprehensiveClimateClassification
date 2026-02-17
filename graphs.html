@@ -56,6 +56,20 @@
         margin: 0 auto;
     }
 
+    .unit-toggle {
+      text-align: center;
+      font-size: 1rem;
+      border: 2px solid black;
+      background: gray;
+      color: #ffffff;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .unit-toggle:hover {
+      transform: scale(1.1);
+    }
+
     @media (max-width: 1400px) {
       .year-row {
         display: grid;
@@ -76,7 +90,7 @@
 
       // Update button text
       document.getElementById("unitBtn").textContent =
-        currentUnit === "F" ? "Switch to Celsius" : "Switch to Fahrenheit";
+        currentUnit === "F" ? "Switch graphs to Celsius" : "Switch graphs to Fahrenheit";
 
       updateGraphs();
     }
@@ -312,12 +326,6 @@
   <main>
     <div id="map"></div>
 
-    <div style="text-align:center; margin: 20px 0;">
-      <button id="unitBtn" class="year-btn" onclick="toggleUnits()">
-        Switch to °C
-      </button>
-    </div>
-
     <div class="year-row" style="text-align:center; margin:30px 0;">
       <button id="graphbtn1" class="year-btn" onclick="showGraph(1)">1981 - 2010</button>
       <button id="graphbtn2" class="year-btn" onclick="showGraph(2)">2011 - 2040</button>
@@ -330,7 +338,14 @@
       <div id="graph2"><img src="graphs/LosAngeles2-F.png"></div>
       <div id="graph3"><img src="graphs/LosAngeles3-F.png"></div>
       <div id="graph4"><img src="graphs/LosAngeles4-F.png"></div>
+    </div>
+
+    <div style="text-align:center; margin: 20px 0;">
+      <button id="unitBtn" class="unit-toggle" onclick="toggleUnits()">
+        Switch graphs to Celsius
+      </button>
     </div><br>
+
     <p>Email me at calebisaacdickinson@gmail.com to get any location added to this page.</p><br>
     <p>Map marker coordinates are identical to the coordinates used in the climate graph calculations.</p><br>
 
