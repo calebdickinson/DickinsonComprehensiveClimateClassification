@@ -1,0 +1,220 @@
+// ==============================
+// CONFIG
+// ==============================
+var ASSET_PREFIX = 'projects/ordinal-crowbar-459807-m2/assets/';
+var NODATA_U16   = 65535;
+var SCALE_PR     = 0.1;
+
+// ==============================
+// 1. Annual Precipitation Images
+// ==============================
+
+function annualPrBaseline() {
+  var imgs = [];
+  for (var m = 1; m <= 12; m++) {
+    var mm = (m < 10 ? '0' + m : '' + m);
+    var raw = ee.Image(
+      ASSET_PREFIX + 'CHELSA_pr_' + mm + '_1981-2010_V2-1_u16'
+    );
+    var pr = raw
+      .updateMask(raw.neq(NODATA_U16))
+      .multiply(SCALE_PR)
+      .rename('pr');
+    imgs.push(pr);
+  }
+  return ee.ImageCollection(imgs).sum();
+}
+
+function annualPrFuture() {
+  var imgs = [];
+  for (var m = 1; m <= 12; m++) {
+    var mm = (m < 10 ? '0' + m : '' + m);
+    var raw = ee.Image(
+      ASSET_PREFIX +
+      'CHELSA_ukesm1-0-ll_r1i1p1f1_w5e5_ssp585_pr_' +
+      mm +
+      '_2071_2100_norm'
+    );
+    var pr = raw
+      .updateMask(raw.neq(NODATA_U16))
+      .multiply(SCALE_PR)
+      .rename('pr');
+    imgs.push(pr);
+  }
+  return ee.ImageCollection(imgs).sum();
+}
+
+// ==============================
+// 2. Annual PET Images
+// ==============================
+
+var petBase = ee.Image(
+  ASSET_PREFIX + 'CHELSA_pet_penman_mean_1981-2010_V2-1'
+)
+.updateMask(
+  ee.Image(
+    ASSET_PREFIX + 'CHELSA_pet_penman_mean_1981-2010_V2-1'
+  ).neq(NODATA_U16)
+)
+.multiply(0.01)
+.multiply(12)
+.rename('pet');
+
+var petFuture = ee.Image(
+  ASSET_PREFIX + 'CHELSA_pet_penman_mean_2071-2100'
+)
+.updateMask(
+  ee.Image(
+    ASSET_PREFIX + 'CHELSA_pet_penman_mean_2071-2100'
+  ).neq(NODATA_U16)
+)
+.multiply(0.1)
+.multiply(12)
+.rename('pet');
+
+// ==============================
+// 3. AI Images
+// ==============================
+
+var prBase   = annualPrBaseline();
+var prFuture = annualPrFuture();
+
+var aiBase   = prBase.divide(petBase).rename('aiBase');
+var aiFuture = prFuture.divide(petFuture).rename('aiFuture');
+
+// ==============================
+// 4. RAW Percent Change
+// ==============================
+
+var pctChange = aiFuture
+  .subtract(aiBase)
+  .divide(aiBase)   // raw division
+  .multiply(100)
+  .rename('pct');
+
+// 5% discrete bins
+var pctBinned = pctChange
+  .divide(5)
+  .floor()
+  .multiply(5)
+  .rename('pct');
+
+// ==============================
+// 5. Extended Drying Palette
+// ==============================
+
+var palette = [
+
+  // -80 to -55 (new collapse extension)
+  '#000000',  // -80
+  '#120018',  // -75
+  '#1f0028',  // -70
+  '#2a0034',  // -65
+  '#32003d',  // -60
+  '#370047',  // -55
+
+  // -50 (existing collapse tier)
+  '#3b0f70',
+
+  // -45
+  '#9e0142',
+
+  // -40 to -20 (orange ramp)
+  '#d00000',
+  '#dc2f02',
+  '#e85d04',
+  '#f48c06',
+  '#faa307',
+  '#ffba08',
+  '#ffc300',
+  '#ffd60a',
+
+  // -15 to -5
+  '#ffe066',
+  '#ffff3f',
+
+  // 0
+  '#ffff3f',
+
+  // 5 to 20
+  '#d9ed92',
+  '#b5e48c',
+  '#99d98c',
+  '#76c893',
+
+  // 25 to 40
+  '#52b69a',
+  '#34a0a4',
+  '#168aad',
+  '#1a759f',
+
+  // 45
+  '#184e77',
+
+  // 50
+  '#0b3d2e'
+];
+
+// ==============================
+// 6. Add Layer
+// ==============================
+
+Map.setCenter(0, 20, 2);
+
+Map.addLayer(
+  pctBinned,
+  {
+    min: -80,
+    max: 50,
+    palette: palette
+  },
+  '% Change in Aridity Index (5% bands)',
+  true,
+  0.7
+);
+
+// ==============================
+// 7. Click Anywhere
+// ==============================
+
+Map.onClick(function(coords) {
+
+  var point = ee.Geometry.Point([coords.lon, coords.lat]);
+
+  var values = ee.Dictionary({
+    base: aiBase.reduceRegion({
+      reducer: ee.Reducer.first(),
+      geometry: point,
+      scale: 1000
+    }).get('aiBase'),
+
+    future: aiFuture.reduceRegion({
+      reducer: ee.Reducer.first(),
+      geometry: point,
+      scale: 1000
+    }).get('aiFuture'),
+
+    pct: pctChange.reduceRegion({
+      reducer: ee.Reducer.first(),
+      geometry: point,
+      scale: 1000
+    }).get('pct')
+  });
+
+  values.evaluate(function(v) {
+
+    if (!v) {
+      print('No data here.');
+      return;
+    }
+
+    var direction = v.pct < 0 ? 'decrease' : 'increase';
+
+    print(
+      v.pct.toFixed(1) + '% ' + direction +
+      ' of aridity index (' +
+      v.base.toFixed(3) + ' → ' +
+      v.future.toFixed(3) + ')'
+    );
+  });
+});
