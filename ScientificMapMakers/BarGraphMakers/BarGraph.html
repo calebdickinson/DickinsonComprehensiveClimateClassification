@@ -107,45 +107,46 @@
 
 <script>
   var locationName =
-  'Fargo, North Dakota, United States';
+  'Fairbanks, Alaska, United States';
+  
   // ============================
   // EARTH ENGINE OUTPUT
   // ============================
+  
   var period = '1981-2010';
-  var dickinson= 'Ega1';
-  var dickinson_bordering = 'none';
+  var dickinson= 'Ehb2';
+  var dickinson_bordering = 'Fhb2 Eb2';
   var koppen = 'Dfb';
-  var koppen_bordering = 'Dfa';
-  p_pet = '0.71';
-  p_pet_unrounded = '0.711';
-  annual_pet_mm = '871';
+  var koppen_bordering = 'Dsb Dwb';
+  p_pet = '0.99';
+  p_pet_unrounded = '0.988';
+  annual_pet_mm = '504';
   const rawLines = `
-    1.0: 20 3 0.7
-    2.0: 27 9 0.6
-    3.0: 39 21 1.3
-    4.0: 56 34 1.5
-    5.0: 68 47 3.0
-    6.0: 77 57 4.1
-    7.0: 82 63 3.3
-    8.0: 80 61 2.9
-    9.0: 70 52 2.7
-    10.0: 56 39 2.4
-    11.0: 38 24 1.0
-    12.0: 23 9 0.8
-    1.0: -7 -16 18
-    2.0: -3 -13 16
-    3.0: 4 -6 32
-    4.0: 13 1 39
-    5.0: 20 9 77
-    6.0: 25 14 104
-    7.0: 28 17 85
-    8.0: 27 16 73
-    9.0: 21 11 69
-    10.0: 13 4 60
-    11.0: 3 -4 25
-    12.0: -5 -13 22
+    1.0: 3 -8 1.0
+    2.0: 11 -3 0.8
+    3.0: 24 5 0.5
+    4.0: 43 23 0.6
+    5.0: 60 40 1.2
+    6.0: 71 53 2.7
+    7.0: 72 56 4.0
+    8.0: 66 50 3.4
+    9.0: 54 39 2.0
+    10.0: 33 21 1.3
+    11.0: 12 2 1.1
+    12.0: 6 -5 1.0
+    1.0: -16 -22 24
+    2.0: -11 -19 20
+    3.0: -4 -15 12
+    4.0: 6 -5 14
+    5.0: 15 4 30
+    6.0: 21 12 70
+    7.0: 22 14 102
+    8.0: 19 10 86
+    9.0: 12 4 51
+    10.0: 1 -6 34
+    11.0: -11 -17 29
+    12.0: -14 -20 26
   `;
-
 
 
   
@@ -488,54 +489,54 @@
     // --------------------------------
     // E/F winter diagonals
     // --------------------------------
-    if (has('Eb2') && has('Fhb2')) return 'Ehb2';
-    if (has('Eb2') && has('Fgb2')) return 'Egb2';
-    if (has('Eb2') && has('Fsb2')) return 'Esb2';
-    if (has('Eb2') && has('Fdb2')) return 'Edb2';
-    if (has('Eb2') && has('Fmb2')) return 'Emb2';
-    if (has('Eb2') && has('Fwb2')) return 'Ewb2';
+    if (has('Eb2') && has('Fhb2')) return 'Fb2';
+    if (has('Eb2') && has('Fgb2')) return 'Fb2';
+    if (has('Eb2') && has('Fsb2')) return 'Fb2';
+    if (has('Eb2') && has('Fdb2')) return 'Fb2';
+    if (has('Eb2') && has('Fmb2')) return 'Fb2';
+    if (has('Eb2') && has('Fwb2')) return 'Fb2';
 
-    if (has('Ea1') && has('Fha1')) return 'Eha1';
-    if (has('Ea1') && has('Fga1')) return 'Ega1';
-    if (has('Ea1') && has('Fsa1')) return 'Esa1';
-    if (has('Ea1') && has('Fda1')) return 'Eda1';
-    if (has('Ea1') && has('Fma1')) return 'Ema1';
-    if (has('Ea1') && has('Fwa1')) return 'Ewa1';
+    if (has('Ea1') && has('Fha1')) return 'Fa1';
+    if (has('Ea1') && has('Fga1')) return 'Fa1';
+    if (has('Ea1') && has('Fsa1')) return 'Fa1';
+    if (has('Ea1') && has('Fda1')) return 'Fa1';
+    if (has('Ea1') && has('Fma1')) return 'Fa1';
+    if (has('Ea1') && has('Fwa1')) return 'Fa1';
 
-    if (has('Ea2') && has('Fha2')) return 'Eha2';
-    if (has('Ea2') && has('Fga2')) return 'Ega2';
-    if (has('Ea2') && has('Fsa2')) return 'Esa2';
-    if (has('Ea2') && has('Fda2')) return 'Eda2';
-    if (has('Ea2') && has('Fma2')) return 'Ema2';
-    if (has('Ea2') && has('Fwa2')) return 'Ewa2';
+    if (has('Ea2') && has('Fha2')) return 'Fa2';
+    if (has('Ea2') && has('Fga2')) return 'Fa2';
+    if (has('Ea2') && has('Fsa2')) return 'Fa2';
+    if (has('Ea2') && has('Fda2')) return 'Fa2';
+    if (has('Ea2') && has('Fma2')) return 'Fa2';
+    if (has('Ea2') && has('Fwa2')) return 'Fa2';
 
-    if (has('Ez1') && has('Fhz1')) return 'Ehz1';
-    if (has('Ez1') && has('Fgz1')) return 'Egz1';
-    if (has('Ez1') && has('Fsz1')) return 'Esz1';
-    if (has('Ez1') && has('Fdz1')) return 'Edz1';
-    if (has('Ez1') && has('Fmz1')) return 'Emz1';
-    if (has('Ez1') && has('Fwz1')) return 'Ewz1';
+    if (has('Ez1') && has('Fhz1')) return 'Fz1';
+    if (has('Ez1') && has('Fgz1')) return 'Fz1';
+    if (has('Ez1') && has('Fsz1')) return 'Fz1';
+    if (has('Ez1') && has('Fdz1')) return 'Fz1';
+    if (has('Ez1') && has('Fmz1')) return 'Fz1';
+    if (has('Ez1') && has('Fwz1')) return 'Fz1';
 
-    if (has('Ez2') && has('Fhz2')) return 'Ehz2';
-    if (has('Ez2') && has('Fgz2')) return 'Egz2';
-    if (has('Ez2') && has('Fsz2')) return 'Esz2';
-    if (has('Ez2') && has('Fdz2')) return 'Edz2';
-    if (has('Ez2') && has('Fmz2')) return 'Emz2';
-    if (has('Ez2') && has('Fwz2')) return 'Ewz2';
+    if (has('Ez2') && has('Fhz2')) return 'Fz2';
+    if (has('Ez2') && has('Fgz2')) return 'Fz2';
+    if (has('Ez2') && has('Fsz2')) return 'Fz2';
+    if (has('Ez2') && has('Fdz2')) return 'Fz2';
+    if (has('Ez2') && has('Fmz2')) return 'Fz2';
+    if (has('Ez2') && has('Fwz2')) return 'Fz2';
 
-    if (has('EX') && has('FhX')) return 'EhX';
-    if (has('EX') && has('FgX')) return 'EgX';
-    if (has('EX') && has('FsX')) return 'EsX';
-    if (has('EX') && has('FdX')) return 'EdX';
-    if (has('EX') && has('FmX')) return 'EmX';
-    if (has('EX') && has('FwX')) return 'EwX';
+    if (has('EX') && has('FhX')) return 'FhX';
+    if (has('EX') && has('FgX')) return 'FgX';
+    if (has('EX') && has('FsX')) return 'FsX';
+    if (has('EX') && has('FdX')) return 'FdX';
+    if (has('EX') && has('FmX')) return 'FmX';
+    if (has('EX') && has('FwX')) return 'FwX';
 
-    if (has('EH') && has('FhH')) return 'EhH';
-    if (has('EH') && has('FgH')) return 'EgH';
-    if (has('EH') && has('FsH')) return 'EsH';
-    if (has('EH') && has('FdH')) return 'EdH';
-    if (has('EH') && has('FmH')) return 'EmH';
-    if (has('EH') && has('FwH')) return 'EwH';
+    if (has('EH') && has('FhH')) return 'FhH';
+    if (has('EH') && has('FgH')) return 'FgH';
+    if (has('EH') && has('FsH')) return 'FsH';
+    if (has('EH') && has('FdH')) return 'FdH';
+    if (has('EH') && has('FmH')) return 'FmH';
+    if (has('EH') && has('FwH')) return 'FwH';
 
     return str;
   }
