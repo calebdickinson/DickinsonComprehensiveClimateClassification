@@ -7,12 +7,9 @@ https://www.dickinsonclimate.com/
 
 The Dickinson climate classification is a new climate classification system inspired by the Köppen system, developed and maintained by Caleb Dickinson.
 
-Unlike the Köppen system, the Dickinson system contains hundreds of possible climates, many of which are hypothetical. 
-This allows the Dickinson system to accurately describe hypothetical climates that may occur in the future due to climate change, but do not currently exist on Earth. 
-This will be useful in the future as humans continue to warm the Earth with fossil fuels.</p>
-
-Being more generally more granular than the Köppen system, the Dickinson system better illustrates the differences between each of the new extreme climates we will see in the future, as well as the climates we see today.
-Edge cases illustrate some interesting climate factors not measured in the Köppen system.</p>
+This system is particularly suited for identifying emergent cli-
+mates with no modern analogues and situating Earth’s climates within a broader, formally
+defined climate state space.
 
 The Dickinson system encodes each climate in 3 (or 2) parts, depending on whether an aridity value is included.
 Aridity is not relevant to extremely hot and cold climates. 
