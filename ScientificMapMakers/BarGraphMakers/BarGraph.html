@@ -107,47 +107,46 @@
 
 <script>
   var locationName =
-  'Fairbanks, Alaska, United States';
+  'Nuuk, Greenland';
   
   // ============================
   // EARTH ENGINE OUTPUT
   // ============================
   
-  var period = '1981-2010';
-  var dickinson= 'Ehb2';
-  var dickinson_bordering = 'Fhb2 Eb2';
+  var period = '2071-2100';
+  var dickinson= 'Dhb2';
+  var dickinson_bordering = 'Dhb1 Db2';
   var koppen = 'Dfb';
-  var koppen_bordering = 'Dsb Dwb';
-  p_pet = '0.99';
-  p_pet_unrounded = '0.988';
-  annual_pet_mm = '504';
+  var koppen_bordering = 'none';
+  p_pet = '1.80';
+  p_pet_unrounded = '1.796';
+  annual_pet_mm = '698';
   const rawLines = `
-    1.0: 3 -8 1.0
-    2.0: 11 -3 0.8
-    3.0: 24 5 0.5
-    4.0: 43 23 0.6
-    5.0: 60 40 1.2
-    6.0: 71 53 2.7
-    7.0: 72 56 4.0
-    8.0: 66 50 3.4
-    9.0: 54 39 2.0
-    10.0: 33 21 1.3
-    11.0: 12 2 1.1
-    12.0: 6 -5 1.0
-    1.0: -16 -22 24
-    2.0: -11 -19 20
-    3.0: -4 -15 12
-    4.0: 6 -5 14
-    5.0: 15 4 30
-    6.0: 21 12 70
-    7.0: 22 14 102
-    8.0: 19 10 86
-    9.0: 12 4 51
-    10.0: 1 -6 34
-    11.0: -11 -17 29
-    12.0: -14 -20 26
+    1.0: 26 19 2.4
+    2.0: 29 21 3.2
+    3.0: 32 25 2.9
+    4.0: 39 34 2.4
+    5.0: 48 40 3.9
+    6.0: 62 51 4.6
+    7.0: 65 55 5.9
+    8.0: 63 54 7.6
+    9.0: 57 49 5.8
+    10.0: 46 40 3.7
+    11.0: 35 28 3.5
+    12.0: 30 22 3.4
+    1.0: -3 -7 62
+    2.0: -2 -6 81
+    3.0: 0 -4 72
+    4.0: 4 1 60
+    5.0: 9 4 100
+    6.0: 17 10 117
+    7.0: 19 13 151
+    8.0: 17 12 194
+    9.0: 14 9 147
+    10.0: 8 5 95
+    11.0: 2 -2 89
+    12.0: -1 -5 85
   `;
-
 
   
   const months = ['J','F','M','A','M','J','J','A','S','O','N','D'];
@@ -456,87 +455,90 @@
     const has = c => parts.includes(c);
 
     // --------------------------------
-    // b1/b2 diagonals
+    // b1/b2 summer diagonals
+    // Fixes diagonal bordering climate issue.
+    // Attempts to fix this in the google earth engine javascript created multitudes of weird bugs.
+    // This may not be a pretty solution, but it works.
     // --------------------------------
-    if (has('Bb2') && has('Bhb1')) return 'Bhb2';
-    if (has('Bb2') && has('Bgb1')) return 'Bgb2';
-    if (has('Bb2') && has('Bsb1')) return 'Bsb2';
-    if (has('Bb2') && has('Bdb1')) return 'Bdb2';
-    if (has('Bb2') && has('Bmb1')) return 'Bmb2';
-    if (has('Bb2') && has('Bwb1')) return 'Bwb2';
+    if (has('Bb2') && has('Bhb1')) {if (dickinson === 'Bhb2') return 'Bb1'; if (dickinson === 'Bb1') return 'Bhb2';}
+    if (has('Bb2') && has('Bgb1')) {if (dickinson === 'Bgb2') return 'Bb1'; if (dickinson === 'Bb1') return 'Bgb2';}
+    if (has('Bb2') && has('Bsb1')) {if (dickinson === 'Bsb2') return 'Bb1'; if (dickinson === 'Bb1') return 'Bsb2';}
+    if (has('Bb2') && has('Bdb1')) {if (dickinson === 'Bdb2') return 'Bb1'; if (dickinson === 'Bb1') return 'Bdb2';}
+    if (has('Bb2') && has('Bmb1')) {if (dickinson === 'Bmb2') return 'Bb1'; if (dickinson === 'Bb1') return 'Bmb2';}
+    if (has('Bb2') && has('Bwb1')) {if (dickinson === 'Bwb2') return 'Bb1'; if (dickinson === 'Bb1') return 'Bwb2';}
 
-    if (has('Cb2') && has('Chb1')) return 'Chb2';
-    if (has('Cb2') && has('Cgb1')) return 'Cgb2';
-    if (has('Cb2') && has('Csb1')) return 'Csb2';
-    if (has('Cb2') && has('Cdb1')) return 'Cdb2';
-    if (has('Cb2') && has('Cmb1')) return 'Cmb2';
-    if (has('Cb2') && has('Cwb1')) return 'Cwb2';
+    if (has('Cb2') && has('Chb1')) {if (dickinson === 'Chb2') return 'Cb1'; if (dickinson === 'Cb1') return 'Chb2';}
+    if (has('Cb2') && has('Cgb1')) {if (dickinson === 'Cgb2') return 'Cb1'; if (dickinson === 'Cb1') return 'Cgb2';}
+    if (has('Cb2') && has('Csb1')) {if (dickinson === 'Csb2') return 'Cb1'; if (dickinson === 'Cb1') return 'Csb2';}
+    if (has('Cb2') && has('Cdb1')) {if (dickinson === 'Cdb2') return 'Cb1'; if (dickinson === 'Cb1') return 'Cdb2';}
+    if (has('Cb2') && has('Cmb1')) {if (dickinson === 'Cmb2') return 'Cb1'; if (dickinson === 'Cb1') return 'Cmb2';}
+    if (has('Cb2') && has('Cwb1')) {if (dickinson === 'Cwb2') return 'Cb1'; if (dickinson === 'Cb1') return 'Cwb2';}
+  
+    if (has('Db2') && has('Dhb1')) {if (dickinson === 'Dhb2') return 'Db1'; if (dickinson === 'Db1') return 'Dhb2';}
+    if (has('Db2') && has('Dgb1')) {if (dickinson === 'Dgb2') return 'Db1'; if (dickinson === 'Db1') return 'Dgb2';}
+    if (has('Db2') && has('Dsb1')) {if (dickinson === 'Dsb2') return 'Db1'; if (dickinson === 'Db1') return 'Dsb2';}
+    if (has('Db2') && has('Ddb1')) {if (dickinson === 'Ddb2') return 'Db1'; if (dickinson === 'Db1') return 'Ddb2';}
+    if (has('Db2') && has('Dmb1')) {if (dickinson === 'Dmb2') return 'Db1'; if (dickinson === 'Db1') return 'Dmb2';}
+    if (has('Db2') && has('Dwb1')) {if (dickinson === 'Dwb2') return 'Db1'; if (dickinson === 'Db1')  return 'Dwb2';}
     
-    if (has('Db2') && has('Dhb1')) return 'Dhb2';
-    if (has('Db2') && has('Dgb1')) return 'Dgb2';
-    if (has('Db2') && has('Dsb1')) return 'Dsb2';
-    if (has('Db2') && has('Ddb1')) return 'Ddb2';
-    if (has('Db2') && has('Dmb1')) return 'Dmb2';
-    if (has('Db2') && has('Dwb1')) return 'Dwb2';
-    
-    if (has('Eb2') && has('Ehb1')) return 'Ehb2';
-    if (has('Eb2') && has('Egb1')) return 'Egb2';
-    if (has('Eb2') && has('Esb1')) return 'Esb2';
-    if (has('Eb2') && has('Edb1')) return 'Edb2';
-    if (has('Eb2') && has('Emb1')) return 'Emb2';
-    if (has('Eb2') && has('Ewb1')) return 'Ewb2';
+    if (has('Eb2') && has('Ehb1')) {if (dickinson === 'Ehb2') return 'Eb1'; if (dickinson === 'Eb1') return 'Ehb2';}
+    if (has('Eb2') && has('Egb1')) {if (dickinson === 'Egb2') return 'Eb1'; if (dickinson === 'Eb1') return 'Egb2';}
+    if (has('Eb2') && has('Esb1')) {if (dickinson === 'Esb2') return 'Eb1'; if (dickinson === 'Eb1') return 'Esb2';}
+    if (has('Eb2') && has('Edb1')) {if (dickinson === 'Edb2') return 'Eb1'; if (dickinson === 'Eb1') return 'Edb2';}
+    if (has('Eb2') && has('Emb1')) {if (dickinson === 'Emb2') return 'Eb1'; if (dickinson === 'Eb1') return 'Emb2';}
+    if (has('Eb2') && has('Ewb1')) {if (dickinson === 'Ewb2') return 'Eb1'; if (dickinson === 'Eb1') return 'Ewb2';}
 
     // --------------------------------
     // E/F winter diagonals
     // --------------------------------
-    if (has('Eb2') && has('Fhb2')) return 'Fb2';
-    if (has('Eb2') && has('Fgb2')) return 'Fb2';
-    if (has('Eb2') && has('Fsb2')) return 'Fb2';
-    if (has('Eb2') && has('Fdb2')) return 'Fb2';
-    if (has('Eb2') && has('Fmb2')) return 'Fb2';
-    if (has('Eb2') && has('Fwb2')) return 'Fb2';
+    if (has('Eb2') && has('Fhb2')) {if (dickinson === 'Ehb2') return 'Fb2'; if (dickinson === 'Fb2') return 'Ehb2';}
+    if (has('Eb2') && has('Fgb2')) {if (dickinson === 'Egb2') return 'Fb2'; if (dickinson === 'Fb2') return 'Egb2';}
+    if (has('Eb2') && has('Fsb2')) {if (dickinson === 'Fsb2') return 'Eb2'; if (dickinson === 'Eb2') return 'Fsb2';}
+    if (has('Eb2') && has('Fdb2')) {if (dickinson === 'Fdb2') return 'Eb2'; if (dickinson === 'Eb2') return 'Fdb2';}
+    if (has('Eb2') && has('Fmb2')) {if (dickinson === 'Fmb2') return 'Eb2'; if (dickinson === 'Eb2') return 'Fmb2';}
+    if (has('Eb2') && has('Fwb2')) {if (dickinson === 'Fwb2') return 'Eb2'; if (dickinson === 'Eb2') return 'Fwb2';}
 
-    if (has('Ea1') && has('Fha1')) return 'Fa1';
-    if (has('Ea1') && has('Fga1')) return 'Fa1';
-    if (has('Ea1') && has('Fsa1')) return 'Fa1';
-    if (has('Ea1') && has('Fda1')) return 'Fa1';
-    if (has('Ea1') && has('Fma1')) return 'Fa1';
-    if (has('Ea1') && has('Fwa1')) return 'Fa1';
+    if (has('Ea1') && has('Fha1')) {if (dickinson === 'Eha1') return 'Fa1'; if (dickinson === 'Fa1') return 'Eha1';}
+    if (has('Ea1') && has('Fga1')) {if (dickinson === 'Ega1') return 'Fa1'; if (dickinson === 'Fa1') return 'Ega1';}
+    if (has('Ea1') && has('Fsa1')) {if (dickinson === 'Esa1') return 'Fa1'; if (dickinson === 'Fa1') return 'Esa1';}
+    if (has('Ea1') && has('Fda1')) {if (dickinson === 'Eda1') return 'Fa1'; if (dickinson === 'Fa1') return 'Eda1';}
+    if (has('Ea1') && has('Fma1')) {if (dickinson === 'Ema1') return 'Fa1'; if (dickinson === 'Fa1') return 'Ema1';}
+    if (has('Ea1') && has('Fwa1')) {if (dickinson === 'Ewa1') return 'Fa1'; if (dickinson === 'Fa1') return 'Ewa1';}
 
-    if (has('Ea2') && has('Fha2')) return 'Fa2';
-    if (has('Ea2') && has('Fga2')) return 'Fa2';
-    if (has('Ea2') && has('Fsa2')) return 'Fa2';
-    if (has('Ea2') && has('Fda2')) return 'Fa2';
-    if (has('Ea2') && has('Fma2')) return 'Fa2';
-    if (has('Ea2') && has('Fwa2')) return 'Fa2';
+    if (has('Ea2') && has('Fha2')) {if (dickinson === 'Eha2') return 'Fa2'; if (dickinson === 'Fa2') return 'Eha2';}
+    if (has('Ea2') && has('Fga2')) {if (dickinson === 'Ega2') return 'Fa2'; if (dickinson === 'Fa2') return 'Ega2';}
+    if (has('Ea2') && has('Fsa2')) {if (dickinson === 'Esa2') return 'Fa2'; if (dickinson === 'Fa2') return 'Esa2';}
+    if (has('Ea2') && has('Fda2')) {if (dickinson === 'Eda2') return 'Fa2'; if (dickinson === 'Fa2') return 'Eda2';}
+    if (has('Ea2') && has('Fma2')) {if (dickinson === 'Ema2') return 'Fa2'; if (dickinson === 'Fa2') return 'Ema2';}
+    if (has('Ea2') && has('Fwa2')) {if (dickinson === 'Ewa2') return 'Fa2'; if (dickinson === 'Fa2') return 'Ewa2';}
 
-    if (has('Ez1') && has('Fhz1')) return 'Fz1';
-    if (has('Ez1') && has('Fgz1')) return 'Fz1';
-    if (has('Ez1') && has('Fsz1')) return 'Fz1';
-    if (has('Ez1') && has('Fdz1')) return 'Fz1';
-    if (has('Ez1') && has('Fmz1')) return 'Fz1';
-    if (has('Ez1') && has('Fwz1')) return 'Fz1';
+    if (has('Ez1') && has('Fhz1')) {if (dickinson === 'Ehz1') return 'Fz1'; if (dickinson === 'Fz1') return 'Ehz1';}
+    if (has('Ez1') && has('Fgz1')) {if (dickinson === 'Egz1') return 'Fz1'; if (dickinson === 'Fz1') return 'Egz1';}
+    if (has('Ez1') && has('Fsz1')) {if (dickinson === 'Esz1') return 'Fz1'; if (dickinson === 'Fz1') return 'Esz1';}
+    if (has('Ez1') && has('Fdz1')) {if (dickinson === 'Edz1') return 'Fz1'; if (dickinson === 'Fz1') return 'Edz1';}
+    if (has('Ez1') && has('Fmz1')) {if (dickinson === 'Emz1') return 'Fz1'; if (dickinson === 'Fz1') return 'Emz1';}
+    if (has('Ez1') && has('Fwz1')) {if (dickinson === 'Ewz1') return 'Fz1'; if (dickinson === 'Fz1') return 'Ewz1';}
 
-    if (has('Ez2') && has('Fhz2')) return 'Fz2';
-    if (has('Ez2') && has('Fgz2')) return 'Fz2';
-    if (has('Ez2') && has('Fsz2')) return 'Fz2';
-    if (has('Ez2') && has('Fdz2')) return 'Fz2';
-    if (has('Ez2') && has('Fmz2')) return 'Fz2';
-    if (has('Ez2') && has('Fwz2')) return 'Fz2';
+    if (has('Ez2') && has('Fhz2')) {if (dickinson === 'Ehz2') return 'Fz2'; if (dickinson === 'Fz2') return 'Ehz2';}
+    if (has('Ez2') && has('Fgz2')) {if (dickinson === 'Egz2') return 'Fz2'; if (dickinson === 'Fz2') return 'Egz2';}
+    if (has('Ez2') && has('Fsz2')) {if (dickinson === 'Esz2') return 'Fz2'; if (dickinson === 'Fz2') return 'Esz2';}
+    if (has('Ez2') && has('Fdz2')) {if (dickinson === 'Edz2') return 'Fz2'; if (dickinson === 'Fz2') return 'Edz2';}
+    if (has('Ez2') && has('Fmz2')) {if (dickinson === 'Emz2') return 'Fz2'; if (dickinson === 'Fz2') return 'Emz2';}
+    if (has('Ez2') && has('Fwz2')) {if (dickinson === 'Ewz2') return 'Fz2'; if (dickinson === 'Fz2') return 'Ewz2';}
 
-    if (has('EX') && has('FhX')) return 'FhX';
-    if (has('EX') && has('FgX')) return 'FgX';
-    if (has('EX') && has('FsX')) return 'FsX';
-    if (has('EX') && has('FdX')) return 'FdX';
-    if (has('EX') && has('FmX')) return 'FmX';
-    if (has('EX') && has('FwX')) return 'FwX';
+    if (has('EX') && has('FhX')) {if (dickinson === 'Ehb2') return 'FhX'; if (dickinson === 'FhX') return 'Ehb2';}
+    if (has('EX') && has('FgX')) {if (dickinson === 'Egb2') return 'FgX'; if (dickinson === 'FgX') return 'Egb2';}
+    if (has('EX') && has('FsX')) {if (dickinson === 'Esb2') return 'FsX'; if (dickinson === 'FsX') return 'Esb2';}
+    if (has('EX') && has('FdX')) {if (dickinson === 'Edb2') return 'FdX'; if (dickinson === 'FdX') return 'Edb2';}
+    if (has('EX') && has('FmX')) {if (dickinson === 'Emb2') return 'FmX'; if (dickinson === 'FmX') return 'Emb2';}
+    if (has('EX') && has('FwX')) {if (dickinson === 'Ewb2') return 'FwX'; if (dickinson === 'FwX') return 'Ewb2';}
 
-    if (has('EH') && has('FhH')) return 'FhH';
-    if (has('EH') && has('FgH')) return 'FgH';
-    if (has('EH') && has('FsH')) return 'FsH';
-    if (has('EH') && has('FdH')) return 'FdH';
-    if (has('EH') && has('FmH')) return 'FmH';
-    if (has('EH') && has('FwH')) return 'FwH';
+    if (has('EH') && has('FhH')) {if (dickinson === 'Ehb2') return 'FhH'; if (dickinson === 'FhH') return 'Ehb2';}
+    if (has('EH') && has('FgH')) {if (dickinson === 'Egb2') return 'FgH'; if (dickinson === 'FgH') return 'Egb2';}
+    if (has('EH') && has('FsH')) {if (dickinson === 'Esb2') return 'FsH'; if (dickinson === 'FsH') return 'Esb2';}
+    if (has('EH') && has('FdH')) {if (dickinson === 'Edb2') return 'FdH'; if (dickinson === 'FdH') return 'Edb2';}
+    if (has('EH') && has('FmH')) {if (dickinson === 'Emb2') return 'FmH'; if (dickinson === 'FmH') return 'Emb2';}
+    if (has('EH') && has('FwH')) {if (dickinson === 'Ewb2') return 'FwH'; if (dickinson === 'FwH') return 'Ewb2';}
 
     return str;
   }
