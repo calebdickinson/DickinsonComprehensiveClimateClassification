@@ -426,7 +426,6 @@ bordering = bordering.cat(
   ))
 );
 
-
 // ---- Near monsoon boundary ----
 var nearMonsoon = minPr.subtract(monsoonLimit).abs().lt(EPS_TROP);
 
@@ -477,7 +476,8 @@ bordering = bordering.cat(
 // s ↔ f
 // ------------------------------------
 
-var near_s = minSummer.subtract(maxWinter.divide(3)).abs().lt(EPS_PR);
+var near_s = minSummer.subtract(maxWinter.divide(3)).abs().lt(EPS_PR)
+  .and(minSummer.lt(40 + EPS_PR));
 
 bordering = bordering.cat(
   ee.List(ee.Algorithms.If(
