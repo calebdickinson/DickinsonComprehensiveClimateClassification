@@ -540,6 +540,11 @@
     if (has('EH') && has('FmH')) {if (dickinson === 'Emb2') return 'FmH'; if (dickinson === 'FmH') return 'Emb2';}
     if (has('EH') && has('FwH')) {if (dickinson === 'Ewb2') return 'FwH'; if (dickinson === 'FwH') return 'Ewb2';}
 
+    // --------------------------------
+    // Weird edge case fix (I will keep adding these until I see the pattern)
+    // --------------------------------
+    if (has('EY') && has('FhY')) {if (dickinson === 'FY') return 'EY';}
+
     return str;
   }
 
