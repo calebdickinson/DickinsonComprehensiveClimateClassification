@@ -813,7 +813,7 @@ var baseNotDesert = baseLetter.compareTo('d').neq(0);
 // ---- Mediterranean ----
 var isMed = (
   isNorth.and(HS.lt(0.4))
-    .or(isSouth.and(HS.gt(0.6)))
+    .or(isSouth.and(HS.lt(0.4)))
 ).and(baseNotDesert);
 
 // ---- Monsoon ----
