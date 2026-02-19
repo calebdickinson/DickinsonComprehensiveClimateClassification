@@ -450,6 +450,41 @@ bordering = bordering.cat(
 );
 
 // ------------------------------------
+// A ↔ C boundary (18 °C)
+// ------------------------------------
+
+var nearAC = coldestMonth.subtract(18).abs().lt(EPS_TEMP);
+
+var firstLetter = ee.String(koppen.slice(0,1));
+
+var borderingAC = ee.String(
+  ee.Algorithms.If(
+    firstLetter.compareTo('A').eq(0),
+    // A → build proper C code
+    ee.String('C').cat(cdSecond).cat(cThird),
+    ee.Algorithms.If(
+      firstLetter.compareTo('C').eq(0),
+      // C → use tropical decision tree result
+      tropicalCode,
+      ''
+    )
+  )
+);
+
+bordering = bordering.cat(
+  ee.List(
+    ee.Algorithms.If(
+      nearAC.and(
+        firstLetter.compareTo('A').eq(0)
+        .or(firstLetter.compareTo('C').eq(0))
+      ),
+      [borderingAC],
+      []
+    )
+  )
+);
+
+// ------------------------------------
 // C ↔ D boundary
 // ------------------------------------
 
