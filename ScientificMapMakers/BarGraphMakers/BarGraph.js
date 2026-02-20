@@ -10,38 +10,12 @@ var PERIODS = [
   '2071-2100'
 ];
 
-// Change city name and lat and lon for each location
-
-var CITY_NAME = 'Mexico City, Mexico';
-var LAT = 19.4326;
-var LON = -99.1332;
-
-var pt  = ee.Geometry.Point([LON, LAT]);
-
-// ====================================
-// Elevation at point (GLOBAL — same for all periods)
-// ====================================
-var elevImg = ee.Image('USGS/SRTMGL1_003').rename('elev');
-
-var rawElevation = elevImg.reduceRegion({
-  reducer: ee.Reducer.first(),
-  geometry: pt,
-  scale: 1000,
-  maxPixels: 1e9
-}).get('elev');
-
-// null protection
-rawElevation = ee.Algorithms.If(rawElevation, rawElevation, -5000);
-rawElevation = ee.Number(rawElevation);
-
-// sanity range
-var elevation = ee.Number(
-  ee.Algorithms.If(
-    rawElevation.gte(-500).and(rawElevation.lte(9000)),
-    rawElevation,
-    -9999
-  )
-);
+var CITIES = [
+  {name: 'Luanda, Angola', lat: -8.8390, lon: 13.2894},
+  {name: 'Casey Station, Antarctica', lat: -66.2818, lon: 110.5286},
+  {name: 'Concordia Station, Antarctica', lat: -75.0990, lon: 123.3320},
+  {name: 'Yellowknife, Canada', lat: 62.4540, lon: -114.3718}
+];
 
 // Month numbers 1–12
 var months = ee.List.sequence(1, 12);
@@ -132,7 +106,7 @@ function getPeriodConfig(period) {
 // ====================================
 // MAIN RUNNER
 // ====================================
-function runForPeriod(NORMAL_PERIOD) {
+function runForPeriod(NORMAL_PERIOD, pt, LAT, elevation) {
 
   var CFG = getPeriodConfig(NORMAL_PERIOD);
 
@@ -188,7 +162,7 @@ function runForPeriod(NORMAL_PERIOD) {
   // ---- Annual precipitation (mm/year) from THIS period ----
   var precipMM_raw = months.map(function(m) {
     var img = prMonthly.filter(ee.Filter.eq('month', m)).first();
-    return atPoint(img, 'pr'); // UNROUNDED mm/month
+    return atPoint(img, 'pr', pt); // UNROUNDED mm/month
   });
   
   var annualPr = ee.Number(precipMM_raw.reduce(ee.Reducer.sum()));
@@ -209,14 +183,14 @@ function runForPeriod(NORMAL_PERIOD) {
     .multiply(SCALE_PET)
     .rename('pet_mm_month');
   
-  // Sample PET at point — SAFE
-  var rawPet = petMeanMmImg.reduceRegion({
+  // Sample PET at point
+    var rawPet = petMeanMmImg.reduceRegion({
     reducer: ee.Reducer.first(),
     geometry: pt,
     scale: 1000,
     maxPixels: 1e9
   }).get('pet_mm_month');
-  
+    
   // kill null immediately
   var petMeanAtPoint = ee.Number(
     ee.Algorithms.If(rawPet, rawPet, 0)
@@ -229,7 +203,7 @@ function runForPeriod(NORMAL_PERIOD) {
   var aiAtPoint = annualPr.divide(petAnnAtPoint);
 
   // ====== Helpers ======
-  function atPoint(img, band) {
+  function atPoint(img, band, pt) {
     var proj = img.projection();
     var dict = img.reduceRegion({
       reducer: ee.Reducer.first(),
@@ -255,32 +229,32 @@ function runForPeriod(NORMAL_PERIOD) {
 
   var tmaxF = months.map(function(m) {
     var img = tasmaxMonthly.filter(ee.Filter.eq('month', m)).first();
-    return cToF_rounded(atPoint(img, 'tmaxC'));
+    return cToF_rounded(atPoint(img, 'tmaxC', pt));
   });
 
   var tminF = months.map(function(m) {
     var img = tasminMonthly.filter(ee.Filter.eq('month', m)).first();
-    return cToF_rounded(atPoint(img, 'tminC'));
+    return cToF_rounded(atPoint(img, 'tminC', pt));
   });
 
   var precipIn = months.map(function(m) {
     var img = prMonthly.filter(ee.Filter.eq('month', m)).first();
-    return mmToIn_rounded(atPoint(img, 'pr'));
+    return mmToIn_rounded(atPoint(img, 'pr', pt));
   });
 
   var tmaxC = months.map(function(m) {
     var img = tasmaxMonthly.filter(ee.Filter.eq('month', m)).first();
-    return atPoint(img, 'tmaxC').round();
+    return atPoint(img, 'tmaxC', pt).round();
   });
 
   var tminC = months.map(function(m) {
     var img = tasminMonthly.filter(ee.Filter.eq('month', m)).first();
-    return atPoint(img, 'tminC').round();
+    return atPoint(img, 'tminC', pt).round();
   });
 
   var precipMM = months.map(function(m) {
     var img = prMonthly.filter(ee.Filter.eq('month', m)).first();
-    return atPoint(img, 'pr').round();
+    return atPoint(img, 'pr', pt).round();
   });
 
   // ====================================
@@ -333,7 +307,7 @@ function runForPeriod(NORMAL_PERIOD) {
       .subtract(273.15)
       .rename('tmeanC');
   
-    tasC_raw.push(atPoint(tasC, 'tmeanC'));
+    tasC_raw.push(atPoint(tasC, 'tmeanC', pt));
   }
   
   // Convert to ee.List
@@ -342,7 +316,7 @@ function runForPeriod(NORMAL_PERIOD) {
   // Monthly precipitation
   var precipMM_raw = months.map(function(m) {
     var img = prMonthly.filter(ee.Filter.eq('month', m)).first();
-    return atPoint(img, 'pr');
+    return atPoint(img, 'pr', pt);
   });
   
   // -------- Temperature metrics --------
@@ -1217,46 +1191,79 @@ function runForPeriod(NORMAL_PERIOD) {
 // RUN ALL PERIODS → SINGLE JSON OUTPUT
 // ====================================
 
-// --- build coordinate key ---
-var coordKey =
-  ee.Number(LAT).format('%.4f')
-    .cat(', ')
-    .cat(ee.Number(LON).format('%.4f'));
+CITIES.forEach(function(city) {
 
-// --- build periods dictionary ---
-var periodsDict = ee.Dictionary(
-  PERIODS.reduce(function(acc, p) {
-    acc = ee.Dictionary(acc);
-    return acc.set(p, runForPeriod(p));
-  }, ee.Dictionary({}))
-);
-
-// --- city object ---
-var cityDict = ee.Dictionary({
-  city: CITY_NAME,
-  periods: periodsDict
-});
-
-// --- final JSON ---
-var finalJson = ee.Dictionary()
-  .set(coordKey, cityDict);
-
-finalJson.evaluate(function(result) {
-  var key = Object.keys(result)[0];
-
-  // build formatted body
-  var body = JSON.stringify(result[key], null, 2)
-    .split('\n')
-    .slice(1, -1) // remove outer braces
-    .map(function(line) {
-      return '  ' + line;
-    })
-    .join('\n');
-
-  // single clean print
-  print(
-    '  "' + key + '": {\n' +
-    body + '\n' +
-    '  },'
+  var CITY_NAME = city.name;
+  var LAT = city.lat;
+  var LON = city.lon;
+  var pt  = ee.Geometry.Point([LON, LAT]);
+  
+  // ====================================
+  // Elevation at point (GLOBAL — same for all periods)
+  // ====================================
+  var elevImg = ee.Image('USGS/SRTMGL1_003').rename('elev');
+  
+  var rawElevation = elevImg.reduceRegion({
+    reducer: ee.Reducer.first(),
+    geometry: pt,
+    scale: 1000,
+    maxPixels: 1e9
+  }).get('elev');
+  
+  // null protection
+  rawElevation = ee.Algorithms.If(rawElevation, rawElevation, -5000);
+  rawElevation = ee.Number(rawElevation);
+  
+  // sanity range
+  var elevation = ee.Number(
+    ee.Algorithms.If(
+      rawElevation.gte(-500).and(rawElevation.lte(9000)),
+      rawElevation,
+      -9999
+    )
   );
+
+  // --- build coordinate key ---
+  var coordKey =
+    ee.Number(LAT).format('%.4f')
+      .cat(', ')
+      .cat(ee.Number(LON).format('%.4f'));
+  
+  // --- build periods dictionary ---
+  var periodsDict = ee.Dictionary(
+    PERIODS.reduce(function(acc, p) {
+      acc = ee.Dictionary(acc);
+      return acc.set(p, runForPeriod(p, pt, LAT, elevation));
+    }, ee.Dictionary({}))
+  );
+  
+  // --- city object ---
+  var cityDict = ee.Dictionary({
+    city: CITY_NAME,
+    periods: periodsDict
+  });
+  
+  // --- final JSON ---
+  var finalJson = ee.Dictionary()
+    .set(coordKey, cityDict);
+  
+  finalJson.evaluate(function(result) {
+    var key = Object.keys(result)[0];
+  
+    // build formatted body
+    var body = JSON.stringify(result[key], null, 2)
+      .split('\n')
+      .slice(1, -1) // remove outer braces
+      .map(function(line) {
+        return '  ' + line;
+      })
+      .join('\n');
+  
+    // single clean print
+    print(
+      '  "' + key + '": {\n' +
+      body + '\n' +
+      '  },'
+    );
+  });
 });
