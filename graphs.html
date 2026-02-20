@@ -691,4 +691,752 @@
     <br><br><br>
   </main>
 </body>
+<head>
+  <meta charset="UTF-8">
+  <title>Climate Chart</title>
+  <style>
+    :root {
+      --temp:   #c5352b;
+      --precip: #3f7fd8;
+      --border: #c8ccd1;
+      --page-bg:#f8f9fa;
+    }
+
+    body {
+      margin: 0;
+      padding: 24px;
+      background: var(--page-bg);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   sans-serif;
+      color: #111;
+    }
+
+    .chart-wrapper {
+      width: 650px;
+      margin: 0 auto;
+      background: #fff;
+      box-sizing: border-box;
+      padding: 14px 18px 14px;
+      position: relative;
+    }
+
+    .chart-title {
+      font-weight: 700;
+      font-size: 20px;
+      margin-bottom: 2px;
+    }
+
+    .chart-subtitle {
+      position: absolute;
+      top: 40px;  
+      left: 18px;
+      right: 18px;
+      font-size: 14px;
+      color: #555;
+      margin: 0;
+    }
+    
+    .data-sources {
+      margin-top: 10px;
+      padding-top: 6px;
+      border-top: 1px solid var(--border);
+      font-size: 10.5px;
+      line-height: 1.35;
+      color: #555;
+    }
+
+    .legend {
+      font-size: 11px;
+    }
+
+    .legend-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2px;
+    }
+
+    .swatch {
+      width: 11px;
+      height: 11px;
+      border-radius: 2px;
+      margin-right: 4px;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+</head>
+<body>
+
+<div class="chart-wrapper">
+  <div class="chart-title" id="title"></div>
+  <div class="chart-subtitle" id="subtitle"></div>
+  <div id="chart-container"></div>
+
+  <div class="legend">
+    <div class="legend-row">
+      <div class="swatch" style="background: var(--temp);"></div>
+      <span>Average max. and min. temperatures in °F</span>
+    </div>
+    <div class="legend-row">
+      <div class="swatch" style="background: var(--precip);"></div>
+      <span>Precipitation totals in inches</span>
+    </div>
+  </div>
+  
+  <div class="data-sources">
+    <strong>Data sources:</strong>
+    Baseline climate conditions are derived from CHELSA v2.1 climatological normals (1981–2010) to maintain methodological consistency with the downscaled projections. Individual station observations may provide higher local accuracy at specific locations.
+    Future projections are derived from CHELSA-downscaled UKESM1-0-LL SSP5-8.5 projection normals
+    for 2011–2040, 2041–2070 and 2071–2100.
+    SSP5-8.5 corresponds to a fossil-fuel–intensive development pathway associated with high greenhouse gas emissions and is widely used as a reference scenario for limited mitigation. UKESM1-0-LL exhibits comparatively high climate sensitivity and strong land–atmosphere coupling, providing an upper-range estimate of potential change. Spatial resolution is 30 arc-seconds (≈1 km at the equator).
+    <br><br>
+    <strong>Note on Köppen:</strong> Isotherm used to separate temperate (C) and continental (D) climates is 0 °C.
+    <br><br>
+    <strong>Note on Dickinson:</strong> Dickinson Classification refers to the system described in Dickinson, C. (2026). <i>The Dickinson Climate Classification: A Taxonomic Thermal-Hydrological Partition of Climate State Space</i> [Preprint]. Zenodo. https://doi.org/10.5281/zenodo.18264771
+  </div>
+</div>
+
+<script>
+  var locationName =
+  'Nuuk, Greenland';
+  
+  // ============================
+  // EARTH ENGINE OUTPUT
+  // ============================
+  
+  var period = '2071-2100';
+  var dickinson= 'Dhb2';
+  var dickinson_bordering = 'Dhb1 Db2';
+  var koppen = 'Dfb';
+  var koppen_bordering = 'none';
+  p_pet = '1.80';
+  p_pet_unrounded = '1.796';
+  annual_pet_mm = '698';
+  const rawLines = `
+    1.0: 26 19 2.4
+    2.0: 29 21 3.2
+    3.0: 32 25 2.9
+    4.0: 39 34 2.4
+    5.0: 48 40 3.9
+    6.0: 62 51 4.6
+    7.0: 65 55 5.9
+    8.0: 63 54 7.6
+    9.0: 57 49 5.8
+    10.0: 46 40 3.7
+    11.0: 35 28 3.5
+    12.0: 30 22 3.4
+    1.0: -3 -7 62
+    2.0: -2 -6 81
+    3.0: 0 -4 72
+    4.0: 4 1 60
+    5.0: 9 4 100
+    6.0: 17 10 117
+    7.0: 19 13 151
+    8.0: 17 12 194
+    9.0: 14 9 147
+    10.0: 8 5 95
+    11.0: 2 -2 89
+    12.0: -1 -5 85
+  `;
+
+  
+  const months = ['J','F','M','A','M','J','J','A','S','O','N','D'];
+
+  const highsF = [], lowsF = [], precipIn = [];
+  const highsC = [], lowsC = [], precipMM = [];
+
+  const lines = rawLines.trim().split(/\n+/);
+
+  // first 12 = imperial
+  for (let i = 0; i < 12; i++) {
+    const nums = lines[i].split(':')[1].trim().split(/\s+/);
+    highsF.push(parseFloat(nums[0]));
+    lowsF.push(parseFloat(nums[1]));
+    precipIn.push(parseFloat(nums[2]));
+  }
+
+  // last 12 = metric
+  for (let i = 12; i < 24; i++) {
+    const nums = lines[i].split(':')[1].trim().split(/\s+/);
+    highsC.push(parseFloat(nums[0]));
+    lowsC.push(parseFloat(nums[1]));
+    precipMM.push(parseFloat(nums[2]));
+  }
+
+  
+  // ============================
+  // Dickinson lookup tables
+  // ============================
+
+  const coldMap = {
+    X: 'uninhabitable',
+    Z: 'hyperequatorial',
+    A: 'equatorial',
+    B: 'tropical',
+    C: 'subtropical',
+    D: 'temperate',
+    E: 'continental',
+    F: 'subarctic',
+    G: 'arctic',
+    Y: 'superarctic'
+  };
+
+  const aridMap = {
+    '':  '',
+    h: 'humid',
+    g: 'semihumid',
+    s: 'semiarid',
+    d: 'arid',
+    m: 'Mediterranean',
+    w: 'monsoon'
+  };
+
+  const summerMap = {
+    H:  'hypercaneal',
+    X:  'hyperthermal',
+    z2: 'scorching',
+    z1: 'very hot',
+    a2: 'hot',
+    a1: 'warm',
+    b2: 'cool',
+    b1: 'cold',
+    c2: 'very cold',
+    c1: 'freezing',
+    Y:  'frigid'
+  };
+
+
+  // ============================
+  // Dickinson decoder
+  // ============================
+
+  function decodeDickinson(code) {
+    const cold = code.charAt(0);
+
+    // is the second character an aridity code?
+    const maybeArid = code.charAt(1);
+    const hasArid = aridMap.hasOwnProperty(maybeArid);
+
+    const arid = hasArid ? maybeArid : '';
+    const summer = hasArid ? code.slice(2) : code.slice(1);
+
+    const coldText = coldMap[cold] || '';
+    const aridText = aridMap[arid] || '';
+    const summerText = summerMap[summer] || '';
+
+    let phrase = coldText;
+
+    if (aridText) phrase += ' ' + aridText;
+    if (summerText) phrase += ' with ' + summerText + ' summer';
+
+    return phrase;
+  }
+  
+  function decodeBorderList(main, str) {
+  if (!str || str === 'none') return '';
+
+  const parts = str.trim().split(/\s+/);
+
+  // =========================
+  // SINGLE BORDER → OLD STYLE
+  // =========================
+  if (parts.length === 1) {
+    const c = parts[0];
+    return `<b>${c}</b> (${decodeDickinson(c)})`;
+  }
+
+  // =========================
+  // MULTIPLE BORDERS → AXES
+  // =========================
+  function boundaryText(a, b) {
+    // winter
+    if (a.charAt(0) !== b.charAt(0)) {
+      return `${coldMap[a.charAt(0)]}/${coldMap[b.charAt(0)]} boundary`;
+    }
+
+    // aridity
+    if (a.charAt(1) !== b.charAt(1)) {
+      return `${aridMap[a.charAt(1)]}/${aridMap[b.charAt(1)]} boundary`;
+    }
+
+    // summer
+    const aS = a.slice(2);
+    const bS = b.slice(2);
+    if (aS !== bS) {
+      return `${summerMap[aS]}/${summerMap[bS]} summer boundary`;
+    }
+
+    return 'boundary';
+  }
+
+  const decoded = parts.map(c =>
+    `the ${boundaryText(main, c)} (<b>${main}</b> ↔ <b>${c}</b>)`
+  );
+
+  return decoded.slice(0, -1).join(' and ') + ' and ' + decoded.slice(-1);
+}
+
+  
+  // ============================
+  // Köppen lookup table
+  // ============================
+
+  const koppenMap = {
+
+    // Tropical
+    Af: 'tropical rainforest',
+    Am: 'tropical monsoon',
+    Aw: 'tropical savanna',
+    As: 'tropical savanna with dry summer',
+
+    // Dry
+    BWh: 'hot desert',
+    BWk: 'cold desert',
+    BSh: 'hot semi-arid',
+    BSk: 'cold semi-arid',
+
+    // Temperate
+    Cfa: 'humid subtropical',
+    Cfb: 'temperate oceanic',
+    Cfbh: 'subtropical highland',
+    Cfc: 'subpolar oceanic',
+    Cfch: 'cold subtropical highland',
+
+    Cwa: 'monsoon-influenced humid subtropical',
+    Cwb: 'monsoon-influenced subtropical highland',
+    Cwbh: 'monsoon-influenced subtropical highland',
+    Cwc: 'monsoon-influenced subpolar oceanic',
+    Cwch: 'monsoon-influenced cold subtropical highland',
+
+    Csa: 'hot-summer Mediterranean',
+    Csb: 'warm-summer Mediterranean',
+    Csc: 'cold-summer Mediterranean',
+
+    // Continental
+
+    Dfa: 'hot-summer humid continental',
+    Dfb: 'warm-summer humid continental',
+    Dfc: 'subarctic',
+    Dfd: 'extremely cold subarctic',
+    
+    Dwa: 'monsoon-influenced hot-summer humid continental',
+    Dwb: 'monsoon-influenced warm-summer humid continental',
+    Dwc: 'monsoon-influenced subarctic',
+    Dwd: 'monsoon-influenced extremely cold subarctic',
+
+    Dsa: 'Mediterranean-influenced hot-summer humid continental',
+    Dsb: 'Mediterranean-influenced warm-summer humid continental',
+    Dsc: 'Mediterranean-influenced subarctic',
+    Dsd: 'Mediterranean-influenced extremely cold subarctic',
+
+    // Polar
+    ET: 'tundra',
+    EF: 'ice cap'
+  };
+  
+  const subtropicalHighland = {
+    Cfbh: 'Cfb',
+    Cfch: 'Cfc',
+    Cwbh: 'Cwb',
+    Cwch: 'Cwc'
+  };
+
+  function stripHighland(code) {
+    return subtropicalHighland [code] || code;
+  }
+
+  function stripHighlandList(str) {
+    if (!str || str === 'none') return str;
+
+    return str
+      .trim()
+      .split(/\s+/)
+      .map(stripHighland)
+      .join(' ');
+  }
+
+  // ============================
+  // Köppen decoder
+  // ============================
+
+  function decodeKoppen(code) {
+    return koppenMap[code] || '';
+  }
+
+  // ============================
+  // Decode bordering list
+  // ============================
+
+  function decodeKoppenBorderList(str) {
+    if (!str || str === 'none') return '';
+
+    const parts = str.trim().split(/\s+/);
+
+    const decoded = parts.map(c =>
+      `<b>${c}</b> (${decodeKoppen(c)})`
+    );
+
+    if (decoded.length === 1) return decoded[0];
+
+    return decoded.slice(0, -1).join(', ') + ' and ' + decoded.slice(-1);
+  }
+  
+  // ============================
+  // UNEP Aridity
+  // ============================
+
+  function decodeAI(value) {
+    const ai = parseFloat(value);
+    if (isNaN(ai)) return '';
+
+    if (ai < 0.04) return 'hyper-arid';
+    if (ai < 0.05) return 'hyper-arid bordering on arid';
+
+    if (ai < 0.06) return 'arid bordering on hyper-arid';
+    if (ai < 0.19) return 'arid';
+    if (ai < 0.20) return 'arid bordering on semiarid';
+
+    if (ai < 0.21) return 'semi-arid bordering on arid';
+    if (ai < 0.49) return 'semi-arid';
+    if (ai < 0.50) return 'semi-arid bordering on dry subhumid';
+
+    if (ai < 0.51) return 'dry subhumid bordering on semi-arid';
+    if (ai < 0.64) return 'dry subhumid';
+    if (ai < 0.65) return 'dry subhumid bordering on humid';
+
+	if (ai < 0.66) return 'humid bordering on semihumid';
+    if (ai >= 0.66) return 'humid';
+
+    return 'humid';
+  }
+  
+  function formatAI(aiValue, petValue) {
+
+    // if either is N/A → print N/A
+    if (aiValue === 'N/A' || petValue === 'N/A') {
+      return 'UNEP Aridity Index: <b>N/A</b>';
+    }
+
+    const ai  = parseFloat(aiValue);
+    const pet = parseFloat(petValue);
+
+    if (isNaN(ai) || isNaN(pet)) {
+      return 'UNEP Aridity Index: <b>N/A</b>';
+    }
+
+    // ----- cold override -----
+    if (pet < 400) {
+      return 'UNEP Aridity Index: <b>cold</b> (PET < 400mm)';
+    }
+
+    // ----- normal output -----
+    return `UNEP Aridity Index: <b>${p_pet}</b> (${decodeAI(ai)})`;
+  }
+  
+  // ============================
+  // Fix all nonsensical codes
+  // ============================
+
+  function hardRepairBorders(str) {
+    if (!str || str === 'none') return str;
+
+    const parts = str.trim().split(/\s+/);
+
+    // helper
+    const has = c => parts.includes(c);
+
+    // --------------------------------
+    // b1/b2 summer diagonals
+    // Fixes diagonal bordering climate issue.
+    // Attempts to fix this in the google earth engine javascript created multitudes of weird bugs.
+    // This may not be a pretty solution, but it works.
+    // --------------------------------
+    if (has('Bb2') && has('Bhb1')) {if (dickinson === 'Bhb2') return 'Bb1'; if (dickinson === 'Bb1') return 'Bhb2';}
+    if (has('Bb2') && has('Bgb1')) {if (dickinson === 'Bgb2') return 'Bb1'; if (dickinson === 'Bb1') return 'Bgb2';}
+    if (has('Bb2') && has('Bsb1')) {if (dickinson === 'Bsb2') return 'Bb1'; if (dickinson === 'Bb1') return 'Bsb2';}
+    if (has('Bb2') && has('Bdb1')) {if (dickinson === 'Bdb2') return 'Bb1'; if (dickinson === 'Bb1') return 'Bdb2';}
+    if (has('Bb2') && has('Bmb1')) {if (dickinson === 'Bmb2') return 'Bb1'; if (dickinson === 'Bb1') return 'Bmb2';}
+    if (has('Bb2') && has('Bwb1')) {if (dickinson === 'Bwb2') return 'Bb1'; if (dickinson === 'Bb1') return 'Bwb2';}
+
+    if (has('Cb2') && has('Chb1')) {if (dickinson === 'Chb2') return 'Cb1'; if (dickinson === 'Cb1') return 'Chb2';}
+    if (has('Cb2') && has('Cgb1')) {if (dickinson === 'Cgb2') return 'Cb1'; if (dickinson === 'Cb1') return 'Cgb2';}
+    if (has('Cb2') && has('Csb1')) {if (dickinson === 'Csb2') return 'Cb1'; if (dickinson === 'Cb1') return 'Csb2';}
+    if (has('Cb2') && has('Cdb1')) {if (dickinson === 'Cdb2') return 'Cb1'; if (dickinson === 'Cb1') return 'Cdb2';}
+    if (has('Cb2') && has('Cmb1')) {if (dickinson === 'Cmb2') return 'Cb1'; if (dickinson === 'Cb1') return 'Cmb2';}
+    if (has('Cb2') && has('Cwb1')) {if (dickinson === 'Cwb2') return 'Cb1'; if (dickinson === 'Cb1') return 'Cwb2';}
+  
+    if (has('Db2') && has('Dhb1')) {if (dickinson === 'Dhb2') return 'Db1'; if (dickinson === 'Db1') return 'Dhb2';}
+    if (has('Db2') && has('Dgb1')) {if (dickinson === 'Dgb2') return 'Db1'; if (dickinson === 'Db1') return 'Dgb2';}
+    if (has('Db2') && has('Dsb1')) {if (dickinson === 'Dsb2') return 'Db1'; if (dickinson === 'Db1') return 'Dsb2';}
+    if (has('Db2') && has('Ddb1')) {if (dickinson === 'Ddb2') return 'Db1'; if (dickinson === 'Db1') return 'Ddb2';}
+    if (has('Db2') && has('Dmb1')) {if (dickinson === 'Dmb2') return 'Db1'; if (dickinson === 'Db1') return 'Dmb2';}
+    if (has('Db2') && has('Dwb1')) {if (dickinson === 'Dwb2') return 'Db1'; if (dickinson === 'Db1')  return 'Dwb2';}
+    
+    if (has('Eb2') && has('Ehb1')) {if (dickinson === 'Ehb2') return 'Eb1'; if (dickinson === 'Eb1') return 'Ehb2';}
+    if (has('Eb2') && has('Egb1')) {if (dickinson === 'Egb2') return 'Eb1'; if (dickinson === 'Eb1') return 'Egb2';}
+    if (has('Eb2') && has('Esb1')) {if (dickinson === 'Esb2') return 'Eb1'; if (dickinson === 'Eb1') return 'Esb2';}
+    if (has('Eb2') && has('Edb1')) {if (dickinson === 'Edb2') return 'Eb1'; if (dickinson === 'Eb1') return 'Edb2';}
+    if (has('Eb2') && has('Emb1')) {if (dickinson === 'Emb2') return 'Eb1'; if (dickinson === 'Eb1') return 'Emb2';}
+    if (has('Eb2') && has('Ewb1')) {if (dickinson === 'Ewb2') return 'Eb1'; if (dickinson === 'Eb1') return 'Ewb2';}
+
+    // --------------------------------
+    // E/F winter diagonals
+    // --------------------------------
+    if (has('Eb2') && has('Fhb2')) {if (dickinson === 'Ehb2') return 'Fb2'; if (dickinson === 'Fb2') return 'Ehb2';}
+    if (has('Eb2') && has('Fgb2')) {if (dickinson === 'Egb2') return 'Fb2'; if (dickinson === 'Fb2') return 'Egb2';}
+    if (has('Eb2') && has('Fsb2')) {if (dickinson === 'Fsb2') return 'Eb2'; if (dickinson === 'Eb2') return 'Fsb2';}
+    if (has('Eb2') && has('Fdb2')) {if (dickinson === 'Fdb2') return 'Eb2'; if (dickinson === 'Eb2') return 'Fdb2';}
+    if (has('Eb2') && has('Fmb2')) {if (dickinson === 'Fmb2') return 'Eb2'; if (dickinson === 'Eb2') return 'Fmb2';}
+    if (has('Eb2') && has('Fwb2')) {if (dickinson === 'Fwb2') return 'Eb2'; if (dickinson === 'Eb2') return 'Fwb2';}
+
+    if (has('Ea1') && has('Fha1')) {if (dickinson === 'Eha1') return 'Fa1'; if (dickinson === 'Fa1') return 'Eha1';}
+    if (has('Ea1') && has('Fga1')) {if (dickinson === 'Ega1') return 'Fa1'; if (dickinson === 'Fa1') return 'Ega1';}
+    if (has('Ea1') && has('Fsa1')) {if (dickinson === 'Esa1') return 'Fa1'; if (dickinson === 'Fa1') return 'Esa1';}
+    if (has('Ea1') && has('Fda1')) {if (dickinson === 'Eda1') return 'Fa1'; if (dickinson === 'Fa1') return 'Eda1';}
+    if (has('Ea1') && has('Fma1')) {if (dickinson === 'Ema1') return 'Fa1'; if (dickinson === 'Fa1') return 'Ema1';}
+    if (has('Ea1') && has('Fwa1')) {if (dickinson === 'Ewa1') return 'Fa1'; if (dickinson === 'Fa1') return 'Ewa1';}
+
+    if (has('Ea2') && has('Fha2')) {if (dickinson === 'Eha2') return 'Fa2'; if (dickinson === 'Fa2') return 'Eha2';}
+    if (has('Ea2') && has('Fga2')) {if (dickinson === 'Ega2') return 'Fa2'; if (dickinson === 'Fa2') return 'Ega2';}
+    if (has('Ea2') && has('Fsa2')) {if (dickinson === 'Esa2') return 'Fa2'; if (dickinson === 'Fa2') return 'Esa2';}
+    if (has('Ea2') && has('Fda2')) {if (dickinson === 'Eda2') return 'Fa2'; if (dickinson === 'Fa2') return 'Eda2';}
+    if (has('Ea2') && has('Fma2')) {if (dickinson === 'Ema2') return 'Fa2'; if (dickinson === 'Fa2') return 'Ema2';}
+    if (has('Ea2') && has('Fwa2')) {if (dickinson === 'Ewa2') return 'Fa2'; if (dickinson === 'Fa2') return 'Ewa2';}
+
+    if (has('Ez1') && has('Fhz1')) {if (dickinson === 'Ehz1') return 'Fz1'; if (dickinson === 'Fz1') return 'Ehz1';}
+    if (has('Ez1') && has('Fgz1')) {if (dickinson === 'Egz1') return 'Fz1'; if (dickinson === 'Fz1') return 'Egz1';}
+    if (has('Ez1') && has('Fsz1')) {if (dickinson === 'Esz1') return 'Fz1'; if (dickinson === 'Fz1') return 'Esz1';}
+    if (has('Ez1') && has('Fdz1')) {if (dickinson === 'Edz1') return 'Fz1'; if (dickinson === 'Fz1') return 'Edz1';}
+    if (has('Ez1') && has('Fmz1')) {if (dickinson === 'Emz1') return 'Fz1'; if (dickinson === 'Fz1') return 'Emz1';}
+    if (has('Ez1') && has('Fwz1')) {if (dickinson === 'Ewz1') return 'Fz1'; if (dickinson === 'Fz1') return 'Ewz1';}
+
+    if (has('Ez2') && has('Fhz2')) {if (dickinson === 'Ehz2') return 'Fz2'; if (dickinson === 'Fz2') return 'Ehz2';}
+    if (has('Ez2') && has('Fgz2')) {if (dickinson === 'Egz2') return 'Fz2'; if (dickinson === 'Fz2') return 'Egz2';}
+    if (has('Ez2') && has('Fsz2')) {if (dickinson === 'Esz2') return 'Fz2'; if (dickinson === 'Fz2') return 'Esz2';}
+    if (has('Ez2') && has('Fdz2')) {if (dickinson === 'Edz2') return 'Fz2'; if (dickinson === 'Fz2') return 'Edz2';}
+    if (has('Ez2') && has('Fmz2')) {if (dickinson === 'Emz2') return 'Fz2'; if (dickinson === 'Fz2') return 'Emz2';}
+    if (has('Ez2') && has('Fwz2')) {if (dickinson === 'Ewz2') return 'Fz2'; if (dickinson === 'Fz2') return 'Ewz2';}
+
+    if (has('EX') && has('FhX')) {if (dickinson === 'Ehb2') return 'FhX'; if (dickinson === 'FhX') return 'Ehb2';}
+    if (has('EX') && has('FgX')) {if (dickinson === 'Egb2') return 'FgX'; if (dickinson === 'FgX') return 'Egb2';}
+    if (has('EX') && has('FsX')) {if (dickinson === 'Esb2') return 'FsX'; if (dickinson === 'FsX') return 'Esb2';}
+    if (has('EX') && has('FdX')) {if (dickinson === 'Edb2') return 'FdX'; if (dickinson === 'FdX') return 'Edb2';}
+    if (has('EX') && has('FmX')) {if (dickinson === 'Emb2') return 'FmX'; if (dickinson === 'FmX') return 'Emb2';}
+    if (has('EX') && has('FwX')) {if (dickinson === 'Ewb2') return 'FwX'; if (dickinson === 'FwX') return 'Ewb2';}
+
+    if (has('EH') && has('FhH')) {if (dickinson === 'Ehb2') return 'FhH'; if (dickinson === 'FhH') return 'Ehb2';}
+    if (has('EH') && has('FgH')) {if (dickinson === 'Egb2') return 'FgH'; if (dickinson === 'FgH') return 'Egb2';}
+    if (has('EH') && has('FsH')) {if (dickinson === 'Esb2') return 'FsH'; if (dickinson === 'FsH') return 'Esb2';}
+    if (has('EH') && has('FdH')) {if (dickinson === 'Edb2') return 'FdH'; if (dickinson === 'FdH') return 'Edb2';}
+    if (has('EH') && has('FmH')) {if (dickinson === 'Emb2') return 'FmH'; if (dickinson === 'FmH') return 'Emb2';}
+    if (has('EH') && has('FwH')) {if (dickinson === 'Ewb2') return 'FwH'; if (dickinson === 'FwH') return 'Ewb2';}
+
+    // --------------------------------
+    // Weird edge case fix (I will keep adding these until I see the pattern)
+    // --------------------------------
+    if (has('EY') && has('FhY')) {if (dickinson === 'FY') return 'EY';}
+
+    return str;
+  }
+
+
+  // ============================
+  // Classification outputs
+  // ============================
+  
+  dickinson_bordering = hardRepairBorders(dickinson_bordering);
+  
+  const data = {
+  location: locationName,
+
+  code:
+    `${period} normals<br><br>` +
+    `Dickinson Classification: <b>${dickinson}</b>
+    (${decodeDickinson(dickinson)})` +
+    (dickinson_bordering !== 'none'
+      ? ` bordering on ${decodeBorderList(dickinson, dickinson_bordering)}`
+      : '') +
+    `<br><br>` +
+    `Köppen Classification: <b>${stripHighland(koppen)}</b>
+    (${decodeKoppen(koppen)})` +
+    (koppen_bordering !== 'none'
+      ? ` bordering on ${decodeKoppenBorderList(stripHighlandList(koppen_bordering))}`
+      : '') +
+    `<br><br>` +
+    formatAI(p_pet_unrounded, annual_pet_mm),
+
+    months,
+
+    // ---- imperial source ----
+    highsF,
+    lowsF,
+    precipIn,
+
+    // ---- metric source ----
+    highsC,
+    lowsC,
+    precipMM,
+
+    // ---- active (what renderer reads) ----
+    highs: highsF,
+    lows: lowsF,
+    precip: precipIn
+  };
+
+
+  document.getElementById('title').textContent = data.location;
+  document.getElementById('subtitle').innerHTML = data.code;
+  
+  let TEMP_MIN;
+  let TEMP_MAX;
+  let REF_TEMP;
+  let PRECIP_MIN;
+  let PRECIP_MAX;
+
+  function useFahrenheit() {
+    data.highs = data.highsF;
+    data.lows = data.lowsF;
+    data.precip = data.precipIn;
+
+    TEMP_MIN = -30;
+    TEMP_MAX = 125;
+    REF_TEMP = 32;
+
+    PRECIP_MIN = 0;
+    PRECIP_MAX = 10;
+  }
+
+  function useCelsius() {
+    data.highs = data.highsC;
+    data.lows = data.lowsC;
+    data.precip = data.precipMM;
+
+    TEMP_MIN = -34.444;
+    TEMP_MAX = 51.666;
+    REF_TEMP = 0;
+
+    PRECIP_MIN = 0;
+    PRECIP_MAX = 254;
+  }
+
+  // ============================
+  // DRAW CHART
+  // ============================
+
+  const svgWidth = 620;
+  const stretchPercip = 0; // CHANGE for extreme percipitation
+  const svgHeight = 620 + stretchPercip;
+
+  const margin = { top: 100, right: 20, bottom: 32, left: 20 };
+
+  const tempPanelHeight = 340;
+  const gap = 63 + stretchPercip;
+  const precipPanelHeight = 55;
+
+  const plotWidth = svgWidth - margin.left - margin.right;
+  const tempBaseY = margin.top + tempPanelHeight;
+  const precipTopY = tempBaseY + gap;
+  const precipBaseY = precipTopY + precipPanelHeight;
+
+  const n = data.months.length;
+  const colWidth = plotWidth / n;
+
+  function tempScale(v) {
+    return ((v - TEMP_MIN) / (TEMP_MAX - TEMP_MIN)) * (tempPanelHeight * 0.9);
+  }
+
+  function precipScale(v) {
+    return ((v - PRECIP_MIN) / (PRECIP_MAX - PRECIP_MIN)) * (precipPanelHeight * 0.9);
+  }
+
+  function buildChart() {
+
+    let svg = `<svg width="${svgWidth}" height="${svgHeight}">
+      <rect width="${svgWidth}" height="${svgHeight}" fill="#ffffff" />
+      <g transform="translate(${margin.left},0)">`;
+
+    // ----- THIN DOTTED REFERENCE LINE (32°F / shared Y) -----
+    const dottedY = tempBaseY - tempScale(REF_TEMP);
+
+    // draw the dotted line *first* so bars/labels render on top of it
+    svg += `
+      <line x1="0" y1="${dottedY}"
+            x2="${plotWidth}" y2="${dottedY}"
+            stroke="#bbb" stroke-width="1"
+            stroke-dasharray="4,3" />
+    `;
+
+    // ----- Temperature bars (drawn AFTER the line, so they can go over it) -----
+    for (let i = 0; i < n; i++) {
+      const hi = data.highs[i];
+      const lo = data.lows[i];
+
+      const hiH = tempScale(hi);
+      const loH = tempScale(lo);
+
+      const barX = colWidth * i + colWidth * 0.28;
+      const barW = colWidth * 0.30;
+
+      const hiY = tempBaseY - hiH;
+      const loY = tempBaseY - loH;
+
+      svg += `
+        <rect x="${barX}" y="${hiY}" width="${barW}" height="${hiH - loH}"
+              fill="var(--temp)"></rect>
+        <text x="${barX + barW/2}" y="${hiY - 4}"
+              text-anchor="middle" font-size="11">${hi}</text>
+        <text x="${barX + barW/2}" y="${loY + 12}"
+              text-anchor="middle" font-size="10">${lo}</text>
+      `;
+    }
+
+    // ----- Precipitation bars (also drawn after the line) -----
+    for (let i = 0; i < n; i++) {
+      const p = data.precip[i];
+      const barH = precipScale(p);
+
+      const barX = colWidth * i + colWidth * 0.28;
+      const barW = colWidth * 0.30;
+      const barY = precipBaseY - barH;
+
+      svg += `
+        <rect x="${barX}" y="${barY}" width="${barW}" height="${barH}"
+              fill="var(--precip)"></rect>
+        <text x="${barX + barW/2}" 
+              y="${precipBaseY + 14}" 
+              text-anchor="middle"
+              font-size="10">${p}</text>
+      `;
+    }
+
+    // ----- LINE BETWEEN PRECIP & MONTH LABELS -----
+    const lowerLineY = precipBaseY + 20;
+
+    svg += `
+      <line x1="0" y1="${lowerLineY}"
+            x2="${plotWidth}" y2="${lowerLineY}"
+            stroke="#000" stroke-width="2" />
+    `;
+
+    // ----- Month labels -----
+    for (let i = 0; i < n; i++) {
+      const x = colWidth * i + colWidth * 0.43;
+      const y = lowerLineY + 16;
+
+      svg += `<text x="${x}" y="${y}"
+                    text-anchor="middle"
+                    font-size="11">${data.months[i]}</text>`;
+    }
+
+    svg += `</g></svg>`;
+
+    document.getElementById('chart-container').innerHTML = svg;
+  }
+  
+  useFahrenheit();
+  buildChart();
+      
+</script>
+
+</body>
 </html>
