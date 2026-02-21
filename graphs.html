@@ -65,13 +65,21 @@
     /* ================= CHART CARD ================= */
 
     .chart-wrapper {
-      width: min(650px, 90vw);
-      margin: 25px auto 0;
-      background: #fff;
-      box-sizing: border-box;
-      padding: 14px 18px 14px;
-      position: relative;
-    }
+  /* This ensures the 'box' for the chart is the same width as your map */
+  width: min(90vw, 1280px); 
+  margin: 25px auto;
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+#chart-container {
+  width: 100%; /* Makes the container fill the wrapper */
+}
+
+#chart-container svg {
+  width: 100%;  /* Makes the SVG grow to fill the container */
+  height: auto; /* Keeps the proportions so bars don't stretch vertically */
+}
 
     .chart-title {
       font-weight: 700;
@@ -820,7 +828,7 @@
     }
 
     // ===== BUILD SVG =====
-    let svg = `<svg width="${svgWidth}" height="${svgHeight}">
+    let svg = `<svg viewBox="0 0 ${svgWidth} ${svgHeight}" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: auto;">'
       <rect width="${svgWidth}" height="${svgHeight}" fill="#ffffff"/>
       <g transform="translate(${margin.left},0)">`;
 
