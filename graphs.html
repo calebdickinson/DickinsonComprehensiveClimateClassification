@@ -73,18 +73,6 @@
       position: relative;
     }
 
-   #chart-container {
-  width: 100%;
-  max-width: 650px; /* Limits size on desktop */
-  margin: 0 auto;
-}
-
-#chart-container svg {
-  width: 100%;    /* Scales to container width */
-  height: auto;   /* Maintains aspect ratio */
-  display: block;
-}
-
     .chart-title {
       font-weight: 700;
       font-size: 20px;
@@ -147,20 +135,6 @@
         gap: 30px;
       }
     }
-
-    @media (max-width: 1400px) {
-      .chart-wrapper {
-        padding-left: 0;   /* Remove side gaps */
-        padding-right: 0;
-        width: 95vw;       /* Make it slightly wider to match the map look */
-      }
-
-      .chart-title, .chart-subtitle, .legend, .data-sources {
-        padding-left: 15px; /* Keep the text from touching the edge */
-        padding-right: 15px;
-      }
-    }
-
       
   </style>
 </head>
@@ -846,10 +820,10 @@
     }
 
     // ===== BUILD SVG =====
-    // Open the backtick on the first line and don't close it until the end of the string
-let svg = `<svg viewBox="0 0 ${svgWidth} ${svgHeight}" preserveAspectRatio="xMidYMid meet">
+    let svg = `<svg width="${svgWidth}" height="${svgHeight}">
       <rect width="${svgWidth}" height="${svgHeight}" fill="#ffffff"/>
       <g transform="translate(${margin.left},0)">`;
+
     // reference line
     const dottedY = tempBaseY - tempScale(REF_TEMP);
 
