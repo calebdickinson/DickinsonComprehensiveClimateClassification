@@ -823,13 +823,7 @@
     }
 
     // ===== BUILD SVG =====
-    let svg = `
-    <svg 
-      viewBox="0 0 ${svgWidth} ${svgHeight}"
-      width="100%"
-      height="auto"
-      preserveAspectRatio="xMidYMid meet">
-    `
+    let svg = `<svg width="${svgWidth}" height="${svgHeight}">
       <rect width="${svgWidth}" height="${svgHeight}" fill="#ffffff"/>
       <g transform="translate(${margin.left},0)">`;
 
