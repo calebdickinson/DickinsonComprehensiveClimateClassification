@@ -147,6 +147,20 @@
         gap: 30px;
       }
     }
+
+    @media (max-width: 600px) {
+      .chart-wrapper {
+        padding-left: 0;   /* Remove side gaps */
+        padding-right: 0;
+        width: 95vw;       /* Make it slightly wider to match the map look */
+      }
+
+      .chart-title, .chart-subtitle, .legend, .data-sources {
+        padding-left: 15px; /* Keep the text from touching the edge */
+        padding-right: 15px;
+      }
+    }
+
       
   </style>
 </head>
