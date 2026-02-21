@@ -73,14 +73,16 @@
       position: relative;
     }
 
-    #chart-container {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+   #chart-container {
+  width: 100%;
+  max-width: 650px; /* Limits size on desktop */
+  margin: 0 auto;
 }
 
 #chart-container svg {
+  width: 100%;    /* Scales to container width */
+  height: auto;   /* Maintains aspect ratio */
   display: block;
-  min-width: 620px;
 }
 
     .chart-title {
@@ -830,10 +832,10 @@
     }
 
     // ===== BUILD SVG =====
-    let svg = `<svg width="${svgWidth}" height="${svgHeight}">
+    // Open the backtick on the first line and don't close it until the end of the string
+let svg = `<svg viewBox="0 0 ${svgWidth} ${svgHeight}" preserveAspectRatio="xMidYMid meet">
       <rect width="${svgWidth}" height="${svgHeight}" fill="#ffffff"/>
       <g transform="translate(${margin.left},0)">`;
-
     // reference line
     const dottedY = tempBaseY - tempScale(REF_TEMP);
 
