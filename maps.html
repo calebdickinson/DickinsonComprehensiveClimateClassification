@@ -99,16 +99,19 @@
     // default visible maps on page load
     window.addEventListener('DOMContentLoaded', () => {
       showMap('winter-global',1);
+      showMap('winter-alaska',1);
       showMap('winter-usa',1);
       showMap('winter-mesoamerica',1);
       showMap('winter-southamerica',1);
       showMap('winter-africa',1);
       showMap('aridity-global',1);
+      showMap('aridity-alaska',1);
       showMap('aridity-usa',1);
       showMap('aridity-mesoamerica',1);
       showMap('aridity-southamerica',1);
       showMap('aridity-africa',1);
       showMap('summer-global',1);
+      showMap('summer-alaska',1);
       showMap('summer-usa',1);
       showMap('summer-mesoamerica',1);
       showMap('summer-southamerica',1);
@@ -130,6 +133,8 @@
   </nav>
   
   <main>
+    <p>Please note that regional maps are not shown to scale relative to one another.</p><br>
+
     <h1 style="margin-top: -30px;">Winter Maps</h1>
     <img src="images/winterlegend.png" alt="Winter map legend" style="max-width:800px; display:block;">
     
@@ -149,7 +154,23 @@
       <div id="winter-global4"><img src="images/wintermap4.png"></div>
     </div>
 
-    <h2>United States distribution of winter categories<br>(projections are RCP8.5 high emissions normals)</h2>
+    <h2>Alaska distribution of winter categories<br>(projections are RCP8.5 high emissions normals)</h2>
+
+    <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
+      <button id="winter-alaska-button1" class="year-button" onclick="showMap('winter-alaska',1)">1981 - 2010</button>
+      <button id="winter-alaska-button2" class="year-button" onclick="showMap('winter-alaska',2)">2011 - 2040</button>
+      <button id="winter-alaska-button3" class="year-button" onclick="showMap('winter-alaska',3)">2041 - 2070</button>
+      <button id="winter-alaska-button4" class="year-button" onclick="showMap('winter-alaska',4)">2071 - 2100</button>
+    </div>
+
+    <div class="map-block">
+      <div id="winter-alaska1"><img src="images/wintermap1alaska.png"></div>
+      <div id="winter-alaska2"><img src="images/wintermap2alaska.png"></div>
+      <div id="winter-alaska3"><img src="images/wintermap3alaska.png"></div>
+      <div id="winter-alaska4"><img src="images/wintermap4alaska.png"></div>
+    </div>
+
+    <h2>Contiguous United States distribution of winter categories<br>(projections are RCP8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="winter-usa-button1" class="year-button" onclick="showMap('winter-usa',1)">1981 - 2010</button>
@@ -232,7 +253,23 @@
       <div id="aridity-global4"><img src="images/ariditymap4.png"></div>
     </div>
 
-    <h2>United States distribution of aridity categories<br>(projections are RCP8.5 high emissions normals)</h2>
+    <h2>Alaska distribution of aridity categories<br>(projections are RCP8.5 high emissions normals)</h2>
+
+    <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
+      <button id="aridity-alaska-button1" class="year-button" onclick="showMap('aridity-alaska',1)">1981 - 2010</button>
+      <button id="aridity-alaska-button2" class="year-button" onclick="showMap('aridity-alaska',2)">2011 - 2040</button>
+      <button id="aridity-alaska-button3" class="year-button" onclick="showMap('aridity-alaska',3)">2041 - 2070</button>
+      <button id="aridity-alaska-button4" class="year-button" onclick="showMap('aridity-alaska',4)">2071 - 2100</button>
+    </div>
+
+    <div class="map-block">
+      <div id="aridity-alaska1"><img src="images/ariditymap1alaska.png"></div>
+      <div id="aridity-alaska2"><img src="images/ariditymap2alaska.png"></div>
+      <div id="aridity-alaska3"><img src="images/ariditymap3alaska.png"></div>
+      <div id="aridity-alaska4"><img src="images/ariditymap4alaska.png"></div>
+    </div>
+
+    <h2>Contiguous United States distribution of aridity categories<br>(projections are RCP8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="aridity-usa-button1" class="year-button" onclick="showMap('aridity-usa',1)">1981 - 2010</button>
@@ -322,7 +359,23 @@
       <div id="summer-global4"><img src="images/summermap4.png"></div>
     </div>
 
-    <h2>United States distribution of summer categories<br>(projections are RCP8.5 high emissions normals)</h2>
+    <h2>Alaska distribution of summer categories<br>(projections are RCP8.5 high emissions normals)</h2>
+
+    <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
+      <button id="summer-alaska-button1" class="year-button" onclick="showMap('summer-alaska',1)">1981 - 2010</button>
+      <button id="summer-alaska-button2" class="year-button" onclick="showMap('summer-alaska',2)">2011 - 2040</button>
+      <button id="summer-alaska-button3" class="year-button" onclick="showMap('summer-alaska',3)">2041 - 2070</button>
+      <button id="summer-alaska-button4" class="year-button" onclick="showMap('summer-alaska',4)">2071 - 2100</button>
+    </div>
+
+    <div class="map-block">
+      <div id="summer-alaska1"><img src="images/summermap1alaska.png"></div>
+      <div id="summer-alaska2"><img src="images/summermap2alaska.png"></div>
+      <div id="summer-alaska3"><img src="images/summermap3alaska.png"></div>
+      <div id="summer-alaska4"><img src="images/summermap4alaska.png"></div>
+    </div>
+
+    <h2>Contiguous United States distribution of summer categories<br>(projections are RCP8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="summer-usa-button1" class="year-button" onclick="showMap('summer-usa',1)">1981 - 2010</button>
