@@ -381,15 +381,17 @@ of its seasonal timing.
 These seasonality diagnostics are applied as overrides to the baseline
 aridity regimes to distinguish Mediterranean and monsoonal climates.
 
-Mediterranean climates are identified as non-arid regimes
+\emph{Mediterranean} climates are identified as non-arid regimes
 ($AI \ge 0.25$) exhibiting strong winter precipitation dominance in the
 extratropics ($HS < 0.4$).
 
-Monsoonal climates are identified using the rolling six-month precipitation
+\emph{Monsoon} climates are identified using the rolling six-month precipitation
 dominance metric. Climates in which at least 80\% of annual precipitation
 occurs within any consecutive six-month period
 ($P6_{\text{ratio}} \ge 0.8$) are classified as monsoonal, excluding climates
 already classified as arid desert or Mediterranean.
+
+Climates meeting the monsoon criterion are classified as \emph{Semiarid Monsoon} when $AI < 0.50$, to distinguish them from monsoon climates with semihumid or humid aridity indices.
 
 Finally, a temperate rainforest override is applied to prevent
 Mediterranean classification in climates that remain persistently moist
@@ -469,8 +471,8 @@ Polar / Subpolar / Alpine};
 \node[outcome, above=of medoverride] (med)
 {Mediterranean (m)};
 
-\draw[arrow] (medcheck) -- node[left,font=\small, xshift=4mm, yshift=2.5mm]{Yes} (medoverride);
-\draw[arrow] (medoverride) -- node[above,font=\small, xshift=-4mm, yshift=-3mm]{No} (humid);
+\draw[arrow] (medcheck) -- node[above,font=\small]{Yes} (medoverride);
+\draw[arrow] (medoverride) -- node[left,font=\small]{No} (humid);
 \draw[arrow] (medoverride) -- node[left,font=\small]{Yes} (med);
 
 % =====================================================
@@ -480,11 +482,25 @@ Polar / Subpolar / Alpine};
 \node[decision, below=of medcheck] (monsooncheck)
 {$P6ratio \ge 0.8$?};
 
-\node[outcome, left=of monsooncheck] (monsoon)
+\draw[arrow] (medcheck) -- node[left,font=\small]{No} (monsooncheck);
+
+% --- Split by dryness if monsoon-dominant ---
+
+\node[decision, left=of monsooncheck] (monsoonsplit)
+{$\dfrac{P_{\mathrm{ann}}}{PET_{\mathrm{ann}}} < 0.50$?};
+
+\draw[arrow] (monsooncheck) -- node[above,font=\small]{Yes} (monsoonsplit);
+
+% --- Outcomes ---
+
+\node[outcome, above=of monsoonsplit] (semimons)
+{Semiarid Monsoon (v)};
+
+\node[outcome, below=of monsoonsplit] (monsoon)
 {Monsoon (w)};
 
-\draw[arrow] (medcheck) -- node[above,font=\small, xshift=-4mm, yshift=-3mm]{No} (monsooncheck);
-\draw[arrow] (monsooncheck) -- node[above,font=\small]{Yes} (monsoon);
+\draw[arrow] (monsoonsplit) -- node[left,font=\small]{Yes} (semimons);
+\draw[arrow] (monsoonsplit) -- node[left,font=\small]{No} (monsoon);
 
 % =====================================================
 % HUMIDITY SPLIT
@@ -493,23 +509,23 @@ Polar / Subpolar / Alpine};
 \node[decision, below=of monsooncheck] (semiaridcheck)
 {$\dfrac{P_{\mathrm{ann}}}{PET_{\mathrm{ann}}} < 0.50$?};
 
-\node[outcome, left=of semiaridcheck] (semiarid)
+\node[outcome, below=of semiaridcheck] (semiarid)
 {Semiarid (s)};
 
 \draw[arrow] (monsooncheck) -- node[left,font=\small]{No} (semiaridcheck);
-\draw[arrow] (semiaridcheck) -- node[above,font=\small]{Yes} (semiarid);
+\draw[arrow] (semiaridcheck) -- node[left,font=\small]{Yes} (semiarid);
 
 \node[decision, right=of semiaridcheck] (semihumidcheck)
 {$\dfrac{P_{\mathrm{ann}}}{PET_{\mathrm{ann}}} < 0.75$?};
 
-\draw[arrow] (semiaridcheck) -- node[below,font=\small, yshift=5.5mm]{No} (semihumidcheck);
+\draw[arrow] (semiaridcheck) -- node[above,font=\small]{No} (semihumidcheck);
 
 \node[outcome, below=of semihumidcheck] (semihumid)
 {Semihumid (g)};
 
 % NOTE: Humid (H) node already exists elsewhere
-\draw[arrow] (semihumidcheck) -- node[above,font=\small, xshift=-4mm, yshift=-2.5mm]{Yes} (semihumid);
-\draw[arrow] (semihumidcheck) -- node[right,font=\small, xshift=-8mm]{No} (humid);
+\draw[arrow] (semihumidcheck) -- node[left,font=\small]{Yes} (semihumid);
+\draw[arrow] (semihumidcheck) -- node[left,font=\small]{No} (humid);
 
 \end{tikzpicture}
 }
