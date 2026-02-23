@@ -51,7 +51,7 @@
       transform: scale(1.1);
     }
 
-    .year-btn.active {
+    .year-button.active {
       border: 3px solid black !important;
     }
 
@@ -64,7 +64,6 @@
     }
 
     .map-block img {
-      max-height: 80vh;
       width: auto;
       height: auto;
       object-fit: contain;
@@ -92,19 +91,28 @@
       if (chosen) chosen.style.display = 'block';
 
       for (let i = 1; i <= 4; i++) {
-        const btn = document.getElementById(prefix + 'btn' + i);
-        if (!btn) continue;
-        btn.classList.toggle('active', i === n);
+        const button = document.getElementById(prefix + '-button' + i);
+        if (!button) continue;
+        button.classList.toggle('active', i === n);
       }
     }
     // default visible maps on page load
     window.addEventListener('DOMContentLoaded', () => {
-      showMap('winterg',1);
-      showMap('winteru',1);
-      showMap('aridityg',1);
-      showMap('aridityu',1);
-      showMap('summerg',1);
-      showMap('summeru',1);
+      showMap('winter-global',1);
+      showMap('winter-usa',1);
+      showMap('winter-mesoamerica',1);
+      showMap('winter-southamerica',1);
+      showMap('winter-africa',1);
+      showMap('aridity-global',1);
+      showMap('aridity-usa',1);
+      showMap('aridity-mesoamerica',1);
+      showMap('aridity-southamerica',1);
+      showMap('aridity-africa',1);
+      showMap('summer-global',1);
+      showMap('summer-usa',1);
+      showMap('summer-mesoamerica',1);
+      showMap('summer-southamerica',1);
+      showMap('summer-africa',1);
     });
   </script>
 </head>
@@ -128,35 +136,82 @@
     <h2>Global distribution of winter categories (projections are RCP8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin:10px 0;">
-      <button id="wintergbtn1" class="year-btn" onclick="showMap('winterg',1)">1981 - 2010</button>
-      <button id="wintergbtn2" class="year-btn" onclick="showMap('winterg',2)">2011 - 2040</button>
-      <button id="wintergbtn3" class="year-btn" onclick="showMap('winterg',3)">2041 - 2070</button>
-      <button id="wintergbtn4" class="year-btn" onclick="showMap('winterg',4)">2071 - 2100</button>
+      <button id="winter-global-button1" class="year-button" onclick="showMap('winter-global',1)">1981 - 2010</button>
+      <button id="winter-global-button2" class="year-button" onclick="showMap('winter-global',2)">2011 - 2040</button>
+      <button id="winter-global-button3" class="year-button" onclick="showMap('winter-global',3)">2041 - 2070</button>
+      <button id="winter-global-button4" class="year-button" onclick="showMap('winter-global',4)">2071 - 2100</button>
     </div>
 
     <div class="map-block">
-      <div id="winterg1"><img src="images/wintermap1.png"></div>
-      <div id="winterg2"><img src="images/wintermap2.png"></div>
-      <div id="winterg3"><img src="images/wintermap3.png"></div>
-      <div id="winterg4"><img src="images/wintermap4.png"></div>
+      <div id="winter-global1"><img src="images/wintermap1.png"></div>
+      <div id="winter-global2"><img src="images/wintermap2.png"></div>
+      <div id="winter-global3"><img src="images/wintermap3.png"></div>
+      <div id="winter-global4"><img src="images/wintermap4.png"></div>
     </div>
 
     <h2>United States distribution of winter categories (projections are RCP8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
-      <button id="winterubtn1" class="year-btn" onclick="showMap('winteru',1)">1981 - 2010</button>
-      <button id="winterubtn2" class="year-btn" onclick="showMap('winteru',2)">2011 - 2040</button>
-      <button id="winterubtn3" class="year-btn" onclick="showMap('winteru',3)">2041 - 2070</button>
-      <button id="winterubtn4" class="year-btn" onclick="showMap('winteru',4)">2071 - 2100</button>
+      <button id="winter-usa-button1" class="year-button" onclick="showMap('winter-usa',1)">1981 - 2010</button>
+      <button id="winter-usa-button2" class="year-button" onclick="showMap('winter-usa',2)">2011 - 2040</button>
+      <button id="winter-usa-button3" class="year-button" onclick="showMap('winter-usa',3)">2041 - 2070</button>
+      <button id="winter-usa-button4" class="year-button" onclick="showMap('winter-usa',4)">2071 - 2100</button>
     </div>
 
     <div class="map-block">
-      <div id="winteru1"><img src="images/wintermap1usa.png"></div>
-      <div id="winteru2"><img src="images/wintermap2usa.png"></div>
-      <div id="winteru3"><img src="images/wintermap3usa.png"></div>
-      <div id="winteru4"><img src="images/wintermap4usa.png"></div>
+      <div id="winter-usa1"><img src="images/wintermap1usa.png"></div>
+      <div id="winter-usa2"><img src="images/wintermap2usa.png"></div>
+      <div id="winter-usa3"><img src="images/wintermap3usa.png"></div>
+      <div id="winter-usa4"><img src="images/wintermap4usa.png"></div>
     </div>
 
+    <h2>Mexico, Central America & the Carribean distribution of winter categories (projections are RCP8.5 high emissions normals)</h2>
+
+    <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
+      <button id="winter-mesoamerica-button1" class="year-button" onclick="showMap('winter-mesoamerica',1)">1981 - 2010</button>
+      <button id="winter-mesoamerica-button2" class="year-button" onclick="showMap('winter-mesoamerica',2)">2011 - 2040</button>
+      <button id="winter-mesoamerica-button3" class="year-button" onclick="showMap('winter-mesoamerica',3)">2041 - 2070</button>
+      <button id="winter-mesoamerica-button4" class="year-button" onclick="showMap('winter-mesoamerica',4)">2071 - 2100</button>
+    </div>
+
+    <div class="map-block">
+      <div id="winter-mesoamerica1"><img src="images/wintermap1mesoamerica.png"></div>
+      <div id="winter-mesoamerica2"><img src="images/wintermap2mesoamerica.png"></div>
+      <div id="winter-mesoamerica3"><img src="images/wintermap3mesoamerica.png"></div>
+      <div id="winter-mesoamerica4"><img src="images/wintermap4mesoamerica.png"></div>
+    </div>
+
+    <h2>South America distribution of winter categories (projections are RCP8.5 high emissions normals)</h2>
+
+    <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
+      <button id="winter-southamerica-button1" class="year-button" onclick="showMap('winter-southamerica',1)">1981 - 2010</button>
+      <button id="winter-southamerica-button2" class="year-button" onclick="showMap('winter-southamerica',2)">2011 - 2040</button>
+      <button id="winter-southamerica-button3" class="year-button" onclick="showMap('winter-southamerica',3)">2041 - 2070</button>
+      <button id="winter-southamerica-button4" class="year-button" onclick="showMap('winter-southamerica',4)">2071 - 2100</button>
+    </div>
+
+    <div class="map-block">
+      <div id="winter-southamerica1"><img src="images/wintermap1southamerica.png"></div>
+      <div id="winter-southamerica2"><img src="images/wintermap2southamerica.png"></div>
+      <div id="winter-southamerica3"><img src="images/wintermap3southamerica.png"></div>
+      <div id="winter-southamerica4"><img src="images/wintermap4southamerica.png"></div>
+    </div>
+
+    <h2>Africa distribution of winter categories (projections are RCP8.5 high emissions normals)</h2>
+
+    <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
+      <button id="winter-africa-button1" class="year-button" onclick="showMap('winter-africa',1)">1981 - 2010</button>
+      <button id="winter-africa-button2" class="year-button" onclick="showMap('winter-africa',2)">2011 - 2040</button>
+      <button id="winter-africa-button3" class="year-button" onclick="showMap('winter-africa',3)">2041 - 2070</button>
+      <button id="winter-africa-button4" class="year-button" onclick="showMap('winter-africa',4)">2071 - 2100</button>
+    </div>
+
+    <div class="map-block">
+      <div id="winter-africa1"><img src="images/wintermap1africa.png"></div>
+      <div id="winter-africa2"><img src="images/wintermap2africa.png"></div>
+      <div id="winter-africa3"><img src="images/wintermap3africa.png"></div>
+      <div id="winter-africa4"><img src="images/wintermap4africa.png"></div>
+    </div>
 
     <h1>Aridity Maps</h1>
     <img src="images/ariditylegend.png" alt="Aridity map legend" style="max-width:800px; display:block;">
@@ -164,33 +219,81 @@
     <h2>Global distribution of aridity categories (projections are RCP8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin:10px 0;">
-      <button id="ariditygbtn1" class="year-btn" onclick="showMap('aridityg',1)">1981 - 2010</button>
-      <button id="ariditygbtn2" class="year-btn" onclick="showMap('aridityg',2)">2011 - 2040</button>
-      <button id="ariditygbtn3" class="year-btn" onclick="showMap('aridityg',3)">2041 - 2070</button>
-      <button id="ariditygbtn4" class="year-btn" onclick="showMap('aridityg',4)">2071 - 2100</button>
+      <button id="aridity-global-button1" class="year-button" onclick="showMap('aridity-global',1)">1981 - 2010</button>
+      <button id="aridity-global-button2" class="year-button" onclick="showMap('aridity-global',2)">2011 - 2040</button>
+      <button id="aridity-global-button3" class="year-button" onclick="showMap('aridity-global',3)">2041 - 2070</button>
+      <button id="aridity-global-button4" class="year-button" onclick="showMap('aridity-global',4)">2071 - 2100</button>
     </div>
 
     <div class="map-block">
-      <div id="aridityg1"><img src="images/ariditymap1.png"></div>
-      <div id="aridityg2"><img src="images/ariditymap2.png"></div>
-      <div id="aridityg3"><img src="images/ariditymap3.png"></div>
-      <div id="aridityg4"><img src="images/ariditymap4.png"></div>
+      <div id="aridity-global1"><img src="images/ariditymap1.png"></div>
+      <div id="aridity-global2"><img src="images/ariditymap2.png"></div>
+      <div id="aridity-global3"><img src="images/ariditymap3.png"></div>
+      <div id="aridity-global4"><img src="images/ariditymap4.png"></div>
     </div>
 
     <h2>United States distribution of aridity categories (projections are RCP8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
-      <button id="aridityubtn1" class="year-btn" onclick="showMap('aridityu',1)">1981 - 2010</button>
-      <button id="aridityubtn2" class="year-btn" onclick="showMap('aridityu',2)">2011 - 2040</button>
-      <button id="aridityubtn3" class="year-btn" onclick="showMap('aridityu',3)">2041 - 2070</button>
-      <button id="aridityubtn4" class="year-btn" onclick="showMap('aridityu',4)">2071 - 2100</button>
+      <button id="aridity-usa-button1" class="year-button" onclick="showMap('aridity-usa',1)">1981 - 2010</button>
+      <button id="aridity-usa-button2" class="year-button" onclick="showMap('aridity-usa',2)">2011 - 2040</button>
+      <button id="aridity-usa-button3" class="year-button" onclick="showMap('aridity-usa',3)">2041 - 2070</button>
+      <button id="aridity-usa-button4" class="year-button" onclick="showMap('aridity-usa',4)">2071 - 2100</button>
     </div>
 
     <div class="map-block">
-      <div id="aridityu1"><img src="images/ariditymap1usa.png"></div>
-      <div id="aridityu2"><img src="images/ariditymap2usa.png"></div>
-      <div id="aridityu3"><img src="images/ariditymap3usa.png"></div>
-      <div id="aridityu4"><img src="images/ariditymap4usa.png"></div>
+      <div id="aridity-usa1"><img src="images/ariditymap1usa.png"></div>
+      <div id="aridity-usa2"><img src="images/ariditymap2usa.png"></div>
+      <div id="aridity-usa3"><img src="images/ariditymap3usa.png"></div>
+      <div id="aridity-usa4"><img src="images/ariditymap4usa.png"></div>
+    </div>
+
+    <h2>Mexico, Central America & the Carribean distribution of aridity categories (projections are RCP8.5 high emissions normals)</h2>
+
+    <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
+      <button id="aridity-mesoamerica-button1" class="year-button" onclick="showMap('aridity-mesoamerica',1)">1981 - 2010</button>
+      <button id="aridity-mesoamerica-button2" class="year-button" onclick="showMap('aridity-mesoamerica',2)">2011 - 2040</button>
+      <button id="aridity-mesoamerica-button3" class="year-button" onclick="showMap('aridity-mesoamerica',3)">2041 - 2070</button>
+      <button id="aridity-mesoamerica-button4" class="year-button" onclick="showMap('aridity-mesoamerica',4)">2071 - 2100</button>
+    </div>
+
+    <div class="map-block">
+      <div id="aridity-mesoamerica1"><img src="images/ariditymap1mesoamerica.png"></div>
+      <div id="aridity-mesoamerica2"><img src="images/ariditymap2mesoamerica.png"></div>
+      <div id="aridity-mesoamerica3"><img src="images/ariditymap3mesoamerica.png"></div>
+      <div id="aridity-mesoamerica4"><img src="images/ariditymap4mesoamerica.png"></div>
+    </div>
+
+    <h2>South America distribution of aridity categories (projections are RCP8.5 high emissions normals)</h2>
+
+    <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
+      <button id="aridity-southamerica-button1" class="year-button" onclick="showMap('aridity-southamerica',1)">1981 - 2010</button>
+      <button id="aridity-southamerica-button2" class="year-button" onclick="showMap('aridity-southamerica',2)">2011 - 2040</button>
+      <button id="aridity-southamerica-button3" class="year-button" onclick="showMap('aridity-southamerica',3)">2041 - 2070</button>
+      <button id="aridity-southamerica-button4" class="year-button" onclick="showMap('aridity-southamerica',4)">2071 - 2100</button>
+    </div>
+
+    <div class="map-block">
+      <div id="aridity-southamerica1"><img src="images/ariditymap1southamerica.png"></div>
+      <div id="aridity-southamerica2"><img src="images/ariditymap2southamerica.png"></div>
+      <div id="aridity-southamerica3"><img src="images/ariditymap3southamerica.png"></div>
+      <div id="aridity-southamerica4"><img src="images/ariditymap4southamerica.png"></div>
+    </div>
+
+    <h2>Africa distribution of aridity categories (projections are RCP8.5 high emissions normals)</h2>
+
+    <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
+      <button id="aridity-africa-button1" class="year-button" onclick="showMap('aridity-africa',1)">1981 - 2010</button>
+      <button id="aridity-africa-button2" class="year-button" onclick="showMap('aridity-africa',2)">2011 - 2040</button>
+      <button id="aridity-africa-button3" class="year-button" onclick="showMap('aridity-africa',3)">2041 - 2070</button>
+      <button id="aridity-africa-button4" class="year-button" onclick="showMap('aridity-africa',4)">2071 - 2100</button>
+    </div>
+
+    <div class="map-block">
+      <div id="aridity-africa1"><img src="images/ariditymap1africa.png"></div>
+      <div id="aridity-africa2"><img src="images/ariditymap2africa.png"></div>
+      <div id="aridity-africa3"><img src="images/ariditymap3africa.png"></div>
+      <div id="aridity-africa4"><img src="images/ariditymap4africa.png"></div>
     </div>
 
     <h1>Summer Maps</h1>
@@ -205,34 +308,82 @@
 
     <h2>Global distribution of summer categories (projections are RCP8.5 high emissions normals)</h2>
 
-    <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
-      <button id="summergbtn1" class="year-btn" onclick="showMap('summerg',1)">1981 - 2010</button>
-      <button id="summergbtn2" class="year-btn" onclick="showMap('summerg',2)">2011 - 2040</button>
-      <button id="summergbtn3" class="year-btn" onclick="showMap('summerg',3)">2041 - 2070</button>
-      <button id="summergbtn4" class="year-btn" onclick="showMap('summerg',4)">2071 - 2100</button>
+    <div class="year-row" style="text-align:center; margin:10px 0;">
+      <button id="summer-global-button1" class="year-button" onclick="showMap('summer-global',1)">1981 - 2010</button>
+      <button id="summer-global-button2" class="year-button" onclick="showMap('summer-global',2)">2011 - 2040</button>
+      <button id="summer-global-button3" class="year-button" onclick="showMap('summer-global',3)">2041 - 2070</button>
+      <button id="summer-global-button4" class="year-button" onclick="showMap('summer-global',4)">2071 - 2100</button>
     </div>
 
     <div class="map-block">
-      <div id="summerg1"><img src="images/summermap1.png"></div>
-      <div id="summerg2"><img src="images/summermap2.png"></div>
-      <div id="summerg3"><img src="images/summermap3.png"></div>
-      <div id="summerg4"><img src="images/summermap4.png"></div>
+      <div id="summer-global1"><img src="images/summermap1.png"></div>
+      <div id="summer-global2"><img src="images/summermap2.png"></div>
+      <div id="summer-global3"><img src="images/summermap3.png"></div>
+      <div id="summer-global4"><img src="images/summermap4.png"></div>
     </div>
 
     <h2>United States distribution of summer categories (projections are RCP8.5 high emissions normals)</h2>
 
-    <div class="year-row" style="text-align:center; margin:10px 0;">
-      <button id="summerubtn1" class="year-btn" onclick="showMap('summeru',1)">1981 - 2010</button>
-      <button id="summerubtn2" class="year-btn" onclick="showMap('summeru',2)">2011 - 2040</button>
-      <button id="summerubtn3" class="year-btn" onclick="showMap('summeru',3)">2041 - 2070</button>
-      <button id="summerubtn4" class="year-btn" onclick="showMap('summeru',4)">2071 - 2100</button>
+    <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
+      <button id="summer-usa-button1" class="year-button" onclick="showMap('summer-usa',1)">1981 - 2010</button>
+      <button id="summer-usa-button2" class="year-button" onclick="showMap('summer-usa',2)">2011 - 2040</button>
+      <button id="summer-usa-button3" class="year-button" onclick="showMap('summer-usa',3)">2041 - 2070</button>
+      <button id="summer-usa-button4" class="year-button" onclick="showMap('summer-usa',4)">2071 - 2100</button>
     </div>
 
     <div class="map-block">
-      <div id="summeru1"><img src="images/summermap1usa.png"></div>
-      <div id="summeru2"><img src="images/summermap2usa.png"></div>
-      <div id="summeru3"><img src="images/summermap3usa.png"></div>
-      <div id="summeru4"><img src="images/summermap4usa.png"></div>
+      <div id="summer-usa1"><img src="images/summermap1usa.png"></div>
+      <div id="summer-usa2"><img src="images/summermap2usa.png"></div>
+      <div id="summer-usa3"><img src="images/summermap3usa.png"></div>
+      <div id="summer-usa4"><img src="images/summermap4usa.png"></div>
+    </div>
+
+    <h2>Mexico, Central America & the Carribean distribution of summer categories (projections are RCP8.5 high emissions normals)</h2>
+
+    <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
+      <button id="summer-mesoamerica-button1" class="year-button" onclick="showMap('summer-mesoamerica',1)">1981 - 2010</button>
+      <button id="summer-mesoamerica-button2" class="year-button" onclick="showMap('summer-mesoamerica',2)">2011 - 2040</button>
+      <button id="summer-mesoamerica-button3" class="year-button" onclick="showMap('summer-mesoamerica',3)">2041 - 2070</button>
+      <button id="summer-mesoamerica-button4" class="year-button" onclick="showMap('summer-mesoamerica',4)">2071 - 2100</button>
+    </div>
+
+    <div class="map-block">
+      <div id="summer-mesoamerica1"><img src="images/summermap1mesoamerica.png"></div>
+      <div id="summer-mesoamerica2"><img src="images/summermap2mesoamerica.png"></div>
+      <div id="summer-mesoamerica3"><img src="images/summermap3mesoamerica.png"></div>
+      <div id="summer-mesoamerica4"><img src="images/summermap4mesoamerica.png"></div>
+    </div>
+
+    <h2>South America distribution of summer categories (projections are RCP8.5 high emissions normals)</h2>
+
+    <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
+      <button id="summer-southamerica-button1" class="year-button" onclick="showMap('summer-southamerica',1)">1981 - 2010</button>
+      <button id="summer-southamerica-button2" class="year-button" onclick="showMap('summer-southamerica',2)">2011 - 2040</button>
+      <button id="summer-southamerica-button3" class="year-button" onclick="showMap('summer-southamerica',3)">2041 - 2070</button>
+      <button id="summer-southamerica-button4" class="year-button" onclick="showMap('summer-southamerica',4)">2071 - 2100</button>
+    </div>
+
+    <div class="map-block">
+      <div id="summer-southamerica1"><img src="images/summermap1southamerica.png"></div>
+      <div id="summer-southamerica2"><img src="images/summermap2southamerica.png"></div>
+      <div id="summer-southamerica3"><img src="images/summermap3southamerica.png"></div>
+      <div id="summer-southamerica4"><img src="images/summermap4southamerica.png"></div>
+    </div>
+
+    <h2>Africa distribution of summer categories (projections are RCP8.5 high emissions normals)</h2>
+
+    <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
+      <button id="summer-africa-button1" class="year-button" onclick="showMap('summer-africa',1)">1981 - 2010</button>
+      <button id="summer-africa-button2" class="year-button" onclick="showMap('summer-africa',2)">2011 - 2040</button>
+      <button id="summer-africa-button3" class="year-button" onclick="showMap('summer-africa',3)">2041 - 2070</button>
+      <button id="summer-africa-button4" class="year-button" onclick="showMap('summer-africa',4)">2071 - 2100</button>
+    </div>
+
+    <div class="map-block">
+      <div id="summer-africa1"><img src="images/summermap1africa.png"></div>
+      <div id="summer-africa2"><img src="images/summermap2africa.png"></div>
+      <div id="summer-africa3"><img src="images/summermap3africa.png"></div>
+      <div id="summer-africa4"><img src="images/summermap4africa.png"></div>
     </div>
     <br><br><br>
   </main>

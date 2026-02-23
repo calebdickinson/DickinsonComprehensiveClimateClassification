@@ -109,8 +109,8 @@ img {
   margin-inline: auto;   /* centers horizontally in LTR/RTL */
   max-width: 100%;       /* keep image within viewport width */
   height: auto;          /* preserve aspect ratio */
-  max-height: 80vh;      /* fallback for older Safari */
-  max-height: 80svh;     /* correct on iOS with browser chrome */
+  max-height: 90vh;      /* fallback for older Safari */
+  max-height: 90svh;     /* correct on iOS with browser chrome */
 }
 main h3 {
 font-size: 1.6rem;
