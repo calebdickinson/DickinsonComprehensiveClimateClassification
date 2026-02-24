@@ -70,7 +70,7 @@ var northMask = pixelLat.gt(23.43594);
 var tropic    = pixelLat.abs().lte(23.43594);
 var southMask = pixelLat.lt(-23.43594);
 
-// ---------- Base aridity classes (your thresholds from the “good” code) ----------
+// ---------- Base aridity classes ----------
 // Start as Humid(6); special ocean-ish guard at AI<=0.01; then SH/S/Desert
 var aridBase = ee.Image(6)       // 6 = Humid
   .where(AI.lte(0.01), 8)        // 8 = (we'll keep as "ocean-ish" placeholder; real oceans set later)
@@ -130,6 +130,15 @@ var clim = aridBase
   .where(oceanMask, 8)
   .where(coldCond, 7)
   .rename('climateClass');
+  
+// -------------------------------------
+// Semiarid Monsoon
+// -------------------------------------
+
+clim = clim.where(
+  clim.eq(4).and(AI.lt(0.05)),
+  9
+);
 
 // ===========================
 // Special rule:
@@ -148,14 +157,15 @@ clim = clim.where(
 
 // Visualization
 var codeColorMap = {
-  1: "#FF0000", // D: Arid Desert
-  2: "#FFA500", // S: Semiarid
+  1: "#FF0000", // D: Arid
+  2: "#FFAA00", // S: Semiarid
   3: "#FFFF00", // M: Mediterranean
   4: "#FF00FF", // W: Monsoon
   5: "#00FF00", // G: Semihumid
-  6: "#006600", // H: Humid
+  6: "#008800", // H: Humid
   7: "#0000FF", // no aridity (cold)
-  8: "#008888"  // ocean
+  8: "#008888", // ocean
+  9: "#884400"  // V: Semiarid Monsoon
 };
 var keys    = Object.keys(codeColorMap);
 var codes   = keys.map(function(k){ return parseInt(k, 10); });

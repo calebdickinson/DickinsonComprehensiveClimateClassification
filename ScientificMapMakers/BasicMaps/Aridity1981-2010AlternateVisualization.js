@@ -146,6 +146,15 @@ var clim = aridBase
   .where(oceanMask, 8)
   .where(coldCond, 7)
   .rename('climateClass');
+  
+// -------------------------------------
+// Semiarid Monsoon
+// -------------------------------------
+
+clim = clim.where(
+  clim.eq(4).and(AI.lt(0.05)),
+  9
+);
 
 // =====================================================
 // SPECIAL OVERRIDE: Mediterranean rainforest → humid
@@ -166,7 +175,8 @@ var allowedMask = clim.eq(1)
   .or(clim.eq(3))
   .or(clim.eq(4))
   .or(clim.eq(5))
-  .or(clim.eq(6));
+  .or(clim.eq(6))
+  .or(clim.eq(9));
 
 // =====================================================
 // VISUALIZATION
@@ -179,7 +189,8 @@ var codeColorMap = {
   5: "#00FF00", // Semihumid
   6: "#006600", // Humid
   7: "#0000FF", // cold (hidden)
-  8: "#008888"  // ocean (hidden)
+  8: "#008888", // ocean (hidden)
+  9: "#884400"  // Semiarid Monsoon
 };
 
 var keys    = Object.keys(codeColorMap);
@@ -196,3 +207,4 @@ Map.addLayer(
   true,
   0.8
 );
+ 
