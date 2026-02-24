@@ -41,8 +41,8 @@ function classifyCold(tC) {
   return ee.Image.constant(0)
     .where(tC.gte(50).and(tC.lt(60)),   11) // H: Hypercaneal
     .where(tC.gte(40).and(tC.lt(50)),   10) // X: Uninhabitable
-    .where(tC.gte(30).and(tC.lt(40)),    9) // Z: Ultratropical
-    .where(tC.gte(20).and(tC.lt(30)),    8) // A: Supertropical
+    .where(tC.gte(30).and(tC.lt(40)),    9) // Z: Hyperequatorial
+    .where(tC.gte(20).and(tC.lt(30)),    8) // A: Equatorial
     .where(tC.gte(10).and(tC.lt(20)),    7) // B: Tropical
     .where(tC.gte(0).and(tC.lt(10)),     6) // C: Subtropical
     .where(tC.gte(-10).and(tC.lt(0)),    5) // D: Temperate
@@ -57,10 +57,10 @@ var coldZone = classifyCold(coldestC_global);
 
 // --- Palette mapping ---
 var codeColorMap = {
-  11: "#0000FF", // H: Hypercaneal
-  10: "#0000FF", // X: Uninhabitable
-   9: "#000000", // Z: Ultratropical
-   8: "#C71585", // A: Supertropical
+  11: "#000000", // H: Hypercaneal
+  10: "#000000", // X: Uninhabitable
+   9: "#00FFFF", // Z: Hyperequatorial
+   8: "#C71585", // A: Equatorial
    7: "#FF0000", // B: Tropical
    6: "#FFA500", // C: Subtropical
    5: "#008800", // D: Temperate
