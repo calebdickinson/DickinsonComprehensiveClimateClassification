@@ -81,7 +81,7 @@ var arcticStereo = ee.Projection(
 // --- Reproject composite ---
 var compositeProjected = compositeArctic.reproject({
   crs: arcticStereo,
-  scale: 2000
+  scale: 1000
 });
 
 // --- Generate thumbnail using exact land boundary ---
