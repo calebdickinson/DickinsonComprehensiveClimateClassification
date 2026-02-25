@@ -6,42 +6,48 @@
   <title>Climate Legend</title>
 
   <style>
-    body {
-      background-color: #000; /* black page background */
-      color: #fff;            /* white text (for anything outside legend) */
-    }
-
     .legend {
-      position: fixed; top: 20px; right: 20px; z-index: 9999;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 9999;
       display: grid;
       grid-template-columns: repeat(4, 1fr);   /* 4 uniform columns */
-      gap: 16px 28px; padding: 24px; 
-      background: #fff;                        /* keep legend white */
-      border: 2px solid #ccc; border-radius: 16px;
-      font-family: system-ui, Arial, sans-serif; color: #222;
+      gap: 16px 28px;
+      padding: 24px; 
+      font-family: system-ui, Arial, sans-serif;
+      color: #222;
       box-shadow: 0 8px 28px rgba(0,0,0,.08);
       max-width: min(96vw, 1600px);
     }
 
     .legend-item {
-      display: flex; align-items: center; gap: 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
       min-width: 0;
     }
 
     .legend-swatch {
-      width: 72px; height: 36px; border: 2px solid #333; border-radius: 6px;
-      box-sizing: border-box; opacity: 1;
+      width: 72px;
+      height: 36px;
+      border-radius: 6px;
+      box-sizing: border-box;
+      opacity: 1;
       flex: 0 0 auto;
     }
 
     .legend-label {
       display: block;
-      white-space: nowrap; overflow: hidden;
+      white-space: nowrap;
+      overflow: hidden;
       text-overflow: clip;
-      flex: 1 1 auto; min-width: 0;
+      flex: 1 1 auto;
+      min-width: 0;
       line-height: 1.2;
     }
   </style>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 </head>
 
 <body>
@@ -54,7 +60,7 @@
       { label: "Arid (d)",              color: "#FF0000" },
       { label: "Mediterranean (m)",     color: "#FFFF00" },
       { label: "Monsoon (w)",           color: "#FF00FF" },
-      { label: "Semiarid Monsoon (v)",           color: "#884400" },
+      { label: "Semiarid Monsoon (v)",  color: "#884400" },
       { label: "Polar/Subpolar/Alpine", color: "#0000FF" }
     ];
 
@@ -96,6 +102,30 @@
         }
       });
     })();
+    
+  // ============================
+  // AUTO EXPORT LEGEND
+  // ============================
+
+  const AUTO_EXPORT = true;
+
+  if (AUTO_EXPORT) {
+    setTimeout(async () => {
+
+      const el = document.querySelector('.legend');
+
+      const canvas = await html2canvas(el, {
+        scale: 3,
+        backgroundColor: null
+      });
+
+      const link = document.createElement('a');
+      link.download = `ariditylegend.png`;
+      link.href = canvas.toDataURL("image/png");
+      link.click();
+
+    }, 200);
+  }
   </script>
 </body>
 </html>
