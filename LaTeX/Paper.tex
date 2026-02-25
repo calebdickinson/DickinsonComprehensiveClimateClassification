@@ -435,10 +435,9 @@ minimum monthly precipitation of at least 50\% of mean monthly PET.
 % =====================================================
 
 \node[decision] (relevance)
-{Aridity applicable?\\
-$T_{\max,\mathrm{mean}} \ge 15^\circ\mathrm{C}$\\
+{$T_{\max,\mathrm{mean}} \ge 15^\circ\mathrm{C}$\\
 $\text{ and }
-\ T_{\min,\mathrm{mean}} \ge -30^\circ\mathrm{C}$};
+\ T_{\min,\mathrm{mean}} \ge -30^\circ\mathrm{C}$?};
 
 \node[outcome, left=of relevance] (polar)
 {Aridity not evaluated\\
@@ -464,8 +463,8 @@ Polar / Subpolar / Alpine};
 % =====================================================
 
 \node[decision, below=of aridcheck] (medcheck)
-{$(\phi > +\varepsilon \text{ or } \phi < -\varepsilon)$\\
-\text{and} $HS < 0.4$};
+{$|\phi| > \varepsilon$\\
+\text{and} $HS < 0.4$?};
 
 \draw[arrow] (aridcheck) -- node[left,font=\small]{No} (medcheck);
 
@@ -547,7 +546,7 @@ to its orbital plane. For present-day Earth, $\varepsilon \approx 23.44^\circ$,
 but $\varepsilon$ is treated here as a physical parameter rather than a fixed
 constant, allowing for secular variation over geological timescales.
 In this context, extratropical locations are defined as latitudes poleward
-of the astronomical tropics (i.e., $|\phi| > \varepsilon$).
+of the astronomical tropics.
 Mediterranean seasonality is evaluated only at such locations.
 }
 \end{figure}
