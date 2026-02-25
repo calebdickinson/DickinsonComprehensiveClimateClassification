@@ -27,6 +27,7 @@
 
 \setlength{\parskip}{0.6em}
 \setlength{\parindent}{0pt}
+\setlength{\belowcaptionskip}{10pt}
 \onehalfspacing
 
 \newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
@@ -139,7 +140,6 @@ Paleoclimates, future climates, hypothetical states \\
 \hline
 \end{tabular}
 \end{table}
-\FloatBarrier
 
 % ============================================================
 \section{Thermal Metrics and Cold-Month Thermal Zones}
@@ -162,7 +162,7 @@ not typically distinguish fundamentally different winter regimes at the
 global level, while coarser intervals would collapse thermodynamically
 distinct cold states.
 
-By contrast, the warm-month thermal axis is partitioned at higher resolution, using 5~$^\circ$C intervals when a given temperature occurs as a warmest-month mean rather than as a coldest-month mean, across the range of monthly mean temperatures from $\geq 0$ to $<40~^\circ$C. This reflects the continuous and highly sensitive influence of summer warmth on surface energy balance, evapotranspiration, and heat stress. Accordingly, cold-month thermal classes C, B, A, and Z—defined by their coldest-month means—are each subdivided into paired warm-month categories when their warmest-month means fall within these same numerical temperature intervals (e.g., C into c$_1$ and c$_2$, B into b$_1$ and b$_2$, with analogous subdivisions for A and Z).
+By contrast, the warm-month thermal axis is partitioned at higher resolution, using 5~$^\circ$C intervals when a given temperature occurs as a warmest-month mean rather than as a coldest-month mean, across the range of monthly mean temperatures from $\geq 0$ to $<40~^\circ$C. This reflects the continuous and highly sensitive influence of summer warmth on surface energy balance, evapotranspiration, and heat stress. Accordingly, cold-month thermal classes C, B, A, and Z—defined by their coldest-month means—are each subdivided into paired warm-month categories when their warmest-month means fall within these same numerical temperature intervals (e.g., C into c1 and c2, B into b1 and b2, with analogous subdivisions for A and Z).
 
 This asymmetric treatment follows long-standing precedent in climate classification. In the Köppen system, for example, the temperature spacing between winter-regime isotherms is substantially broader than that separating summer heat regimes (Köppen, 1884). The combined use of uniform 10~$^\circ$C cold-month bins and finer warm-month subdivisions therefore produces a transparent, scale-consistent partition of climate space that remains robust across paleoclimates, projected future warming scenarios, and hypothetical climate states.
 
@@ -212,6 +212,8 @@ mediated habitation.
 The term \emph{hypercaneal} is used here strictly as a thermal descriptor for extremely hot climatological monthly mean temperatures. Hypercaneal cold-month and/or warm-month thermal zones should be understood as a \emph{necessary but not sufficient} condition for the formation of hypercane vortices (Emanuel, 1988). Hypercane development also depends on additional dynamical and oceanic factors that are not represented in a monthly-mean thermal
 classification. Accordingly, classification as hypercaneal does not imply the existence, frequency, or persistence of hypercanes.
 
+\clearpage
+
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{global_cold_month_1981-2010.png}
@@ -229,7 +231,8 @@ CHELSA BIOCLIM+ v2.1 1981-2010 temperature fields (Karger et al., 2017; Brun et 
 }
 \label{fig:cold_month_legend}
 \end{figure}
-\FloatBarrier
+
+\clearpage
 
 % ============================================================
 \section{Warm-Month Thermal Zones}
@@ -273,6 +276,8 @@ consistency across paleoclimates, present-day climates, and projected
 future warming scenarios without reliance on species-specific tolerance
 limits or human comfort thresholds.
 
+\clearpage
+
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{global_warm_month_1981-2010.png}
@@ -291,6 +296,8 @@ CHELSA BIOCLIM+ v2.1 1981-2010 temperature fields (Karger et al., 2017; Brun et 
 \label{fig:warm_month_legend}
 \end{figure}
 \FloatBarrier
+
+\clearpage
 
 % ============================================================
 \section{Aridity Relevance and Aridity Regimes}
@@ -550,6 +557,7 @@ Mediterranean seasonality is evaluated only at such locations.
 \includegraphics[width=\textwidth]{global_aridity_1981-2010.png}
 \label{fig:global_aridity}
 \end{figure}
+\FloatBarrier
 
 \begin{figure}[htbp]
 \centering
@@ -562,7 +570,8 @@ CHELSA BIOCLIM+ v2.1 1981-2010 precipitation and Penman-Monteith PET fields (Kar
 }
 \label{fig:aridity_legend}
 \end{figure}
-\FloatBarrier
+
+\clearpage
 
 % ============================================================
 \section{Illustrative Complete Climate Codes}
