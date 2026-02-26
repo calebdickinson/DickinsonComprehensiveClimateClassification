@@ -1,5 +1,5 @@
 // =======================================================================
-// Australia thumbnail: climate + admin-0 + admin-1
+// Australia thumbnail: climate + admin-1 + admin-2
 // =======================================================================
 
 // 1) Australia bounding box (includes Tasmania)
