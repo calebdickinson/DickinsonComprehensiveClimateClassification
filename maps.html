@@ -98,6 +98,7 @@
     }
     // default visible maps on page load
     window.addEventListener('DOMContentLoaded', () => {
+
       showMap('winter-global',1);
       showMap('winter-australia',1);
       showMap('winter-newzealand',1);
@@ -113,6 +114,8 @@
       showMap('winter-russia',1);
       showMap('winter-middleeast',1);
       showMap('winter-centralasia',1);
+      showMap('winter-eastasia',1);
+
       showMap('aridity-global',1);
       showMap('aridity-australia',1);
       showMap('aridity-newzealand',1);
@@ -128,6 +131,8 @@
       showMap('aridity-russia',1);
       showMap('aridity-middleeast',1);
       showMap('aridity-centralasia',1);
+      showMap('aridity-eastasia',1);
+
       showMap('summer-global',1);
       showMap('summer-australia',1);
       showMap('summer-newzealand',1);
@@ -143,6 +148,8 @@
       showMap('summer-russia',1);
       showMap('summer-middleeast',1);
       showMap('summer-centralasia',1);
+      showMap('summer-eastasia',1);
+
     });
   </script>
 </head>
@@ -405,6 +412,22 @@
       <div id="winter-centralasia4"><img src="images/wintermap4centralasia.png"></div>
     </div>
 
+    <h2>East Asia distribution of winter categories<br>(projections are RCP8.5 high emissions normals)</h2>
+
+    <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
+      <button id="winter-eastasia-button1" class="year-button" onclick="showMap('winter-eastasia',1)">1981 - 2010</button>
+      <button id="winter-eastasia-button2" class="year-button" onclick="showMap('winter-eastasia',2)">2011 - 2040</button>
+      <button id="winter-eastasia-button3" class="year-button" onclick="showMap('winter-eastasia',3)">2041 - 2070</button>
+      <button id="winter-eastasia-button4" class="year-button" onclick="showMap('winter-eastasia',4)">2071 - 2100</button>
+    </div>
+
+    <div class="map-block">
+      <div id="winter-eastasia1"><img src="images/wintermap1eastasia.png"></div>
+      <div id="winter-eastasia2"><img src="images/wintermap2eastasia.png"></div>
+      <div id="winter-eastasia3"><img src="images/wintermap3eastasia.png"></div>
+      <div id="winter-eastasia4"><img src="images/wintermap4eastasia.png"></div>
+    </div>
+
     <h1>Aridity Maps</h1>
     <img src="images/ariditylegend.png" alt="Aridity map legend" style="max-width: 1200px;">
 
@@ -648,6 +671,22 @@
       <div id="aridity-centralasia4"><img src="images/ariditymap4centralasia.png"></div>
     </div>
 
+    <h2>East Asia distribution of aridity categories<br>(projections are RCP8.5 high emissions normals)</h2>
+
+    <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
+      <button id="aridity-eastasia-button1" class="year-button" onclick="showMap('aridity-eastasia',1)">1981 - 2010</button>
+      <button id="aridity-eastasia-button2" class="year-button" onclick="showMap('aridity-eastasia',2)">2011 - 2040</button>
+      <button id="aridity-eastasia-button3" class="year-button" onclick="showMap('aridity-eastasia',3)">2041 - 2070</button>
+      <button id="aridity-eastasia-button4" class="year-button" onclick="showMap('aridity-eastasia',4)">2071 - 2100</button>
+    </div>
+
+    <div class="map-block">
+      <div id="aridity-eastasia1"><img src="images/ariditymap1eastasia.png"></div>
+      <div id="aridity-eastasia2"><img src="images/ariditymap2eastasia.png"></div>
+      <div id="aridity-eastasia3"><img src="images/ariditymap3eastasia.png"></div>
+      <div id="aridity-eastasia4"><img src="images/ariditymap4eastasia.png"></div>
+    </div>
+
     <h1>Summer Maps</h1>
     <img src="images/summerlegend.png" alt="Summer map legend" style="max-width:1000px;">
 
@@ -753,7 +792,6 @@
       <div id="summer-canada3"><img src="images/summermap3canada.png"></div>
       <div id="summer-canada4"><img src="images/summermap4canada.png"></div>
     </div>
-
 
     <h2>Contiguous United States distribution of summer categories<br>(projections are RCP8.5 high emissions normals)</h2>
 
@@ -897,6 +935,22 @@
       <div id="summer-centralasia2"><img src="images/summermap2centralasia.png"></div>
       <div id="summer-centralasia3"><img src="images/summermap3centralasia.png"></div>
       <div id="summer-centralasia4"><img src="images/summermap4centralasia.png"></div>
+    </div>
+
+    <h2> East Asia distribution of summer categories<br>(projections are RCP8.5 high emissions normals)</h2>
+
+    <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
+      <button id="summer-eastasia-button1" class="year-button" onclick="showMap('summer-eastasia',1)">1981 - 2010</button>
+      <button id="summer-eastasia-button2" class="year-button" onclick="showMap('summer-eastasia',2)">2011 - 2040</button>
+      <button id="summer-eastasia-button3" class="year-button" onclick="showMap('summer-eastasia',3)">2041 - 2070</button>
+      <button id="summer-eastasia-button4" class="year-button" onclick="showMap('summer-eastasia',4)">2071 - 2100</button>
+    </div>
+
+    <div class="map-block">
+      <div id="summer-eastasia1"><img src="images/summermap1eastasia.png"></div>
+      <div id="summer-eastasia2"><img src="images/summermap2eastasia.png"></div>
+      <div id="summer-eastasia3"><img src="images/summermap3eastasia.png"></div>
+      <div id="summer-eastasia4"><img src="images/summermap4eastasia.png"></div>
     </div>
 
     <br><br><br>
