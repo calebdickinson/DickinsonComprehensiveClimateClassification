@@ -16612,7 +16612,7 @@
     }
   },
   "71.2906, -156.7886": {
-    "city": "Utqiaġvik (Barrow), Alaska, United States",
+    "city": "Utqiaġvik, Alaska, United States",
     "periods": {
       "1981-2010": {
         "annual_pet_mm": "317",
@@ -16647,7 +16647,7 @@
       "2071-2100": {
         "annual_pet_mm": "505",
         "dickinson": "Csb2",
-        "dickinson_bordering": "Dsb2 Cgb2 Cwb2",
+        "dickinson_bordering": "Dsb2 Cvb2 Cgb2 Cwb2",
         "koppen": "BSk",
         "koppen_bordering": "none",
         "p_pet": "0.50",
