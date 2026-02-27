@@ -101,6 +101,7 @@
       showMap('winter-global',1);
       showMap('winter-australia',1);
       showMap('winter-newzealand',1);
+      showMap('winter-hawaii',1);
       showMap('winter-alaska',1);
       showMap('winter-canada',1);
       showMap('winter-usa',1);
@@ -110,9 +111,12 @@
       showMap('winter-arctic',1);
       showMap('winter-europe',1);
       showMap('winter-russia',1);
+      showMap('winter-middleeast',1);
+      showMap('winter-centralasia',1);
       showMap('aridity-global',1);
       showMap('aridity-australia',1);
       showMap('aridity-newzealand',1);
+      showMap('aridity-hawaii',1);
       showMap('aridity-alaska',1);
       showMap('aridity-canada',1);
       showMap('aridity-usa',1);
@@ -122,9 +126,12 @@
       showMap('aridity-arctic',1);
       showMap('aridity-europe',1);
       showMap('aridity-russia',1);
+      showMap('aridity-middleeast',1);
+      showMap('aridity-centralasia',1);
       showMap('summer-global',1);
       showMap('summer-australia',1);
       showMap('summer-newzealand',1);
+      showMap('summer-hawaii',1);
       showMap('summer-alaska',1);
       showMap('summer-canada',1);
       showMap('summer-usa',1);
@@ -134,6 +141,8 @@
       showMap('summer-arctic',1);
       showMap('summer-europe',1);
       showMap('summer-russia',1);
+      showMap('summer-middleeast',1);
+      showMap('summer-centralasia',1);
     });
   </script>
 </head>
@@ -202,6 +211,22 @@
       <div id="winter-newzealand2"><img src="images/wintermap2newzealand.png"></div>
       <div id="winter-newzealand3"><img src="images/wintermap3newzealand.png"></div>
       <div id="winter-newzealand4"><img src="images/wintermap4newzealand.png"></div>
+    </div>
+
+    <h2>Hawaii distribution of winter categories<br>(projections are RCP8.5 high emissions normals)</h2>
+
+    <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
+      <button id="winter-hawaii-button1" class="year-button" onclick="showMap('winter-hawaii',1)">1981 - 2010</button>
+      <button id="winter-hawaii-button2" class="year-button" onclick="showMap('winter-hawaii',2)">2011 - 2040</button>
+      <button id="winter-hawaii-button3" class="year-button" onclick="showMap('winter-hawaii',3)">2041 - 2070</button>
+      <button id="winter-hawaii-button4" class="year-button" onclick="showMap('winter-hawaii',4)">2071 - 2100</button>
+    </div>
+
+    <div class="map-block">
+      <div id="winter-hawaii1"><img src="images/wintermap1hawaii.png"></div>
+      <div id="winter-hawaii2"><img src="images/wintermap2hawaii.png"></div>
+      <div id="winter-hawaii3"><img src="images/wintermap3hawaii.png"></div>
+      <div id="winter-hawaii4"><img src="images/wintermap4hawaii.png"></div>
     </div>
 
     <h2>Alaska distribution of winter categories<br>(projections are RCP8.5 high emissions normals)</h2>
@@ -348,6 +373,38 @@
       <div id="winter-russia4"><img src="images/wintermap4russia.png"></div>
     </div>
 
+    <h2>Middle East distribution of winter categories<br>(projections are RCP8.5 high emissions normals)</h2>
+
+    <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
+      <button id="winter-middleeast-button1" class="year-button" onclick="showMap('winter-middleeast',1)">1981 - 2010</button>
+      <button id="winter-middleeast-button2" class="year-button" onclick="showMap('winter-middleeast',2)">2011 - 2040</button>
+      <button id="winter-middleeast-button3" class="year-button" onclick="showMap('winter-middleeast',3)">2041 - 2070</button>
+      <button id="winter-middleeast-button4" class="year-button" onclick="showMap('winter-middleeast',4)">2071 - 2100</button>
+    </div>
+
+    <div class="map-block">
+      <div id="winter-middleeast1"><img src="images/wintermap1middleeast.png"></div>
+      <div id="winter-middleeast2"><img src="images/wintermap2middleeast.png"></div>
+      <div id="winter-middleeast3"><img src="images/wintermap3middleeast.png"></div>
+      <div id="winter-middleeast4"><img src="images/wintermap4middleeast.png"></div>
+    </div>
+
+    <h2>Central Asia distribution of winter categories<br>(projections are RCP8.5 high emissions normals)</h2>
+
+    <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
+      <button id="winter-centralasia-button1" class="year-button" onclick="showMap('winter-centralasia',1)">1981 - 2010</button>
+      <button id="winter-centralasia-button2" class="year-button" onclick="showMap('winter-centralasia',2)">2011 - 2040</button>
+      <button id="winter-centralasia-button3" class="year-button" onclick="showMap('winter-centralasia',3)">2041 - 2070</button>
+      <button id="winter-centralasia-button4" class="year-button" onclick="showMap('winter-centralasia',4)">2071 - 2100</button>
+    </div>
+
+    <div class="map-block">
+      <div id="winter-centralasia1"><img src="images/wintermap1centralasia.png"></div>
+      <div id="winter-centralasia2"><img src="images/wintermap2centralasia.png"></div>
+      <div id="winter-centralasia3"><img src="images/wintermap3centralasia.png"></div>
+      <div id="winter-centralasia4"><img src="images/wintermap4centralasia.png"></div>
+    </div>
+
     <h1>Aridity Maps</h1>
     <img src="images/ariditylegend.png" alt="Aridity map legend" style="max-width: 1200px;">
 
@@ -397,6 +454,22 @@
       <div id="aridity-newzealand2"><img src="images/ariditymap2newzealand.png"></div>
       <div id="aridity-newzealand3"><img src="images/ariditymap3newzealand.png"></div>
       <div id="aridity-newzealand4"><img src="images/ariditymap4newzealand.png"></div>
+    </div>
+
+    <h2>Hawaii distribution of aridity categories<br>(projections are RCP8.5 high emissions normals)</h2>
+
+    <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
+      <button id="aridity-hawaii-button1" class="year-button" onclick="showMap('aridity-hawaii',1)">1981 - 2010</button>
+      <button id="aridity-hawaii-button2" class="year-button" onclick="showMap('aridity-hawaii',2)">2011 - 2040</button>
+      <button id="aridity-hawaii-button3" class="year-button" onclick="showMap('aridity-hawaii',3)">2041 - 2070</button>
+      <button id="aridity-hawaii-button4" class="year-button" onclick="showMap('aridity-hawaii',4)">2071 - 2100</button>
+    </div>
+
+    <div class="map-block">
+      <div id="aridity-hawaii1"><img src="images/ariditymap1hawaii.png"></div>
+      <div id="aridity-hawaii2"><img src="images/ariditymap2hawaii.png"></div>
+      <div id="aridity-hawaii3"><img src="images/ariditymap3hawaii.png"></div>
+      <div id="aridity-hawaii4"><img src="images/ariditymap4hawaii.png"></div>
     </div>
 
     <h2>Alaska distribution of aridity categories<br>(projections are RCP8.5 high emissions normals)</h2>
@@ -543,6 +616,38 @@
       <div id="aridity-russia4"><img src="images/ariditymap4russia.png"></div>
     </div>
 
+    <h2>Middle East distribution of aridity categories<br>(projections are RCP8.5 high emissions normals)</h2>
+
+    <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
+      <button id="aridity-middleeast-button1" class="year-button" onclick="showMap('aridity-middleeast',1)">1981 - 2010</button>
+      <button id="aridity-middleeast-button2" class="year-button" onclick="showMap('aridity-middleeast',2)">2011 - 2040</button>
+      <button id="aridity-middleeast-button3" class="year-button" onclick="showMap('aridity-middleeast',3)">2041 - 2070</button>
+      <button id="aridity-middleeast-button4" class="year-button" onclick="showMap('aridity-middleeast',4)">2071 - 2100</button>
+    </div>
+
+    <div class="map-block">
+      <div id="aridity-middleeast1"><img src="images/ariditymap1middleeast.png"></div>
+      <div id="aridity-middleeast2"><img src="images/ariditymap2middleeast.png"></div>
+      <div id="aridity-middleeast3"><img src="images/ariditymap3middleeast.png"></div>
+      <div id="aridity-middleeast4"><img src="images/ariditymap4middleeast.png"></div>
+    </div>
+
+    <h2>Central Asia distribution of aridity categories<br>(projections are RCP8.5 high emissions normals)</h2>
+
+    <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
+      <button id="aridity-centralasia-button1" class="year-button" onclick="showMap('aridity-centralasia',1)">1981 - 2010</button>
+      <button id="aridity-centralasia-button2" class="year-button" onclick="showMap('aridity-centralasia',2)">2011 - 2040</button>
+      <button id="aridity-centralasia-button3" class="year-button" onclick="showMap('aridity-centralasia',3)">2041 - 2070</button>
+      <button id="aridity-centralasia-button4" class="year-button" onclick="showMap('aridity-centralasia',4)">2071 - 2100</button>
+    </div>
+
+    <div class="map-block">
+      <div id="aridity-centralasia1"><img src="images/ariditymap1centralasia.png"></div>
+      <div id="aridity-centralasia2"><img src="images/ariditymap2centralasia.png"></div>
+      <div id="aridity-centralasia3"><img src="images/ariditymap3centralasia.png"></div>
+      <div id="aridity-centralasia4"><img src="images/ariditymap4centralasia.png"></div>
+    </div>
+
     <h1>Summer Maps</h1>
     <img src="images/summerlegend.png" alt="Summer map legend" style="max-width:1000px;">
 
@@ -599,6 +704,22 @@
       <div id="summer-newzealand2"><img src="images/summermap2newzealand.png"></div>
       <div id="summer-newzealand3"><img src="images/summermap3newzealand.png"></div>
       <div id="summer-newzealand4"><img src="images/summermap4newzealand.png"></div>
+    </div>
+
+    <h2>Hawaii distribution of summer categories<br>(projections are RCP8.5 high emissions normals)</h2>
+
+    <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
+      <button id="summer-hawaii-button1" class="year-button" onclick="showMap('summer-hawaii',1)">1981 - 2010</button>
+      <button id="summer-hawaii-button2" class="year-button" onclick="showMap('summer-hawaii',2)">2011 - 2040</button>
+      <button id="summer-hawaii-button3" class="year-button" onclick="showMap('summer-hawaii',3)">2041 - 2070</button>
+      <button id="summer-hawaii-button4" class="year-button" onclick="showMap('summer-hawaii',4)">2071 - 2100</button>
+    </div>
+
+    <div class="map-block">
+      <div id="summer-hawaii1"><img src="images/summermap1hawaii.png"></div>
+      <div id="summer-hawaii2"><img src="images/summermap2hawaii.png"></div>
+      <div id="summer-hawaii3"><img src="images/summermap3hawaii.png"></div>
+      <div id="summer-hawaii4"><img src="images/summermap4hawaii.png"></div>
     </div>
 
     <h2>Alaska distribution of summer categories<br>(projections are RCP8.5 high emissions normals)</h2>
@@ -744,6 +865,38 @@
       <div id="summer-russia2"><img src="images/summermap2russia.png"></div>
       <div id="summer-russia3"><img src="images/summermap3russia.png"></div>
       <div id="summer-russia4"><img src="images/summermap4russia.png"></div>
+    </div>
+
+    <h2>Middle East distribution of summer categories<br>(projections are RCP8.5 high emissions normals)</h2>
+
+    <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
+      <button id="summer-middleeast-button1" class="year-button" onclick="showMap('summer-middleeast',1)">1981 - 2010</button>
+      <button id="summer-middleeast-button2" class="year-button" onclick="showMap('summer-middleeast',2)">2011 - 2040</button>
+      <button id="summer-middleeast-button3" class="year-button" onclick="showMap('summer-middleeast',3)">2041 - 2070</button>
+      <button id="summer-middleeast-button4" class="year-button" onclick="showMap('summer-middleeast',4)">2071 - 2100</button>
+    </div>
+
+    <div class="map-block">
+      <div id="summer-middleeast1"><img src="images/summermap1middleeast.png"></div>
+      <div id="summer-middleeast2"><img src="images/summermap2middleeast.png"></div>
+      <div id="summer-middleeast3"><img src="images/summermap3middleeast.png"></div>
+      <div id="summer-middleeast4"><img src="images/summermap4middleeast.png"></div>
+    </div>
+
+    <h2>Central Asia distribution of summer categories<br>(projections are RCP8.5 high emissions normals)</h2>
+
+    <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
+      <button id="summer-centralasia-button1" class="year-button" onclick="showMap('summer-centralasia',1)">1981 - 2010</button>
+      <button id="summer-centralasia-button2" class="year-button" onclick="showMap('summer-centralasia',2)">2011 - 2040</button>
+      <button id="summer-centralasia-button3" class="year-button" onclick="showMap('summer-centralasia',3)">2041 - 2070</button>
+      <button id="summer-centralasia-button4" class="year-button" onclick="showMap('summer-centralasia',4)">2071 - 2100</button>
+    </div>
+
+    <div class="map-block">
+      <div id="summer-centralasia1"><img src="images/summermap1centralasia.png"></div>
+      <div id="summer-centralasia2"><img src="images/summermap2centralasia.png"></div>
+      <div id="summer-centralasia3"><img src="images/summermap3centralasia.png"></div>
+      <div id="summer-centralasia4"><img src="images/summermap4centralasia.png"></div>
     </div>
 
     <br><br><br>
