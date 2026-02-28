@@ -49,7 +49,7 @@
     "periods": {
       "1981-2010": {
         "annual_pet_mm": "1416",
-        "dickinson": "Awa2",
+        "dickinson": "Ava2",
         "dickinson_bordering": "none",
         "koppen": "BSh",
         "koppen_bordering": "none",
@@ -59,7 +59,7 @@
       },
       "2011-2040": {
         "annual_pet_mm": "1442",
-        "dickinson": "Awa2",
+        "dickinson": "Ava2",
         "dickinson_bordering": "none",
         "koppen": "BSh",
         "koppen_bordering": "none",
@@ -69,8 +69,8 @@
       },
       "2041-2070": {
         "annual_pet_mm": "1508",
-        "dickinson": "Awz1",
-        "dickinson_bordering": "Awa2",
+        "dickinson": "Avz1",
+        "dickinson_bordering": "Ava2",
         "koppen": "BSh",
         "koppen_bordering": "none",
         "p_pet": "0.32",
@@ -79,7 +79,7 @@
       },
       "2071-2100": {
         "annual_pet_mm": "1585",
-        "dickinson": "Awz1",
+        "dickinson": "Avz1",
         "dickinson_bordering": "none",
         "koppen": "BSh",
         "koppen_bordering": "none",
@@ -9323,7 +9323,7 @@
     "periods": {
       "1981-2010": {
         "annual_pet_mm": "1442",
-        "dickinson": "Bwz1",
+        "dickinson": "Bvz1",
         "dickinson_bordering": "none",
         "koppen": "BSh",
         "koppen_bordering": "none",
@@ -13496,7 +13496,7 @@
       "2071-2100": {
         "annual_pet_mm": "956",
         "dickinson": "Dsz1",
-        "dickinson_bordering": "Dgz1 Dwz1",
+        "dickinson_bordering": "Dvz1 Dgz1 Dwz1",
         "koppen": "BSk",
         "koppen_bordering": "none",
         "p_pet": "0.49",
@@ -14320,8 +14320,8 @@
     "periods": {
       "1981-2010": {
         "annual_pet_mm": "1361",
-        "dickinson": "Bwz1",
-        "dickinson_bordering": "Bsz1 Bgz1",
+        "dickinson": "Bvz1",
+        "dickinson_bordering": "Bwz1 Bsz1 Bgz1",
         "koppen": "BSh",
         "koppen_bordering": "none",
         "p_pet": "0.49",
@@ -14880,7 +14880,7 @@
       },
       "2041-2070": {
         "annual_pet_mm": "818",
-        "dickinson": "Ewa1",
+        "dickinson": "Eva1",
         "dickinson_bordering": "none",
         "koppen": "BSk",
         "koppen_bordering": "none",
@@ -14890,7 +14890,7 @@
       },
       "2071-2100": {
         "annual_pet_mm": "944",
-        "dickinson": "Ewa2",
+        "dickinson": "Eva2",
         "dickinson_bordering": "none",
         "koppen": "BSk",
         "koppen_bordering": "none",
@@ -15421,8 +15421,8 @@
       },
       "2041-2070": {
         "annual_pet_mm": "1682",
-        "dickinson": "Bwa2",
-        "dickinson_bordering": "Bwa1",
+        "dickinson": "Bva2",
+        "dickinson_bordering": "Bva1",
         "koppen": "BSh",
         "koppen_bordering": "none",
         "p_pet": "0.43",
@@ -15431,8 +15431,8 @@
       },
       "2071-2100": {
         "annual_pet_mm": "1816",
-        "dickinson": "Bwa2",
-        "dickinson_bordering": "Awa2",
+        "dickinson": "Bva2",
+        "dickinson_bordering": "Ava2",
         "koppen": "BSh",
         "koppen_bordering": "none",
         "p_pet": "0.42",
@@ -15466,7 +15466,7 @@
       },
       "2041-2070": {
         "annual_pet_mm": "1810",
-        "dickinson": "Bwa2",
+        "dickinson": "Bva2",
         "dickinson_bordering": "none",
         "koppen": "Aw",
         "koppen_bordering": "none",
@@ -15476,7 +15476,7 @@
       },
       "2071-2100": {
         "annual_pet_mm": "1938",
-        "dickinson": "Awz1",
+        "dickinson": "Avz1",
         "dickinson_bordering": "none",
         "koppen": "Aw",
         "koppen_bordering": "none",
@@ -15521,7 +15521,7 @@
       },
       "2071-2100": {
         "annual_pet_mm": "1684",
-        "dickinson": "Awz1",
+        "dickinson": "Avz1",
         "dickinson_bordering": "none",
         "koppen": "BSh",
         "koppen_bordering": "none",
@@ -15761,8 +15761,8 @@
     "periods": {
       "1981-2010": {
         "annual_pet_mm": "1771",
-        "dickinson": "Awz1",
-        "dickinson_bordering": "Asz1 Agz1",
+        "dickinson": "Avz1",
+        "dickinson_bordering": "Awz1 Asz1 Agz1",
         "koppen": "Aw",
         "koppen_bordering": "none",
         "p_pet": "0.49",
@@ -15771,8 +15771,8 @@
       },
       "2011-2040": {
         "annual_pet_mm": "1843",
-        "dickinson": "Awz1",
-        "dickinson_bordering": "Awz2",
+        "dickinson": "Avz1",
+        "dickinson_bordering": "Avz2",
         "koppen": "Aw",
         "koppen_bordering": "none",
         "p_pet": "0.49",
@@ -15781,7 +15781,7 @@
       },
       "2041-2070": {
         "annual_pet_mm": "1957",
-        "dickinson": "Awz2",
+        "dickinson": "Avz2",
         "dickinson_bordering": "none",
         "koppen": "BSh",
         "koppen_bordering": "none",
@@ -15791,7 +15791,7 @@
       },
       "2071-2100": {
         "annual_pet_mm": "2048",
-        "dickinson": "ZwX",
+        "dickinson": "ZvX",
         "dickinson_bordering": "none",
         "koppen": "BSh",
         "koppen_bordering": "none",
@@ -18684,12 +18684,12 @@
     }
   },
   "29.6520, 91.1721": {
-    "city": "Lhasa, China",
+    "city": "Lhasa, Tibet, China",
     "periods": {
       "1981-2010": {
         "annual_pet_mm": "1168",
-        "dickinson": "Dwb2",
-        "dickinson_bordering": "Dwb1 Db2",
+        "dickinson": "Dvb2",
+        "dickinson_bordering": "Db1",
         "koppen": "Dwb",
         "koppen_bordering": "none",
         "p_pet": "0.40",
@@ -18698,7 +18698,7 @@
       },
       "2011-2040": {
         "annual_pet_mm": "1217",
-        "dickinson": "Dwb2",
+        "dickinson": "Dvb2",
         "dickinson_bordering": "none",
         "koppen": "Dwb",
         "koppen_bordering": "none",
@@ -18708,7 +18708,7 @@
       },
       "2041-2070": {
         "annual_pet_mm": "1335",
-        "dickinson": "Cwb2",
+        "dickinson": "Cvb2",
         "dickinson_bordering": "none",
         "koppen": "BSk",
         "koppen_bordering": "none",
@@ -18718,7 +18718,7 @@
       },
       "2071-2100": {
         "annual_pet_mm": "1461",
-        "dickinson": "Cwa1",
+        "dickinson": "Cva1",
         "dickinson_bordering": "none",
         "koppen": "BSk",
         "koppen_bordering": "none",
@@ -18733,7 +18733,7 @@
     "periods": {
       "1981-2010": {
         "annual_pet_mm": "985",
-        "dickinson": "Dwa1",
+        "dickinson": "Dva1",
         "dickinson_bordering": "none",
         "koppen": "BSk",
         "koppen_bordering": "BWk",
@@ -18743,7 +18743,7 @@
       },
       "2011-2040": {
         "annual_pet_mm": "1033",
-        "dickinson": "Dwa2",
+        "dickinson": "Dva2",
         "dickinson_bordering": "none",
         "koppen": "BSk",
         "koppen_bordering": "none",
@@ -18753,7 +18753,7 @@
       },
       "2041-2070": {
         "annual_pet_mm": "1121",
-        "dickinson": "Cwa2",
+        "dickinson": "Cva2",
         "dickinson_bordering": "none",
         "koppen": "BSk",
         "koppen_bordering": "BWk",
@@ -18763,7 +18763,7 @@
       },
       "2071-2100": {
         "annual_pet_mm": "1234",
-        "dickinson": "Cwz1",
+        "dickinson": "Cvz1",
         "dickinson_bordering": "Cdz1 Csz1",
         "koppen": "BWh",
         "koppen_bordering": "BSh",
@@ -19318,7 +19318,7 @@
     "periods": {
       "1981-2010": {
         "annual_pet_mm": "1921",
-        "dickinson": "Awz1",
+        "dickinson": "Avz1",
         "dickinson_bordering": "Adz1 Asz1",
         "koppen": "BSh",
         "koppen_bordering": "none",
@@ -19328,8 +19328,8 @@
       },
       "2011-2040": {
         "annual_pet_mm": "1972",
-        "dickinson": "Awz1",
-        "dickinson_bordering": "Awz2",
+        "dickinson": "Avz1",
+        "dickinson_bordering": "Avz2",
         "koppen": "BSh",
         "koppen_bordering": "none",
         "p_pet": "0.35",
@@ -19338,7 +19338,7 @@
       },
       "2041-2070": {
         "annual_pet_mm": "2078",
-        "dickinson": "Awz2",
+        "dickinson": "Avz2",
         "dickinson_bordering": "none",
         "koppen": "BSh",
         "koppen_bordering": "none",
@@ -19348,8 +19348,8 @@
       },
       "2071-2100": {
         "annual_pet_mm": "2203",
-        "dickinson": "Zwz2",
-        "dickinson_bordering": "Awz2 ZwX",
+        "dickinson": "Zvz2",
+        "dickinson_bordering": "Avz2 ZwX",
         "koppen": "BSh",
         "koppen_bordering": "none",
         "p_pet": "0.36",
@@ -19373,7 +19373,7 @@
       },
       "2011-2040": {
         "annual_pet_mm": "1908",
-        "dickinson": "Awz2",
+        "dickinson": "Avz2",
         "dickinson_bordering": "none",
         "koppen": "BSh",
         "koppen_bordering": "none",
@@ -19383,7 +19383,7 @@
       },
       "2041-2070": {
         "annual_pet_mm": "2004",
-        "dickinson": "Awz2",
+        "dickinson": "Avz2",
         "dickinson_bordering": "none",
         "koppen": "BSh",
         "koppen_bordering": "none",
@@ -19393,7 +19393,7 @@
       },
       "2071-2100": {
         "annual_pet_mm": "2109",
-        "dickinson": "ZwX",
+        "dickinson": "ZvX",
         "dickinson_bordering": "none",
         "koppen": "BSh",
         "koppen_bordering": "none",
@@ -19408,7 +19408,7 @@
     "periods": {
       "1981-2010": {
         "annual_pet_mm": "1839",
-        "dickinson": "Awz1",
+        "dickinson": "Avz1",
         "dickinson_bordering": "none",
         "koppen": "BSh",
         "koppen_bordering": "none",
@@ -19418,7 +19418,7 @@
       },
       "2011-2040": {
         "annual_pet_mm": "1899",
-        "dickinson": "Awz1",
+        "dickinson": "Avz1",
         "dickinson_bordering": "none",
         "koppen": "BSh",
         "koppen_bordering": "none",
@@ -19428,7 +19428,7 @@
       },
       "2041-2070": {
         "annual_pet_mm": "2017",
-        "dickinson": "Awz2",
+        "dickinson": "Avz2",
         "dickinson_bordering": "none",
         "koppen": "BSh",
         "koppen_bordering": "none",
@@ -19438,8 +19438,8 @@
       },
       "2071-2100": {
         "annual_pet_mm": "2109",
-        "dickinson": "Zwz2",
-        "dickinson_bordering": "ZwX",
+        "dickinson": "Zvz2",
+        "dickinson_bordering": "ZvX",
         "koppen": "BSh",
         "koppen_bordering": "none",
         "p_pet": "0.40",
