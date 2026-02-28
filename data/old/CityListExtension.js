@@ -1,3 +1,6 @@
+// Older way of generating cities.
+// Meant to be appended to all zones together code to generate csv file.
+
 var cityList = [
   { name: 'Tokyo, Japan',                                                lon: 139.6917,  lat: 35.6895 },
   { name: 'Jakarta, Indonesia',                                          lon: 106.8456,  lat: -6.2088 },

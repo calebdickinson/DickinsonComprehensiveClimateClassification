@@ -1,58 +1,375 @@
 {
-  "Awz2": {
+  "Bma1": {
     "1": [
-      "Chandrapur, India"
+      "Adelaide, Australia",
+      "Casablanca, Morocco",
+      "Hanga Roa, Easter Island, Chile",
+      "Lisbon, Portugal",
+      "Los Angeles, California, United States",
+      "Naples, Italy",
+      "Perth, Australia",
+      "Santa Cruz de Tenerife, Spain"
     ],
     "2": [
-      "Niamey, Niger",
-      "Chandrapur, India"
+      "Adelaide, Australia",
+      "Cape Town, South Africa",
+      "Hanga Roa, Easter Island, Chile",
+      "Lisbon, Portugal",
+      "Santa Cruz de Tenerife, Spain",
+      "Santiago, Chile"
     ],
     "3": [
-      "Hyderabad, India",
-      "Ouagadougou, Burkina Faso",
-      "N'Djamena, Chad",
-      "Bamako, Mali",
-      "Niamey, Niger",
-      "Chandrapur, India",
-      "Kota, India"
+      "Adelaide, Australia",
+      "Bilbao, Spain",
+      "Cape Town, South Africa",
+      "Concepción, Chile",
+      "Lisbon, Portugal",
+      "Maseru, Lesotho",
+      "San Francisco, California, United States",
+      "Santa Cruz de Tenerife, Spain"
     ],
     "4": [
-      "Guangzhou, China",
-      "Chennai, India",
-      "Hyderabad, India",
-      "Vientiane, Laos",
-      "Naypyidaw, Myanmar",
-      "Abuja, Nigeria",
-      "Hanoi, Vietnam",
-      "Chandrapur, India",
-      "Kota, India"
+      "Cape Town, South Africa",
+      "Concepción, Chile",
+      "Valdivia, Chile"
     ]
   },
-  "Adz2": {
+  "Bma2": {
     "1": [
-      "Bourem, Mali"
+      "Algiers, Algeria",
+      "Antalya, Türkiye",
+      "Bari, Italy",
+      "Beirut, Lebanon",
+      "Benghazi, Libya",
+      "Gaborone, Botswana",
+      "Palermo, Italy",
+      "Riverside, California, United States",
+      "Seville, Spain",
+      "Tunis, Tunisia",
+      "Valletta, Malta"
     ],
     "2": [
-      "Muscat, Oman",
-      "Khartoum, Sudan",
-      "Dubai, United Arab Emirates",
-      "Bourem, Mali"
+      "Algiers, Algeria",
+      "Bari, Italy",
+      "Beirut, Lebanon",
+      "Casablanca, Morocco",
+      "Gaborone, Botswana",
+      "Los Angeles, California, United States",
+      "Naples, Italy",
+      "Palermo, Italy",
+      "Perth, Australia",
+      "Riverside, California, United States",
+      "Sacramento, California, United States",
+      "Seville, Spain",
+      "Tunis, Tunisia",
+      "Valletta, Malta"
     ],
     "3": [
-      "Manama, Bahrain",
-      "Muscat, Oman",
-      "Doha, Qatar",
-      "Khartoum, Sudan",
-      "Dubai, United Arab Emirates",
-      "Bourem, Mali"
+      "Gaborone, Botswana",
+      "Hanga Roa, Easter Island, Chile",
+      "Jerusalem, Israel",
+      "Los Angeles, California, United States",
+      "Marseille, France",
+      "Perth, Australia",
+      "Riverside, California, United States",
+      "Sacramento, California, United States",
+      "Santiago, Chile"
     ],
     "4": [
-      "Karachi, Pakistan",
-      "Manama, Bahrain",
-      "Muscat, Oman",
-      "Doha, Qatar",
-      "Khartoum, Sudan",
-      "Dubai, United Arab Emirates"
+      "Adelaide, Australia",
+      "Bellingham, Washington, United States",
+      "Bilbao, Spain",
+      "Lisbon, Portugal",
+      "Maseru, Lesotho",
+      "Nanaimo, British Columbia, Canada",
+      "Perth, Australia",
+      "Portland, Oregon, United States",
+      "San Diego, California, United States",
+      "San Francisco, California, United States",
+      "Santiago, Chile",
+      "Seattle, Washington, United States",
+      "Vancouver, Canada"
+    ]
+  },
+  "Bmz1": {
+    "1": [],
+    "2": [
+      "Antalya, Türkiye",
+      "Athens, Greece",
+      "Fresno, California, United States"
+    ],
+    "3": [
+      "Algiers, Algeria",
+      "Antalya, Türkiye",
+      "Athens, Greece",
+      "Bari, Italy",
+      "Beirut, Lebanon",
+      "Fresno, California, United States",
+      "Naples, Italy",
+      "Palermo, Italy",
+      "Rome, Italy",
+      "Seville, Spain",
+      "Tunis, Tunisia",
+      "Valencia, Spain",
+      "Valletta, Malta"
+    ],
+    "4": [
+      "Algiers, Algeria",
+      "Bari, Italy",
+      "Beirut, Lebanon",
+      "Gaborone, Botswana",
+      "Grazalema, Spain",
+      "Istanbul, Türkiye",
+      "Jerusalem, Israel",
+      "Los Angeles, California, United States",
+      "Marseille, France",
+      "Medford, Oregon, United States",
+      "Naples, Italy",
+      "Palermo, Italy",
+      "Riverside, California, United States",
+      "Rome, Italy",
+      "Sacramento, California, United States",
+      "Seville, Spain",
+      "Tirana, Albania",
+      "Tunis, Tunisia",
+      "Valletta, Malta"
+    ]
+  },
+  "Ava2": {
+    "1": [
+      "Luanda, Angola"
+    ],
+    "2": [
+      "Luanda, Angola",
+      "Tuxtla Gutiérrez, Mexico"
+    ],
+    "3": [],
+    "4": []
+  },
+  "Avz1": {
+    "1": [
+      "Bamako, Mali",
+      "N'Djamena, Chad",
+      "Ouagadougou, Burkina Faso"
+    ],
+    "2": [
+      "Bamako, Mali",
+      "N'Djamena, Chad",
+      "Ouagadougou, Burkina Faso"
+    ],
+    "3": [
+      "Luanda, Angola",
+      "Tuxtla Gutiérrez, Mexico"
+    ],
+    "4": [
+      "Luanda, Angola",
+      "Lusaka, Zambia",
+      "Maputo, Mozambique",
+      "Tuxtla Gutiérrez, Mexico"
+    ]
+  },
+  "EY": {
+    "1": [
+      "Casey Station, Antarctica",
+      "Mawson Station, Antarctica"
+    ],
+    "2": [
+      "Casey Station, Antarctica",
+      "Mawson Station, Antarctica",
+      "Mount Rainier, Washington, United States"
+    ],
+    "3": [
+      "Mawson Station, Antarctica"
+    ],
+    "4": []
+  },
+  "Ec1": {
+    "1": [
+      "Esperanza Base, Antarctica"
+    ],
+    "2": [
+      "Esperanza Base, Antarctica"
+    ],
+    "3": [
+      "Casey Station, Antarctica",
+      "Mount Rainier, Washington, United States"
+    ],
+    "4": [
+      "Casey Station, Antarctica",
+      "Mawson Station, Antarctica"
+    ]
+  },
+  "YY": {
+    "1": [
+      "Concordia Station, Antarctica"
+    ],
+    "2": [
+      "Concordia Station, Antarctica"
+    ],
+    "3": [
+      "Concordia Station, Antarctica"
+    ],
+    "4": [
+      "Concordia Station, Antarctica"
+    ]
+  },
+  "Cc1": {
+    "1": [
+      "Heard Island (Atlas Cove Station), Antarctica"
+    ],
+    "2": [
+      "Heard Island (Atlas Cove Station), Antarctica"
+    ],
+    "3": [],
+    "4": []
+  },
+  "Cc2": {
+    "1": [
+      "Macquarie Island Station, Australia"
+    ],
+    "2": [
+      "Macquarie Island Station, Australia"
+    ],
+    "3": [
+      "Bird Island Research Station, South Georgia",
+      "Heard Island (Atlas Cove Station), Antarctica",
+      "Macquarie Island Station, Australia"
+    ],
+    "4": [
+      "Bird Island Research Station, South Georgia",
+      "Heard Island (Atlas Cove Station), Antarctica",
+      "Macquarie Island Station, Australia"
+    ]
+  },
+  "GY": {
+    "1": [
+      "Aconcagua summit, Argentina",
+      "Mount Everest summit, Nepal/China",
+      "Svea Station, Antarctica"
+    ],
+    "2": [
+      "Mount Everest summit, Nepal/China",
+      "Svea Station, Antarctica"
+    ],
+    "3": [
+      "Mount Everest summit, Nepal/China"
+    ],
+    "4": [
+      "Mount Everest summit, Nepal/China"
+    ]
+  },
+  "FY": {
+    "1": [
+      "Mount Rainier, Washington, United States"
+    ],
+    "2": [
+      "Aconcagua summit, Argentina"
+    ],
+    "3": [
+      "Aconcagua summit, Argentina",
+      "Svea Station, Antarctica"
+    ],
+    "4": [
+      "Aconcagua summit, Argentina",
+      "Svea Station, Antarctica"
+    ]
+  },
+  "Bha1": {
+    "1": [
+      "Brisbane, Australia",
+      "Buenos Aires, Argentina",
+      "Montevideo, Uruguay",
+      "Sydney, Australia",
+      "São Paulo, Brazil"
+    ],
+    "2": [
+      "Auckland, New Zealand",
+      "Bilbao, Spain",
+      "Buenos Aires, Argentina",
+      "Cilaos, Réunion, France",
+      "Montevideo, Uruguay",
+      "Sydney, Australia",
+      "São Paulo, Brazil"
+    ],
+    "3": [
+      "Auckland, New Zealand",
+      "Montevideo, Uruguay",
+      "Nairobi, Kenya"
+    ],
+    "4": [
+      "Cilaos, Réunion, France",
+      "Forks, Washington, United States",
+      "Wellington, New Zealand"
+    ]
+  },
+  "Bha2": {
+    "1": [
+      "Asunción, Paraguay",
+      "Hamilton, Bermuda, United Kingdom",
+      "Houston, Texas, United States",
+      "Jacksonville, Florida, United States",
+      "Lafayette, Louisiana, United States",
+      "Mobile, Alabama, United States",
+      "New Orleans, Louisiana, United States",
+      "Savannah, Georgia, United States",
+      "Taipei, Taiwan",
+      "Tallahassee, Florida, United States",
+      "Tampa, Florida, United States"
+    ],
+    "2": [
+      "Asunción, Paraguay",
+      "Charleston, South Carolina, United States",
+      "Hamilton, Bermuda, United Kingdom",
+      "Houston, Texas, United States",
+      "Jackson, Mississippi, United States",
+      "Jacksonville, Florida, United States",
+      "Lafayette, Louisiana, United States",
+      "Mobile, Alabama, United States",
+      "New Orleans, Louisiana, United States",
+      "Savannah, Georgia, United States",
+      "Tallahassee, Florida, United States",
+      "Tampa, Florida, United States"
+    ],
+    "3": [
+      "Buenos Aires, Argentina",
+      "Hamilton, Bermuda, United Kingdom",
+      "Sydney, Australia",
+      "São Paulo, Brazil"
+    ],
+    "4": [
+      "Auckland, New Zealand",
+      "Buenos Aires, Argentina",
+      "Montevideo, Uruguay",
+      "Sydney, Australia"
+    ]
+  },
+  "Bwa2": {
+    "1": [
+      "Dhaka, Bangladesh",
+      "Guangzhou, China",
+      "Hong Kong, China",
+      "Maputo, Mozambique",
+      "Nampula, Mozambique",
+      "Rangpur, Bangladesh",
+      "Townsville, Australia"
+    ],
+    "2": [
+      "Dhaka, Bangladesh",
+      "Guadalajara, Mexico",
+      "Hong Kong, China",
+      "Lusaka, Zambia",
+      "Rangpur, Bangladesh"
+    ],
+    "3": [
+      "Kathmandu, Nepal",
+      "Kunming, China"
+    ],
+    "4": [
+      "Antananarivo, Madagascar",
+      "Johannesburg, South Africa",
+      "Kathmandu, Nepal",
+      "Kunming, China",
+      "Wangdue Phodrang, Bhutan"
     ]
   },
   "Awz1": {
@@ -60,503 +377,293 @@
       "Bangkok, Thailand",
       "Chennai, India",
       "Hyderabad, India",
-      "Ouagadougou, Burkina Faso",
+      "Kano, Nigeria",
       "Phnom Penh, Cambodia",
-      "N'Djamena, Chad",
-      "Bamako, Mali",
-      "Naypyidaw, Myanmar"
+      "Surat, India",
+      "Yangon, Myanmar"
     ],
     "2": [
-      "Mumbai, India",
-      "Manila, Philippines",
+      "Ahmedabad, India",
       "Bangkok, Thailand",
-      "Ho Chi Minh City, Vietnam",
       "Chennai, India",
+      "Darwin, Australia",
+      "Ho Chi Minh City, Vietnam",
       "Hyderabad, India",
-      "Ouagadougou, Burkina Faso",
-      "Phnom Penh, Cambodia",
-      "N'Djamena, Chad",
-      "Vientiane, Laos",
-      "Bamako, Mali",
-      "Naypyidaw, Myanmar",
+      "Kano, Nigeria",
       "Managua, Nicaragua",
-      "Abuja, Nigeria",
-      "Trincomalee, Sri Lanka"
-    ],
-    "3": [
-      "Mumbai, India",
       "Manila, Philippines",
-      "Kolkata, India",
-      "Dhaka, Bangladesh",
-      "Bangkok, Thailand",
-      "Shenzhen, China",
-      "Ho Chi Minh City, Vietnam",
-      "Lagos, Nigeria",
-      "Chennai, India",
-      "Luanda, Angola",
+      "Mumbai, India",
+      "Mérida, Mexico",
       "Phnom Penh, Cambodia",
-      "Banjul, Gambia",
+      "Surat, India",
+      "Yangon, Myanmar"
+    ],
+    "3": [
+      "Bangkok, Thailand",
       "Bissau, Guinea-Bissau",
-      "Vientiane, Laos",
-      "Naypyidaw, Myanmar",
-      "Abuja, Nigeria",
-      "Dili, Timor-Leste",
-      "Hanoi, Vietnam",
-      "Trincomalee, Sri Lanka"
-    ],
-    "4": [
-      "Kolkata, India",
+      "Chennai, India",
+      "Cox’s Bāzār, Bangladesh",
+      "Darwin, Australia",
       "Dhaka, Bangladesh",
-      "Shenzhen, China",
-      "Bangalore, India",
+      "Fortaleza, Brasil",
+      "Ho Chi Minh City, Vietnam",
+      "Hong Kong, China",
+      "Kano, Nigeria",
+      "Kolkata, India",
       "Lagos, Nigeria",
-      "Kinshasa, DR Congo",
-      "Luanda, Angola",
-      "Dongguan, China",
-      "Brasília, Brazil",
-      "San Salvador, El Salvador",
-      "Banjul, Gambia",
+      "Manila, Philippines",
+      "Mumbai, India",
+      "Phnom Penh, Cambodia",
+      "Pune, India",
+      "Rangpur, Bangladesh",
+      "Surabaya, Indonesia",
+      "Surat, India",
+      "Townsville, Australia",
+      "Yangon, Myanmar"
+    ],
+    "4": [
+      "Belo Horizonte, Brazil",
+      "Bengaluru, India",
+      "Brasília, Brasil",
       "Conakry, Guinea",
-      "Tegucigalpa, Honduras",
+      "Cox’s Bāzār, Bangladesh",
+      "Dhaka, Bangladesh",
+      "Guadalajara, Mexico",
+      "Hong Kong, China",
+      "Kinshasa, Democratic Republic of the Congo",
+      "Kolkata, India",
+      "Lagos, Nigeria",
       "Monrovia, Liberia",
-      "Lilongwe, Malawi",
-      "Maputo, Mozambique",
-      "Freetown, Sierra Leone",
+      "Nampula, Mozambique",
+      "Pune, India",
+      "Rangpur, Bangladesh",
+      "Saint-Denis, Réunion, France",
+      "Saint-Leu, Réunion, France",
+      "San Salvador, El Salvador",
+      "Townsville, Australia"
+    ]
+  },
+  "Bwa1": {
+    "1": [
+      "Antananarivo, Madagascar",
+      "Belo Horizonte, Brazil",
+      "Brasília, Brasil",
+      "Guadalajara, Mexico",
+      "Harare, Zimbabwe",
+      "Kathmandu, Nepal",
       "Lusaka, Zambia",
-      "Salango Island, Ecuador",
-      "Trincomalee, Sri Lanka"
-    ]
-  },
-  "Agz1": {
-    "1": [
-      "Juba, South Sudan"
+      "Wangdue Phodrang, Bhutan"
     ],
     "2": [
-      "Port-au-Prince, Haiti",
-      "Juba, South Sudan"
+      "Antananarivo, Madagascar",
+      "Belo Horizonte, Brazil",
+      "Harare, Zimbabwe",
+      "Kathmandu, Nepal",
+      "Kunming, China",
+      "Mexico City, Mexico",
+      "Wangdue Phodrang, Bhutan"
     ],
     "3": [
-      "San Juan, Puerto Rico, United States",
-      "Nassau, Bahamas",
-      "Yamoussoukro, Côte d'Ivoire",
-      "Havana, Cuba",
-      "Port-au-Prince, Haiti",
-      "Kingston, Jamaica",
-      "Juba, South Sudan",
-      "George Town, Cayman Islands (UK)",
-      "Cockburn Town, Turks & Caicos (UK)",
-      "San Juan, Puerto Rico, United States"
+      "Addis Ababa, Ethiopia",
+      "Antananarivo, Madagascar",
+      "Cilaos, Réunion, France",
+      "Johannesburg, South Africa",
+      "Wangdue Phodrang, Bhutan"
     ],
     "4": [
-      "Miami, Florida, United States",
-      "San Juan, Puerto Rico, United States",
-      "Nassau, Bahamas",
-      "Belmopan, Belize",
-      "Yamoussoukro, Côte d'Ivoire",
-      "Havana, Cuba",
-      "Roseau, Dominica",
-      "Santo Domingo, Dominican Republic",
-      "Kingston, Jamaica",
-      "Castries, Saint Lucia",
-      "Kingstown, Saint Vincent and the Grenadines",
-      "São Tomé, São Tomé and Príncipe",
-      "Port of Spain, Trinidad and Tobago",
-      "Road Town, British Virgin Islands (UK)",
-      "George Town, Cayman Islands (UK)",
-      "San Juan, Puerto Rico, United States"
-    ]
-  },
-  "Adz1": {
-    "1": [
-      "Niamey, Niger",
-      "Muscat, Oman",
-      "Khartoum, Sudan"
-    ],
-    "2": [
-      "Karachi, Pakistan"
-    ],
-    "3": [
-      "Karachi, Pakistan",
-      "Djibouti, Djibouti",
-      "Nouakchott, Mauritania"
-    ],
-    "4": [
-      "Nouakchott, Mauritania",
-      "Dakar, Senegal",
-      "Oranjestad, Aruba (NL)",
-      "Willemstad, Curaçao (NL)",
-      "Kralendijk, Bonaire (NL)"
-    ]
-  },
-  "Asa2": {
-    "1": [
-      "Honolulu, Hawaii, United States",
-      "Mogadishu, Somalia",
-      "Willemstad, Curaçao (NL)"
-    ],
-    "2": [
-      "Honolulu, Hawaii, United States",
-      "Mogadishu, Somalia",
-      "Willemstad, Curaçao (NL)"
-    ],
-    "3": [
-      "Honolulu, Hawaii, United States",
-      "Jamestown, St Helena (UK)",
-      "Willemstad, Curaçao (NL)",
-      "Oranjestad, Sint Eustatius (NL)"
-    ],
-    "4": [
-      "Caracas, Venezuela",
-      "Jamestown, St Helena (UK)",
-      "The Bottom, Saba (NL)"
+      "Lijiang, China"
     ]
   },
   "Awa2": {
     "1": [
-      "Mumbai, India",
-      "Manila, Philippines",
-      "Bangalore, India",
+      "Bengaluru, India",
+      "Bissau, Guinea-Bissau",
+      "Conakry, Guinea",
+      "Cox’s Bāzār, Bangladesh",
+      "Darwin, Australia",
+      "Fortaleza, Brasil",
       "Ho Chi Minh City, Vietnam",
-      "Luanda, Angola",
-      "Malabo, Equatorial Guinea",
-      "Banjul, Gambia",
-      "Conakry, Guinea",
-      "Bissau, Guinea-Bissau",
-      "Vientiane, Laos",
-      "Monrovia, Liberia",
       "Managua, Nicaragua",
-      "Abuja, Nigeria",
-      "Freetown, Sierra Leone",
-      "Dili, Timor-Leste"
+      "Manila, Philippines",
+      "Monrovia, Liberia",
+      "Mumbai, India",
+      "Mérida, Mexico",
+      "Pune, India",
+      "Saint-Denis, Réunion, France",
+      "Surabaya, Indonesia",
+      "Tuxtla Gutiérrez, Mexico"
     ],
     "2": [
-      "Bangalore, India",
-      "Lagos, Nigeria",
-      "Luanda, Angola",
-      "San Salvador, El Salvador",
-      "Banjul, Gambia",
-      "Conakry, Guinea",
+      "Bengaluru, India",
       "Bissau, Guinea-Bissau",
-      "Tegucigalpa, Honduras",
-      "Monrovia, Liberia",
-      "Maputo, Mozambique",
-      "Freetown, Sierra Leone",
-      "Dodoma, Tanzania",
-      "Dili, Timor-Leste"
-    ],
-    "3": [
-      "Bangalore, India",
-      "Kinshasa, DR Congo",
-      "Brasília, Brazil",
-      "San Salvador, El Salvador",
       "Conakry, Guinea",
-      "Tegucigalpa, Honduras",
-      "Monrovia, Liberia",
+      "Cox’s Bāzār, Bangladesh",
+      "Fortaleza, Brasil",
+      "Lagos, Nigeria",
       "Maputo, Mozambique",
-      "Freetown, Sierra Leone",
-      "Dodoma, Tanzania",
-      "Santo Domingo, Ecuador"
-    ],
-    "4": [
-      "Guatemala City, Guatemala",
-      "Dodoma, Tanzania",
-      "Santo Domingo, Ecuador"
-    ]
-  },
-  "Aga2": {
-    "1": [
-      "St. John's, Antigua and Barbuda",
-      "Bridgetown, Barbados",
-      "Accra, Ghana",
-      "St. George's, Grenada",
-      "Port-au-Prince, Haiti",
-      "Basseterre, Saint Kitts and Nevis",
-      "São Tomé, São Tomé and Príncipe",
-      "Lomé, Togo",
-      "The Valley, Anguilla (UK)",
-      "Road Town, British Virgin Islands (UK)",
-      "George Town, Cayman Islands (UK)",
-      "Brades, Montserrat (UK)",
-      "Cockburn Town, Turks & Caicos (UK)",
-      "Charlotte Amalie, United States Virgin Islands, United States",
-      "Philipsburg, Sint Maarten (NL)",
-      "The Bottom, Saba (NL)",
-      "Oranjestad, Sint Eustatius (NL)",
-      "Trincomalee, Sri Lanka"
-    ],
-    "2": [
-      "St. John's, Antigua and Barbuda",
-      "Nassau, Bahamas",
-      "Bridgetown, Barbados",
-      "Yamoussoukro, Côte d'Ivoire",
-      "Accra, Ghana",
-      "St. George's, Grenada",
-      "Kingston, Jamaica",
-      "Basseterre, Saint Kitts and Nevis",
-      "São Tomé, São Tomé and Príncipe",
-      "Lomé, Togo",
-      "The Valley, Anguilla (UK)",
-      "Road Town, British Virgin Islands (UK)",
-      "George Town, Cayman Islands (UK)",
-      "Brades, Montserrat (UK)",
-      "Cockburn Town, Turks & Caicos (UK)",
-      "Charlotte Amalie, United States Virgin Islands, United States",
-      "Philipsburg, Sint Maarten (NL)",
-      "The Bottom, Saba (NL)",
-      "Oranjestad, Sint Eustatius (NL)"
+      "Monrovia, Liberia",
+      "Nampula, Mozambique",
+      "Pune, India",
+      "Saint-Denis, Réunion, France",
+      "Saint-Leu, Réunion, France",
+      "San Salvador, El Salvador",
+      "Surabaya, Indonesia",
+      "Townsville, Australia"
     ],
     "3": [
-      "St. John's, Antigua and Barbuda",
-      "Bridgetown, Barbados",
-      "St. George's, Grenada",
-      "Basseterre, Saint Kitts and Nevis",
-      "Kingstown, Saint Vincent and the Grenadines",
-      "São Tomé, São Tomé and Príncipe",
-      "Port of Spain, Trinidad and Tobago",
-      "Caracas, Venezuela",
-      "The Valley, Anguilla (UK)",
-      "Road Town, British Virgin Islands (UK)",
-      "Brades, Montserrat (UK)",
-      "Charlotte Amalie, United States Virgin Islands, United States",
-      "Nouméa, New Caledonia (FR)",
-      "Philipsburg, Sint Maarten (NL)",
-      "The Bottom, Saba (NL)"
+      "Belo Horizonte, Brazil",
+      "Bengaluru, India",
+      "Brasília, Brasil",
+      "Conakry, Guinea",
+      "Guadalajara, Mexico",
+      "Kinshasa, Democratic Republic of the Congo",
+      "Maputo, Mozambique",
+      "Monrovia, Liberia",
+      "Nampula, Mozambique",
+      "Saint-Denis, Réunion, France",
+      "Saint-Leu, Réunion, France",
+      "San Salvador, El Salvador"
     ],
-    "4": [
-      "Gitega, Burundi",
-      "Brades, Montserrat (UK)",
-      "Kingston, Norfolk Island (AU)"
-    ]
-  },
-  "Ada2": {
-    "1": [
-      "Praia, Cabo Verde",
-      "Nouakchott, Mauritania",
-      "Dakar, Senegal",
-      "Oranjestad, Aruba (NL)",
-      "Kralendijk, Bonaire (NL)",
-      "Salango Island, Ecuador"
-    ],
-    "2": [
-      "Praia, Cabo Verde",
-      "Djibouti, Djibouti",
-      "Nouakchott, Mauritania",
-      "Dakar, Senegal",
-      "Oranjestad, Aruba (NL)",
-      "Kralendijk, Bonaire (NL)",
-      "Salango Island, Ecuador"
-    ],
-    "3": [
-      "Praia, Cabo Verde",
-      "Dakar, Senegal",
-      "Oranjestad, Aruba (NL)",
-      "Kralendijk, Bonaire (NL)",
-      "Salango Island, Ecuador"
-    ],
-    "4": [
-      "Lima, Peru",
-      "Praia, Cabo Verde",
-      "Sana'a, Yemen"
-    ]
+    "4": []
   },
   "Aha2": {
     "1": [
-      "Jakarta, Indonesia",
-      "Lagos, Nigeria",
-      "Kinshasa, DR Congo",
-      "Rio de Janeiro, Brazil",
-      "Kuala Lumpur, Malaysia",
-      "Miami, Florida, United States",
-      "San Juan, Puerto Rico, United States",
-      "Nassau, Bahamas",
-      "Belmopan, Belize",
-      "Porto-Novo, Benin",
-      "Bandar Seri Begawan, Brunei",
+      "Abidjan, Côte d’Ivoire",
       "Bangui, Central African Republic",
-      "Moroni, Comoros",
-      "Brazzaville, Congo",
-      "Yamoussoukro, Côte d'Ivoire",
-      "Havana, Cuba",
-      "Roseau, Dominica",
-      "Santo Domingo, Dominican Republic",
-      "Palikir, Federated States of Micronesia",
-      "Suva, Fiji",
-      "Libreville, Gabon",
+      "Belmopan, Belize",
+      "Belém, Brasil",
+      "Cancún, Mexico",
+      "Cebu City, Philippines",
+      "Colombo, Sri Lanka",
+      "Fort-de-France, Martinique",
       "Georgetown, Guyana",
+      "Havana, Cuba",
+      "Jakarta, Indonesia",
       "Kingston, Jamaica",
-      "Tarawa, Kiribati",
-      "Malé, Maldives",
-      "Majuro, Marshall Islands",
-      "Port Louis, Mauritius",
-      "Yaren, Nauru",
-      "Ngerulmud, Palau",
-      "Panama City, Panama",
-      "Port Moresby, Papua New Guinea",
-      "Castries, Saint Lucia",
-      "Kingstown, Saint Vincent and the Grenadines",
-      "Apia, Samoa",
-      "Victoria, Seychelles",
-      "Singapore, Singapore",
-      "Honiara, Solomon Islands",
-      "Sri Jayawardenepura Kotte, Sri Lanka",
+      "Kinshasa, Democratic Republic of the Congo",
+      "Kisangani, Democratic Republic of the Congo",
+      "Kuala Lumpur, Malaysia",
+      "Lagos, Nigeria",
+      "Libreville, Gabon",
+      "Manaus, Brasil",
+      "Miami, Florida, United States",
+      "Nassau, Bahamas",
+      "Panamá City, Panamá",
       "Paramaribo, Suriname",
-      "Nukuʻalofa, Tonga",
-      "Port of Spain, Trinidad and Tobago",
-      "Funafuti, Tuvalu",
-      "Port Vila, Vanuatu",
-      "Pago Pago, American Samoa, United States",
-      "Hagåtña, Guam, United States",
-      "Saipan, Northern Mariana Islands, United States",
-      "San Juan, Puerto Rico, United States",
-      "Papeete, French Polynesia (FR)",
-      "Mata-Utu, Wallis & Futuna (FR)",
-      "Avarua, Cook Islands (NZ)",
-      "Alofi, Niue (NZ)",
-      "Nukunonu, Tokelau (NZ)"
+      "Port Moresby, Papua New Guinea",
+      "Recife, Brasil",
+      "Rio de Janeiro, Brazil",
+      "Saint-Leu, Réunion, France",
+      "Salvador, Brasil",
+      "San Juan, Puerto Rico",
+      "Singapore, Singapore"
     ],
     "2": [
+      "Abidjan, Côte d’Ivoire",
+      "Bandung, Indonesia",
+      "Bangui, Central African Republic",
+      "Belmopan, Belize",
+      "Belém, Brasil",
+      "Cancún, Mexico",
+      "Cebu City, Philippines",
+      "Colombo, Sri Lanka",
+      "Dar es Salaam, Tanzania",
+      "Fort-de-France, Martinique",
+      "Georgetown, Guyana",
+      "Havana, Cuba",
+      "Hilo, Hawaii, United States",
       "Jakarta, Indonesia",
-      "Kinshasa, DR Congo",
+      "Kinshasa, Democratic Republic of the Congo",
+      "Kisangani, Democratic Republic of the Congo",
+      "Kuala Lumpur, Malaysia",
+      "Libreville, Gabon",
+      "Manaus, Brasil",
+      "Mbuji-Mayi, Democratic Republic of the Congo",
+      "Miami, Florida, United States",
+      "Panamá City, Panamá",
+      "Paramaribo, Suriname",
+      "Port Moresby, Papua New Guinea",
+      "Recife, Brasil",
       "Rio de Janeiro, Brazil",
+      "Salvador, Brasil",
+      "San Juan, Puerto Rico",
+      "Singapore, Singapore",
+      "Yaoundé, Cameroon"
+    ],
+    "3": [
+      "Abidjan, Côte d’Ivoire",
+      "Bandung, Indonesia",
+      "Hilo, Hawaii, United States",
+      "Kisangani, Democratic Republic of the Congo",
+      "Libreville, Gabon",
+      "Mbuji-Mayi, Democratic Republic of the Congo",
+      "Panamá City, Panamá",
+      "Port Moresby, Papua New Guinea",
+      "Rio de Janeiro, Brazil",
+      "Yaoundé, Cameroon"
+    ],
+    "4": [
+      "Bandung, Indonesia",
+      "Hilo, Hawaii, United States",
+      "Nairobi, Kenya",
+      "São Paulo, Brazil"
+    ]
+  },
+  "Ahz1": {
+    "1": [],
+    "2": [],
+    "3": [
+      "Bangui, Central African Republic",
+      "Belmopan, Belize",
+      "Belém, Brasil",
+      "Cebu City, Philippines",
+      "Colombo, Sri Lanka",
+      "Georgetown, Guyana",
+      "Havana, Cuba",
+      "Jakarta, Indonesia",
       "Kuala Lumpur, Malaysia",
       "Miami, Florida, United States",
-      "San Juan, Puerto Rico, United States",
-      "Belmopan, Belize",
-      "Porto-Novo, Benin",
-      "Bandar Seri Begawan, Brunei",
-      "Yaoundé, Cameroon",
-      "Bangui, Central African Republic",
-      "Moroni, Comoros",
-      "Brazzaville, Congo",
-      "Havana, Cuba",
-      "Roseau, Dominica",
-      "Santo Domingo, Dominican Republic",
-      "Malabo, Equatorial Guinea",
-      "Palikir, Federated States of Micronesia",
-      "Suva, Fiji",
-      "Libreville, Gabon",
-      "Georgetown, Guyana",
-      "Tarawa, Kiribati",
-      "Malé, Maldives",
-      "Majuro, Marshall Islands",
-      "Port Louis, Mauritius",
-      "Yaren, Nauru",
-      "Ngerulmud, Palau",
-      "Panama City, Panama",
-      "Port Moresby, Papua New Guinea",
-      "Castries, Saint Lucia",
-      "Kingstown, Saint Vincent and the Grenadines",
-      "Apia, Samoa",
-      "Victoria, Seychelles",
-      "Singapore, Singapore",
-      "Honiara, Solomon Islands",
-      "Sri Jayawardenepura Kotte, Sri Lanka",
       "Paramaribo, Suriname",
-      "Nukuʻalofa, Tonga",
-      "Port of Spain, Trinidad and Tobago",
-      "Funafuti, Tuvalu",
-      "Port Vila, Vanuatu",
-      "Adamstown, Pitcairn Islands (UK)",
-      "Pago Pago, American Samoa, United States",
-      "Hagåtña, Guam, United States",
-      "Saipan, Northern Mariana Islands, United States",
-      "San Juan, Puerto Rico, United States",
-      "Papeete, French Polynesia (FR)",
-      "Nouméa, New Caledonia (FR)",
-      "Mata-Utu, Wallis & Futuna (FR)",
-      "Avarua, Cook Islands (NZ)",
-      "Alofi, Niue (NZ)",
-      "Nukunonu, Tokelau (NZ)"
+      "Recife, Brasil",
+      "Singapore, Singapore"
     ],
-    "3": [
-      "Rio de Janeiro, Brazil",
-      "Yaoundé, Cameroon",
-      "Moroni, Comoros",
-      "Roseau, Dominica",
-      "Santo Domingo, Dominican Republic",
-      "Malabo, Equatorial Guinea",
-      "Palikir, Federated States of Micronesia",
-      "Suva, Fiji",
+    "4": [
+      "Abidjan, Côte d’Ivoire",
+      "Asunción, Paraguay",
+      "Hamilton, Bermuda, United Kingdom",
       "Libreville, Gabon",
-      "Majuro, Marshall Islands",
-      "Port Louis, Mauritius",
-      "Ngerulmud, Palau",
-      "Panama City, Panama",
+      "Miami, Florida, United States",
       "Port Moresby, Papua New Guinea",
-      "Castries, Saint Lucia",
-      "Apia, Samoa",
-      "Honiara, Solomon Islands",
-      "Nukuʻalofa, Tonga",
-      "Funafuti, Tuvalu",
-      "Port Vila, Vanuatu",
-      "Adamstown, Pitcairn Islands (UK)",
-      "Pago Pago, American Samoa, United States",
-      "Hagåtña, Guam, United States",
-      "Saipan, Northern Mariana Islands, United States",
-      "Papeete, French Polynesia (FR)",
-      "Mata-Utu, Wallis & Futuna (FR)",
-      "Avarua, Cook Islands (NZ)",
-      "Alofi, Niue (NZ)",
-      "Nukunonu, Tokelau (NZ)"
-    ],
-    "4": [
-      "São Paulo, Brazil",
-      "San José, Costa Rica",
-      "Nairobi, Kenya",
-      "Kigali, Rwanda",
-      "Kampala, Uganda",
-      "Adamstown, Pitcairn Islands (UK)",
-      "Papeete, French Polynesia (FR)",
-      "Avarua, Cook Islands (NZ)"
+      "Rio de Janeiro, Brazil",
+      "Taipei, Taiwan",
+      "Yaoundé, Cameroon"
     ]
   },
-  "Awa1": {
+  "Cb1": {
     "1": [
-      "San Salvador, El Salvador",
-      "Tegucigalpa, Honduras",
-      "Dodoma, Tanzania",
-      "Santo Domingo, Ecuador"
+      "Dunedin, New Zealand",
+      "Forks, Washington, United States",
+      "La Paz, Bolivia",
+      "Prince Rupert, British Columbia, Canada",
+      "Stanley, Falkland Islands",
+      "Tórshavn, Faroe Islands"
     ],
     "2": [
-      "Brasília, Brazil",
-      "Santo Domingo, Ecuador"
+      "La Paz, Bolivia",
+      "Reykjavík, Iceland",
+      "Stanley, Falkland Islands",
+      "Tórshavn, Faroe Islands",
+      "Ushuaia, Argentina"
     ],
     "3": [
-      "Guatemala City, Guatemala"
+      "Stanley, Falkland Islands",
+      "Tórshavn, Faroe Islands",
+      "Ushuaia, Argentina"
     ],
     "4": [
-      "Addis Ababa, Ethiopia"
+      "Stanley, Falkland Islands",
+      "Ushuaia, Argentina"
     ]
-  },
-  "Aga1": {
-    "1": [
-      "Caracas, Venezuela"
-    ],
-    "2": [
-      "Caracas, Venezuela"
-    ],
-    "3": [
-      "Gitega, Burundi"
-    ],
-    "4": []
-  },
-  "Aha1": {
-    "1": [
-      "Yaoundé, Cameroon",
-      "Kampala, Uganda",
-      "Adamstown, Pitcairn Islands (UK)"
-    ],
-    "2": [
-      "San José, Costa Rica",
-      "Kigali, Rwanda",
-      "Kampala, Uganda"
-    ],
-    "3": [
-      "San José, Costa Rica",
-      "Kigali, Rwanda",
-      "Kampala, Uganda"
-    ],
-    "4": []
   },
   "Bb1": {
     "1": [
@@ -566,2122 +673,10 @@
     "2": [
       "Quito, Ecuador"
     ],
-    "3": [],
-    "4": []
-  },
-  "Bmz1": {
-    "1": [
-      "Nicosia, Cyprus"
-    ],
-    "2": [
-      "Nicosia, Cyprus",
-      "Athens, Greece"
-    ],
     "3": [
-      "Algiers, Algeria",
-      "Nicosia, Cyprus",
-      "Athens, Greece",
-      "Rome, Italy",
-      "Beirut, Lebanon",
-      "Valletta, Malta",
-      "Podgorica, Montenegro",
-      "Tunis, Tunisia",
-      "Vatican City, Vatican City"
-    ],
-    "4": [
-      "Los Angeles, California, United States",
-      "Istanbul, Turkey",
-      "Riverside, California, United States",
-      "Sacramento, California, United States",
-      "Salem, Oregon, United States",
-      "Tirana, Albania",
-      "Algiers, Algeria",
-      "Jerusalem, Israel",
-      "Rome, Italy",
-      "Beirut, Lebanon",
-      "Valletta, Malta",
-      "Monaco, Monaco",
-      "Tunis, Tunisia",
-      "Vatican City, Vatican City"
-    ]
-  },
-  "Bwz2": {
-    "1": [
-      "Kota, India"
-    ],
-    "2": [
-      "Kota, India"
-    ],
-    "3": [
-      "Delhi, India",
-      "Lahore, Pakistan"
-    ],
-    "4": [
-      "Delhi, India",
-      "Lahore, Pakistan",
-      "Xi’an, China",
-      "Zhengzhou, China"
-    ]
-  },
-  "Bdz2": {
-    "1": [
-      "Phoenix, Arizona, United States",
-      "Baghdad, Iraq",
-      "Kuwait City, Kuwait",
-      "Riyadh, Saudi Arabia",
-      "Dubai, United Arab Emirates",
-      "Lake Havasu City, Arizona, United States"
-    ],
-    "2": [
-      "Phoenix, Arizona, United States",
-      "Las Vegas, Nevada, United States",
-      "Manama, Bahrain",
-      "Baghdad, Iraq",
-      "Kuwait City, Kuwait",
-      "Doha, Qatar",
-      "Riyadh, Saudi Arabia",
-      "El Menia, Algeria",
-      "Lake Havasu City, Arizona, United States"
-    ],
-    "3": [
-      "Phoenix, Arizona, United States",
-      "Las Vegas, Nevada, United States",
-      "Kuwait City, Kuwait",
-      "Riyadh, Saudi Arabia",
-      "El Menia, Algeria",
-      "Lake Havasu City, Arizona, United States"
-    ],
-    "4": [
-      "Cairo, Egypt",
-      "Phoenix, Arizona, United States",
-      "Las Vegas, Nevada, United States",
-      "Damascus, Syria",
-      "Ashgabat, Turkmenistan"
-    ]
-  },
-  "Bma2": {
-    "1": [
-      "Riverside, California, United States",
-      "Algiers, Algeria",
-      "Beirut, Lebanon",
-      "Valletta, Malta",
-      "Tunis, Tunisia",
-      "Melilla, Melilla (ES)"
-    ],
-    "2": [
-      "Los Angeles, California, United States",
-      "Riverside, California, United States",
-      "Sacramento, California, United States",
-      "Algiers, Algeria",
-      "Beirut, Lebanon",
-      "Valletta, Malta",
-      "Monaco, Monaco",
-      "Tunis, Tunisia",
-      "Melilla, Melilla (ES)"
-    ],
-    "3": [
-      "Los Angeles, California, United States",
-      "Riverside, California, United States",
-      "Sacramento, California, United States",
-      "San Jose, California, United States",
-      "Santiago, Chile",
-      "Jerusalem, Israel",
-      "Monaco, Monaco",
-      "Rabat, Morocco",
-      "Gibraltar, Gibraltar (UK)",
-      "Ceuta, Ceuta (ES)",
-      "Ponta Delgada, Azores (PT)",
-      "Hanga Roa, Easter Island (CL)"
-    ],
-    "4": [
-      "Seattle, Washington, United States",
-      "San Francisco, California, United States",
-      "San Diego, California, United States",
-      "Portland, Oregon, United States",
-      "San Jose, California, United States",
-      "Olympia, Washington, United States",
-      "Santiago, Chile",
-      "Lisbon, Portugal",
-      "Gibraltar, Gibraltar (UK)",
-      "Ceuta, Ceuta (ES)",
-      "Ponta Delgada, Azores (PT)",
-      "Funchal, Madeira (PT)",
-      "Vancouver, British Columbia, Canada",
-      "Surrey, British Columbia, Canada",
-      "Richmond, British Columbia, Canada",
-      "Abbotsford, British Columbia, Canada",
-      "Coronado Islands, Mexico",
-      "Lompoc, California, United States"
-    ]
-  },
-  "Bsz1": {
-    "1": [
-      "Crystal City, Texas, United States"
-    ],
-    "2": [
-      "Crystal City, Texas, United States"
-    ],
-    "3": [
-      "Crystal City, Texas, United States"
-    ],
-    "4": [
-      "Belgrade, Serbia",
-      "Barcelona, Spain"
-    ]
-  },
-  "Bwz1": {
-    "1": [
-      "Delhi, India",
-      "Kolkata, India",
-      "Lahore, Pakistan"
-    ],
-    "2": [
-      "Delhi, India",
-      "Guangzhou, China",
-      "Kolkata, India",
-      "Shenzhen, China",
-      "Dongguan, China",
-      "Hanoi, Vietnam"
-    ],
-    "3": [
-      "Chengdu, China",
-      "Dongguan, China"
-    ],
-    "4": [
-      "Chengdu, China",
-      "Gaborone, Botswana",
-      "Bloemfontein, South Africa",
-      "Longnan, China"
-    ]
-  },
-  "Bdz1": {
-    "1": [
-      "Karachi, Pakistan",
-      "Manama, Bahrain",
-      "Doha, Qatar",
-      "El Menia, Algeria"
-    ],
-    "2": [
-      "Cairo, Egypt"
-    ],
-    "3": [
-      "Cairo, Egypt",
-      "Amman, Jordan",
-      "Tripoli, Libya",
-      "Damascus, Syria",
-      "Melilla, Melilla (ES)"
-    ],
-    "4": [
-      "Baku, Azerbaijan",
-      "Amman, Jordan",
-      "Tripoli, Libya",
-      "Windhoek, Namibia",
-      "Madrid, Spain",
-      "Melilla, Melilla (ES)"
-    ]
-  },
-  "Bhz1": {
-    "1": [
-      "Islamabad, Pakistan",
-      "Gujrat, Pakistan"
-    ],
-    "2": [
-      "Taipei, Taiwan",
-      "Islamabad, Pakistan",
-      "Gujrat, Pakistan",
-      "Fuzhou, China"
-    ],
-    "3": [
-      "Guangzhou, China",
-      "Chongqing, China",
-      "Wuhan, China",
-      "Taipei, Taiwan",
-      "Houston, Texas, United States",
-      "Tampa, Florida, United States",
-      "Orlando, Florida, United States",
-      "Jacksonville, Florida, United States",
-      "New Orleans, Louisiana, United States",
-      "Montgomery, Alabama, United States",
-      "Tallahassee, Florida, United States",
-      "Baton Rouge, Louisiana, United States",
-      "Jackson, Mississippi, United States",
-      "Columbia, South Carolina, United States",
-      "Islamabad, Pakistan",
-      "Asunción, Paraguay",
-      "Fuzhou, China"
-    ],
-    "4": [
-      "Nagoya, Japan",
-      "Houston, Texas, United States",
-      "Atlanta, Georgia, United States",
-      "Tampa, Florida, United States",
-      "Orlando, Florida, United States",
-      "Virginia Beach, Virginia, United States",
-      "Charlotte, North Carolina, United States",
-      "Jacksonville, Florida, United States",
-      "Raleigh, North Carolina, United States",
-      "New Orleans, Louisiana, United States",
-      "Tallahassee, Florida, United States",
-      "Baton Rouge, Louisiana, United States"
-    ]
-  },
-  "Bma1": {
-    "1": [
-      "Los Angeles, California, United States",
-      "Rabat, Morocco",
-      "Lisbon, Portugal",
-      "Gibraltar, Gibraltar (UK)",
-      "Ceuta, Ceuta (ES)",
-      "Ponta Delgada, Azores (PT)",
-      "Funchal, Madeira (PT)",
-      "Hanga Roa, Easter Island (CL)"
-    ],
-    "2": [
-      "San Jose, California, United States",
-      "Santiago, Chile",
-      "Rabat, Morocco",
-      "Lisbon, Portugal",
-      "Cape Town, South Africa",
-      "Gibraltar, Gibraltar (UK)",
-      "Ceuta, Ceuta (ES)",
-      "Ponta Delgada, Azores (PT)",
-      "Funchal, Madeira (PT)",
-      "Hanga Roa, Easter Island (CL)"
-    ],
-    "3": [
-      "San Francisco, California, United States",
-      "Lisbon, Portugal",
-      "Cape Town, South Africa",
-      "Funchal, Madeira (PT)",
-      "Coronado Islands, Mexico",
-      "Lompoc, California, United States"
-    ],
-    "4": [
-      "Cape Town, South Africa"
-    ]
-  },
-  "Bwa2": {
-    "1": [
-      "Guangzhou, China",
-      "Dhaka, Bangladesh",
-      "Shenzhen, China",
-      "Dongguan, China",
-      "Gaborone, Botswana",
-      "Maputo, Mozambique",
-      "Hanoi, Vietnam"
-    ],
-    "2": [
-      "Dhaka, Bangladesh",
-      "Gaborone, Botswana",
-      "Lilongwe, Malawi",
-      "Lusaka, Zambia"
-    ],
-    "3": [
-      "Gaborone, Botswana",
-      "Lilongwe, Malawi",
-      "Kathmandu, Nepal",
-      "Bloemfontein, South Africa",
-      "Lusaka, Zambia",
-      "Harare, Zimbabwe"
-    ],
-    "4": [
-      "Mexico City, Mexico",
-      "Johannesburg, South Africa",
-      "Mbabane, Eswatini",
-      "Maseru, Lesotho",
-      "Antananarivo, Madagascar",
-      "Kathmandu, Nepal",
-      "Harare, Zimbabwe",
-      "Phungling, Nepal",
-      "San José de la Joya, Mexico"
-    ]
-  },
-  "Bga2": {
-    "1": [
-      "San Antonio, Texas, United States",
-      "Austin, Texas, United States"
-    ],
-    "2": [
-      "Barcelona, Spain"
-    ],
-    "3": [
-      "Kingston, Norfolk Island (AU)",
-      "Barcelona, Spain"
-    ],
-    "4": [
-      "Asmara, Eritrea",
-      "Montevideo, Uruguay"
-    ]
-  },
-  "Bda2": {
-    "1": [
-      "Cairo, Egypt",
-      "Djibouti, Djibouti",
-      "Tripoli, Libya"
-    ],
-    "2": [
-      "Tripoli, Libya",
-      "Windhoek, Namibia"
-    ],
-    "3": [
-      "Lima, Peru",
-      "San Diego, California, United States",
-      "Windhoek, Namibia",
-      "Sana'a, Yemen"
-    ],
-    "4": [
-      "Rabat, Morocco"
-    ]
-  },
-  "Bha2": {
-    "1": [
-      "Taipei, Taiwan",
-      "Houston, Texas, United States",
-      "Tampa, Florida, United States",
-      "Orlando, Florida, United States",
-      "Jacksonville, Florida, United States",
-      "New Orleans, Louisiana, United States",
-      "Tallahassee, Florida, United States",
-      "Baton Rouge, Louisiana, United States",
-      "Asunción, Paraguay",
-      "Hamilton, Bermuda (UK)",
-      "Nouméa, New Caledonia (FR)",
-      "Fuzhou, China"
-    ],
-    "2": [
-      "Houston, Texas, United States",
-      "Tampa, Florida, United States",
-      "Orlando, Florida, United States",
-      "Jacksonville, Florida, United States",
-      "New Orleans, Louisiana, United States",
-      "Montgomery, Alabama, United States",
-      "Tallahassee, Florida, United States",
-      "Baton Rouge, Louisiana, United States",
-      "Jackson, Mississippi, United States",
-      "Asunción, Paraguay",
-      "Hamilton, Bermuda (UK)"
-    ],
-    "3": [
-      "São Paulo, Brazil",
-      "Buenos Aires, Argentina",
-      "Hamilton, Bermuda (UK)"
-    ],
-    "4": [
-      "Buenos Aires, Argentina",
-      "Burnaby, British Columbia, Canada"
-    ]
-  },
-  "Bmb2": {
-    "1": [
-      "Cape Town, South Africa",
-      "Lompoc, California, United States"
-    ],
-    "2": [
-      "San Francisco, California, United States",
-      "Lompoc, California, United States"
-    ],
-    "3": [],
-    "4": []
-  },
-  "Bsa1": {
-    "1": [
-      "Jamestown, St Helena (UK)"
-    ],
-    "2": [],
-    "3": [],
-    "4": []
-  },
-  "Bwa1": {
-    "1": [
-      "Brasília, Brazil",
-      "Guatemala City, Guatemala",
-      "Antananarivo, Madagascar",
-      "Lilongwe, Malawi",
-      "Kathmandu, Nepal",
-      "Lusaka, Zambia",
-      "Harare, Zimbabwe",
-      "San José de la Joya, Mexico"
-    ],
-    "2": [
-      "Mexico City, Mexico",
-      "Mbabane, Eswatini",
-      "Guatemala City, Guatemala",
-      "Antananarivo, Madagascar",
-      "Kathmandu, Nepal",
-      "Harare, Zimbabwe",
-      "San José de la Joya, Mexico"
-    ],
-    "3": [
-      "Mexico City, Mexico",
-      "Johannesburg, South Africa",
-      "Mbabane, Eswatini",
-      "Addis Ababa, Ethiopia",
-      "Maseru, Lesotho",
-      "Antananarivo, Madagascar",
-      "Phungling, Nepal",
-      "San José de la Joya, Mexico"
-    ],
-    "4": [
-      "Thimphu, Bhutan",
-      "Sucre, Bolivia"
-    ]
-  },
-  "Bga1": {
-    "1": [
-      "Gitega, Burundi",
-      "Nairobi, Kenya",
-      "Kigali, Rwanda"
-    ],
-    "2": [
-      "Gitega, Burundi",
-      "Asmara, Eritrea",
-      "Nairobi, Kenya",
-      "Kingston, Norfolk Island (AU)"
-    ],
-    "3": [
-      "Asmara, Eritrea"
-    ],
-    "4": [
-      "Bogotá, Colombia"
-    ]
-  },
-  "Bda1": {
-    "1": [
-      "Lima, Peru",
-      "San Diego, California, United States",
-      "Windhoek, Namibia",
-      "Sana'a, Yemen"
-    ],
-    "2": [
-      "Lima, Peru",
-      "San Diego, California, United States",
-      "Sana'a, Yemen",
-      "Coronado Islands, Mexico"
-    ],
-    "3": [],
-    "4": [
-      "Comodoro Rivadavia, Argentina"
-    ]
-  },
-  "Bha1": {
-    "1": [
-      "São Paulo, Brazil",
-      "Buenos Aires, Argentina",
-      "San José, Costa Rica",
-      "Montevideo, Uruguay",
-      "Kingston, Norfolk Island (AU)"
-    ],
-    "2": [
-      "São Paulo, Brazil",
-      "Buenos Aires, Argentina",
-      "Montevideo, Uruguay"
-    ],
-    "3": [
-      "Nairobi, Kenya",
-      "Montevideo, Uruguay"
-    ],
-    "4": [
-      "Wellington, New Zealand",
-      "Edinburgh of the Seven Seas"
-    ]
-  },
-  "Bsb2": {
-    "1": [
-      "Asmara, Eritrea"
-    ],
-    "2": [],
-    "3": [],
-    "4": []
-  },
-  "Bwb2": {
-    "1": [
-      "Mexico City, Mexico",
-      "Sucre, Bolivia",
-      "Mbabane, Eswatini",
-      "Addis Ababa, Ethiopia"
-    ],
-    "2": [
-      "Sucre, Bolivia",
-      "Addis Ababa, Ethiopia"
-    ],
-    "3": [
-      "Sucre, Bolivia"
+      "La Paz, Bolivia"
     ],
     "4": []
-  },
-  "Bdb2": {
-    "1": [
-      "Coronado Islands, Mexico"
-    ],
-    "2": [],
-    "3": [],
-    "4": []
-  },
-  "Bhb2": {
-    "1": [
-      "Edinburgh of the Seven Seas"
-    ],
-    "2": [
-      "Wellington, New Zealand",
-      "Edinburgh of the Seven Seas"
-    ],
-    "3": [
-      "Quito, Ecuador",
-      "Wellington, New Zealand",
-      "Edinburgh of the Seven Seas"
-    ],
-    "4": [
-      "Quito, Ecuador"
-    ]
-  },
-  "Cb1": {
-    "1": [
-      "Stanley, Falkland Islands (UK)",
-      "Tórshavn, Faroe Islands (DK)",
-      "Sitka, Alaska, United States",
-      "Ketchikan, Alaska, United States"
-    ],
-    "2": [
-      "Reykjavík, Iceland",
-      "Stanley, Falkland Islands (UK)",
-      "Tórshavn, Faroe Islands (DK)",
-      "Ushuaia, Argentina",
-      "Adak, Alaska, United States"
-    ],
-    "3": [
-      "Stanley, Falkland Islands (UK)",
-      "Tórshavn, Faroe Islands (DK)",
-      "Ushuaia, Argentina"
-    ],
-    "4": [
-      "Stanley, Falkland Islands (UK)",
-      "Ushuaia, Argentina",
-      "Macquarie Island Research Station"
-    ]
-  },
-  "Cc2": {
-    "1": [
-      "Macquarie Island Research Station",
-      "Adak, Alaska, United States"
-    ],
-    "2": [
-      "Macquarie Island Research Station"
-    ],
-    "3": [
-      "Macquarie Island Research Station",
-      "Bird Island Research Station",
-      "Heard Island and McDonald Islands (Coast)"
-    ],
-    "4": [
-      "Bird Island Research Station",
-      "Heard Island and McDonald Islands (Coast)"
-    ]
-  },
-  "Cc1": {
-    "1": [
-      "Heard Island and McDonald Islands (Coast)"
-    ],
-    "2": [
-      "Heard Island and McDonald Islands (Coast)"
-    ],
-    "3": [],
-    "4": []
-  },
-  "Cmz1": {
-    "1": [
-      "Tehran, Iran",
-      "Batman, Turkey"
-    ],
-    "2": [
-      "Tehran, Iran",
-      "Batman, Turkey"
-    ],
-    "3": [
-      "Boise, Idaho, United States",
-      "Tirana, Albania",
-      "Madrid, Spain",
-      "Dushanbe, Tajikistan",
-      "Tashkent, Uzbekistan",
-      "Borujerd, Iran"
-    ],
-    "4": [
-      "Carson City, Nevada, United States",
-      "Kabul, Afghanistan",
-      "Ankara, Turkey"
-    ]
-  },
-  "Cma2": {
-    "1": [
-      "Athens, Greece",
-      "Amman, Jordan",
-      "Podgorica, Montenegro",
-      "Madrid, Spain",
-      "Dushanbe, Tajikistan",
-      "Vatican City, Vatican City"
-    ],
-    "2": [
-      "Istanbul, Turkey",
-      "Boise, Idaho, United States",
-      "Tirana, Albania",
-      "Jerusalem, Israel",
-      "Rome, Italy",
-      "Amman, Jordan",
-      "Podgorica, Montenegro",
-      "Madrid, Spain",
-      "Dushanbe, Tajikistan",
-      "Tashkent, Uzbekistan",
-      "Vatican City, Vatican City",
-      "Borujerd, Iran"
-    ],
-    "3": [
-      "Istanbul, Turkey",
-      "Portland, Oregon, United States",
-      "Carson City, Nevada, United States",
-      "Salem, Oregon, United States",
-      "Kabul, Afghanistan"
-    ],
-    "4": [
-      "London, United Kingdom",
-      "Luxembourg, Luxembourg"
-    ]
-  },
-  "Cdz1": {
-    "1": [
-      "Las Vegas, Nevada, United States",
-      "Ashgabat, Turkmenistan"
-    ],
-    "2": [
-      "Ashgabat, Turkmenistan"
-    ],
-    "3": [
-      "Baku, Azerbaijan",
-      "Yakima, Washington, United States"
-    ],
-    "4": [
-      "Aksu City, China",
-      "Shoshoni, Wyoming, United States",
-      "Meeteetse, Wyoming, United States"
-    ]
-  },
-  "Chz1": {
-    "1": [
-      "Hengyang, China"
-    ],
-    "2": [
-      "Shanghai, China",
-      "Osaka, Japan",
-      "Chongqing, China",
-      "Wuhan, China",
-      "Hangzhou, China",
-      "Nagoya, Japan",
-      "Memphis, Tennessee, United States",
-      "Little Rock, Arkansas, United States",
-      "Hengyang, China"
-    ],
-    "3": [
-      "Tokyo, Japan",
-      "Shanghai, China",
-      "New York, New York, United States",
-      "Osaka, Japan",
-      "Hangzhou, China",
-      "Nagoya, Japan",
-      "Philadelphia, Pennsylvania, United States",
-      "Washington, District of Columbia, United States",
-      "Atlanta, Georgia, United States",
-      "Baltimore, Maryland, United States",
-      "St. Louis, Missouri, United States",
-      "Indianapolis, Indiana, United States",
-      "Cincinnati, Ohio, United States",
-      "Kansas City, Missouri, United States",
-      "Virginia Beach, Virginia, United States",
-      "Charlotte, North Carolina, United States",
-      "Nashville, Tennessee, United States",
-      "Raleigh, North Carolina, United States",
-      "Richmond, Virginia, United States",
-      "Memphis, Tennessee, United States",
-      "Louisville, Kentucky, United States",
-      "Little Rock, Arkansas, United States",
-      "Dover, Delaware, United States",
-      "Springfield, Illinois, United States",
-      "Topeka, Kansas, United States",
-      "Frankfort, Kentucky, United States",
-      "Annapolis, Maryland, United States",
-      "Jefferson City, Missouri, United States",
-      "Trenton, New Jersey, United States",
-      "Harrisburg, Pennsylvania, United States",
-      "Charleston, West Virginia, United States",
-      "Carbondale, Illinois, United States"
-    ],
-    "4": [
-      "Tokyo, Japan",
-      "New York, New York, United States",
-      "Chicago, Illinois, United States",
-      "Philadelphia, Pennsylvania, United States",
-      "Boston, Massachusetts, United States",
-      "Pittsburgh, Pennsylvania, United States",
-      "Cleveland, Ohio, United States",
-      "Indianapolis, Indiana, United States",
-      "Cincinnati, Ohio, United States",
-      "Columbus, Ohio, United States",
-      "Providence, Rhode Island, United States",
-      "Richmond, Virginia, United States",
-      "Hartford, Connecticut, United States",
-      "Buffalo, New York, United States",
-      "Dover, Delaware, United States",
-      "Springfield, Illinois, United States",
-      "Frankfort, Kentucky, United States",
-      "Augusta, Maine, United States",
-      "Concord, New Hampshire, United States",
-      "Trenton, New Jersey, United States",
-      "Albany, New York, United States",
-      "Montpelier, Vermont, United States",
-      "Charleston, West Virginia, United States",
-      "Sarajevo, Bosnia and Herzegovina",
-      "Ottawa, Ontario, Canada",
-      "Ljubljana, Slovenia",
-      "Toronto, Ontario, Canada",
-      "Ottawa, Ontario, Canada",
-      "Mississauga, Ontario, Canada",
-      "Hamilton, Ontario, Canada",
-      "Montreal, Quebec, Canada",
-      "Quebec City, Quebec, Canada",
-      "Laval, Quebec, Canada",
-      "Gatineau, Quebec, Canada",
-      "Longueuil, Quebec, Canada",
-      "Moncton, New Brunswick, Canada",
-      "Fredericton, New Brunswick, Canada",
-      "Dieppe, New Brunswick, Canada",
-      "Champaign, Illinois, United States"
-    ]
-  },
-  "Cma1": {
-    "1": [
-      "Istanbul, Turkey",
-      "Sacramento, California, United States",
-      "Carson City, Nevada, United States",
-      "Salem, Oregon, United States",
-      "Santiago, Chile",
-      "Jerusalem, Israel",
-      "Rome, Italy",
-      "Monaco, Monaco"
-    ],
-    "2": [
-      "Seattle, Washington, United States",
-      "Portland, Oregon, United States",
-      "Carson City, Nevada, United States",
-      "Salem, Oregon, United States",
-      "Olympia, Washington, United States"
-    ],
-    "3": [
-      "Seattle, Washington, United States",
-      "Olympia, Washington, United States",
-      "Surrey, British Columbia, Canada",
-      "Richmond, British Columbia, Canada"
-    ],
-    "4": []
-  },
-  "Csa2": {
-    "1": [
-      "Sedona, Arizona, United States"
-    ],
-    "2": [
-      "Denver, Colorado, United States",
-      "Salt Lake City, Utah, United States",
-      "Yerevan, Armenia",
-      "Tbilisi, Georgia",
-      "Ankara, Turkey"
-    ],
-    "3": [
-      "Denver, Colorado, United States",
-      "Santa Fe, New Mexico, United States",
-      "Cheyenne, Wyoming, United States",
-      "Chișinău, Moldova"
-    ],
-    "4": [
-      "Denver, Colorado, United States",
-      "Santa Fe, New Mexico, United States",
-      "Cheyenne, Wyoming, United States",
-      "Prague, Czech Republic",
-      "Calgary, Alberta, Canada"
-    ]
-  },
-  "Cwa2": {
-    "1": [
-      "Chengdu, China",
-      "Xi’an, China",
-      "Zhengzhou, China",
-      "Longnan, China"
-    ],
-    "2": [
-      "Chengdu, China",
-      "Zhengzhou, China",
-      "Longnan, China"
-    ],
-    "3": [],
-    "4": []
-  },
-  "Cga2": {
-    "1": [
-      "Dallas, Texas, United States",
-      "Oklahoma City, Oklahoma, United States",
-      "Skopje, North Macedonia"
-    ],
-    "2": [
-      "Chișinău, Moldova",
-      "Skopje, North Macedonia",
-      "Bucharest, Romania",
-      "Belgrade, Serbia",
-      "Sedona, Arizona, United States"
-    ],
-    "3": [
-      "Paris, France",
-      "Andorra la Vella, Andorra",
-      "Vienna, Austria",
-      "Sofia, Bulgaria",
-      "Prague, Czech Republic",
-      "Budapest, Hungary",
-      "Pristina, Kosovo",
-      "Bishkek, Kyrgyzstan",
-      "Warsaw, Poland",
-      "Bucharest, Romania",
-      "San Marino, San Marino",
-      "Belgrade, Serbia",
-      "Bratislava, Slovakia",
-      "Kyiv, Ukraine"
-    ],
-    "4": [
-      "Paris, France",
-      "Andorra la Vella, Andorra",
-      "Canberra, Australia",
-      "Minsk, Belarus",
-      "Berlin, Germany",
-      "Warsaw, Poland"
-    ]
-  },
-  "Cda2": {
-    "1": [
-      "Baku, Azerbaijan",
-      "Damascus, Syria"
-    ],
-    "2": [
-      "Baku, Azerbaijan",
-      "Damascus, Syria",
-      "Yakima, Washington, United States"
-    ],
-    "3": [],
-    "4": []
-  },
-  "Cha2": {
-    "1": [
-      "Tokyo, Japan",
-      "Shanghai, China",
-      "Osaka, Japan",
-      "Chongqing, China",
-      "Wuhan, China",
-      "Hangzhou, China",
-      "Nagoya, Japan",
-      "Philadelphia, Pennsylvania, United States",
-      "Washington, District of Columbia, United States",
-      "Atlanta, Georgia, United States",
-      "Baltimore, Maryland, United States",
-      "Virginia Beach, Virginia, United States",
-      "Charlotte, North Carolina, United States",
-      "Nashville, Tennessee, United States",
-      "Raleigh, North Carolina, United States",
-      "Richmond, Virginia, United States",
-      "Memphis, Tennessee, United States",
-      "Louisville, Kentucky, United States",
-      "Montgomery, Alabama, United States",
-      "Little Rock, Arkansas, United States",
-      "Dover, Delaware, United States",
-      "Frankfort, Kentucky, United States",
-      "Annapolis, Maryland, United States",
-      "Jackson, Mississippi, United States",
-      "Columbia, South Carolina, United States",
-      "Carbondale, Illinois, United States"
-    ],
-    "2": [
-      "Tokyo, Japan",
-      "New York, New York, United States",
-      "Philadelphia, Pennsylvania, United States",
-      "Washington, District of Columbia, United States",
-      "Atlanta, Georgia, United States",
-      "Baltimore, Maryland, United States",
-      "St. Louis, Missouri, United States",
-      "Pittsburgh, Pennsylvania, United States",
-      "Indianapolis, Indiana, United States",
-      "Cincinnati, Ohio, United States",
-      "Kansas City, Missouri, United States",
-      "Columbus, Ohio, United States",
-      "Virginia Beach, Virginia, United States",
-      "Charlotte, North Carolina, United States",
-      "Providence, Rhode Island, United States",
-      "Nashville, Tennessee, United States",
-      "Raleigh, North Carolina, United States",
-      "Richmond, Virginia, United States",
-      "Hartford, Connecticut, United States",
-      "Louisville, Kentucky, United States",
-      "Dover, Delaware, United States",
-      "Topeka, Kansas, United States",
-      "Frankfort, Kentucky, United States",
-      "Annapolis, Maryland, United States",
-      "Jefferson City, Missouri, United States",
-      "Trenton, New Jersey, United States",
-      "Harrisburg, Pennsylvania, United States",
-      "Columbia, South Carolina, United States",
-      "Charleston, West Virginia, United States",
-      "Zagreb, Croatia",
-      "Carbondale, Illinois, United States"
-    ],
-    "3": [
-      "Chicago, Illinois, United States",
-      "Boston, Massachusetts, United States",
-      "Detroit, Michigan, United States",
-      "Pittsburgh, Pennsylvania, United States",
-      "Cleveland, Ohio, United States",
-      "Columbus, Ohio, United States",
-      "Providence, Rhode Island, United States",
-      "Hartford, Connecticut, United States",
-      "Buffalo, New York, United States",
-      "Augusta, Maine, United States",
-      "Lansing, Michigan, United States",
-      "Concord, New Hampshire, United States",
-      "Albany, New York, United States",
-      "Sarajevo, Bosnia and Herzegovina",
-      "Zagreb, Croatia",
-      "Vaduz, Liechtenstein",
-      "Ljubljana, Slovenia",
-      "Bern, Switzerland",
-      "Toronto, Ontario, Canada",
-      "Mississauga, Ontario, Canada",
-      "Brampton, Ontario, Canada",
-      "Hamilton, Ontario, Canada",
-      "Abbotsford, British Columbia, Canada",
-      "Halifax, Nova Scotia, Canada",
-      "Truro, Nova Scotia, Canada",
-      "New Glasgow, Nova Scotia, Canada",
-      "Champaign, Illinois, United States"
-    ],
-    "4": [
-      "Brussels, Belgium",
-      "Copenhagen, Denmark",
-      "Tallinn, Estonia",
-      "Helsinki, Finland",
-      "Riga, Latvia",
-      "Vaduz, Liechtenstein",
-      "Vilnius, Lithuania",
-      "Oslo, Norway",
-      "Stockholm, Sweden",
-      "Bern, Switzerland",
-      "Saint-Pierre, Saint-Pierre & Miquelon (FR)",
-      "Halifax, Nova Scotia, Canada",
-      "Cape Breton Regional Municipality, Nova Scotia, Canada",
-      "Truro, Nova Scotia, Canada",
-      "New Glasgow, Nova Scotia, Canada",
-      "Amherst, Nova Scotia, Canada",
-      "Saint John, New Brunswick, Canada",
-      "Miramichi, New Brunswick, Canada",
-      "Corner Brook, Newfoundland and Labrador, Canada",
-      "Charlottetown, Prince Edward Island, Canada"
-    ]
-  },
-  "Cmb2": {
-    "1": [
-      "Seattle, Washington, United States",
-      "San Francisco, California, United States",
-      "Portland, Oregon, United States",
-      "San Jose, California, United States",
-      "Olympia, Washington, United States",
-      "Comodoro Rivadavia, Argentina"
-    ],
-    "2": [
-      "Comodoro Rivadavia, Argentina"
-    ],
-    "3": [],
-    "4": []
-  },
-  "Csa1": {
-    "1": [
-      "Maseru, Lesotho",
-      "Bloemfontein, South Africa",
-      "Ankara, Turkey"
-    ],
-    "2": [
-      "Santa Fe, New Mexico, United States",
-      "Cheyenne, Wyoming, United States",
-      "Bloemfontein, South Africa"
-    ],
-    "3": [],
-    "4": []
-  },
-  "Cwa1": {
-    "1": [
-      "Phungling, Nepal"
-    ],
-    "2": [
-      "Johannesburg, South Africa",
-      "Maseru, Lesotho",
-      "Phungling, Nepal"
-    ],
-    "3": [
-      "Thimphu, Bhutan"
-    ],
-    "4": []
-  },
-  "Cga1": {
-    "1": [
-      "Canberra, Australia",
-      "Pristina, Kosovo",
-      "Barcelona, Spain"
-    ],
-    "2": [
-      "Canberra, Australia",
-      "Vienna, Austria",
-      "Sofia, Bulgaria",
-      "Prague, Czech Republic",
-      "Budapest, Hungary",
-      "Pristina, Kosovo",
-      "Bratislava, Slovakia"
-    ],
-    "3": [
-      "Canberra, Australia",
-      "Berlin, Germany"
-    ],
-    "4": [
-      "Prudhoe Bay, Alaska, United States"
-    ]
-  },
-  "Cha1": {
-    "1": [
-      "Trenton, New Jersey, United States",
-      "Charleston, West Virginia, United States",
-      "Tirana, Albania",
-      "Sarajevo, Bosnia and Herzegovina",
-      "Zagreb, Croatia",
-      "San Marino, San Marino",
-      "Belgrade, Serbia",
-      "Ljubljana, Slovenia"
-    ],
-    "2": [
-      "Paris, France",
-      "Boston, Massachusetts, United States",
-      "Andorra la Vella, Andorra",
-      "Brussels, Belgium",
-      "Sarajevo, Bosnia and Herzegovina",
-      "Berlin, Germany",
-      "Vaduz, Liechtenstein",
-      "Luxembourg, Luxembourg",
-      "Warsaw, Poland",
-      "San Marino, San Marino",
-      "Ljubljana, Slovenia",
-      "Bern, Switzerland",
-      "Vancouver, British Columbia, Canada",
-      "Surrey, British Columbia, Canada",
-      "Burnaby, British Columbia, Canada",
-      "Richmond, British Columbia, Canada",
-      "Abbotsford, British Columbia, Canada"
-    ],
-    "3": [
-      "London, United Kingdom",
-      "Brussels, Belgium",
-      "Copenhagen, Denmark",
-      "Tallinn, Estonia",
-      "Riga, Latvia",
-      "Vilnius, Lithuania",
-      "Luxembourg, Luxembourg",
-      "Amsterdam, Netherlands",
-      "Stockholm, Sweden",
-      "Saint-Pierre, Saint-Pierre & Miquelon (FR)",
-      "Vancouver, British Columbia, Canada",
-      "Burnaby, British Columbia, Canada",
-      "Saint John, New Brunswick, Canada",
-      "St. John's, Newfoundland and Labrador, Canada",
-      "Conception Bay South, Newfoundland and Labrador, Canada",
-      "Mount Pearl, Newfoundland and Labrador, Canada",
-      "Paradise, Newfoundland and Labrador, Canada",
-      "Sterling, Alaska, United States"
-    ],
-    "4": [
-      "Juneau, Alaska, United States",
-      "Dublin, Ireland",
-      "Amsterdam, Netherlands",
-      "St. John's, Newfoundland and Labrador, Canada",
-      "Conception Bay South, Newfoundland and Labrador, Canada",
-      "Mount Pearl, Newfoundland and Labrador, Canada",
-      "Paradise, Newfoundland and Labrador, Canada",
-      "Anchorage, Alaska, United States",
-      "Kalifornsky, Alaska, United States",
-      "Sitka, Alaska, United States",
-      "Ketchikan, Alaska, United States",
-      "Kenai, Alaska, United States",
-      "Bethel, Alaska, United States",
-      "Sterling, Alaska, United States"
-    ]
-  },
-  "Cwb2": {
-    "1": [
-      "Johannesburg, South Africa",
-      "Thimphu, Bhutan"
-    ],
-    "2": [
-      "Thimphu, Bhutan"
-    ],
-    "3": [],
-    "4": [
-      "Wainwright, Alaska, United States"
-    ]
-  },
-  "Chb2": {
-    "1": [
-      "Paris, France",
-      "London, United Kingdom",
-      "Andorra la Vella, Andorra",
-      "Brussels, Belgium",
-      "Copenhagen, Denmark",
-      "Berlin, Germany",
-      "Dublin, Ireland",
-      "Luxembourg, Luxembourg",
-      "Amsterdam, Netherlands",
-      "Wellington, New Zealand",
-      "Bern, Switzerland",
-      "Vancouver, British Columbia, Canada",
-      "Surrey, British Columbia, Canada",
-      "Burnaby, British Columbia, Canada",
-      "Richmond, British Columbia, Canada",
-      "Abbotsford, British Columbia, Canada"
-    ],
-    "2": [
-      "London, United Kingdom",
-      "Copenhagen, Denmark",
-      "Dublin, Ireland",
-      "Amsterdam, Netherlands",
-      "Saint-Pierre, Saint-Pierre & Miquelon (FR)",
-      "Sitka, Alaska, United States",
-      "Ketchikan, Alaska, United States"
-    ],
-    "3": [
-      "Reykjavík, Iceland",
-      "Dublin, Ireland",
-      "Kalifornsky, Alaska, United States",
-      "Sitka, Alaska, United States",
-      "Ketchikan, Alaska, United States",
-      "Kenai, Alaska, United States",
-      "Adak, Alaska, United States"
-    ],
-    "4": [
-      "Reykjavík, Iceland",
-      "Tórshavn, Faroe Islands (DK)",
-      "Longyearbyen, Svalbard & Jan Mayen (NO)",
-      "Adak, Alaska, United States"
-    ]
-  },
-  "Db1": {
-    "1": [
-      "Juneau, Alaska, United States",
-      "Reykjavík, Iceland",
-      "Anchorage, Alaska, United States",
-      "Kalifornsky, Alaska, United States",
-      "Kenai, Alaska, United States",
-      "Sterling, Alaska, United States",
-      "Ushuaia, Argentina"
-    ],
-    "2": [],
-    "3": [
-      "Nuuk, Greenland (DK)",
-      "Longyearbyen, Svalbard & Jan Mayen (NO)",
-      "Wainwright, Alaska, United States"
-    ],
-    "4": [
-      "Isachsen Research Station, Nunavut, Canada"
-    ]
-  },
-  "Dc1": {
-    "1": [
-      "Primavera Research Station, Antarctica",
-      "Bird Island Research Station"
-    ],
-    "2": [
-      "Primavera Research Station, Antarctica",
-      "Bird Island Research Station"
-    ],
-    "3": [
-      "Primavera Research Station, Antarctica"
-    ],
-    "4": []
-  },
-  "Dma2": {
-    "1": [
-      "Boise, Idaho, United States",
-      "Tashkent, Uzbekistan",
-      "Borujerd, Iran"
-    ],
-    "2": [
-      "Kabul, Afghanistan"
-    ],
-    "3": [
-      "Sharistan, Afghanistan"
-    ],
-    "4": [
-      "Sharistan, Afghanistan"
-    ]
-  },
-  "Ddz1": {
-    "1": [
-      "Turpan, China"
-    ],
-    "2": [],
-    "3": [
-      "Shoshoni, Wyoming, United States",
-      "Ushmola, Kazakhstan"
-    ],
-    "4": []
-  },
-  "Dma1": {
-    "1": [
-      "Kabul, Afghanistan"
-    ],
-    "2": [
-      "Sharistan, Afghanistan"
-    ],
-    "3": [],
-    "4": []
-  },
-  "Dsa2": {
-    "1": [
-      "Salt Lake City, Utah, United States",
-      "Yerevan, Armenia"
-    ],
-    "2": [
-      "Pierre, South Dakota, United States"
-    ],
-    "3": [
-      "Helena, Montana, United States",
-      "Bismarck, North Dakota, United States",
-      "Astana, Kazakhstan",
-      "Lethbridge, Alberta, Canada",
-      "Portage la Prairie, Manitoba, Canada",
-      "Regina, Saskatchewan, Canada",
-      "Moose Jaw, Saskatchewan, Canada",
-      "Swift Current, Saskatchewan, Canada",
-      "Rexburg, Idaho, United States",
-      "Zhetikara, Kazakhstan",
-      "Grand Forks, North Dakota, United States"
-    ],
-    "4": [
-      "Edmonton, Alberta, Canada",
-      "Red Deer, Alberta, Canada",
-      "St. Albert, Alberta, Canada",
-      "Hay River, Northwest Territories, Canada",
-      "Fort Smith, Northwest Territories, Canada"
-    ]
-  },
-  "Dwa2": {
-    "1": [
-      "Seoul, South Korea",
-      "Beijing, China",
-      "Tianjin, China"
-    ],
-    "2": [
-      "Seoul, South Korea",
-      "Beijing, China",
-      "Tianjin, China",
-      "Pyongyang, North Korea"
-    ],
-    "3": [
-      "Shenyang, China"
-    ],
-    "4": []
-  },
-  "Dga2": {
-    "1": [
-      "Lincoln, Nebraska, United States"
-    ],
-    "2": [
-      "Lincoln, Nebraska, United States",
-      "Bishkek, Kyrgyzstan"
-    ],
-    "3": [
-      "Minneapolis, Minnesota, United States",
-      "Winnipeg, Manitoba, Canada",
-      "Steinbach, Manitoba, Canada",
-      "Duluth, Minnesota, United States",
-      "Lutsen, Minnesota, United States",
-      "Thunder Bay, Ontario, Canada"
-    ],
-    "4": [
-      "Thompson, Manitoba, Canada",
-      "Yellowknife, Northwest Territories, Canada",
-      "Inuvik, Northwest Territories, Canada",
-      "Fort Providence, Northwest Territories, Canada",
-      "Fort Good Hope, Northwest Territories, Canada"
-    ]
-  },
-  "Dha2": {
-    "1": [
-      "St. Louis, Missouri, United States",
-      "Kansas City, Missouri, United States",
-      "Topeka, Kansas, United States",
-      "Jefferson City, Missouri, United States"
-    ],
-    "2": [
-      "Chicago, Illinois, United States",
-      "Detroit, Michigan, United States",
-      "Minneapolis, Minnesota, United States",
-      "Cleveland, Ohio, United States",
-      "Milwaukee, Wisconsin, United States",
-      "Springfield, Illinois, United States",
-      "Des Moines, Iowa, United States",
-      "Albany, New York, United States",
-      "Madison, Wisconsin, United States",
-      "Champaign, Illinois, United States"
-    ],
-    "3": [
-      "Moscow, Russia",
-      "Milwaukee, Wisconsin, United States",
-      "Montpelier, Vermont, United States",
-      "Madison, Wisconsin, United States",
-      "Ottawa, Ontario, Canada",
-      "Ottawa, Ontario, Canada",
-      "Montreal, Quebec, Canada",
-      "Quebec City, Quebec, Canada",
-      "Laval, Quebec, Canada",
-      "Gatineau, Quebec, Canada",
-      "Longueuil, Quebec, Canada",
-      "Amherst, Nova Scotia, Canada",
-      "Moncton, New Brunswick, Canada",
-      "Fredericton, New Brunswick, Canada",
-      "Dieppe, New Brunswick, Canada",
-      "Miramichi, New Brunswick, Canada",
-      "Charlottetown, Prince Edward Island, Canada"
-    ],
-    "4": [
-      "Fairbanks, Alaska, United States",
-      "Knik-Fairview, Alaska, United States",
-      "Badger, Alaska, United States",
-      "College, Alaska, United States",
-      "North Lakes, Alaska, United States",
-      "Meadow Lakes, Alaska, United States",
-      "Wasilla, Alaska, United States",
-      "Tanaina, Alaska, United States",
-      "Steele Creek, Alaska, United States",
-      "Chena Ridge, Alaska, United States",
-      "Palmer, Alaska, United States",
-      "Gateway, Alaska, United States"
-    ]
-  },
-  "Dsa1": {
-    "1": [
-      "Denver, Colorado, United States",
-      "Helena, Montana, United States",
-      "Santa Fe, New Mexico, United States",
-      "Pierre, South Dakota, United States",
-      "Cheyenne, Wyoming, United States",
-      "Rexburg, Idaho, United States"
-    ],
-    "2": [
-      "Helena, Montana, United States",
-      "Bismarck, North Dakota, United States",
-      "Lethbridge, Alberta, Canada",
-      "Swift Current, Saskatchewan, Canada",
-      "Rexburg, Idaho, United States",
-      "Meeteetse, Wyoming, United States"
-    ],
-    "3": [
-      "Calgary, Alberta, Canada",
-      "Edmonton, Alberta, Canada",
-      "Red Deer, Alberta, Canada",
-      "St. Albert, Alberta, Canada"
-    ],
-    "4": [
-      "Tuktoyaktuk, Northwest Territories, Canada",
-      "Tuktoyaktuk, Northwest Territories, Canada"
-    ]
-  },
-  "Dwa1": {
-    "1": [
-      "Pyongyang, North Korea"
-    ],
-    "2": [],
-    "3": [],
-    "4": []
-  },
-  "Dga1": {
-    "1": [
-      "Sofia, Bulgaria",
-      "Tbilisi, Georgia",
-      "Budapest, Hungary",
-      "Bishkek, Kyrgyzstan",
-      "Chișinău, Moldova",
-      "Bucharest, Romania"
-    ],
-    "2": [
-      "Grand Forks, North Dakota, United States"
-    ],
-    "3": [],
-    "4": [
-      "Arviat, Nunavut, Canada"
-    ]
-  },
-  "Dda1": {
-    "1": [
-      "Aksu City, China",
-      "Shoshoni, Wyoming, United States",
-      "Yakima, Washington, United States"
-    ],
-    "2": [],
-    "3": [],
-    "4": []
-  },
-  "Dha1": {
-    "1": [
-      "New York, New York, United States",
-      "Chicago, Illinois, United States",
-      "Boston, Massachusetts, United States",
-      "Detroit, Michigan, United States",
-      "Minneapolis, Minnesota, United States",
-      "Pittsburgh, Pennsylvania, United States",
-      "Cleveland, Ohio, United States",
-      "Indianapolis, Indiana, United States",
-      "Cincinnati, Ohio, United States",
-      "Columbus, Ohio, United States",
-      "Milwaukee, Wisconsin, United States",
-      "Providence, Rhode Island, United States",
-      "Hartford, Connecticut, United States",
-      "Buffalo, New York, United States",
-      "Springfield, Illinois, United States",
-      "Des Moines, Iowa, United States",
-      "Augusta, Maine, United States",
-      "Lansing, Michigan, United States",
-      "Concord, New Hampshire, United States",
-      "Albany, New York, United States",
-      "Harrisburg, Pennsylvania, United States",
-      "Montpelier, Vermont, United States",
-      "Madison, Wisconsin, United States",
-      "Vienna, Austria",
-      "Bratislava, Slovakia",
-      "Toronto, Ontario, Canada",
-      "Mississauga, Ontario, Canada",
-      "Brampton, Ontario, Canada",
-      "Hamilton, Ontario, Canada",
-      "Montreal, Quebec, Canada",
-      "Laval, Quebec, Canada",
-      "Longueuil, Quebec, Canada",
-      "Champaign, Illinois, United States"
-    ],
-    "2": [
-      "Moscow, Russia",
-      "Buffalo, New York, United States",
-      "Augusta, Maine, United States",
-      "Lansing, Michigan, United States",
-      "Concord, New Hampshire, United States",
-      "Montpelier, Vermont, United States",
-      "Minsk, Belarus",
-      "Ottawa, Ontario, Canada",
-      "Tallinn, Estonia",
-      "Helsinki, Finland",
-      "Riga, Latvia",
-      "Vilnius, Lithuania",
-      "Oslo, Norway",
-      "Stockholm, Sweden",
-      "Kyiv, Ukraine",
-      "Toronto, Ontario, Canada",
-      "Ottawa, Ontario, Canada",
-      "Mississauga, Ontario, Canada",
-      "Brampton, Ontario, Canada",
-      "Hamilton, Ontario, Canada",
-      "Montreal, Quebec, Canada",
-      "Quebec City, Quebec, Canada",
-      "Laval, Quebec, Canada",
-      "Gatineau, Quebec, Canada",
-      "Longueuil, Quebec, Canada",
-      "Halifax, Nova Scotia, Canada",
-      "Truro, Nova Scotia, Canada",
-      "New Glasgow, Nova Scotia, Canada",
-      "Amherst, Nova Scotia, Canada",
-      "Moncton, New Brunswick, Canada",
-      "Fredericton, New Brunswick, Canada",
-      "Dieppe, New Brunswick, Canada",
-      "Miramichi, New Brunswick, Canada",
-      "Charlottetown, Prince Edward Island, Canada",
-      "Duluth, Minnesota, United States",
-      "Lutsen, Minnesota, United States",
-      "Thunder Bay, Ontario, Canada"
-    ],
-    "3": [
-      "Juneau, Alaska, United States",
-      "Minsk, Belarus",
-      "Helsinki, Finland",
-      "Oslo, Norway",
-      "Cape Breton Regional Municipality, Nova Scotia, Canada",
-      "Corner Brook, Newfoundland and Labrador, Canada",
-      "Anchorage, Alaska, United States",
-      "Knik-Fairview, Alaska, United States",
-      "Badger, Alaska, United States",
-      "North Lakes, Alaska, United States",
-      "Meadow Lakes, Alaska, United States",
-      "Wasilla, Alaska, United States",
-      "Tanaina, Alaska, United States",
-      "Steele Creek, Alaska, United States",
-      "Palmer, Alaska, United States",
-      "Gateway, Alaska, United States"
-    ],
-    "4": [
-      "Coral Harbour, Nunavut, Canada"
-    ]
-  },
-  "Dsb2": {
-    "1": [
-      "Lethbridge, Alberta, Canada",
-      "Meeteetse, Wyoming, United States"
-    ],
-    "2": [],
-    "3": [],
-    "4": []
-  },
-  "Dwb2": {
-    "1": [
-      "Calgary, Alberta, Canada"
-    ],
-    "2": [
-      "Calgary, Alberta, Canada"
-    ],
-    "3": [],
-    "4": [
-      "West Taijinar Lake, China"
-    ]
-  },
-  "Dhb2": {
-    "1": [
-      "Moscow, Russia",
-      "Minsk, Belarus",
-      "Prague, Czech Republic",
-      "Tallinn, Estonia",
-      "Helsinki, Finland",
-      "Riga, Latvia",
-      "Vaduz, Liechtenstein",
-      "Vilnius, Lithuania",
-      "Oslo, Norway",
-      "Warsaw, Poland",
-      "Stockholm, Sweden",
-      "Kyiv, Ukraine",
-      "Saint-Pierre, Saint-Pierre & Miquelon (FR)",
-      "Halifax, Nova Scotia, Canada",
-      "Cape Breton Regional Municipality, Nova Scotia, Canada",
-      "Truro, Nova Scotia, Canada",
-      "New Glasgow, Nova Scotia, Canada",
-      "Amherst, Nova Scotia, Canada",
-      "Moncton, New Brunswick, Canada",
-      "Saint John, New Brunswick, Canada",
-      "Fredericton, New Brunswick, Canada",
-      "Dieppe, New Brunswick, Canada",
-      "St. John's, Newfoundland and Labrador, Canada",
-      "Conception Bay South, Newfoundland and Labrador, Canada",
-      "Mount Pearl, Newfoundland and Labrador, Canada",
-      "Paradise, Newfoundland and Labrador, Canada",
-      "Corner Brook, Newfoundland and Labrador, Canada",
-      "Charlottetown, Prince Edward Island, Canada"
-    ],
-    "2": [
-      "Juneau, Alaska, United States",
-      "Cape Breton Regional Municipality, Nova Scotia, Canada",
-      "Saint John, New Brunswick, Canada",
-      "St. John's, Newfoundland and Labrador, Canada",
-      "Conception Bay South, Newfoundland and Labrador, Canada",
-      "Mount Pearl, Newfoundland and Labrador, Canada",
-      "Paradise, Newfoundland and Labrador, Canada",
-      "Corner Brook, Newfoundland and Labrador, Canada",
-      "Anchorage, Alaska, United States",
-      "North Lakes, Alaska, United States",
-      "Wasilla, Alaska, United States",
-      "Tanaina, Alaska, United States",
-      "Kalifornsky, Alaska, United States",
-      "Kenai, Alaska, United States",
-      "Sterling, Alaska, United States",
-      "Palmer, Alaska, United States",
-      "Gateway, Alaska, United States"
-    ],
-    "3": [
-      "Bethel, Alaska, United States"
-    ],
-    "4": [
-      "Nuuk, Greenland (DK)",
-      "Iqaluit, Nunavut, Canada"
-    ]
-  },
-  "EY": {
-    "1": [
-      "Casey Research Station, Antarctica",
-      "Mawson Station, Antarctica"
-    ],
-    "2": [
-      "Casey Research Station, Antarctica",
-      "Mawson Station, Antarctica"
-    ],
-    "3": [
-      "Casey Research Station, Antarctica",
-      "Mawson Station, Antarctica"
-    ],
-    "4": []
-  },
-  "Eb1": {
-    "1": [
-      "Bethel, Alaska, United States"
-    ],
-    "2": [],
-    "3": [
-      "Iqaluit, Nunavut, Canada",
-      "Pangnirtung, Nunavut, Canada",
-      "Prudhoe Bay, Alaska, United States",
-      "Utqiagvik, Alaska, United States",
-      "West Taijinar Lake, China"
-    ],
-    "4": [
-      "Pond Inlet, Nunavut, Canada",
-      "Qikiqtarjuaq, Nunavut, Canada",
-      "Eureka Research Station, Nunavut, Canada"
-    ]
-  },
-  "Ec2": {
-    "1": [
-      "Nuuk, Greenland (DK)",
-      "Longyearbyen, Svalbard & Jan Mayen (NO)",
-      "West Taijinar Lake, China"
-    ],
-    "2": [
-      "Wainwright, Alaska, United States",
-      "West Taijinar Lake, China"
-    ],
-    "3": [
-      "Pond Inlet, Nunavut, Canada",
-      "Qikiqtarjuaq, Nunavut, Canada",
-      "Isachsen Research Station, Nunavut, Canada"
-    ],
-    "4": []
-  },
-  "Ec1": {
-    "1": [
-      "Davis Research Station, Antarctica"
-    ],
-    "2": [
-      "Davis Research Station, Antarctica"
-    ],
-    "3": [
-      "Davis Research Station, Antarctica"
-    ],
-    "4": [
-      "Davis Research Station, Antarctica",
-      "Casey Research Station, Antarctica",
-      "Mawson Station, Antarctica"
-    ]
-  },
-  "Ema1": {
-    "1": [
-      "Sharistan, Afghanistan"
-    ],
-    "2": [],
-    "3": [],
-    "4": []
-  },
-  "Eda2": {
-    "1": [
-      "Ushmola, Kazakhstan"
-    ],
-    "2": [],
-    "3": [
-      "Mandalgovi, Mongolia"
-    ],
-    "4": [
-      "Ulaanbaatar, Mongolia",
-      "Mandalgovi, Mongolia"
-    ]
-  },
-  "Esa1": {
-    "1": [
-      "Astana, Kazakhstan",
-      "Zhetikara, Kazakhstan"
-    ],
-    "2": [
-      "Astana, Kazakhstan",
-      "Saskatoon, Saskatchewan, Canada",
-      "Regina, Saskatchewan, Canada",
-      "Moose Jaw, Saskatchewan, Canada",
-      "Zhetikara, Kazakhstan"
-    ],
-    "3": [],
-    "4": [
-      "Cambridge Bay, Nunavut, Canada"
-    ]
-  },
-  "Ewa1": {
-    "1": [
-      "Shenyang, China"
-    ],
-    "2": [
-      "Bulgan, Mongolia"
-    ],
-    "3": [
-      "Ulaanbaatar, Mongolia",
-      "Bulgan, Mongolia"
-    ],
-    "4": []
-  },
-  "Ega1": {
-    "1": [
-      "Bismarck, North Dakota, United States",
-      "Grand Forks, North Dakota, United States"
-    ],
-    "2": [
-      "Winnipeg, Manitoba, Canada",
-      "Brandon, Manitoba, Canada",
-      "Steinbach, Manitoba, Canada",
-      "Portage la Prairie, Manitoba, Canada",
-      "Prince Albert, Saskatchewan, Canada",
-      "Hay River, Northwest Territories, Canada",
-      "Fort Smith, Northwest Territories, Canada",
-      "Novosibirsk, Russia",
-      "Krasnoyarsk, Russia",
-      "Omsk, Russia"
-    ],
-    "3": [
-      "Thompson, Manitoba, Canada",
-      "Yellowknife, Northwest Territories, Canada",
-      "Hay River, Northwest Territories, Canada",
-      "Inuvik, Northwest Territories, Canada",
-      "Fort Smith, Northwest Territories, Canada",
-      "Behchoko, Northwest Territories, Canada",
-      "Fort Providence, Northwest Territories, Canada",
-      "Norman Wells, Northwest Territories, Canada"
-    ],
-    "4": [
-      "Baker Lake, Nunavut, Canada"
-    ]
-  },
-  "Eda1": {
-    "1": [
-      "Mandalgovi, Mongolia"
-    ],
-    "2": [
-      "Mandalgovi, Mongolia"
-    ],
-    "3": [],
-    "4": []
-  },
-  "Eha1": {
-    "1": [
-      "Ottawa, Ontario, Canada",
-      "Ottawa, Ontario, Canada",
-      "Gatineau, Quebec, Canada",
-      "Duluth, Minnesota, United States"
-    ],
-    "2": [
-      "Thompson, Manitoba, Canada",
-      "Fairbanks, Alaska, United States",
-      "Badger, Alaska, United States",
-      "College, Alaska, United States"
-    ],
-    "3": [
-      "Fort Simpson, Northwest Territories, Canada",
-      "Fort Good Hope, Northwest Territories, Canada",
-      "Fairbanks, Alaska, United States",
-      "College, Alaska, United States",
-      "Chena Ridge, Alaska, United States"
-    ],
-    "4": [
-      "Rankin Inlet, Nunavut, Canada"
-    ]
-  },
-  "Esb2": {
-    "1": [
-      "Moose Jaw, Saskatchewan, Canada",
-      "Swift Current, Saskatchewan, Canada"
-    ],
-    "2": [
-      "St. Albert, Alberta, Canada"
-    ],
-    "3": [
-      "Tuktoyaktuk, Northwest Territories, Canada"
-    ],
-    "4": []
-  },
-  "Ewb2": {
-    "1": [
-      "Bulgan, Mongolia"
-    ],
-    "2": [],
-    "3": [],
-    "4": []
-  },
-  "Egb2": {
-    "1": [
-      "Edmonton, Alberta, Canada",
-      "Red Deer, Alberta, Canada",
-      "St. Albert, Alberta, Canada",
-      "Winnipeg, Manitoba, Canada",
-      "Brandon, Manitoba, Canada",
-      "Portage la Prairie, Manitoba, Canada",
-      "Saskatoon, Saskatchewan, Canada",
-      "Regina, Saskatchewan, Canada",
-      "Prince Albert, Saskatchewan, Canada",
-      "Krasnoyarsk, Russia",
-      "Omsk, Russia"
-    ],
-    "2": [
-      "Edmonton, Alberta, Canada"
-    ],
-    "3": [
-      "Arviat, Nunavut, Canada",
-      "Tuktoyaktuk, Northwest Territories, Canada"
-    ],
-    "4": []
-  },
-  "Ehb2": {
-    "1": [
-      "Quebec City, Quebec, Canada",
-      "Steinbach, Manitoba, Canada",
-      "Miramichi, New Brunswick, Canada",
-      "Fairbanks, Alaska, United States",
-      "Knik-Fairview, Alaska, United States",
-      "Badger, Alaska, United States",
-      "College, Alaska, United States",
-      "North Lakes, Alaska, United States",
-      "Meadow Lakes, Alaska, United States",
-      "Wasilla, Alaska, United States",
-      "Tanaina, Alaska, United States",
-      "Steele Creek, Alaska, United States",
-      "Chena Ridge, Alaska, United States",
-      "Palmer, Alaska, United States",
-      "Gateway, Alaska, United States",
-      "Novosibirsk, Russia",
-      "Lutsen, Minnesota, United States",
-      "Thunder Bay, Ontario, Canada"
-    ],
-    "2": [
-      "Knik-Fairview, Alaska, United States",
-      "Meadow Lakes, Alaska, United States",
-      "Steele Creek, Alaska, United States",
-      "Bethel, Alaska, United States",
-      "Chena Ridge, Alaska, United States"
-    ],
-    "3": [
-      "Rankin Inlet, Nunavut, Canada",
-      "Coral Harbour, Nunavut, Canada"
-    ],
-    "4": [
-      "Pangnirtung, Nunavut, Canada",
-      "Igloolik, Nunavut, Canada"
-    ]
-  },
-  "FY": {
-    "1": [
-      "McMurdo Research Station, Antarctica"
-    ],
-    "2": [
-      "McMurdo Research Station, Antarctica"
-    ],
-    "3": [
-      "McMurdo Research Station, Antarctica",
-      "Svea Research Station, Antarctica"
-    ],
-    "4": [
-      "McMurdo Research Station, Antarctica",
-      "Svea Research Station, Antarctica"
-    ]
-  },
-  "Fa1": {
-    "1": [
-      "Hulunbuir, China"
-    ],
-    "2": [
-      "Norman Wells, Northwest Territories, Canada",
-      "Fort Good Hope, Northwest Territories, Canada",
-      "Ulaanbaatar, Mongolia",
-      "Hulunbuir, China"
-    ],
-    "3": [],
-    "4": []
-  },
-  "Fb2": {
-    "1": [
-      "Thompson, Manitoba, Canada",
-      "Yellowknife, Northwest Territories, Canada",
-      "Hay River, Northwest Territories, Canada",
-      "Fort Smith, Northwest Territories, Canada",
-      "Behchoko, Northwest Territories, Canada",
-      "Fort Simpson, Northwest Territories, Canada",
-      "Fort Providence, Northwest Territories, Canada",
-      "Norman Wells, Northwest Territories, Canada",
-      "Fort Good Hope, Northwest Territories, Canada",
-      "Ulaanbaatar, Mongolia"
-    ],
-    "2": [
-      "Yellowknife, Northwest Territories, Canada",
-      "Inuvik, Northwest Territories, Canada",
-      "Behchoko, Northwest Territories, Canada",
-      "Fort Simpson, Northwest Territories, Canada",
-      "Fort Providence, Northwest Territories, Canada"
-    ],
-    "3": [
-      "Cambridge Bay, Nunavut, Canada",
-      "Baker Lake, Nunavut, Canada"
-    ],
-    "4": []
-  },
-  "Fb1": {
-    "1": [
-      "Inuvik, Northwest Territories, Canada",
-      "Tuktoyaktuk, Northwest Territories, Canada",
-      "Tuktoyaktuk, Northwest Territories, Canada"
-    ],
-    "2": [
-      "Tuktoyaktuk, Northwest Territories, Canada",
-      "Iqaluit, Nunavut, Canada",
-      "Rankin Inlet, Nunavut, Canada",
-      "Arviat, Nunavut, Canada",
-      "Baker Lake, Nunavut, Canada",
-      "Pangnirtung, Nunavut, Canada",
-      "Coral Harbour, Nunavut, Canada",
-      "Tuktoyaktuk, Northwest Territories, Canada"
-    ],
-    "3": [
-      "Igloolik, Nunavut, Canada"
-    ],
-    "4": []
-  },
-  "Fc2": {
-    "1": [
-      "Iqaluit, Nunavut, Canada",
-      "Arviat, Nunavut, Canada",
-      "Pangnirtung, Nunavut, Canada",
-      "Coral Harbour, Nunavut, Canada",
-      "Prudhoe Bay, Alaska, United States"
-    ],
-    "2": [
-      "Igloolik, Nunavut, Canada",
-      "Qikiqtarjuaq, Nunavut, Canada",
-      "Prudhoe Bay, Alaska, United States",
-      "Utqiagvik, Alaska, United States"
-    ],
-    "3": [
-      "Eureka Research Station, Nunavut, Canada"
-    ],
-    "4": []
-  },
-  "Fc1": {
-    "1": [
-      "Pond Inlet, Nunavut, Canada",
-      "Qikiqtarjuaq, Nunavut, Canada",
-      "Wainwright, Alaska, United States",
-      "Utqiagvik, Alaska, United States"
-    ],
-    "2": [
-      "Pond Inlet, Nunavut, Canada",
-      "Isachsen Research Station, Nunavut, Canada"
-    ],
-    "3": [],
-    "4": []
-  },
-  "GY": {
-    "1": [
-      "Svea Research Station, Antarctica"
-    ],
-    "2": [
-      "Svea Research Station, Antarctica"
-    ],
-    "3": [],
-    "4": []
-  },
-  "Gb2": {
-    "1": [
-      "Yakutsk, Russia"
-    ],
-    "2": [
-      "Ust-Nera, Russia"
-    ],
-    "3": [],
-    "4": []
-  },
-  "Gb1": {
-    "1": [
-      "Cambridge Bay, Nunavut, Canada",
-      "Baker Lake, Nunavut, Canada"
-    ],
-    "2": [
-      "Cambridge Bay, Nunavut, Canada"
-    ],
-    "3": [],
-    "4": []
-  },
-  "Gc2": {
-    "1": [
-      "Rankin Inlet, Nunavut, Canada",
-      "Igloolik, Nunavut, Canada",
-      "Eureka Research Station, Nunavut, Canada"
-    ],
-    "2": [
-      "Eureka Research Station, Nunavut, Canada"
-    ],
-    "3": [],
-    "4": []
-  },
-  "Gc1": {
-    "1": [
-      "Isachsen Research Station, Nunavut, Canada"
-    ],
-    "2": [],
-    "3": [],
-    "4": []
-  },
-  "YY": {
-    "1": [
-      "Concordia Research Station, Antarctica"
-    ],
-    "2": [
-      "Concordia Research Station, Antarctica"
-    ],
-    "3": [
-      "Concordia Research Station, Antarctica"
-    ],
-    "4": [
-      "Concordia Research Station, Antarctica"
-    ]
-  },
-  "Yb2": {
-    "1": [
-      "Ust-Nera, Russia",
-      "Verkhoyansk, Russia"
-    ],
-    "2": [
-      "Verkhoyansk, Russia"
-    ],
-    "3": [],
-    "4": []
-  },
-  "Asa1": {
-    "1": [],
-    "2": [
-      "Jamestown, St Helena (UK)"
-    ],
-    "3": [],
-    "4": []
-  },
-  "Bgz1": {
-    "1": [],
-    "2": [
-      "Lahore, Pakistan",
-      "Dallas, Texas, United States",
-      "San Antonio, Texas, United States",
-      "Austin, Texas, United States"
-    ],
-    "3": [
-      "Dallas, Texas, United States",
-      "San Antonio, Texas, United States",
-      "Austin, Texas, United States",
-      "Sedona, Arizona, United States"
-    ],
-    "4": [
-      "San Marino, San Marino",
-      "Sedona, Arizona, United States"
-    ]
   },
   "Bgb2": {
     "1": [],
@@ -2691,26 +686,797 @@
     "3": [
       "Bogotá, Colombia"
     ],
-    "4": []
+    "4": [
+      "La Paz, Bolivia"
+    ]
   },
-  "Cwz1": {
-    "1": [],
+  "Eb1": {
+    "1": [
+      "Banff, Canada",
+      "Bethel, Alaska, United States",
+      "Murmansk, Russia",
+      "Nome, Alaska, United States"
+    ],
     "2": [
-      "Xi’an, China"
+      "Nome, Alaska, United States"
     ],
     "3": [
-      "Seoul, South Korea",
-      "Beijing, China",
-      "Xi’an, China",
-      "Zhengzhou, China",
-      "Tianjin, China",
-      "Longnan, China"
+      "Iqaluit, Canada",
+      "Prudhoe Bay, Alaska, United States",
+      "Utqiaġvik, Alaska, United States"
+    ],
+    "4": []
+  },
+  "Dgb2": {
+    "1": [
+      "Bozeman, Montana, United States",
+      "Jackson, Wyoming, United States",
+      "Prague, Czechia"
+    ],
+    "2": [
+      "Aspen, Colorado, United States",
+      "Banff, Canada"
+    ],
+    "3": [],
+    "4": []
+  },
+  "Dga1": {
+    "1": [
+      "Bishkek, Kyrgyzstan",
+      "Bucharest, Romania",
+      "Budapest, Hungary",
+      "Donetsk, Ukraine",
+      "Grand Island, Nebraska, United States",
+      "Kelowna, Canada",
+      "Kharkiv, Ukraine",
+      "Odesa, Ukraine",
+      "Sioux Falls, South Dakota, United States",
+      "Sofia, Bulgaria",
+      "Szeged, Hungary",
+      "Tbilisi, Georgia"
+    ],
+    "2": [
+      "Bozeman, Montana, United States",
+      "Donetsk, Ukraine",
+      "Fargo, North Dakota, United States",
+      "Jackson, Wyoming, United States",
+      "Kharkiv, Ukraine"
+    ],
+    "3": [
+      "Banff, Canada",
+      "Grande Prairie, Canada",
+      "Jackson, Wyoming, United States"
+    ],
+    "4": []
+  },
+  "Dsa2": {
+    "1": [
+      "Dodge City, Kansas, United States",
+      "Provo, Utah, United States",
+      "Pueblo, Colorado, United States",
+      "Salt Lake City, Utah, United States"
+    ],
+    "2": [
+      "Billings, Montana, United States",
+      "Casper, Wyoming, United States",
+      "Great Falls, Montana, United States",
+      "Miles City, Montana, United States",
+      "Missoula, Montana, United States",
+      "North Platte, Nebraska, United States",
+      "Pierre, South Dakota, United States",
+      "Pocatello, Idaho, United States",
+      "Rapid City, South Dakota, United States",
+      "Volgograd, Russia",
+      "Ürümqi, China"
+    ],
+    "3": [
+      "Astana, Kazakhstan",
+      "Bismarck, North Dakota, United States",
+      "Bozeman, Montana, United States",
+      "Dickinson, North Dakota, United States",
+      "Kamloops, Canada",
+      "Medicine Hat, Alberta, Canada",
+      "Regina, Saskatchewan, Canada",
+      "Rexburg, Idaho, United States",
+      "Ürümqi, China"
     ],
     "4": [
-      "Seoul, South Korea",
-      "Beijing, China",
-      "Tianjin, China",
-      "Pyongyang, North Korea"
+      "Banff, Canada",
+      "Edmonton, Canada",
+      "Grande Prairie, Canada",
+      "Hay River, Northwest Territories, Canada",
+      "Whitehorse, Canada"
+    ]
+  },
+  "Dwb2": {
+    "1": [
+      "Calgary, Canada"
+    ],
+    "2": [],
+    "3": [],
+    "4": []
+  },
+  "Dvb2": {
+    "1": [
+      "Lhasa, Tibet, China"
+    ],
+    "2": [
+      "Calgary, Canada",
+      "Lhasa, Tibet, China"
+    ],
+    "3": [],
+    "4": []
+  },
+  "Dsa1": {
+    "1": [
+      "Billings, Montana, United States",
+      "Casper, Wyoming, United States",
+      "Cheyenne, Wyoming, United States",
+      "Denver, Colorado, United States",
+      "Dickinson, North Dakota, United States",
+      "Flagstaff, Arizona, United States",
+      "Great Falls, Montana, United States",
+      "Kamloops, Canada",
+      "Medicine Hat, Alberta, Canada",
+      "Miles City, Montana, United States",
+      "Missoula, Montana, United States",
+      "North Platte, Nebraska, United States",
+      "Pierre, South Dakota, United States",
+      "Pocatello, Idaho, United States",
+      "Rapid City, South Dakota, United States",
+      "Rexburg, Idaho, United States",
+      "Santa Fe, New Mexico, United States",
+      "Volgograd, Russia"
+    ],
+    "2": [
+      "Bismarck, North Dakota, United States",
+      "Dickinson, North Dakota, United States",
+      "Kamloops, Canada",
+      "Medicine Hat, Alberta, Canada",
+      "Rexburg, Idaho, United States"
+    ],
+    "3": [
+      "Calgary, Canada",
+      "Edmonton, Canada"
+    ],
+    "4": []
+  },
+  "Csa2": {
+    "1": [
+      "Abilene, Texas, United States",
+      "Amarillo, Texas, United States",
+      "Carlsbad, New Mexico, United States",
+      "Lubbock, Texas, United States",
+      "Sedona, Arizona, United States"
+    ],
+    "2": [
+      "Albuquerque, New Mexico, United States",
+      "Amarillo, Texas, United States",
+      "Ankara, Türkiye",
+      "Denver, Colorado, United States",
+      "Dodge City, Kansas, United States",
+      "Hays, Kansas, United States",
+      "Kelowna, Canada",
+      "Lubbock, Texas, United States",
+      "Payson, Arizona, United States",
+      "Pueblo, Colorado, United States",
+      "Salt Lake City, Utah, United States",
+      "Tbilisi, Georgia"
+    ],
+    "3": [
+      "Cheyenne, Wyoming, United States",
+      "Denver, Colorado, United States",
+      "Kelowna, Canada",
+      "Odesa, Ukraine",
+      "Santa Fe, New Mexico, United States",
+      "Szeged, Hungary"
+    ],
+    "4": [
+      "Calgary, Canada",
+      "Canberra, Australia",
+      "Cheyenne, Wyoming, United States",
+      "Denver, Colorado, United States",
+      "Prague, Czechia",
+      "Santa Fe, New Mexico, United States",
+      "Taos, New Mexico, United States"
+    ]
+  },
+  "Egb2": {
+    "1": [
+      "Chelyabinsk, Russia",
+      "Edmonton, Canada",
+      "Grande Prairie, Canada",
+      "Krasnoyarsk, Russia",
+      "Novosibirsk, Russia",
+      "Omsk, Russia",
+      "Regina, Saskatchewan, Canada",
+      "Saskatoon, Canada",
+      "Winnipeg, Canada"
+    ],
+    "2": [
+      "Edmonton, Canada",
+      "Grande Prairie, Canada"
+    ],
+    "3": [],
+    "4": []
+  },
+  "Dhb2": {
+    "1": [
+      "Bella Coola, British Columbia, Canada",
+      "Halifax, Canada",
+      "Helsinki, Finland",
+      "Kyiv, Ukraine",
+      "Lviv, Ukraine",
+      "Marquette, Michigan, United States",
+      "Minsk, Belarus",
+      "Moncton, Canada",
+      "Moscow, Russia",
+      "Oslo, Norway",
+      "Portland, Maine, United States",
+      "Prince George, British Columbia, Canada",
+      "Riga, Latvia",
+      "Saint Petersburg, Russia",
+      "St. John's, Canada",
+      "Stockholm, Sweden",
+      "Summerside, Canada",
+      "Tallinn, Estonia",
+      "Terrace, British Columbia, Canada",
+      "Trondheim, Norway",
+      "Umeå, Sweden",
+      "Vilnius, Lithuania",
+      "Warsaw, Poland"
+    ],
+    "2": [
+      "Anchorage, Alaska, United States",
+      "Bodø, Norway",
+      "Juneau, Alaska, United States",
+      "Murmansk, Russia",
+      "Prince George, British Columbia, Canada",
+      "St. John's, Canada",
+      "Tromsø, Norway",
+      "Trondheim, Norway",
+      "Umeå, Sweden",
+      "Valdez, Alaska, United States"
+    ],
+    "3": [
+      "Bethel, Alaska, United States",
+      "Nome, Alaska, United States",
+      "Tromsø, Norway",
+      "Valdez, Alaska, United States"
+    ],
+    "4": [
+      "Iqaluit, Canada",
+      "Nuuk, Greenland"
+    ]
+  },
+  "Dha1": {
+    "1": [
+      "Almaty, Kazakhstan",
+      "Bangor, Maine, United States",
+      "Boston, Massachusetts, United States",
+      "Burlington, Vermont, United States",
+      "Cedar Rapids, Iowa, United States",
+      "Champaign, Illinois, United States",
+      "Chicago, Illinois, United States",
+      "Cincinnati, Ohio, United States",
+      "Cleveland, Ohio, United States",
+      "Columbus, Ohio, United States",
+      "Des Moines, Iowa, United States",
+      "Detroit, Michigan, United States",
+      "Fort Wayne, Indiana, United States",
+      "Grand Rapids, Michigan, United States",
+      "Green Bay, Wisconsin, United States",
+      "Indianapolis, Indiana, United States",
+      "Madison, Wisconsin, United States",
+      "Milwaukee, Wisconsin, United States",
+      "Minneapolis, Minnesota, United States",
+      "Montreal, Canada",
+      "New York City, New York, United States",
+      "Omaha, Nebraska, United States",
+      "Pittsburgh, Pennsylvania, United States",
+      "Syracuse, New York, United States",
+      "Toronto, Canada"
+    ],
+    "2": [
+      "Bangor, Maine, United States",
+      "Bella Coola, British Columbia, Canada",
+      "Burlington, Vermont, United States",
+      "Duluth, Minnesota, United States",
+      "Grand Rapids, Michigan, United States",
+      "Green Bay, Wisconsin, United States",
+      "Halifax, Canada",
+      "Helsinki, Finland",
+      "Kyiv, Ukraine",
+      "Lviv, Ukraine",
+      "Marquette, Michigan, United States",
+      "Minsk, Belarus",
+      "Moncton, Canada",
+      "Montreal, Canada",
+      "Moscow, Russia",
+      "Oslo, Norway",
+      "Ottawa, Canada",
+      "Portland, Maine, United States",
+      "Québec City, Canada",
+      "Riga, Latvia",
+      "Saint Petersburg, Russia",
+      "Stockholm, Sweden",
+      "Summerside, Canada",
+      "Syracuse, New York, United States",
+      "Tallinn, Estonia",
+      "Terrace, British Columbia, Canada",
+      "Thunder Bay, Canada",
+      "Toronto, Canada",
+      "Vilnius, Lithuania"
+    ],
+    "3": [
+      "Anchorage, Alaska, United States",
+      "Helsinki, Finland",
+      "Juneau, Alaska, United States",
+      "Minsk, Belarus",
+      "Murmansk, Russia",
+      "Oslo, Norway",
+      "Prince George, British Columbia, Canada",
+      "Saint Petersburg, Russia",
+      "Terrace, British Columbia, Canada",
+      "Umeå, Sweden"
+    ],
+    "4": [
+      "Churchill, Manitoba, Canada",
+      "Murmansk, Russia"
+    ]
+  },
+  "Cha2": {
+    "1": [
+      "Atlanta, Georgia, United States",
+      "Birmingham, Alabama, United States",
+      "Carbondale, Illinois, United States",
+      "Charleston, South Carolina, United States",
+      "Charlotte, North Carolina, United States",
+      "Chattanooga, Tennessee, United States",
+      "Chongqing, China",
+      "Fukuoka, Japan",
+      "Greenville, South Carolina, United States",
+      "Hangzhou, China",
+      "Jackson, Mississippi, United States",
+      "Knoxville, Tennessee, United States",
+      "Little Rock, Arkansas, United States",
+      "Louisville, Kentucky, United States",
+      "Memphis, Tennessee, United States",
+      "Nagoya, Japan",
+      "Nanjing, China",
+      "Nashville, Tennessee, United States",
+      "Osaka, Japan",
+      "Philadelphia, Pennsylvania, United States",
+      "Raleigh, North Carolina, United States",
+      "Richmond, Virginia, United States",
+      "Shanghai, China",
+      "Shreveport, Louisiana, United States",
+      "Springfield, Missouri, United States",
+      "Tokyo, Japan",
+      "Tulsa, Oklahoma, United States",
+      "Virginia Beach, Virginia, United States",
+      "Washington, District of Columbia, United States",
+      "Wichita, Kansas, United States",
+      "Wuhan, China"
+    ],
+    "2": [
+      "Asheville, North Carolina, United States",
+      "Atlanta, Georgia, United States",
+      "Birmingham, Alabama, United States",
+      "Carbondale, Illinois, United States",
+      "Charleston, West Virginia, United States",
+      "Charlotte, North Carolina, United States",
+      "Chattanooga, Tennessee, United States",
+      "Cincinnati, Ohio, United States",
+      "Columbus, Ohio, United States",
+      "Greenville, South Carolina, United States",
+      "Indianapolis, Indiana, United States",
+      "Kansas City, Missouri, United States",
+      "Knoxville, Tennessee, United States",
+      "Louisville, Kentucky, United States",
+      "Milan, Italy",
+      "Nashville, Tennessee, United States",
+      "New York City, New York, United States",
+      "Philadelphia, Pennsylvania, United States",
+      "Pittsburgh, Pennsylvania, United States",
+      "Raleigh, North Carolina, United States",
+      "Richmond, Virginia, United States",
+      "Springfield, Missouri, United States",
+      "St. Louis, Missouri, United States",
+      "Tokyo, Japan",
+      "Topeka, Kansas, United States",
+      "Venice, Italy",
+      "Virginia Beach, Virginia, United States",
+      "Washington, District of Columbia, United States"
+    ],
+    "3": [
+      "Asheville, North Carolina, United States",
+      "Bangor, Maine, United States",
+      "Bella Coola, British Columbia, Canada",
+      "Boston, Massachusetts, United States",
+      "Burlington, Vermont, United States",
+      "Champaign, Illinois, United States",
+      "Chicago, Illinois, United States",
+      "Cleveland, Ohio, United States",
+      "Columbus, Ohio, United States",
+      "Detroit, Michigan, United States",
+      "Fort Wayne, Indiana, United States",
+      "Grand Rapids, Michigan, United States",
+      "Halifax, Canada",
+      "Ljubljana, Slovenia",
+      "Lviv, Ukraine",
+      "Pittsburgh, Pennsylvania, United States",
+      "Portland, Maine, United States",
+      "Sarajevo, Bosnia and Herzegovina",
+      "Syracuse, New York, United States",
+      "Toronto, Canada",
+      "Zürich, Switzerland"
+    ],
+    "4": [
+      "Bella Coola, British Columbia, Canada",
+      "Copenhagen, Denmark",
+      "Halifax, Canada",
+      "Helsinki, Finland",
+      "Marquette, Michigan, United States",
+      "Oslo, Norway",
+      "Portland, Maine, United States",
+      "Saint Petersburg, Russia",
+      "Stockholm, Sweden",
+      "Summerside, Canada",
+      "Tallinn, Estonia",
+      "Terrace, British Columbia, Canada",
+      "Umeå, Sweden",
+      "Vilnius, Lithuania",
+      "Zürich, Switzerland"
+    ]
+  },
+  "Fc2": {
+    "1": [
+      "Iqaluit, Canada",
+      "Prudhoe Bay, Alaska, United States"
+    ],
+    "2": [
+      "Alert, Nunavut, Canada",
+      "Prudhoe Bay, Alaska, United States",
+      "Utqiaġvik, Alaska, United States"
+    ],
+    "3": [],
+    "4": []
+  },
+  "Fb1": {
+    "1": [
+      "Churchill, Manitoba, Canada",
+      "Inuvik, Northwest Territories, Canada"
+    ],
+    "2": [
+      "Churchill, Manitoba, Canada",
+      "Echo Bay, Nunavut, Canada",
+      "Iqaluit, Canada"
+    ],
+    "3": [],
+    "4": []
+  },
+  "Csz1": {
+    "1": [],
+    "2": [
+      "Abilene, Texas, United States"
+    ],
+    "3": [
+      "Albuquerque, New Mexico, United States",
+      "Amarillo, Texas, United States",
+      "Ankara, Türkiye",
+      "Billings, Montana, United States",
+      "Dodge City, Kansas, United States",
+      "Hays, Kansas, United States",
+      "Lubbock, Texas, United States",
+      "Missoula, Montana, United States",
+      "North Platte, Nebraska, United States",
+      "Pueblo, Colorado, United States",
+      "Salt Lake City, Utah, United States",
+      "Tbilisi, Georgia",
+      "Volgograd, Russia"
+    ],
+    "4": [
+      "Bozeman, Montana, United States",
+      "Bucharest, Romania",
+      "Budapest, Hungary",
+      "Dodge City, Kansas, United States",
+      "Donetsk, Ukraine",
+      "Great Falls, Montana, United States",
+      "Hays, Kansas, United States",
+      "Kamloops, Canada",
+      "Kelowna, Canada",
+      "Kharkiv, Ukraine",
+      "Medicine Hat, Alberta, Canada",
+      "North Platte, Nebraska, United States",
+      "Odesa, Ukraine",
+      "Pocatello, Idaho, United States",
+      "Provo, Utah, United States",
+      "Pueblo, Colorado, United States",
+      "Rapid City, South Dakota, United States",
+      "Rexburg, Idaho, United States",
+      "Salt Lake City, Utah, United States",
+      "Sofia, Bulgaria",
+      "Tbilisi, Georgia",
+      "Volgograd, Russia"
+    ]
+  },
+  "Dha2": {
+    "1": [
+      "Kansas City, Missouri, United States",
+      "St. Louis, Missouri, United States",
+      "Topeka, Kansas, United States"
+    ],
+    "2": [
+      "Almaty, Kazakhstan",
+      "Cedar Rapids, Iowa, United States",
+      "Champaign, Illinois, United States",
+      "Chicago, Illinois, United States",
+      "Cleveland, Ohio, United States",
+      "Des Moines, Iowa, United States",
+      "Detroit, Michigan, United States",
+      "Fort Wayne, Indiana, United States",
+      "Madison, Wisconsin, United States",
+      "Milwaukee, Wisconsin, United States",
+      "Minneapolis, Minnesota, United States",
+      "Omaha, Nebraska, United States"
+    ],
+    "3": [
+      "Almaty, Kazakhstan",
+      "Cedar Rapids, Iowa, United States",
+      "Duluth, Minnesota, United States",
+      "Marquette, Michigan, United States",
+      "Milwaukee, Wisconsin, United States",
+      "Moncton, Canada",
+      "Montreal, Canada",
+      "Moscow, Russia",
+      "Ottawa, Canada",
+      "Québec City, Canada",
+      "Summerside, Canada"
+    ],
+    "4": [
+      "Fairbanks, Alaska, United States"
+    ]
+  },
+  "Chz1": {
+    "1": [],
+    "2": [
+      "Fukuoka, Japan",
+      "Hangzhou, China",
+      "Little Rock, Arkansas, United States",
+      "Memphis, Tennessee, United States",
+      "Nagoya, Japan",
+      "Nanjing, China",
+      "Osaka, Japan",
+      "Shanghai, China",
+      "Tulsa, Oklahoma, United States",
+      "Wuhan, China"
+    ],
+    "3": [
+      "Atlanta, Georgia, United States",
+      "Carbondale, Illinois, United States",
+      "Charleston, West Virginia, United States",
+      "Charlotte, North Carolina, United States",
+      "Chattanooga, Tennessee, United States",
+      "Cincinnati, Ohio, United States",
+      "Greenville, South Carolina, United States",
+      "Hangzhou, China",
+      "Indianapolis, Indiana, United States",
+      "Kansas City, Missouri, United States",
+      "Knoxville, Tennessee, United States",
+      "Little Rock, Arkansas, United States",
+      "Louisville, Kentucky, United States",
+      "Memphis, Tennessee, United States",
+      "Milan, Italy",
+      "Nagoya, Japan",
+      "Nanjing, China",
+      "Nashville, Tennessee, United States",
+      "New York City, New York, United States",
+      "Osaka, Japan",
+      "Philadelphia, Pennsylvania, United States",
+      "Raleigh, North Carolina, United States",
+      "Richmond, Virginia, United States",
+      "Shanghai, China",
+      "Springfield, Missouri, United States",
+      "St. Louis, Missouri, United States",
+      "Tokyo, Japan",
+      "Topeka, Kansas, United States",
+      "Tulsa, Oklahoma, United States",
+      "Venice, Italy",
+      "Virginia Beach, Virginia, United States",
+      "Washington, District of Columbia, United States"
+    ],
+    "4": [
+      "Almaty, Kazakhstan",
+      "Asheville, North Carolina, United States",
+      "Bangor, Maine, United States",
+      "Boston, Massachusetts, United States",
+      "Burlington, Vermont, United States",
+      "Champaign, Illinois, United States",
+      "Charleston, West Virginia, United States",
+      "Chicago, Illinois, United States",
+      "Cincinnati, Ohio, United States",
+      "Cleveland, Ohio, United States",
+      "Columbus, Ohio, United States",
+      "Des Moines, Iowa, United States",
+      "Fort Wayne, Indiana, United States",
+      "Indianapolis, Indiana, United States",
+      "Kansas City, Missouri, United States",
+      "Knoxville, Tennessee, United States",
+      "Ljubljana, Slovenia",
+      "Moncton, Canada",
+      "Montreal, Canada",
+      "New York City, New York, United States",
+      "Ottawa, Canada",
+      "Philadelphia, Pennsylvania, United States",
+      "Pittsburgh, Pennsylvania, United States",
+      "Québec City, Canada",
+      "Richmond, Virginia, United States",
+      "Sarajevo, Bosnia and Herzegovina",
+      "Springfield, Missouri, United States",
+      "Syracuse, New York, United States",
+      "Tokyo, Japan",
+      "Toronto, Canada"
+    ]
+  },
+  "Eha1": {
+    "1": [
+      "Duluth, Minnesota, United States",
+      "Ottawa, Canada"
+    ],
+    "2": [
+      "Fairbanks, Alaska, United States",
+      "Thompson, Manitoba, Canada",
+      "Yekaterinburg, Russia"
+    ],
+    "3": [
+      "Fairbanks, Alaska, United States"
+    ],
+    "4": []
+  },
+  "Ehb2": {
+    "1": [
+      "Fairbanks, Alaska, United States",
+      "Québec City, Canada",
+      "Thunder Bay, Canada",
+      "Yekaterinburg, Russia"
+    ],
+    "2": [
+      "Bethel, Alaska, United States"
+    ],
+    "3": [
+      "Churchill, Manitoba, Canada"
+    ],
+    "4": []
+  },
+  "Esa1": {
+    "1": [
+      "Astana, Kazakhstan",
+      "Ürümqi, China"
+    ],
+    "2": [
+      "Astana, Kazakhstan",
+      "Regina, Saskatchewan, Canada",
+      "Saskatoon, Canada"
+    ],
+    "3": [
+      "Whitehorse, Canada"
+    ],
+    "4": [
+      "Cambridge Bay, Nunavut, Canada",
+      "Echo Bay, Nunavut, Canada"
+    ]
+  },
+  "Esa2": {
+    "1": [],
+    "2": [],
+    "3": [
+      "Saskatoon, Canada"
+    ],
+    "4": []
+  },
+  "Dsz1": {
+    "1": [],
+    "2": [],
+    "3": [
+      "Great Falls, Montana, United States",
+      "Miles City, Montana, United States",
+      "Pierre, South Dakota, United States",
+      "Rapid City, South Dakota, United States"
+    ],
+    "4": [
+      "Astana, Kazakhstan",
+      "Bismarck, North Dakota, United States",
+      "Chelyabinsk, Russia",
+      "Dickinson, North Dakota, United States",
+      "Fargo, North Dakota, United States",
+      "Irkutsk, Russia",
+      "Krasnoyarsk, Russia",
+      "Novosibirsk, Russia",
+      "Omsk, Russia",
+      "Regina, Saskatchewan, Canada",
+      "Saskatoon, Canada",
+      "Winnipeg, Canada",
+      "Ürümqi, China"
+    ]
+  },
+  "Cha1": {
+    "1": [
+      "Asheville, North Carolina, United States",
+      "Charleston, West Virginia, United States",
+      "Ljubljana, Slovenia",
+      "Milan, Italy",
+      "Sarajevo, Bosnia and Herzegovina",
+      "Tirana, Albania",
+      "Venice, Italy"
+    ],
+    "2": [
+      "Berlin, Germany",
+      "Boston, Massachusetts, United States",
+      "Ljubljana, Slovenia",
+      "Paris, France",
+      "Sarajevo, Bosnia and Herzegovina",
+      "Vancouver, Canada",
+      "Warsaw, Poland",
+      "Zürich, Switzerland"
+    ],
+    "3": [
+      "Amsterdam, Netherlands",
+      "Cardiff, Wales, United Kingdom",
+      "Copenhagen, Denmark",
+      "London, England, United Kingdom",
+      "St. John's, Canada",
+      "Stockholm, Sweden",
+      "Tallinn, Estonia",
+      "Trondheim, Norway",
+      "Vancouver, Canada",
+      "Vilnius, Lithuania"
+    ],
+    "4": [
+      "Amsterdam, Netherlands",
+      "Anchorage, Alaska, United States",
+      "Belfast, Northern Ireland, United Kingdom",
+      "Bergen, Norway",
+      "Bethel, Alaska, United States",
+      "Bodø, Norway",
+      "Cardiff, Wales, United Kingdom",
+      "Cork, Ireland",
+      "Dublin, Ireland",
+      "Edinburgh, Scotland, United Kingdom",
+      "Juneau, Alaska, United States",
+      "Kodiak, Alaska, United States",
+      "Nome, Alaska, United States",
+      "Prince Rupert, British Columbia, Canada",
+      "St. John's, Canada",
+      "Tromsø, Norway",
+      "Trondheim, Norway",
+      "Valdez, Alaska, United States"
+    ]
+  },
+  "Dga2": {
+    "1": [
+      "Hays, Kansas, United States"
+    ],
+    "2": [
+      "Bishkek, Kyrgyzstan",
+      "Grand Island, Nebraska, United States",
+      "Sioux Falls, South Dakota, United States"
+    ],
+    "3": [
+      "Chelyabinsk, Russia",
+      "Fargo, North Dakota, United States",
+      "Green Bay, Wisconsin, United States",
+      "Madison, Wisconsin, United States",
+      "Minneapolis, Minnesota, United States",
+      "Sioux Falls, South Dakota, United States",
+      "Thunder Bay, Canada",
+      "Winnipeg, Canada",
+      "Yekaterinburg, Russia"
+    ],
+    "4": [
+      "Inuvik, Northwest Territories, Canada",
+      "Thompson, Manitoba, Canada",
+      "Yellowknife, Canada"
     ]
   },
   "Cgz1": {
@@ -2719,68 +1485,338 @@
       "Oklahoma City, Oklahoma, United States"
     ],
     "3": [
-      "Oklahoma City, Oklahoma, United States"
+      "Oklahoma City, Oklahoma, United States",
+      "Wichita, Kansas, United States"
     ],
     "4": [
-      "Moscow, Russia",
-      "Detroit, Michigan, United States",
-      "Minneapolis, Minnesota, United States",
-      "Kansas City, Missouri, United States",
-      "Milwaukee, Wisconsin, United States",
-      "Des Moines, Iowa, United States",
-      "Lansing, Michigan, United States",
-      "Lincoln, Nebraska, United States",
-      "Madison, Wisconsin, United States",
-      "Vienna, Austria",
-      "Zagreb, Croatia",
       "Bishkek, Kyrgyzstan",
-      "Kyiv, Ukraine",
-      "Brampton, Ontario, Canada",
+      "Cedar Rapids, Iowa, United States",
+      "Detroit, Michigan, United States",
       "Duluth, Minnesota, United States",
-      "Lutsen, Minnesota, United States",
-      "Thunder Bay, Ontario, Canada"
+      "Grand Island, Nebraska, United States",
+      "Grand Rapids, Michigan, United States",
+      "Green Bay, Wisconsin, United States",
+      "Kyiv, Ukraine",
+      "Lviv, Ukraine",
+      "Madison, Wisconsin, United States",
+      "Milwaukee, Wisconsin, United States",
+      "Minneapolis, Minnesota, United States",
+      "Moscow, Russia",
+      "Omaha, Nebraska, United States",
+      "Sioux Falls, South Dakota, United States",
+      "Thunder Bay, Canada",
+      "Wichita, Kansas, United States"
     ]
   },
-  "Dc2": {
-    "1": [],
-    "2": [
-      "Nuuk, Greenland (DK)",
-      "Longyearbyen, Svalbard & Jan Mayen (NO)"
+  "Chb2": {
+    "1": [
+      "Amsterdam, Netherlands",
+      "Belfast, Northern Ireland, United Kingdom",
+      "Bellingham, Washington, United States",
+      "Bergen, Norway",
+      "Berlin, Germany",
+      "Bilbao, Spain",
+      "Cardiff, Wales, United Kingdom",
+      "Copenhagen, Denmark",
+      "Cork, Ireland",
+      "Dublin, Ireland",
+      "Edinburgh, Scotland, United Kingdom",
+      "London, England, United Kingdom",
+      "Paris, France",
+      "Valdivia, Chile",
+      "Vancouver, Canada",
+      "Zürich, Switzerland"
     ],
-    "3": [],
-    "4": [
-      "Primavera Research Station, Antarctica"
-    ]
-  },
-  "Ddz2": {
-    "1": [],
     "2": [
-      "Turpan, China"
+      "Amsterdam, Netherlands",
+      "Belfast, Northern Ireland, United Kingdom",
+      "Bergen, Norway",
+      "Cardiff, Wales, United Kingdom",
+      "Copenhagen, Denmark",
+      "Cork, Ireland",
+      "Dublin, Ireland",
+      "Dunedin, New Zealand",
+      "Edinburgh, Scotland, United Kingdom",
+      "Forks, Washington, United States",
+      "Kodiak, Alaska, United States",
+      "London, England, United Kingdom",
+      "Prince Rupert, British Columbia, Canada",
+      "Valdivia, Chile"
     ],
     "3": [
-      "Turpan, China"
+      "Belfast, Northern Ireland, United Kingdom",
+      "Bergen, Norway",
+      "Bodø, Norway",
+      "Cork, Ireland",
+      "Dublin, Ireland",
+      "Dunedin, New Zealand",
+      "Edinburgh, Scotland, United Kingdom",
+      "Forks, Washington, United States",
+      "Kodiak, Alaska, United States",
+      "Prince Rupert, British Columbia, Canada",
+      "Reykjavík, Iceland"
+    ],
+    "4": [
+      "Longyearbyen, Svalbard, Norway",
+      "Reykjavík, Iceland",
+      "Tórshavn, Faroe Islands"
+    ]
+  },
+  "Esb2": {
+    "1": [
+      "Whitehorse, Canada"
+    ],
+    "2": [
+      "Whitehorse, Canada"
+    ],
+    "3": [],
+    "4": []
+  },
+  "Ega1": {
+    "1": [
+      "Bismarck, North Dakota, United States",
+      "Fargo, North Dakota, United States"
+    ],
+    "2": [
+      "Chelyabinsk, Russia",
+      "Hay River, Northwest Territories, Canada",
+      "Krasnoyarsk, Russia",
+      "Novosibirsk, Russia",
+      "Omsk, Russia",
+      "Winnipeg, Canada"
+    ],
+    "3": [
+      "Dawson City, Yukon, Canada",
+      "Hay River, Northwest Territories, Canada",
+      "Inuvik, Northwest Territories, Canada",
+      "Thompson, Manitoba, Canada",
+      "Yellowknife, Canada"
     ],
     "4": []
   },
-  "Dda2": {
-    "1": [],
+  "Fb2": {
+    "1": [
+      "Dawson City, Yukon, Canada",
+      "Hay River, Northwest Territories, Canada",
+      "Thompson, Manitoba, Canada",
+      "Ulaanbaatar, Mongolia",
+      "Yellowknife, Canada"
+    ],
     "2": [
-      "Aksu City, China",
-      "Shoshoni, Wyoming, United States",
-      "Ushmola, Kazakhstan"
+      "Inuvik, Northwest Territories, Canada",
+      "Yellowknife, Canada"
     ],
     "3": [
-      "Aksu City, China",
-      "Meeteetse, Wyoming, United States"
+      "Cambridge Bay, Nunavut, Canada",
+      "Echo Bay, Nunavut, Canada"
     ],
-    "4": [
-      "Bulgan, Mongolia"
-    ]
+    "4": []
   },
-  "Dgb2": {
+  "Cma1": {
+    "1": [
+      "Grazalema, Spain",
+      "Istanbul, Türkiye",
+      "Jerusalem, Israel",
+      "Maseru, Lesotho",
+      "Medford, Oregon, United States",
+      "Pendleton, Oregon, United States",
+      "Rome, Italy",
+      "Sacramento, California, United States",
+      "Santiago, Chile"
+    ],
+    "2": [
+      "Bellingham, Washington, United States",
+      "Bend, Oregon, United States",
+      "Maseru, Lesotho",
+      "Nanaimo, British Columbia, Canada",
+      "Portland, Oregon, United States",
+      "Seattle, Washington, United States"
+    ],
+    "3": [
+      "Bellingham, Washington, United States",
+      "Nanaimo, British Columbia, Canada",
+      "Seattle, Washington, United States"
+    ],
+    "4": []
+  },
+  "Dwa2": {
+    "1": [
+      "Beijing, China",
+      "Jinan, China",
+      "Seoul, South Korea"
+    ],
+    "2": [
+      "Beijing, China",
+      "Dalian, China",
+      "Pyongyang, North Korea",
+      "Seoul, South Korea"
+    ],
+    "3": [
+      "Shenyang, China"
+    ],
+    "4": []
+  },
+  "Cwz1": {
     "1": [],
     "2": [
-      "Red Deer, Alberta, Canada"
+      "Xi'an, China"
+    ],
+    "3": [
+      "Beijing, China",
+      "Jinan, China",
+      "Qingdao, China",
+      "Seoul, South Korea",
+      "Xi'an, China"
+    ],
+    "4": [
+      "Beijing, China",
+      "Dalian, China",
+      "Jinan, China",
+      "Pyongyang, North Korea",
+      "Qingdao, China",
+      "Seoul, South Korea"
+    ]
+  },
+  "Cwa2": {
+    "1": [
+      "Chengdu, China",
+      "Qingdao, China",
+      "Xi'an, China"
+    ],
+    "2": [
+      "Chengdu, China",
+      "Jinan, China",
+      "Qingdao, China"
+    ],
+    "3": [
+      "Dalian, China"
+    ],
+    "4": []
+  },
+  "Bwz1": {
+    "1": [
+      "Ahmedabad, India",
+      "Jabalpur, India",
+      "Kolkata, India"
+    ],
+    "2": [
+      "Delhi, India",
+      "Guangzhou, China",
+      "Jabalpur, India",
+      "Kolkata, India"
+    ],
+    "3": [
+      "Chengdu, China"
+    ],
+    "4": [
+      "Chengdu, China"
+    ]
+  },
+  "Bhz1": {
+    "1": [
+      "Islamabad, Pakistan"
+    ],
+    "2": [
+      "Chongqing, China",
+      "Islamabad, Pakistan",
+      "Shreveport, Louisiana, United States",
+      "Taipei, Taiwan"
+    ],
+    "3": [
+      "Asunción, Paraguay",
+      "Birmingham, Alabama, United States",
+      "Charleston, South Carolina, United States",
+      "Chongqing, China",
+      "Fukuoka, Japan",
+      "Guangzhou, China",
+      "Houston, Texas, United States",
+      "Islamabad, Pakistan",
+      "Jackson, Mississippi, United States",
+      "Jacksonville, Florida, United States",
+      "Lafayette, Louisiana, United States",
+      "Mobile, Alabama, United States",
+      "New Orleans, Louisiana, United States",
+      "Savannah, Georgia, United States",
+      "Shreveport, Louisiana, United States",
+      "Taipei, Taiwan",
+      "Tallahassee, Florida, United States",
+      "Tampa, Florida, United States",
+      "Wuhan, China"
+    ],
+    "4": [
+      "Atlanta, Georgia, United States",
+      "Birmingham, Alabama, United States",
+      "Charleston, South Carolina, United States",
+      "Charlotte, North Carolina, United States",
+      "Chattanooga, Tennessee, United States",
+      "Fukuoka, Japan",
+      "Greenville, South Carolina, United States",
+      "Houston, Texas, United States",
+      "Jacksonville, Florida, United States",
+      "Lafayette, Louisiana, United States",
+      "Mobile, Alabama, United States",
+      "Nagoya, Japan",
+      "New Orleans, Louisiana, United States",
+      "Raleigh, North Carolina, United States",
+      "Savannah, Georgia, United States",
+      "Tallahassee, Florida, United States",
+      "Tampa, Florida, United States",
+      "Virginia Beach, Virginia, United States"
+    ]
+  },
+  "Bhz2": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [
+      "Chongqing, China",
+      "Hangzhou, China",
+      "Islamabad, Pakistan",
+      "Jackson, Mississippi, United States",
+      "Little Rock, Arkansas, United States",
+      "Memphis, Tennessee, United States",
+      "Nanjing, China",
+      "Nashville, Tennessee, United States",
+      "Osaka, Japan",
+      "Shanghai, China",
+      "Shreveport, Louisiana, United States",
+      "Wuhan, China"
+    ]
+  },
+  "Dwa1": {
+    "1": [
+      "Dalian, China",
+      "Pyongyang, North Korea"
+    ],
+    "2": [],
+    "3": [],
+    "4": []
+  },
+  "Awz2": {
+    "1": [],
+    "2": [],
+    "3": [
+      "Ahmedabad, India",
+      "Hyderabad, India",
+      "Jabalpur, India"
+    ],
+    "4": [
+      "Ahmedabad, India",
+      "Chennai, India",
+      "Guangzhou, China",
+      "Hyderabad, India",
+      "Jabalpur, India",
+      "Kano, Nigeria",
+      "Surat, India"
+    ]
+  },
+  "Ewa1": {
+    "1": [
+      "Harbin, China",
+      "Shenyang, China"
+    ],
+    "2": [
+      "Irkutsk, Russia"
     ],
     "3": [],
     "4": []
@@ -2788,228 +1824,14 @@
   "Ewa2": {
     "1": [],
     "2": [
+      "Harbin, China",
       "Shenyang, China"
     ],
     "3": [
-      "Hulunbuir, China"
-    ],
-    "4": [
-      "Hulunbuir, China"
-    ]
-  },
-  "Ga1": {
-    "1": [],
-    "2": [
-      "Yakutsk, Russia"
-    ],
-    "3": [
-      "Ust-Nera, Russia",
-      "Verkhoyansk, Russia"
+      "Harbin, China",
+      "Irkutsk, Russia"
     ],
     "4": []
-  },
-  "Zwz1": {
-    "1": [],
-    "2": [],
-    "3": [
-      "Managua, Nicaragua"
-    ],
-    "4": [
-      "Jakarta, Indonesia",
-      "Mumbai, India",
-      "Brazzaville, Congo",
-      "Bissau, Guinea-Bissau",
-      "Panama City, Panama",
-      "Dili, Timor-Leste"
-    ]
-  },
-  "Asz1": {
-    "1": [],
-    "2": [],
-    "3": [
-      "Accra, Ghana",
-      "Mogadishu, Somalia",
-      "Lomé, Togo"
-    ],
-    "4": [
-      "Honolulu, Hawaii, United States",
-      "St. John's, Antigua and Barbuda",
-      "Bridgetown, Barbados",
-      "Djibouti, Djibouti",
-      "Accra, Ghana",
-      "St. George's, Grenada",
-      "Basseterre, Saint Kitts and Nevis",
-      "Mogadishu, Somalia",
-      "Lomé, Togo",
-      "The Valley, Anguilla (UK)",
-      "Cockburn Town, Turks & Caicos (UK)",
-      "Charlotte Amalie, United States Virgin Islands, United States",
-      "Philipsburg, Sint Maarten (NL)",
-      "Oranjestad, Sint Eustatius (NL)"
-    ]
-  },
-  "Ahz1": {
-    "1": [],
-    "2": [],
-    "3": [
-      "Jakarta, Indonesia",
-      "Kuala Lumpur, Malaysia",
-      "Miami, Florida, United States",
-      "Belmopan, Belize",
-      "Porto-Novo, Benin",
-      "Bandar Seri Begawan, Brunei",
-      "Bangui, Central African Republic",
-      "Brazzaville, Congo",
-      "Georgetown, Guyana",
-      "Tarawa, Kiribati",
-      "Malé, Maldives",
-      "Yaren, Nauru",
-      "Victoria, Seychelles",
-      "Singapore, Singapore",
-      "Sri Jayawardenepura Kotte, Sri Lanka",
-      "Paramaribo, Suriname"
-    ],
-    "4": [
-      "Rio de Janeiro, Brazil",
-      "Taipei, Taiwan",
-      "Porto-Novo, Benin",
-      "Yaoundé, Cameroon",
-      "Moroni, Comoros",
-      "Malabo, Equatorial Guinea",
-      "Suva, Fiji",
-      "Libreville, Gabon",
-      "Port Louis, Mauritius",
-      "Port Moresby, Papua New Guinea",
-      "Asunción, Paraguay",
-      "Apia, Samoa",
-      "Victoria, Seychelles",
-      "Honiara, Solomon Islands",
-      "Nukuʻalofa, Tonga",
-      "Port Vila, Vanuatu",
-      "Hamilton, Bermuda (UK)",
-      "Pago Pago, American Samoa, United States",
-      "Saipan, Northern Mariana Islands, United States",
-      "Nouméa, New Caledonia (FR)",
-      "Mata-Utu, Wallis & Futuna (FR)",
-      "Alofi, Niue (NZ)"
-    ]
-  },
-  "BdX": {
-    "1": [],
-    "2": [],
-    "3": [
-      "Baghdad, Iraq"
-    ],
-    "4": [
-      "Baghdad, Iraq",
-      "El Menia, Algeria",
-      "Lake Havasu City, Arizona, United States"
-    ]
-  },
-  "Bhz2": {
-    "1": [],
-    "2": [],
-    "3": [
-      "Gujrat, Pakistan",
-      "Hengyang, China"
-    ],
-    "4": [
-      "Shanghai, China",
-      "Osaka, Japan",
-      "Chongqing, China",
-      "Wuhan, China",
-      "Hangzhou, China",
-      "Nashville, Tennessee, United States",
-      "Memphis, Tennessee, United States",
-      "Montgomery, Alabama, United States",
-      "Little Rock, Arkansas, United States",
-      "Jackson, Mississippi, United States",
-      "Columbia, South Carolina, United States",
-      "Islamabad, Pakistan",
-      "Gujrat, Pakistan",
-      "Fuzhou, China",
-      "Hengyang, China"
-    ]
-  },
-  "Cmz2": {
-    "1": [],
-    "2": [],
-    "3": [
-      "Tehran, Iran",
-      "Batman, Turkey"
-    ],
-    "4": [
-      "Tehran, Iran",
-      "Boise, Idaho, United States",
-      "Tashkent, Uzbekistan",
-      "Borujerd, Iran"
-    ]
-  },
-  "Cdz2": {
-    "1": [],
-    "2": [],
-    "3": [
-      "Ashgabat, Turkmenistan"
-    ],
-    "4": [
-      "Yakima, Washington, United States",
-      "Ushmola, Kazakhstan"
-    ]
-  },
-  "Csz1": {
-    "1": [],
-    "2": [],
-    "3": [
-      "Salt Lake City, Utah, United States",
-      "Yerevan, Armenia",
-      "Tbilisi, Georgia",
-      "Skopje, North Macedonia",
-      "Ankara, Turkey"
-    ],
-    "4": [
-      "Helena, Montana, United States",
-      "Sofia, Bulgaria",
-      "Tbilisi, Georgia",
-      "Budapest, Hungary",
-      "Pristina, Kosovo",
-      "Chișinău, Moldova",
-      "Bucharest, Romania",
-      "Bratislava, Slovakia",
-      "Lethbridge, Alberta, Canada",
-      "Rexburg, Idaho, United States"
-    ]
-  },
-  "Cda1": {
-    "1": [],
-    "2": [],
-    "3": [
-      "Comodoro Rivadavia, Argentina"
-    ],
-    "4": []
-  },
-  "Dsz1": {
-    "1": [],
-    "2": [],
-    "3": [
-      "Pierre, South Dakota, United States"
-    ],
-    "4": [
-      "Bismarck, North Dakota, United States",
-      "Astana, Kazakhstan",
-      "Winnipeg, Manitoba, Canada",
-      "Brandon, Manitoba, Canada",
-      "Steinbach, Manitoba, Canada",
-      "Portage la Prairie, Manitoba, Canada",
-      "Saskatoon, Saskatchewan, Canada",
-      "Regina, Saskatchewan, Canada",
-      "Prince Albert, Saskatchewan, Canada",
-      "Moose Jaw, Saskatchewan, Canada",
-      "Swift Current, Saskatchewan, Canada",
-      "Krasnoyarsk, Russia",
-      "Omsk, Russia",
-      "Zhetikara, Kazakhstan",
-      "Grand Forks, North Dakota, United States"
-    ]
   },
   "Dwz1": {
     "1": [],
@@ -3018,17 +1840,725 @@
       "Pyongyang, North Korea"
     ],
     "4": [
+      "Harbin, China",
       "Shenyang, China"
     ]
   },
-  "Dgz1": {
+  "Bwz2": {
     "1": [],
     "2": [],
     "3": [
-      "Lincoln, Nebraska, United States"
+      "Delhi, India",
+      "Lahore, Pakistan"
     ],
     "4": [
-      "Novosibirsk, Russia"
+      "Delhi, India",
+      "Lahore, Pakistan",
+      "Xi'an, China"
+    ]
+  },
+  "Bga1": {
+    "1": [
+      "Nairobi, Kenya"
+    ],
+    "2": [
+      "Nairobi, Kenya"
+    ],
+    "3": [
+      "Hobart, Australia"
+    ],
+    "4": [
+      "Bogotá, Colombia",
+      "Christchurch, New Zealand",
+      "Hobart, Australia"
+    ]
+  },
+  "Agz1": {
+    "1": [
+      "Juba, South Sudan"
+    ],
+    "2": [
+      "Juba, South Sudan",
+      "Port-au-Prince, Haiti"
+    ],
+    "3": [
+      "Cancún, Mexico",
+      "Dar es Salaam, Tanzania",
+      "Juba, South Sudan",
+      "Key West, Florida, United States",
+      "Kingston, Jamaica",
+      "Mérida, Mexico",
+      "Nassau, Bahamas",
+      "Port-au-Prince, Haiti",
+      "San Juan, Puerto Rico"
+    ],
+    "4": [
+      "Belmopan, Belize",
+      "Cancún, Mexico",
+      "Corpus Christi, Texas, United States",
+      "Dar es Salaam, Tanzania",
+      "Fort-de-France, Martinique",
+      "Havana, Cuba",
+      "Key West, Florida, United States",
+      "Kingston, Jamaica",
+      "Nassau, Bahamas",
+      "Recife, Brasil",
+      "Salvador, Brasil",
+      "San Juan, Puerto Rico"
+    ]
+  },
+  "Bhb2": {
+    "1": [
+      "Auckland, New Zealand",
+      "Cilaos, Réunion, France",
+      "Wellington, New Zealand"
+    ],
+    "2": [
+      "Wellington, New Zealand"
+    ],
+    "3": [
+      "Quito, Ecuador",
+      "Wellington, New Zealand"
+    ],
+    "4": [
+      "Dunedin, New Zealand",
+      "Quito, Ecuador"
+    ]
+  },
+  "Bda2": {
+    "1": [
+      "Alexandria, Egypt",
+      "Alice Springs, Australia",
+      "Cairo, Egypt",
+      "Coober Pedy, Australia",
+      "Tamanrasset, Algeria",
+      "Tripoli, Libya"
+    ],
+    "2": [
+      "Alexandria, Egypt",
+      "Benghazi, Libya",
+      "Tripoli, Libya",
+      "Windhoek, Namibia"
+    ],
+    "3": [
+      "Casablanca, Morocco",
+      "Lima, Peru",
+      "San Diego, California, United States",
+      "Windhoek, Namibia"
+    ],
+    "4": [
+      "Antofagasta, Chile"
+    ]
+  },
+  "Bdz1": {
+    "1": [
+      "Aswan, Egypt",
+      "Faya-Largeau, Chad",
+      "Hermosillo, Mexico",
+      "Karachi, Pakistan",
+      "Tucson, Arizona, United States"
+    ],
+    "2": [
+      "Alice Springs, Australia",
+      "Cairo, Egypt",
+      "Coober Pedy, Australia",
+      "Pecos, Texas, United States",
+      "Tamanrasset, Algeria"
+    ],
+    "3": [
+      "Alexandria, Egypt",
+      "Alice Springs, Australia",
+      "Benghazi, Libya",
+      "Cairo, Egypt",
+      "Coober Pedy, Australia",
+      "Damascus, Syria",
+      "Las Cruces, New Mexico, United States",
+      "Pecos, Texas, United States",
+      "Tamanrasset, Algeria",
+      "Tripoli, Libya"
+    ],
+    "4": [
+      "Albuquerque, New Mexico, United States",
+      "Alexandria, Egypt",
+      "Baku, Azerbaijan",
+      "Benghazi, Libya",
+      "Casablanca, Morocco",
+      "Madrid, Spain",
+      "Tripoli, Libya",
+      "Windhoek, Namibia"
+    ]
+  },
+  "Bdz2": {
+    "1": [
+      "Adrar, Algeria",
+      "Baghdad, Iraq",
+      "Basra, Iraq",
+      "Dubai, United Arab Emirates",
+      "Furnace Creek, California, United States",
+      "Lake Havasu City, Arizona, United States",
+      "Multan, Pakistan",
+      "Phoenix, Arizona, United States",
+      "Riyadh, Saudi Arabia"
+    ],
+    "2": [
+      "Aswan, Egypt",
+      "Baghdad, Iraq",
+      "Faya-Largeau, Chad",
+      "Lake Havasu City, Arizona, United States",
+      "Las Vegas, Nevada, United States",
+      "Multan, Pakistan",
+      "Phoenix, Arizona, United States",
+      "Riyadh, Saudi Arabia"
+    ],
+    "3": [
+      "Las Vegas, Nevada, United States",
+      "Multan, Pakistan",
+      "Phoenix, Arizona, United States",
+      "Yazd, Iran"
+    ],
+    "4": [
+      "Alice Springs, Australia",
+      "Cairo, Egypt",
+      "Coober Pedy, Australia",
+      "Damascus, Syria",
+      "Las Cruces, New Mexico, United States",
+      "Pecos, Texas, United States",
+      "Tamanrasset, Algeria"
+    ]
+  },
+  "Awa1": {
+    "1": [
+      "San Salvador, El Salvador"
+    ],
+    "2": [
+      "Brasília, Brasil"
+    ],
+    "3": [],
+    "4": [
+      "Addis Ababa, Ethiopia"
+    ]
+  },
+  "Cga1": {
+    "1": [
+      "Barcelona, Spain",
+      "Canberra, Australia",
+      "Marseille, France"
+    ],
+    "2": [
+      "Budapest, Hungary",
+      "Canberra, Australia",
+      "Flagstaff, Arizona, United States",
+      "Prague, Czechia",
+      "Sofia, Bulgaria"
+    ],
+    "3": [
+      "Berlin, Germany",
+      "Canberra, Australia",
+      "Christchurch, New Zealand",
+      "Riga, Latvia"
+    ],
+    "4": [
+      "Aspen, Colorado, United States"
+    ]
+  },
+  "Cga2": {
+    "1": [
+      "Dallas, Texas, United States",
+      "Fort Worth, Texas, United States",
+      "Oklahoma City, Oklahoma, United States"
+    ],
+    "2": [
+      "Bucharest, Romania",
+      "Marseille, France",
+      "Odesa, Ukraine",
+      "Sedona, Arizona, United States",
+      "Szeged, Hungary",
+      "Wichita, Kansas, United States"
+    ],
+    "3": [
+      "Bishkek, Kyrgyzstan",
+      "Bucharest, Romania",
+      "Budapest, Hungary",
+      "Donetsk, Ukraine",
+      "Flagstaff, Arizona, United States",
+      "Kharkiv, Ukraine",
+      "Kyiv, Ukraine",
+      "Paris, France",
+      "Payson, Arizona, United States",
+      "Prague, Czechia",
+      "Sofia, Bulgaria",
+      "Warsaw, Poland"
+    ],
+    "4": [
+      "Berlin, Germany",
+      "Flagstaff, Arizona, United States",
+      "Jackson, Wyoming, United States",
+      "Minsk, Belarus",
+      "Paris, France",
+      "Prince George, British Columbia, Canada",
+      "Riga, Latvia",
+      "Warsaw, Poland"
+    ]
+  },
+  "Cma2": {
+    "1": [
+      "Athens, Greece",
+      "Dushanbe, Tajikistan",
+      "Madrid, Spain"
+    ],
+    "2": [
+      "Boise, Idaho, United States",
+      "Dushanbe, Tajikistan",
+      "Grazalema, Spain",
+      "Istanbul, Türkiye",
+      "Jerusalem, Israel",
+      "Madrid, Spain",
+      "Medford, Oregon, United States",
+      "Pendleton, Oregon, United States",
+      "Provo, Utah, United States",
+      "Reno, Nevada, United States",
+      "Rome, Italy",
+      "Spokane, Washington, United States",
+      "Tirana, Albania"
+    ],
+    "3": [
+      "Bend, Oregon, United States",
+      "Grazalema, Spain",
+      "Istanbul, Türkiye",
+      "Kabul, Afghanistan",
+      "Medford, Oregon, United States",
+      "Portland, Oregon, United States"
+    ],
+    "4": [
+      "London, England, United Kingdom"
+    ]
+  },
+  "Bmz2": {
+    "1": [],
+    "2": [],
+    "3": [
+      "St. George, Utah, United States"
+    ],
+    "4": [
+      "Antalya, Türkiye",
+      "Athens, Greece",
+      "Fresno, California, United States",
+      "St. George, Utah, United States",
+      "Valencia, Spain"
+    ]
+  },
+  "Ec2": {
+    "1": [
+      "Longyearbyen, Svalbard, Norway",
+      "Nuuk, Greenland"
+    ],
+    "2": [],
+    "3": [
+      "Alert, Nunavut, Canada"
+    ],
+    "4": [
+      "Mount Rainier, Washington, United States"
+    ]
+  },
+  "Dc2": {
+    "1": [],
+    "2": [
+      "Longyearbyen, Svalbard, Norway",
+      "Nuuk, Greenland"
+    ],
+    "3": [],
+    "4": [
+      "Primavera Base, Antarctica"
+    ]
+  },
+  "Db1": {
+    "1": [
+      "Anchorage, Alaska, United States",
+      "Aspen, Colorado, United States",
+      "Bodø, Norway",
+      "Juneau, Alaska, United States",
+      "Kodiak, Alaska, United States",
+      "Reykjavík, Iceland",
+      "Tromsø, Norway",
+      "Ushuaia, Argentina",
+      "Valdez, Alaska, United States"
+    ],
+    "2": [],
+    "3": [
+      "Longyearbyen, Svalbard, Norway",
+      "Nuuk, Greenland"
+    ],
+    "4": [
+      "Alert, Nunavut, Canada"
+    ]
+  },
+  "Aga2": {
+    "1": [
+      "Accra, Ghana",
+      "Dar es Salaam, Tanzania",
+      "Key West, Florida, United States",
+      "Port-au-Prince, Haiti"
+    ],
+    "2": [
+      "Accra, Ghana",
+      "Key West, Florida, United States",
+      "Kingston, Jamaica",
+      "Nassau, Bahamas"
+    ],
+    "3": [
+      "Caracas, Venezuela",
+      "Fort-de-France, Martinique",
+      "Salvador, Brasil"
+    ],
+    "4": []
+  },
+  "Zsz1": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [
+      "Port-au-Prince, Haiti"
+    ]
+  },
+  "Zwz2": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [
+      "Bangkok, Thailand",
+      "Ho Chi Minh City, Vietnam",
+      "Manila, Philippines",
+      "Phnom Penh, Cambodia",
+      "Yangon, Myanmar"
+    ]
+  },
+  "Bsz1": {
+    "1": [],
+    "2": [
+      "Tucson, Arizona, United States"
+    ],
+    "3": [
+      "Abilene, Texas, United States",
+      "Carlsbad, New Mexico, United States"
+    ],
+    "4": [
+      "Amarillo, Texas, United States",
+      "Barcelona, Spain",
+      "Carlsbad, New Mexico, United States",
+      "Lubbock, Texas, United States",
+      "Szeged, Hungary"
+    ]
+  },
+  "Chz2": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [
+      "Carbondale, Illinois, United States",
+      "Louisville, Kentucky, United States",
+      "St. Louis, Missouri, United States",
+      "Washington, District of Columbia, United States"
+    ]
+  },
+  "BdX": {
+    "1": [],
+    "2": [
+      "Adrar, Algeria",
+      "Basra, Iraq",
+      "Furnace Creek, California, United States"
+    ],
+    "3": [
+      "Adrar, Algeria",
+      "Baghdad, Iraq",
+      "Basra, Iraq",
+      "Furnace Creek, California, United States",
+      "Lake Havasu City, Arizona, United States",
+      "Riyadh, Saudi Arabia"
+    ],
+    "4": [
+      "Adrar, Algeria",
+      "Ashgabat, Turkmenistan",
+      "Baghdad, Iraq",
+      "Furnace Creek, California, United States",
+      "Lake Havasu City, Arizona, United States",
+      "Las Vegas, Nevada, United States",
+      "Phoenix, Arizona, United States",
+      "Yazd, Iran"
+    ]
+  },
+  "Csa1": {
+    "1": [
+      "Ankara, Türkiye",
+      "Payson, Arizona, United States"
+    ],
+    "2": [
+      "Cheyenne, Wyoming, United States",
+      "Santa Fe, New Mexico, United States",
+      "Taos, New Mexico, United States"
+    ],
+    "3": [
+      "Taos, New Mexico, United States"
+    ],
+    "4": []
+  },
+  "Bgz1": {
+    "1": [],
+    "2": [
+      "Austin, Texas, United States",
+      "Dallas, Texas, United States",
+      "Fort Worth, Texas, United States",
+      "Lahore, Pakistan",
+      "San Antonio, Texas, United States"
+    ],
+    "3": [
+      "Austin, Texas, United States",
+      "Corpus Christi, Texas, United States",
+      "Dallas, Texas, United States",
+      "Fort Worth, Texas, United States",
+      "Monterrey, Mexico",
+      "San Antonio, Texas, United States",
+      "Sedona, Arizona, United States"
+    ],
+    "4": [
+      "Brisbane, Australia",
+      "Milan, Italy",
+      "Monterrey, Mexico",
+      "Payson, Arizona, United States",
+      "Sedona, Arizona, United States",
+      "Venice, Italy"
+    ]
+  },
+  "Bsz2": {
+    "1": [],
+    "2": [],
+    "3": [
+      "Tucson, Arizona, United States"
+    ],
+    "4": [
+      "Abilene, Texas, United States",
+      "Tucson, Arizona, United States"
+    ]
+  },
+  "Cda2": {
+    "1": [
+      "Albuquerque, New Mexico, United States",
+      "Baku, Azerbaijan",
+      "Damascus, Syria",
+      "Fresno, California, United States",
+      "Las Cruces, New Mexico, United States",
+      "Pecos, Texas, United States"
+    ],
+    "2": [
+      "Baku, Azerbaijan",
+      "Damascus, Syria",
+      "Grand Junction, Colorado, United States",
+      "Twin Falls, Idaho, United States",
+      "Yakima, Washington, United States"
+    ],
+    "3": [],
+    "4": []
+  },
+  "Bda1": {
+    "1": [
+      "Lima, Peru",
+      "Lüderitz, Namibia",
+      "San Diego, California, United States",
+      "Windhoek, Namibia"
+    ],
+    "2": [
+      "Antofagasta, Chile",
+      "Lima, Peru",
+      "Lüderitz, Namibia",
+      "San Diego, California, United States"
+    ],
+    "3": [
+      "Antofagasta, Chile",
+      "Comodoro Rivadavia, Argentina",
+      "Lüderitz, Namibia"
+    ],
+    "4": [
+      "Comodoro Rivadavia, Argentina"
+    ]
+  },
+  "Cmb2": {
+    "1": [
+      "Concepción, Chile",
+      "Nanaimo, British Columbia, Canada",
+      "Portland, Oregon, United States",
+      "San Francisco, California, United States",
+      "Seattle, Washington, United States"
+    ],
+    "2": [],
+    "3": [],
+    "4": []
+  },
+  "Bmb2": {
+    "1": [
+      "Cape Town, South Africa"
+    ],
+    "2": [
+      "Concepción, Chile",
+      "San Francisco, California, United States"
+    ],
+    "3": [
+      "Valdivia, Chile"
+    ],
+    "4": []
+  },
+  "Cgb2": {
+    "1": [
+      "Christchurch, New Zealand",
+      "Hobart, Australia"
+    ],
+    "2": [
+      "Christchurch, New Zealand",
+      "Hobart, Australia"
+    ],
+    "3": [
+      "Aspen, Colorado, United States"
+    ],
+    "4": [
+      "Prudhoe Bay, Alaska, United States"
+    ]
+  },
+  "Aha1": {
+    "1": [
+      "Bandung, Indonesia",
+      "Hilo, Hawaii, United States",
+      "Mbuji-Mayi, Democratic Republic of the Congo",
+      "Yaoundé, Cameroon"
+    ],
+    "2": [],
+    "3": [],
+    "4": []
+  },
+  "Asa2": {
+    "1": [
+      "Barranquilla, Colombia",
+      "Honolulu, Hawaii, United States",
+      "Mogadishu, Somalia"
+    ],
+    "2": [
+      "Barranquilla, Colombia",
+      "Honolulu, Hawaii, United States",
+      "Mogadishu, Somalia"
+    ],
+    "3": [
+      "Honolulu, Hawaii, United States"
+    ],
+    "4": [
+      "Caracas, Venezuela"
+    ]
+  },
+  "Asz1": {
+    "1": [],
+    "2": [],
+    "3": [
+      "Accra, Ghana",
+      "Barranquilla, Colombia",
+      "Mogadishu, Somalia"
+    ],
+    "4": [
+      "Accra, Ghana",
+      "Honolulu, Hawaii, United States",
+      "Mogadishu, Somalia",
+      "Mérida, Mexico"
+    ]
+  },
+  "Cdz1": {
+    "1": [
+      "Ashgabat, Turkmenistan",
+      "Las Vegas, Nevada, United States",
+      "St. George, Utah, United States",
+      "Yazd, Iran"
+    ],
+    "2": [
+      "Ashgabat, Turkmenistan",
+      "Carlsbad, New Mexico, United States",
+      "Las Cruces, New Mexico, United States",
+      "St. George, Utah, United States"
+    ],
+    "3": [
+      "Baku, Azerbaijan",
+      "Elko, Nevada, United States",
+      "Grand Junction, Colorado, United States",
+      "Hotan, China",
+      "Pocatello, Idaho, United States",
+      "Reno, Nevada, United States",
+      "Twin Falls, Idaho, United States",
+      "Yakima, Washington, United States"
+    ],
+    "4": [
+      "Casper, Wyoming, United States",
+      "Grand Junction, Colorado, United States"
+    ]
+  },
+  "Dma2": {
+    "1": [
+      "Boise, Idaho, United States"
+    ],
+    "2": [
+      "Kabul, Afghanistan"
+    ],
+    "3": [],
+    "4": []
+  },
+  "Cmz1": {
+    "1": [],
+    "2": [],
+    "3": [
+      "Boise, Idaho, United States",
+      "Dushanbe, Tajikistan",
+      "Madrid, Spain",
+      "Pendleton, Oregon, United States",
+      "Provo, Utah, United States",
+      "Spokane, Washington, United States",
+      "Tirana, Albania"
+    ],
+    "4": [
+      "Ankara, Türkiye",
+      "Bend, Oregon, United States",
+      "Kabul, Afghanistan",
+      "Reno, Nevada, United States"
+    ]
+  },
+  "Cmz2": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [
+      "Boise, Idaho, United States",
+      "Dushanbe, Tajikistan",
+      "Pendleton, Oregon, United States",
+      "Spokane, Washington, United States"
+    ]
+  },
+  "Dda1": {
+    "1": [
+      "Jiayuguan, China",
+      "Twin Falls, Idaho, United States",
+      "Yakima, Washington, United States"
+    ],
+    "2": [
+      "Jiayuguan, China"
+    ],
+    "3": [],
+    "4": []
+  },
+  "Cdz2": {
+    "1": [],
+    "2": [
+      "Yazd, Iran"
+    ],
+    "3": [
+      "Ashgabat, Turkmenistan"
+    ],
+    "4": [
+      "Elko, Nevada, United States",
+      "Hotan, China",
+      "Miles City, Montana, United States",
+      "Twin Falls, Idaho, United States",
+      "Yakima, Washington, United States"
     ]
   },
   "Dhz1": {
@@ -3039,29 +2569,289 @@
     ],
     "4": []
   },
-  "Esa2": {
+  "Dda2": {
+    "1": [
+      "Elko, Nevada, United States",
+      "Grand Junction, Colorado, United States",
+      "Hami, China",
+      "Hotan, China"
+    ],
+    "2": [
+      "Elko, Nevada, United States",
+      "Hotan, China"
+    ],
+    "3": [
+      "Jiayuguan, China"
+    ],
+    "4": [
+      "Jiayuguan, China"
+    ]
+  },
+  "Cgz2": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [
+      "Topeka, Kansas, United States"
+    ]
+  },
+  "Csz2": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [
+      "Billings, Montana, United States",
+      "Missoula, Montana, United States",
+      "Pierre, South Dakota, United States"
+    ]
+  },
+  "Dgz1": {
     "1": [],
     "2": [],
     "3": [
-      "Brandon, Manitoba, Canada",
-      "Saskatoon, Saskatchewan, Canada",
-      "Prince Albert, Saskatchewan, Canada"
+      "Grand Island, Nebraska, United States",
+      "Omaha, Nebraska, United States"
+    ],
+    "4": [
+      "Yekaterinburg, Russia"
+    ]
+  },
+  "Cda1": {
+    "1": [
+      "Reno, Nevada, United States"
+    ],
+    "2": [],
+    "3": [],
+    "4": []
+  },
+  "Dsb2": {
+    "1": [
+      "Taos, New Mexico, United States"
+    ],
+    "2": [],
+    "3": [],
+    "4": []
+  },
+  "Bgz2": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [
+      "Austin, Texas, United States",
+      "Dallas, Texas, United States",
+      "Fort Worth, Texas, United States",
+      "Oklahoma City, Oklahoma, United States",
+      "San Antonio, Texas, United States",
+      "Tulsa, Oklahoma, United States"
+    ]
+  },
+  "Dma1": {
+    "1": [
+      "Bend, Oregon, United States",
+      "Kabul, Afghanistan",
+      "Spokane, Washington, United States"
+    ],
+    "2": [],
+    "3": [],
+    "4": []
+  },
+  "Bga2": {
+    "1": [
+      "Austin, Texas, United States",
+      "Corpus Christi, Texas, United States",
+      "San Antonio, Texas, United States"
+    ],
+    "2": [
+      "Barcelona, Spain",
+      "Brisbane, Australia",
+      "Corpus Christi, Texas, United States",
+      "Monterrey, Mexico"
+    ],
+    "3": [
+      "Barcelona, Spain",
+      "Brisbane, Australia"
     ],
     "4": []
   },
-  "Ega2": {
+  "Ddz1": {
+    "1": [
+      "Turpan, China"
+    ],
+    "2": [
+      "Hami, China"
+    ],
+    "3": [
+      "Casper, Wyoming, United States",
+      "Hami, China"
+    ],
+    "4": []
+  },
+  "Bvz1": {
+    "1": [
+      "Delhi, India",
+      "Lahore, Pakistan"
+    ],
+    "2": [
+      "Hermosillo, Mexico"
+    ],
+    "3": [
+      "Chihuahua, Mexico"
+    ],
+    "4": [
+      "Chihuahua, Mexico"
+    ]
+  },
+  "Zwz1": {
     "1": [],
     "2": [],
     "3": [
-      "Novosibirsk, Russia",
-      "Krasnoyarsk, Russia",
-      "Omsk, Russia"
+      "Managua, Nicaragua"
     ],
     "4": [
-      "Behchoko, Northwest Territories, Canada",
-      "Fort Simpson, Northwest Territories, Canada",
-      "Norman Wells, Northwest Territories, Canada"
+      "Bissau, Guinea-Bissau",
+      "Darwin, Australia",
+      "Fortaleza, Brasil",
+      "Jakarta, Indonesia",
+      "Mumbai, India",
+      "Panamá City, Panamá",
+      "Surabaya, Indonesia"
     ]
+  },
+  "Ada2": {
+    "1": [
+      "Cabo San Lucas, Mexico",
+      "Dakar, Senegal",
+      "Nouakchott, Mauritania"
+    ],
+    "2": [
+      "Cabo San Lucas, Mexico",
+      "Dakar, Senegal",
+      "Nouakchott, Mauritania"
+    ],
+    "3": [
+      "Dakar, Senegal"
+    ],
+    "4": [
+      "Lima, Peru",
+      "Lüderitz, Namibia",
+      "Santa Cruz de Tenerife, Spain"
+    ]
+  },
+  "Adz1": {
+    "1": [
+      "Agadez, Niger",
+      "Djibouti, Djibouti",
+      "Jeddah, Saudi Arabia",
+      "Khartoum, Sudan",
+      "Muscat, Oman",
+      "Niamey, Niger"
+    ],
+    "2": [
+      "Jeddah, Saudi Arabia",
+      "Karachi, Pakistan"
+    ],
+    "3": [
+      "Cabo San Lucas, Mexico",
+      "Karachi, Pakistan",
+      "Nouakchott, Mauritania"
+    ],
+    "4": [
+      "Cabo San Lucas, Mexico",
+      "Dakar, Senegal",
+      "Nouakchott, Mauritania"
+    ]
+  },
+  "Bva2": {
+    "1": [
+      "Chihuahua, Mexico"
+    ],
+    "2": [
+      "Chihuahua, Mexico"
+    ],
+    "3": [
+      "Harare, Zimbabwe",
+      "Lusaka, Zambia"
+    ],
+    "4": [
+      "Harare, Zimbabwe",
+      "Mexico City, Mexico"
+    ]
+  },
+  "Bvz2": {
+    "1": [],
+    "2": [],
+    "3": [
+      "Hermosillo, Mexico"
+    ],
+    "4": []
+  },
+  "Avz2": {
+    "1": [],
+    "2": [
+      "Niamey, Niger"
+    ],
+    "3": [
+      "Bamako, Mali",
+      "N'Djamena, Chad",
+      "Niamey, Niger",
+      "Ouagadougou, Burkina Faso"
+    ],
+    "4": [
+      "Hermosillo, Mexico"
+    ]
+  },
+  "Bwb2": {
+    "1": [
+      "Addis Ababa, Ethiopia",
+      "Mexico City, Mexico"
+    ],
+    "2": [
+      "Addis Ababa, Ethiopia"
+    ],
+    "3": [],
+    "4": []
+  },
+  "Bva1": {
+    "1": [],
+    "2": [],
+    "3": [
+      "Mexico City, Mexico"
+    ],
+    "4": []
+  },
+  "Bsa2": {
+    "1": [
+      "Monterrey, Mexico",
+      "Valencia, Spain"
+    ],
+    "2": [
+      "Valencia, Spain"
+    ],
+    "3": [],
+    "4": []
+  },
+  "Yb2": {
+    "1": [
+      "Oymyakon, Russia",
+      "Verkhoyansk, Russia"
+    ],
+    "2": [
+      "Oymyakon, Russia",
+      "Verkhoyansk, Russia"
+    ],
+    "3": [],
+    "4": []
+  },
+  "Ga1": {
+    "1": [],
+    "2": [
+      "Yakutsk, Russia"
+    ],
+    "3": [
+      "Oymyakon, Russia",
+      "Verkhoyansk, Russia"
+    ],
+    "4": []
   },
   "Ga2": {
     "1": [],
@@ -3070,40 +2860,19 @@
       "Yakutsk, Russia"
     ],
     "4": [
+      "Oymyakon, Russia",
       "Verkhoyansk, Russia"
     ]
   },
-  "Zwz2": {
-    "1": [],
-    "2": [],
+  "Aga1": {
+    "1": [
+      "Caracas, Venezuela"
+    ],
+    "2": [
+      "Caracas, Venezuela"
+    ],
     "3": [],
-    "4": [
-      "Manila, Philippines",
-      "Bangkok, Thailand",
-      "Ho Chi Minh City, Vietnam",
-      "Ouagadougou, Burkina Faso",
-      "Phnom Penh, Cambodia",
-      "N'Djamena, Chad",
-      "Bamako, Mali",
-      "Managua, Nicaragua",
-      "Niamey, Niger"
-    ]
-  },
-  "Zhz2": {
-    "1": [],
-    "2": [],
-    "3": [],
-    "4": [
-      "Juba, South Sudan"
-    ]
-  },
-  "Zsz1": {
-    "1": [],
-    "2": [],
-    "3": [],
-    "4": [
-      "Port-au-Prince, Haiti"
-    ]
+    "4": []
   },
   "Zgz1": {
     "1": [],
@@ -3116,33 +2885,264 @@
   "Zhz1": {
     "1": [],
     "2": [],
+    "3": [
+      "Manaus, Brasil"
+    ],
+    "4": [
+      "Bangui, Central African Republic",
+      "Belém, Brasil",
+      "Cebu City, Philippines",
+      "Colombo, Sri Lanka",
+      "Kisangani, Democratic Republic of the Congo",
+      "Kuala Lumpur, Malaysia",
+      "Mbuji-Mayi, Democratic Republic of the Congo",
+      "Paramaribo, Suriname",
+      "Singapore, Singapore"
+    ]
+  },
+  "Zhz2": {
+    "1": [],
+    "2": [],
     "3": [],
     "4": [
-      "Kuala Lumpur, Malaysia",
-      "Bandar Seri Begawan, Brunei",
-      "Bangui, Central African Republic",
-      "Palikir, Federated States of Micronesia",
-      "Tarawa, Kiribati",
-      "Malé, Maldives",
-      "Majuro, Marshall Islands",
-      "Yaren, Nauru",
-      "Ngerulmud, Palau",
-      "Singapore, Singapore",
-      "Sri Jayawardenepura Kotte, Sri Lanka",
-      "Paramaribo, Suriname",
-      "Funafuti, Tuvalu",
-      "Hagåtña, Guam, United States",
-      "Nukunonu, Tokelau (NZ)"
+      "Juba, South Sudan",
+      "Manaus, Brasil"
+    ]
+  },
+  "Zdz1": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [
+      "Barranquilla, Colombia"
+    ]
+  },
+  "Zvz2": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [
+      "Managua, Nicaragua",
+      "N'Djamena, Chad",
+      "Ouagadougou, Burkina Faso"
+    ]
+  },
+  "Bdb2": {
+    "1": [
+      "Antofagasta, Chile"
+    ],
+    "2": [],
+    "3": [],
+    "4": []
+  },
+  "Cdb2": {
+    "1": [
+      "Comodoro Rivadavia, Argentina"
+    ],
+    "2": [
+      "Comodoro Rivadavia, Argentina"
+    ],
+    "3": [],
+    "4": []
+  },
+  "Ega2": {
+    "1": [],
+    "2": [],
+    "3": [
+      "Krasnoyarsk, Russia",
+      "Novosibirsk, Russia",
+      "Omsk, Russia"
+    ],
+    "4": [
+      "Dawson City, Yukon, Canada"
+    ]
+  },
+  "Ewb2": {
+    "1": [
+      "Irkutsk, Russia"
+    ],
+    "2": [],
+    "3": [],
+    "4": []
+  },
+  "Adz2": {
+    "1": [
+      "Kiffa, Mauritania",
+      "Timbuktu, Mali"
+    ],
+    "2": [
+      "Agadez, Niger",
+      "Djibouti, Djibouti",
+      "Dubai, United Arab Emirates",
+      "Khartoum, Sudan",
+      "Kiffa, Mauritania",
+      "Muscat, Oman",
+      "Timbuktu, Mali"
+    ],
+    "3": [
+      "Agadez, Niger",
+      "Aswan, Egypt",
+      "Djibouti, Djibouti",
+      "Dubai, United Arab Emirates",
+      "Faya-Largeau, Chad",
+      "Jeddah, Saudi Arabia",
+      "Khartoum, Sudan",
+      "Muscat, Oman",
+      "Timbuktu, Mali"
+    ],
+    "4": [
+      "Jeddah, Saudi Arabia",
+      "Karachi, Pakistan"
     ]
   },
   "AdX": {
     "1": [],
     "2": [],
+    "3": [
+      "Kiffa, Mauritania"
+    ],
+    "4": [
+      "Agadez, Niger",
+      "Aswan, Egypt",
+      "Basra, Iraq",
+      "Dubai, United Arab Emirates",
+      "Faya-Largeau, Chad",
+      "Khartoum, Sudan",
+      "Kiffa, Mauritania",
+      "Multan, Pakistan",
+      "Muscat, Oman",
+      "Riyadh, Saudi Arabia",
+      "Timbuktu, Mali"
+    ]
+  },
+  "Fa1": {
+    "1": [],
+    "2": [
+      "Dawson City, Yukon, Canada",
+      "Ulaanbaatar, Mongolia"
+    ],
+    "3": [],
+    "4": []
+  },
+  "Eva1": {
+    "1": [],
+    "2": [],
+    "3": [
+      "Ulaanbaatar, Mongolia"
+    ],
+    "4": []
+  },
+  "Eva2": {
+    "1": [],
+    "2": [],
     "3": [],
     "4": [
-      "Kuwait City, Kuwait",
-      "Riyadh, Saudi Arabia",
-      "Bourem, Mali"
+      "Ulaanbaatar, Mongolia"
+    ]
+  },
+  "Cwb2": {
+    "1": [
+      "Johannesburg, South Africa",
+      "Lijiang, China"
+    ],
+    "2": [
+      "Lijiang, China"
+    ],
+    "3": [],
+    "4": []
+  },
+  "Cwa1": {
+    "1": [
+      "Kunming, China"
+    ],
+    "2": [
+      "Johannesburg, South Africa"
+    ],
+    "3": [
+      "Lijiang, China"
+    ],
+    "4": []
+  },
+  "ZvX": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [
+      "Bamako, Mali",
+      "Niamey, Niger"
+    ]
+  },
+  "Zsz2": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [
+      "Djibouti, Djibouti"
+    ]
+  },
+  "Fc1": {
+    "1": [
+      "Utqiaġvik, Alaska, United States"
+    ],
+    "2": [],
+    "3": [],
+    "4": []
+  },
+  "Csb2": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [
+      "Utqiaġvik, Alaska, United States"
+    ]
+  },
+  "Gb1": {
+    "1": [
+      "Cambridge Bay, Nunavut, Canada",
+      "Echo Bay, Nunavut, Canada"
+    ],
+    "2": [
+      "Cambridge Bay, Nunavut, Canada"
+    ],
+    "3": [],
+    "4": []
+  },
+  "Gc1": {
+    "1": [
+      "Alert, Nunavut, Canada"
+    ],
+    "2": [],
+    "3": [],
+    "4": []
+  },
+  "DY": {
+    "1": [
+      "Mount Kilimanjaro summit, Tanzania"
+    ],
+    "2": [
+      "Mount Kilimanjaro summit, Tanzania"
+    ],
+    "3": [
+      "Mount Kilimanjaro summit, Tanzania"
+    ],
+    "4": []
+  },
+  "Dc1": {
+    "1": [
+      "Bird Island Research Station, South Georgia",
+      "Primavera Base, Antarctica"
+    ],
+    "2": [
+      "Bird Island Research Station, South Georgia",
+      "Primavera Base, Antarctica"
+    ],
+    "3": [
+      "Esperanza Base, Antarctica",
+      "Primavera Base, Antarctica"
+    ],
+    "4": [
+      "Esperanza Base, Antarctica",
+      "Mount Kilimanjaro summit, Tanzania"
     ]
   },
   "Ama2": {
@@ -3150,39 +3150,19 @@
     "2": [],
     "3": [],
     "4": [
-      "Hanga Roa, Easter Island (CL)"
+      "Hanga Roa, Easter Island, Chile"
     ]
   },
-  "Bmz2": {
+  "Ddz2": {
     "1": [],
-    "2": [],
-    "3": [],
+    "2": [
+      "Turpan, China"
+    ],
+    "3": [
+      "Turpan, China"
+    ],
     "4": [
-      "Nicosia, Cyprus",
-      "Athens, Greece",
-      "Podgorica, Montenegro",
-      "Dushanbe, Tajikistan",
-      "Batman, Turkey"
-    ]
-  },
-  "Bsz2": {
-    "1": [],
-    "2": [],
-    "3": [],
-    "4": [
-      "Skopje, North Macedonia",
-      "Crystal City, Texas, United States"
-    ]
-  },
-  "Bgz2": {
-    "1": [],
-    "2": [],
-    "3": [],
-    "4": [
-      "Dallas, Texas, United States",
-      "San Antonio, Texas, United States",
-      "Austin, Texas, United States",
-      "Oklahoma City, Oklahoma, United States"
+      "Hami, China"
     ]
   },
   "CdX": {
@@ -3193,46 +3173,61 @@
       "Turpan, China"
     ]
   },
-  "Csz2": {
+  "Cvb2": {
+    "1": [],
+    "2": [],
+    "3": [
+      "Lhasa, Tibet, China"
+    ],
+    "4": []
+  },
+  "Cva1": {
     "1": [],
     "2": [],
     "3": [],
     "4": [
-      "Salt Lake City, Utah, United States",
-      "Pierre, South Dakota, United States",
-      "Yerevan, Armenia"
+      "Lhasa, Tibet, China"
     ]
   },
-  "Cgz2": {
+  "Dva1": {
+    "1": [
+      "Lanzhou, China"
+    ],
+    "2": [],
+    "3": [],
+    "4": []
+  },
+  "Dva2": {
+    "1": [],
+    "2": [
+      "Lanzhou, China"
+    ],
+    "3": [],
+    "4": []
+  },
+  "Cva2": {
+    "1": [],
+    "2": [],
+    "3": [
+      "Lanzhou, China"
+    ],
+    "4": []
+  },
+  "Cvz1": {
     "1": [],
     "2": [],
     "3": [],
     "4": [
-      "Topeka, Kansas, United States"
+      "Lanzhou, China"
     ]
   },
-  "Chz2": {
-    "1": [],
+  "Gb2": {
+    "1": [
+      "Yakutsk, Russia"
+    ],
     "2": [],
     "3": [],
-    "4": [
-      "Washington, District of Columbia, United States",
-      "Baltimore, Maryland, United States",
-      "St. Louis, Missouri, United States",
-      "Louisville, Kentucky, United States",
-      "Annapolis, Maryland, United States",
-      "Jefferson City, Missouri, United States",
-      "Harrisburg, Pennsylvania, United States",
-      "Carbondale, Illinois, United States"
-    ]
-  },
-  "Csb2": {
-    "1": [],
-    "2": [],
-    "3": [],
-    "4": [
-      "Utqiagvik, Alaska, United States"
-    ]
+    "4": []
   },
   "Fz1": {
     "1": [],
@@ -3240,14 +3235,6 @@
     "3": [],
     "4": [
       "Yakutsk, Russia"
-    ]
-  },
-  "Fa2": {
-    "1": [],
-    "2": [],
-    "3": [],
-    "4": [
-      "Ust-Nera, Russia"
     ]
   }
 }
