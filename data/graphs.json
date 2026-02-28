@@ -675,7 +675,7 @@
     }
   },
   "51.1784, -115.5708": {
-    "city": "Banff, Canada",
+    "city": "Banff, Alberta, Canada",
     "periods": {
       "1981-2010": {
         "annual_pet_mm": "753",
@@ -720,7 +720,7 @@
     }
   },
   "51.0447, -114.0719": {
-    "city": "Calgary, Canada",
+    "city": "Calgary, Alberta, Canada",
     "periods": {
       "1981-2010": {
         "annual_pet_mm": "769",
@@ -765,7 +765,7 @@
     }
   },
   "53.5461, -113.4938": {
-    "city": "Edmonton, Canada",
+    "city": "Edmonton, Alberta, Canada",
     "periods": {
       "1981-2010": {
         "annual_pet_mm": "737",
@@ -810,7 +810,7 @@
     }
   },
   "55.1707, -118.7887": {
-    "city": "Grande Prairie, Canada",
+    "city": "Grande Prairie, Alberta, Canada",
     "periods": {
       "1981-2010": {
         "annual_pet_mm": "723",
@@ -855,7 +855,7 @@
     }
   },
   "44.6488, -63.5752": {
-    "city": "Halifax, Canada",
+    "city": "Halifax, Nova Scotia, Canada",
     "periods": {
       "1981-2010": {
         "annual_pet_mm": "811",
@@ -900,7 +900,7 @@
     }
   },
   "63.7467, -68.5170": {
-    "city": "Iqaluit, Canada",
+    "city": "Iqaluit, Nunavut, Canada",
     "periods": {
       "1981-2010": {
         "annual_pet_mm": "433",
@@ -945,7 +945,7 @@
     }
   },
   "50.6745, -120.3273": {
-    "city": "Kamloops, Canada",
+    "city": "Kamloops, British Columbia, Canada",
     "periods": {
       "1981-2010": {
         "annual_pet_mm": "810",
@@ -990,7 +990,7 @@
     }
   },
   "49.8879, -119.4960": {
-    "city": "Kelowna, Canada",
+    "city": "Kelowna, British Columbia, Canada",
     "periods": {
       "1981-2010": {
         "annual_pet_mm": "795",
@@ -1035,7 +1035,7 @@
     }
   },
   "46.0878, -64.7782": {
-    "city": "Moncton, Canada",
+    "city": "Moncton, New Brunswick, Canada",
     "periods": {
       "1981-2010": {
         "annual_pet_mm": "762",
@@ -1080,7 +1080,7 @@
     }
   },
   "45.5017, -73.5673": {
-    "city": "Montreal, Canada",
+    "city": "Montreal, Québec, Canada",
     "periods": {
       "1981-2010": {
         "annual_pet_mm": "821",
@@ -1125,7 +1125,7 @@
     }
   },
   "45.4215, -75.6972": {
-    "city": "Ottawa, Canada",
+    "city": "Ottawa, Ontario, Canada",
     "periods": {
       "1981-2010": {
         "annual_pet_mm": "838",
@@ -1170,7 +1170,7 @@
     }
   },
   "46.8139, -71.2080": {
-    "city": "Québec City, Canada",
+    "city": "Québec City, Québec, Canada",
     "periods": {
       "1981-2010": {
         "annual_pet_mm": "754",
@@ -1215,7 +1215,7 @@
     }
   },
   "52.1579, -106.6702": {
-    "city": "Saskatoon, Canada",
+    "city": "Saskatoon, Saskatchewan, Canada",
     "periods": {
       "1981-2010": {
         "annual_pet_mm": "736",
@@ -1260,7 +1260,7 @@
     }
   },
   "47.5615, -52.7126": {
-    "city": "St. John's, Canada",
+    "city": "St. John's, Newfoundland and Labrador, Canada",
     "periods": {
       "1981-2010": {
         "annual_pet_mm": "708",
@@ -1305,7 +1305,7 @@
     }
   },
   "46.3959, -63.7876": {
-    "city": "Summerside, Canada",
+    "city": "Summerside, Prince Edward Island, Canada",
     "periods": {
       "1981-2010": {
         "annual_pet_mm": "814",
@@ -1350,7 +1350,7 @@
     }
   },
   "48.3809, -89.2477": {
-    "city": "Thunder Bay, Canada",
+    "city": "Thunder Bay, Ontario, Canada",
     "periods": {
       "1981-2010": {
         "annual_pet_mm": "748",
@@ -1395,7 +1395,7 @@
     }
   },
   "43.6532, -79.3832": {
-    "city": "Toronto, Canada",
+    "city": "Toronto, Ontario, Canada",
     "periods": {
       "1981-2010": {
         "annual_pet_mm": "827",
@@ -1440,7 +1440,7 @@
     }
   },
   "49.2827, -123.1207": {
-    "city": "Vancouver, Canada",
+    "city": "Vancouver, British Columbia, Canada",
     "periods": {
       "1981-2010": {
         "annual_pet_mm": "763",
@@ -1485,7 +1485,7 @@
     }
   },
   "60.7212, -135.0568": {
-    "city": "Whitehorse, Canada",
+    "city": "Whitehorse, Yukon, Canada",
     "periods": {
       "1981-2010": {
         "annual_pet_mm": "733",
@@ -1530,7 +1530,7 @@
     }
   },
   "49.8951, -97.1384": {
-    "city": "Winnipeg, Canada",
+    "city": "Winnipeg, Manitoba, Canada",
     "periods": {
       "1981-2010": {
         "annual_pet_mm": "775",
@@ -1575,7 +1575,7 @@
     }
   },
   "62.4540, -114.3718": {
-    "city": "Yellowknife, Canada",
+    "city": "Yellowknife, Northwest Territories, Canada",
     "periods": {
       "1981-2010": {
         "annual_pet_mm": "561",
