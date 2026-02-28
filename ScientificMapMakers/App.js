@@ -87,12 +87,12 @@ var tropic    = pixelLat.abs().lte(23.43594);
 var southMask = pixelLat.lt(-23.43594);
 
 // ---------- Base aridity classes ----------
-// Start as Humid(6); special ocean-ish guard at AI<=0.01; then SH/S/Desert
+// Start as Humid(6); special ocean-ish guard at AI<=0.01; then SH/S/Arid
 var aridBase = ee.Image(6)       // 6 = Humid
-  .where(AI.lte(0.01), 8)        // 8 = ("ocean-ish" placeholder; real oceans set later)
+  .where(AI.lte(0.000), 8)        // 8 = ("ocean-ish" placeholder; real oceans set later)
   .where(AI.lt(0.075), 5)        // 5 = Semihumid
   .where(AI.lt(0.050), 2)        // 2 = Semiarid
-  .where(AI.lt(0.025), 1)        // 1 = Arid Desert
+  .where(AI.lt(0.025), 1)        // 1 = Arid
   .rename('aridity');
 
 // ---------- HS ratio (Apr–Sep share) ----------
@@ -128,7 +128,7 @@ var clim = aridBase
   )
 
   // Global monsoon: ≥80% precip in ANY 6 consecutive months,
-  // not Mediterranean, not Arid Desert, not ocean
+  // not Mediterranean, not Arid, not ocean
   .where(
     P6ratio.gte(0.8)
       .and(aridBase.neq(1))
@@ -225,7 +225,7 @@ var coldSemantic = {
 };
 
 var ariditySemantic = {
-  'h':'Humid','g':'Semihumid','s':'Semiarid','d':'Arid Desert',
+  'h':'Humid','g':'Semihumid','s':'Semiarid','d':'Arid',
   'm':'Mediterranean','w':'Monsoon','':'','v':'Semiarid Monsoon'
 };
 
