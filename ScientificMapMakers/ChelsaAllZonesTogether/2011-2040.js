@@ -143,6 +143,15 @@ var clim = aridBase
   .where(oceanMask, 8)
   .where(coldCond, 7)
   .rename('climateClass');
+  
+// -------------------------------------
+// Semiarid Monsoon
+// -------------------------------------
+
+clim = clim.where(
+  clim.eq(4).and(AI.lt(0.05)),
+  9
+);
 
 // ===========================
 // Special rule:
@@ -298,6 +307,7 @@ var aridityLetters = {
   3:'m',
   7:'', // Cold override
   8:'(nodata)', // Ocean or nodata area
+  9:'v',
   null:''
 };
 

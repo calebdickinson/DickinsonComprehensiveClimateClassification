@@ -145,6 +145,29 @@ var clim = aridBase
   .where(oceanMask, 8)
   .where(coldCond, 7)
   .rename('climateClass');
+  
+// -------------------------------------
+// Semiarid Monsoon
+// -------------------------------------
+
+clim = clim.where(
+  clim.eq(4).and(AI.lt(0.05)),
+  9
+);
+
+// ===========================
+// Special rule:
+// Temperate rainforest with Mediterranean percipitation seasonality ratio → reclassified as humid
+// ===========================
+
+// Driest-month precipitation (mm/month)
+var P_driest = prMonthly.min();
+clim = clim.where(
+  clim.eq(3) // Mediterranean only
+    .and(P_driest.gte(PET_ann.divide(240))),
+  6          // Reclassify as Humid
+);
+
 // ===========================
 // Temperature class functions
 // ===========================
@@ -190,7 +213,7 @@ var combined = coldComb.multiply(100).add(clim.multiply(10)).add(warmComb).renam
 // ————————————————————————
 var summerLetters = {1:'X',2:'z2',3:'z1',4:'a2',5:'a1',6:'b2',7:'b1',8:'c2',9:'c1',10:'Y'};
 var coldLetters   = {1:'X',2:'Z',3:'A',4:'B',5:'C',6:'D',7:'E',8:'F',9:'G',10:'Y'};
-var aridityLetters= {6:'h',5:'g',2:'s',1:'d',4:'w',3:'m',7:'',8:'',null:''};
+var aridityLetters= {6:'h',5:'g',2:'s',1:'d',4:'w',3:'m',7:'',8:'',null:'',9:'v'};
 
 // ————————————————————————
 // SEMANTIC DESCRIPTIONS (NEW)
@@ -203,7 +226,7 @@ var coldSemantic = {
 
 var ariditySemantic = {
   'h':'Humid','g':'Semihumid','s':'Semiarid','d':'Arid Desert',
-  'm':'Mediterranean','w':'Monsoon','':''
+  'm':'Mediterranean','w':'Monsoon','':'','v':'Semiarid Monsoon'
 };
 
 var summerSemantic = {
@@ -314,7 +337,8 @@ var aridityLetters = {
   3:'m',
   7:'', // Cold override
   8:'', // Ocean or nodata area
-  null:''
+  null:'',
+  9:'v'
 };
 
 // ————————————————————————
