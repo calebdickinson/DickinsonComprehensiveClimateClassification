@@ -88,7 +88,7 @@
       "San Francisco, California, United States",
       "Santiago, Chile",
       "Seattle, Washington, United States",
-      "Vancouver, Canada"
+      "Vancouver, British Columbia, Canada"
     ]
   },
   "Bmz1": {
@@ -692,7 +692,7 @@
   },
   "Eb1": {
     "1": [
-      "Banff, Canada",
+      "Banff, Alberta, Canada",
       "Bethel, Alaska, United States",
       "Murmansk, Russia",
       "Nome, Alaska, United States"
@@ -701,7 +701,7 @@
       "Nome, Alaska, United States"
     ],
     "3": [
-      "Iqaluit, Canada",
+      "Iqaluit, Nunavut, Canada",
       "Prudhoe Bay, Alaska, United States",
       "Utqiaġvik, Alaska, United States"
     ],
@@ -715,7 +715,7 @@
     ],
     "2": [
       "Aspen, Colorado, United States",
-      "Banff, Canada"
+      "Banff, Alberta, Canada"
     ],
     "3": [],
     "4": []
@@ -727,7 +727,7 @@
       "Budapest, Hungary",
       "Donetsk, Ukraine",
       "Grand Island, Nebraska, United States",
-      "Kelowna, Canada",
+      "Kelowna, British Columbia, Canada",
       "Kharkiv, Ukraine",
       "Odesa, Ukraine",
       "Sioux Falls, South Dakota, United States",
@@ -743,8 +743,8 @@
       "Kharkiv, Ukraine"
     ],
     "3": [
-      "Banff, Canada",
-      "Grande Prairie, Canada",
+      "Banff, Alberta, Canada",
+      "Grande Prairie, Alberta, Canada",
       "Jackson, Wyoming, United States"
     ],
     "4": []
@@ -774,23 +774,23 @@
       "Bismarck, North Dakota, United States",
       "Bozeman, Montana, United States",
       "Dickinson, North Dakota, United States",
-      "Kamloops, Canada",
+      "Kamloops, British Columbia, Canada",
       "Medicine Hat, Alberta, Canada",
       "Regina, Saskatchewan, Canada",
       "Rexburg, Idaho, United States",
       "Ürümqi, China"
     ],
     "4": [
-      "Banff, Canada",
-      "Edmonton, Canada",
-      "Grande Prairie, Canada",
+      "Banff, Alberta, Canada",
+      "Edmonton, Alberta, Canada",
+      "Grande Prairie, Alberta, Canada",
       "Hay River, Northwest Territories, Canada",
-      "Whitehorse, Canada"
+      "Whitehorse, Yukon, Canada"
     ]
   },
   "Dwb2": {
     "1": [
-      "Calgary, Canada"
+      "Calgary, Alberta, Canada"
     ],
     "2": [],
     "3": [],
@@ -801,7 +801,7 @@
       "Lhasa, Tibet, China"
     ],
     "2": [
-      "Calgary, Canada",
+      "Calgary, Alberta, Canada",
       "Lhasa, Tibet, China"
     ],
     "3": [],
@@ -816,7 +816,7 @@
       "Dickinson, North Dakota, United States",
       "Flagstaff, Arizona, United States",
       "Great Falls, Montana, United States",
-      "Kamloops, Canada",
+      "Kamloops, British Columbia, Canada",
       "Medicine Hat, Alberta, Canada",
       "Miles City, Montana, United States",
       "Missoula, Montana, United States",
@@ -831,13 +831,13 @@
     "2": [
       "Bismarck, North Dakota, United States",
       "Dickinson, North Dakota, United States",
-      "Kamloops, Canada",
+      "Kamloops, British Columbia, Canada",
       "Medicine Hat, Alberta, Canada",
       "Rexburg, Idaho, United States"
     ],
     "3": [
-      "Calgary, Canada",
-      "Edmonton, Canada"
+      "Calgary, Alberta, Canada",
+      "Edmonton, Alberta, Canada"
     ],
     "4": []
   },
@@ -856,7 +856,7 @@
       "Denver, Colorado, United States",
       "Dodge City, Kansas, United States",
       "Hays, Kansas, United States",
-      "Kelowna, Canada",
+      "Kelowna, British Columbia, Canada",
       "Lubbock, Texas, United States",
       "Payson, Arizona, United States",
       "Pueblo, Colorado, United States",
@@ -866,13 +866,13 @@
     "3": [
       "Cheyenne, Wyoming, United States",
       "Denver, Colorado, United States",
-      "Kelowna, Canada",
+      "Kelowna, British Columbia, Canada",
       "Odesa, Ukraine",
       "Santa Fe, New Mexico, United States",
       "Szeged, Hungary"
     ],
     "4": [
-      "Calgary, Canada",
+      "Calgary, Alberta, Canada",
       "Canberra, Australia",
       "Cheyenne, Wyoming, United States",
       "Denver, Colorado, United States",
@@ -884,18 +884,18 @@
   "Egb2": {
     "1": [
       "Chelyabinsk, Russia",
-      "Edmonton, Canada",
-      "Grande Prairie, Canada",
+      "Edmonton, Alberta, Canada",
+      "Grande Prairie, Alberta, Canada",
       "Krasnoyarsk, Russia",
       "Novosibirsk, Russia",
       "Omsk, Russia",
       "Regina, Saskatchewan, Canada",
-      "Saskatoon, Canada",
-      "Winnipeg, Canada"
+      "Saskatoon, Saskatchewan, Canada",
+      "Winnipeg, Manitoba, Canada"
     ],
     "2": [
-      "Edmonton, Canada",
-      "Grande Prairie, Canada"
+      "Edmonton, Alberta, Canada",
+      "Grande Prairie, Alberta, Canada"
     ],
     "3": [],
     "4": []
@@ -903,22 +903,22 @@
   "Dhb2": {
     "1": [
       "Bella Coola, British Columbia, Canada",
-      "Halifax, Canada",
+      "Halifax, Nova Scotia, Canada",
       "Helsinki, Finland",
       "Kyiv, Ukraine",
       "Lviv, Ukraine",
       "Marquette, Michigan, United States",
       "Minsk, Belarus",
-      "Moncton, Canada",
+      "Moncton, New Brunswick, Canada",
       "Moscow, Russia",
       "Oslo, Norway",
       "Portland, Maine, United States",
       "Prince George, British Columbia, Canada",
       "Riga, Latvia",
       "Saint Petersburg, Russia",
-      "St. John's, Canada",
+      "St. John's, Newfoundland and Labrador, Canada",
       "Stockholm, Sweden",
-      "Summerside, Canada",
+      "Summerside, Prince Edward Island, Canada",
       "Tallinn, Estonia",
       "Terrace, British Columbia, Canada",
       "Trondheim, Norway",
@@ -932,7 +932,7 @@
       "Juneau, Alaska, United States",
       "Murmansk, Russia",
       "Prince George, British Columbia, Canada",
-      "St. John's, Canada",
+      "St. John's, Newfoundland and Labrador, Canada",
       "Tromsø, Norway",
       "Trondheim, Norway",
       "Umeå, Sweden",
@@ -945,7 +945,7 @@
       "Valdez, Alaska, United States"
     ],
     "4": [
-      "Iqaluit, Canada",
+      "Iqaluit, Nunavut, Canada",
       "Nuuk, Greenland"
     ]
   },
@@ -970,12 +970,12 @@
       "Madison, Wisconsin, United States",
       "Milwaukee, Wisconsin, United States",
       "Minneapolis, Minnesota, United States",
-      "Montreal, Canada",
+      "Montreal, Québec, Canada",
       "New York City, New York, United States",
       "Omaha, Nebraska, United States",
       "Pittsburgh, Pennsylvania, United States",
       "Syracuse, New York, United States",
-      "Toronto, Canada"
+      "Toronto, Ontario, Canada"
     ],
     "2": [
       "Bangor, Maine, United States",
@@ -984,28 +984,28 @@
       "Duluth, Minnesota, United States",
       "Grand Rapids, Michigan, United States",
       "Green Bay, Wisconsin, United States",
-      "Halifax, Canada",
+      "Halifax, Nova Scotia, Canada",
       "Helsinki, Finland",
       "Kyiv, Ukraine",
       "Lviv, Ukraine",
       "Marquette, Michigan, United States",
       "Minsk, Belarus",
-      "Moncton, Canada",
-      "Montreal, Canada",
+      "Moncton, New Brunswick, Canada",
+      "Montreal, Québec, Canada",
       "Moscow, Russia",
       "Oslo, Norway",
-      "Ottawa, Canada",
+      "Ottawa, Ontario, Canada",
       "Portland, Maine, United States",
-      "Québec City, Canada",
+      "Québec City, Québec, Canada",
       "Riga, Latvia",
       "Saint Petersburg, Russia",
       "Stockholm, Sweden",
-      "Summerside, Canada",
+      "Summerside, Prince Edward Island, Canada",
       "Syracuse, New York, United States",
       "Tallinn, Estonia",
       "Terrace, British Columbia, Canada",
-      "Thunder Bay, Canada",
-      "Toronto, Canada",
+      "Thunder Bay, Ontario, Canada",
+      "Toronto, Ontario, Canada",
       "Vilnius, Lithuania"
     ],
     "3": [
@@ -1102,27 +1102,27 @@
       "Detroit, Michigan, United States",
       "Fort Wayne, Indiana, United States",
       "Grand Rapids, Michigan, United States",
-      "Halifax, Canada",
+      "Halifax, Nova Scotia, Canada",
       "Ljubljana, Slovenia",
       "Lviv, Ukraine",
       "Pittsburgh, Pennsylvania, United States",
       "Portland, Maine, United States",
       "Sarajevo, Bosnia and Herzegovina",
       "Syracuse, New York, United States",
-      "Toronto, Canada",
+      "Toronto, Ontario, Canada",
       "Zürich, Switzerland"
     ],
     "4": [
       "Bella Coola, British Columbia, Canada",
       "Copenhagen, Denmark",
-      "Halifax, Canada",
+      "Halifax, Nova Scotia, Canada",
       "Helsinki, Finland",
       "Marquette, Michigan, United States",
       "Oslo, Norway",
       "Portland, Maine, United States",
       "Saint Petersburg, Russia",
       "Stockholm, Sweden",
-      "Summerside, Canada",
+      "Summerside, Prince Edward Island, Canada",
       "Tallinn, Estonia",
       "Terrace, British Columbia, Canada",
       "Umeå, Sweden",
@@ -1132,7 +1132,7 @@
   },
   "Fc2": {
     "1": [
-      "Iqaluit, Canada",
+      "Iqaluit, Nunavut, Canada",
       "Prudhoe Bay, Alaska, United States"
     ],
     "2": [
@@ -1151,7 +1151,7 @@
     "2": [
       "Churchill, Manitoba, Canada",
       "Echo Bay, Nunavut, Canada",
-      "Iqaluit, Canada"
+      "Iqaluit, Nunavut, Canada"
     ],
     "3": [],
     "4": []
@@ -1184,8 +1184,8 @@
       "Donetsk, Ukraine",
       "Great Falls, Montana, United States",
       "Hays, Kansas, United States",
-      "Kamloops, Canada",
-      "Kelowna, Canada",
+      "Kamloops, British Columbia, Canada",
+      "Kelowna, British Columbia, Canada",
       "Kharkiv, Ukraine",
       "Medicine Hat, Alberta, Canada",
       "North Platte, Nebraska, United States",
@@ -1227,12 +1227,12 @@
       "Duluth, Minnesota, United States",
       "Marquette, Michigan, United States",
       "Milwaukee, Wisconsin, United States",
-      "Moncton, Canada",
-      "Montreal, Canada",
+      "Moncton, New Brunswick, Canada",
+      "Montreal, Québec, Canada",
       "Moscow, Russia",
-      "Ottawa, Canada",
-      "Québec City, Canada",
-      "Summerside, Canada"
+      "Ottawa, Ontario, Canada",
+      "Québec City, Québec, Canada",
+      "Summerside, Prince Edward Island, Canada"
     ],
     "4": [
       "Fairbanks, Alaska, United States"
@@ -1304,25 +1304,25 @@
       "Kansas City, Missouri, United States",
       "Knoxville, Tennessee, United States",
       "Ljubljana, Slovenia",
-      "Moncton, Canada",
-      "Montreal, Canada",
+      "Moncton, New Brunswick, Canada",
+      "Montreal, Québec, Canada",
       "New York City, New York, United States",
-      "Ottawa, Canada",
+      "Ottawa, Ontario, Canada",
       "Philadelphia, Pennsylvania, United States",
       "Pittsburgh, Pennsylvania, United States",
-      "Québec City, Canada",
+      "Québec City, Québec, Canada",
       "Richmond, Virginia, United States",
       "Sarajevo, Bosnia and Herzegovina",
       "Springfield, Missouri, United States",
       "Syracuse, New York, United States",
       "Tokyo, Japan",
-      "Toronto, Canada"
+      "Toronto, Ontario, Canada"
     ]
   },
   "Eha1": {
     "1": [
       "Duluth, Minnesota, United States",
-      "Ottawa, Canada"
+      "Ottawa, Ontario, Canada"
     ],
     "2": [
       "Fairbanks, Alaska, United States",
@@ -1337,8 +1337,8 @@
   "Ehb2": {
     "1": [
       "Fairbanks, Alaska, United States",
-      "Québec City, Canada",
-      "Thunder Bay, Canada",
+      "Québec City, Québec, Canada",
+      "Thunder Bay, Ontario, Canada",
       "Yekaterinburg, Russia"
     ],
     "2": [
@@ -1357,10 +1357,10 @@
     "2": [
       "Astana, Kazakhstan",
       "Regina, Saskatchewan, Canada",
-      "Saskatoon, Canada"
+      "Saskatoon, Saskatchewan, Canada"
     ],
     "3": [
-      "Whitehorse, Canada"
+      "Whitehorse, Yukon, Canada"
     ],
     "4": [
       "Cambridge Bay, Nunavut, Canada",
@@ -1371,7 +1371,7 @@
     "1": [],
     "2": [],
     "3": [
-      "Saskatoon, Canada"
+      "Saskatoon, Saskatchewan, Canada"
     ],
     "4": []
   },
@@ -1395,8 +1395,8 @@
       "Novosibirsk, Russia",
       "Omsk, Russia",
       "Regina, Saskatchewan, Canada",
-      "Saskatoon, Canada",
-      "Winnipeg, Canada",
+      "Saskatoon, Saskatchewan, Canada",
+      "Winnipeg, Manitoba, Canada",
       "Ürümqi, China"
     ]
   },
@@ -1416,7 +1416,7 @@
       "Ljubljana, Slovenia",
       "Paris, France",
       "Sarajevo, Bosnia and Herzegovina",
-      "Vancouver, Canada",
+      "Vancouver, British Columbia, Canada",
       "Warsaw, Poland",
       "Zürich, Switzerland"
     ],
@@ -1425,11 +1425,11 @@
       "Cardiff, Wales, United Kingdom",
       "Copenhagen, Denmark",
       "London, England, United Kingdom",
-      "St. John's, Canada",
+      "St. John's, Newfoundland and Labrador, Canada",
       "Stockholm, Sweden",
       "Tallinn, Estonia",
       "Trondheim, Norway",
-      "Vancouver, Canada",
+      "Vancouver, British Columbia, Canada",
       "Vilnius, Lithuania"
     ],
     "4": [
@@ -1447,7 +1447,7 @@
       "Kodiak, Alaska, United States",
       "Nome, Alaska, United States",
       "Prince Rupert, British Columbia, Canada",
-      "St. John's, Canada",
+      "St. John's, Newfoundland and Labrador, Canada",
       "Tromsø, Norway",
       "Trondheim, Norway",
       "Valdez, Alaska, United States"
@@ -1469,14 +1469,14 @@
       "Madison, Wisconsin, United States",
       "Minneapolis, Minnesota, United States",
       "Sioux Falls, South Dakota, United States",
-      "Thunder Bay, Canada",
-      "Winnipeg, Canada",
+      "Thunder Bay, Ontario, Canada",
+      "Winnipeg, Manitoba, Canada",
       "Yekaterinburg, Russia"
     ],
     "4": [
       "Inuvik, Northwest Territories, Canada",
       "Thompson, Manitoba, Canada",
-      "Yellowknife, Canada"
+      "Yellowknife, Northwest Territories, Canada"
     ]
   },
   "Cgz1": {
@@ -1504,7 +1504,7 @@
       "Moscow, Russia",
       "Omaha, Nebraska, United States",
       "Sioux Falls, South Dakota, United States",
-      "Thunder Bay, Canada",
+      "Thunder Bay, Ontario, Canada",
       "Wichita, Kansas, United States"
     ]
   },
@@ -1524,7 +1524,7 @@
       "London, England, United Kingdom",
       "Paris, France",
       "Valdivia, Chile",
-      "Vancouver, Canada",
+      "Vancouver, British Columbia, Canada",
       "Zürich, Switzerland"
     ],
     "2": [
@@ -1564,10 +1564,10 @@
   },
   "Esb2": {
     "1": [
-      "Whitehorse, Canada"
+      "Whitehorse, Yukon, Canada"
     ],
     "2": [
-      "Whitehorse, Canada"
+      "Whitehorse, Yukon, Canada"
     ],
     "3": [],
     "4": []
@@ -1583,14 +1583,14 @@
       "Krasnoyarsk, Russia",
       "Novosibirsk, Russia",
       "Omsk, Russia",
-      "Winnipeg, Canada"
+      "Winnipeg, Manitoba, Canada"
     ],
     "3": [
       "Dawson City, Yukon, Canada",
       "Hay River, Northwest Territories, Canada",
       "Inuvik, Northwest Territories, Canada",
       "Thompson, Manitoba, Canada",
-      "Yellowknife, Canada"
+      "Yellowknife, Northwest Territories, Canada"
     ],
     "4": []
   },
@@ -1600,11 +1600,11 @@
       "Hay River, Northwest Territories, Canada",
       "Thompson, Manitoba, Canada",
       "Ulaanbaatar, Mongolia",
-      "Yellowknife, Canada"
+      "Yellowknife, Northwest Territories, Canada"
     ],
     "2": [
       "Inuvik, Northwest Territories, Canada",
-      "Yellowknife, Canada"
+      "Yellowknife, Northwest Territories, Canada"
     ],
     "3": [
       "Cambridge Bay, Nunavut, Canada",
