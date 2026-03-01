@@ -142,6 +142,15 @@ var clim = aridBase
   .where(oceanMask, 8)
   .where(coldCond, 7)
   .rename('climateClass');
+
+// -------------------------------------
+// Semiarid Monsoon
+// -------------------------------------
+
+clim = clim.where(
+  clim.eq(4).and(AI.lt(0.05)),
+  9
+);
   
 // ===========================
 // Special rule:
@@ -205,13 +214,14 @@ var lastDigit  = 4;   // Ones place
 // === Build the color map dynamically ===
 var codeColorMap = {};
 
-codeColorMap[firstDigit * 100 + 10 + lastDigit] = "#ff0000"; // Arid ---------- ff0000
-codeColorMap[firstDigit * 100 + 20 + lastDigit] = "#ff8800"; // Semiarid ------ ff8800
-codeColorMap[firstDigit * 100 + 30 + lastDigit] = "#ffff00"; // Mediterranean - ffff00
-codeColorMap[firstDigit * 100 + 40 + lastDigit] = "#ff00ff"; // Monsoon ------- ff00ff
-codeColorMap[firstDigit * 100 + 50 + lastDigit] = "#00ff00"; // Semihumid ----- 00ff00
-codeColorMap[firstDigit * 100 + 60 + lastDigit] = "#008800"; // Humid --------- 008800
-//codeColorMap[firstDigit * 100 + 80 + lastDigit] = "#00ffff"; // Ocean --------- 00ffff
+codeColorMap[firstDigit * 100 + 10 + lastDigit] = "#ff0000"; // Arid ------------- ff0000
+codeColorMap[firstDigit * 100 + 20 + lastDigit] = "#ff8800"; // Semiarid --------- ff8800
+codeColorMap[firstDigit * 100 + 30 + lastDigit] = "#ffff00"; // Mediterranean ---- ffff00
+codeColorMap[firstDigit * 100 + 40 + lastDigit] = "#ff00ff"; // Monsoon ---------- ff00ff
+codeColorMap[firstDigit * 100 + 50 + lastDigit] = "#00ff00"; // Semihumid -------- 00ff00
+codeColorMap[firstDigit * 100 + 60 + lastDigit] = "#008800"; // Humid ------------ 008800
+codeColorMap[firstDigit * 100 + 80 + lastDigit] = "#00ffff"; // Ocean ------------ 00ffff
+codeColorMap[firstDigit * 100 + 90 + lastDigit] = "#884400"; // Semiarid Monsoon - 884400
 
 // codeColorMap[7 * 100 + 70 + 3] = "#000000"; // Polar/Subpolar/Alpine ------- 000000
 
