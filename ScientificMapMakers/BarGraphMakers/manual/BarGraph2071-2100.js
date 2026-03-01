@@ -809,10 +809,7 @@ var ai_g = aiAtPoint.gte(0.50).and(aiAtPoint.lt(0.75));
 var ai_h = aiAtPoint.gte(0.75);
 
 // Mediterranean seasonality
-var isMed = (
-  isNorth.and(HS.lt(0.4))
-    .or(isSouth.and(HS.gt(0.6)))
-);
+var isMed = HS.lt(0.4);
 
 // Monsoon seasonality
 var isMonsoon = P6ratio.gte(0.8).and(isMed.not());

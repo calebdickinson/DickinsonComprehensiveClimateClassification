@@ -11,21 +11,11 @@ var PERIODS = [
 ];
 
 var CITIES = [
-  {name: 'Krasnoyarsk, Russia', lat: 56.0153, lon: 92.8932},
-  {name: 'Lüderitz, Namibia', lat: -26.6481, lon: 15.1594},
-  {name: 'Bangui, Central African Republic', lat: 4.3947, lon: 18.5582},
-  {name: 'Maseru, Lesotho', lat: -29.3151, lon: 27.4869},
-  {name: 'Gaborone, Botswana', lat: -24.6282, lon: 25.9231},
-  {name: 'Nampula, Mozambique', lat: -15.1165, lon: 39.2666},
-  {name: 'Libreville, Gabon', lat: 0.4162, lon: 9.4673},
-  {name: 'Hamilton, Bermuda, United Kingdom', lat: 32.2949, lon: -64.7814},
-  {name: 'Adrar, Algeria', lat: 27.8743, lon: -0.2939},
-  {name: 'Kiffa, Mauritania', lat: 16.6200, lon: -11.4062},
-  {name: 'Timbuktu, Mali', lat: 16.7666, lon: -3.0026},
-  {name: 'Tamanrasset, Algeria', lat: 22.7850, lon: 5.5228},
-  {name: 'Aswan, Egypt', lat: 24.0889, lon: 32.8998},
-  {name: 'Agadez, Niger', lat: 16.9733, lon: 7.9911},
-  {name: 'Faya-Largeau, Chad', lat: 17.9257, lon: 19.1043}
+  {name: 'Santa Rosa, Argentina', lat: -36.6203, lon: -64.2900},
+  {name: 'Córdoba, Argentina', lat: -31.4201, lon: -64.1888},
+  {name: 'Rosario, Argentina', lat: -32.9442, lon: -60.6505},
+  {name: 'Puerto Aysén, Chile', lat: -45.4030, lon: -72.7014},
+  {name: 'Puerto Montt, Chile', lat: -41.4693, lon: -72.9424}
 ];
 
 // Month numbers 1–12
@@ -877,10 +867,7 @@ function runForPeriod(NORMAL_PERIOD, pt, LAT, elevation) {
   var ai_h = aiAtPoint.gte(0.75);
   
   // Mediterranean seasonality
-  var isMed = (
-    isNorth.and(HS.lt(0.4))
-      .or(isSouth.and(HS.gt(0.6)))
-  );
+  var isMed = HS.lt(0.4);
   
   // Monsoon seasonality
   var isMonsoon = P6ratio.gte(0.8).and(isMed.not());
