@@ -21030,7 +21030,7 @@
     "periods": {
       "1981-2010": {
         "annual_pet_mm": "1233",
-        "dickinson": "Cma1",
+        "dickinson": "Cga1",
         "dickinson_bordering": "none",
         "koppen": "Cfa",
         "koppen_bordering": "none",
@@ -21040,7 +21040,7 @@
       },
       "2011-2040": {
         "annual_pet_mm": "1268",
-        "dickinson": "Cma1",
+        "dickinson": "Cga1",
         "dickinson_bordering": "none",
         "koppen": "Cfa",
         "koppen_bordering": "none",
@@ -21050,8 +21050,8 @@
       },
       "2041-2070": {
         "annual_pet_mm": "1293",
-        "dickinson": "Cma2",
-        "dickinson_bordering": "Bma2",
+        "dickinson": "Cga2",
+        "dickinson_bordering": "Bga2",
         "koppen": "Cfa",
         "koppen_bordering": "Cwa",
         "p_pet": "0.61",
@@ -21060,7 +21060,7 @@
       },
       "2071-2100": {
         "annual_pet_mm": "1334",
-        "dickinson": "Bma2",
+        "dickinson": "Bga2",
         "dickinson_bordering": "none",
         "koppen": "Cfa",
         "koppen_bordering": "none",
@@ -21075,8 +21075,8 @@
     "periods": {
       "1981-2010": {
         "annual_pet_mm": "1235",
-        "dickinson": "Cma1",
-        "dickinson_bordering": "Bma1",
+        "dickinson": "Cwa1",
+        "dickinson_bordering": "Bwa1",
         "koppen": "Cwa",
         "koppen_bordering": "none",
         "p_pet": "0.72",
@@ -21085,8 +21085,8 @@
       },
       "2011-2040": {
         "annual_pet_mm": "1282",
-        "dickinson": "Bma1",
-        "dickinson_bordering": "Bma2",
+        "dickinson": "Bwa1",
+        "dickinson_bordering": "Bwa2 Bga1",
         "koppen": "Cwa",
         "koppen_bordering": "none",
         "p_pet": "0.68",
@@ -21095,7 +21095,7 @@
       },
       "2041-2070": {
         "annual_pet_mm": "1319",
-        "dickinson": "Bma2",
+        "dickinson": "Bwa2",
         "dickinson_bordering": "none",
         "koppen": "Cwa",
         "koppen_bordering": "none",
@@ -21105,7 +21105,7 @@
       },
       "2071-2100": {
         "annual_pet_mm": "1396",
-        "dickinson": "Bma2",
+        "dickinson": "Bwa2",
         "dickinson_bordering": "none",
         "koppen": "Cwa",
         "koppen_bordering": "none",
@@ -21120,8 +21120,8 @@
     "periods": {
       "1981-2010": {
         "annual_pet_mm": "1267",
-        "dickinson": "Bma1",
-        "dickinson_bordering": "Cma1 Bma2",
+        "dickinson": "Bha1",
+        "dickinson_bordering": "Cha1 Bha2",
         "koppen": "Cfa",
         "koppen_bordering": "none",
         "p_pet": "0.85",
@@ -21130,8 +21130,8 @@
       },
       "2011-2040": {
         "annual_pet_mm": "1311",
-        "dickinson": "Bma2",
-        "dickinson_bordering": "Bma1",
+        "dickinson": "Bha2",
+        "dickinson_bordering": "Bha1",
         "koppen": "Cfa",
         "koppen_bordering": "none",
         "p_pet": "0.82",
@@ -21140,7 +21140,7 @@
       },
       "2041-2070": {
         "annual_pet_mm": "1367",
-        "dickinson": "Bma2",
+        "dickinson": "Bha2",
         "dickinson_bordering": "none",
         "koppen": "Cfa",
         "koppen_bordering": "none",
@@ -21150,8 +21150,8 @@
       },
       "2071-2100": {
         "annual_pet_mm": "1481",
-        "dickinson": "Bma2",
-        "dickinson_bordering": "Bmz1",
+        "dickinson": "Bha2",
+        "dickinson_bordering": "Bhz1",
         "koppen": "Cfa",
         "koppen_bordering": "none",
         "p_pet": "0.79",
