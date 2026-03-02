@@ -24,6 +24,7 @@
       "Cape Town, South Africa",
       "Concepción, Chile",
       "Lisbon, Portugal",
+      "Lompoc, California, United States",
       "Maseru, Lesotho",
       "San Francisco, California, United States",
       "Santa Cruz de Tenerife, Spain"
@@ -45,6 +46,7 @@
       "Palermo, Italy",
       "Riverside, California, United States",
       "Seville, Spain",
+      "Tel Aviv, Israel",
       "Tunis, Tunisia",
       "Valletta, Malta"
     ],
@@ -61,6 +63,7 @@
       "Riverside, California, United States",
       "Sacramento, California, United States",
       "Seville, Spain",
+      "Tel Aviv, Israel",
       "Tunis, Tunisia",
       "Valletta, Malta"
     ],
@@ -80,6 +83,7 @@
       "Bellingham, Washington, United States",
       "Bilbao, Spain",
       "Lisbon, Portugal",
+      "Lompoc, California, United States",
       "Maseru, Lesotho",
       "Nanaimo, British Columbia, Canada",
       "Perth, Australia",
@@ -109,6 +113,7 @@
       "Palermo, Italy",
       "Rome, Italy",
       "Seville, Spain",
+      "Tel Aviv, Israel",
       "Tunis, Tunisia",
       "Valencia, Spain",
       "Valletta, Malta"
@@ -130,6 +135,7 @@
       "Rome, Italy",
       "Sacramento, California, United States",
       "Seville, Spain",
+      "Tel Aviv, Israel",
       "Tirana, Albania",
       "Tunis, Tunisia",
       "Valletta, Malta"
@@ -221,7 +227,9 @@
       "Heard Island (Atlas Cove Station), Antarctica"
     ],
     "3": [],
-    "4": []
+    "4": [
+      "Chimborazo Summit, Ecuador"
+    ]
   },
   "Cc2": {
     "1": [
@@ -243,7 +251,6 @@
   },
   "GY": {
     "1": [
-      "Aconcagua summit, Argentina",
       "Mount Everest summit, Nepal/China",
       "Svea Station, Antarctica"
     ],
@@ -262,15 +269,11 @@
     "1": [
       "Mount Rainier, Washington, United States"
     ],
-    "2": [
-      "Aconcagua summit, Argentina"
-    ],
+    "2": [],
     "3": [
-      "Aconcagua summit, Argentina",
       "Svea Station, Antarctica"
     ],
     "4": [
-      "Aconcagua summit, Argentina",
       "Svea Station, Antarctica"
     ]
   },
@@ -279,6 +282,7 @@
       "Brisbane, Australia",
       "Buenos Aires, Argentina",
       "Montevideo, Uruguay",
+      "Rosario, Argentina",
       "Sydney, Australia",
       "São Paulo, Brazil"
     ],
@@ -299,6 +303,7 @@
     "4": [
       "Cilaos, Réunion, France",
       "Forks, Washington, United States",
+      "Puerto Montt, Chile",
       "Wellington, New Zealand"
     ]
   },
@@ -326,6 +331,7 @@
       "Lafayette, Louisiana, United States",
       "Mobile, Alabama, United States",
       "New Orleans, Louisiana, United States",
+      "Rosario, Argentina",
       "Savannah, Georgia, United States",
       "Tallahassee, Florida, United States",
       "Tampa, Florida, United States"
@@ -333,6 +339,7 @@
     "3": [
       "Buenos Aires, Argentina",
       "Hamilton, Bermuda, United Kingdom",
+      "Rosario, Argentina",
       "Sydney, Australia",
       "São Paulo, Brazil"
     ],
@@ -340,6 +347,7 @@
       "Auckland, New Zealand",
       "Buenos Aires, Argentina",
       "Montevideo, Uruguay",
+      "Rosario, Argentina",
       "Sydney, Australia"
     ]
   },
@@ -361,11 +369,13 @@
       "Rangpur, Bangladesh"
     ],
     "3": [
+      "Córdoba, Argentina",
       "Kathmandu, Nepal",
       "Kunming, China"
     ],
     "4": [
       "Antananarivo, Madagascar",
+      "Córdoba, Argentina",
       "Johannesburg, South Africa",
       "Kathmandu, Nepal",
       "Kunming, China",
@@ -457,6 +467,7 @@
     "2": [
       "Antananarivo, Madagascar",
       "Belo Horizonte, Brazil",
+      "Córdoba, Argentina",
       "Harare, Zimbabwe",
       "Kathmandu, Nepal",
       "Kunming, China",
@@ -1447,6 +1458,8 @@
       "Kodiak, Alaska, United States",
       "Nome, Alaska, United States",
       "Prince Rupert, British Columbia, Canada",
+      "Puerto Aysén, Chile",
+      "Queenstown, New Zealand",
       "St. John's, Newfoundland and Labrador, Canada",
       "Tromsø, Norway",
       "Trondheim, Norway",
@@ -1523,6 +1536,9 @@
       "Edinburgh, Scotland, United Kingdom",
       "London, England, United Kingdom",
       "Paris, France",
+      "Puerto Aysén, Chile",
+      "Puerto Montt, Chile",
+      "Queenstown, New Zealand",
       "Valdivia, Chile",
       "Vancouver, British Columbia, Canada",
       "Zürich, Switzerland"
@@ -1541,6 +1557,9 @@
       "Kodiak, Alaska, United States",
       "London, England, United Kingdom",
       "Prince Rupert, British Columbia, Canada",
+      "Puerto Aysén, Chile",
+      "Puerto Montt, Chile",
+      "Queenstown, New Zealand",
       "Valdivia, Chile"
     ],
     "3": [
@@ -1554,6 +1573,8 @@
       "Forks, Washington, United States",
       "Kodiak, Alaska, United States",
       "Prince Rupert, British Columbia, Canada",
+      "Puerto Aysén, Chile",
+      "Queenstown, New Zealand",
       "Reykjavík, Iceland"
     ],
     "4": [
@@ -1917,6 +1938,7 @@
       "Wellington, New Zealand"
     ],
     "3": [
+      "Puerto Montt, Chile",
       "Quito, Ecuador",
       "Wellington, New Zealand"
     ],
@@ -2042,13 +2064,15 @@
     "1": [
       "Barcelona, Spain",
       "Canberra, Australia",
-      "Marseille, France"
+      "Marseille, France",
+      "Santa Rosa, Argentina"
     ],
     "2": [
       "Budapest, Hungary",
       "Canberra, Australia",
       "Flagstaff, Arizona, United States",
       "Prague, Czechia",
+      "Santa Rosa, Argentina",
       "Sofia, Bulgaria"
     ],
     "3": [
@@ -2086,6 +2110,7 @@
       "Paris, France",
       "Payson, Arizona, United States",
       "Prague, Czechia",
+      "Santa Rosa, Argentina",
       "Sofia, Bulgaria",
       "Warsaw, Poland"
     ],
@@ -2394,10 +2419,12 @@
   },
   "Bmb2": {
     "1": [
-      "Cape Town, South Africa"
+      "Cape Town, South Africa",
+      "Lompoc, California, United States"
     ],
     "2": [
       "Concepción, Chile",
+      "Lompoc, California, United States",
       "San Francisco, California, United States"
     ],
     "3": [
@@ -2671,7 +2698,9 @@
       "Barcelona, Spain",
       "Brisbane, Australia"
     ],
-    "4": []
+    "4": [
+      "Santa Rosa, Argentina"
+    ]
   },
   "Ddz1": {
     "1": [
@@ -3053,6 +3082,7 @@
   },
   "Cwa1": {
     "1": [
+      "Córdoba, Argentina",
       "Kunming, China"
     ],
     "2": [
@@ -3117,9 +3147,11 @@
   },
   "DY": {
     "1": [
+      "Chimborazo Summit, Ecuador",
       "Mount Kilimanjaro summit, Tanzania"
     ],
     "2": [
+      "Chimborazo Summit, Ecuador",
       "Mount Kilimanjaro summit, Tanzania"
     ],
     "3": [
@@ -3137,6 +3169,7 @@
       "Primavera Base, Antarctica"
     ],
     "3": [
+      "Chimborazo Summit, Ecuador",
       "Esperanza Base, Antarctica",
       "Primavera Base, Antarctica"
     ],
