@@ -6,7 +6,7 @@ from backend import climates
 
 def _domain_sort_key(code: str):
     cold_order = ['H','X','Z','A','B','C','D','E','F','G','Y']
-    arid_order = ['', 'h','g','w','m','s','d']
+    arid_order = ['', 'h','g','s','d','m','w','v']
     warm_order = ['H','X','z2','z1','z2','z1','z2','z1','z2','z1','Y']
     cold, arid, warm = climates.breakup(code)
     cold_i = cold_order.index(cold) if cold in cold_order else len(cold_order)
@@ -73,14 +73,14 @@ def generate_json() -> Dict[str, Dict[str, Any]]:
         is_group = _safe(lambda: climates.is_code_group(code), False)
 
         if is_group:
-            group_parts = _safe(lambda: climates.breakup_code_group(code), ["False"]*6)
+            group_parts = _safe(lambda: climates.breakup_code_group(code), ["False"]*7)
 
         else:
             # FIRST: try asking backend which group this climate belongs to
             parent_group = _safe(lambda: climates.get_code_group(code), None)
 
             if parent_group:
-                group_parts = _safe(lambda: climates.breakup_code_group(parent_group), ["False"]*6)
+                group_parts = _safe(lambda: climates.breakup_code_group(parent_group), ["False"]*7)
 
             else:
                 # FALLBACK: build siblings ourselves
@@ -92,10 +92,11 @@ def generate_json() -> Dict[str, Dict[str, Any]]:
                     siblings = [
                         f"{cold}h{warm}",
                         f"{cold}g{warm}",
-                        f"{cold}w{warm}",
-                        f"{cold}m{warm}",
                         f"{cold}s{warm}",
                         f"{cold}d{warm}",
+                        f"{cold}m{warm}",
+                        f"{cold}w{warm}",
+                        f"{cold}v{warm}",
                     ]
 
                     group_parts = [
@@ -103,11 +104,11 @@ def generate_json() -> Dict[str, Dict[str, Any]]:
                         for s in siblings
                     ]
                 else:
-                    group_parts = ["False"]*6
+                    group_parts = ["False"]*7
 
         # final safety net
-        if not isinstance(group_parts, (list, tuple)) or len(group_parts) != 6:
-            group_parts = ["False"]*6
+        if not isinstance(group_parts, (list, tuple)) or len(group_parts) != 7:
+            group_parts = ["False"]*7
 
         # canonicalize everything that could be a code
         hotter_summer = _canon(_safe(lambda: climates.traverse_codes(code, 'warm', -1), "False"), canon_map)
@@ -117,10 +118,11 @@ def generate_json() -> Dict[str, Dict[str, Any]]:
 
         go_to_humid         = _canon(group_parts[0], canon_map)
         go_to_semihumid     = _canon(group_parts[1], canon_map)
-        go_to_monsoon       = _canon(group_parts[2], canon_map)
-        go_to_mediterranean = _canon(group_parts[3], canon_map)
-        go_to_semiarid      = _canon(group_parts[4], canon_map)
-        go_to_arid_desert   = _canon(group_parts[5], canon_map)
+        go_to_semiarid      = _canon(group_parts[2], canon_map)
+        go_to_arid          = _canon(group_parts[3], canon_map)
+        go_to_mediterranean = _canon(group_parts[4], canon_map)
+        go_to_monsoon       = _canon(group_parts[5], canon_map)
+        go_to_semiaridmonsoon       = _canon(group_parts[6], canon_map)
 
         exists       = _safe(lambda: climates.does_exist(code), True)
         decoded_name = _safe(lambda: climates.decode(code), code)
@@ -131,12 +133,13 @@ def generate_json() -> Dict[str, Dict[str, Any]]:
             'exists': exists,
             'group': is_group,
 
-            'go_to_humid':         go_to_humid,
-            'go_to_semihumid':     go_to_semihumid,
-            'go_to_monsoon':       go_to_monsoon,
-            'go_to_mediterranean': go_to_mediterranean,
-            'go_to_semiarid':      go_to_semiarid,
-            'go_to_arid_desert':   go_to_arid_desert,
+            'go_to_humid':           go_to_humid,
+            'go_to_semihumid':       go_to_semihumid,
+            'go_to_semiarid':        go_to_semiarid,
+            'go_to_arid':            go_to_arid,
+            'go_to_mediterranean':   go_to_mediterranean,
+            'go_to_monsoon':         go_to_monsoon,
+            'go_to_semiaridmonsoon': go_to_semiaridmonsoon,
 
             'go_to_hotter_summer': hotter_summer,
             'go_to_colder_summer': colder_summer,
@@ -157,8 +160,13 @@ def generate_json() -> Dict[str, Dict[str, Any]]:
         }
 
     link_keys = (
-        "go_to_humid","go_to_semihumid","go_to_monsoon","go_to_mediterranean",
-        "go_to_semiarid","go_to_arid_desert",
+        "go_to_humid",
+        "go_to_semihumid",
+        "go_to_semiarid",
+        "go_to_arid",
+        "go_to_mediterranean",
+        "go_to_monsoon",
+        "go_to_semiaridmonsoon",
         "go_to_hotter_summer","go_to_colder_summer",
         "go_to_hotter_winter","go_to_colder_winter",
     )
@@ -174,10 +182,11 @@ def generate_json() -> Dict[str, Dict[str, Any]]:
             'group': False,
             'go_to_humid': "False",
             'go_to_semihumid': "False",
-            'go_to_monsoon': "False",
-            'go_to_mediterranean': "False",
             'go_to_semiarid': "False",
-            'go_to_arid_desert': "False",
+            'go_to_arid': "False",
+            'go_to_mediterranean': "False",
+            'go_to_monsoon': "False",
+            'go_to_semiaridmonsoon': "False",
             'go_to_hotter_summer': "False",
             'go_to_colder_summer': "False",
             'go_to_hotter_winter': "False",

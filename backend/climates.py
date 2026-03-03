@@ -27,19 +27,6 @@ codes = {
        'Cgz2', 'Cgz1', 'Cga2', 'Cga1', 'Cgb2',
                'Dgz1', 'Dga2', 'Dga1', 'Dgb2',
                'Egz1', 'Ega2', 'Ega1', 'Egb2',
-            
-'ZwX', 'Zwz2', 'Zwz1',
-'AwX', 'Awz2', 'Awz1', 'Awa2', 'Awa1',
-'BwX', 'Bwz2', 'Bwz1', 'Bwa2', 'Bwa1', 'Bwb2',
-       'Cwz2', 'Cwz1', 'Cwa2', 'Cwa1', 'Cwb2',
-               'Dwz1', 'Dwa2', 'Dwa1', 'Dwb2',
-               'Ewz1', 'Ewa2', 'Ewa1', 'Ewb2',
-
-               'Amz1', 'Ama2',
-'BmX', 'Bmz2', 'Bmz1', 'Bma2', 'Bma1', 'Bmb2',
-'CmX', 'Cmz2', 'Cmz1', 'Cma2', 'Cma1', 'Cmb2',
-               'Dmz1', 'Dma2', 'Dma1', 'Dmb2',
-                       'Ema2', 'Ema1', 'Emb2',
 
 'ZsX', 'Zsz2', 'Zsz1',
 'AsX', 'Asz2', 'Asz1', 'Asa2', 'Asa1',
@@ -54,6 +41,26 @@ codes = {
 'CdX', 'Cdz2', 'Cdz1', 'Cda2', 'Cda1', 'Cdb2',
 'DdX', 'Ddz2', 'Ddz1', 'Dda2', 'Dda1', 'Ddb2',
        'Edz2', 'Edz1', 'Eda2', 'Eda1', 'Edb2',
+
+               'Amz1', 'Ama2',
+'BmX', 'Bmz2', 'Bmz1', 'Bma2', 'Bma1', 'Bmb2',
+'CmX', 'Cmz2', 'Cmz1', 'Cma2', 'Cma1', 'Cmb2',
+               'Dmz1', 'Dma2', 'Dma1', 'Dmb2',
+                       'Ema2', 'Ema1', 'Emb2',
+            
+'ZwX', 'Zwz2', 'Zwz1',
+'AwX', 'Awz2', 'Awz1', 'Awa2', 'Awa1',
+'BwX', 'Bwz2', 'Bwz1', 'Bwa2', 'Bwa1', 'Bwb2',
+       'Cwz2', 'Cwz1', 'Cwa2', 'Cwa1', 'Cwb2',
+               'Dwz1', 'Dwa2', 'Dwa1', 'Dwb2',
+               'Ewz1', 'Ewa2', 'Ewa1', 'Ewb2',
+
+'ZvX', 'Zvz2', 'Zvz1',
+'AvX', 'Avz2', 'Avz1', 'Ava2', 'Ava1',
+'BvX', 'Bvz2', 'Bvz1', 'Bva2', 'Bva1', 'Bvb2',
+       'Cvz2', 'Cvz1', 'Cva2', 'Cva1', 'Cvb2',
+               'Dvz1', 'Dva2', 'Dva1', 'Dvb2',
+               'Evz1', 'Eva2', 'Eva1', 'Evb2',
 }
 
 code_groups = {
@@ -84,10 +91,11 @@ cold_codes = {
 arid_codes = {
     'h': 'Humid',
     'g': 'Semihumid',
-    'w': 'Monsoon',
-    'm': 'Mediterranean',
     's': 'Semiarid',
-    'd': 'Arid'
+    'd': 'Arid',
+    'm': 'Mediterranean',
+    'w': 'Monsoon',
+    'v': 'Semiarid Monsoon'
 }
 
 warm_codes = {
@@ -197,10 +205,10 @@ def breakup_code_group(code:str) -> list[str]:
         list[str]: A list of individual codes
     """
     if not is_code_group(code):
-        return ["False", "False", "False", "False", "False", "False"]
+        return ["False", "False", "False", "False", "False", "False", "False"]
     
     group:list[str] = []
-    for i in range(6):
+    for i in range(7):
         acode:str = code[0] + arid_ordered[i] + code[1:]
         if acode in codes: group.append(acode)
         else: group.append("False")

@@ -32,13 +32,14 @@
     margin-right: 1%;
   }
 
+  .cold            { background: #4444ff; }
   .humid           { background: #008800; }
   .semihumid       { background: #00ff00; }
-  .monsoon         { background: #ff00ff; }
-  .mediterranean   { background: #fff000; }
   .semiarid        { background: #ff8800; }
   .arid            { background: #ff0000; }
-  .cold            { background: #4444ff; }
+  .mediterranean   { background: #fff000; }
+  .monsoon         { background: #ff00ff; }
+  .semiaridmonsoon { background: #884400; }
 
   button:disabled {
     background: #444 !important;
@@ -217,10 +218,11 @@
             <div class="ariditybox-grid">
               <button id="climate_go_to_humid"           class="ariditybox ariditybox-humid">Humid (H)</button>
               <button id="climate_go_to_semihumid"       class="ariditybox ariditybox-semihumid">Semihumid (G)</button>
-              <button id="climate_go_to_monsoon"         class="ariditybox ariditybox-monsoon">Monsoon<br><br>(W)</button>
-              <button id="climate_go_to_mediterranean"   class="ariditybox ariditybox-mediterranean">Mediter-<br>ranean<br><br>(M)</button>
               <button id="climate_go_to_semiarid"        class="ariditybox ariditybox-semiarid">Semiarid (S)</button>
-              <button id="climate_go_to_arid_desert"     class="ariditybox ariditybox-arid-desert">Arid (D)</button>
+              <button id="climate_go_to_arid"            class="ariditybox ariditybox-arid">Arid (D)</button>
+              <button id="climate_go_to_mediterranean"   class="ariditybox ariditybox-mediterranean">Mediter-<br>ranean<br><br>(M)</button>
+              <button id="climate_go_to_monsoon"         class="ariditybox ariditybox-monsoon">Monsoon<br><br>(W)</button>
+              <button id="climate_go_to_semiaridmonsoon" class="ariditybox ariditybox-semiaridmonsoon">(V)</button>
             </div>
           </div>
         </div>
@@ -395,10 +397,11 @@
         const aridityMap = {
           h: 'humid',
           g: 'semihumid',
-          w: 'monsoon',
-          m: 'mediterranean',
           s: 'semiarid',
           d: 'arid',
+          m: 'mediterranean',
+          w: 'monsoon',
+          v: 'semiaridmonsoon',
           b: 'cold',
           c: 'cold',
           Y: 'cold'
@@ -412,10 +415,11 @@
         const currentAridityButton = {
           h: 'climate_go_to_humid',
           g: 'climate_go_to_semihumid',
-          w: 'climate_go_to_monsoon',
-          m: 'climate_go_to_mediterranean',
           s: 'climate_go_to_semiarid',
-          d: 'climate_go_to_arid_desert'
+          d: 'climate_go_to_arid',
+          m: 'climate_go_to_mediterranean',
+          w: 'climate_go_to_monsoon',
+          v: 'climate_go_to_semiaridmonsoon'
         };
 
         const btnId = currentAridityButton[aridityLetter];
@@ -523,12 +527,13 @@
 
         // Aridity buttons (H, G, W, M, S, D)
         [
-          ['climate_go_to_humid',         'go_to_humid'],
-          ['climate_go_to_semihumid',     'go_to_semihumid'],
-          ['climate_go_to_monsoon',       'go_to_monsoon'],
-          ['climate_go_to_mediterranean', 'go_to_mediterranean'],
-          ['climate_go_to_semiarid',      'go_to_semiarid'],
-          ['climate_go_to_arid_desert',   'go_to_arid_desert'],
+          ['climate_go_to_humid',           'go_to_humid'],
+          ['climate_go_to_semihumid',       'go_to_semihumid'],
+          ['climate_go_to_semiarid',        'go_to_semiarid'],
+          ['climate_go_to_arid',            'go_to_arid'],
+          ['climate_go_to_mediterranean',   'go_to_mediterranean'],
+          ['climate_go_to_monsoon',         'go_to_monsoon'],
+          ['climate_go_to_semiaridmonsoon', 'go_to_semiaridmonsoon'],
         ].forEach(([btnId, key]) => {
           const btn  = document.getElementById(btnId);
           if (!btn) return; // safety
@@ -609,11 +614,12 @@
         // Aridity chooser visibility
         const aridityTargets = [
           climate.go_to_humid, climate.go_to_semihumid,
-          climate.go_to_monsoon, climate.go_to_mediterranean,
-          climate.go_to_semiarid, climate.go_to_arid_desert
+          climate.go_to_semiarid, climate.go_to_arid,
+          climate.go_to_mediterranean,
+          climate.go_to_monsoon, climate.go_to_semiaridmonsoon
         ];
         const anyAridity = aridityTargets.some(v => v && v !== "False");
-        const aridityLetters = ['h','g','s','d','m','w'];
+        const aridityLetters = ['h','g','s','d','m','w','v'];
         document.getElementById('ariditySection').hidden =
           !(climate.exists && (climate.group || aridityLetters.includes(aridityLetter)));
 
