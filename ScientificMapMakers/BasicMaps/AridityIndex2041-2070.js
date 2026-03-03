@@ -58,9 +58,6 @@ var P_hs    = prMonthly.filter(ee.Filter.inList('month', [4,5,6,7,8,9])).sum().r
 var PET_ann = petMeanMm.multiply(12).rename('PET_ann'); // mm/year
 var AI      = P_ann.divide(PET_ann).rename('AI');
 
-// Treat masked AI (from PET mask) as ocean
-var oceanMask = AI.mask().not();
-
 var aridBase = ee.Image(1)
   .where(AI.lt(0.100), 2)
   .where(AI.lt(0.090), 3)
@@ -76,8 +73,7 @@ var aridBase = ee.Image(1)
   .rename('aridity');
 
 var clim = aridBase
-  // Oceans, then cold override (unchanged)
-  .where(oceanMask, 0)
+  .updateMask(AI.mask())   // only classify where AI exists
   .rename('climateClass');
 
 // Visualization
@@ -88,7 +84,7 @@ var codeColorMap = {
   4:  "#00FF88",
   5:  "#00DD00",
   6:  "#AAFF00",
-  7:  "#FFFF00",
+  7:  "#FFFf00",
   8:  "#FFDD00",
   9:  "#FF8800",
  10:  "#FF0000",
@@ -103,9 +99,9 @@ var indices = codes.map(function(_, i){ return i; });
 var discreteLand = clim.remap(codes, indices, -1).rename('classIndex');
 
 Map.addLayer(
-  discreteLand.updateMask(clim.neq(0)), // remove .updateMask(clim.neq(0)) to show ocean color
+  discreteLand,
   { min: 0, max: indices.length - 1, palette: palette },
-  'Climate (CHELSA, oceans included; cold wins)',
+  'Climate',
   true, 0.7
 );
 
