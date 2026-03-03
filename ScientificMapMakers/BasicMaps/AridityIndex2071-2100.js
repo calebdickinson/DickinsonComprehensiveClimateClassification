@@ -37,7 +37,7 @@ var coldestC_global = tasMonthly
 var prImgs = [];
 for (var n = 1; n <= 12; n++) {
   var nn = (n < 10 ? '0' + n : '' + n);
-  var pid = PREFIX + 'CHELSA_pr_' + nn + '_1981-2010_V2-1_u16';
+  var pid = PREFIX + 'CHELSA_ukesm1-0-ll_r1i1p1f1_w5e5_ssp585_pr_' + nn + '_2071_2100_norm';
   var pr = ee.Image(pid)
     .updateMask(ee.Image(pid).neq(NODATA_U16))
     .multiply(SCALE_PR)
