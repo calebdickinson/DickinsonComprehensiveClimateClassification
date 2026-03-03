@@ -161,6 +161,7 @@ var codeColorMap = {
   2: "#FFAA00", // S: Semiarid
   3: "#FFFF00", // M: Mediterranean
   4: "#FF00FF", // W: Monsoon
+  // In LaTeX paper, I changed semihumid hex to #88FF00 for printing reasons
   5: "#00FF00", // G: Semihumid
   6: "#008800", // H: Humid
   7: "#0000FF", // no aridity (cold)
