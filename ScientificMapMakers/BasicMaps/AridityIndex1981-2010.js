@@ -96,7 +96,9 @@ var codes   = keys.map(function(k){ return parseInt(k, 10); });
 var palette = keys.map(function(k){ return codeColorMap[k]; });
 var indices = codes.map(function(_, i){ return i; });
 
-var discreteLand = clim.remap(codes, indices, -1).rename('classIndex');
+var discreteLand = clim
+  .remap(codes, indices)
+  .rename('classIndex');
 
 Map.addLayer(
   discreteLand,
