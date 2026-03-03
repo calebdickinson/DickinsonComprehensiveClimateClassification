@@ -218,12 +218,12 @@ background: #444444 !important;
 pointer-events: none;
 cursor: default;
 }
-.box .ariditybox-arid-desert {
+.box .ariditybox-arid {
 grid-row: 4;
 grid-column: 1 / span 3;
 background: #ff0000;
 }
-.box .ariditybox-arid-desert.disabled {
+.box .ariditybox-arid.disabled {
 background: #444444 !important;
 pointer-events: none;
 cursor: default;
