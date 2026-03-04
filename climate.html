@@ -656,7 +656,7 @@
         // Non-existent page: show banner and remove optional UI
         if (!climate.exists) {
           document.getElementById('climate_exists').textContent =
-            `THIS ${climate.group ? 'CLIMATE GROUP' : 'CLIMATE'} DOES NOT EXIST`;
+            `This ${climate.group ? 'climate group' : 'climate'} does not occur in baseline or projected normals`;
           [
             'climatemedia',
             'map1','map2','map3','map4',
