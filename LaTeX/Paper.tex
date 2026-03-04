@@ -16,7 +16,6 @@
 \usetikzlibrary{positioning,arrows.meta}
 \usepackage{graphicx}
 \usepackage{placeins}
-\usepackage{array}
 
 \hypersetup{
   colorlinks=true,
@@ -45,7 +44,7 @@
 
 \section*{Abstract}
 
-This paper introduces the Dickinson Climate Classification, a taxonomy that partitions climate state space using evenly spaced thermal metrics and scale-invariant hydrological metrics rather than biological criteria. Unlike widely used frameworks such as the Köppen classification or the UNEP aridity index, which are calibrated to present-day vegetation distributions or land-degradation objectives, the Dickinson system is formulated as a taxonomic division of climates relevant to physically possible life. Cold-month and warm-month thermal zones are defined using evenly spaced climatological temperature intervals, while moisture regimes are determined exclusively by dimensionless precipitation-to–potential evapotranspiration (P/PET) ratios and precipitation seasonality metrics, ensuring invariance under uniform rescaling of hydrological fluxes. The resulting framework provides a classification applicable across paleoclimates, present-day conditions, extreme future warming scenarios, and hypothetical climate states without requiring recalibration as biological tolerances evolve. This system is particularly suited for identifying emergent climates with no modern analogues and situating Earth’s climates within a broader climate state space.
+This paper introduces the Dickinson Climate Classification, a taxonomy that partitions climate state space using evenly spaced thermal metrics and scale-invariant hydrological metrics rather than biological criteria. Unlike widely used frameworks such as the Köppen classification or the UNEP aridity index, which are calibrated to present-day vegetation distributions or land-degradation objectives, the Dickinson system is formulated as a taxonomic division of climates relevant to the persistence of life. Cold-month and warm-month thermal zones are defined using evenly spaced climatological temperature intervals, while moisture regimes are determined exclusively by dimensionless precipitation-to–potential evapotranspiration (P/PET) ratios and precipitation seasonality metrics, ensuring invariance under uniform rescaling of hydrological fluxes. The resulting framework provides a classification applicable across paleoclimates, present-day conditions, extreme future warming scenarios, and hypothetical climate states without requiring recalibration as biological tolerances evolve. This system is particularly suited for identifying emergent climates with no modern analogues and situating Earth’s climates within a broader climate state space.
 
 \section*{Document Status and Scope}
 
@@ -72,11 +71,33 @@ space as a whole. In contrast, the Dickinson classification is formulated
 as a thermodynamic partition of climate state space, independent of
 biological distributions and socioeconomic objectives.
 
-The Dickinson system conceptualizes Earth’s climates as a subset of a climate climate space. Let $\mathcal{C}$ denote the set of all climate regimes in which life is physically possible. Observed Earth climates occupy a proper subset of $\mathcal{C}$, but the classification itself is defined over the full domain. This framing does not assert that all regions of climate space described by the system are
-realizable on Earth; rather, it establishes a formal state space within
-which Earth’s past, present, and future climates may be situated,
-compared, and extended under paleoclimatic and projected boundary
-conditions.
+Let $\mathcal{C}_{\mathrm{life}}$ denote the subset of climate state space
+in which sustained climatological monthly mean temperatures are
+thermodynamically compatible with the persistence of life..
+Let $T_{\min}^{\mathrm{life,low}}$ and
+$T_{\min}^{\mathrm{life,high}}$ denote the lower and upper bounds,
+respectively, of climatological coldest-month mean temperature compatible
+with life, and let $T_{\max}^{\mathrm{life,low}}$ and
+$T_{\max}^{\mathrm{life,high}}$ denote the corresponding bounds for
+climatological warmest-month mean temperature.
+
+The Dickinson classification is defined only for climates satisfying
+\[
+T_{\min}^{\mathrm{life,low}} \le T_{\min,\mathrm{mean}}
+\le T_{\min}^{\mathrm{life,high}}, \qquad
+T_{\max}^{\mathrm{life,low}} \le T_{\max,\mathrm{mean}}
+\le T_{\max}^{\mathrm{life,high}},
+\]
+with the physical constraint $T_{\min,\mathrm{mean}} \le T_{\max,\mathrm{mean}}$.
+These thermodynamic life bounds are not estimated in this work.
+
+Note: Microbial activity has been documented in snow at the geographic
+South Pole (Carpenter et al., 2000), an environment whose
+climatological monthly mean temperatures correspond to the
+YY (superarctic with frigid summer) thermal regime in the
+Dickinson classification. This observation demonstrates that
+the coldest thermal regime defined in the system occurs within
+the domain of climates known to support microbial life.
 
 Biological tolerances are not fixed: they shift over evolutionary time as
 lineages diverge from common ancestors and adapt to changing environmental
@@ -101,8 +122,8 @@ Under strong anthropogenic warming, Earth is expected to enter climatic regimes 
 
 Additionally, the structure of this system permits higher categorical resolution than most legacy climate classification frameworks. Because thermal and hydrological categories are defined using evenly spaced physical metrics rather than empirically tuned ecological thresholds, the classification can be applied at fine spatial scales wherever reliable climatological normals are available. This property makes the framework well suited to resolving sharp climatic gradients, topographic microclimates, and human-relevant thermal regimes without requiring additional calibration or region-specific adjustment.
 
-The system is defined only over the subset of climate space in which life
-is physically possible. Outside this domain, the classification is not
+The system is defined only over the subset of climate space in which the
+persistence of life is physically possible. Outside this domain, the classification is not
 meaningful and no interpretation is implied.
 
 \begin{table}[htbp]
@@ -149,7 +170,7 @@ monthly mean near-surface air temperatures, computed over a standard
 temperature is taken as the minimum of the twelve climatological monthly
 means, while the warmest-month mean temperature is taken as the maximum.
 
-The cold-month thermal intervals are defined in uniform increments of 10 °C, with 5 °C resolution used for all but one warm-month category; the \textit{hyperthermal summer} category retains 10 °C spacing. These intervals correspond to simple fractional subdivisions of the 100 °C temperature span between the freezing and boiling points of water at standard pressure. The lowest and highest warm-month and cold-month thermal categories are unbounded. This choice provides a reproducible reference scale without implying special physical thresholds at category boundaries.
+The cold-month thermal intervals are defined in uniform increments of 10 °C, with 5 °C resolution used for all but one warm-month category; the \textit{hyperthermal summer} category retains 10 °C spacing. These intervals correspond to simple fractional subdivisions of the 100 °C temperature span between the freezing and boiling points of water at standard pressure. This choice provides a reproducible reference scale without implying special physical thresholds at category boundaries.
 
 The choice of thermal binning reflects a balance between physical
 interpretability and classification stability, with asymmetric resolution
@@ -176,7 +197,9 @@ Based on $T_{\min,\text{mean}}$, climates are assigned to one of the
 following cold-month thermal zones:
 \[
 \begin{array}{ll}
-\text{Hypercaneal (H)}        & T_{\min,\text{mean}} \ge 50^\circ\text{C} \\
+\text{Hypercaneal (H)}        &
+50^\circ\mathrm{C} \le T_{\min,\mathrm{mean}}
+\le T_{\min}^{\mathrm{life,high}} \\
 \text{Uninhabitable (X)}      & 40 \le T_{\min,\text{mean}} < 50^\circ\text{C} \\
 \text{Hyperequatorial (Z)}    & 30 \le T_{\min,\text{mean}} < 40^\circ\text{C} \\
 \text{Equatorial (A)}         & 20 \le T_{\min,\text{mean}} < 30^\circ\text{C} \\
@@ -186,7 +209,9 @@ following cold-month thermal zones:
 \text{Continental (E)}        & -20 \le T_{\min,\text{mean}} < -10^\circ\text{C} \\
 \text{Subarctic (F)}          & -30 \le T_{\min,\text{mean}} < -20^\circ\text{C} \\
 \text{Arctic (G)}             & -40 \le T_{\min,\text{mean}} < -30^\circ\text{C} \\
-\text{Superarctic (Y)}        & T_{\min,\text{mean}} < -40^\circ\text{C}
+\text{Superarctic (Y)}        &
+T_{\min}^{\mathrm{life,low}}
+\le T_{\min,\mathrm{mean}} < -40^\circ\mathrm{C}
 \end{array}
 \]
 
@@ -253,7 +278,9 @@ Based on the warmest-month mean temperature, climates are assigned to one
 of the following warm-month thermal zones:
 \[
 \begin{array}{ll}
-\text{Hypercaneal Summer (H)}      & T_{\max,\text{mean}} \ge 50^\circ\text{C} \\
+\text{Hypercaneal Summer (H)} &
+50^\circ\mathrm{C} \le T_{\max,\mathrm{mean}}
+\le T_{\max}^{\mathrm{life,high}} \\
 \text{Hyperthermal Summer (X)}     & 40 \le T_{\max,\text{mean}} < 50^\circ\text{C} \\
 \text{Scorching Summer (z2)}       & 35 \le T_{\max,\text{mean}} < 40^\circ\text{C} \\
 \text{Very Hot Summer (z1)}        & 30 \le T_{\max,\text{mean}} < 35^\circ\text{C} \\
@@ -263,7 +290,9 @@ of the following warm-month thermal zones:
 \text{Cold Summer (b1)}            & 10 \le T_{\max,\text{mean}} < 15^\circ\text{C} \\
 \text{Very Cold Summer (c2)}       & 5 \le T_{\max,\text{mean}} < 10^\circ\text{C} \\
 \text{Freezing Summer (c1)}        & 0 \le T_{\max,\text{mean}} < 5^\circ\text{C} \\
-\text{Frigid Summer (Y)}           & T_{\max,\text{mean}} < 0^\circ\text{C}
+\text{Frigid Summer (Y)} &
+T_{\max}^{\mathrm{life,low}}
+\le T_{\max,\mathrm{mean}} < 0^\circ\mathrm{C}
 \end{array}
 \]
 
@@ -621,6 +650,11 @@ Brun, P., Zimmermann, N. E., Hari, C., Pellissier, L., \& Karger, D. N. (2022).
 Global climate-related predictors at kilometre resolution for the past and future.
 \textit{Earth System Science Data}, 14, 5573--5603.
 \url{https://doi.org/10.5194/essd-14-5573-2022}
+
+Carpenter, E. J., Lin, S., \& Capone, D. G. (2000).
+Bacterial activity in South Pole snow.
+\textit{Applied and Environmental Microbiology}, 66(10), 4514--4517.
+\url{https://doi.org/10.1128/AEM.66.10.4514-4517.2000}
 
 Emanuel, K. A. (1988).
 The maximum intensity of hurricanes.
