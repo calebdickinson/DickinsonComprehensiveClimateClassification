@@ -233,6 +233,8 @@
       </div>
     </div>
 
+    <button id="go_to_group" class="hidden">climate group</button>
+
     <!-- Global maps -->
     <div id="globalSection">
       <h3 class="map-caption">Global distribution of this climate (projections are RCP8.5 high emissions normals)</h3>
@@ -389,6 +391,18 @@
         if (!climate) throw new Error(`Climate code '${codeParam}' not found in data.json`);
 
         const climate_code = climate.code; // canonical case from data.json
+
+        // --- Go to climate group button ---
+        const groupBtn = document.getElementById('go_to_group');
+        const groupLetters = ['h','g','s','d','m','w','v'];
+        const second = climate_code.charAt(1);
+        if (groupLetters.includes(second)) {
+          // remove the second character
+          const groupCode = climate_code.charAt(0) + climate_code.slice(2);
+          groupBtn.classList.remove('hidden');
+          groupBtn.onclick = () => trackAndGo("Go to Climate Group", groupCode);
+        }
+
         // add page-level hook for CSS overrides
         document.body.classList.add('climate-' + climate_code);
 
