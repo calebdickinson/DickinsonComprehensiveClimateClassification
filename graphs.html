@@ -493,7 +493,7 @@
   }
 
   const decoded = parts.map(c =>
-    `the ${boundaryText(main, c)} (<b>${main}</b> ↔ <b>${c}</b>)`
+    `the ${boundaryText(main, c)} (<b>${main}</b> &#8596;&#65038; <b>${c}</b>)`
   );
 
   return decoded.slice(0, -1).join(' and ') + ' and ' + decoded.slice(-1);
