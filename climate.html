@@ -219,10 +219,6 @@
   <main>
     <h1 id="climate_name"></h1>
 
-    <div class="climate-code">
-      <h2><strong id="climate_exists"></strong></h2>
-    </div>
-
     <div class="buttons-with-code">
       <div class="buttons-group">
         <button class="warmer" id="climate_go_to_hotter_summer">◄ Warmer Summers</button>
@@ -247,6 +243,10 @@
         <button class="colder" id="climate_go_to_colder_summer">Colder Summers ►</button>
         <button class="colder" id="climate_go_to_colder_winter">Colder Winters ►</button>
       </div>
+    </div>
+
+    <div class="climate-code">
+      <h2 id="climate_exists"></h2>
     </div>
 
     <button id="go_to_group" class="hidden">climate group</button>
@@ -656,7 +656,7 @@
         // Non-existent page: show banner and remove optional UI
         if (!climate.exists) {
           document.getElementById('climate_exists').textContent =
-            `This ${climate.group ? 'climate group' : 'climate'} does not occur in baseline or projected normals from 1981 through 2100`;
+            `This ${climate.group ? 'climate group' : 'climate'} does not occur in baseline or projected normals from 1981 to 2100`;
           [
             'climatemedia',
             'map1','map2','map3','map4',
