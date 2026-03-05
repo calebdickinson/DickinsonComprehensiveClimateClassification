@@ -36,6 +36,22 @@
     padding: 5px 5px;
   }
 
+  #toggle_units_media {
+    width: auto;
+    height: auto;
+    border-radius: 0;
+
+    text-align: center;
+    font-size: 1rem;
+    border: 2px solid black;
+    background: orange;
+    color: #000;
+
+    display: block;
+    margin: 20px auto 0 auto;
+    padding: 5px 5px;
+  }
+
   button {
     width: 12rem;
     height: 2.5rem;
@@ -282,6 +298,8 @@
     </div>
 
     <div id="climatemedia"></div>
+
+    <button id="toggle_units_media" class="hidden">Switch graphs to Celsius</button>
 
     <div id="cities">
       <div id="cities1" class="cities-block">
@@ -581,9 +599,15 @@
           .then(r => r.json())
           .then(t => {
             const m = t[climate_code]?.media;
+
             if (m) {
               const el = document.getElementById('climatemedia');
               el.innerHTML = "<br>" + m.join('') + "<br>";
+              document.getElementById('toggle_units_media').classList.remove('hidden');
+
+              // show the toggle button
+              document.getElementById('toggle_units_media')
+                .classList.remove('hidden');
             }
           });
 
@@ -666,7 +690,40 @@
           ].forEach(id => { const el = document.getElementById(id); if (el) el.remove(); });
         }
       })
+
       .catch(err => { console.error(err); alert(err.message); });
+
+      // --- Fahrenheit / Celsius toggle for climatemedia graphs ---
+      let mediaUnits = "F";
+
+      function toggleMediaUnits() {
+
+        mediaUnits = mediaUnits === "F" ? "C" : "F";
+
+        const btn = document.getElementById("toggle_units_media");
+
+        btn.textContent =
+          mediaUnits === "F"
+            ? "Switch graphs to Celsius"
+            : "Switch graphs to Fahrenheit";
+
+        document
+          .querySelectorAll("#climatemedia img")
+          .forEach(img => {
+
+            if (mediaUnits === "C") {
+              img.src = img.src.replace("-F.png", "-C.png");
+            } else {
+              img.src = img.src.replace("-C.png", "-F.png");
+            }
+
+          });
+      }
+
+      document
+        .getElementById("toggle_units_media")
+        .addEventListener("click", toggleMediaUnits);
+
   </script>
 </body>
 </html>
