@@ -207,16 +207,20 @@
   },
   "YY": {
     "1": [
-      "Concordia Station, Antarctica"
+      "Concordia Station, Antarctica",
+      "Vostok Station, Antarctica"
     ],
     "2": [
-      "Concordia Station, Antarctica"
+      "Concordia Station, Antarctica",
+      "Vostok Station, Antarctica"
     ],
     "3": [
-      "Concordia Station, Antarctica"
+      "Concordia Station, Antarctica",
+      "Vostok Station, Antarctica"
     ],
     "4": [
-      "Concordia Station, Antarctica"
+      "Concordia Station, Antarctica",
+      "Vostok Station, Antarctica"
     ]
   },
   "Cc1": {
@@ -267,13 +271,18 @@
   },
   "FY": {
     "1": [
+      "McMurdo Station, Antarctica",
       "Mount Rainier summit, Washington, United States"
     ],
-    "2": [],
+    "2": [
+      "McMurdo Station, Antarctica"
+    ],
     "3": [
+      "McMurdo Station, Antarctica",
       "Svea Station, Antarctica"
     ],
     "4": [
+      "McMurdo Station, Antarctica",
       "Svea Station, Antarctica"
     ]
   },
@@ -549,6 +558,7 @@
       "Fort-de-France, Martinique",
       "Georgetown, Guyana",
       "Havana, Cuba",
+      "Iquitos, Peru",
       "Jakarta, Indonesia",
       "Kingston, Jamaica",
       "Kinshasa, Democratic Republic of the Congo",
@@ -583,6 +593,7 @@
       "Georgetown, Guyana",
       "Havana, Cuba",
       "Hilo, Hawaii, United States",
+      "Iquitos, Peru",
       "Jakarta, Indonesia",
       "Kinshasa, Democratic Republic of the Congo",
       "Kisangani, Democratic Republic of the Congo",
@@ -631,6 +642,7 @@
       "Colombo, Sri Lanka",
       "Georgetown, Guyana",
       "Havana, Cuba",
+      "Iquitos, Peru",
       "Jakarta, Indonesia",
       "Kuala Lumpur, Malaysia",
       "Miami, Florida, United States",
@@ -656,22 +668,26 @@
       "Forks, Washington, United States",
       "La Paz, Bolivia",
       "Prince Rupert, British Columbia, Canada",
+      "Punta Arenas, Chile",
       "Stanley, Falkland Islands",
       "Tórshavn, Faroe Islands"
     ],
     "2": [
       "La Paz, Bolivia",
+      "Punta Arenas, Chile",
       "Reykjavík, Iceland",
       "Stanley, Falkland Islands",
       "Tórshavn, Faroe Islands",
       "Ushuaia, Argentina"
     ],
     "3": [
+      "Punta Arenas, Chile",
       "Stanley, Falkland Islands",
       "Tórshavn, Faroe Islands",
       "Ushuaia, Argentina"
     ],
     "4": [
+      "Punta Arenas, Chile",
       "Stanley, Falkland Islands",
       "Ushuaia, Argentina"
     ]
@@ -705,14 +721,19 @@
     "1": [
       "Banff, Alberta, Canada",
       "Bethel, Alaska, United States",
+      "Leh, Ladakh, India",
       "Murmansk, Russia",
-      "Nome, Alaska, United States"
+      "Nome, Alaska, United States",
+      "Yushu, Qinghai, China"
     ],
     "2": [
-      "Nome, Alaska, United States"
+      "Nagqu, Tibet, China",
+      "Nome, Alaska, United States",
+      "Yushu, Qinghai, China"
     ],
     "3": [
       "Iqaluit, Nunavut, Canada",
+      "Nagqu, Tibet, China",
       "Prudhoe Bay, Alaska, United States",
       "Utqiaġvik, Alaska, United States"
     ],
@@ -815,8 +836,13 @@
       "Calgary, Alberta, Canada",
       "Lhasa, Tibet, China"
     ],
-    "3": [],
-    "4": []
+    "3": [
+      "Yushu, Qinghai, China"
+    ],
+    "4": [
+      "Nagqu, Tibet, China",
+      "Yushu, Qinghai, China"
+    ]
   },
   "Dsa1": {
     "1": [
@@ -850,7 +876,9 @@
       "Calgary, Alberta, Canada",
       "Edmonton, Alberta, Canada"
     ],
-    "4": []
+    "4": [
+      "Leh, Ladakh, India"
+    ]
   },
   "Csa2": {
     "1": [
@@ -1588,6 +1616,7 @@
       "Whitehorse, Yukon, Canada"
     ],
     "2": [
+      "Leh, Ladakh, India",
       "Whitehorse, Yukon, Canada"
     ],
     "3": [],
@@ -1966,6 +1995,7 @@
       "Casablanca, Morocco",
       "Lima, Peru",
       "San Diego, California, United States",
+      "Sanaa, Yemen",
       "Windhoek, Namibia"
     ],
     "4": [
@@ -2175,6 +2205,7 @@
   "Ec2": {
     "1": [
       "Longyearbyen, Svalbard, Norway",
+      "Nagqu, Tibet, China",
       "Nuuk, Greenland"
     ],
     "2": [],
@@ -2388,13 +2419,15 @@
       "Lima, Peru",
       "Lüderitz, Namibia",
       "San Diego, California, United States",
+      "Sanaa, Yemen",
       "Windhoek, Namibia"
     ],
     "2": [
       "Antofagasta, Chile",
       "Lima, Peru",
       "Lüderitz, Namibia",
-      "San Diego, California, United States"
+      "San Diego, California, United States",
+      "Sanaa, Yemen"
     ],
     "3": [
       "Antofagasta, Chile",
@@ -2656,7 +2689,9 @@
       "Taos, New Mexico, United States"
     ],
     "2": [],
-    "3": [],
+    "3": [
+      "Leh, Ladakh, India"
+    ],
     "4": []
   },
   "Bgz2": {
@@ -2763,6 +2798,7 @@
     "4": [
       "Lima, Peru",
       "Lüderitz, Namibia",
+      "Sanaa, Yemen",
       "Santa Cruz de Tenerife, Spain"
     ]
   },
@@ -2934,6 +2970,7 @@
     "2": [],
     "3": [],
     "4": [
+      "Iquitos, Peru",
       "Juba, South Sudan",
       "Manaus, Brasil"
     ]
