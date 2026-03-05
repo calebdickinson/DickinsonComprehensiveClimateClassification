@@ -252,7 +252,7 @@
     <button id="go_to_group" class="hidden">climate group</button>
 
     <!-- Global maps -->
-    <div id="globalSection">
+    <div id="globalSection" class="hidden">
       <h3 class="map-caption">Global distribution of this climate (projections are RCP8.5 high emissions normals)</h3>
       <div class="year-row" style="text-align:center; margin:10px 0;">
         <button id="gbtn1" class="year-btn" onclick="showMapGlobal(1)">1981 - 2010</button>
@@ -267,7 +267,7 @@
     </div>
 
     <!-- USA maps -->
-    <div id="usaSection">
+    <div id="usaSection" class="hidden">
       <h3 class="map-caption">Contiguous United States distribution of this climate (projections are RCP8.5 high emissions normals)</h3>
       <div class="year-row" style="text-align:center; margin:10px 0;">
         <button id="ubtn1" class="year-btn" onclick="showMapUSA(1)">1981 - 2010</button>
@@ -613,6 +613,7 @@
           if (first === -1) {
             if (globalSection) globalSection.remove();
           } else {
+            if (globalSection) globalSection.classList.remove('hidden');
             showMapGlobal(first + 1);
           }
         });
@@ -637,6 +638,7 @@
           if (first === -1) {
             if (usaSection) usaSection.remove();
           } else {
+            if (usaSection) usaSection.classList.remove('hidden');
             showMapUSA(first + 1);
           }
         });
