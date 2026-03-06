@@ -286,6 +286,16 @@
     ]
   },
 
+  "Chz2": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img class='three' src='../graphs/St.Louis4-F.png' alt='graph of St.Louis climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Carbondale4-F.png' alt='graph of Carbondale climate in 2071-2100'>",
+      "<img class='three' src='../graphs/WashingtonDC4-F.png' alt='graph of WashingtonDC climate in 2071-2100'>"
+    ]
+  },
+
   "Bb1": {
     "media": [
       "<img src='../graphs/Quito1-F.png' alt='graph of Quito climate in 1981-2010'>",
@@ -311,6 +321,16 @@
     ]
   },
 
+  "Bhz2": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img class='three' src='../graphs/Islamabad4-F.png' alt='graph of Islamabad climate in 2071-2100'>",
+      "<img class='three' src='../graphs/LittleRock4-F.png' alt='graph of Little Rock climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Wuhan4-F.png' alt='graph of Wuhan climate in 2071-2100'>"
+    ]
+  },
+
   "Bdz2": {
     "media": [
       "<img src='../graphs/LakeHavasuCity1-F.png' alt='graph of Lake Havasu City climate in 1981-2010'>",
@@ -327,6 +347,26 @@
   "AdX": {
     "media": [
       "<img src='../graphs/Basrah4-F.png' alt='graph of Basrah climate in 2071-2100'>"
+    ]
+  },
+
+  "Zhz1": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img class='three' src='../graphs/CebuCity4-F.png' alt='graph of Cebu City climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Singapore4-F.png' alt='graph of Singapore climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Paramaribo4-F.png' alt='graph of Paramaribo climate in 2071-2100'>"
+    ]
+  },
+
+  "Zhz2": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img class='three' src='../graphs/Iquitos4-F.png' alt='graph of Iquitos climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Juba4-F.png' alt='graph of Juba climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Manaus4-F.png' alt='graph of Manaus climate in 2071-2100'>"
     ]
   }
 }

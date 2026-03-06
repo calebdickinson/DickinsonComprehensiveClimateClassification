@@ -3150,7 +3150,7 @@
     }
   },
 "38.9072, -77.0369": {
-    "city": "Washington, District of Columbia, United States",
+    "city": "Washington, D.C., United States",
     "periods": {
       "1981-2010": {
         "annual_pet_mm": "1054",
@@ -14811,7 +14811,7 @@
     }
   },
   "1.3521, 103.8198": {
-    "city": "Singapore, Singapore",
+    "city": "Singapore",
     "periods": {
       "1981-2010": {
         "annual_pet_mm": "1670",
