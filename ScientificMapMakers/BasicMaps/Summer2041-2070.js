@@ -63,7 +63,7 @@ var warmZone = classifySummer(hottestC);
 // 5) Color map & display
 var codeColorMap = {
   10:"#0000FF",// Hypercaneal Summer
-  9:"#000000", // Extreme Hyperthermal Summer
+  9:"#00FFFF", // Extreme Hyperthermal Summer
   8:"#550000", // Hyperthermal Summer
   7:"#C71585", // Scorching Hot Summer
   6:"#FF0000", // Very Hot Summer
