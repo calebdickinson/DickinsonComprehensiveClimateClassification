@@ -55,6 +55,34 @@
     ]
   },
 
+  "Ga1": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img class='three' src='../graphs/Yakutsk2-F.png' alt='graph of Yakutsk climate in 2011-2040'>",
+      "<img class='three' src='../graphs/Oymyakon3-F.png' alt='graph of Oymyakon climate in 2041-2070'>",
+      "<img class='three' src='../graphs/Verkhoyansk3-F.png' alt='graph of Verkhoyansk climate in 2041-2070'>"
+    ]
+  },
+
+  "Ga2": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img class='three' src='../graphs/Yakutsk3-F.png' alt='graph of Yakutsk climate in 2041-2070'>",
+      "<img class='three' src='../graphs/Oymyakon4-F.png' alt='graph of Oymyakon climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Verkhoyansk4-F.png' alt='graph of Verkhoyansk climate in 2071-2100'>"
+    ]
+  },
+
+  "Gz1": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img src='../graphs/Khandyga4-F.png' alt='graph of Khandyga climate in 2071-2100'>"
+    ]
+  },
+
   "FY": {
     "media": [
       "<a title='Marco Feldmann/FH Aachen, CC BY 2.0 &lt;https://creativecommons.org/licenses/by/2.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:McMurdo-Station_aus_der_Vogelperspektive_(16481391425).jpg'><img alt='McMurdo-Station aus der Vogelperspektive (16481391425)' src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/McMurdo-Station_aus_der_Vogelperspektive_%2816481391425%29.jpg/2048px-McMurdo-Station_aus_der_Vogelperspektive_%2816481391425%29.jpg?20170427071329'></a>",
@@ -68,8 +96,18 @@
     ]
   },
 
+  "Fa2": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img src='../graphs/Kustur4-F.png' alt='graph of Kustur climate in 2071-2100'>"
+    ]
+  },
+
   "Fz1": {
     "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
       "<img src='../graphs/Yakutsk4-F.png' alt='graph of Yakutsk climate in 2071-2100'>"
     ]
   },
@@ -128,6 +166,8 @@
       "<br><br>",
       "<a title='Sturlast~iswiki, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://upload.wikimedia.org/wikipedia/commons/8/88/%C3%8Dsafj%C3%B6r%C3%B0ur_12_June_2019.jpg'><img alt='Town of Ísafjörður, seen from the top of Kubbi mountain.' src='https://upload.wikimedia.org/wikipedia/commons/8/88/%C3%8Dsafj%C3%B6r%C3%B0ur_12_June_2019.jpg'></a>",
       "<a href='https://commons.wikimedia.org/wiki/File:%C3%8Dsafj%C3%B6r%C3%B0ur_12_June_2019.jpg'>Sturlast~iswiki</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/hqKS8588iSc?si=8czyGSUNECw2RWtI' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
       "<br><br>",
       "<img class='three' src='../graphs/St.Paul1-F.png' alt='graph of St. Paul climate in 1981-2010'>",
       "<img class='three' src='../graphs/Ísafjörður1-F.png' alt='graph of Ísafjörður climate in 1981-2010'>",
