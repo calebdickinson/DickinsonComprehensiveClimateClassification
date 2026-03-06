@@ -37,7 +37,7 @@
     "media": [
       "<p>No images or videos are available for this climate.</p>",
       "<br>",
-      "<img src='../graphs/Khandyga2-F.png' alt='graph of Khandyga climate in 1981-2010'>"
+      "<img src='../graphs/Khandyga2-F.png' alt='graph of Khandyga climate in 2011-2040'>"
     ]
   },
 
@@ -49,9 +49,9 @@
       "<br><br>",
       "<iframe width='1280' height='720' src='https://www.youtube.com/embed/A-iVxaFhr7s?si=FqISXApDyTO0mgH8' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
       "<br><br>",
-      "<img class='three' src='../graphs/SummitStation1-F.png' alt='graph of Summit Station climate in 1981-2010'>",
+      "<img class='three' src='../graphs/SveaStation1-F.png' alt='graph of Svea Station climate in 1981-2010'>",
       "<img class='three' src='../graphs/MountEverest1-F.png' alt='graph of Mount Everest climate in 1981-2010'>",
-      "<img class='three' src='../graphs/SveaStation1-F.png' alt='graph of Svea Station climate in 1981-2010'>"
+      "<img class='three' src='../graphs/MountEverest4-F.png' alt='graph of Mount Everest climate in 2071-2100'>"
     ]
   },
 
@@ -62,8 +62,9 @@
       "<br><br>",
       "<iframe width='1280' height='720' src='https://www.youtube.com/embed/qz2SeEzxMuE?si=rSdj2JY2AuHk2mXx' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
       "<br><br>",
-      "<img src='../graphs/McMurdoStation1-F.png' alt='graph of McMurdo Station climate in 1981-2010'>",
-      "<img src='../graphs/MountRainer1-F.png' alt='graph of Mount Rainer climate in 1981-2010'>"
+      "<img class='three' src='../graphs/MountRainier1-F.png' alt='graph of Mount Rainer climate in 1981-2010'>",
+      "<img class='three' src='../graphs/McMurdoStation1-F.png' alt='graph of McMurdo Station climate in 1981-2010'>",
+      "<img class='three' src='../graphs/SveaStation4-F.png' alt='graph of Svea Station climate in 2071-2100'>"
     ]
   },
 
@@ -109,12 +110,28 @@
       "<a title='Rob Oo from NL, CC BY 2.0 &lt;https://creativecommons.org/licenses/by/2.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Stranded_(31909462331).jpg'><img alt='Stranded (31909462331)' src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Stranded_%2831909462331%29.jpg/2048px-Stranded_%2831909462331%29.jpg?20201212165101'></a>",
       "<a href='https://commons.wikimedia.org/wiki/File:Stranded_(31909462331).jpg'>Rob Oo from NL</a>, <a href='https://creativecommons.org/licenses/by/2.0'>CC BY 2.0</a>, via Wikimedia Commons",
       "<br><br>",
-      "<a title='Rob Oo from NL, CC BY 2.0 &lt;https://creativecommons.org/licenses/by/2.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Mossy_(31934018615).jpg'><img alt='Mossy (31934018615)' src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Mossy_%2831934018615%29.jpg/2048px-Mossy_%2831934018615%29.jpg?20201212165033'></a>",
-      "<a href='https://commons.wikimedia.org/wiki/File:Mossy_(31934018615).jpg'>Rob Oo from NL</a>, <a href='https://creativecommons.org/licenses/by/2.0'>CC BY 2.0</a>, via Wikimedia Commons",
+      "<a title='Miguel Angel Otero Soliño, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Base_Primavera_Foto_Miguel_Angel_Otero_Soli%C3%B1o.JPG'><img alt='Base Primavera Foto Miguel Angel Otero Soliño' src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Base_Primavera_Foto_Miguel_Angel_Otero_Soli%C3%B1o.JPG/2048px-Base_Primavera_Foto_Miguel_Angel_Otero_Soli%C3%B1o.JPG?_=20120919171848'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Base_Primavera_Foto_Miguel_Angel_Otero_Soli%C3%B1o.JPG'>Miguel Angel Otero Soliño</a>, <a href='https://creativecommons.org/licenses/by-sa/3.0'>CC BY-SA 3.0</a>, via Wikimedia Commons",
       "<br><br>",
       "<iframe width='1280' height='720' src='https://www.youtube.com/embed/sjHrFHLdx9Y?si=3xJpLwZHI60fwQi2' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
       "<br><br>",
-      "<img src='../graphs/KingEdwardPoint1-F.png' alt='graph of King Edward Point climate in 1981-2010'>"
+      "<img class='three' src='../graphs/BirdIslandStation1-F.png' alt='graph of Bird Island Station climate in 1981-2010'>",
+      "<img class='three' src='../graphs/PrimaveraBase1-F.png' alt='graph of Primavera Base climate in 1981-2010'>",
+      "<img class='three' src='../graphs/EsperanzaBase4-F.png' alt='graph of Esperanza Base climate in 2071-2100'>"
+    ]
+  },
+
+  "Dc2": {
+    "media":[
+      "<a title='National Archives at College Park - Still Pictures, Public domain, via Wikimedia Commons' href='https://upload.wikimedia.org/wikipedia/commons/5/5d/Birds--St._George_-_DPLA_-_4b46a72b4899db102c2a85468f0a56ee.JPG'><img alt='Birds--St. George - DPLA - 4b46a72b4899db102c2a85468f0a56ee' src='https://upload.wikimedia.org/wikipedia/commons/5/5d/Birds--St._George_-_DPLA_-_4b46a72b4899db102c2a85468f0a56ee.JPG'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Birds--St._George_-_DPLA_-_4b46a72b4899db102c2a85468f0a56ee.JPG'>National Archives at College Park - Still Pictures</a>, Public domain, via Wikimedia Commons",
+      "<br><br>",
+      "<a title='Sturlast~iswiki, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://upload.wikimedia.org/wikipedia/commons/8/88/%C3%8Dsafj%C3%B6r%C3%B0ur_12_June_2019.jpg'><img alt='Town of Ísafjörður, seen from the top of Kubbi mountain.' src='https://upload.wikimedia.org/wikipedia/commons/8/88/%C3%8Dsafj%C3%B6r%C3%B0ur_12_June_2019.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:%C3%8Dsafj%C3%B6r%C3%B0ur_12_June_2019.jpg'>Sturlast~iswiki</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<img class='three' src='../graphs/St.Paul1-F.png' alt='graph of St. Paul climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Ísafjörður1-F.png' alt='graph of Ísafjörður climate in 1981-2010'>",
+      "<img class='three' src='../graphs/PrimaveraBase4-F.png' alt='graph of Primavera Base climate in 2071-2100'>"
     ]
   },
 
@@ -164,23 +181,25 @@
      "<br>",
      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/I89I1AkWUkk?si=A5eumvXHNNyH8AEc' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
      "<br><br>",
-     "<img src='../graphs/HeardIsland1-F.png' alt='graph of Heard Island climate in 1981-2010'>",
-     "<img src='../graphs/HeardIsland2-F.png' alt='graph of Heard Island climate in 2011-2040'>",
-     "<img src='../graphs/Chimborazo4-F.png' alt='graph of Heard Island climate in 2071-2100'>"
+     "<img class='three' src='../graphs/HeardIsland1-F.png' alt='graph of Heard Island climate in 1981-2010'>",
+     "<img class='three' src='../graphs/HeardIsland2-F.png' alt='graph of Heard Island climate in 2011-2040'>",
+     "<img class='three' src='../graphs/Chimborazo4-F.png' alt='graph of Heard Island climate in 2071-2100'>"
    ]
   },
 
   "Cc2": {
     "media": [
-      "<a title='Hullwarren, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:MacquarieIslandGreenGORGE.JPG'><img alt='MacquarieIslandGreenGORGE' src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/MacquarieIslandGreenGORGE.JPG/1024px-MacquarieIslandGreenGORGE.JPG?20090704122727'></a>",
+      "<a title='Hullwarren, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons' href='https://upload.wikimedia.org/wikipedia/commons/6/6d/MacquarieIslandGreenGORGE.JPG'><img alt='MacquarieIslandGreenGORGE' src='https://upload.wikimedia.org/wikipedia/commons/6/6d/MacquarieIslandGreenGORGE.JPG'></a>",
       "<a href='https://commons.wikimedia.org/wiki/File:MacquarieIslandGreenGORGE.JPG'>Hullwarren</a>, <a href='https://creativecommons.org/licenses/by-sa/3.0'>CC BY-SA 3.0</a>, via Wikimedia Commons",
       "<br><br>",
-      "<a title='Hullwarren, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:MacquarieIslandElephantSeal.JPG'><img alt='MacquarieIslandElephantSeal' src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/MacquarieIslandElephantSeal.JPG/1024px-MacquarieIslandElephantSeal.JPG?20090627124113'></a>",
+      "<a title='Hullwarren, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons' href='https://upload.wikimedia.org/wikipedia/commons/5/59/MacquarieIslandElephantSeal.JPG'><img alt='MacquarieIslandElephantSeal' src='https://upload.wikimedia.org/wikipedia/commons/5/59/MacquarieIslandElephantSeal.JPG'></a>",
       "<a href='https://commons.wikimedia.org/wiki/File:MacquarieIslandElephantSeal.JPG'>Hullwarren</a>, <a href='https://creativecommons.org/licenses/by-sa/3.0'>CC BY-SA 3.0</a>, via Wikimedia Commons",
       "<br><br>",
       "<iframe width='1280' height='720' src='https://www.youtube.com/embed/yvyf4LQjn6o?si=57K3WVWdv_qhmasZ' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
       "<br><br>",
-      "<img src='../graphs/MacquarieIslandStation1-F.png' alt='graph of Macquarie Island climate in 1981-2010'>"
+      "<img class='three' src='../graphs/MacquarieIslandStation1-F.png' alt='graph of Macquarie Island climate in 1981-2010'>",
+      "<img class='three' src='../graphs/HeardIsland4-F.png' alt='graph of Heard Island climate in 2071-2100'>",
+      "<img class='three' src='../graphs/BirdIslandStation4-F.png' alt='graph of Bird Island Station climate in 2071-2100'>"
     ]
   },
 

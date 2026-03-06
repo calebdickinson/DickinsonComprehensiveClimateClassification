@@ -232,7 +232,7 @@
     ],
     "3": [],
     "4": [
-      "Chimborazo Summit, Ecuador"
+      "Chimborazo summit, Ecuador"
     ]
   },
   "Cc2": {
@@ -243,12 +243,12 @@
       "Macquarie Island Station, Australia"
     ],
     "3": [
-      "Bird Island Research Station, South Georgia",
+      "Bird Island Station, South Georgia",
       "Heard Island (Atlas Cove Station), Antarctica",
       "Macquarie Island Station, Australia"
     ],
     "4": [
-      "Bird Island Research Station, South Georgia",
+      "Bird Island Station, South Georgia",
       "Heard Island (Atlas Cove Station), Antarctica",
       "Macquarie Island Station, Australia"
     ]
@@ -325,6 +325,7 @@
       "Lafayette, Louisiana, United States",
       "Mobile, Alabama, United States",
       "New Orleans, Louisiana, United States",
+      "Santa Cruz de la Sierra, Bolivia",
       "Savannah, Georgia, United States",
       "Taipei, Taiwan",
       "Tallahassee, Florida, United States",
@@ -609,6 +610,7 @@
       "Rio de Janeiro, Brazil",
       "Salvador, Brasil",
       "San Juan, Puerto Rico",
+      "Santa Cruz de la Sierra, Bolivia",
       "Singapore, Singapore",
       "Yaoundé, Cameroon"
     ],
@@ -648,6 +650,7 @@
       "Miami, Florida, United States",
       "Paramaribo, Suriname",
       "Recife, Brasil",
+      "Santa Cruz de la Sierra, Bolivia",
       "Singapore, Singapore"
     ],
     "4": [
@@ -676,15 +679,18 @@
       "La Paz, Bolivia",
       "Punta Arenas, Chile",
       "Reykjavík, Iceland",
+      "St. Paul, Alaska, United States",
       "Stanley, Falkland Islands",
       "Tórshavn, Faroe Islands",
       "Ushuaia, Argentina"
     ],
     "3": [
       "Punta Arenas, Chile",
+      "St. Paul, Alaska, United States",
       "Stanley, Falkland Islands",
       "Tórshavn, Faroe Islands",
-      "Ushuaia, Argentina"
+      "Ushuaia, Argentina",
+      "Ísafjörður, Iceland"
     ],
     "4": [
       "Punta Arenas, Chile",
@@ -1608,7 +1614,9 @@
     "4": [
       "Longyearbyen, Svalbard, Norway",
       "Reykjavík, Iceland",
-      "Tórshavn, Faroe Islands"
+      "St. Paul, Alaska, United States",
+      "Tórshavn, Faroe Islands",
+      "Ísafjörður, Iceland"
     ]
   },
   "Esb2": {
@@ -2217,7 +2225,10 @@
     ]
   },
   "Dc2": {
-    "1": [],
+    "1": [
+      "St. Paul, Alaska, United States",
+      "Ísafjörður, Iceland"
+    ],
     "2": [
       "Longyearbyen, Svalbard, Norway",
       "Nuuk, Greenland"
@@ -2239,7 +2250,9 @@
       "Ushuaia, Argentina",
       "Valdez, Alaska, United States"
     ],
-    "2": [],
+    "2": [
+      "Ísafjörður, Iceland"
+    ],
     "3": [
       "Longyearbyen, Svalbard, Norway",
       "Nuuk, Greenland"
@@ -2897,6 +2910,7 @@
   },
   "Yb2": {
     "1": [
+      "Khandyga, Russia",
       "Oymyakon, Russia",
       "Verkhoyansk, Russia"
     ],
@@ -2913,6 +2927,7 @@
       "Yakutsk, Russia"
     ],
     "3": [
+      "Kustur, Russia",
       "Oymyakon, Russia",
       "Verkhoyansk, Russia"
     ],
@@ -2922,6 +2937,7 @@
     "1": [],
     "2": [],
     "3": [
+      "Khandyga, Russia",
       "Yakutsk, Russia"
     ],
     "4": [
@@ -3184,11 +3200,11 @@
   },
   "DY": {
     "1": [
-      "Chimborazo Summit, Ecuador",
+      "Chimborazo summit, Ecuador",
       "Mount Kilimanjaro summit, Tanzania"
     ],
     "2": [
-      "Chimborazo Summit, Ecuador",
+      "Chimborazo summit, Ecuador",
       "Mount Kilimanjaro summit, Tanzania"
     ],
     "3": [
@@ -3198,15 +3214,15 @@
   },
   "Dc1": {
     "1": [
-      "Bird Island Research Station, South Georgia",
+      "Bird Island Station, South Georgia",
       "Primavera Base, Antarctica"
     ],
     "2": [
-      "Bird Island Research Station, South Georgia",
+      "Bird Island Station, South Georgia",
       "Primavera Base, Antarctica"
     ],
     "3": [
-      "Chimborazo Summit, Ecuador",
+      "Chimborazo summit, Ecuador",
       "Esperanza Base, Antarctica",
       "Primavera Base, Antarctica"
     ],
@@ -3295,7 +3311,9 @@
     "1": [
       "Yakutsk, Russia"
     ],
-    "2": [],
+    "2": [
+      "Kustur, Russia"
+    ],
     "3": [],
     "4": []
   },
@@ -3305,6 +3323,46 @@
     "3": [],
     "4": [
       "Yakutsk, Russia"
+    ]
+  },
+  "Agz2": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [
+      "Santa Cruz de la Sierra, Bolivia"
+    ]
+  },
+  "Yb1": {
+    "1": [
+      "Kustur, Russia"
+    ],
+    "2": [],
+    "3": [],
+    "4": []
+  },
+  "Fa2": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [
+      "Kustur, Russia"
+    ]
+  },
+  "Ya1": {
+    "1": [],
+    "2": [
+      "Khandyga, Russia"
+    ],
+    "3": [],
+    "4": []
+  },
+  "Gz1": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [
+      "Khandyga, Russia"
     ]
   }
 }
