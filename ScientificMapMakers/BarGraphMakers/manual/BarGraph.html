@@ -107,48 +107,47 @@
 
   <script>
     var locationName =
-    'Nuuk, Greenland';
+    'Kustur, Russia';
     
     // ============================
     // EARTH ENGINE OUTPUT
     // ============================
     
-    var period = '2071-2100';
-    var dickinson= 'Dhb2';
-    var dickinson_bordering = 'Dhb1 Db2';
-    var koppen = 'Dfb';
-    var koppen_bordering = 'none';
-    p_pet = '1.80';
-    p_pet_unrounded = '1.796';
-    annual_pet_mm = '698';
-    const rawLines = `
-      1.0: 26 19 2.4
-      2.0: 29 21 3.2
-      3.0: 32 25 2.9
-      4.0: 39 34 2.4
-      5.0: 48 40 3.9
-      6.0: 62 51 4.6
-      7.0: 65 55 5.9
-      8.0: 63 54 7.6
-      9.0: 57 49 5.8
-      10.0: 46 40 3.7
-      11.0: 35 28 3.5
-      12.0: 30 22 3.4
-      1.0: -3 -7 62
-      2.0: -2 -6 81
-      3.0: 0 -4 72
-      4.0: 4 1 60
-      5.0: 9 4 100
-      6.0: 17 10 117
-      7.0: 19 13 151
-      8.0: 17 12 194
-      9.0: 14 9 147
-      10.0: 8 5 95
-      11.0: 2 -2 89
-      12.0: -1 -5 85
-    `;
+      var period = '1981-2010';
+  var dickinson= 'Yb1';
+  var dickinson_bordering = 'Yb2 Ygb1';
+  var koppen = 'Dfd';
+  var koppen_bordering = 'Dsd Dwd';
+  p_pet = '0.65';
+  p_pet_unrounded = '0.648';
+  annual_pet_mm = '382';
+  const rawLines = `
+    1.0: -35 -45 0.3
+    2.0: -27 -41 0.3
+    3.0: -5 -27 0.3
+    4.0: 19 -4 0.3
+    5.0: 39 22 0.8
+    6.0: 59 43 1.5
+    7.0: 65 49 1.7
+    8.0: 58 43 2.0
+    9.0: 41 28 1.0
+    10.0: 11 -2 0.6
+    11.0: -20 -31 0.5
+    12.0: -32 -43 0.4
+    1.0: -37 -43 8
+    2.0: -33 -41 7
+    3.0: -20 -33 6
+    4.0: -7 -20 7
+    5.0: 4 -6 21
+    6.0: 15 6 39
+    7.0: 19 10 44
+    8.0: 14 6 50
+    9.0: 5 -2 26
+    10.0: -11 -19 15
+    11.0: -29 -35 14
+    12.0: -35 -41 10
+  `;
 
-    
     const months = ['J','F','M','A','M','J','J','A','S','O','N','D'];
 
     const highsF = [], lowsF = [], precipIn = [];
@@ -555,6 +554,7 @@
       // Weird edge case fix (I will keep adding these until I see the pattern)
       // --------------------------------
       if (has('EY') && has('FhY')) {if (dickinson === 'FY') return 'EY';}
+      if (has('Yb2') && has('Ygb1')) {if (dickinson === 'Yb1') return 'Yb2';}
 
       return str;
     }

@@ -12,16 +12,32 @@
       "<img src='../graphs/VostokStation1-F.png' alt='graph of Vostok Station climate in 1981-2010'>"
     ]
   },
+
+  "Yb1": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img src='../graphs/Kustur1-F.png' alt='graph of Kustur climate in 1981-2010'>"
+    ]
+  },
     
   "Yb2": {
     "media": [
-      "<a title='Maarten Takens, CC BY-SA 2.0 &lt;https://creativecommons.org/licenses/by-sa/2.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Oymyakon_forests.jpg'><img alt='Oymyakon forests' src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Oymyakon_forests.jpg/1024px-Oymyakon_forests.jpg?20140915211437'></a>",
+      "<a title='Maarten Takens, CC BY-SA 2.0 &lt;https://creativecommons.org/licenses/by-sa/2.0&gt;, via Wikimedia Commons' href='https://upload.wikimedia.org/wikipedia/commons/a/a6/Oymyakon_forests.jpg'><img alt='Oymyakon forests' src='https://upload.wikimedia.org/wikipedia/commons/a/a6/Oymyakon_forests.jpg'></a>",
       "<a href='https://commons.wikimedia.org/wiki/File:Oymyakon_forests.jpg'>Maarten Takens</a>, <a href='https://creativecommons.org/licenses/by-sa/2.0'>CC BY-SA 2.0</a>, via Wikimedia Commons",
       "<br><br>",
       "<iframe width='1280' height='720' src='https://www.youtube.com/embed/w6fyb46Z-SM?si=w10mR3gQruKTgh2V' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
       "<br><br>",
       "<img src='../graphs/Oymyakon1-F.png' alt='graph of Oymyakon climate in 1981-2010'>",
       "<img src='../graphs/Verkhoyansk1-F.png' alt='graph of Verkhoyansk climate in 1981-2010'>"
+    ]
+  },
+
+  "Ya1": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img src='../graphs/Khandyga2-F.png' alt='graph of Khandyga climate in 1981-2010'>"
     ]
   },
 
@@ -144,11 +160,13 @@
 
   "Cc1": {
    "media": [
-     "<p>Cc1 is a very rare, almost theoretical climate that typically occurs near the boundary with another climate category. It is found on Heard Island in the coastal, mossy areas, bordering the Dc1 climate.</p>",
+     "<p>Cc1 is a very rare, almost theoretical climate that typically occurs near the boundary with another climate category. It is found on Heard Island in the coastal, mossy areas, bordering the Dc1 climate. The inside of a typical refrigerator could technically be said to have a Cc1 microclimate.</p>",
      "<br>",
      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/I89I1AkWUkk?si=A5eumvXHNNyH8AEc' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
      "<br><br>",
-     "<img src='../graphs/HeardIsland1-F.png' alt='graph of Heard Island climate in 1981-2010'>"
+     "<img src='../graphs/HeardIsland1-F.png' alt='graph of Heard Island climate in 1981-2010'>",
+     "<img src='../graphs/HeardIsland2-F.png' alt='graph of Heard Island climate in 2011-2040'>",
+     "<img src='../graphs/Chimborazo4-F.png' alt='graph of Heard Island climate in 2071-2100'>"
    ]
   },
 
