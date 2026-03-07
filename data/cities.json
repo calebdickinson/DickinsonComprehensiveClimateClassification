@@ -578,7 +578,7 @@
       "Saint-Leu, Réunion, France",
       "Salvador, Brasil",
       "San Juan, Puerto Rico",
-      "Singapore, Singapore"
+      "Singapore"
     ],
     "2": [
       "Abidjan, Côte d’Ivoire",
@@ -611,7 +611,7 @@
       "Salvador, Brasil",
       "San Juan, Puerto Rico",
       "Santa Cruz de la Sierra, Bolivia",
-      "Singapore, Singapore",
+      "Singapore",
       "Yaoundé, Cameroon"
     ],
     "3": [
@@ -651,7 +651,7 @@
       "Paramaribo, Suriname",
       "Recife, Brasil",
       "Santa Cruz de la Sierra, Bolivia",
-      "Singapore, Singapore"
+      "Singapore"
     ],
     "4": [
       "Abidjan, Côte d’Ivoire",
@@ -797,6 +797,7 @@
     "2": [
       "Billings, Montana, United States",
       "Casper, Wyoming, United States",
+      "Glasgow, Montana, United States",
       "Great Falls, Montana, United States",
       "Miles City, Montana, United States",
       "Missoula, Montana, United States",
@@ -858,6 +859,7 @@
       "Denver, Colorado, United States",
       "Dickinson, North Dakota, United States",
       "Flagstaff, Arizona, United States",
+      "Glasgow, Montana, United States",
       "Great Falls, Montana, United States",
       "Kamloops, British Columbia, Canada",
       "Medicine Hat, Alberta, Canada",
@@ -1100,7 +1102,7 @@
       "Tokyo, Japan",
       "Tulsa, Oklahoma, United States",
       "Virginia Beach, Virginia, United States",
-      "Washington, District of Columbia, United States",
+      "Washington, D.C., United States",
       "Wichita, Kansas, United States",
       "Wuhan, China"
     ],
@@ -1132,7 +1134,7 @@
       "Topeka, Kansas, United States",
       "Venice, Italy",
       "Virginia Beach, Virginia, United States",
-      "Washington, District of Columbia, United States"
+      "Washington, D.C., United States"
     ],
     "3": [
       "Asheville, North Carolina, United States",
@@ -1329,7 +1331,7 @@
       "Tulsa, Oklahoma, United States",
       "Venice, Italy",
       "Virginia Beach, Virginia, United States",
-      "Washington, District of Columbia, United States"
+      "Washington, D.C., United States"
     ],
     "4": [
       "Almaty, Kazakhstan",
@@ -2167,7 +2169,8 @@
     "1": [
       "Athens, Greece",
       "Dushanbe, Tajikistan",
-      "Madrid, Spain"
+      "Madrid, Spain",
+      "Shiraz, Iran"
     ],
     "2": [
       "Boise, Idaho, United States",
@@ -2197,15 +2200,21 @@
     ]
   },
   "Bmz2": {
-    "1": [],
-    "2": [],
+    "1": [
+      "Dezful, Iran"
+    ],
+    "2": [
+      "Dezful, Iran"
+    ],
     "3": [
+      "Erbil, Iraq",
       "St. George, Utah, United States"
     ],
     "4": [
       "Antalya, Türkiye",
       "Athens, Greece",
       "Fresno, California, United States",
+      "Shiraz, Iran",
       "St. George, Utah, United States",
       "Valencia, Spain"
     ]
@@ -2326,7 +2335,7 @@
       "Carbondale, Illinois, United States",
       "Louisville, Kentucky, United States",
       "St. Louis, Missouri, United States",
-      "Washington, District of Columbia, United States"
+      "Washington, D.C., United States"
     ]
   },
   "BdX": {
@@ -2371,7 +2380,9 @@
     "4": []
   },
   "Bgz1": {
-    "1": [],
+    "1": [
+      "Hafizabad, Punjab, Pakistan"
+    ],
     "2": [
       "Austin, Texas, United States",
       "Dallas, Texas, United States",
@@ -2415,12 +2426,14 @@
       "Damascus, Syria",
       "Fresno, California, United States",
       "Las Cruces, New Mexico, United States",
-      "Pecos, Texas, United States"
+      "Pecos, Texas, United States",
+      "Richland, Washington, United States"
     ],
     "2": [
       "Baku, Azerbaijan",
       "Damascus, Syria",
       "Grand Junction, Colorado, United States",
+      "Richland, Washington, United States",
       "Twin Falls, Idaho, United States",
       "Yakima, Washington, United States"
     ],
@@ -2548,6 +2561,7 @@
     "2": [
       "Ashgabat, Turkmenistan",
       "Carlsbad, New Mexico, United States",
+      "Darvaza gas crater, Turkmenistan",
       "Las Cruces, New Mexico, United States",
       "St. George, Utah, United States"
     ],
@@ -2558,6 +2572,7 @@
       "Hotan, China",
       "Pocatello, Idaho, United States",
       "Reno, Nevada, United States",
+      "Richland, Washington, United States",
       "Twin Falls, Idaho, United States",
       "Yakima, Washington, United States"
     ],
@@ -2568,7 +2583,8 @@
   },
   "Dma2": {
     "1": [
-      "Boise, Idaho, United States"
+      "Boise, Idaho, United States",
+      "Weiser, Idaho, United States"
     ],
     "2": [
       "Kabul, Afghanistan"
@@ -2577,14 +2593,20 @@
     "4": []
   },
   "Cmz1": {
-    "1": [],
-    "2": [],
+    "1": [
+      "Erbil, Iraq"
+    ],
+    "2": [
+      "Shiraz, Iran",
+      "Weiser, Idaho, United States"
+    ],
     "3": [
       "Boise, Idaho, United States",
       "Dushanbe, Tajikistan",
       "Madrid, Spain",
       "Pendleton, Oregon, United States",
       "Provo, Utah, United States",
+      "Shiraz, Iran",
       "Spokane, Washington, United States",
       "Tirana, Albania"
     ],
@@ -2597,8 +2619,12 @@
   },
   "Cmz2": {
     "1": [],
-    "2": [],
-    "3": [],
+    "2": [
+      "Erbil, Iraq"
+    ],
+    "3": [
+      "Weiser, Idaho, United States"
+    ],
     "4": [
       "Boise, Idaho, United States",
       "Dushanbe, Tajikistan",
@@ -2624,12 +2650,14 @@
       "Yazd, Iran"
     ],
     "3": [
-      "Ashgabat, Turkmenistan"
+      "Ashgabat, Turkmenistan",
+      "Darvaza gas crater, Turkmenistan"
     ],
     "4": [
       "Elko, Nevada, United States",
       "Hotan, China",
       "Miles City, Montana, United States",
+      "Richland, Washington, United States",
       "Twin Falls, Idaho, United States",
       "Yakima, Washington, United States"
     ]
@@ -2709,8 +2737,12 @@
   },
   "Bgz2": {
     "1": [],
-    "2": [],
-    "3": [],
+    "2": [
+      "Hafizabad, Punjab, Pakistan"
+    ],
+    "3": [
+      "Hafizabad, Punjab, Pakistan"
+    ],
     "4": [
       "Austin, Texas, United States",
       "Dallas, Texas, United States",
@@ -2752,6 +2784,7 @@
   },
   "Ddz1": {
     "1": [
+      "Darvaza gas crater, Turkmenistan",
       "Turpan, China"
     ],
     "2": [
@@ -2759,6 +2792,7 @@
     ],
     "3": [
       "Casper, Wyoming, United States",
+      "Glasgow, Montana, United States",
       "Hami, China"
     ],
     "4": []
@@ -2978,7 +3012,7 @@
       "Kuala Lumpur, Malaysia",
       "Mbuji-Mayi, Democratic Republic of the Congo",
       "Paramaribo, Suriname",
-      "Singapore, Singapore"
+      "Singapore"
     ]
   },
   "Zhz2": {
@@ -3248,7 +3282,9 @@
       "Turpan, China"
     ],
     "4": [
-      "Hami, China"
+      "Glasgow, Montana, United States",
+      "Hami, China",
+      "Karamay, China"
     ]
   },
   "CdX": {
@@ -3256,6 +3292,7 @@
     "2": [],
     "3": [],
     "4": [
+      "Darvaza gas crater, Turkmenistan",
       "Turpan, China"
     ]
   },
@@ -3363,6 +3400,51 @@
     "3": [],
     "4": [
       "Khandyga, Russia"
+    ]
+  },
+  "BgX": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [
+      "Hafizabad, Punjab, Pakistan"
+    ]
+  },
+  "Eda2": {
+    "1": [
+      "Karamay, China"
+    ],
+    "2": [],
+    "3": [],
+    "4": []
+  },
+  "Edz1": {
+    "1": [],
+    "2": [
+      "Karamay, China"
+    ],
+    "3": [
+      "Karamay, China"
+    ],
+    "4": []
+  },
+  "BmX": {
+    "1": [],
+    "2": [],
+    "3": [
+      "Dezful, Iran"
+    ],
+    "4": [
+      "Dezful, Iran",
+      "Erbil, Iraq"
+    ]
+  },
+  "CmX": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [
+      "Weiser, Idaho, United States"
     ]
   }
 }

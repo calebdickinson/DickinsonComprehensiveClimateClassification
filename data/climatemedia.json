@@ -139,7 +139,6 @@
     ]
   },
 
-
   "DY": {
     "media": [
       "<p>The summit of <a href='https://en.wikipedia.org/wiki/Chimborazo' target='_blank'>Chimborazo</a> has a DY climate.</p><br>",
@@ -223,6 +222,20 @@
     ]
   },
 
+  "Dsz2": {
+    "unitsToggle": false,
+    "media": [
+      "<p>No images, videos, or graphs are available for this climate.</p>"
+    ]
+  },
+
+  "DdX": {
+    "unitsToggle": false,
+    "media": [
+      "<p>No images, videos, or graphs are available for this climate.</p>"
+    ]
+  },
+
   "Cc1": {
    "media": [
      "<p>Cc1 is a very rare, almost theoretical climate that typically occurs near the boundary with another climate category. It is found on Heard Island in the coastal, mossy areas, bordering the Dc1 climate. The inside of a typical refrigerator could technically be said to have a Cc1 microclimate.</p>",
@@ -300,7 +313,24 @@
       "<br>",
       "<img class='three' src='../graphs/St.Louis4-F.png' alt='graph of St.Louis climate in 2071-2100'>",
       "<img class='three' src='../graphs/Carbondale4-F.png' alt='graph of Carbondale climate in 2071-2100'>",
-      "<img class='three' src='../graphs/WashingtonDC4-F.png' alt='graph of WashingtonDC climate in 2071-2100'>"
+      "<img class='three' src='../graphs/WashingtonDC4-F.png' alt='graph of Washington D.C. climate in 2071-2100'>"
+    ]
+  },
+
+  "CdX": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img src='../graphs/Darvazagascrater4-F.png' alt='graph of Darvaza gas crater climate in 2071-2100'>",
+      "<img src='../graphs/Turpan4-F.png' alt='graph of Turpan climate in 2071-2100'>"
+    ]
+  },
+
+  "CmX": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img src='../graphs/Weiser4-F.png' alt='graph of Weiser climate in 2071-2100'>"
     ]
   },
 
@@ -357,6 +387,15 @@
   "BdX": {
     "media": [
       "<img src='../graphs/FurnaceCreek4-F.png' alt='graph of Furnace Creek climate in 2071-2100'>"
+    ]
+  },
+
+  "BmX": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img src='../graphs/Erbil4-F.png' alt='graph of Erbil climate in 2071-2100'>",
+      "<img src='../graphs/Dezful4-F.png' alt='graph of Dezful climate in 2071-2100'>"
     ]
   },
 
