@@ -132,6 +132,14 @@
     ]
   },
 
+  "Edz2": {
+    "unitsToggle": false,
+    "media": [
+      "<p>No images, videos, or graphs are available for this climate.</p>"
+    ]
+  },
+
+
   "DY": {
     "media": [
       "<p>The summit of <a href='https://en.wikipedia.org/wiki/Chimborazo' target='_blank'>Chimborazo</a> has a DY climate.</p><br>",
@@ -335,6 +343,14 @@
     "media": [
       "<img src='../graphs/LakeHavasuCity1-F.png' alt='graph of Lake Havasu City climate in 1981-2010'>",
       "<img src='../graphs/FurnaceCreek1-F.png' alt='graph of Furnace Creek climate in 1981-2010'>"
+    ]
+  },
+
+  "BgX": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img src='../graphs/Hafizabad4-F.png' alt='graph of Hafizabad climate in 2071-2100'>"
     ]
   },
 

@@ -602,19 +602,28 @@
         fetch('data/climatemedia.json')
           .then(r => r.json())
           .then(t => {
-            const m = t[climate_code]?.media;
+
+            const entry = t[climate_code];
+            const m = entry?.media;
 
             if (m) {
+
               const el = document.getElementById('climatemedia');
               el.innerHTML = "<br>" + m.join('') + "<br>";
-              document.getElementById('toggle_units_media').classList.remove('hidden');
 
-              // show the toggle button
-              document.getElementById('toggle_units_media')
-                .classList.remove('hidden');
+              const btn = document.getElementById('toggle_units_media');
+
+              // default = true unless explicitly false
+              if (entry.unitsToggle === false) {
+                btn.remove();
+              } else {
+                btn.classList.remove('hidden');
+              }
+
             }
-          });
 
+          });
+          
         // Build default map paths using exact case
         const MAP_DIR = 'images/maps';
         const USA_DIR = `images/maps/usa`;
