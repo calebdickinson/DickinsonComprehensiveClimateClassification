@@ -191,7 +191,8 @@
   },
   "Ec1": {
     "1": [
-      "Esperanza Base, Antarctica"
+      "Esperanza Base, Antarctica",
+      "Mount Hood summit, Oregon, United States"
     ],
     "2": [
       "Esperanza Base, Antarctica"
@@ -2240,9 +2241,12 @@
     ],
     "2": [
       "Longyearbyen, Svalbard, Norway",
+      "Mount Hood summit, Oregon, United States",
       "Nuuk, Greenland"
     ],
-    "3": [],
+    "3": [
+      "Mount Hood summit, Oregon, United States"
+    ],
     "4": [
       "Primavera Base, Antarctica"
     ]
@@ -2267,7 +2271,8 @@
       "Nuuk, Greenland"
     ],
     "4": [
-      "Alert, Nunavut, Canada"
+      "Alert, Nunavut, Canada",
+      "Mount Hood summit, Oregon, United States"
     ]
   },
   "Aga2": {

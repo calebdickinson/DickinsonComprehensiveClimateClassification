@@ -126,6 +126,33 @@
     ]
   },
 
+  "Ec1": {
+    "media": [
+      "<p>The summit of Mount Hood has an Ec1 climate.</p>",
+      "<a title='Kevin Crosby, CC BY-SA 2.0 &lt;https://creativecommons.org/licenses/by-sa/2.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Oregon_Mount_Hood_from_Trillium_Lake_2024.jpg'><img alt='Scenic Oregon in 2024' src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Oregon_Mount_Hood_from_Trillium_Lake_2024.jpg/2048px-Oregon_Mount_Hood_from_Trillium_Lake_2024.jpg?_=20241128052926'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Oregon_Mount_Hood_from_Trillium_Lake_2024.jpg'>Kevin Crosby</a>, <a href='https://creativecommons.org/licenses/by-sa/2.0'>CC BY-SA 2.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/FzOl8QMkek8?si=cv3vxVd0ba--Hlju' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img class='three' src='../graphs/MountHood1-F.png' alt='graph of Mount Hood climate in 1981-2010'>",
+      "<img class='three' src='../graphs/EsperanzaBase1-F.png' alt='graph of Esperanza Base climate in 1981-2010'>",
+      "<img class='three' src='../graphs/CaseyStation4-F.png' alt='graph of Casey Station climate in 2071-2100'>"
+    ]
+  },
+
+  "Ec2": {
+    "media": [
+      "<a title='Quintin Soloviev, CC BY 4.0 &lt;https://creativecommons.org/licenses/by/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Nuuk,_Greenland_skyline_aerial_view.jpg'><img alt='Aerial view of downtown Nuuk, Greenland. Viewed from an Air Greenland helicopter' src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Nuuk%2C_Greenland_skyline_aerial_view.jpg/2048px-Nuuk%2C_Greenland_skyline_aerial_view.jpg?_=20250620001250'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Nuuk,_Greenland_skyline_aerial_view.jpg'>Quintin Soloviev</a>, <a href='https://creativecommons.org/licenses/by/4.0'>CC BY 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/zFbDjQEoBDE?si=2iZVqkpXUbKkheQ5' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img class='three' src='../graphs/Longyearbyen1-F.png' alt='graph of Longyearbyen climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Nuuk1-F.png' alt='graph of Nuuk climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Nagqu1-F.png' alt='graph of Nagqu climate in 1981-2010'>"
+    ]
+  },
+
   "Ega1": {
     "media": [
       "<img src='../graphs/Fargo1-F.png' alt='graph of Fargo climate in 1981-2010'>"
@@ -220,8 +247,9 @@
       "<br><br>",
       "<iframe width='1280' height='720' src='https://www.youtube.com/embed/ET5NdSLk_wg?si=ps5qKVBlSXVOlIhy' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
       "<br><br>",
-      "<img src='../graphs/Volgograd1-F.png' alt='graph of Volgograd climate in 1981-2010'>",
-      "<img src='../graphs/Denver1-F.png' alt='graph of Denver climate in 1981-2010'>"
+      "<img class='three' src='../graphs/Volgograd1-F.png' alt='graph of Volgograd climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Denver1-F.png' alt='graph of Denver climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Kamloops1-F.png' alt='graph of Kamloops climate in 1981-2010'>"
     ]
   },
 
