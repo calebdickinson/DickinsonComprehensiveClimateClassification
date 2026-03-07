@@ -215,8 +215,13 @@
 
   "Dsa1": {
     "media": [
-      "<a title='Kabelleger / David Gubler (http://www.bahnbilder.ch), CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:KTZ_2TE10U_Aynabulak.jpg'><img alt='KTZ 2TE10U Aynabulak' src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/KTZ_2TE10U_Aynabulak.jpg/2048px-KTZ_2TE10U_Aynabulak.jpg?_=20120807203115'></a>",
-      "<a href='https://commons.wikimedia.org/wiki/File:KTZ_2TE10U_Aynabulak.jpg'>Kabelleger / David Gubler (http://www.bahnbilder.ch)</a>, <a href='https://creativecommons.org/licenses/by-sa/3.0'>CC BY-SA 3.0</a>, via Wikimedia Commons"
+      "<a title='Kabelleger / David Gubler, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:KTZ_2TE10U_Aynabulak.jpg'><img alt='KTZ 2TE10U Aynabulak' src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/KTZ_2TE10U_Aynabulak.jpg/2048px-KTZ_2TE10U_Aynabulak.jpg?_=20120807203115'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:KTZ_2TE10U_Aynabulak.jpg'>Kabelleger / David Gubler</a>, <a href='https://creativecommons.org/licenses/by-sa/3.0'>CC BY-SA 3.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/ET5NdSLk_wg?si=ps5qKVBlSXVOlIhy' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img src='../graphs/Volgograd1-F.png' alt='graph of Volgograd climate in 1981-2010'>",
+      "<img src='../graphs/Denver1-F.png' alt='graph of Denver climate in 1981-2010'>"
     ]
   },
 
