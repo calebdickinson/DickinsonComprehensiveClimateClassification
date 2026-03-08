@@ -211,7 +211,7 @@
   let graphsData = {};
   let currentCoordKey = null;
   let currentPeriodIndex = 0;
-  let currentUnit = "F";
+  let currentUnit = localStorage.getItem("climateUnits") || "F";
   let map;
 
   // ======================================================
@@ -219,6 +219,11 @@
   // ======================================================
 
   window.addEventListener("DOMContentLoaded", async () => {
+
+    document.getElementById("unitBtn").textContent =
+      currentUnit === "F"
+        ? "Switch graphs to Celsius"
+        : "Switch graphs to Fahrenheit";
 
     map = L.map("map",{worldCopyJump:false,maxBoundsViscosity:1.0});
     map.setView([39,-98],4);
@@ -277,12 +282,18 @@
   // ======================================================
 
   function toggleUnits(){
+
     currentUnit=currentUnit==="F"?"C":"F";
+
+    // save preference
+    localStorage.setItem("climateUnits", currentUnit);
+
     document.getElementById("unitBtn").textContent=
       currentUnit==="F"
         ?"Switch graphs to Celsius"
         :"Switch graphs to Fahrenheit";
     renderCurrent();
+
   }
 
   // ======================================================

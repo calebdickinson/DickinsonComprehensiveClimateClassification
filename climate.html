@@ -618,12 +618,25 @@
                 btn.remove();
               } else {
                 btn.classList.remove('hidden');
+                if (mediaUnits === "C") {
+
+                  const btn = document.getElementById("toggle_units_media");
+
+                  btn.textContent = "Switch graphs to Fahrenheit";
+
+                  document
+                    .querySelectorAll("#climatemedia img")
+                    .forEach(img => {
+                      img.src = img.src.replace("-F.png", "-C.png");
+                    });
+
+                }
               }
 
             }
 
           });
-          
+
         // Build default map paths using exact case
         const MAP_DIR = 'images/maps';
         const USA_DIR = `images/maps/usa`;
@@ -709,9 +722,18 @@
       // --- Fahrenheit / Celsius toggle for climatemedia graphs ---
       let mediaUnits = "F";
 
+      // Load saved unit preference
+      const savedUnits = localStorage.getItem("climateUnits");
+      if (savedUnits === "C") {
+        mediaUnits = "C";
+      }
+
       function toggleMediaUnits() {
 
         mediaUnits = mediaUnits === "F" ? "C" : "F";
+
+        // save preference
+        localStorage.setItem("climateUnits", mediaUnits);
 
         const btn = document.getElementById("toggle_units_media");
 
