@@ -480,5 +480,85 @@
       "<img class='three' src='../graphs/Juba4-F.png' alt='graph of Juba climate in 2071-2100'>",
       "<img class='three' src='../graphs/Manaus4-F.png' alt='graph of Manaus climate in 2071-2100'>"
     ]
+  },
+
+  "Zgz2": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img src='../graphs/Bosconia4-F.png' alt='graph of Bosconia climate in 2071-2100'>"
+    ]
+  },
+
+  "Zsz2": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img class='three' src='../graphs/Kakuma4-F.png' alt='graph of Kakuma climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Bardera4-F.png' alt='graph of Bardera climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Djibouti4-F.png' alt='graph of Djibouti climate in 2071-2100'>"
+    ]
+  },
+
+  "Zdz2": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img src='../graphs/AlHudaydah4-F.png' alt='graph of Al Hudaydah climate in 2071-2100'>",
+      "<img src='../graphs/Gode4-F.png' alt='graph of Gode climate in 2071-2100'>"
+    ]
+  },
+
+  "Zwz2": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img class='three' src='../graphs/Bangkok4-F.png' alt='graph of Bangkok climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Yangon4-F.png' alt='graph of Yangon climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Sinop4-F.png' alt='graph of Sinop climate in 2071-2100'>"
+    ]
+  },
+
+  "Zvz2": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img class='three' src='../graphs/Managua4-F.png' alt='graph of Managua climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Ndjamena4-F.png' alt='graph of N'Djamena climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Ouagadougou4-F.png' alt='graph of Ouagadougou climate in 2071-2100'>"
+    ]
+  },
+
+  "ZsX": {
+    "unitsToggle": false,
+    "media": [
+      "<p>No images, videos, or graphs are available for this climate.</p>"
+    ]
+  },
+
+  "ZdX": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img src='../graphs/Kayes4-F.png' alt='graph of Kayes climate in 2071-2100'>",
+      "<img src='../graphs/Mopti4-F.png' alt='graph of Mopti climate in 2071-2100'>"
+    ]
+  },
+
+  "ZwX": {
+    "unitsToggle": false,
+    "media": [
+      "<p>No images, videos, or graphs are available for this climate.</p>"
+    ]
+  },
+
+  "ZvX": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img src='../graphs/Bamako4-F.png' alt='graph of Bamako climate in 2071-2100'>",
+      "<img src='../graphs/Niamey4-F.png' alt='graph of Niamey climate in 2071-2100'>"
+    ]
   }
+
 }
