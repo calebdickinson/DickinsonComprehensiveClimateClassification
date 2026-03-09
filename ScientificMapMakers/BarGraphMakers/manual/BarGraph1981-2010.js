@@ -1024,7 +1024,7 @@ dBordering = dBordering.cat(
       coldLetter.cat('d').cat(summerLetter),
       coldLetter.cat('s').cat(summerLetter),
       coldLetter.cat('v').cat(summerLetter),
-      coldLetter.cat('m').cat(summerLetter)
+      ee.Algorithms.If(inTropics.not(), coldLetter.cat('m').cat(summerLetter), ee.String(''))
     ])
   )
 );
