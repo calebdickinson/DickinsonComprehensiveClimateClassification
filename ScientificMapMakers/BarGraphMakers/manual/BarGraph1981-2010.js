@@ -1057,7 +1057,8 @@ var nearHS_north = isNorth.and(HS.subtract(0.4).abs().lt(EPS_RATIO));
 var nearHS_south = isSouth.and(HS.subtract(0.6).abs().lt(EPS_RATIO));
 var nearHS_med = (nearHS_north.or(nearHS_south))
 .and(aiAtPoint.gte(0.25))   // not desert
-.and(notCold);
+.and(notCold)
+.and(inTropics.not());
 
 var nonMedLetter = ee.String(
   ee.Algorithms.If(aiAtPoint.lt(0.25), 'd',
