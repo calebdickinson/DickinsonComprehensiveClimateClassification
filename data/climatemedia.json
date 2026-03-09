@@ -472,6 +472,55 @@
     ]
   },
 
+  "Zgz1": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img class='three' src='../graphs/Bosconia3-F.png' alt='graph of Bosconia climate in 2041-2070'>",
+      "<img class='three' src='../graphs/Valledupar4-F.png' alt='graph of Valledupar climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Georgetown4-F.png' alt='graph of Georgetown climate in 2071-2100'>"
+    ]
+  },
+
+  "Zsz1": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img class='three' src='../graphs/Maracaibo3-F.png' alt='graph of Maracaibo climate in 2041-2070'>",
+      "<img class='three' src='../graphs/Jilib4-F.png' alt='graph of Jilib climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Port-au-Prince4-F.png' alt='graph of Port-au-Prince climate in 2071-2100'>"
+    ]
+  },
+
+  "Zdz1": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img class='three' src='../graphs/Gode3-F.png' alt='graph of Gode climate in 2041-2070'>",
+      "<img class='three' src='../graphs/PuntoFijo4-F.png' alt='graph of Punto Fijo climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Barranquilla4-F.png' alt='graph of Barranguilla climate in 2071-2100'>"
+    ]
+  },
+
+  "Zwz1": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img class='three' src='../graphs/Managua3-F.png' alt='graph of Managua climate in 2041-2070'>",
+      "<img class='three' src='../graphs/Fortaleza4-F.png' alt='graph of Fortaleza climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Darwin4-F.png' alt='graph of Darwin climate in 2071-2100'>"
+    ]
+  },
+
+  "Zvz1": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img src='../graphs/Mossoró3-F.png' alt='graph of Mossoró climate in 2041-2070'>",
+      "<img src='../graphs/ElTigre4-F.png' alt='graph of El Tigre climate in 2071-2100'>"
+    ]
+  },
+
   "Zhz2": {
     "media": [
       "<p>No images or videos are available for this climate.</p>",
@@ -504,8 +553,9 @@
     "media": [
       "<p>No images or videos are available for this climate.</p>",
       "<br>",
-      "<img src='../graphs/AlHudaydah4-F.png' alt='graph of Al Hudaydah climate in 2071-2100'>",
-      "<img src='../graphs/Gode4-F.png' alt='graph of Gode climate in 2071-2100'>"
+      "<img class='three' src='../graphs/Dallol3-F.png' alt='graph of Dallol climate in 2041-2070'>",
+      "<img class='three' src='../graphs/AlHudaydah4-F.png' alt='graph of Al Hudaydah climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Gode4-F.png' alt='graph of Gode climate in 2071-2100'>"
     ]
   },
 
@@ -540,8 +590,9 @@
     "media": [
       "<p>No images or videos are available for this climate.</p>",
       "<br>",
-      "<img src='../graphs/Kayes4-F.png' alt='graph of Kayes climate in 2071-2100'>",
-      "<img src='../graphs/Mopti4-F.png' alt='graph of Mopti climate in 2071-2100'>"
+      "<img class='three' src='../graphs/Dallol4-F.png' alt='graph of Dallol climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Kayes4-F.png' alt='graph of Kayes climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Mopti4-F.png' alt='graph of Mopti climate in 2071-2100'>"
     ]
   },
 
