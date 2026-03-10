@@ -55,6 +55,28 @@
     ]
   },
 
+  "Gc1": {
+    "media": [
+      "<a title='Kevin Rawlings, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:CFS_Alert_May_2016.jpg'><img alt='CFS Alert complex' src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/CFS_Alert_May_2016.jpg/2048px-CFS_Alert_May_2016.jpg?_=20180208193758'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:CFS_Alert_May_2016.jpg'>Kevin Rawlings</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/c4Ta9DEDnYc?si=wb2g-oRV4ghWsk2-' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img src='../graphs/Alert1-F.png' alt='graph of Alert climate in 1981-2010'>"
+    ]
+  },
+
+  "Gc2": {
+    "media": [
+      "<a title='Ansgar Walk, CC BY-SA 2.5 &lt;https://creativecommons.org/licenses/by-sa/2.5&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Eureka_Weather_Station_1997-08-04.jpg'><img alt='Eureka Weather Station 1997-08-04' src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Eureka_Weather_Station_1997-08-04.jpg/2048px-Eureka_Weather_Station_1997-08-04.jpg?_=20060301134301'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Eureka_Weather_Station_1997-08-04.jpg'>Ansgar Walk</a>, <a href='https://creativecommons.org/licenses/by-sa/2.5'>CC BY-SA 2.5</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/XVFii31aRy8?si=TLibzXh0hpGAufeK' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img src='../graphs/Eureka1-F.png' alt='graph of Eureka climate in 1981-2010'>"
+    ]
+  },
+
   "Ga1": {
     "media": [
       "<p>No images or videos are available for this climate.</p>",
@@ -93,6 +115,33 @@
       "<img class='three' src='../graphs/MountRainier1-F.png' alt='graph of Mount Rainer climate in 1981-2010'>",
       "<img class='three' src='../graphs/McMurdoStation1-F.png' alt='graph of McMurdo Station climate in 1981-2010'>",
       "<img class='three' src='../graphs/SveaStation4-F.png' alt='graph of Svea Station climate in 2071-2100'>"
+    ]
+  },
+
+  "Fc1": {
+    "media": [
+      "<a title='Roy W. Anderson, NOAA, N, Public domain, via Wikimedia Commons' href='https://upload.wikimedia.org/wikipedia/commons/b/b6/Nord%2C_Greenland.jpg'><img alt='Nord, Greenland' src='https://upload.wikimedia.org/wikipedia/commons/b/b6/Nord%2C_Greenland.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Nord,_Greenland.jpg'>Roy W. Anderson, NOAA, N</a>, Public domain, via Wikimedia Commons",
+      "<br><br>",
+      "<p>Utqiaġvik landscape in July. Notice how the ocean is partially frozen. In the 1981-2010 normals, Utqiaġvik has a Gc1 climate, but borders on the warmer climate Gc2.</p>",
+      "<a title='Floyd davidson, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Ukpeagvik_mounds.jpg'><img alt='Ukpeakvik mounds site of ancient sod houses in Utqiaġvik, AK' src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Ukpeagvik_mounds.jpg/2048px-Ukpeagvik_mounds.jpg?_=20071016172453'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Ukpeagvik_mounds.jpg'>Floyd davidson</a>, <a href='https://creativecommons.org/licenses/by-sa/3.0'>CC BY-SA 3.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<img src='../graphs/StationNord1-F.png' alt='graph of Station Nord climate in 1981-2010'>",
+      "<img src='../graphs/Utqiaġvik1-F.png' alt='graph of Utqiaġvik climate in 1981-2010'>"
+    ]
+  },
+
+  "Fc2": {
+    "media": [
+      "<p>Prudhoe Bay in July</p>",
+      "<a title='Rickmouser45, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Aerial_View_of_Prudhoe_Bay.jpg'><img alt='Aerial View of Prudhoe Bay' src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Aerial_View_of_Prudhoe_Bay.jpg/2048px-Aerial_View_of_Prudhoe_Bay.jpg?_=20190430195910'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Aerial_View_of_Prudhoe_Bay.jpg'>Rickmouser45</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/OFtxcvBOFn0?si=8C572spOXCPBZr6E' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img src='../graphs/Iqaluit1-F.png' alt='graph of Iqaluit climate in 1981-2010'>",
+      "<img src='../graphs/PrudhoeBay1-F.png' alt='graph of Prudhoe Bay Station climate in 1981-2010'>"
     ]
   },
 

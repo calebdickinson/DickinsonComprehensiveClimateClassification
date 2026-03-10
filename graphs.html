@@ -488,14 +488,21 @@
       return `${coldMap[a.charAt(0)]}/${coldMap[b.charAt(0)]} boundary`;
     }
 
+    const aHasArid = aridMap.hasOwnProperty(a.charAt(1));
+    const bHasArid = aridMap.hasOwnProperty(b.charAt(1));
+
+    const aArid = aHasArid ? a.charAt(1) : '';
+    const bArid = bHasArid ? b.charAt(1) : '';
+
+    const aS = aHasArid ? a.slice(2) : a.slice(1);
+    const bS = bHasArid ? b.slice(2) : b.slice(1);
+
     // aridity
-    if (a.charAt(1) !== b.charAt(1)) {
-      return `${aridMap[a.charAt(1)]}/${aridMap[b.charAt(1)]} boundary`;
+    if (aArid !== bArid) {
+      return `${aridMap[aArid]}/${aridMap[bArid]} boundary`;
     }
 
     // summer
-    const aS = a.slice(2);
-    const bS = b.slice(2);
     if (aS !== bS) {
       return `${summerMap[aS]}/${summerMap[bS]} summer boundary`;
     }

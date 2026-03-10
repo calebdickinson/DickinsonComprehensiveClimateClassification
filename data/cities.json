@@ -758,7 +758,9 @@
       "Prudhoe Bay, Alaska, United States",
       "Utqiaġvik, Alaska, United States"
     ],
-    "4": []
+    "4": [
+      "Eureka, Nunavut, Canada"
+    ]
   },
   "Dgb2": {
     "1": [
@@ -1202,7 +1204,10 @@
       "Prudhoe Bay, Alaska, United States",
       "Utqiaġvik, Alaska, United States"
     ],
-    "3": [],
+    "3": [
+      "Eureka, Nunavut, Canada",
+      "Station Nord, Greenland"
+    ],
     "4": []
   },
   "Fb1": {
@@ -1212,7 +1217,6 @@
     ],
     "2": [
       "Churchill, Manitoba, Canada",
-      "Echo Bay, Nunavut, Canada",
       "Iqaluit, Nunavut, Canada"
     ],
     "3": [],
@@ -1425,8 +1429,7 @@
       "Whitehorse, Yukon, Canada"
     ],
     "4": [
-      "Cambridge Bay, Nunavut, Canada",
-      "Echo Bay, Nunavut, Canada"
+      "Cambridge Bay, Nunavut, Canada"
     ]
   },
   "Esa2": {
@@ -1682,8 +1685,7 @@
       "Yellowknife, Northwest Territories, Canada"
     ],
     "3": [
-      "Cambridge Bay, Nunavut, Canada",
-      "Echo Bay, Nunavut, Canada"
+      "Cambridge Bay, Nunavut, Canada"
     ],
     "4": []
   },
@@ -2263,7 +2265,8 @@
       "Mount Hood summit, Oregon, United States"
     ],
     "4": [
-      "Primavera Base, Antarctica"
+      "Primavera Base, Antarctica",
+      "Station Nord, Greenland"
     ]
   },
   "Db1": {
@@ -2315,7 +2318,7 @@
     "2": [],
     "3": [
       "Bardere, Somalia",
-      "Kakuma, Turkana, Kenya",
+      "Kakuma, Kenya",
       "Maracaibo, Venezuela"
     ],
     "4": [
@@ -2892,7 +2895,7 @@
       "Djibouti, Djibouti",
       "Gode, Ethiopia",
       "Jeddah, Saudi Arabia",
-      "Kakuma, Turkana, Kenya",
+      "Kakuma, Kenya",
       "Khartoum, Sudan",
       "Mopti, Mali",
       "Muscat, Oman",
@@ -2903,7 +2906,7 @@
       "Bardere, Somalia",
       "Gode, Ethiopia",
       "Jeddah, Saudi Arabia",
-      "Kakuma, Turkana, Kenya",
+      "Kakuma, Kenya",
       "Karachi, Pakistan"
     ],
     "3": [
@@ -3256,14 +3259,17 @@
     "4": [
       "Bardere, Somalia",
       "Djibouti, Djibouti",
-      "Kakuma, Turkana, Kenya"
+      "Kakuma, Kenya"
     ]
   },
   "Fc1": {
     "1": [
+      "Station Nord, Greenland",
       "Utqiaġvik, Alaska, United States"
     ],
-    "2": [],
+    "2": [
+      "Station Nord, Greenland"
+    ],
     "3": [],
     "4": []
   },
@@ -3275,22 +3281,21 @@
       "Utqiaġvik, Alaska, United States"
     ]
   },
-  "Gb1": {
-    "1": [
-      "Cambridge Bay, Nunavut, Canada",
-      "Echo Bay, Nunavut, Canada"
-    ],
-    "2": [
-      "Cambridge Bay, Nunavut, Canada"
-    ],
-    "3": [],
-    "4": []
-  },
   "Gc1": {
     "1": [
       "Alert, Nunavut, Canada"
     ],
     "2": [],
+    "3": [],
+    "4": []
+  },
+  "Gb1": {
+    "1": [
+      "Cambridge Bay, Nunavut, Canada"
+    ],
+    "2": [
+      "Cambridge Bay, Nunavut, Canada"
+    ],
     "3": [],
     "4": []
   },
@@ -3548,5 +3553,15 @@
       "El Tigre, Venezuela",
       "Mossoró, Brazil"
     ]
+  },
+  "Gc2": {
+    "1": [
+      "Eureka, Nunavut, Canada"
+    ],
+    "2": [
+      "Eureka, Nunavut, Canada"
+    ],
+    "3": [],
+    "4": []
   }
 }
