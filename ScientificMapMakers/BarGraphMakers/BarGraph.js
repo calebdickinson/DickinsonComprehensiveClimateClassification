@@ -1275,6 +1275,13 @@ function runForPeriod(NORMAL_PERIOD, pt, LAT, elevation) {
   );
   
   // ====================================
+  // Build rawLinesString from monthly data
+  // ====================================
+  var rawLinesString = combinedF
+    .cat(combinedC)
+    .join('\n');
+  
+  // ====================================
   // FORMAT METADATA AS JSON
   // ====================================
 
