@@ -956,187 +956,257 @@ dBordering = dBordering
   .cat(addBorder(nearWarm5,  swapSummer('c2')))
   .cat(addBorder(nearWarm0,  swapSummer('c1')));
 
-// --------------------
-// 3) Aridity borders (AI thresholds + med/monsoon + coldCond + rainforest cancel)
-// --------------------
+// ====================================
+// Dickinson bordering climates — ARIDITY
+// ====================================
+//
+// Aridity classes and their letter:
+//   1 = Arid/Desert  (d)  : AI < 0.25
+//   2 = Semiarid     (s)  : 0.25 ≤ AI < 0.50, not Med, not Monsoon
+//   3 = Mediterranean(m)  : AI ≥ 0.25, HS seasonal (overrides 2/5/6), unless rainforest-cancel
+//   4 = Monsoon      (w)  : AI ≥ 0.25, P6ratio ≥ 0.8, not Med (overrides 2/5/6)
+//   5 = Semihumid    (g)  : 0.50 ≤ AI < 0.75, not Med, not Monsoon
+//   6 = Humid        (h)  : AI ≥ 0.75, not Med, not Monsoon (or Med+rainforest-cancel)
+//   7 = Cold         ('')  : coldCond overrides all
+//   9 = Semiarid Monsoon(v): was Monsoon AND AI < 0.50
 
-// AI-tiered reconstruction
-var aridityNoCold = ee.String(
-  ee.Algorithms.If(ai_d, 'd',
+// ── Helper: compute aridity letter from raw inputs ──────────────────────────
+// Mirrors the raster classification exactly.
+// Pass actual ee.Number values for each flag (0/1 or boolean).
+function computeAridityLetter(ai, isMedBool, isMonsoonBool, coldCondBool, pDriest, petAnn) {
 
-  ee.Algorithms.If(ai_s,
-    ee.Algorithms.If(isMed, 'm',
-    ee.Algorithms.If(isMonsoon, 'v', 's')),
+  // Step 1: base AI tier
+  var base = ee.String(
+    ee.Algorithms.If(ai.lt(0.25), 'd',
+    ee.Algorithms.If(ai.lt(0.50), 's',
+    ee.Algorithms.If(ai.lt(0.75), 'g',
+    'h')))
+  );
 
-  ee.Algorithms.If(ai_g,
-    ee.Algorithms.If(isMed, 'm',
-    ee.Algorithms.If(isMonsoon, 'w', 'g')),
+  // Step 2: Mediterranean override (AI ≥ 0.25, not desert)
+  // Med takes priority over Monsoon per the raster (.where ordering)
+  base = ee.String(
+    ee.Algorithms.If(
+      isMedBool.and(ai.gte(0.25)),
+      // rainforest-cancel: if driest month ≥ PET_annual/24, Med → Humid
+      ee.Algorithms.If(
+        pDriest.gte(petAnn.divide(24)),
+        'h',   // rainforest cancel: Mediterranean → Humid
+        'm'    // normal Mediterranean
+      ),
+      base
+    )
+  );
 
-  // ai_h
-    ee.Algorithms.If(isMed, 'm',
-    ee.Algorithms.If(isMonsoon, 'w', 'h'))
+  // Step 3: Monsoon override (AI ≥ 0.25, not Med, not desert)
+  base = ee.String(
+    ee.Algorithms.If(
+      isMonsoonBool.and(isMedBool.not()).and(ai.gte(0.25)),
+      // Semiarid Monsoon (v) when AI < 0.50, else Monsoon (w)
+      ee.Algorithms.If(ai.lt(0.50), 'v', 'w'),
+      base
+    )
+  );
 
-  )))
-);
-  
-// Apply rainforest cancel to the non-cold version too
-aridityNoCold = ee.String(
-  ee.Algorithms.If(
-    aridityNoCold.compareTo('m').eq(0)
-      .multiply(P_driest.gte(petAnnAtPoint.divide(24)))
-      .eq(1),
-    'h',
-    aridityNoCold
-  )
-);
+  // Step 4: Cold override (suppresses aridity letter entirely)
+  return ee.String(ee.Algorithms.If(coldCondBool, '', base));
+}
 
-// If coldCond: aridityLetter = '' else it’s aridityNoCold (this matches your logic)
-var aridityWithColdRule = ee.String(
-  ee.Algorithms.If(coldCond, '', aridityNoCold)
-);
+// ── Current values (already computed earlier in script) ─────────────────────
+// aiAtPoint, isMed, isMonsoon, coldCond, P_driest (= minPr), petAnnAtPoint
+// aridityLetter (current final letter, already computed)
 
-// --- 3a) ColdCond boundary itself (toggle “has aridity” vs “no aridity”) ---
-var nearColdCondA = warmestMonth.subtract(15).abs().lt(EPS_D_TEMP);
-var nearColdCondB = coldestMonth.add(20).abs().lt(EPS_D_TEMP);
-var nearColdCond  = nearColdCondA.or(nearColdCondB);
+// ── Shorthand: build a full code string from a candidate aridity letter ──────
+function makeCode(candidateLetter) {
+  return coldLetter.cat(candidateLetter).cat(summerLetter);
+}
 
-dBordering = dBordering.cat(
-  addBorder(nearColdCond,
-    ee.List([
-      // variant with aridity suppressed
-      coldLetter.cat('').cat(summerLetter),
-      // variant with aridity enabled
-      coldLetter.cat(aridityNoCold).cat(summerLetter)
-    ])
-  )
-);
+// ── Emit a border only when the candidate letter differs from current ─────────
+function borderIfDifferent(candidateLetter) {
+  return ee.List(
+    ee.Algorithms.If(
+      candidateLetter.compareTo(aridityLetter).neq(0),
+      [makeCode(candidateLetter)],
+      []
+    )
+  );
+}
 
-// --- 3b) AI boundaries ---
-var notCold = coldCond.not();
+var aridBorders = ee.List([]);
+
+// ─────────────────────────────────────────────────────────────────────────────
+// BOUNDARY 1 — AI = 0.25  (desert d ↔ semiarid s / v / m)
+// ─────────────────────────────────────────────────────────────────────────────
 var nearAI025 = aiAtPoint.subtract(0.25).abs().lt(EPS_AI);
+
+// Letter just below 0.25 (desert side)
+var letterBelow025 = computeAridityLetter(
+  ee.Number(0.24), isMed, isMonsoon, coldCond, P_driest, petAnnAtPoint
+);
+// Letter just above 0.25 (semiarid side — Med/Monsoon can still apply)
+var letterAbove025 = computeAridityLetter(
+  ee.Number(0.26), isMed, isMonsoon, coldCond, P_driest, petAnnAtPoint
+);
+
+aridBorders = aridBorders.cat(
+  ee.List(ee.Algorithms.If(nearAI025, [
+    makeCode(letterBelow025),
+    makeCode(letterAbove025)
+  ], []))
+);
+
+// ─────────────────────────────────────────────────────────────────────────────
+// BOUNDARY 2 — AI = 0.50  (semiarid s/v ↔ semihumid g/w)
+// ─────────────────────────────────────────────────────────────────────────────
 var nearAI050 = aiAtPoint.subtract(0.50).abs().lt(EPS_AI);
+
+var letterBelow050 = computeAridityLetter(
+  ee.Number(0.49), isMed, isMonsoon, coldCond, P_driest, petAnnAtPoint
+);
+var letterAbove050 = computeAridityLetter(
+  ee.Number(0.51), isMed, isMonsoon, coldCond, P_driest, petAnnAtPoint
+);
+
+aridBorders = aridBorders.cat(
+  ee.List(ee.Algorithms.If(nearAI050, [
+    makeCode(letterBelow050),
+    makeCode(letterAbove050)
+  ], []))
+);
+
+// ─────────────────────────────────────────────────────────────────────────────
+// BOUNDARY 3 — AI = 0.75  (semihumid g/w ↔ humid h)
+// ─────────────────────────────────────────────────────────────────────────────
 var nearAI075 = aiAtPoint.subtract(0.75).abs().lt(EPS_AI);
 
-// 0.25 boundary: d ↔ (s or v or m)
-dBordering = dBordering.cat(
-  addBorder(notCold.and(nearAI025),
-    ee.List([
-      coldLetter.cat('d').cat(summerLetter),
-      coldLetter.cat('s').cat(summerLetter),
-      coldLetter.cat('v').cat(summerLetter),
-      ee.Algorithms.If(inTropics.not(), coldLetter.cat('m').cat(summerLetter), ee.String(''))
-    ])
-  )
+var letterBelow075 = computeAridityLetter(
+  ee.Number(0.74), isMed, isMonsoon, coldCond, P_driest, petAnnAtPoint
+);
+var letterAbove075 = computeAridityLetter(
+  ee.Number(0.76), isMed, isMonsoon, coldCond, P_driest, petAnnAtPoint
 );
 
-// 0.50 boundary: (s or v or m) ↔ (g or w or m)
-dBordering = dBordering.cat(
-  addBorder(notCold.and(nearAI050),
-    ee.List([
-      coldLetter.cat('s').cat(summerLetter),
-      coldLetter.cat('v').cat(summerLetter),
-      coldLetter.cat('g').cat(summerLetter),
-      coldLetter.cat('w').cat(summerLetter)
-    ])
-  )
+aridBorders = aridBorders.cat(
+  ee.List(ee.Algorithms.If(nearAI075, [
+    makeCode(letterBelow075),
+    makeCode(letterAbove075)
+  ], []))
 );
 
-// 0.75 boundary: (g or w or m) ↔ (h or w or m)
-dBordering = dBordering.cat(
-  addBorder(notCold.and(nearAI075),
-    ee.List([
-      coldLetter.cat('g').cat(summerLetter),
-      coldLetter.cat('h').cat(summerLetter),
-      coldLetter.cat('w').cat(summerLetter)
-    ])
-  )
-);
-  
-// --- 3c) Mediterranean boundary (HS near 0.4 / 0.6, depending hemisphere) ---
-var nearHS_north = isNorth.and(HS.subtract(0.4).abs().lt(EPS_RATIO));
-var nearHS_south = isSouth.and(HS.subtract(0.6).abs().lt(EPS_RATIO));
-var nearHS_med = (nearHS_north.or(nearHS_south))
-.and(aiAtPoint.gte(0.25))   // not desert
-.and(notCold)
-.and(inTropics.not());
+// ─────────────────────────────────────────────────────────────────────────────
+// BOUNDARY 4 — Mediterranean seasonality threshold
+//   NH: HS < 0.4 → Med;  NH: HS ≥ 0.4 → not-Med
+//   SH: HS > 0.6 → Med;  SH: HS ≤ 0.6 → not-Med
+// Only relevant when AI ≥ 0.25 (not desert) and not coldCond
+// ─────────────────────────────────────────────────────────────────────────────
+var medThresh   = ee.Number(ee.Algorithms.If(isSouth, 0.6, 0.4));
+var nearHSMed   = HS.subtract(medThresh).abs().lt(EPS_RATIO)
+                    .and(aiAtPoint.gte(0.25))
+                    .and(coldCond.not());
 
-var nonMedLetter = ee.String(
-  ee.Algorithms.If(aiAtPoint.lt(0.25), 'd',
-  ee.Algorithms.If(aiAtPoint.lt(0.50),
-    ee.Algorithms.If(isMonsoon, 'v', 's'),
-  ee.Algorithms.If(aiAtPoint.lt(0.75),
-    ee.Algorithms.If(isMonsoon, 'w', 'g'),
-  // ai ≥ 0.75
-    ee.Algorithms.If(isMonsoon, 'w', 'h')
-  )))
+// Letter with Med flipped off
+var letterMedOff = computeAridityLetter(
+  aiAtPoint, ee.Number(0), isMonsoon, coldCond, P_driest, petAnnAtPoint
+);
+// Letter with Med flipped on
+var letterMedOn  = computeAridityLetter(
+  aiAtPoint, ee.Number(1), isMonsoon, coldCond, P_driest, petAnnAtPoint
 );
 
-var medLetterMaybe = ee.String(
-  ee.Algorithms.If(
-    // rainforest cancel check
-    ee.Number(1).multiply(P_driest.gte(petAnnAtPoint.divide(24))).eq(1),
-    // if it would cancel, med turns to h
-    'h',
-    'm'
-  )
+aridBorders = aridBorders.cat(
+  ee.List(ee.Algorithms.If(nearHSMed, [
+    makeCode(letterMedOff),
+    makeCode(letterMedOn)
+  ], []))
 );
 
-dBordering = dBordering.cat(
-  addBorder(nearHS_med,
-    ee.List([
-      coldLetter.cat(medLetterMaybe).cat(summerLetter),
-      coldLetter.cat(nonMedLetter).cat(summerLetter)
-    ])
-  )
+// ─────────────────────────────────────────────────────────────────────────────
+// BOUNDARY 5 — Monsoon seasonality threshold  (P6ratio = 0.8)
+// Only relevant when AI ≥ 0.25, not Med, not coldCond
+// ─────────────────────────────────────────────────────────────────────────────
+var nearP6Monsoon = P6ratio.subtract(0.8).abs().lt(EPS_RATIO)
+                      .and(aiAtPoint.gte(0.25))
+                      .and(isMed.not())
+                      .and(coldCond.not());
+
+// Letter with Monsoon flipped off
+var letterMonsoonOff = computeAridityLetter(
+  aiAtPoint, isMed, ee.Number(0), coldCond, P_driest, petAnnAtPoint
+);
+// Letter with Monsoon flipped on
+var letterMonsoonOn  = computeAridityLetter(
+  aiAtPoint, isMed, ee.Number(1), coldCond, P_driest, petAnnAtPoint
 );
 
-// --- 3d) Monsoon boundary (P6ratio near 0.8), only when not-med ---
-var nearP6 = P6ratio.subtract(0.8).abs().lt(EPS_RATIO);
-var nearMonsoonBoundary = nearP6
-.and(aiAtPoint.gte(0.25))   // not desert
-.and(notCold)
-.and(isMed.not());
-
-dBordering = dBordering.cat(
-  addBorder(nearMonsoonBoundary,
-    ee.List([
-      coldLetter.cat(aridityNoCold).cat(summerLetter),
-      coldLetter.cat(
-        ee.String(
-          ee.Algorithms.If(isMonsoon.not(),
-            // if becoming monsoon
-            ee.Algorithms.If(ai_s, 'v',
-            ee.Algorithms.If(ai_g.or(ai_h), 'w', 'd')),
-            // if leaving monsoon
-            ee.Algorithms.If(ai_s, 's',
-            ee.Algorithms.If(ai_g, 'g',
-            ee.Algorithms.If(ai_h, 'h', 'd')))
-          )
-        )
-      ).cat(summerLetter)
-    ])
-  )
+aridBorders = aridBorders.cat(
+  ee.List(ee.Algorithms.If(nearP6Monsoon, [
+    makeCode(letterMonsoonOff),
+    makeCode(letterMonsoonOn)
+  ], []))
 );
 
-// --- 3e) Rainforest-cancel boundary itself (m ↔ h) ---
-var nearRainCancel = notCold
-  .and(aridityWithColdRule.compareTo('m').eq(0))
-  .and(P_driest.subtract(petAnnAtPoint.divide(24)).abs().lt(EPS_MM));
+// ─────────────────────────────────────────────────────────────────────────────
+// BOUNDARY 6 — Rainforest-cancel  (P_driest = PET_annual / 24)
+// Only fires when current class is Med (m or h from Med-cancel)
+// m ↔ h at the cancel threshold
+// ─────────────────────────────────────────────────────────────────────────────
+var inMedClass    = isMed.and(aiAtPoint.gte(0.25)).and(coldCond.not());
+var nearRainCancel = P_driest.subtract(petAnnAtPoint.divide(24)).abs().lt(EPS_MM)
+                      .and(inMedClass);
 
-dBordering = dBordering.cat(
-  addBorder(nearRainCancel,
-    ee.List([
-      coldLetter.cat('m').cat(summerLetter),
-      coldLetter.cat('h').cat(summerLetter)
-    ])
-  )
+// Letter with cancel flipped off (P_driest just below threshold → m)
+var letterCancelOff = computeAridityLetter(
+  aiAtPoint, isMed, isMonsoon, coldCond,
+  petAnnAtPoint.divide(24).subtract(EPS_MM + 1),   // JS arithmetic, not .add()
+  petAnnAtPoint
+);
+// Letter with cancel flipped on (P_driest just above threshold → h)
+var letterCancelOn  = computeAridityLetter(
+  aiAtPoint, isMed, isMonsoon, coldCond,
+  petAnnAtPoint.divide(24).add(EPS_MM + 1),         // JS arithmetic, not .add()
+  petAnnAtPoint
 );
 
-// --------------------
-// Finalize bordering list
-// --------------------
+aridBorders = aridBorders.cat(
+  ee.List(ee.Algorithms.If(nearRainCancel, [
+    makeCode(letterCancelOff),
+    makeCode(letterCancelOn)
+  ], []))
+);
+
+// ─────────────────────────────────────────────────────────────────────────────
+// BOUNDARY 7 — ColdCond toggle
+//   coldCond = warmestMonth < 15 OR coldestMonth < -20
+//   Near this boundary: '' ↔ active aridity letter
+// ─────────────────────────────────────────────────────────────────────────────
+var nearColdCondBoundary = warmestMonth.subtract(15).abs().lt(EPS_D_TEMP)
+                             .or(coldestMonth.add(20).abs().lt(EPS_D_TEMP));
+
+// Letter with coldCond forced off (aridity active)
+var letterColdOff = computeAridityLetter(
+  aiAtPoint, isMed, isMonsoon, ee.Number(0), P_driest, petAnnAtPoint
+);
+// Letter with coldCond forced on (aridity suppressed → '')
+var letterColdOn  = ee.String('');
+
+aridBorders = aridBorders.cat(
+  ee.List(ee.Algorithms.If(nearColdCondBoundary, [
+    makeCode(letterColdOff),
+    makeCode(letterColdOn)
+  ], []))
+);
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Merge aridity borders into main dBordering, then finalize
+// ─────────────────────────────────────────────────────────────────────────────
+
+// (cold-letter and summer-letter borders already populated dBordering above)
+dBordering = dBordering.cat(aridBorders);
+
+// Deduplicate, remove current code, remove empty strings
 dBordering = dBordering.distinct();
-dBordering = dBordering.removeAll(ee.List([dickinsonNow]));
+dBordering = dBordering.removeAll(ee.List([dickinsonCode]));
+dBordering = dBordering.filter(ee.Filter.neq('item', ''));
 
 var dickinsonBorderingStr = ee.String(
   ee.Algorithms.If(

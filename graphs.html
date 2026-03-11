@@ -674,7 +674,7 @@
   }
 
   // ======================================================
-  // BUILD CHART (YOUR STYLE)
+  // BUILD CHART
   // ======================================================
 
   function buildChart(months,highsF,lowsF,precipIn,highsC,lowsC,precipMM){
@@ -685,7 +685,7 @@
     const lows  = useF ? lowsF  : lowsC;
     const precip= useF ? precipIn : precipMM;
 
-    // ===== SCALE CONSTANTS (your original) =====
+    // ===== SCALE CONSTANTS =====
     let TEMP_MIN, TEMP_MAX, REF_TEMP, PRECIP_MIN, PRECIP_MAX;
 
     if (useF) {
