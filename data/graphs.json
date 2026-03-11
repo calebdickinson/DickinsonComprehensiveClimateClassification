@@ -23020,7 +23020,7 @@
       "2041-2070": {
         "annual_pet_mm": "700",
         "dickinson": "Cb1",
-        "dickinson_bordering": "Cb2 Chb1",
+        "dickinson_bordering": "Chb2",
         "koppen": "Cfb",
         "koppen_bordering": "none",
         "p_pet": "2.19",
@@ -23055,7 +23055,7 @@
       "2011-2040": {
         "annual_pet_mm": "669",
         "dickinson": "Db1",
-        "dickinson_bordering": "Db2 Dhb1",
+        "dickinson_bordering": "Dhb2",
         "koppen": "Dfb",
         "koppen_bordering": "none",
         "p_pet": "2.17",
