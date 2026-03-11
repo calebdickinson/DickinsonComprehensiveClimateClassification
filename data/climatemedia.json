@@ -543,9 +543,10 @@
 
   "Zdz1": {
     "media": [
-      "<p>No images or videos are available for this climate.</p>",
-      "<br>",
-      "<img class='three' src='../graphs/Gode3-F.png' alt='graph of Gode climate in 2041-2070'>",
+      "<a title='François-Olivier Dommergues (fo.dommergues@yahoo.fr), CC BY-SA 2.0 &lt;https://creativecommons.org/licenses/by-sa/2.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Lake_Logipi-4.jpg'><img alt='Lake Logipi-4' src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Lake_Logipi-4.jpg/2048px-Lake_Logipi-4.jpg?_=20120511163827'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Lake_Logipi-4.jpg'>François-Olivier Dommergues</a>, <a href='https://creativecommons.org/licenses/by-sa/2.0'>CC BY-SA 2.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<img class='three' src='../graphs/SugutaValley1-F.png' alt='graph of Suguta Valley climate in 1981-2010'>",
       "<img class='three' src='../graphs/PuntoFijo4-F.png' alt='graph of Punto Fijo climate in 2071-2100'>",
       "<img class='three' src='../graphs/Barranquilla4-F.png' alt='graph of Barranguilla climate in 2071-2100'>"
     ]
@@ -593,7 +594,7 @@
       "<p>No images or videos are available for this climate.</p>",
       "<br>",
       "<img class='three' src='../graphs/Kakuma4-F.png' alt='graph of Kakuma climate in 2071-2100'>",
-      "<img class='three' src='../graphs/Bardera4-F.png' alt='graph of Bardera climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Bardere4-F.png' alt='graph of Bardere climate in 2071-2100'>",
       "<img class='three' src='../graphs/Djibouti4-F.png' alt='graph of Djibouti climate in 2071-2100'>"
     ]
   },

@@ -153,10 +153,12 @@
   "Avz1": {
     "1": [
       "Bamako, Mali",
+      "N'Djamena, Chad",
       "Ouagadougou, Burkina Faso"
     ],
     "2": [
       "Bamako, Mali",
+      "N'Djamena, Chad",
       "Ouagadougou, Burkina Faso"
     ],
     "3": [
@@ -2966,6 +2968,7 @@
     ],
     "3": [
       "Bamako, Mali",
+      "N'Djamena, Chad",
       "Niamey, Niger",
       "Ouagadougou, Burkina Faso"
     ],
@@ -3107,6 +3110,7 @@
     "3": [],
     "4": [
       "Managua, Nicaragua",
+      "N'Djamena, Chad",
       "Ouagadougou, Burkina Faso"
     ]
   },
