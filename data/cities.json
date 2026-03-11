@@ -25,7 +25,6 @@
       "Concepción, Chile",
       "Lisbon, Portugal",
       "Lompoc, California, United States",
-      "Maseru, Lesotho",
       "San Francisco, California, United States",
       "Santa Cruz de Tenerife, Spain"
     ],
@@ -42,7 +41,6 @@
       "Bari, Italy",
       "Beirut, Lebanon",
       "Benghazi, Libya",
-      "Gaborone, Botswana",
       "Palermo, Italy",
       "Riverside, California, United States",
       "Seville, Spain",
@@ -55,7 +53,6 @@
       "Bari, Italy",
       "Beirut, Lebanon",
       "Casablanca, Morocco",
-      "Gaborone, Botswana",
       "Los Angeles, California, United States",
       "Naples, Italy",
       "Palermo, Italy",
@@ -68,7 +65,6 @@
       "Valletta, Malta"
     ],
     "3": [
-      "Gaborone, Botswana",
       "Hanga Roa, Easter Island, Chile",
       "Jerusalem, Israel",
       "Los Angeles, California, United States",
@@ -84,7 +80,6 @@
       "Bilbao, Spain",
       "Lisbon, Portugal",
       "Lompoc, California, United States",
-      "Maseru, Lesotho",
       "Nanaimo, British Columbia, Canada",
       "Perth, Australia",
       "Portland, Oregon, United States",
@@ -122,7 +117,6 @@
       "Algiers, Algeria",
       "Bari, Italy",
       "Beirut, Lebanon",
-      "Gaborone, Botswana",
       "Grazalema, Spain",
       "Istanbul, Türkiye",
       "Jerusalem, Israel",
@@ -151,18 +145,18 @@
       "Mossoró, Brazil",
       "Tuxtla Gutiérrez, Mexico"
     ],
-    "3": [],
+    "3": [
+      "Maputo, Mozambique"
+    ],
     "4": []
   },
   "Avz1": {
     "1": [
       "Bamako, Mali",
-      "N'Djamena, Chad",
       "Ouagadougou, Burkina Faso"
     ],
     "2": [
       "Bamako, Mali",
-      "N'Djamena, Chad",
       "Ouagadougou, Burkina Faso"
     ],
     "3": [
@@ -241,6 +235,7 @@
   },
   "Cc2": {
     "1": [
+      "Attu Station, Alaska",
       "Macquarie Island Station, Australia"
     ],
     "2": [
@@ -426,7 +421,7 @@
       "Bangkok, Thailand",
       "Bissau, Guinea-Bissau",
       "Chennai, India",
-      "Cox’s Bāzār, Bangladesh",
+      "Cox's Bāzār, Bangladesh",
       "Darwin, Australia",
       "Dhaka, Bangladesh",
       "Fortaleza, Brasil",
@@ -451,7 +446,7 @@
       "Bengaluru, India",
       "Brasília, Brasil",
       "Conakry, Guinea",
-      "Cox’s Bāzār, Bangladesh",
+      "Cox's Bāzār, Bangladesh",
       "Dhaka, Bangladesh",
       "Guadalajara, Mexico",
       "Hong Kong, China",
@@ -505,7 +500,7 @@
       "Bengaluru, India",
       "Bissau, Guinea-Bissau",
       "Conakry, Guinea",
-      "Cox’s Bāzār, Bangladesh",
+      "Cox's Bāzār, Bangladesh",
       "Darwin, Australia",
       "El Tigre, Venezuela",
       "Fortaleza, Brasil",
@@ -525,7 +520,7 @@
       "Bengaluru, India",
       "Bissau, Guinea-Bissau",
       "Conakry, Guinea",
-      "Cox’s Bāzār, Bangladesh",
+      "Cox's Bāzār, Bangladesh",
       "El Tigre, Venezuela",
       "Fortaleza, Brasil",
       "Lagos, Nigeria",
@@ -547,7 +542,6 @@
       "Conakry, Guinea",
       "Guadalajara, Mexico",
       "Kinshasa, Democratic Republic of the Congo",
-      "Maputo, Mozambique",
       "Monrovia, Liberia",
       "Nampula, Mozambique",
       "Saint-Denis, Réunion, France",
@@ -558,7 +552,7 @@
   },
   "Aha2": {
     "1": [
-      "Abidjan, Côte d’Ivoire",
+      "Abidjan, Côte d'Ivoire",
       "Bangui, Central African Republic",
       "Belmopan, Belize",
       "Belém, Brasil",
@@ -591,7 +585,7 @@
       "Valledupar, Colombia"
     ],
     "2": [
-      "Abidjan, Côte d’Ivoire",
+      "Abidjan, Côte d'Ivoire",
       "Bandung, Indonesia",
       "Bangui, Central African Republic",
       "Belmopan, Belize",
@@ -626,7 +620,7 @@
       "Yaoundé, Cameroon"
     ],
     "3": [
-      "Abidjan, Côte d’Ivoire",
+      "Abidjan, Côte d'Ivoire",
       "Bandung, Indonesia",
       "Hilo, Hawaii, United States",
       "Kisangani, Democratic Republic of the Congo",
@@ -669,7 +663,7 @@
       "Singapore"
     ],
     "4": [
-      "Abidjan, Côte d’Ivoire",
+      "Abidjan, Côte d'Ivoire",
       "Asunción, Paraguay",
       "Hamilton, Bermuda, United Kingdom",
       "Libreville, Gabon",
@@ -691,6 +685,7 @@
       "Tórshavn, Faroe Islands"
     ],
     "2": [
+      "Attu Station, Alaska",
       "La Paz, Bolivia",
       "Punta Arenas, Chile",
       "Reykjavík, Iceland",
@@ -700,6 +695,7 @@
       "Ushuaia, Argentina"
     ],
     "3": [
+      "Attu Station, Alaska",
       "Punta Arenas, Chile",
       "St. Paul, Alaska, United States",
       "Stanley, Falkland Islands",
@@ -809,7 +805,8 @@
       "Dodge City, Kansas, United States",
       "Provo, Utah, United States",
       "Pueblo, Colorado, United States",
-      "Salt Lake City, Utah, United States"
+      "Salt Lake City, Utah, United States",
+      "Yerevan, Armenia"
     ],
     "2": [
       "Billings, Montana, United States",
@@ -925,7 +922,8 @@
       "Payson, Arizona, United States",
       "Pueblo, Colorado, United States",
       "Salt Lake City, Utah, United States",
-      "Tbilisi, Georgia"
+      "Tbilisi, Georgia",
+      "Yerevan, Armenia"
     ],
     "3": [
       "Cheyenne, Wyoming, United States",
@@ -1005,6 +1003,7 @@
     "3": [
       "Bethel, Alaska, United States",
       "Nome, Alaska, United States",
+      "Petropavlovsk-Kamchatsky, Russia",
       "Tromsø, Norway",
       "Valdez, Alaska, United States"
     ],
@@ -1038,6 +1037,7 @@
       "New York City, New York, United States",
       "Omaha, Nebraska, United States",
       "Pittsburgh, Pennsylvania, United States",
+      "Sapporo, Japan",
       "Syracuse, New York, United States",
       "Toronto, Ontario, Canada"
     ],
@@ -1063,6 +1063,7 @@
       "Québec City, Québec, Canada",
       "Riga, Latvia",
       "Saint Petersburg, Russia",
+      "Sapporo, Japan",
       "Stockholm, Sweden",
       "Summerside, Prince Edward Island, Canada",
       "Syracuse, New York, United States",
@@ -1086,7 +1087,8 @@
     ],
     "4": [
       "Churchill, Manitoba, Canada",
-      "Murmansk, Russia"
+      "Murmansk, Russia",
+      "Petropavlovsk-Kamchatsky, Russia"
     ]
   },
   "Cha2": {
@@ -1240,7 +1242,8 @@
       "Pueblo, Colorado, United States",
       "Salt Lake City, Utah, United States",
       "Tbilisi, Georgia",
-      "Volgograd, Russia"
+      "Volgograd, Russia",
+      "Yerevan, Armenia"
     ],
     "4": [
       "Bozeman, Montana, United States",
@@ -1298,6 +1301,7 @@
       "Moscow, Russia",
       "Ottawa, Ontario, Canada",
       "Québec City, Québec, Canada",
+      "Sapporo, Japan",
       "Summerside, Prince Edward Island, Canada"
     ],
     "4": [
@@ -1378,6 +1382,7 @@
       "Pittsburgh, Pennsylvania, United States",
       "Québec City, Québec, Canada",
       "Richmond, Virginia, United States",
+      "Sapporo, Japan",
       "Sarajevo, Bosnia and Herzegovina",
       "Springfield, Missouri, United States",
       "Syracuse, New York, United States",
@@ -1632,6 +1637,7 @@
       "Reykjavík, Iceland"
     ],
     "4": [
+      "Attu Station, Alaska",
       "Longyearbyen, Svalbard, Norway",
       "Reykjavík, Iceland",
       "St. Paul, Alaska, United States",
@@ -1694,7 +1700,6 @@
       "Grazalema, Spain",
       "Istanbul, Türkiye",
       "Jerusalem, Israel",
-      "Maseru, Lesotho",
       "Medford, Oregon, United States",
       "Pendleton, Oregon, United States",
       "Rome, Italy",
@@ -1704,7 +1709,6 @@
     "2": [
       "Bellingham, Washington, United States",
       "Bend, Oregon, United States",
-      "Maseru, Lesotho",
       "Nanaimo, British Columbia, Canada",
       "Portland, Oregon, United States",
       "Seattle, Washington, United States"
@@ -2033,7 +2037,6 @@
   "Bdz1": {
     "1": [
       "Aswan, Egypt",
-      "Faya-Largeau, Chad",
       "Hermosillo, Mexico",
       "Karachi, Pakistan",
       "Tucson, Arizona, United States"
@@ -2070,7 +2073,6 @@
   },
   "Bdz2": {
     "1": [
-      "Adrar, Algeria",
       "Baghdad, Iraq",
       "Basra, Iraq",
       "Dubai, United Arab Emirates",
@@ -2083,7 +2085,6 @@
     "2": [
       "Aswan, Egypt",
       "Baghdad, Iraq",
-      "Faya-Largeau, Chad",
       "Lake Havasu City, Arizona, United States",
       "Las Vegas, Nevada, United States",
       "Multan, Pakistan",
@@ -2276,12 +2277,14 @@
       "Bodø, Norway",
       "Juneau, Alaska, United States",
       "Kodiak, Alaska, United States",
+      "Petropavlovsk-Kamchatsky, Russia",
       "Reykjavík, Iceland",
       "Tromsø, Norway",
       "Ushuaia, Argentina",
       "Valdez, Alaska, United States"
     ],
     "2": [
+      "Petropavlovsk-Kamchatsky, Russia",
       "Ísafjörður, Iceland"
     ],
     "3": [
@@ -2371,12 +2374,10 @@
   "BdX": {
     "1": [],
     "2": [
-      "Adrar, Algeria",
       "Basra, Iraq",
       "Furnace Creek, California, United States"
     ],
     "3": [
-      "Adrar, Algeria",
       "Baghdad, Iraq",
       "Basra, Iraq",
       "Furnace Creek, California, United States",
@@ -2384,7 +2385,6 @@
       "Riyadh, Saudi Arabia"
     ],
     "4": [
-      "Adrar, Algeria",
       "Ashgabat, Turkmenistan",
       "Baghdad, Iraq",
       "Furnace Creek, California, United States",
@@ -2397,6 +2397,7 @@
   "Csa1": {
     "1": [
       "Ankara, Türkiye",
+      "Maseru, Lesotho",
       "Payson, Arizona, United States"
     ],
     "2": [
@@ -2630,10 +2631,12 @@
   },
   "Cmz1": {
     "1": [
-      "Erbil, Iraq"
+      "Erbil, Iraq",
+      "Tehran, Iran"
     ],
     "2": [
       "Shiraz, Iran",
+      "Tehran, Iran",
       "Weiser, Idaho, United States"
     ],
     "3": [
@@ -2659,13 +2662,15 @@
       "Erbil, Iraq"
     ],
     "3": [
+      "Tehran, Iran",
       "Weiser, Idaho, United States"
     ],
     "4": [
       "Boise, Idaho, United States",
       "Dushanbe, Tajikistan",
       "Pendleton, Oregon, United States",
-      "Spokane, Washington, United States"
+      "Spokane, Washington, United States",
+      "Tehran, Iran"
     ]
   },
   "Dda1": {
@@ -2739,7 +2744,8 @@
     "4": [
       "Billings, Montana, United States",
       "Missoula, Montana, United States",
-      "Pierre, South Dakota, United States"
+      "Pierre, South Dakota, United States",
+      "Yerevan, Armenia"
     ]
   },
   "Dgz1": {
@@ -2845,7 +2851,8 @@
       "Chihuahua, Mexico"
     ],
     "4": [
-      "Chihuahua, Mexico"
+      "Chihuahua, Mexico",
+      "Gaborone, Botswana"
     ]
   },
   "Zwz1": {
@@ -2923,17 +2930,21 @@
   },
   "Bva2": {
     "1": [
-      "Chihuahua, Mexico"
+      "Chihuahua, Mexico",
+      "Gaborone, Botswana"
     ],
     "2": [
-      "Chihuahua, Mexico"
+      "Chihuahua, Mexico",
+      "Gaborone, Botswana"
     ],
     "3": [
+      "Gaborone, Botswana",
       "Harare, Zimbabwe",
       "Lusaka, Zambia"
     ],
     "4": [
       "Harare, Zimbabwe",
+      "Maseru, Lesotho",
       "Mexico City, Mexico"
     ]
   },
@@ -2955,7 +2966,6 @@
     ],
     "3": [
       "Bamako, Mali",
-      "N'Djamena, Chad",
       "Niamey, Niger",
       "Ouagadougou, Burkina Faso"
     ],
@@ -2978,6 +2988,7 @@
     "1": [],
     "2": [],
     "3": [
+      "Maseru, Lesotho",
       "Mexico City, Mexico"
     ],
     "4": []
@@ -3096,7 +3107,6 @@
     "3": [],
     "4": [
       "Managua, Nicaragua",
-      "N'Djamena, Chad",
       "Ouagadougou, Burkina Faso"
     ]
   },
@@ -3161,7 +3171,6 @@
       "Aswan, Egypt",
       "Djibouti, Djibouti",
       "Dubai, United Arab Emirates",
-      "Faya-Largeau, Chad",
       "Jeddah, Saudi Arabia",
       "Kayes, Mali",
       "Khartoum, Sudan",
@@ -3185,7 +3194,6 @@
       "Aswan, Egypt",
       "Basra, Iraq",
       "Dubai, United Arab Emirates",
-      "Faya-Largeau, Chad",
       "Khartoum, Sudan",
       "Kiffa, Mauritania",
       "Multan, Pakistan",
@@ -3373,7 +3381,9 @@
   },
   "Cva1": {
     "1": [],
-    "2": [],
+    "2": [
+      "Maseru, Lesotho"
+    ],
     "3": [],
     "4": [
       "Lhasa, Tibet, China"
@@ -3429,14 +3439,6 @@
       "Yakutsk, Russia"
     ]
   },
-  "Agz2": {
-    "1": [],
-    "2": [],
-    "3": [],
-    "4": [
-      "Santa Cruz de la Sierra, Bolivia"
-    ]
-  },
   "Yb1": {
     "1": [
       "Kustur, Russia"
@@ -3451,6 +3453,14 @@
     "3": [],
     "4": [
       "Kustur, Russia"
+    ]
+  },
+  "Agz2": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [
+      "Santa Cruz de la Sierra, Bolivia"
     ]
   },
   "Ya1": {
@@ -3495,6 +3505,14 @@
     ],
     "4": []
   },
+  "CmX": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [
+      "Weiser, Idaho, United States"
+    ]
+  },
   "BmX": {
     "1": [],
     "2": [],
@@ -3504,14 +3522,6 @@
     "4": [
       "Dezful, Iran",
       "Erbil, Iraq"
-    ]
-  },
-  "CmX": {
-    "1": [],
-    "2": [],
-    "3": [],
-    "4": [
-      "Weiser, Idaho, United States"
     ]
   },
   "ZdX": {
