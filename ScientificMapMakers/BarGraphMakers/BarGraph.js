@@ -11,11 +11,7 @@ var PERIODS = [
 ];
 
 var CITIES = [
-  {name: 'Santa Rosa, Argentina', lat: -36.6203, lon: -64.2900},
-  {name: 'Córdoba, Argentina', lat: -31.4201, lon: -64.1888},
-  {name: 'Rosario, Argentina', lat: -32.9442, lon: -60.6505},
-  {name: 'Puerto Aysén, Chile', lat: -45.4030, lon: -72.7014},
-  {name: 'Puerto Montt, Chile', lat: -41.4693, lon: -72.9424}
+  {name: 'Kayes, Mali', lat: 14.4469, lon: -11.4443},
 ];
 
 // Month numbers 1–12
@@ -866,8 +862,8 @@ function runForPeriod(NORMAL_PERIOD, pt, LAT, elevation) {
   var ai_g = aiAtPoint.gte(0.50).and(aiAtPoint.lt(0.75));
   var ai_h = aiAtPoint.gte(0.75);
   
-  // Mediterranean seasonality
-  var isMed = HS.lt(0.4);
+  // Mediterranean seasonality — excluded from astronomical tropics
+  var isMed = HS.lt(0.4).and(inTropics.not());
   
   // Monsoon seasonality
   var isMonsoon = P6ratio.gte(0.8).and(isMed.not());
@@ -1158,9 +1154,10 @@ function runForPeriod(NORMAL_PERIOD, pt, LAT, elevation) {
   // Only relevant when AI ≥ 0.25 (not desert) and not coldCond
   // ─────────────────────────────────────────────────────────────────────────────
   var medThresh   = ee.Number(ee.Algorithms.If(isSouth, 0.6, 0.4));
-  var nearHSMed   = HS.subtract(medThresh).abs().lt(EPS_RATIO)
-                      .and(aiAtPoint.gte(0.25))
-                      .and(coldCond.not());
+  var nearHSMed = HS.subtract(medThresh).abs().lt(EPS_RATIO)
+                    .and(aiAtPoint.gte(0.25))
+                    .and(coldCond.not())
+                    .and(inTropics.not());
   
   // Letter with Med flipped off
   var letterMedOff = computeAridityLetter(

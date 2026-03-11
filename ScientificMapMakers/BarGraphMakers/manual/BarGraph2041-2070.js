@@ -1100,9 +1100,10 @@ aridBorders = aridBorders.cat(
 // Only relevant when AI ≥ 0.25 (not desert) and not coldCond
 // ─────────────────────────────────────────────────────────────────────────────
 var medThresh   = ee.Number(ee.Algorithms.If(isSouth, 0.6, 0.4));
-var nearHSMed   = HS.subtract(medThresh).abs().lt(EPS_RATIO)
+var nearHSMed = HS.subtract(medThresh).abs().lt(EPS_RATIO)
                     .and(aiAtPoint.gte(0.25))
-                    .and(coldCond.not());
+                    .and(coldCond.not())
+                    .and(inTropics.not());
 
 // Letter with Med flipped off
 var letterMedOff = computeAridityLetter(
