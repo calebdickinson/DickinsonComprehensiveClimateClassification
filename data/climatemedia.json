@@ -77,6 +77,29 @@
     ]
   },
 
+  "Gb1": {
+    "media": [
+      "<p>Cambridge Bay in May</p>",
+      "<a title='Quintin Soloviev, CC BY 4.0 &lt;https://creativecommons.org/licenses/by/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Cambridge_Bay,_Nunavut_aerial_view.jpg'><img alt='Cambridge Bay, Nunavut aerial view' src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Cambridge_Bay%2C_Nunavut_aerial_view.jpg/2048px-Cambridge_Bay%2C_Nunavut_aerial_view.jpg?_=20250210045427'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Cambridge_Bay,_Nunavut_aerial_view.jpg'>Quintin Soloviev</a>, <a href='https://creativecommons.org/licenses/by/4.0'>CC BY 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<p>Cambridge Bay in August</p>",
+      "<a title='No machine-readable author provided. CambridgeBayWeather assumed (based on copyright claims)., Public domain, via Wikimedia Commons' href='https://upload.wikimedia.org/wikipedia/commons/c/c6/Cambridge_Bay.jpg'><img alt='Cambridge Bay' src='https://upload.wikimedia.org/wikipedia/commons/c/c6/Cambridge_Bay.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Cambridge_Bay.jpg'>CambridgeBayWeather</a>, Public domain, via Wikimedia Commons",
+      "<br><br>",
+      "<img src='../graphs/CambridgeBay1-F.png' alt='graph of Cambridge Bay climate in 1981-2010'>"
+    ]
+  },
+
+  "Gb2": {
+    "media": [
+      "<a title='Ilya Varlamov, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Yakutsk_-_190228_DSC_5379.jpg'><img alt='Yakutsk - 190228 DSC 5379' src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Yakutsk_-_190228_DSC_5379.jpg/2048px-Yakutsk_-_190228_DSC_5379.jpg?_=20190313232021'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Yakutsk_-_190228_DSC_5379.jpg'>Ilya Varlamov</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<img src='../graphs/Yakutsk1-F.png' alt='graph of Yakutsk climate in 1981-2010'>"
+    ]
+  },
+
   "Ga1": {
     "media": [
       "<p>No images or videos are available for this climate.</p>",
@@ -142,6 +165,45 @@
       "<br><br>",
       "<img src='../graphs/Iqaluit1-F.png' alt='graph of Iqaluit climate in 1981-2010'>",
       "<img src='../graphs/PrudhoeBay1-F.png' alt='graph of Prudhoe Bay Station climate in 1981-2010'>"
+    ]
+  },
+
+  "Fb1": {
+    "media": [
+      "<a title='EightyOneImages, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Inuvik,_NT.jpg'><img alt='Inuvik, NT' src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Inuvik%2C_NT.jpg/2048px-Inuvik%2C_NT.jpg?_=20220622170012'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Inuvik,_NT.jpg'>EightyOneImages</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/hasc0NZSPiE?si=HGCZSVI12PD3hEdf' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img class='three' src='../graphs/Norilsk1-F.png' alt='graph of Norilsk climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Churchill1-F.png' alt='graph of Churchill climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Inuvik1-F.png' alt='graph of Inuvik climate in 1981-2010'>"
+    ]
+  },
+
+  "Fb2": {
+    "media": [
+      "<a title='Dawsonesque at English Wikipedia, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons' href='https://upload.wikimedia.org/wikipedia/commons/c/c6/Dawson_Yukon_June_07.jpg'><img alt='Dawson Yukon June 07' src='https://upload.wikimedia.org/wikipedia/commons/c/c6/Dawson_Yukon_June_07.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Dawson_Yukon_June_07.jpg'>Dawsonesque at English Wikipedia</a>, <a href='http://creativecommons.org/licenses/by-sa/3.0/'>CC BY-SA 3.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<p>Each winter, workers build and maintain an ice road on the frozen Great Slave Lake, allowing vehicles to drive directly across the ice.</p>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/LEvDRwD4Qes?si=ijXwUKCWffn5CAWL' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/N1gwwKiEXrE?si=Nfh06c86M673k60f' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img class='three' src='../graphs/DawsonCity1-F.png' alt='graph of Dawson City climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Yellowknife1-F.png' alt='graph of Yellowknife climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Ulaanbaatar1-F.png' alt='graph of Ulaanbaatar climate in 1981-2010'>"
+    ]
+  },
+
+  "Fa1": {
+    "media": [
+      "<a title='Kramst, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:%D0%A3%D1%81%D1%81%D1%83%D1%80%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D0%B1%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80.jpg'><img alt='Ussuri Boulevard in Khabarovsk, eastern Siberia' src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/%D0%A3%D1%81%D1%81%D1%83%D1%80%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D0%B1%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80.jpg/2048px-%D0%A3%D1%81%D1%81%D1%83%D1%80%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D0%B1%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80.jpg?_=20200622064410'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:%D0%A3%D1%81%D1%81%D1%83%D1%80%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D0%B1%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80.jpg'>Kramst</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<img src='../graphs/Khabarovsk1-F.png' alt='graph of Khabarovsk climate in 1981-2010'>",
+      "<img src='../graphs/Blagoveshchensk1-F.png' alt='graph of Blagoveshchensk climate in 1981-2010'>"
     ]
   },
 

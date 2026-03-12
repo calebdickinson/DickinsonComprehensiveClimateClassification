@@ -1217,7 +1217,8 @@
   "Fb1": {
     "1": [
       "Churchill, Manitoba, Canada",
-      "Inuvik, Northwest Territories, Canada"
+      "Inuvik, Northwest Territories, Canada",
+      "Norilsk, Russia"
     ],
     "2": [
       "Churchill, Manitoba, Canada",
@@ -1690,6 +1691,7 @@
     ],
     "2": [
       "Inuvik, Northwest Territories, Canada",
+      "Norilsk, Russia",
       "Yellowknife, Northwest Territories, Canada"
     ],
     "3": [
@@ -1899,7 +1901,9 @@
       "Shenyang, China"
     ],
     "2": [
-      "Irkutsk, Russia"
+      "Blagoveshchensk, Russia",
+      "Irkutsk, Russia",
+      "Khabarovsk, Russia"
     ],
     "3": [],
     "4": []
@@ -1911,8 +1915,10 @@
       "Shenyang, China"
     ],
     "3": [
+      "Blagoveshchensk, Russia",
       "Harbin, China",
-      "Irkutsk, Russia"
+      "Irkutsk, Russia",
+      "Khabarovsk, Russia"
     ],
     "4": []
   },
@@ -1924,6 +1930,7 @@
     ],
     "4": [
       "Harbin, China",
+      "Khabarovsk, Russia",
       "Shenyang, China"
     ]
   },
@@ -3094,8 +3101,12 @@
     ]
   },
   "Zdz1": {
-    "1": [],
-    "2": [],
+    "1": [
+      "Suguta Valley, Kenya"
+    ],
+    "2": [
+      "Suguta Valley, Kenya"
+    ],
     "3": [
       "Gode, Ethiopia"
     ],
@@ -3207,12 +3218,17 @@
     ]
   },
   "Fa1": {
-    "1": [],
+    "1": [
+      "Blagoveshchensk, Russia",
+      "Khabarovsk, Russia"
+    ],
     "2": [
       "Dawson City, Yukon, Canada",
       "Ulaanbaatar, Mongolia"
     ],
-    "3": [],
+    "3": [
+      "Norilsk, Russia"
+    ],
     "4": []
   },
   "Eva1": {
@@ -3550,11 +3566,13 @@
     "1": [],
     "2": [],
     "3": [
-      "Dallol, Ethiopia"
+      "Dallol, Ethiopia",
+      "Suguta Valley, Kenya"
     ],
     "4": [
       "Al Hudaydah, Yemen",
-      "Gode, Ethiopia"
+      "Gode, Ethiopia",
+      "Suguta Valley, Kenya"
     ]
   },
   "Zvz1": {
@@ -3577,5 +3595,21 @@
     ],
     "3": [],
     "4": []
+  },
+  "Eha2": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [
+      "Norilsk, Russia"
+    ]
+  },
+  "Ewz1": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [
+      "Blagoveshchensk, Russia"
+    ]
   }
 }
