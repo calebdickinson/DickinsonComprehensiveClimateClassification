@@ -315,6 +315,14 @@
     ]
   },
 
+  "Ewz1": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img src='../graphs/Blagoveshchensk4-F.png' alt='graph of Blagoveshchensk climate in 2071-2100'>"
+    ]
+  },
+
   "Edz2": {
     "unitsToggle": false,
     "media": [
@@ -438,6 +446,16 @@
     "unitsToggle": false,
     "media": [
       "<p>No images, videos, or graphs are available for this climate.</p>"
+    ]
+  },
+
+  "Ddz2": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img class='three' src='../graphs/Turpan2-F.png' alt='graph of Turpan climate in 2011-2040'>",
+      "<img class='three' src='../graphs/Karamay4-F.png' alt='graph of Karamay climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Glasgow4-F.png' alt='graph of Glasgow climate in 2071-2100'>"
     ]
   },
 
