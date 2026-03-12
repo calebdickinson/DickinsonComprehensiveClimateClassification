@@ -277,6 +277,21 @@
     ]
   },
 
+  "Ehb2": {
+    "media": [
+      "<a title='USDA Forest Service, Public domain, via Wikimedia Commons' href='https://upload.wikimedia.org/wikipedia/commons/8/8b/Moose_superior.jpg'><img alt='Moose superior' src='https://upload.wikimedia.org/wikipedia/commons/8/8b/Moose_superior.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Moose_superior.jpg'>USDA Forest Service</a>, Public domain, via Wikimedia Commons",
+      "<br><br>",
+      "<a title='Sharon Mollerus, CC BY 2.0 &lt;https://creativecommons.org/licenses/by/2.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:North_Shore_of_Lake_Superior.jpg'><img alt='North Shore of Lake Superior' src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/North_Shore_of_Lake_Superior.jpg/2048px-North_Shore_of_Lake_Superior.jpg?_=20090419115700'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:North_Shore_of_Lake_Superior.jpg'>Sharon Mollerus</a>, <a href='https://creativecommons.org/licenses/by/2.0'>CC BY 2.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/ykgGANA-zSM?si=OUdjrJL1fxss_LCb' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img src='../graphs/ThunderBay1-F.png' alt='graph of Thunder Bay climate in 1981-2010'>",
+      "<img src='../graphs/Yekaterinburg1-F.png' alt='graph of Yekaterinburg climate in 1981-2010'>"
+    ]
+  },
+
   "Ega1": {
     "media": [
       "<img src='../graphs/Fargo1-F.png' alt='graph of Fargo climate in 1981-2010'>"
