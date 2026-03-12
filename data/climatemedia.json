@@ -264,6 +264,19 @@
     ]
   },
 
+  "Eb1": {
+    "media": [
+      "<a title='Ethan Sahagun, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Banff_from_Sulphur_Mountain_2020.jpg'><img alt='Banff from Sulphur Mountain 2020' src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Banff_from_Sulphur_Mountain_2020.jpg/2048px-Banff_from_Sulphur_Mountain_2020.jpg?_=20201030003113'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Banff_from_Sulphur_Mountain_2020.jpg'>Ethan Sahagun</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/L6e5mzi3TxE?si=6lJ_-XpIeqgVwZUY' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img class='three' src='../graphs/Banff1-F.png' alt='graph of Banff climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Murmansk1-F.png' alt='graph of Murmansk climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Eureka4-F.png' alt='graph of Eureka climate in 2071-2100'>"
+    ]
+  },
+
   "Ega1": {
     "media": [
       "<img src='../graphs/Fargo1-F.png' alt='graph of Fargo climate in 1981-2010'>"
@@ -334,6 +347,22 @@
       "<img class='three' src='../graphs/St.Paul1-F.png' alt='graph of St. Paul climate in 1981-2010'>",
       "<img class='three' src='../graphs/Ísafjörður1-F.png' alt='graph of Ísafjörður climate in 1981-2010'>",
       "<img class='three' src='../graphs/PrimaveraBase4-F.png' alt='graph of Primavera Base climate in 2071-2100'>"
+    ]
+  },
+
+  "Db1": {
+    "media": [
+      "<a title='Dinker022089, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://upload.wikimedia.org/wikipedia/commons/9/9c/Douglas_Island_as_seen_from_mainland_Juneau%2C_Alaska.jpg'><img alt='Douglas Island as seen from mainland Juneau, Alaska' src='https://upload.wikimedia.org/wikipedia/commons/9/9c/Douglas_Island_as_seen_from_mainland_Juneau%2C_Alaska.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Douglas_Island_as_seen_from_mainland_Juneau,_Alaska.jpg'>Dinker022089</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<a title='Dominic Sherony, CC BY-SA 2.0 &lt;https://creativecommons.org/licenses/by-sa/2.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Ushuaia,_Argentina_(15960804941).jpg'><img alt='Ushuaia, Argentina (15960804941)' src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Ushuaia%2C_Argentina_%2815960804941%29.jpg/2048px-Ushuaia%2C_Argentina_%2815960804941%29.jpg?_=20181201045236'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Ushuaia,_Argentina_(15960804941).jpg'>Dominic Sherony</a>, <a href='https://creativecommons.org/licenses/by-sa/2.0'>CC BY-SA 2.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/W7Syb2mFM-s?si=rOZFFOcp-MRlNDMA' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img class='three' src='../graphs/Juneau1-F.png' alt='graph of Juneau climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Reykjavík1-F.png' alt='graph of Reykjavík climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Alert4-F.png' alt='graph of Alert climate in 2071-2100'>"
     ]
   },
 
@@ -434,12 +463,17 @@
 
   "Cb1": {
     "media": [
-      "<a title='kallerna, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Faroese_sheep_Sumba_1.jpg'><img alt='Faroese sheep Sumba 1' src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Faroese_sheep_Sumba_1.jpg/2048px-Faroese_sheep_Sumba_1.jpg?20190725093255'></a>",
-      "<a href='https://commons.wikimedia.org/wiki/File:Faroese_sheep_Sumba_1.jpg'>kallerna</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<p>Hoh Rainforest</p>",
+      "<a title='User:Doug Dolde, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons' href='https://upload.wikimedia.org/wikipedia/commons/3/35/BIG_LEAF_MAPLES_HOH.jpg'><img alt='BIG LEAF MAPLES HOH' src='https://upload.wikimedia.org/wikipedia/commons/3/35/BIG_LEAF_MAPLES_HOH.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:BIG_LEAF_MAPLES_HOH.jpg'>User:Doug Dolde</a>, <a href='https://creativecommons.org/licenses/by-sa/3.0'>CC BY-SA 3.0</a>, via Wikimedia Commons",
       "<br><br>",
       "<iframe width='1280' height='720' src='https://www.youtube.com/embed/cD9HEBz_QPs?si=lLPaduMZ1qThfadn' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
       "<br><br>",
-      "<img src='../graphs/Tórshavn1-F.png' alt='graph of Tórshavn climate in 1981-2010'>"
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/FO55PuDhnsw?si=MybjPs9x4f7wcuYA' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img class='three' src='../graphs/PrinceRupert1-F.png' alt='graph of Prince Rupert climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Dunedin1-F.png' alt='graph of Dunedin climate in 1981-2010'>",
+      "<img class='three' src='../graphs/PuntaArenas4-F.png' alt='graph of Punta Arenas climate in 2071-2100'>"
     ]
   },
 
