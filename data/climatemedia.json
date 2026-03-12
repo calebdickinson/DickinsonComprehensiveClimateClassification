@@ -643,6 +643,7 @@
   "AwX": {
     "media": [
       "<p>No images or videos are available for this climate.</p>",
+      "<br>",
       "<img src='../graphs/Nagpur4-F.png' alt='graph of Nagpur climate in 2071-2100'>"
     ]
   },
