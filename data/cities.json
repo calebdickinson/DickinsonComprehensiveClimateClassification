@@ -390,6 +390,7 @@
       "Johannesburg, South Africa",
       "Kathmandu, Nepal",
       "Kunming, China",
+      "Mawsynram, India",
       "Wangdue Phodrang, Bhutan"
     ]
   },
@@ -491,6 +492,7 @@
       "Antananarivo, Madagascar",
       "Cilaos, Réunion, France",
       "Johannesburg, South Africa",
+      "Mawsynram, India",
       "Wangdue Phodrang, Bhutan"
     ],
     "4": [
@@ -572,6 +574,7 @@
       "Kuala Lumpur, Malaysia",
       "Lagos, Nigeria",
       "Libreville, Gabon",
+      "Lloró, Colombia",
       "Manaus, Brasil",
       "Miami, Florida, United States",
       "Nassau, Bahamas",
@@ -606,6 +609,7 @@
       "Kisangani, Democratic Republic of the Congo",
       "Kuala Lumpur, Malaysia",
       "Libreville, Gabon",
+      "Lloró, Colombia",
       "Manaus, Brasil",
       "Mbuji-Mayi, Democratic Republic of the Congo",
       "Miami, Florida, United States",
@@ -627,6 +631,7 @@
       "Hilo, Hawaii, United States",
       "Kisangani, Democratic Republic of the Congo",
       "Libreville, Gabon",
+      "Lloró, Colombia",
       "Mbuji-Mayi, Democratic Republic of the Congo",
       "Panamá City, Panamá",
       "Port Moresby, Papua New Guinea",
@@ -746,6 +751,7 @@
       "Yushu, Qinghai, China"
     ],
     "2": [
+      "Inukjuak, Québec, Canada",
       "Nagqu, Tibet, China",
       "Nome, Alaska, United States",
       "Yushu, Qinghai, China"
@@ -1004,6 +1010,7 @@
     ],
     "3": [
       "Bethel, Alaska, United States",
+      "Inukjuak, Québec, Canada",
       "Nome, Alaska, United States",
       "Petropavlovsk-Kamchatsky, Russia",
       "Tromsø, Norway",
@@ -1077,18 +1084,23 @@
     ],
     "3": [
       "Anchorage, Alaska, United States",
+      "Chibougamau, Québec, Canada",
+      "Happy Valley–Goose Bay, Newfoundland and Labrador, Canada",
       "Helsinki, Finland",
       "Juneau, Alaska, United States",
       "Minsk, Belarus",
       "Murmansk, Russia",
       "Oslo, Norway",
       "Prince George, British Columbia, Canada",
+      "Rouyn-Noranda, Québec, Canada",
       "Saint Petersburg, Russia",
       "Terrace, British Columbia, Canada",
       "Umeå, Sweden"
     ],
     "4": [
       "Churchill, Manitoba, Canada",
+      "Inukjuak, Québec, Canada",
+      "Labrador City, Newfoundland and Labrador, Canada",
       "Murmansk, Russia",
       "Petropavlovsk-Kamchatsky, Russia"
     ]
@@ -1200,6 +1212,7 @@
   },
   "Fc2": {
     "1": [
+      "Inukjuak, Québec, Canada",
       "Iqaluit, Nunavut, Canada",
       "Prudhoe Bay, Alaska, United States"
     ],
@@ -1218,6 +1231,7 @@
     "1": [
       "Churchill, Manitoba, Canada",
       "Inuvik, Northwest Territories, Canada",
+      "Labrador City, Newfoundland and Labrador, Canada",
       "Norilsk, Russia"
     ],
     "2": [
@@ -1308,7 +1322,10 @@
       "Summerside, Prince Edward Island, Canada"
     ],
     "4": [
-      "Fairbanks, Alaska, United States"
+      "Chibougamau, Québec, Canada",
+      "Fairbanks, Alaska, United States",
+      "Happy Valley–Goose Bay, Newfoundland and Labrador, Canada",
+      "Rouyn-Noranda, Québec, Canada"
     ]
   },
   "Chz1": {
@@ -1400,23 +1417,31 @@
     ],
     "2": [
       "Fairbanks, Alaska, United States",
+      "Rouyn-Noranda, Québec, Canada",
       "Thompson, Manitoba, Canada",
       "Yekaterinburg, Russia"
     ],
     "3": [
-      "Fairbanks, Alaska, United States"
+      "Fairbanks, Alaska, United States",
+      "Labrador City, Newfoundland and Labrador, Canada"
     ],
     "4": []
   },
   "Ehb2": {
     "1": [
+      "Chibougamau, Québec, Canada",
       "Fairbanks, Alaska, United States",
+      "Happy Valley–Goose Bay, Newfoundland and Labrador, Canada",
       "Québec City, Québec, Canada",
+      "Rouyn-Noranda, Québec, Canada",
       "Thunder Bay, Ontario, Canada",
       "Yekaterinburg, Russia"
     ],
     "2": [
-      "Bethel, Alaska, United States"
+      "Bethel, Alaska, United States",
+      "Chibougamau, Québec, Canada",
+      "Happy Valley–Goose Bay, Newfoundland and Labrador, Canada",
+      "Labrador City, Newfoundland and Labrador, Canada"
     ],
     "3": [
       "Churchill, Manitoba, Canada"
@@ -3090,6 +3115,7 @@
       "Colombo, Sri Lanka",
       "Kisangani, Democratic Republic of the Congo",
       "Kuala Lumpur, Malaysia",
+      "Lloró, Colombia",
       "Mbuji-Mayi, Democratic Republic of the Congo",
       "Paramaribo, Suriname",
       "Singapore"
@@ -3266,10 +3292,12 @@
   "Cwa1": {
     "1": [
       "Córdoba, Argentina",
-      "Kunming, China"
+      "Kunming, China",
+      "Mawsynram, India"
     ],
     "2": [
-      "Johannesburg, South Africa"
+      "Johannesburg, South Africa",
+      "Mawsynram, India"
     ],
     "3": [
       "Lijiang, China"
