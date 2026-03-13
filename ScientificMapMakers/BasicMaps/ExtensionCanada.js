@@ -9,13 +9,18 @@ var canadaADM2 = ee.FeatureCollection('FAO/GAUL_SIMPLIFIED_500m/2015/level2')
     return f.simplify({maxError: 2000}); // meters
   });
   
-// 2) Admin-1 border
+// 2) Admin-1 border (FeatureCollection — needed for mask only)
 var canadaAdmin1 =
   ee.FeatureCollection('FAO/GAUL_SIMPLIFIED_500m/2015/level1')
   .filter(ee.Filter.eq('ADM0_NAME', 'Canada'))
   .map(function(f){
-    return f.simplify({maxError: 2000}); // meters
+    return f.simplify({maxError: 2000});
   });
+
+// Admin-1 border image (your custom TIF)
+var admin1RGB_Canada =
+  ee.Image('projects/ordinal-crowbar-459807-m2/assets/gaul1_canada_georef_fixed')
+    .visualize({ min: 0, max: 255 });
     
 // 3) Stable Canada land mask
 var canadaMask =
@@ -40,13 +45,6 @@ var admin2RGB_Canada =
     .visualize({
       palette: ['#888888'],
       opacity: 0.5
-    });
-
-var admin1RGB_Canada =
-  ee.Image().byte()
-    .paint(canadaAdmin1, 1, 2)
-    .visualize({
-      palette: ['#000000']
     });
 
 // 6) Composite
