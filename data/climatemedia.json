@@ -634,6 +634,28 @@
     ]
   },
 
+  "Aha2": {
+    "media": [
+      "<p>Compare the extent of Aha2 in 1981-2010 with the extent of Köppen's tropical rainforest climate.</p>",
+      "<a href='../images/KoppenAf.png'><img src='../images/KoppenAf.png' alt='map of Koppen tropical rainforest climate' style='max-width:700px;'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Koppen-Geiger_Map_Af_present.svg'>Beck, H.E., Zimmermann, N. E., McVicar, T. R., Vergopolan, N., Berg, A., &amp; Wood, E. F.</a>, <a href='https://creativecommons.org/licenses/by/4.0'>CC BY 4.0</a>, via Wikimedia Commons",
+      "<br>",
+      "<a href='../images/maps/Aha2-map1.png'><img src='../images/maps/Aha2-map1.png' alt='map of Dickinson Aha2 climate' style='max-width:700px;'></a>",
+      "<br><br>",
+      "<a title='© Vyacheslav Argenberg, CC BY 4.0 &lt;https://creativecommons.org/licenses/by/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Palawan,_Tropical_jungle_rainforest.jpg'><img alt='Primary virgin tropical rainforest in Palawan, Philippines.' src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Palawan%2C_Tropical_jungle_rainforest.jpg/2048px-Palawan%2C_Tropical_jungle_rainforest.jpg?_=20200617161026'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Palawan,_Tropical_jungle_rainforest.jpg'>© Vyacheslav Argenberg</a>, <a href='https://creativecommons.org/licenses/by/4.0'>CC BY 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<a title='Chris Parker, CC BY-SA 2.0 &lt;https://creativecommons.org/licenses/by-sa/2.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Arara-Manaus-Amazon.jpg'><img alt='Arara-Manaus-Amazon' src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Arara-Manaus-Amazon.jpg/2048px-Arara-Manaus-Amazon.jpg?_=20180126151655'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Arara-Manaus-Amazon.jpg'>Chris Parker</a>, <a href='https://creativecommons.org/licenses/by-sa/2.0'>CC BY-SA 2.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/GfAvK8Z2SEE?si=Ezd_tn6zrdVo6F5_' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img class='three' src='../graphs/Manaus1-F.png' alt='graph of Manaus climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Kisangani1-F.png' alt='graph of Kisangani climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Singapore1-F.png' alt='graph of Singapore climate in 1981-2010'>"
+    ]
+  },
+
   "AdX": {
     "media": [
       "<img src='../graphs/Basrah4-F.png' alt='graph of Basrah climate in 2071-2100'>"
