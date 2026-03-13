@@ -84,11 +84,11 @@
     <div class="legend">
       <div class="legend-row">
         <div class="swatch" style="background: var(--temp);"></div>
-        <span>Average max. and min. temperatures in °F</span>
+        <span id="tempLegend">Average max. and min. temperatures in °F</span>
       </div>
       <div class="legend-row">
         <div class="swatch" style="background: var(--precip);"></div>
-        <span>Precipitation totals in inches</span>
+        <span id="precipLegend">Precipitation totals in inches</span>
       </div>
     </div>
     
@@ -623,6 +623,12 @@
 
       PRECIP_MIN = 0;
       PRECIP_MAX = 10;
+
+      document.getElementById("tempLegend").textContent =
+        "Average max. and min. temperatures in °F";
+
+      document.getElementById("precipLegend").textContent =
+        "Precipitation totals in inches";
     }
 
     function useCelsius() {
@@ -636,6 +642,12 @@
 
       PRECIP_MIN = 0;
       PRECIP_MAX = 254;
+
+      document.getElementById("tempLegend").textContent =
+        "Average max. and min. temperatures in °C";
+
+      document.getElementById("precipLegend").textContent =
+        "Precipitation totals in mm";
     }
 
     // ============================
