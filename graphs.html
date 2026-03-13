@@ -680,6 +680,14 @@
   function buildChart(months,highsF,lowsF,precipIn,highsC,lowsC,precipMM){
 
     const useF=currentUnit==="F";
+    const TEMP_UNIT = useF ? "°F" : "°C";
+    const PRECIP_UNIT = useF ? "inches" : "mm";
+
+    document.getElementById("tempLegend").textContent =
+      `Average max. and min. temperatures in ${TEMP_UNIT}`;
+
+    document.getElementById("precipLegend").textContent =
+      `Precipitation totals in ${PRECIP_UNIT}`;
 
     const highs = useF ? highsF : highsC;
     const lows  = useF ? lowsF  : lowsC;
