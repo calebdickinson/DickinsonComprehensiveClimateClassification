@@ -357,7 +357,8 @@
     buildChart(
       months,
       highsF,lowsF,precipIn,
-      highsC,lowsC,precipMM
+      highsC,lowsC,precipMM,
+      pdata.stretch_precip ?? 0
     );
 
   // ----- repair Dickinson bordering -----
@@ -677,7 +678,7 @@
   // BUILD CHART
   // ======================================================
 
-  function buildChart(months,highsF,lowsF,precipIn,highsC,lowsC,precipMM){
+  function buildChart(months,highsF,lowsF,precipIn,highsC,lowsC,precipMM,stretchPercip){
 
     const useF=currentUnit==="F";
     const TEMP_UNIT = useF ? "°F" : "°C";
@@ -713,7 +714,6 @@
     // ===== GEOMETRY =====
 
     const svgWidth = 620;
-    const stretchPercip = 0;
     const svgHeight = 620 + stretchPercip;
 
     const margin = { top:100, right:20, bottom:32, left:20 };
