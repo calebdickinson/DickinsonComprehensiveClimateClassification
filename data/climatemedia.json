@@ -443,7 +443,11 @@
       "<a title='English:  NPS, Public domain, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Sunset_falls_across_the_beautiful_Flint_Hills_(f0f6c731-1dd8-b71b-0b88-d326127c9973).jpg'><img alt='Sunset falls across the beautiful Flint Hills (f0f6c731-1dd8-b71b-0b88-d326127c9973)' src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Sunset_falls_across_the_beautiful_Flint_Hills_%28f0f6c731-1dd8-b71b-0b88-d326127c9973%29.jpg/2048px-Sunset_falls_across_the_beautiful_Flint_Hills_%28f0f6c731-1dd8-b71b-0b88-d326127c9973%29.jpg?20240516212133'></a>",
       "<a href='https://commons.wikimedia.org/wiki/File:Sunset_falls_across_the_beautiful_Flint_Hills_(f0f6c731-1dd8-b71b-0b88-d326127c9973).jpg'>English:  NPS</a>, Public domain, via Wikimedia Commons",
       "<br><br>",
-      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/cng88e3VQQg?si=W57bK_lItW9lgoz6' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>"
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/cng88e3VQQg?si=W57bK_lItW9lgoz6' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img class='three' src='../graphs/Hays1-F.png' alt='graph of Hays climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Minneapolis3-F.png' alt='graph of Minneapolis climate in 2041-2070'>",
+      "<img class='three' src='../graphs/Inuvik4-F.png' alt='graph of Inuvik climate in 2071-2100'>"
     ]
   },
 
