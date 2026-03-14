@@ -453,9 +453,14 @@
 
   "Dsa2": {
     "media": [
+      "<a title='VitaleBaby, Public domain, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:BuffaloBayAntelope.jpg'><img alt='BuffaloBayAntelope' src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/BuffaloBayAntelope.jpg/1920px-BuffaloBayAntelope.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:BuffaloBayAntelope.jpg'>VitaleBaby</a>, Public domain, via Wikimedia Commons",
+      "<br><br>",
       "<iframe width='1280' height='720' src='https://www.youtube.com/embed/a2kUeLBHYKg?si=cI7HSKuyWL8fHCUj' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
       "<br><br>",
-      "<img src='../graphs/SaltLakeCity1-F.png' alt='graph of Salt Lake City climate in 1981-2010'>"
+      "<img class='three' src='../graphs/Yerevan1-F.png' alt='graph of Yerevan climate in 1981-2010'>",
+      "<img class='three' src='../graphs/SaltLakeCity1-F.png' alt='graph of Salt Lake City climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Edmonton4-F.png' alt='graph of Edmonton climate in 2071-2100'>"
     ]
   },
 
