@@ -294,6 +294,12 @@
 
   "Ega1": {
     "media": [
+      "<a title='formulanone, CC BY-SA 2.0 &lt;https://creativecommons.org/licenses/by-sa/2.0&gt;, via Wikimedia Commons' href='https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Downtown_Fargo_Aerial_-_Facing_Southeast_%2851009704407%29.jpg/1920px-Downtown_Fargo_Aerial_-_Facing_Southeast_%2851009704407%29.jpg'><img alt='Downtown Fargo Aerial - Facing Southeast (51009704407)' src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Downtown_Fargo_Aerial_-_Facing_Southeast_%2851009704407%29.jpg/1920px-Downtown_Fargo_Aerial_-_Facing_Southeast_%2851009704407%29.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Downtown_Fargo_Aerial_-_Facing_Southeast_(51009704407).jpg'>formulanone</a>, <a href='https://creativecommons.org/licenses/by-sa/2.0'>CC BY-SA 2.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/ngPTUczxwQ8?si=F9kP9qVetENkxItL' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img src='../graphs/Bismark1-F.png' alt='graph of Bismark climate in 1981-2010'>",
       "<img src='../graphs/Fargo1-F.png' alt='graph of Fargo climate in 1981-2010'>"
     ]
   },
