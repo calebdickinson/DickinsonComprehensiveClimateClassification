@@ -477,6 +477,16 @@
     ]
   },
 
+  "Dgz1": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img class='three' src='../graphs/GrandIsland3-F.png' alt='graph of Grand Island climate in 2041-2070'>",
+      "<img class='three' src='../graphs/Omaha3-F.png' alt='graph of Omaha climate in 2041-2070'>",
+      "<img class='three' src='../graphs/Yekaterinburg4-F.png' alt='graph of Yekaterinburg climate in 2071-2100'>"
+    ]
+  },
+
   "Dsz2": {
     "unitsToggle": false,
     "media": [
@@ -547,7 +557,12 @@
 
   "Chb2": {
     "media": [
-      "<img src='../graphs/Dublin1-F.png' alt='graph of Dublin climate in 1981-2010'>"
+      "<a title='Track at Culloden Plantation, Sherwood Pines Forest Park by Colin Park, CC BY-SA 2.0 &lt;https://creativecommons.org/licenses/by-sa/2.0&gt;, via Wikimedia Commons' href='https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Track_at_Culloden_Plantation%2C_Sherwood_Pines_Forest_Park_-_geograph.org.uk_-_6890913.jpg/3840px-Track_at_Culloden_Plantation%2C_Sherwood_Pines_Forest_Park_-_geograph.org.uk_-_6890913.jpg'><img alt='Track at Culloden Plantation, Sherwood Pines Forest Park' src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Track_at_Culloden_Plantation%2C_Sherwood_Pines_Forest_Park_-_geograph.org.uk_-_6890913.jpg/3840px-Track_at_Culloden_Plantation%2C_Sherwood_Pines_Forest_Park_-_geograph.org.uk_-_6890913.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Track_at_Culloden_Plantation,_Sherwood_Pines_Forest_Park_-_geograph.org.uk_-_6890913.jpg'>Track at Culloden Plantation, Sherwood Pines Forest Park by Colin Park</a>, <a href='https://creativecommons.org/licenses/by-sa/2.0'>CC BY-SA 2.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<img class='three' src='../graphs/Vancouver1-F.png' alt='graph of Vancouver climate in 1981-2010'>",
+      "<img class='three' src='../graphs/London1-F.png' alt='graph of London climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Reykjavík4-F.png' alt='graph of Reykjavík climate in 2071-2100'>"
     ]
   },
 
