@@ -321,6 +321,24 @@
     ]
   },
 
+  "Eha2": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img class='three' src='../graphs/Vorogovo3-F.png' alt='graph of Vorogovo climate in 2041-2070'>",
+      "<img class='three' src='../graphs/Tomsk3-F.png' alt='graph of Tomsk climate in 2041-2070'>",
+      "<img class='three' src='../graphs/Norilsk4-F.png' alt='graph of Norilsk climate in 2071-2100'>"
+    ]
+  },
+
+  "Ehz1": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img src='../graphs/Vorogovo4-F.png' alt='graph of Vorogovo climate in 2071-2100'>"
+    ]
+  },
+
   "Ewz1": {
     "media": [
       "<p>No images or videos are available for this climate.</p>",
@@ -474,6 +492,15 @@
       "<img class='three' src='../graphs/GrandJunction1-F.png' alt='graph of Grand Junction climate in 1981-2010'>",
       "<img class='three' src='../graphs/Hami1-F.png' alt='graph of Hami climate in 1981-2010'>",
       "<img class='three' src='../graphs/Jiayuguan4-F.png' alt='graph of Jiayuguan climate in 2071-2100'>"
+    ]
+  },
+
+  "Dhz1": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img src='../graphs/DesMoines3-F.png' alt='graph of Des Moines climate in 2041-2070'>",
+      "<img src='../graphs/Tomsk4-F.png' alt='graph of Tomsk climate in 2071-2100'>"
     ]
   },
 
@@ -703,6 +730,14 @@
       "<img class='three' src='../graphs/Manaus1-F.png' alt='graph of Manaus climate in 1981-2010'>",
       "<img class='three' src='../graphs/Kisangani1-F.png' alt='graph of Kisangani climate in 1981-2010'>",
       "<img class='three' src='../graphs/Singapore1-F.png' alt='graph of Singapore climate in 1981-2010'>"
+    ]
+  },
+
+  "Ahz2": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img src='../graphs/Nanning4-F.png' alt='graph of Nanning climate in 2071-2100'>"
     ]
   },
 
