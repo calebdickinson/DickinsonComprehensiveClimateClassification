@@ -774,7 +774,16 @@
 
   "BdX": {
     "media": [
-      "<img src='../graphs/FurnaceCreek4-F.png' alt='graph of Furnace Creek climate in 2071-2100'>"
+      "<a title='Ken Lund from Reno, Nevada, USA, CC BY-SA 2.0 &lt;https://creativecommons.org/licenses/by-sa/2.0&gt;, via Wikimedia Commons' href='https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Furnace_Creek%2C_Death_Valley_National_Park%2C_California_%2815083151153%29.jpg/3840px-Furnace_Creek%2C_Death_Valley_National_Park%2C_California_%2815083151153%29.jpg'><img alt='Furnace Creek, Death Valley National Park, California (15083151153)' src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Furnace_Creek%2C_Death_Valley_National_Park%2C_California_%2815083151153%29.jpg/3840px-Furnace_Creek%2C_Death_Valley_National_Park%2C_California_%2815083151153%29.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Furnace_Creek,_Death_Valley_National_Park,_California_(15083151153).jpg'>Ken Lund from Reno, Nevada, USA</a>, <a href='https://creativecommons.org/licenses/by-sa/2.0'>CC BY-SA 2.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<img class='three' src='../graphs/Ashgabat4-F.png' alt='graph of Ashgabat climate in 2071-2100'>",
+      "<img class='three' src='../graphs/LasVegas4-F.png' alt='graph of Las Vegas climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Phoenix4-F.png' alt='graph of Phoenix climate in 2071-2100'>",
+      "<br><br>",
+      "<img class='three' src='../graphs/LakeHavasuCity4-F.png' alt='graph of Lake Havasu City climate in 2071-2100'>",
+      "<img class='three' src='../graphs/FurnaceCreek4-F.png' alt='graph of Furnace Creek climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Baghdad4-F.png' alt='graph of Baghdad climate in 2071-2100'>"
     ]
   },
 
@@ -784,6 +793,18 @@
       "<br>",
       "<img src='../graphs/Erbil4-F.png' alt='graph of Erbil climate in 2071-2100'>",
       "<img src='../graphs/Dezful4-F.png' alt='graph of Dezful climate in 2071-2100'>"
+    ]
+  },
+
+  "BwX": {
+    "media": [
+      "<img src='../graphs/Sheikhupura4-F.png' alt='graph of Sheikhupura climate in 2071-2100'>"
+    ]
+  },
+
+  "BvX": {
+    "media": [
+      "<img src='../graphs/Faisalabad4-F.png' alt='graph of Faisalabad climate in 2071-2100'>"
     ]
   },
 
@@ -837,6 +858,8 @@
 
   "AsX": {
     "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
       "<img src='../graphs/Daraban4-F.png' alt='graph of Daraban climate in 2071-2100'>",
       "<img src='../graphs/ShahNikdar4-F.png' alt='graph of Shah Nikdar climate in 2071-2100'>"
     ]
@@ -844,7 +867,11 @@
 
   "AdX": {
     "media": [
-      "<img src='../graphs/Basrah4-F.png' alt='graph of Basrah climate in 2071-2100'>"
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img class='three' src='../graphs/Dubai4-F.png' alt='graph of Dubai climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Riyadh4-F.png' alt='graph of Riyadh climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Basra4-F.png' alt='graph of Basra climate in 2071-2100'>"
     ]
   },
 
@@ -853,6 +880,15 @@
       "<p>No images or videos are available for this climate.</p>",
       "<br>",
       "<img src='../graphs/Nagpur4-F.png' alt='graph of Nagpur climate in 2071-2100'>"
+    ]
+  },
+
+  "AvX": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img src='../graphs/Okara4-F.png' alt='graph of Okara climate in 2071-2100'>",
+      "<img src='../graphs/Tonk4-F.png' alt='graph of Tonk climate in 2071-2100'>"
     ]
   },
 

@@ -2002,7 +2002,8 @@
     "2": [],
     "3": [
       "Delhi, India",
-      "Lahore, Pakistan"
+      "Lahore, Pakistan",
+      "Sheikhupura, Pakistan"
     ],
     "4": [
       "Delhi, India",
@@ -2528,11 +2529,14 @@
     ],
     "2": [
       "Daraban, Pakistan",
+      "Faisalabad, Pakistan",
       "Jalalabad, Afghanistan",
+      "Okara, Pakistan",
       "Shah Nikdar, Pakistan"
     ],
     "3": [
       "Daraban, Pakistan",
+      "Faisalabad, Pakistan",
       "Jalalabad, Afghanistan",
       "Peshawar, Pakistan",
       "Shah Nikdar, Pakistan",
@@ -2878,7 +2882,8 @@
     "1": [],
     "2": [
       "Hafizabad, Pakistan",
-      "Peshawar, Pakistan"
+      "Peshawar, Pakistan",
+      "Sheikhupura, Pakistan"
     ],
     "3": [
       "Hafizabad, Pakistan"
@@ -2940,7 +2945,11 @@
   "Bvz1": {
     "1": [
       "Delhi, India",
-      "Lahore, Pakistan"
+      "Faisalabad, Pakistan",
+      "Lahore, Pakistan",
+      "Okara, Pakistan",
+      "Sheikhupura, Pakistan",
+      "Tonk, India"
     ],
     "2": [
       "Hermosillo, Mexico"
@@ -3048,9 +3057,13 @@
   },
   "Bvz2": {
     "1": [],
-    "2": [],
+    "2": [
+      "Tonk, India"
+    ],
     "3": [
-      "Hermosillo, Mexico"
+      "Hermosillo, Mexico",
+      "Okara, Pakistan",
+      "Tonk, India"
     ],
     "4": []
   },
@@ -3777,6 +3790,31 @@
     "3": [],
     "4": [
       "Kyzyl, Russia"
+    ]
+  },
+  "AvX": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [
+      "Okara, Pakistan",
+      "Tonk, India"
+    ]
+  },
+  "BwX": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [
+      "Sheikhupura, Pakistan"
+    ]
+  },
+  "BvX": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [
+      "Faisalabad, Pakistan"
     ]
   }
 }
