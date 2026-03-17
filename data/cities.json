@@ -1469,6 +1469,7 @@
     ],
     "2": [
       "Astana, Kazakhstan",
+      "Kyzyl, Russia",
       "Regina, Saskatchewan, Canada",
       "Saskatoon, Saskatchewan, Canada"
     ],
@@ -1483,6 +1484,7 @@
     "1": [],
     "2": [],
     "3": [
+      "Kyzyl, Russia",
       "Saskatoon, Saskatchewan, Canada"
     ],
     "4": []
@@ -2416,13 +2418,22 @@
     ]
   },
   "Bsz1": {
-    "1": [],
+    "1": [
+      "Jalalabad, Afghanistan",
+      "Laredo, Texas, United States",
+      "Peshawar, Pakistan",
+      "Reynosa, Mexico",
+      "Shah Nikdar, Pakistan"
+    ],
     "2": [
+      "Laredo, Texas, United States",
+      "Reynosa, Mexico",
       "Tucson, Arizona, United States"
     ],
     "3": [
       "Abilene, Texas, United States",
-      "Carlsbad, New Mexico, United States"
+      "Carlsbad, New Mexico, United States",
+      "Laredo, Texas, United States"
     ],
     "4": [
       "Amarillo, Texas, United States",
@@ -2512,9 +2523,19 @@
     ]
   },
   "Bsz2": {
-    "1": [],
-    "2": [],
+    "1": [
+      "Daraban, Pakistan"
+    ],
+    "2": [
+      "Daraban, Pakistan",
+      "Jalalabad, Afghanistan",
+      "Shah Nikdar, Pakistan"
+    ],
     "3": [
+      "Daraban, Pakistan",
+      "Jalalabad, Afghanistan",
+      "Peshawar, Pakistan",
+      "Shah Nikdar, Pakistan",
       "Tucson, Arizona, United States"
     ],
     "4": [
@@ -2651,7 +2672,8 @@
       "Accra, Ghana",
       "Barranquilla, Colombia",
       "Jilib, Somalia",
-      "Mogadishu, Somalia"
+      "Mogadishu, Somalia",
+      "Reynosa, Mexico"
     ],
     "4": [
       "Accra, Ghana",
@@ -2855,7 +2877,8 @@
   "Bgz2": {
     "1": [],
     "2": [
-      "Hafizabad, Pakistan"
+      "Hafizabad, Pakistan",
+      "Peshawar, Pakistan"
     ],
     "3": [
       "Hafizabad, Pakistan"
@@ -3288,7 +3311,8 @@
   "Fa1": {
     "1": [
       "Blagoveshchensk, Russia",
-      "Khabarovsk, Russia"
+      "Khabarovsk, Russia",
+      "Kyzyl, Russia"
     ],
     "2": [
       "Dawson City, Yukon, Canada",
@@ -3718,6 +3742,41 @@
     "3": [],
     "4": [
       "Ust-Ilimsk, Russia"
+    ]
+  },
+  "BsX": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [
+      "Jalalabad, Afghanistan",
+      "Peshawar, Pakistan"
+    ]
+  },
+  "AsX": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [
+      "Daraban, Pakistan",
+      "Shah Nikdar, Pakistan"
+    ]
+  },
+  "Asz2": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [
+      "Laredo, Texas, United States",
+      "Reynosa, Mexico"
+    ]
+  },
+  "Esz1": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [
+      "Kyzyl, Russia"
     ]
   }
 }
