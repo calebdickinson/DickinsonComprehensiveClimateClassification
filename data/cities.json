@@ -593,7 +593,8 @@
       "Salvador, Brasil",
       "San Juan, Puerto Rico",
       "Singapore",
-      "Valledupar, Colombia"
+      "Valledupar, Colombia",
+      "Villahermosa, Mexico"
     ],
     "2": [
       "Abidjan, Côte d'Ivoire",
@@ -656,7 +657,8 @@
       "Bosconia, Colombia"
     ],
     "2": [
-      "Bosconia, Colombia"
+      "Bosconia, Colombia",
+      "Villahermosa, Mexico"
     ],
     "3": [
       "Bangui, Central African Republic",
@@ -673,7 +675,8 @@
       "Paramaribo, Suriname",
       "Recife, Brasil",
       "Santa Cruz de la Sierra, Bolivia",
-      "Singapore"
+      "Singapore",
+      "Villahermosa, Mexico"
     ],
     "4": [
       "Abidjan, Côte d'Ivoire",
@@ -1134,6 +1137,7 @@
       "Nashville, Tennessee, United States",
       "Osaka, Japan",
       "Philadelphia, Pennsylvania, United States",
+      "Ponca City, Oklahoma, United States",
       "Raleigh, North Carolina, United States",
       "Richmond, Virginia, United States",
       "Shanghai, China",
@@ -1593,10 +1597,12 @@
   "Cgz1": {
     "1": [],
     "2": [
-      "Oklahoma City, Oklahoma, United States"
+      "Oklahoma City, Oklahoma, United States",
+      "Ponca City, Oklahoma, United States"
     ],
     "3": [
       "Oklahoma City, Oklahoma, United States",
+      "Ponca City, Oklahoma, United States",
       "Wichita, Kansas, United States"
     ],
     "4": [
@@ -1726,6 +1732,7 @@
       "Hay River, Northwest Territories, Canada",
       "Thompson, Manitoba, Canada",
       "Ulaanbaatar, Mongolia",
+      "Ust-Ilimsk, Russia",
       "Vorogovo, Russia",
       "Yellowknife, Northwest Territories, Canada"
     ],
@@ -2801,6 +2808,7 @@
     "2": [],
     "3": [],
     "4": [
+      "Ponca City, Oklahoma, United States",
       "Topeka, Kansas, United States"
     ]
   },
@@ -3208,7 +3216,8 @@
     "3": [
       "Krasnoyarsk, Russia",
       "Novosibirsk, Russia",
-      "Omsk, Russia"
+      "Omsk, Russia",
+      "Ust-Ilimsk, Russia"
     ],
     "4": [
       "Dawson City, Yukon, Canada"
@@ -3284,6 +3293,7 @@
     "2": [
       "Dawson City, Yukon, Canada",
       "Ulaanbaatar, Mongolia",
+      "Ust-Ilimsk, Russia",
       "Vorogovo, Russia"
     ],
     "3": [
@@ -3542,7 +3552,8 @@
     "2": [],
     "3": [],
     "4": [
-      "Santa Cruz de la Sierra, Bolivia"
+      "Santa Cruz de la Sierra, Bolivia",
+      "Villahermosa, Mexico"
     ]
   },
   "Ya1": {
@@ -3699,6 +3710,14 @@
     "3": [],
     "4": [
       "Vorogovo, Russia"
+    ]
+  },
+  "Egz1": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [
+      "Ust-Ilimsk, Russia"
     ]
   }
 }

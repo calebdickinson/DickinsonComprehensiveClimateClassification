@@ -331,11 +331,29 @@
     ]
   },
 
+  "Ega2": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img class='three' src='../graphs/Krasnoyarsk3-F.png' alt='graph of Krasnoyarsk climate in 2041-2070'>",
+      "<img class='three' src='../graphs/Novosibirsk3-F.png' alt='graph of Novosibirsk climate in 2041-2070'>",
+      "<img class='three' src='../graphs/DawsonCity4-F.png' alt='graph of Dawson City climate in 2071-2100'>"
+    ]
+  },
+
   "Ehz1": {
     "media": [
       "<p>No images or videos are available for this climate.</p>",
       "<br>",
       "<img src='../graphs/Vorogovo4-F.png' alt='graph of Vorogovo climate in 2071-2100'>"
+    ]
+  },
+
+  "Egz1": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img src='../graphs/Ust-Ilimsk4-F.png' alt='graph of Ust-Ilimsk climate in 2071-2100'>"
     ]
   },
 
@@ -629,6 +647,13 @@
     ]
   },
 
+  "Cgz2": {
+    "media": [
+      "<img src='../graphs/PoncaCity4-F.png' alt='graph of Ponca City climate in 2071-2100'>",
+      "<img src='../graphs/Topeka4-F.png' alt='graph of Topeka climate in 2071-2100'>"
+    ]
+  },
+
   "CdX": {
     "media": [
       "<p>No images or videos are available for this climate.</p>",
@@ -678,6 +703,16 @@
       "<img class='three' src='../graphs/Islamabad4-F.png' alt='graph of Islamabad climate in 2071-2100'>",
       "<img class='three' src='../graphs/LittleRock4-F.png' alt='graph of Little Rock climate in 2071-2100'>",
       "<img class='three' src='../graphs/Wuhan4-F.png' alt='graph of Wuhan climate in 2071-2100'>"
+    ]
+  },
+
+  "Bgz2": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img class='three' src='../graphs/Hafizabad2-F.png' alt='graph of Hafizabad climate in 2011-2040'>",
+      "<img class='three' src='../graphs/Austin4-F.png' alt='graph of Austin climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Tulsa4-F.png' alt='graph of Tulsa climate in 2071-2100'>"
     ]
   },
 
@@ -738,6 +773,15 @@
       "<p>No images or videos are available for this climate.</p>",
       "<br>",
       "<img src='../graphs/Nanning4-F.png' alt='graph of Nanning climate in 2071-2100'>"
+    ]
+  },
+
+  "Agz2": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img src='../graphs/Villahermosa4-F.png' alt='graph of Villahermosa climate in 2071-2100'>",
+      "<img src='../graphs/SantaCruzdelaSierra4-F.png' alt='graph of Santa Cruz de la Sierra climate in 2071-2100'>"
     ]
   },
 
