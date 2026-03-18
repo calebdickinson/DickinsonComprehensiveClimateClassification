@@ -191,6 +191,7 @@
   "Ec1": {
     "1": [
       "Esperanza Base, Antarctica",
+      "Ittoqqortoormiit, Greenland",
       "Mount Hood summit, Oregon, United States"
     ],
     "2": [
@@ -757,12 +758,14 @@
       "Yushu, Qinghai, China"
     ],
     "2": [
+      "Ilulissat, Greenland",
       "Inukjuak, Québec, Canada",
       "Nagqu, Tibet, China",
       "Nome, Alaska, United States",
       "Yushu, Qinghai, China"
     ],
     "3": [
+      "Ilulissat, Greenland",
       "Iqaluit, Nunavut, Canada",
       "Nagqu, Tibet, China",
       "Prudhoe Bay, Alaska, United States",
@@ -1024,7 +1027,8 @@
     ],
     "4": [
       "Iqaluit, Nunavut, Canada",
-      "Nuuk, Greenland"
+      "Nuuk, Greenland",
+      "Sisimiut, Greenland"
     ]
   },
   "Dha1": {
@@ -1457,7 +1461,9 @@
     "3": [
       "Churchill, Manitoba, Canada"
     ],
-    "4": []
+    "4": [
+      "Ilulissat, Greenland"
+    ]
   },
   "Esa1": {
     "1": [
@@ -1688,6 +1694,7 @@
       "Longyearbyen, Svalbard, Norway",
       "Reykjavík, Iceland",
       "St. Paul, Alaska, United States",
+      "Tasiilaq, Greenland",
       "Tórshavn, Faroe Islands",
       "Ísafjörður, Iceland"
     ]
@@ -2317,13 +2324,19 @@
   },
   "Ec2": {
     "1": [
+      "Ilulissat, Greenland",
       "Longyearbyen, Svalbard, Norway",
       "Nagqu, Tibet, China",
-      "Nuuk, Greenland"
+      "Nuuk, Greenland",
+      "Sisimiut, Greenland"
     ],
-    "2": [],
+    "2": [
+      "Ittoqqortoormiit, Greenland",
+      "Qaanaaq, Greenland"
+    ],
     "3": [
-      "Alert, Nunavut, Canada"
+      "Alert, Nunavut, Canada",
+      "Qaanaaq, Greenland"
     ],
     "4": [
       "Mount Rainier summit, Washington, United States"
@@ -2331,13 +2344,17 @@
   },
   "Dc2": {
     "1": [
+      "Qaqortoq, Greenland",
       "St. Paul, Alaska, United States",
+      "Tasiilaq, Greenland",
       "Ísafjörður, Iceland"
     ],
     "2": [
       "Longyearbyen, Svalbard, Norway",
       "Mount Hood summit, Oregon, United States",
-      "Nuuk, Greenland"
+      "Nuuk, Greenland",
+      "Qaqortoq, Greenland",
+      "Sisimiut, Greenland"
     ],
     "3": [
       "Mount Hood summit, Oregon, United States"
@@ -2362,15 +2379,23 @@
     ],
     "2": [
       "Petropavlovsk-Kamchatsky, Russia",
+      "Tasiilaq, Greenland",
       "Ísafjörður, Iceland"
     ],
     "3": [
+      "Ittoqqortoormiit, Greenland",
       "Longyearbyen, Svalbard, Norway",
-      "Nuuk, Greenland"
+      "Nuuk, Greenland",
+      "Qaqortoq, Greenland",
+      "Sisimiut, Greenland",
+      "Tasiilaq, Greenland"
     ],
     "4": [
       "Alert, Nunavut, Canada",
-      "Mount Hood summit, Oregon, United States"
+      "Ittoqqortoormiit, Greenland",
+      "Mount Hood summit, Oregon, United States",
+      "Qaanaaq, Greenland",
+      "Qaqortoq, Greenland"
     ]
   },
   "Aga2": {
@@ -3417,6 +3442,7 @@
   },
   "Fc1": {
     "1": [
+      "Qaanaaq, Greenland",
       "Station Nord, Greenland",
       "Utqiaġvik, Alaska, United States"
     ],

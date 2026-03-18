@@ -452,7 +452,10 @@
       "<br><br>",
       "<img class='three' src='../graphs/Halifax1-F.png' alt='graph of Halifax climate in 1981-2010'>",
       "<img class='three' src='../graphs/Helsinki1-F.png' alt='graph of Helsinki climate in 1981-2010'>",
-      "<img class='three' src='../graphs/Iqaluit4-F.png' alt='graph of Iqaluit climate in 2071-2100'>"
+      "<img class='three' src='../graphs/Iqaluit4-F.png' alt='graph of Iqaluit climate in 2071-2100'>",
+      "<br class='wide-only'><br class='wide-only'>",
+      "<img class='three' src='../graphs/Nuuk4-F.png' alt='graph of Nuuk climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Sisimiut4-F.png' alt='graph of Sisimiut climate in 2071-2100'>"
     ]
   },
 
@@ -664,7 +667,11 @@
       "<br><br>",
       "<img class='three' src='../graphs/Vancouver1-F.png' alt='graph of Vancouver climate in 1981-2010'>",
       "<img class='three' src='../graphs/London1-F.png' alt='graph of London climate in 1981-2010'>",
-      "<img class='three' src='../graphs/Reykjavík4-F.png' alt='graph of Reykjavík climate in 2071-2100'>"
+      "<img class='three' src='../graphs/Reykjavík4-F.png' alt='graph of Reykjavík climate in 2071-2100'>",
+      "<br class='wide-only'><br class='wide-only'>",
+      "<img class='three' src='../graphs/Tasiilaq4-F.png' alt='graph of Tasiilaq climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Tórshavn4-F.png' alt='graph of Tórshavn climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Longyearbyen4-F.png' alt='graph of Longyearbyen climate in 2071-2100'>"
     ]
   },
 
