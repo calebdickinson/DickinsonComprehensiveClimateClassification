@@ -750,11 +750,12 @@
       "<a title='Enasiqph, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Main_facade_of_Kirkuk_Citadel_from_the_Majidiya_Market_side_(Ras_al-Jisr).jpg'><img alt='The main facade of Kirkuk Citadel viewed from the Majidiya Market side (Ras al-Jisr), Kirkuk, northern Iraq.' src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Main_facade_of_Kirkuk_Citadel_from_the_Majidiya_Market_side_%28Ras_al-Jisr%29.jpg/3840px-Main_facade_of_Kirkuk_Citadel_from_the_Majidiya_Market_side_%28Ras_al-Jisr%29.jpg'></a>",
       "<a href='https://commons.wikimedia.org/wiki/File:Main_facade_of_Kirkuk_Citadel_from_the_Majidiya_Market_side_(Ras_al-Jisr).jpg'>Enasiqph</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
       "<br><br>",
-      "<img src='../graphs/Kirkuk1-F.png' alt='graph of Kirkuk climate in 1981-2010'>",
-      "<img src='../graphs/Spokane4-F.png' alt='graph of Spokane climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Kirkuk1-F.png' alt='graph of Kirkuk climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Dushanbe4-F.png' alt='graph of Dushanbe climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Spokane4-F.png' alt='graph of Spokane climate in 2071-2100'>",
       "<br class='wide-only'><br class='wide-only'>",
-      "<img src='../graphs/Boise4-F.png' alt='graph of Boise climate in 2071-2100'>",
-      "<img src='../graphs/Tehran4-F.png' alt='graph of Tehren climate in 2071-2100'>"
+      "<img class='three' src='../graphs/Boise4-F.png' alt='graph of Boise climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Tehran4-F.png' alt='graph of Tehren climate in 2071-2100'>"
     ]
   },
 
