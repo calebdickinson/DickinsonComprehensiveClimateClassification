@@ -468,6 +468,30 @@
     ]
   },
 
+  "Dwb2": {
+    "media": [
+      "<a title='Oceanflynn, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Nose_Hill_Park_YYC_03.jpg'><img alt='Nose Hill Park YYC 03' src='https://upload.wikimedia.org/wikipedia/commons/c/cc/Nose_Hill_Park_YYC_03.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Nose_Hill_Park_YYC_03.jpg'>Oceanflynn</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/XcX00olueXY?si=exMZsJTlHwRuF0ba' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img src='../graphs/Calgary1-F.png' alt='graph of Calgary climate in 1981-2010'>"
+    ]
+  },
+
+  "Dvb2": {
+    "media": [
+      "<a title='Dennis G. Jarvis, CC BY-SA 2.0 &lt;https://creativecommons.org/licenses/by-sa/2.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Drepung_Monastery_(1).jpg'><img alt='Drepung Monastery (1)' src='https://upload.wikimedia.org/wikipedia/commons/5/5f/Drepung_Monastery_%281%29.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Drepung_Monastery_(1).jpg'>Dennis G. Jarvis</a>, <a href='https://creativecommons.org/licenses/by-sa/2.0'>CC BY-SA 2.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/baK3X5Oozh4?si=lIwKB7Qn7nc-NkKg' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img class='three' src='../graphs/Lhasa1-F.png' alt='graph of Lhasa climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Lhasa2-F.png' alt='graph of Lhasa climate in 2011-2040'>",
+      "<img class='three' src='../graphs/Nagqu4-F.png' alt='graph of Nagqu climate in 2071-2100'>"
+    ]
+  },
+
   "Dha1": {
     "media": [
       "<p>Dha1 (temperate humid with warm summer) corresponds to the stereotypical four-season cycle commonly portrayed in American media and children's books: snowy winters, blooming springs, warm summers, and colorful autumns. Covering large parts of the Great Lakes, Mid-Atlantic, and New England regions, the rhythms of this climate have left a large mark on the culture of the United States.</p>",
