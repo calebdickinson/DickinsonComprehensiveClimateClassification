@@ -395,8 +395,7 @@
       "Johannesburg, South Africa",
       "Kathmandu, Nepal",
       "Kunming, China",
-      "Mawsynram, India",
-      "Wangdue Phodrang, Bhutan"
+      "Mawsynram, India"
     ]
   },
   "Awz1": {
@@ -480,8 +479,7 @@
       "Guadalajara, Mexico",
       "Harare, Zimbabwe",
       "Kathmandu, Nepal",
-      "Lusaka, Zambia",
-      "Wangdue Phodrang, Bhutan"
+      "Lusaka, Zambia"
     ],
     "2": [
       "Antananarivo, Madagascar",
@@ -490,19 +488,18 @@
       "Harare, Zimbabwe",
       "Kathmandu, Nepal",
       "Kunming, China",
-      "Mexico City, Mexico",
-      "Wangdue Phodrang, Bhutan"
+      "Mexico City, Mexico"
     ],
     "3": [
       "Addis Ababa, Ethiopia",
       "Antananarivo, Madagascar",
       "Cilaos, Réunion, France",
       "Johannesburg, South Africa",
-      "Mawsynram, India",
-      "Wangdue Phodrang, Bhutan"
+      "Mawsynram, India"
     ],
     "4": [
-      "Lijiang, China"
+      "Lijiang, China",
+      "Thimphu, Bhutan"
     ]
   },
   "Awa2": {
@@ -3357,10 +3354,12 @@
   "Cwb2": {
     "1": [
       "Johannesburg, South Africa",
-      "Lijiang, China"
+      "Lijiang, China",
+      "Thimphu, Bhutan"
     ],
     "2": [
-      "Lijiang, China"
+      "Lijiang, China",
+      "Thimphu, Bhutan"
     ],
     "3": [],
     "4": []
@@ -3376,7 +3375,8 @@
       "Mawsynram, India"
     ],
     "3": [
-      "Lijiang, China"
+      "Lijiang, China",
+      "Thimphu, Bhutan"
     ],
     "4": []
   },
