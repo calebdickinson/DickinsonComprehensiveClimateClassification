@@ -1999,11 +1999,13 @@
     "2": [],
     "3": [
       "Delhi, India",
+      "Gujranwala, Pakistan",
       "Lahore, Pakistan",
       "Sheikhupura, Pakistan"
     ],
     "4": [
       "Delhi, India",
+      "Gujranwala, Pakistan",
       "Lahore, Pakistan",
       "Xi'an, China"
     ]
@@ -2295,7 +2297,8 @@
       "Dezful, Iran"
     ],
     "2": [
-      "Dezful, Iran"
+      "Dezful, Iran",
+      "Kirkuk, Iraq"
     ],
     "3": [
       "Erbil, Iraq",
@@ -2493,12 +2496,14 @@
   },
   "Bgz1": {
     "1": [
+      "Gujranwala, Pakistan",
       "Hafizabad, Pakistan"
     ],
     "2": [
       "Austin, Texas, United States",
       "Dallas, Texas, United States",
       "Fort Worth, Texas, United States",
+      "Gujranwala, Pakistan",
       "Lahore, Pakistan",
       "San Antonio, Texas, United States"
     ],
@@ -2752,7 +2757,9 @@
     ]
   },
   "Cmz2": {
-    "1": [],
+    "1": [
+      "Kirkuk, Iraq"
+    ],
     "2": [
       "Erbil, Iraq"
     ],
@@ -3647,11 +3654,13 @@
     "1": [],
     "2": [],
     "3": [
-      "Dezful, Iran"
+      "Dezful, Iran",
+      "Kirkuk, Iraq"
     ],
     "4": [
       "Dezful, Iran",
-      "Erbil, Iraq"
+      "Erbil, Iraq",
+      "Kirkuk, Iraq"
     ]
   },
   "ZdX": {
