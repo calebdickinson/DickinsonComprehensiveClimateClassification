@@ -2161,7 +2161,9 @@
       "Las Vegas, Nevada, United States",
       "Multan, Pakistan",
       "Phoenix, Arizona, United States",
-      "Riyadh, Saudi Arabia"
+      "Riyadh, Saudi Arabia",
+      "Tikrit, Iraq",
+      "Zabol, Iran"
     ],
     "3": [
       "Las Vegas, Nevada, United States",
@@ -2466,7 +2468,9 @@
       "Basra, Iraq",
       "Furnace Creek, California, United States",
       "Lake Havasu City, Arizona, United States",
-      "Riyadh, Saudi Arabia"
+      "Riyadh, Saudi Arabia",
+      "Tikrit, Iraq",
+      "Zabol, Iran"
     ],
     "4": [
       "Ashgabat, Turkmenistan",
@@ -2475,7 +2479,9 @@
       "Lake Havasu City, Arizona, United States",
       "Las Vegas, Nevada, United States",
       "Phoenix, Arizona, United States",
-      "Yazd, Iran"
+      "Tikrit, Iraq",
+      "Yazd, Iran",
+      "Zabol, Iran"
     ]
   },
   "Csa1": {
@@ -2788,7 +2794,10 @@
     "4": []
   },
   "Cdz2": {
-    "1": [],
+    "1": [
+      "Tikrit, Iraq",
+      "Zabol, Iran"
+    ],
     "2": [
       "Yazd, Iran"
     ],
