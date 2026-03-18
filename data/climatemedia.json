@@ -443,6 +443,19 @@
     ]
   },
 
+  "Dhb2": {
+    "media": [
+      "<a title='BigHead, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Traku_pilis_by_Augustas_Didzgalvis.jpg'><img alt='Traku pilis by Augustas Didzgalvis' src='https://upload.wikimedia.org/wikipedia/commons/7/77/Traku_pilis_by_Augustas_Didzgalvis.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Traku_pilis_by_Augustas_Didzgalvis.jpg'>BigHead</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/BRVIB22q0NI?si=fagdVvOE-MnYuHrV' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img class='three' src='../graphs/Halifax1-F.png' alt='graph of Halifax climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Helsinki1-F.png' alt='graph of Helsinki climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Iqaluit4-F.png' alt='graph of Iqaluit climate in 2071-2100'>"
+    ]
+  },
+
   "Dsb2": {
     "media": [
       "<a title='Christian Collins, CC BY-SA 2.0 &lt;https://creativecommons.org/licenses/by-sa/2.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Great_plains_storm_-_Great_Sand_Dunes_National_Park.jpg'><img alt='Cloudy storm over the great plains showing natural flowers' src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Great_plains_storm_-_Great_Sand_Dunes_National_Park.jpg/2048px-Great_plains_storm_-_Great_Sand_Dunes_National_Park.jpg?20210518014523'></a>",
@@ -468,8 +481,6 @@
       "<img class='three' src='../graphs/Toronto1-F.png' alt='graph of Toronto climate in 1981-2010'>",
       "<img class='three' src='../graphs/Chicago1-F.png' alt='graph of Chicago climate in 1981-2010'>",
       "<img class='three' src='../graphs/Churchill4-F.png' alt='graph of Churchill climate in 2071-2100'>"
-
-      
     ]
   },
 
