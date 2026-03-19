@@ -22844,7 +22844,7 @@
       "2041-2070": {
         "annual_pet_mm": "N/A",
         "dickinson": "Fc2",
-        "dickinson_bordering": "Ec2 Fdc2",
+        "dickinson_bordering": "Ec2",
         "koppen": "ET",
         "koppen_bordering": "none",
         "p_pet": "N/A",
@@ -25018,7 +25018,7 @@
       "2071-2100": {
         "annual_pet_mm": "679",
         "dickinson": "Dhb2",
-        "dickinson_bordering": "Dhb1 Db2",
+        "dickinson_bordering": "Db1",
         "koppen": "Dfb",
         "koppen_bordering": "none",
         "p_pet": "1.18",

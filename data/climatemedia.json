@@ -143,15 +143,19 @@
 
   "Fc1": {
     "media": [
+      "<a title='Helene Brochmann, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Qaanaaq_houses.jpg'><img alt='Houses in Qaanaaq' src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Qaanaaq_houses.jpg/3840px-Qaanaaq_houses.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Qaanaaq_houses.jpg'>Helene Brochmann</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
       "<a title='Roy W. Anderson, NOAA, N, Public domain, via Wikimedia Commons' href='https://upload.wikimedia.org/wikipedia/commons/b/b6/Nord%2C_Greenland.jpg'><img alt='Nord, Greenland' src='https://upload.wikimedia.org/wikipedia/commons/b/b6/Nord%2C_Greenland.jpg'></a>",
       "<a href='https://commons.wikimedia.org/wiki/File:Nord,_Greenland.jpg'>Roy W. Anderson, NOAA, N</a>, Public domain, via Wikimedia Commons",
       "<br><br>",
-      "<p>Utqiaġvik landscape in July. Notice how the ocean is partially frozen. In the 1981-2010 normals, Utqiaġvik has a Gc1 climate, but borders on the warmer climate Gc2.</p>",
+      "<p>Utqiaġvik landscape in July. Notice how the ocean is partially frozen. In the 1981-2010 normals, Utqiaġvik has an Fc1 climate, but borders on the warmer climate Gc2.</p>",
       "<a title='Floyd davidson, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Ukpeagvik_mounds.jpg'><img alt='Ukpeakvik mounds site of ancient sod houses in Utqiaġvik, AK' src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Ukpeagvik_mounds.jpg/2048px-Ukpeagvik_mounds.jpg?_=20071016172453'></a>",
       "<a href='https://commons.wikimedia.org/wiki/File:Ukpeagvik_mounds.jpg'>Floyd davidson</a>, <a href='https://creativecommons.org/licenses/by-sa/3.0'>CC BY-SA 3.0</a>, via Wikimedia Commons",
       "<br><br>",
-      "<img src='../graphs/StationNord1-F.png' alt='graph of Station Nord climate in 1981-2010'>",
-      "<img src='../graphs/Utqiaġvik1-F.png' alt='graph of Utqiaġvik climate in 1981-2010'>"
+      "<img class='three' src='../graphs/StationNord1-F.png' alt='graph of Station Nord climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Qaanaaq1-F.png' alt='graph of Qaanaaq climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Utqiaġvik1-F.png' alt='graph of Utqiaġvik climate in 1981-2010'>"
     ]
   },
 
@@ -243,14 +247,13 @@
 
   "Ec1": {
     "media": [
-      "<p>The summit of Mount Hood has an Ec1 climate.</p>",
-      "<a title='Kevin Crosby, CC BY-SA 2.0 &lt;https://creativecommons.org/licenses/by-sa/2.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Oregon_Mount_Hood_from_Trillium_Lake_2024.jpg'><img alt='Scenic Oregon in 2024' src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Oregon_Mount_Hood_from_Trillium_Lake_2024.jpg/2048px-Oregon_Mount_Hood_from_Trillium_Lake_2024.jpg?_=20241128052926'></a>",
-      "<a href='https://commons.wikimedia.org/wiki/File:Oregon_Mount_Hood_from_Trillium_Lake_2024.jpg'>Kevin Crosby</a>, <a href='https://creativecommons.org/licenses/by-sa/2.0'>CC BY-SA 2.0</a>, via Wikimedia Commons",
+      "<a title='Rob Oo from NL, CC BY 2.0 &lt;https://creativecommons.org/licenses/by/2.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Parking_(29751209227).jpg'><img alt='Parking (29751209227)' src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Parking_%2829751209227%29.jpg/3840px-Parking_%2829751209227%29.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Parking_(29751209227).jpg'>Rob Oo from NL</a>, <a href='https://creativecommons.org/licenses/by/2.0'>CC BY 2.0</a>, via Wikimedia Commons",
       "<br><br>",
       "<iframe width='1280' height='720' src='https://www.youtube.com/embed/FzOl8QMkek8?si=cv3vxVd0ba--Hlju' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
       "<br><br>",
-      "<img class='three' src='../graphs/MountHood1-F.png' alt='graph of Mount Hood climate in 1981-2010'>",
       "<img class='three' src='../graphs/EsperanzaBase1-F.png' alt='graph of Esperanza Base climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Ittoqqortoormiit1-F.png' alt='graph of Ittoqqortoormiit climate in 1981-2010'>",
       "<img class='three' src='../graphs/CaseyStation4-F.png' alt='graph of Casey Station climate in 2071-2100'>"
     ]
   },
@@ -291,8 +294,9 @@
       "<br><br>",
       "<iframe width='1280' height='720' src='https://www.youtube.com/embed/ykgGANA-zSM?si=OUdjrJL1fxss_LCb' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
       "<br><br>",
-      "<img src='../graphs/ThunderBay1-F.png' alt='graph of Thunder Bay climate in 1981-2010'>",
-      "<img src='../graphs/Yekaterinburg1-F.png' alt='graph of Yekaterinburg climate in 1981-2010'>"
+      "<img class='three' src='../graphs/ThunderBay1-F.png' alt='graph of Thunder Bay climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Yekaterinburg1-F.png' alt='graph of Yekaterinburg climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Ilulissat4-F.png' alt='graph of Ilulissat climate in 2071-2100'>"
     ]
   },
 
@@ -437,9 +441,13 @@
       "<br><br>",
       "<iframe width='1280' height='720' src='https://www.youtube.com/embed/W7Syb2mFM-s?si=rOZFFOcp-MRlNDMA' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
       "<br><br>",
-      "<img class='three' src='../graphs/Juneau1-F.png' alt='graph of Juneau climate in 1981-2010'>",
       "<img class='three' src='../graphs/Reykjavík1-F.png' alt='graph of Reykjavík climate in 1981-2010'>",
-      "<img class='three' src='../graphs/Alert4-F.png' alt='graph of Alert climate in 2071-2100'>"
+      "<img class='three' src='../graphs/Juneau1-F.png' alt='graph of Juneau climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Qaqortoq4-F.png' alt='graph of Qaqortoq climate in 2071-2100'>",
+      "<br class='wide-only'><br class='wide-only'>",
+      "<img class='three' src='../graphs/Ittoqqortoormiit4-F.png' alt='graph of Ittoqqortoormiit climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Alert4-F.png' alt='graph of Alert climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Qaanaaq4-F.png' alt='graph of Qaanaaq climate in 2071-2100'>"
     ]
   },
 
