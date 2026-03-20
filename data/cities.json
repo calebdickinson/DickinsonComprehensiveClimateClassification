@@ -95,6 +95,7 @@
     "2": [
       "Antalya, Türkiye",
       "Athens, Greece",
+      "Córdoba, Spain",
       "Fresno, California, United States"
     ],
     "3": [
@@ -103,6 +104,7 @@
       "Athens, Greece",
       "Bari, Italy",
       "Beirut, Lebanon",
+      "Córdoba, Spain",
       "Fresno, California, United States",
       "Naples, Italy",
       "Palermo, Italy",
@@ -1759,7 +1761,6 @@
       "Jerusalem, Israel",
       "Medford, Oregon, United States",
       "Pendleton, Oregon, United States",
-      "Rome, Italy",
       "Sacramento, California, United States",
       "Santiago, Chile"
     ],
@@ -2270,8 +2271,11 @@
   "Cma2": {
     "1": [
       "Athens, Greece",
+      "Córdoba, Spain",
       "Dushanbe, Tajikistan",
       "Madrid, Spain",
+      "Redding, California, United States",
+      "Rome, Italy",
       "Shiraz, Iran"
     ],
     "2": [
@@ -2311,12 +2315,15 @@
     ],
     "3": [
       "Erbil, Iraq",
+      "Redding, California, United States",
       "St. George, Utah, United States"
     ],
     "4": [
       "Antalya, Türkiye",
       "Athens, Greece",
+      "Córdoba, Spain",
       "Fresno, California, United States",
+      "Redding, California, United States",
       "Shiraz, Iran",
       "St. George, Utah, United States",
       "Valencia, Spain"
@@ -2766,6 +2773,7 @@
       "Tehran, Iran"
     ],
     "2": [
+      "Redding, California, United States",
       "Shiraz, Iran",
       "Tehran, Iran",
       "Weiser, Idaho, United States"
