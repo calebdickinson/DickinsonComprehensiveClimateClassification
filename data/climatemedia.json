@@ -914,6 +914,16 @@
     ]
   },
 
+  "Bhz1": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img class='three' src='../graphs/Islamabad1-F.png' alt='graph of Islamabad climate in 1981-2010'>",
+      "<img class='three' src='../graphs/NewOrleans4-F.png' alt='graph of NewOrleans climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Raleigh4-F.png' alt='graph of Raleigh climate in 2071-2100'>"
+    ]
+  },
+
   "Bhz2": {
     "media": [
       "<p>No images or videos are available for this climate.</p>",
