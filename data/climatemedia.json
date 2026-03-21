@@ -71,9 +71,14 @@
       "<a title='Ansgar Walk, CC BY-SA 2.5 &lt;https://creativecommons.org/licenses/by-sa/2.5&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Eureka_Weather_Station_1997-08-04.jpg'><img alt='Eureka Weather Station 1997-08-04' src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Eureka_Weather_Station_1997-08-04.jpg/2048px-Eureka_Weather_Station_1997-08-04.jpg?_=20060301134301'></a>",
       "<a href='https://commons.wikimedia.org/wiki/File:Eureka_Weather_Station_1997-08-04.jpg'>Ansgar Walk</a>, <a href='https://creativecommons.org/licenses/by-sa/2.5'>CC BY-SA 2.5</a>, via Wikimedia Commons",
       "<br><br>",
+      "<a title='Paul Gierszewski (Gierszep), CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Rankin_Inlet_2014.jpg'><img alt='Rankin Inlet 2014' src='https://upload.wikimedia.org/wikipedia/commons/9/9d/Rankin_Inlet_2014.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Rankin_Inlet_2014.jpg'>Paul Gierszewski (Gierszep)</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
       "<iframe width='1280' height='720' src='https://www.youtube.com/embed/XVFii31aRy8?si=TLibzXh0hpGAufeK' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
       "<br><br>",
-      "<img src='../graphs/Eureka1-F.png' alt='graph of Eureka climate in 1981-2010'>"
+      "<img class='three' src='../graphs/Eureka1-F.png' alt='graph of Eureka climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Naujaat1-F.png' alt='graph of Naujaat climate in 1981-2010'>",
+      "<img class='three' src='../graphs/RankinInlet1-F.png' alt='graph of Rankin Inlet climate in 1981-2010'>"
     ]
   },
 
@@ -87,6 +92,7 @@
       "<a title='No machine-readable author provided. CambridgeBayWeather assumed (based on copyright claims)., Public domain, via Wikimedia Commons' href='https://upload.wikimedia.org/wikipedia/commons/c/c6/Cambridge_Bay.jpg'><img alt='Cambridge Bay' src='https://upload.wikimedia.org/wikipedia/commons/c/c6/Cambridge_Bay.jpg'></a>",
       "<a href='https://commons.wikimedia.org/wiki/File:Cambridge_Bay.jpg'>CambridgeBayWeather</a>, Public domain, via Wikimedia Commons",
       "<br><br>",
+      "<img src='../graphs/BakerLake1-F.png' alt='graph of Baker Lake climate in 1981-2010'>",
       "<img src='../graphs/CambridgeBay1-F.png' alt='graph of Cambridge Bay climate in 1981-2010'>"
     ]
   },
@@ -300,6 +306,18 @@
     ]
   },
 
+  "Eha1": {
+    "media": [
+      "<a title='Jonathunder, GFDL 1.2 &lt;http://www.gnu.org/licenses/old-licenses/fdl-1.2.html&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:OgechieLakeMN.jpg'><img alt='OgechieLakeMN' src='https://upload.wikimedia.org/wikipedia/commons/d/d0/OgechieLakeMN.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:OgechieLakeMN.jpg'>Jonathunder</a>, <a href='http://www.gnu.org/licenses/old-licenses/fdl-1.2.html'>GFDL 1.2</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<img class='three' src='../graphs/Duluth1-F.png' alt='graph of Duluth climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Brainerd1-F.png' alt='graph of Brainerd climate in 1981-2010'>",
+      "<img class='three' src='../graphs/RankinInlet4-F.png' alt='graph of Rankin Inlet climate in 2071-2100'>"
+    ]
+  },
+
+
   "Ega1": {
     "media": [
       "<a title='formulanone, CC BY-SA 2.0 &lt;https://creativecommons.org/licenses/by-sa/2.0&gt;, via Wikimedia Commons' href='https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Downtown_Fargo_Aerial_-_Facing_Southeast_%2851009704407%29.jpg/1920px-Downtown_Fargo_Aerial_-_Facing_Southeast_%2851009704407%29.jpg'><img alt='Downtown Fargo Aerial - Facing Southeast (51009704407)' src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Downtown_Fargo_Aerial_-_Facing_Southeast_%2851009704407%29.jpg/1920px-Downtown_Fargo_Aerial_-_Facing_Southeast_%2851009704407%29.jpg'></a>",
@@ -307,8 +325,9 @@
       "<br><br>",
       "<iframe width='1280' height='720' src='https://www.youtube.com/embed/ngPTUczxwQ8?si=F9kP9qVetENkxItL' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
       "<br><br>",
-      "<img src='../graphs/Bismark1-F.png' alt='graph of Bismark climate in 1981-2010'>",
-      "<img src='../graphs/Fargo1-F.png' alt='graph of Fargo climate in 1981-2010'>"
+      "<img class='three' src='../graphs/Bismark1-F.png' alt='graph of Bismark climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Fargo1-F.png' alt='graph of Fargo climate in 1981-2010'>",
+      "<img class='three' src='../graphs/BakerLake4-F.png' alt='graph of Baker Lake climate in 2071-2100'>"
     ]
   },
 

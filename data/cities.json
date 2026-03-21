@@ -807,6 +807,7 @@
     ],
     "2": [
       "Bozeman, Montana, United States",
+      "Brainerd, Minnesota",
       "Donetsk, Ukraine",
       "Fargo, North Dakota, United States",
       "Jackson, Wyoming, United States",
@@ -1234,6 +1235,7 @@
     ],
     "2": [
       "Alert, Nunavut, Canada",
+      "Naujaat, Nunavut, Canada",
       "Prudhoe Bay, Alaska, United States",
       "Utqiaġvik, Alaska, United States"
     ],
@@ -1251,10 +1253,14 @@
       "Norilsk, Russia"
     ],
     "2": [
+      "Baker Lake, Nunavut, Canada",
       "Churchill, Manitoba, Canada",
-      "Iqaluit, Nunavut, Canada"
+      "Iqaluit, Nunavut, Canada",
+      "Rankin Inlet, Nunavut, Canada"
     ],
-    "3": [],
+    "3": [
+      "Naujaat, Nunavut, Canada"
+    ],
     "4": []
   },
   "Csz1": {
@@ -1432,6 +1438,7 @@
   },
   "Eha1": {
     "1": [
+      "Brainerd, Minnesota",
       "Duluth, Minnesota, United States",
       "Ottawa, Ontario, Canada"
     ],
@@ -1446,7 +1453,9 @@
       "Fairbanks, Alaska, United States",
       "Labrador City, Newfoundland and Labrador, Canada"
     ],
-    "4": []
+    "4": [
+      "Rankin Inlet, Nunavut, Canada"
+    ]
   },
   "Ehb2": {
     "1": [
@@ -1466,10 +1475,12 @@
       "Labrador City, Newfoundland and Labrador, Canada"
     ],
     "3": [
-      "Churchill, Manitoba, Canada"
+      "Churchill, Manitoba, Canada",
+      "Rankin Inlet, Nunavut, Canada"
     ],
     "4": [
-      "Ilulissat, Greenland"
+      "Ilulissat, Greenland",
+      "Naujaat, Nunavut, Canada"
     ]
   },
   "Esa1": {
@@ -1590,6 +1601,7 @@
       "Sioux Falls, South Dakota, United States"
     ],
     "3": [
+      "Brainerd, Minnesota",
       "Chelyabinsk, Russia",
       "Fargo, North Dakota, United States",
       "Green Bay, Wisconsin, United States",
@@ -1619,6 +1631,7 @@
     ],
     "4": [
       "Bishkek, Kyrgyzstan",
+      "Brainerd, Minnesota",
       "Cedar Rapids, Iowa, United States",
       "Detroit, Michigan, United States",
       "Duluth, Minnesota, United States",
@@ -1737,7 +1750,9 @@
       "Thompson, Manitoba, Canada",
       "Yellowknife, Northwest Territories, Canada"
     ],
-    "4": []
+    "4": [
+      "Baker Lake, Nunavut, Canada"
+    ]
   },
   "Fb2": {
     "1": [
@@ -1755,6 +1770,7 @@
       "Yellowknife, Northwest Territories, Canada"
     ],
     "3": [
+      "Baker Lake, Nunavut, Canada",
       "Cambridge Bay, Nunavut, Canada"
     ],
     "4": []
@@ -3491,6 +3507,7 @@
   },
   "Gb1": {
     "1": [
+      "Baker Lake, Nunavut, Canada",
       "Cambridge Bay, Nunavut, Canada"
     ],
     "2": [
@@ -3765,7 +3782,9 @@
   },
   "Gc2": {
     "1": [
-      "Eureka, Nunavut, Canada"
+      "Eureka, Nunavut, Canada",
+      "Naujaat, Nunavut, Canada",
+      "Rankin Inlet, Nunavut, Canada"
     ],
     "2": [
       "Eureka, Nunavut, Canada"
