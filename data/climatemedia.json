@@ -717,7 +717,14 @@
 
   "Cha2": {
     "media": [
-      "<img src='../graphs/Memphis1-F.png' alt='graph of Memphis climate in 1981-2010'>"
+      "<a title='Miguel.v, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Heron_Pond_in_Cache_River_State_Natural_Area.jpg'><img alt='Heron Pond in Cache River State Natural Area' src='https://upload.wikimedia.org/wikipedia/commons/8/81/Heron_Pond_in_Cache_River_State_Natural_Area.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Heron_Pond_in_Cache_River_State_Natural_Area.jpg'>Miguel.v</a>, <a href='https://creativecommons.org/licenses/by-sa/3.0'>CC BY-SA 3.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/nLQoeyf7eH0?si=k6iaXvCfYUlZH-bQ' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img class='three' src='../graphs/Tokyo1-F.png' alt='graph of Tokyo climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Atlanta1-F.png' alt='graph of Atlanta climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Halifax4-F.png' alt='graph of Halifax climate in 2071-2100'>"
     ]
   },
   
