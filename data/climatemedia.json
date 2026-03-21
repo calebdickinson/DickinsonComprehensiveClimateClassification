@@ -723,8 +723,18 @@
   
   "Cga2": {
     "media": [
-      "<img src='../graphs/OklahomaCity1-F.png' alt='graph of Oklahoma City climate in 1981-2010'>",
-      "<img src='../graphs/FortWorth1-F.png' alt='graph of Fort Worth climate in 1981-2010'>"
+      "<a title='Jonathan C. Wheeler, CC BY 2.0 &lt;https://creativecommons.org/licenses/by/2.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Buffalo_and_French_Lake.jpg'><img alt='Buffalo and French Lake' src='https://upload.wikimedia.org/wikipedia/commons/5/5e/Buffalo_and_French_Lake.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Buffalo_and_French_Lake.jpg'>Jonathan C. Wheeler</a>, <a href='https://creativecommons.org/licenses/by/2.0'>CC BY 2.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/7DMtOHK12YE?si=FZu-5MyG8Ktqs6VU' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img class='three' src='../graphs/OklahomaCity1-F.png' alt='graph of Oklahoma City climate in 1981-2010'>",
+      "<img class='three' src='../graphs/FortWorth1-F.png' alt='graph of Fort Worth climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Paris4-F.png' alt='graph of Paris climate in 2071-2100'>",
+      "<br class='wide-only'><br class='wide-only'>",
+      "<img class='three' src='../graphs/Berlin4-F.png' alt='graph of Berlin climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Warsaw4-F.png' alt='graph of Warsaw climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Riga4-F.png' alt='graph of Riga climate in 2071-2100'>"
     ]
   },
 
