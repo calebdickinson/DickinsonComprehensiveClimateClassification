@@ -711,12 +711,15 @@
 
   "Csa2": {
     "media": [
-      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/zALxE15kNik?si=dHbo6bFtxpEVTsZO' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
-      "<br><br>",
-      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/GMbaQfEgDV8?si=L_KQ43AHYiWWEZOX' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<a title='Sefor4, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Palo_Duro_lighthouse.jpg'><img alt='Palo Duro lighthouse' src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Palo_Duro_lighthouse.jpg/3840px-Palo_Duro_lighthouse.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Palo_Duro_lighthouse.jpg'>Sefor4</a>, <a href='https://creativecommons.org/licenses/by-sa/3.0'>CC BY-SA 3.0</a>, via Wikimedia Commons",
       "<br><br>",
       "<a title='Salvador Vitanza, CC BY-SA 2.5 &lt;https://creativecommons.org/licenses/by-sa/2.5&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Nogales.jpg'><img alt='This view shows the neighbourhoods on both sides of the international border east of the Nogales-Morley Gate Port of Entry. Photo taken by Salvador Vitanza from Nogales, Arizona' src='https://upload.wikimedia.org/wikipedia/commons/4/42/Nogales.jpg'></a>",
       "<a href='https://commons.wikimedia.org/wiki/File:Nogales.jpg'>Salvador Vitanza</a>, <a href='https://creativecommons.org/licenses/by-sa/2.5'>CC BY-SA 2.5</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/zALxE15kNik?si=dHbo6bFtxpEVTsZO' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/GMbaQfEgDV8?si=L_KQ43AHYiWWEZOX' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
       "<br><br>",
       "<img class='three' src='../graphs/Amarillo1-F.png' alt='graph of Amarillo climate in 1981-2010'>",
       "<img class='three' src='../graphs/Nogales1-F.png' alt='graph of Nogales climate in 1981-2010'>",
@@ -732,6 +735,16 @@
       "<img class='three' src='../graphs/Athens1-F.png' alt='graph of Athens climate in 1981-2010'>",
       "<img class='three' src='../graphs/Rome1-F.png' alt='graph of Rome climate in 1981-2010'>",
       "<img class='three' src='../graphs/London4-F.png' alt='graph of London climate in 2071-2100'>"
+    ]
+  },
+
+  "Csz1": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img class='three' src='../graphs/Budapest4-F.png' alt='graph of Budapest climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Bucharest4-F.png' alt='graph of Bucharest climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Kamloops4-F.png' alt='graph of Kamloops climate in 2071-2100'>"
     ]
   },
 
