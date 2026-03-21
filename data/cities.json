@@ -1619,7 +1619,9 @@
     ]
   },
   "Cgz1": {
-    "1": [],
+    "1": [
+      "Spin Wam, Pakistan"
+    ],
     "2": [
       "Oklahoma City, Oklahoma, United States",
       "Ponca City, Oklahoma, United States"
@@ -2570,7 +2572,8 @@
       "Fort Worth, Texas, United States",
       "Gujranwala, Pakistan",
       "Lahore, Pakistan",
-      "San Antonio, Texas, United States"
+      "San Antonio, Texas, United States",
+      "Spin Wam, Pakistan"
     ],
     "3": [
       "Austin, Texas, United States",
@@ -2579,7 +2582,8 @@
       "Fort Worth, Texas, United States",
       "Monterrey, Mexico",
       "San Antonio, Texas, United States",
-      "Sedona, Arizona, United States"
+      "Sedona, Arizona, United States",
+      "Spin Wam, Pakistan"
     ],
     "4": [
       "Brisbane, Australia",
@@ -2967,6 +2971,7 @@
       "Fort Worth, Texas, United States",
       "Oklahoma City, Oklahoma, United States",
       "San Antonio, Texas, United States",
+      "Spin Wam, Pakistan",
       "Tulsa, Oklahoma, United States"
     ]
   },
