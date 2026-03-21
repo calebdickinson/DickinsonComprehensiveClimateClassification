@@ -781,7 +781,7 @@
     "1": [
       "Bozeman, Montana, United States",
       "Jackson, Wyoming, United States",
-      "Prague, Czechia"
+      "Prague, Czech Republic"
     ],
     "2": [
       "Aspen, Colorado, United States",
@@ -927,6 +927,7 @@
       "Amarillo, Texas, United States",
       "Carlsbad, New Mexico, United States",
       "Lubbock, Texas, United States",
+      "Nogales, Mexico",
       "Sedona, Arizona, United States"
     ],
     "2": [
@@ -957,7 +958,7 @@
       "Canberra, Australia",
       "Cheyenne, Wyoming, United States",
       "Denver, Colorado, United States",
-      "Prague, Czechia",
+      "Prague, Czech Republic",
       "Santa Fe, New Mexico, United States",
       "Taos, New Mexico, United States"
     ]
@@ -1344,10 +1345,14 @@
     ]
   },
   "Chz1": {
-    "1": [],
+    "1": [
+      "Hengyang, China",
+      "Ji'an, China"
+    ],
     "2": [
       "Fukuoka, Japan",
       "Hangzhou, China",
+      "Hengyang, China",
       "Little Rock, Arkansas, United States",
       "Memphis, Tennessee, United States",
       "Nagoya, Japan",
@@ -1860,6 +1865,7 @@
       "Chongqing, China",
       "Fuzhou, China",
       "Islamabad, Pakistan",
+      "Ji'an, China",
       "Nanning, China",
       "Shreveport, Louisiana, United States",
       "Taipei, Taiwan"
@@ -1913,13 +1919,18 @@
   "Bhz2": {
     "1": [],
     "2": [],
-    "3": [],
+    "3": [
+      "Hengyang, China",
+      "Ji'an, China"
+    ],
     "4": [
       "Chongqing, China",
       "Fuzhou, China",
       "Hangzhou, China",
+      "Hengyang, China",
       "Islamabad, Pakistan",
       "Jackson, Mississippi, United States",
+      "Ji'an, China",
       "Little Rock, Arkansas, United States",
       "Memphis, Tennessee, United States",
       "Nanjing, China",
@@ -2212,7 +2223,7 @@
       "Budapest, Hungary",
       "Canberra, Australia",
       "Flagstaff, Arizona, United States",
-      "Prague, Czechia",
+      "Prague, Czech Republic",
       "Santa Rosa, Argentina",
       "Sofia, Bulgaria",
       "Vienna, Austria"
@@ -2251,7 +2262,7 @@
       "Kyiv, Ukraine",
       "Paris, France",
       "Payson, Arizona, United States",
-      "Prague, Czechia",
+      "Prague, Czech Republic",
       "Santa Rosa, Argentina",
       "Sofia, Bulgaria",
       "Vienna, Austria",
@@ -3005,7 +3016,8 @@
     ],
     "4": [
       "Chihuahua, Mexico",
-      "Gaborone, Botswana"
+      "Gaborone, Botswana",
+      "Nogales, Mexico"
     ]
   },
   "Zwz1": {
@@ -3093,7 +3105,8 @@
     "3": [
       "Gaborone, Botswana",
       "Harare, Zimbabwe",
-      "Lusaka, Zambia"
+      "Lusaka, Zambia",
+      "Nogales, Mexico"
     ],
     "4": [
       "Harare, Zimbabwe",
@@ -3586,7 +3599,9 @@
   },
   "Cva2": {
     "1": [],
-    "2": [],
+    "2": [
+      "Nogales, Mexico"
+    ],
     "3": [
       "Lanzhou, China"
     ],

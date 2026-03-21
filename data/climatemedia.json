@@ -738,6 +738,21 @@
     ]
   },
 
+  "Chz1": {
+    "media": [
+      "<a title='凡尔礼, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:YuepingPark20170302_01.jpg'><img alt='YuepingPark20170302 01' src='https://upload.wikimedia.org/wikipedia/commons/2/28/YuepingPark20170302_01.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:YuepingPark20170302_01.jpg'>凡尔礼</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<img class='three' src='../graphs/Hengyang1-F.png' alt='graph of Hengyang climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Jian1-F.png' alt='graph of Jian climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Tokyo4-F.png' alt='graph of Tokyo climate in 2071-2100'>",
+      "<br class='wide-only'><br class='wide-only'>",
+      "<img class='three' src='../graphs/Toronto4-F.png' alt='graph of Toronto climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Chicago4-F.png' alt='graph of Chicago climate in 2071-2100'>",
+      "<img class='three' src='../graphs/NewYorkCity4-F.png' alt='graph of NewYorkCity climate in 2071-2100'>"
+    ]
+  },
+
   "Csz1": {
     "media": [
       "<p>No images or videos are available for this climate.</p>",
