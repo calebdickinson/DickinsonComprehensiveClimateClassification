@@ -91,12 +91,15 @@
     ]
   },
   "Bmz1": {
-    "1": [],
+    "1": [
+      "Swemeh, Jordan"
+    ],
     "2": [
       "Antalya, Türkiye",
       "Athens, Greece",
       "Córdoba, Spain",
-      "Fresno, California, United States"
+      "Fresno, California, United States",
+      "Swemeh, Jordan"
     ],
     "3": [
       "Algiers, Algeria",
@@ -2345,7 +2348,8 @@
     "3": [
       "Erbil, Iraq",
       "Redding, California, United States",
-      "St. George, Utah, United States"
+      "St. George, Utah, United States",
+      "Swemeh, Jordan"
     ],
     "4": [
       "Antalya, Türkiye",
@@ -2731,7 +2735,8 @@
       "Mogadishu, Somalia"
     ],
     "3": [
-      "Honolulu, Hawaii, United States"
+      "Honolulu, Hawaii, United States",
+      "La Perouse Pinnacle, Hawaii, United States"
     ],
     "4": [
       "Caracas, Venezuela"
@@ -3555,8 +3560,12 @@
     ]
   },
   "Ama2": {
-    "1": [],
-    "2": [],
+    "1": [
+      "La Perouse Pinnacle, Hawaii, United States"
+    ],
+    "2": [
+      "La Perouse Pinnacle, Hawaii, United States"
+    ],
     "3": [],
     "4": [
       "Hanga Roa, Easter Island, Chile"
@@ -3906,6 +3915,22 @@
     "3": [],
     "4": [
       "Faisalabad, Pakistan"
+    ]
+  },
+  "Amz2": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [
+      "Swemeh, Jordan"
+    ]
+  },
+  "Amz1": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [
+      "La Perouse Pinnacle, Hawaii, United States"
     ]
   }
 }
