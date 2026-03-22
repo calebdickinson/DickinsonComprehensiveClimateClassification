@@ -1041,8 +1041,9 @@
       "<a title='U.S. Fish &amp; Wildlife Service - Pacific Region&#039;s, CC BY 2.0 &lt;https://creativecommons.org/licenses/by/2.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Great_frigatebirds_and_red-footed_boobies_at_Tern_Island.jpg'><img alt='Great frigatebirds and red-footed boobies at Tern Island' src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Great_frigatebirds_and_red-footed_boobies_at_Tern_Island.jpg/3840px-Great_frigatebirds_and_red-footed_boobies_at_Tern_Island.jpg'></a>",
       "<a href='https://commons.wikimedia.org/wiki/File:Great_frigatebirds_and_red-footed_boobies_at_Tern_Island.jpg'>U.S. Fish &amp; Wildlife Service - Pacific Region&#039;s</a>, <a href='https://creativecommons.org/licenses/by/2.0'>CC BY 2.0</a>, via Wikimedia Commons",
       "<br><br>",
-      "<img src='../graphs/LaPerousePinnacle1-F.png' alt='graph of La Perouse Pinnacle climate in 1981-2010'>",
-      "<img src='../graphs/LaPerousePinnacle2-F.png' alt='graph of La Perouse Pinnacle climate in 2011-2040'>"
+      "<img class='three' src='../graphs/LaPerousePinnacle1-F.png' alt='graph of La Perouse Pinnacle climate in 1981-2010'>",
+      "<img class='three' src='../graphs/LaPerousePinnacle2-F.png' alt='graph of La Perouse Pinnacle climate in 2011-2040'>",
+      "<img class='three' src='../graphs/HangaRoa4-F.png' alt='graph of Hanga Roa climate in 2071-2100'>"
     ]
   },
 
