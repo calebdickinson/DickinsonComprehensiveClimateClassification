@@ -392,6 +392,15 @@
     ]
   },
 
+  "Edz1": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img src='../graphs/Karamay2-F.png' alt='graph of Karamay climate in 2011-2040'>",
+      "<img src='../graphs/Karamay3-F.png' alt='graph of Karamay climate in 2041-2070'>"
+    ]
+  },
+
   "Ewz1": {
     "media": [
       "<p>No images or videos are available for this climate.</p>",
