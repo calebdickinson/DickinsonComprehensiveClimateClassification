@@ -42,7 +42,7 @@ codes = {
 'DdX', 'Ddz2', 'Ddz1', 'Dda2', 'Dda1', 'Ddb2',
        'Edz2', 'Edz1', 'Eda2', 'Eda1', 'Edb2',
 
-               'Amz1', 'Ama2',
+       'Amz2', 'Amz1', 'Ama2',
 'BmX', 'Bmz2', 'Bmz1', 'Bma2', 'Bma1', 'Bmb2',
 'CmX', 'Cmz2', 'Cmz1', 'Cma2', 'Cma1', 'Cmb2',
                'Dmz1', 'Dma2', 'Dma1', 'Dmb2',
