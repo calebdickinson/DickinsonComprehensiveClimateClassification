@@ -1250,6 +1250,7 @@
   },
   "Fb1": {
     "1": [
+      "Attawapiskat, Ontario, Canada",
       "Churchill, Manitoba, Canada",
       "Inuvik, Northwest Territories, Canada",
       "Labrador City, Newfoundland and Labrador, Canada",
@@ -1453,6 +1454,7 @@
       "Yekaterinburg, Russia"
     ],
     "3": [
+      "Attawapiskat, Ontario, Canada",
       "Fairbanks, Alaska, United States",
       "Labrador City, Newfoundland and Labrador, Canada"
     ],
@@ -1472,6 +1474,7 @@
       "Yekaterinburg, Russia"
     ],
     "2": [
+      "Attawapiskat, Ontario, Canada",
       "Bethel, Alaska, United States",
       "Chibougamau, Québec, Canada",
       "Happy Valley–Goose Bay, Newfoundland and Labrador, Canada",
@@ -1616,6 +1619,7 @@
       "Yekaterinburg, Russia"
     ],
     "4": [
+      "Attawapiskat, Ontario, Canada",
       "Inuvik, Northwest Territories, Canada",
       "Thompson, Manitoba, Canada",
       "Yellowknife, Northwest Territories, Canada"
@@ -2919,10 +2923,12 @@
       "Hotan, China"
     ],
     "2": [
+      "Bayannur, China",
       "Elko, Nevada, United States",
       "Hotan, China"
     ],
     "3": [
+      "Bayannur, China",
       "Jiayuguan, China"
     ],
     "4": [
@@ -3039,9 +3045,13 @@
     "3": [
       "Casper, Wyoming, United States",
       "Glasgow, Montana, United States",
-      "Hami, China"
+      "Hami, China",
+      "Khanbogd, Mongolia"
     ],
-    "4": []
+    "4": [
+      "Bayannur, China",
+      "Khanbogd, Mongolia"
+    ]
   },
   "Bvz1": {
     "1": [
@@ -3760,9 +3770,12 @@
   },
   "Eda2": {
     "1": [
-      "Karamay, China"
+      "Karamay, China",
+      "Khanbogd, Mongolia"
     ],
-    "2": [],
+    "2": [
+      "Khanbogd, Mongolia"
+    ],
     "3": [],
     "4": []
   },
@@ -4033,5 +4046,13 @@
     "4": [
       "Ürjar, Kazakhstan"
     ]
+  },
+  "Eda1": {
+    "1": [
+      "Bayannur, China"
+    ],
+    "2": [],
+    "3": [],
+    "4": []
   }
 }
