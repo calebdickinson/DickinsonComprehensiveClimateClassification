@@ -1851,8 +1851,10 @@
     ],
     "2": [
       "Chengdu, China",
+      "Houma, China",
       "Jinan, China",
-      "Qingdao, China"
+      "Qingdao, China",
+      "Tongchuan, China"
     ],
     "3": [
       "Dalian, China"
@@ -3633,7 +3635,9 @@
     "4": []
   },
   "Dva2": {
-    "1": [],
+    "1": [
+      "Houma, China"
+    ],
     "2": [
       "Baotou, China",
       "Lanzhou, China",
@@ -3646,7 +3650,9 @@
     "4": []
   },
   "Cva2": {
-    "1": [],
+    "1": [
+      "Tongchuan, China"
+    ],
     "2": [
       "Nogales, Mexico"
     ],
@@ -3658,7 +3664,10 @@
   "Cvz1": {
     "1": [],
     "2": [],
-    "3": [],
+    "3": [
+      "Houma, China",
+      "Tongchuan, China"
+    ],
     "4": [
       "Lanzhou, China",
       "Yulin, China"
@@ -3971,6 +3980,15 @@
     "4": [
       "Baotou, China",
       "Tongliao, China"
+    ]
+  },
+  "Cvz2": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [
+      "Houma, China",
+      "Tongchuan, China"
     ]
   }
 }
