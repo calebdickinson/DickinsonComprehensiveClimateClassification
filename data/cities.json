@@ -2806,9 +2806,12 @@
       "Weiser, Idaho, United States"
     ],
     "2": [
-      "Kabul, Afghanistan"
+      "Kabul, Afghanistan",
+      "Ürjar, Kazakhstan"
     ],
-    "3": [],
+    "3": [
+      "Ürjar, Kazakhstan"
+    ],
     "4": []
   },
   "Cmz1": {
@@ -2817,6 +2820,7 @@
       "Tehran, Iran"
     ],
     "2": [
+      "Bideleh, Iran",
       "Redding, California, United States",
       "Shiraz, Iran",
       "Tehran, Iran",
@@ -2847,10 +2851,12 @@
       "Erbil, Iraq"
     ],
     "3": [
+      "Bideleh, Iran",
       "Tehran, Iran",
       "Weiser, Idaho, United States"
     ],
     "4": [
+      "Bideleh, Iran",
       "Boise, Idaho, United States",
       "Dushanbe, Tajikistan",
       "Pendleton, Oregon, United States",
@@ -4004,6 +4010,24 @@
     "4": [
       "Fengxian, China",
       "Handan, China"
+    ]
+  },
+  "Ema1": {
+    "1": [
+      "Ürjar, Kazakhstan"
+    ],
+    "2": [],
+    "3": [],
+    "4": []
+  },
+  "Dmz1": {
+    "1": [
+      "Bideleh, Iran"
+    ],
+    "2": [],
+    "3": [],
+    "4": [
+      "Ürjar, Kazakhstan"
     ]
   }
 }

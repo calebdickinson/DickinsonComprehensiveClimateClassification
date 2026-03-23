@@ -637,6 +637,15 @@
     ]
   },
 
+  "Dmz1": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img src='../graphs/Bideleh1-F.png' alt='graph of Bideleh climate in 1981-2010'>",
+      "<img src='../graphs/Ürjar4-F.png' alt='graph of Ürjar climate in 2071-2100'>"
+    ]
+  },
+
   "Dwz1": {
     "media": [
       "<p>No images or videos are available for this climate.</p>",
