@@ -409,6 +409,15 @@
     ]
   },
 
+  "Evz1": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img src='../graphs/Chita4-F.png' alt='graph of Chita climate in 2071-2100'>",
+      "<img src='../graphs/Sükhbaatar4-F.png' alt='graph of Sükhbaatar climate in 2071-2100'>"
+    ]
+  },
+
   "Edz2": {
     "unitsToggle": false,
     "media": [
@@ -1038,7 +1047,7 @@
 
   "Ama2": {
     "media": [
-      "<a title='U.S. Fish &amp; Wildlife Service - Pacific Region&#039;s, CC BY 2.0 &lt;https://creativecommons.org/licenses/by/2.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Great_frigatebirds_and_red-footed_boobies_at_Tern_Island.jpg'><img alt='Great frigatebirds and red-footed boobies at Tern Island' src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Great_frigatebirds_and_red-footed_boobies_at_Tern_Island.jpg/3840px-Great_frigatebirds_and_red-footed_boobies_at_Tern_Island.jpg'></a>",
+      "<a title='U.S. Fish &amp; Wildlife Service - Pacific Regions, CC BY 2.0 &lt;https://creativecommons.org/licenses/by/2.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Great_frigatebirds_and_red-footed_boobies_at_Tern_Island.jpg'><img alt='Great frigatebirds and red-footed boobies at Tern Island' src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Great_frigatebirds_and_red-footed_boobies_at_Tern_Island.jpg/3840px-Great_frigatebirds_and_red-footed_boobies_at_Tern_Island.jpg'></a>",
       "<a href='https://commons.wikimedia.org/wiki/File:Great_frigatebirds_and_red-footed_boobies_at_Tern_Island.jpg'>U.S. Fish &amp; Wildlife Service - Pacific Region&#039;s</a>, <a href='https://creativecommons.org/licenses/by/2.0'>CC BY 2.0</a>, via Wikimedia Commons",
       "<br><br>",
       "<img class='three' src='../graphs/LaPerousePinnacle1-F.png' alt='graph of La Perouse Pinnacle climate in 1981-2010'>",

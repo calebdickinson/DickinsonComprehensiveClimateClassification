@@ -1761,6 +1761,7 @@
   },
   "Fb2": {
     "1": [
+      "Chita, Russia",
       "Dawson City, Yukon, Canada",
       "Hay River, Northwest Territories, Canada",
       "Thompson, Manitoba, Canada",
@@ -3410,10 +3411,13 @@
     "1": [
       "Blagoveshchensk, Russia",
       "Khabarovsk, Russia",
-      "Kyzyl, Russia"
+      "Kyzyl, Russia",
+      "Sükhbaatar, Mongolia"
     ],
     "2": [
+      "Chita, Russia",
       "Dawson City, Yukon, Canada",
+      "Sükhbaatar, Mongolia",
       "Ulaanbaatar, Mongolia",
       "Ust-Ilimsk, Russia",
       "Vorogovo, Russia"
@@ -3434,7 +3438,9 @@
   "Eva2": {
     "1": [],
     "2": [],
-    "3": [],
+    "3": [
+      "Sükhbaatar, Mongolia"
+    ],
     "4": [
       "Ulaanbaatar, Mongolia"
     ]
@@ -3675,7 +3681,9 @@
   "Fa2": {
     "1": [],
     "2": [],
-    "3": [],
+    "3": [
+      "Chita, Russia"
+    ],
     "4": [
       "Kustur, Russia"
     ]
@@ -3931,6 +3939,15 @@
     "3": [],
     "4": [
       "La Perouse Pinnacle, Hawaii, United States"
+    ]
+  },
+  "Evz1": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [
+      "Chita, Russia",
+      "Sükhbaatar, Mongolia"
     ]
   }
 }
