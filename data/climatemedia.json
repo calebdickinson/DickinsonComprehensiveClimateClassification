@@ -348,6 +348,15 @@
     ]
   },
 
+  "Ema1": {
+    "media": [
+      "<a title='Yakov Fedorov, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Urzhar.JPG'><img alt='Urzhar' src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Urzhar.JPG/3840px-Urzhar.JPG'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Urzhar.JPG'>Yakov Fedorov</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<img src='../graphs/Ürjar1-F.png' alt='graph of Ürjar climate in 1981-2010'>"
+    ]
+  },
+
   "Eha2": {
     "media": [
       "<p>No images or videos are available for this climate.</p>",
@@ -380,12 +389,10 @@
     ]
   },
 
-  "Ema1": {
+  "Ema2": {
+    "unitsToggle": false,
     "media": [
-      "<a title='Yakov Fedorov, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Urzhar.JPG'><img alt='Urzhar' src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Urzhar.JPG/3840px-Urzhar.JPG'></a>",
-      "<a href='https://commons.wikimedia.org/wiki/File:Urzhar.JPG'>Yakov Fedorov</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
-      "<br><br>",
-      "<img src='../graphs/Ürjar1-F.png' alt='graph of Ürjar climate in 1981-2010'>"
+      "<p>No images, videos, or graphs are available for this climate.</p>"
     ]
   },
 
