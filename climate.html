@@ -155,9 +155,12 @@
   @media (min-width: 1400px) { .wide-only { display: block; } }
 
   @media (max-width: 1400px) {
-    img {
+    #climatemedia img {
       margin-bottom: 1.5em;
     }
+    #climatemedia a img {
+      margin-bottom: 0;
+    }  
     #toggle_units_media {
       margin-top: -1.5em;
     }
@@ -219,9 +222,8 @@
     margin-top: -15px;
   }
 
-  /* Any climate ending in b2 → white year buttons */
-  body[class$="b2"] .year-btn {
-    background: white;
+  body[class$="b1"] .year-btn {
+    background: #4444ff;
   }
 
   </style>
@@ -457,7 +459,6 @@
           m: 'mediterranean',
           w: 'monsoon',
           v: 'semiaridmonsoon',
-          b: 'cold',
           c: 'cold',
           Y: 'cold'
         };
