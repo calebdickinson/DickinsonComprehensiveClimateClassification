@@ -861,6 +861,15 @@
     ]
   },
 
+  "Cvz1": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img src='../graphs/Yulin4-F.png' alt='graph of Yulin climate in 2071-2100'>",
+      "<img src='../graphs/Lanzhou4-F.png' alt='graph of Lanzhou climate in 2071-2100'>"
+    ]
+  },
+
   "Chz2": {
     "media": [
       "<p>No images or videos are available for this climate.</p>",

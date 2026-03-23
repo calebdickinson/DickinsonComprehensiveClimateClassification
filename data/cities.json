@@ -3625,7 +3625,8 @@
   },
   "Dva1": {
     "1": [
-      "Lanzhou, China"
+      "Lanzhou, China",
+      "Yulin, China"
     ],
     "2": [],
     "3": [],
@@ -3635,10 +3636,12 @@
     "1": [],
     "2": [
       "Baotou, China",
-      "Lanzhou, China"
+      "Lanzhou, China",
+      "Yulin, China"
     ],
     "3": [
-      "Baotou, China"
+      "Baotou, China",
+      "Yulin, China"
     ],
     "4": []
   },
@@ -3657,7 +3660,8 @@
     "2": [],
     "3": [],
     "4": [
-      "Lanzhou, China"
+      "Lanzhou, China",
+      "Yulin, China"
     ]
   },
   "Gb2": {
