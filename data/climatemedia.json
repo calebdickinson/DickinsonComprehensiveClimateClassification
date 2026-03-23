@@ -637,6 +637,17 @@
     ]
   },
 
+  "Dwz1": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img class='three' src='../graphs/Shenyang4-F.png' alt='graph of Shenyang climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Harbin4-F.png' alt='graph of Harbin climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Khabarovsk4-F.png' alt='graph of Khabarovsk climate in 2071-2100'>"
+    ]
+  },
+
+
   "Dvz1": {
     "media": [
       "<p>No images or videos are available for this climate.</p>",
