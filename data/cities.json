@@ -3428,7 +3428,10 @@
     "4": []
   },
   "Eva1": {
-    "1": [],
+    "1": [
+      "Baotou, China",
+      "Tongliao, China"
+    ],
     "2": [],
     "3": [
       "Ulaanbaatar, Mongolia"
@@ -3437,7 +3440,9 @@
   },
   "Eva2": {
     "1": [],
-    "2": [],
+    "2": [
+      "Tongliao, China"
+    ],
     "3": [
       "Sükhbaatar, Mongolia"
     ],
@@ -3629,9 +3634,12 @@
   "Dva2": {
     "1": [],
     "2": [
+      "Baotou, China",
       "Lanzhou, China"
     ],
-    "3": [],
+    "3": [
+      "Baotou, China"
+    ],
     "4": []
   },
   "Cva2": {
@@ -3948,6 +3956,17 @@
     "4": [
       "Chita, Russia",
       "Sükhbaatar, Mongolia"
+    ]
+  },
+  "Dvz1": {
+    "1": [],
+    "2": [],
+    "3": [
+      "Tongliao, China"
+    ],
+    "4": [
+      "Baotou, China",
+      "Tongliao, China"
     ]
   }
 }
