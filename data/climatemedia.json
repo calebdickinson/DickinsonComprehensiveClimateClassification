@@ -897,6 +897,14 @@
     ]
   },
 
+  "Cwz2": {
+    "media": [
+      "<img src='../graphs/Fengxian4-F.png' alt='graph of Fengxian climate in 2071-2100'>",
+      "<img src='../graphs/Handan4-F.png' alt='graph of Handan climate in 2071-2100'>"
+    ]
+  },
+
+
   "Cvz2": {
     "media": [
       "<img src='../graphs/Tongchuan4-F.png' alt='graph of Tongchuan climate in 2071-2100'>",

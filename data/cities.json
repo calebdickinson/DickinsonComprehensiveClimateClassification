@@ -1829,6 +1829,8 @@
     ],
     "3": [
       "Beijing, China",
+      "Fengxian, China",
+      "Handan, China",
       "Jinan, China",
       "Qingdao, China",
       "Seoul, South Korea",
@@ -1846,11 +1848,14 @@
   "Cwa2": {
     "1": [
       "Chengdu, China",
+      "Fengxian, China",
       "Qingdao, China",
       "Xi'an, China"
     ],
     "2": [
       "Chengdu, China",
+      "Fengxian, China",
+      "Handan, China",
       "Houma, China",
       "Jinan, China",
       "Qingdao, China",
@@ -3636,6 +3641,7 @@
   },
   "Dva2": {
     "1": [
+      "Handan, China",
       "Houma, China"
     ],
     "2": [
@@ -3989,6 +3995,15 @@
     "4": [
       "Houma, China",
       "Tongchuan, China"
+    ]
+  },
+  "Cwz2": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [
+      "Fengxian, China",
+      "Handan, China"
     ]
   }
 }
