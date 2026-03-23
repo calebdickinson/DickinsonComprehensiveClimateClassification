@@ -1010,15 +1010,33 @@
     ]
   },
 
+  "Bma1": {
+    "media": [
+      "<a title='Crishazzard, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Ruins_In_Runyon_Canyon_Park.jpg'><img alt='Ruins In Runyon Canyon Park' src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Ruins_In_Runyon_Canyon_Park.jpg/3840px-Ruins_In_Runyon_Canyon_Park.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Ruins_In_Runyon_Canyon_Park.jpg'>Crishazzard</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/DXgd2fYRG00?si=oGbuJMy7Q1xgN4jc' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img class='three' src='../graphs/Lisbon1-F.png' alt='graph of Lisbon climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Casablanca1-F.png' alt='graph of Casablanca climate in 1981-2010'>",
+      "<img class='three' src='../graphs/LosAngeles1-F.png' alt='graph of Los Angeles climate in 1981-2010'>"
+    ]
+  },
+
   "Bma2": {
     "media": [
-      "<a title='Bellina 09, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Experience_the_Majjistral_Park.jpg'><img alt='Visitors can walk along kilometres of trails that will take you through a myriad of habitats synonymous with the Mediterranean climate.' src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Experience_the_Majjistral_Park.jpg/2048px-Experience_the_Majjistral_Park.jpg?20250624094752'></a>",
+      "<a title='Qwerty510 at English Wikipedia, Public domain, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:RiversideCA_VictoriaAve.jpg'><img alt='RiversideCA VictoriaAve' src='https://upload.wikimedia.org/wikipedia/commons/5/52/RiversideCA_VictoriaAve.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:RiversideCA_VictoriaAve.jpg'>Qwerty510 at English Wikipedia</a>, Public domain, via Wikimedia Commons",
       "<br><br>",
       "<iframe width='1280' height='720' src='https://www.youtube.com/embed/72F1-OMZjyY?si=lTQkApddacUXS_H6' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
       "<br><br>",
       "<img class='three' src='../graphs/Algiers1-F.png' alt='graph of Algiers climate in 1981-2010'>",
       "<img class='three' src='../graphs/Tunis1-F.png' alt='graph of Tunis climate in 1981-2010'>",
-      "<img class='three' src='../graphs/Riverside1-F.png' alt='graph of Riverside climate in 1981-2010'>"
+      "<img class='three' src='../graphs/Riverside1-F.png' alt='graph of Riverside climate in 1981-2010'>",
+      "<br class='wide-only'><br class='wide-only'>",
+      "<img class='three' src='../graphs/Vancouver4-F.png' alt='graph of Vancouver climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Seattle4-F.png' alt='graph of Seattle climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Portland4-F.png' alt='graph of Portland climate in 2071-2100'>"
     ]
   },
 
