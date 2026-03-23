@@ -647,7 +647,6 @@
     ]
   },
 
-
   "Dvz1": {
     "media": [
       "<p>No images or videos are available for this climate.</p>",
@@ -849,6 +848,16 @@
       "<img class='three' src='../graphs/Budapest4-F.png' alt='graph of Budapest climate in 2071-2100'>",
       "<img class='three' src='../graphs/Bucharest4-F.png' alt='graph of Bucharest climate in 2071-2100'>",
       "<img class='three' src='../graphs/Kamloops4-F.png' alt='graph of Kamloops climate in 2071-2100'>"
+    ]
+  },
+
+  "Cwz1": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img class='three' src='../graphs/Beijing4-F.png' alt='graph of Beijing climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Qingdao4-F.png' alt='graph of Qingdao climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Seoul4-F.png' alt='graph of Seoul climate in 2071-2100'>"
     ]
   },
 
