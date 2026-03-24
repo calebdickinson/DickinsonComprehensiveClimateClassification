@@ -665,6 +665,19 @@
     ]
   },
 
+  "Ddz1": {
+    "media": [
+      "<a title='Peter Morgan from Nomadic, CC BY 2.0 &lt;https://creativecommons.org/licenses/by/2.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Grape_Drying_Sheds_outside_of_Shanshan,_Xinjiang_China.jpg'><img alt='Grape Drying Sheds outside of Shanshan, Xinjiang China' src='https://upload.wikimedia.org/wikipedia/commons/e/e8/Grape_Drying_Sheds_outside_of_Shanshan%2C_Xinjiang_China.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Grape_Drying_Sheds_outside_of_Shanshan,_Xinjiang_China.jpg'>Peter Morgan from Nomadic</a>, <a href='https://creativecommons.org/licenses/by/2.0'>CC BY 2.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/_mtldqX1I8o?si=IzCInUg-uSAExjY_' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img class='three' src='../graphs/Darvazagascrater1-F.png' alt='graph of Darvaza gas crater climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Turpan1-F.png' alt='graph of Turpan climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Bayannur4-F.png' alt='graph of Bayannur climate in 2071-2100'>"
+    ]
+  },
+
   "Dmz1": {
     "media": [
       "<p>No images or videos are available for this climate.</p>",
@@ -885,6 +898,17 @@
       "<img class='three' src='../graphs/Budapest4-F.png' alt='graph of Budapest climate in 2071-2100'>",
       "<img class='three' src='../graphs/Bucharest4-F.png' alt='graph of Bucharest climate in 2071-2100'>",
       "<img class='three' src='../graphs/Kamloops4-F.png' alt='graph of Kamloops climate in 2071-2100'>"
+    ]
+  },
+
+  "Cdz1": {
+    "media": [
+      "<a title='BLM Nevada, Public domain, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Spring_Flowers_in_Red_Rock_Canyon_National_Conservation_Area.jpg'><img alt='Spring Flowers in Red Rock Canyon National Conservation Area, southern Nevada' src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Spring_Flowers_in_Red_Rock_Canyon_National_Conservation_Area.jpg/3840px-Spring_Flowers_in_Red_Rock_Canyon_National_Conservation_Area.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Spring_Flowers_in_Red_Rock_Canyon_National_Conservation_Area.jpg'>BLM Nevada</a>, Public domain, via Wikimedia Commons",
+      "<br><br>",
+      "<img class='three' src='../graphs/Yazd1-F.png' alt='graph of Yazd climate in 1981-2010'>",
+      "<img class='three' src='../graphs/LasVegas1-F.png' alt='graph of Las Vegas climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Casper4-F.png' alt='graph of Casper climate in 2071-2100'>"
     ]
   },
 
