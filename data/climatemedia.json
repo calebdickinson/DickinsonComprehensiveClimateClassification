@@ -1085,6 +1085,21 @@
     ]
   },
 
+  "Bmz1": {
+    "media": [
+      "<a title='Adeeb Atwan, CC BY 3.0 &lt;https://creativecommons.org/licenses/by/3.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Mosque_-_panoramio_(24).jpg'><img alt='Mosque - panoramio (24)' src='https://upload.wikimedia.org/wikipedia/commons/7/78/Mosque_-_panoramio_%2824%29.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Mosque_-_panoramio_(24).jpg'>Adeeb Atwan</a>, <a href='https://creativecommons.org/licenses/by/3.0'>CC BY 3.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<img class='three' src='../graphs/Sweimeh1-F.png' alt='graph of Sweimeh climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Jerusalem4-F.png' alt='graph of Jerusalem climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Istanbul4-F.png' alt='graph of Istanbul climate in 2071-2100'>",
+      "<br class='wide-only'><br class='wide-only'>",
+      "<img class='three' src='../graphs/Rome4-F.png' alt='graph of Rome climate in 2071-2100'>",
+      "<img class='three' src='../graphs/LosAngeles4-F.png' alt='graph of Los Angeles climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Medford4-F.png' alt='graph of Medford climate in 2071-2100'>"
+    ]
+  },
+
   "Bhz2": {
     "media": [
       "<p>No images or videos are available for this climate.</p>",
@@ -1109,6 +1124,17 @@
     "media": [
       "<img src='../graphs/LakeHavasuCity1-F.png' alt='graph of Lake Havasu City climate in 1981-2010'>",
       "<img src='../graphs/FurnaceCreek1-F.png' alt='graph of Furnace Creek climate in 1981-2010'>"
+    ]
+  },
+
+  "Bmz2": {
+    "media": [
+      "<a title='Kohdarmiansali, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Shadab_Dezful_Castle.jpg'><img alt='Shadab Dezful Castle' src='https://upload.wikimedia.org/wikipedia/commons/5/5e/Shadab_Dezful_Castle.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Shadab_Dezful_Castle.jpg'>Kohdarmiansali</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<img class='three' src='../graphs/Dezful1-F.png' alt='graph of Dezful climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Athens4-F.png' alt='graph of Athens climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Redding4-F.png' alt='graph of Redding climate in 2071-2100'>"
     ]
   },
 
@@ -1237,7 +1263,7 @@
     "media": [
       "<p>No images or videos are available for this climate.</p>",
       "<br>",
-      "<img src='../graphs/Swemeh4-F.png' alt='graph of Swemeh climate in 2071-2100'>"
+      "<img src='../graphs/Sweimeh4-F.png' alt='graph of Sweimeh climate in 2071-2100'>"
     ]
   },
 
