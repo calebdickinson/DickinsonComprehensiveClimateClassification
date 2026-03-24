@@ -888,6 +888,17 @@
     ]
   },
 
+  "Cmz1": {
+    "media": [
+      "<a title='ninara, CC BY 2.0 &lt;https://creativecommons.org/licenses/by/2.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Fajr_Bridge_Tehran2.jpg'><img alt='Fajr Bridge Tehran2' src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Fajr_Bridge_Tehran2.jpg/3840px-Fajr_Bridge_Tehran2.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Fajr_Bridge_Tehran2.jpg'>ninara</a>, <a href='https://creativecommons.org/licenses/by/2.0'>CC BY 2.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<img class='three' src='../graphs/Tehran1-F.png' alt='graph of Tenran climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Erbil1-F.png' alt='graph of Erbil climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Bend4-F.png' alt='graph of Bend climate in 2071-2100'>"
+    ]
+  },
+
   "Cwz1": {
     "media": [
       "<p>No images or videos are available for this climate.</p>",
