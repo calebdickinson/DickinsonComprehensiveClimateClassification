@@ -2003,6 +2003,7 @@
       "Ahmedabad, India",
       "Hyderabad, India",
       "Jabalpur, India",
+      "Jhalawar, India",
       "Nagpur, India"
     ],
     "4": [
@@ -2056,8 +2057,12 @@
     ]
   },
   "Bwz2": {
-    "1": [],
-    "2": [],
+    "1": [
+      "Jhalawar, India"
+    ],
+    "2": [
+      "Jhalawar, India"
+    ],
     "3": [
       "Delhi, India",
       "Gujranwala, Pakistan",
@@ -3898,6 +3903,7 @@
     "2": [],
     "3": [],
     "4": [
+      "Jhalawar, India",
       "Nagpur, India"
     ]
   },
