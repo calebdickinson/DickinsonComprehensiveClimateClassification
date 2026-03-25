@@ -1331,6 +1331,16 @@
     ]
   },
 
+  "Awz2": {
+    "media": [
+      "<a title='Ganesh Dhamodkar, CC BY 3.0 &lt;https://creativecommons.org/licenses/by/3.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Pohara,_The_third_river_of_Nagpur,_at_Khamla_-_panoramio.jpg'><img alt='Pohara, The third river of Nagpur, at Khamla - panoramio' src='https://upload.wikimedia.org/wikipedia/commons/2/27/Pohara%2C_The_third_river_of_Nagpur%2C_at_Khamla_-_panoramio.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Pohara,_The_third_river_of_Nagpur,_at_Khamla_-_panoramio.jpg'>Ganesh Dhamodkar</a>, <a href='https://creativecommons.org/licenses/by/3.0'>CC BY 3.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<img class='three' src='../graphs/Nagpur1-F.png' alt='graph of Nagpur climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Hanoi4-F.png' alt='graph of Hanoi climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Ahmedabad4-F.png' alt='graph of Ahmedabad climate in 2071-2100'>"
+    ]
+  },
 
   "AsX": {
     "media": [
