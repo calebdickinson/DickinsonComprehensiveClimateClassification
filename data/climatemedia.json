@@ -1310,6 +1310,19 @@
     ]
   },
 
+  "Adz2": {
+    "media": [
+      "<a title='Carosaun, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:A_camel_ride_in_the_Sahara_Desert.jpg'><img alt='A camel ride in the Sahara Desert' src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/A_camel_ride_in_the_Sahara_Desert.jpg/960px-A_camel_ride_in_the_Sahara_Desert.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:A_camel_ride_in_the_Sahara_Desert.jpg'>Carosaun</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/5ih3Z3HA7yU?si=mjcDTilTbugAXuSr' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img class='three' src='../graphs/Dallol1-F.png' alt='graph of Dallol climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Kiffa1-F.png' alt='graph of Kiffa climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Jeddah4-F.png' alt='graph of Jeddah climate in 2071-2100'>"
+    ]
+  },
+
   "Amz2": {
     "media": [
       "<p>No images or videos are available for this climate.</p>",
