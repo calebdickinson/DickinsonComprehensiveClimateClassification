@@ -1136,8 +1136,12 @@
 
   "Bdz2": {
     "media": [
-      "<img src='../graphs/LakeHavasuCity1-F.png' alt='graph of Lake Havasu City climate in 1981-2010'>",
-      "<img src='../graphs/FurnaceCreek1-F.png' alt='graph of Furnace Creek climate in 1981-2010'>"
+      "<a title='Mourad.henous, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Oasis_Aghlad_r%C3%A9gion_Gourara.Wilaya_de_Adrar.alg%C3%A9rie.jpg'><img alt='Oasis Aghlad région Gourara.Wilaya de Adrar.algérie' src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Oasis_Aghlad_r%C3%A9gion_Gourara.Wilaya_de_Adrar.alg%C3%A9rie.jpg/3840px-Oasis_Aghlad_r%C3%A9gion_Gourara.Wilaya_de_Adrar.alg%C3%A9rie.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Oasis_Aghlad_r%C3%A9gion_Gourara.Wilaya_de_Adrar.alg%C3%A9rie.jpg'>Mourad.henous</a>, <a href='https://creativecommons.org/licenses/by-sa/3.0'>CC BY-SA 3.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<img class='three' src='../graphs/LakeHavasuCity1-F.png' alt='graph of Lake Havasu City climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Riyadh1-F.png' alt='graph of Riyadh climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Cairo4-F.png' alt='graph of Cairo climate in 2071-2100'>"
     ]
   },
 
