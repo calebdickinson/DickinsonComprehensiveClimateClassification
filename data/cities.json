@@ -2004,6 +2004,7 @@
       "Hyderabad, India",
       "Jabalpur, India",
       "Jhalawar, India",
+      "Kota, India",
       "Nagpur, India"
     ],
     "4": [
@@ -3075,10 +3076,12 @@
       "Lahore, Pakistan",
       "Okara, Pakistan",
       "Sheikhupura, Pakistan",
+      "Sri Muktsar Sahib, India",
       "Tonk, India"
     ],
     "2": [
-      "Hermosillo, Mexico"
+      "Hermosillo, Mexico",
+      "Sri Muktsar Sahib, India"
     ],
     "3": [
       "Chihuahua, Mexico"
@@ -3184,16 +3187,23 @@
     ]
   },
   "Bvz2": {
-    "1": [],
+    "1": [
+      "Kota, India"
+    ],
     "2": [
+      "Kota, India",
       "Tonk, India"
     ],
     "3": [
       "Hermosillo, Mexico",
       "Okara, Pakistan",
+      "Sri Muktsar Sahib, India",
       "Tonk, India"
     ],
-    "4": []
+    "4": [
+      "Sri Muktsar Sahib, India",
+      "Yuncheng, China"
+    ]
   },
   "Avz2": {
     "1": [
@@ -3692,7 +3702,8 @@
   },
   "Cva2": {
     "1": [
-      "Tongchuan, China"
+      "Tongchuan, China",
+      "Yuncheng, China"
     ],
     "2": [
       "Nogales, Mexico"
@@ -3704,10 +3715,13 @@
   },
   "Cvz1": {
     "1": [],
-    "2": [],
+    "2": [
+      "Yuncheng, China"
+    ],
     "3": [
       "Houma, China",
-      "Tongchuan, China"
+      "Tongchuan, China",
+      "Yuncheng, China"
     ],
     "4": [
       "Lanzhou, China",
@@ -3904,6 +3918,7 @@
     "3": [],
     "4": [
       "Jhalawar, India",
+      "Kota, India",
       "Nagpur, India"
     ]
   },
