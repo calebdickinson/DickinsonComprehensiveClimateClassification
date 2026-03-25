@@ -842,6 +842,7 @@
       "Pierre, South Dakota, United States",
       "Pocatello, Idaho, United States",
       "Rapid City, South Dakota, United States",
+      "Ushtobe, Kazakhstan",
       "Volgograd, Russia",
       "Ürümqi, China"
     ],
@@ -1501,6 +1502,7 @@
       "Saskatoon, Saskatchewan, Canada"
     ],
     "3": [
+      "Ulagan, Russia",
       "Whitehorse, Yukon, Canada"
     ],
     "4": [
@@ -1508,13 +1510,17 @@
     ]
   },
   "Esa2": {
-    "1": [],
+    "1": [
+      "Ushtobe, Kazakhstan"
+    ],
     "2": [],
     "3": [
       "Kyzyl, Russia",
       "Saskatoon, Saskatchewan, Canada"
     ],
-    "4": []
+    "4": [
+      "Ulagan, Russia"
+    ]
   },
   "Dsz1": {
     "1": [],
@@ -1523,7 +1529,8 @@
       "Great Falls, Montana, United States",
       "Miles City, Montana, United States",
       "Pierre, South Dakota, United States",
-      "Rapid City, South Dakota, United States"
+      "Rapid City, South Dakota, United States",
+      "Ushtobe, Kazakhstan"
     ],
     "4": [
       "Astana, Kazakhstan",
@@ -1730,10 +1737,12 @@
   },
   "Esb2": {
     "1": [
+      "Ulagan, Russia",
       "Whitehorse, Yukon, Canada"
     ],
     "2": [
       "Leh, India",
+      "Ulagan, Russia",
       "Whitehorse, Yukon, Canada"
     ],
     "3": [],
@@ -2848,7 +2857,8 @@
       "Ankara, Türkiye",
       "Bend, Oregon, United States",
       "Kabul, Afghanistan",
-      "Reno, Nevada, United States"
+      "Reno, Nevada, United States",
+      "Ushtobe, Kazakhstan"
     ]
   },
   "Cmz2": {
