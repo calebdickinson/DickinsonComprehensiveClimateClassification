@@ -1276,6 +1276,29 @@
     ]
   },
 
+  "Ahz1": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img class='three' src='../graphs/Bosconia1-F.png' alt='graph of Bosconia climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Miami4-F.png' alt='graph of Miami climate in 2071-2100'>",
+      "<img class='three' src='../graphs/RiodeJaneiro4-F.png' alt='graph of Rio de Janeiro climate in 2071-2100'>"
+    ]
+  },
+
+  "Agz1": {
+    "media": [
+      "<a title='Rigan123, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Juba_City.jpg'><img alt='Juba, the national capital of the Republic of South Sudan' src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Juba_City.jpg/3840px-Juba_City.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Juba_City.jpg'>Rigan123</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/oM4CIvMDeQM?si=V_TZ8mVYiVMuz5H-' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img class='three' src='../graphs/Juba1-F.png' alt='graph of Juba climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Salvador4-F.png' alt='graph of Salvador climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Havana4-F.png' alt='graph of Havana climate in 2071-2100'>"
+    ]
+  },
+
   "Amz1": {
     "media": [
       "<p>No images or videos are available for this climate.</p>",

@@ -808,8 +808,8 @@ var ai_s = aiAtPoint.gte(0.25).and(aiAtPoint.lt(0.50));
 var ai_g = aiAtPoint.gte(0.50).and(aiAtPoint.lt(0.75));
 var ai_h = aiAtPoint.gte(0.75);
 
-// Mediterranean seasonality
-var isMed = HS.lt(0.4);
+// Mediterranean seasonality — excluded from astronomical tropics
+var isMed = HS.lt(0.4).and(inTropics.not());
 
 // Monsoon seasonality
 var isMonsoon = P6ratio.gte(0.8).and(isMed.not());
