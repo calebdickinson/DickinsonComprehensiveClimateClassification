@@ -1065,6 +1065,30 @@
     ]
   },
 
+  "Bha1": {
+    "media": [
+      "<a title='ElGuruCesar, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Rosedal_de_Palermo_en_Buenos_Aires_2020_by_Cesar_Perez.jpg'><img alt='Rosedal de Palermo en Buenos Aires 2020 by Cesar Perez' src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Rosedal_de_Palermo_en_Buenos_Aires_2020_by_Cesar_Perez.jpg/3840px-Rosedal_de_Palermo_en_Buenos_Aires_2020_by_Cesar_Perez.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Rosedal_de_Palermo_en_Buenos_Aires_2020_by_Cesar_Perez.jpg'>ElGuruCesar</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<img class='three' src='../graphs/BuenosAires1-F.png' alt='graph of Buenos Aires climate in 1981-2010'>",
+      "<img class='three' src='../graphs/SãoPaulo1-F.png' alt='graph of São Paulo climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Plymouth4-F.png' alt='graph of Plymouth climate in 2071-2100'>"
+    ]
+  },
+
+  "Bga1": {
+    "media": [
+      "<a title='Christopher T Cooper, CC BY 3.0 &lt;https://creativecommons.org/licenses/by/3.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Savanna_towards_the_south-east_from_the_south-west_of_Taita_Hills_Game_Lodge_within_the_Taita_Hills_Wildlife_Sanctuary_in_Kenya_2.jpg'><img alt='Savanna towards the south-east from the south-west of Taita Hills Game Lodge within the Taita Hills Wildlife Sanctuary in Kenya 2' src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Savanna_towards_the_south-east_from_the_south-west_of_Taita_Hills_Game_Lodge_within_the_Taita_Hills_Wildlife_Sanctuary_in_Kenya_2.jpg/3840px-Savanna_towards_the_south-east_from_the_south-west_of_Taita_Hills_Game_Lodge_within_the_Taita_Hills_Wildlife_Sanctuary_in_Kenya_2.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Savanna_towards_the_south-east_from_the_south-west_of_Taita_Hills_Game_Lodge_within_the_Taita_Hills_Wildlife_Sanctuary_in_Kenya_2.jpg'>Christopher T Cooper</a>, <a href='https://creativecommons.org/licenses/by/3.0'>CC BY 3.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/tRBlR1YNHvA?si=W8EzRRAMiB1NYCce' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img class='three' src='../graphs/Nairobi1-F.png' alt='graph of Nairobi climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Hobart4-F.png' alt='graph of Hobart climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Christchurch4-F.png' alt='graph of Christchurch climate in 2071-2100'>"
+    ]
+  },
+
   "Bda1": {
     "media": [
       "<iframe width='1280' height='720' src='https://www.youtube.com/embed/f6gVTfmNKGc?si=tuTp86JoFoJimWF6' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>"
