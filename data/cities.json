@@ -308,6 +308,7 @@
       "Buenos Aires, Argentina",
       "Cilaos, Réunion, France",
       "Montevideo, Uruguay",
+      "Popayán, Colombia",
       "Sydney, Australia",
       "São Paulo, Brazil"
     ],
@@ -2085,12 +2086,12 @@
       "Nairobi, Kenya"
     ],
     "3": [
-      "Hobart, Australia"
+      "Hobart, Tasmania, Australia"
     ],
     "4": [
       "Bogotá, Colombia",
       "Christchurch, New Zealand",
-      "Hobart, Australia"
+      "Hobart, Tasmania, Australia"
     ]
   },
   "Agz1": {
@@ -2132,6 +2133,7 @@
     "1": [
       "Auckland, New Zealand",
       "Cilaos, Réunion, France",
+      "Popayán, Colombia",
       "Wellington, New Zealand"
     ],
     "2": [
@@ -2728,11 +2730,11 @@
   "Cgb2": {
     "1": [
       "Christchurch, New Zealand",
-      "Hobart, Australia"
+      "Hobart, Tasmania, Australia"
     ],
     "2": [
       "Christchurch, New Zealand",
-      "Hobart, Australia"
+      "Hobart, Tasmania, Australia"
     ],
     "3": [
       "Aspen, Colorado, United States"
@@ -2749,8 +2751,12 @@
       "Yaoundé, Cameroon"
     ],
     "2": [],
-    "3": [],
-    "4": []
+    "3": [
+      "Popayán, Colombia"
+    ],
+    "4": [
+      "Popayán, Colombia"
+    ]
   },
   "Asa2": {
     "1": [

@@ -1292,6 +1292,19 @@
     ]
   },
 
+  "Aha1": {
+    "media": [
+      "<a title='dronepicr, CC BY 2.0 &lt;https://creativecommons.org/licenses/by/2.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Leleiwi_Park_Hilo_Big_island_Hawaii_(44460121010).jpg'><img alt='Leleiwi Park Hilo Big island Hawaii (44460121010)' src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Leleiwi_Park_Hilo_Big_island_Hawaii_%2844460121010%29.jpg/3840px-Leleiwi_Park_Hilo_Big_island_Hawaii_%2844460121010%29.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Leleiwi_Park_Hilo_Big_island_Hawaii_(44460121010).jpg'>dronepicr</a>, <a href='https://creativecommons.org/licenses/by/2.0'>CC BY 2.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/lNKm9vqwRxw?si=9fu1xNv1vdcn3zjT' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img class='three' src='../graphs/Hilo1-F.png' alt='graph of Hilo climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Bandung1-F.png' alt='graph of Bandung climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Popayán4-F.png' alt='graph of Popayán climate in 2071-2100'>"
+    ]
+  },
+
   "Aha2": {
     "media": [
       "<p>Compare the extent Köppen's tropical rainforest climate with the extent of Aha2 in 1981-2010.</p>",
