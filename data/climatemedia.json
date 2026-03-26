@@ -1121,6 +1121,22 @@
     ]
   },
 
+  "Bha2": {
+    "media": [
+      "<a title='Carol M. Highsmith, Public domain, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Alligators_at_Busch_Gardens_in_Tampa_Bay,_Florida_LCCN2011630414.tif'><img alt='Alligators at Busch Gardens in Tampa Bay, Florida LCCN2011630414' src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Alligators_at_Busch_Gardens_in_Tampa_Bay%2C_Florida_LCCN2011630414.tif/lossy-page1-3840px-Alligators_at_Busch_Gardens_in_Tampa_Bay%2C_Florida_LCCN2011630414.tif.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Alligators_at_Busch_Gardens_in_Tampa_Bay,_Florida_LCCN2011630414.tif'>Carol M. Highsmith</a>, Public domain, via Wikimedia Commons",
+      "<br><br>",
+      "<a title='No machine-readable author provided. Tetraminoe assumed (based on copyright claims)., CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Manatee_in_blue_spring.jpg'><img alt='Manatee in blue spring' src='https://upload.wikimedia.org/wikipedia/commons/5/5f/Manatee_in_blue_spring.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Manatee_in_blue_spring.jpg'>No machine-readable author provided. Tetraminoe assumed (based on copyright claims).</a>, <a href='http://creativecommons.org/licenses/by-sa/3.0/'>CC BY-SA 3.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/z16fYA5mqVE?si=i0jmuZnLkf1lIzw9' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img class='three' src='../graphs/Taipei1-F.png' alt='graph of Taipei climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Tampa1-F.png' alt='graph of Tampa climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Auckland4-F.png' alt='graph of Auckland climate in 2071-2100'>"
+    ]
+  },
+
   "Bma2": {
     "media": [
       "<a title='Qwerty510 at English Wikipedia, Public domain, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:RiversideCA_VictoriaAve.jpg'><img alt='RiversideCA VictoriaAve' src='https://upload.wikimedia.org/wikipedia/commons/5/52/RiversideCA_VictoriaAve.jpg'></a>",
