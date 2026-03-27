@@ -1783,6 +1783,7 @@
       "Dawson City, Yukon, Canada",
       "Hay River, Northwest Territories, Canada",
       "Thompson, Manitoba, Canada",
+      "Tynda, Russia",
       "Ulaanbaatar, Mongolia",
       "Ust-Ilimsk, Russia",
       "Vorogovo, Russia",
@@ -1832,6 +1833,7 @@
     "2": [
       "Beijing, China",
       "Dalian, China",
+      "Liaoyang, China",
       "Pyongyang, North Korea",
       "Seoul, South Korea"
     ],
@@ -2037,7 +2039,9 @@
     "4": []
   },
   "Ewa2": {
-    "1": [],
+    "1": [
+      "Liaoyang, China"
+    ],
     "2": [
       "Harbin, China",
       "Shenyang, China"
@@ -2048,17 +2052,21 @@
       "Irkutsk, Russia",
       "Khabarovsk, Russia"
     ],
-    "4": []
+    "4": [
+      "Tynda, Russia"
+    ]
   },
   "Dwz1": {
     "1": [],
     "2": [],
     "3": [
+      "Liaoyang, China",
       "Pyongyang, North Korea"
     ],
     "4": [
       "Harbin, China",
       "Khabarovsk, Russia",
+      "Liaoyang, China",
       "Shenyang, China"
     ]
   },
@@ -3480,6 +3488,7 @@
       "Chita, Russia",
       "Dawson City, Yukon, Canada",
       "Sükhbaatar, Mongolia",
+      "Tynda, Russia",
       "Ulaanbaatar, Mongolia",
       "Ust-Ilimsk, Russia",
       "Vorogovo, Russia"
@@ -3768,7 +3777,8 @@
     "1": [],
     "2": [],
     "3": [
-      "Chita, Russia"
+      "Chita, Russia",
+      "Tynda, Russia"
     ],
     "4": [
       "Kustur, Russia"
