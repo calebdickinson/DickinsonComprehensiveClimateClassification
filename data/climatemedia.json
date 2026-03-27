@@ -417,6 +417,16 @@
     ]
   },
 
+  "Eva2": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img class='three' src='../graphs/KailuCounty1-F.png' alt='graph of Kailu County climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Tongliao2-F.png' alt='graph of Tongliao climate in 2011-2040'>",
+      "<img class='three' src='../graphs/Ulaanbaatar4-F.png' alt='graph of Ulaanbaatar climate in 2071-2100'>"
+    ]
+  },
+
   "Ehz1": {
     "media": [
       "<p>No images or videos are available for this climate.</p>",
