@@ -1352,6 +1352,17 @@
     ]
   },
 
+  "Awa1": {
+    "media": [
+      "<a title='JMRAFFi, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:World_Trade_Center_San_Salvador.jpg'><img alt='World Trade Center San Salvador' src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/World_Trade_Center_San_Salvador.jpg/3840px-World_Trade_Center_San_Salvador.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:World_Trade_Center_San_Salvador.jpg'>JMRAFFi</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<img class='three' src='../graphs/SanSalvador1-F.png' alt='graph of San Salvador climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Brasília2-F.png' alt='graph of Bandung climate in 2011-2040'>",
+      "<img class='three' src='../graphs/AddisAbaba4-F.png' alt='graph of Addis Ababa climate in 2071-2100'>"
+    ]
+  },
+
   "Aha2": {
     "media": [
       "<p>Compare the extent Köppen's tropical rainforest climate with the extent of Aha2 in 1981-2010.</p>",
