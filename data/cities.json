@@ -775,6 +775,7 @@
     "3": [
       "Ilulissat, Greenland",
       "Iqaluit, Nunavut, Canada",
+      "Kugluktuk, Nunavut, Canada",
       "Nagqu, Tibet, China",
       "Prudhoe Bay, Alaska, United States",
       "Utqiaġvik, Alaska, United States"
@@ -794,7 +795,9 @@
       "Banff, Alberta, Canada"
     ],
     "3": [],
-    "4": []
+    "4": [
+      "Kugluktuk, Nunavut, Canada"
+    ]
   },
   "Dga1": {
     "1": [
@@ -1047,6 +1050,7 @@
       "Almaty, Kazakhstan",
       "Bangor, Maine, United States",
       "Boston, Massachusetts, United States",
+      "Buffalo, New York, United States",
       "Burlington, Vermont, United States",
       "Cedar Rapids, Iowa, United States",
       "Champaign, Illinois, United States",
@@ -1074,7 +1078,9 @@
     ],
     "2": [
       "Bangor, Maine, United States",
+      "Bathurst, New Brunswick, Canada",
       "Bella Coola, British Columbia, Canada",
+      "Buffalo, New York, United States",
       "Burlington, Vermont, United States",
       "Duluth, Minnesota, United States",
       "Grand Rapids, Michigan, United States",
@@ -1096,6 +1102,7 @@
       "Saint Petersburg, Russia",
       "Sapporo, Japan",
       "Stockholm, Sweden",
+      "Sudbury, Ontario, Canada",
       "Summerside, Prince Edward Island, Canada",
       "Syracuse, New York, United States",
       "Tallinn, Estonia",
@@ -1198,6 +1205,7 @@
       "Bangor, Maine, United States",
       "Bella Coola, British Columbia, Canada",
       "Boston, Massachusetts, United States",
+      "Buffalo, New York, United States",
       "Burlington, Vermont, United States",
       "Champaign, Illinois, United States",
       "Chicago, Illinois, United States",
@@ -1217,6 +1225,7 @@
       "Zürich, Switzerland"
     ],
     "4": [
+      "Bathurst, New Brunswick, Canada",
       "Bella Coola, British Columbia, Canada",
       "Copenhagen, Denmark",
       "Halifax, Nova Scotia, Canada",
@@ -1238,6 +1247,7 @@
     "1": [
       "Inukjuak, Québec, Canada",
       "Iqaluit, Nunavut, Canada",
+      "Kugluktuk, Nunavut, Canada",
       "Prudhoe Bay, Alaska, United States"
     ],
     "2": [
@@ -1264,6 +1274,7 @@
       "Baker Lake, Nunavut, Canada",
       "Churchill, Manitoba, Canada",
       "Iqaluit, Nunavut, Canada",
+      "Kugluktuk, Nunavut, Canada",
       "Rankin Inlet, Nunavut, Canada"
     ],
     "3": [
@@ -1339,6 +1350,7 @@
     ],
     "3": [
       "Almaty, Kazakhstan",
+      "Bathurst, New Brunswick, Canada",
       "Cedar Rapids, Iowa, United States",
       "Duluth, Minnesota, United States",
       "Marquette, Michigan, United States",
@@ -1349,6 +1361,7 @@
       "Ottawa, Ontario, Canada",
       "Québec City, Québec, Canada",
       "Sapporo, Japan",
+      "Sudbury, Ontario, Canada",
       "Summerside, Prince Edward Island, Canada"
     ],
     "4": [
@@ -1415,6 +1428,7 @@
       "Asheville, North Carolina, United States",
       "Bangor, Maine, United States",
       "Boston, Massachusetts, United States",
+      "Buffalo, New York, United States",
       "Burlington, Vermont, United States",
       "Champaign, Illinois, United States",
       "Charleston, West Virginia, United States",
@@ -1439,6 +1453,7 @@
       "Sapporo, Japan",
       "Sarajevo, Bosnia and Herzegovina",
       "Springfield, Missouri, United States",
+      "Sudbury, Ontario, Canada",
       "Syracuse, New York, United States",
       "Tokyo, Japan",
       "Toronto, Ontario, Canada"
@@ -1468,11 +1483,13 @@
   },
   "Ehb2": {
     "1": [
+      "Bathurst, New Brunswick, Canada",
       "Chibougamau, Québec, Canada",
       "Fairbanks, Alaska, United States",
       "Happy Valley–Goose Bay, Newfoundland and Labrador, Canada",
       "Québec City, Québec, Canada",
       "Rouyn-Noranda, Québec, Canada",
+      "Sudbury, Ontario, Canada",
       "Thunder Bay, Ontario, Canada",
       "Tomsk, Russia",
       "Yekaterinburg, Russia"
