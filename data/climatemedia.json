@@ -820,6 +820,10 @@
       "<a title='User:Doug Dolde, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons' href='https://upload.wikimedia.org/wikipedia/commons/3/35/BIG_LEAF_MAPLES_HOH.jpg'><img alt='BIG LEAF MAPLES HOH' src='https://upload.wikimedia.org/wikipedia/commons/3/35/BIG_LEAF_MAPLES_HOH.jpg'></a>",
       "<a href='https://commons.wikimedia.org/wiki/File:BIG_LEAF_MAPLES_HOH.jpg'>User:Doug Dolde</a>, <a href='https://creativecommons.org/licenses/by-sa/3.0'>CC BY-SA 3.0</a>, via Wikimedia Commons",
       "<br><br>",
+      "<p>These wildflowers are in an alpine area of Tasmania classified as Cb1 in the 1981-2010 and 2011-2040 normals</p>",
+      "<a title='Rotuli, Public domain, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Richea_scoparia_(23098905232).jpg'><img alt='Richea scoparia (23098905232)' src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Richea_scoparia_%2823098905232%29.jpg/3840px-Richea_scoparia_%2823098905232%29.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Richea_scoparia_(23098905232).jpg'>Rotuli</a>, Public domain, via Wikimedia Commons",
+      "<br><br>",
       "<iframe width='1280' height='720' src='https://www.youtube.com/embed/cD9HEBz_QPs?si=lLPaduMZ1qThfadn' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
       "<br><br>",
       "<iframe width='1280' height='720' src='https://www.youtube.com/embed/FO55PuDhnsw?si=MybjPs9x4f7wcuYA' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
@@ -844,6 +848,18 @@
       "<img class='three' src='../graphs/Longyearbyen4-F.png' alt='graph of Longyearbyen climate in 2071-2100'>"
     ]
   },
+
+  "Cgb2": {
+    "media": [
+      "<a title='Michael Coghlan, CC BY-SA 2.0 &lt;https://creativecommons.org/licenses/by-sa/2.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Prosser_River_houses.jpg'><img alt='Prosser River houses' src='https://upload.wikimedia.org/wikipedia/commons/8/8a/Prosser_River_houses.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Prosser_River_houses.jpg'>Michael Coghlan</a>, <a href='https://creativecommons.org/licenses/by-sa/2.0'>CC BY-SA 2.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<img class='three' src='../graphs/Hobart1-F.png' alt='graph of Hobart climate in 1981-2010'>",
+      "<img class='three' src='../graphs/PuertoNatales4-F.png' alt='graph of Puerto Natales climate in 2071-2100'>",
+      "<img class='three' src='../graphs/PrudhoeBay4-F.png' alt='graph of Prudhoe Bay climate in 2071-2100'>"
+    ]
+  },
+
 
   "Csb2": {
     "media": [
