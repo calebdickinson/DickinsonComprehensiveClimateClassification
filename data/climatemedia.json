@@ -860,7 +860,6 @@
     ]
   },
 
-
   "Csb2": {
     "media": [
       "<a title='Gastón Cuello, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Guanaco_y_ping%C3%BCinos_de_magallanes.jpg'><img alt='Guanaco y pingüinos de magallanes' src='https://upload.wikimedia.org/wikipedia/commons/8/89/Guanaco_y_ping%C3%BCinos_de_magallanes.jpg'></a>",
@@ -871,7 +870,6 @@
       "<img class='three' src='../graphs/Utqiaġvik4-F.png' alt='graph of Utqiaġvik climate in 2071-2100'>"
     ]
   },
-
 
   "Cdb2": {
     "media": [
@@ -906,6 +904,19 @@
       "<img class='three' src='../graphs/Thimphu1-F.png' alt='graph of Thimphu climate in 1981-2010'>",
       "<img class='three' src='../graphs/Johannesburg1-F.png' alt='graph of Johannesburg climate in 1981-2010'>",
       "<img class='three' src='../graphs/Wainwright4-F.png' alt='graph of Wainwright climate in 2071-2100'>"
+    ]
+  },
+
+"Cvb2": {
+    "media": [
+      "<a title='Tomás Esparza, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:SierradeOrganos.jpg'><img alt='SierradeOrganos' src='https://upload.wikimedia.org/wikipedia/commons/4/4a/SierradeOrganos.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:SierradeOrganos.jpg'>Tomás Esparza</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/5TQi6iAPpKs?si=VtP3i2rmxpKc5LNJ' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img class='three' src='../graphs/Sombrerete1-F.png' alt='graph of Sombrerete climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Lhasa3-F.png' alt='graph of Lhasa climate in 2041-2070'>",
+      "<img class='three' src='../graphs/Gyantse4-F.png' alt='graph of Gyantse climate in 2071-2100'>"
     ]
   },
 

@@ -3234,7 +3234,8 @@
     "4": [
       "Harare, Zimbabwe",
       "Maseru, Lesotho",
-      "Mexico City, Mexico"
+      "Mexico City, Mexico",
+      "Sombrerete, Mexico"
     ]
   },
   "Bvz2": {
@@ -3287,10 +3288,13 @@
   },
   "Bva1": {
     "1": [],
-    "2": [],
+    "2": [
+      "Sombrerete, Mexico"
+    ],
     "3": [
       "Maseru, Lesotho",
-      "Mexico City, Mexico"
+      "Mexico City, Mexico",
+      "Sombrerete, Mexico"
     ],
     "4": []
   },
@@ -3727,7 +3731,9 @@
     ]
   },
   "Cvb2": {
-    "1": [],
+    "1": [
+      "Sombrerete, Mexico"
+    ],
     "2": [],
     "3": [
       "Lhasa, Tibet, China"
