@@ -784,6 +784,7 @@
       "Kugluktuk, Nunavut, Canada",
       "Nagqu, Tibet, China",
       "Prudhoe Bay, Alaska, United States",
+      "Shimshal, Pakistan",
       "Utqiaġvik, Alaska, United States"
     ],
     "4": [
@@ -2435,11 +2436,13 @@
       "Longyearbyen, Svalbard, Norway",
       "Nagqu, Tibet, China",
       "Nuuk, Greenland",
+      "Shimshal, Pakistan",
       "Sisimiut, Greenland"
     ],
     "2": [
       "Ittoqqortoormiit, Greenland",
       "Qaanaaq, Greenland",
+      "Shimshal, Pakistan",
       "Wainwright, Alaska, United States"
     ],
     "3": [
@@ -2716,7 +2719,9 @@
       "Yakima, Washington, United States"
     ],
     "3": [],
-    "4": []
+    "4": [
+      "Alamosa, Colorado, United States"
+    ]
   },
   "Bda1": {
     "1": [
@@ -2946,6 +2951,7 @@
       "Yakima, Washington, United States"
     ],
     "2": [
+      "Alamosa, Colorado, United States",
       "Jiayuguan, China"
     ],
     "3": [],
@@ -3038,7 +3044,9 @@
       "Reno, Nevada, United States"
     ],
     "2": [],
-    "3": [],
+    "3": [
+      "Alamosa, Colorado, United States"
+    ],
     "4": []
   },
   "Dsb2": {
@@ -4165,5 +4173,15 @@
     "2": [],
     "3": [],
     "4": []
+  },
+  "Ddb2": {
+    "1": [
+      "Alamosa, Colorado, United States"
+    ],
+    "2": [],
+    "3": [],
+    "4": [
+      "Shimshal, Pakistan"
+    ]
   }
 }
