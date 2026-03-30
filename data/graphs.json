@@ -27148,7 +27148,7 @@
       "1981-2010": {
         "annual_pet_mm": "1118",
         "dickinson": "Csb2",
-        "dickinson_bordering": "Csb1 Cdb2 Cb2",
+        "dickinson_bordering": "Cb1 Cdb2",
         "koppen": "BSk",
         "koppen_bordering": "none",
         "p_pet": "0.25",
@@ -27203,7 +27203,7 @@
       "2011-2040": {
         "annual_pet_mm": "857",
         "dickinson": "Cb1",
-        "dickinson_bordering": "Cb2 Csb1",
+        "dickinson_bordering": "Csb2",
         "koppen": "BSk",
         "koppen_bordering": "none",
         "p_pet": "0.31",

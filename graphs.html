@@ -484,7 +484,7 @@
   // MULTIPLE BORDERS → AXES
   // =========================
   function boundaryText(a, b) {
-    // winter
+    // ── winter axis ──
     if (a.charAt(0) !== b.charAt(0)) {
       return `${coldMap[a.charAt(0)]}/${coldMap[b.charAt(0)]} boundary`;
     }
@@ -498,12 +498,12 @@
     const aS = aHasArid ? a.slice(2) : a.slice(1);
     const bS = bHasArid ? b.slice(2) : b.slice(1);
 
-    // aridity
-    if (aArid !== bArid) {
+    // ── if either side lacks an aridity letter, skip to summer axis ──
+    if (aHasArid && bHasArid && aArid !== bArid) {
       return `${aridMap[aArid]}/${aridMap[bArid]} boundary`;
     }
 
-    // summer
+    // ── summer axis ──
     if (aS !== bS) {
       return `${summerMap[aS]}/${summerMap[bS]} summer boundary`;
     }

@@ -845,10 +845,22 @@
     ]
   },
 
+  "Csb2": {
+    "media": [
+      "<a title='Gastón Cuello, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Guanaco_y_ping%C3%BCinos_de_magallanes.jpg'><img alt='Guanaco y pingüinos de magallanes' src='https://upload.wikimedia.org/wikipedia/commons/8/89/Guanaco_y_ping%C3%BCinos_de_magallanes.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Guanaco_y_ping%C3%BCinos_de_magallanes.jpg'>Gastón Cuello</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<img class='three' src='../graphs/PuertoSanJulián1-F.png' alt='graph of Puerto San Julián climate in 1981-2010'>",
+      "<img class='three' src='../graphs/RíoGallegos4-F.png' alt='graph of Río Gallegos climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Utqiaġvik4-F.png' alt='graph of Utqiaġvik climate in 2071-2100'>"
+    ]
+  },
+
+
   "Cdb2": {
     "media": [
-      "<a title='Gonce, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Viaje_al_parque_eolico_(5).JPG'><img alt='Viaje al parque eolico (5)' src='https://upload.wikimedia.org/wikipedia/commons/e/e4/Viaje_al_parque_eolico_%285%29.JPG'></a>",
-      "<a href='https://commons.wikimedia.org/wiki/File:Viaje_al_parque_eolico_(5).JPG'>Gonce</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<a title='Diego Tirira from Quito, Ecuador, CC BY-SA 2.0 &lt;https://creativecommons.org/licenses/by-sa/2.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:AR_Comodoro_Rivadavia_0702_005_(17029061039).jpg'><img alt='AR Comodoro Rivadavia 0702 005 (17029061039)' src='https://upload.wikimedia.org/wikipedia/commons/c/c8/AR_Comodoro_Rivadavia_0702_005_%2817029061039%29.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:AR_Comodoro_Rivadavia_0702_005_(17029061039).jpg'>Diego Tirira</a>, <a href='https://creativecommons.org/licenses/by-sa/2.0'>CC BY-SA 2.0</a>, via Wikimedia Commons",
       "<br><br>",
       "<img src='../graphs/ComodoroRivadavia1-F.png' alt='graph of Comodoro Rivadavia climate in 1981-2010'>",
       "<img src='../graphs/PuertoSanJulián4-F.png' alt='graph of Puerto San Julián climate in 2071-2100'>"

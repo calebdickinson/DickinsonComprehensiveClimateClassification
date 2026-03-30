@@ -107,45 +107,44 @@
 
   <script>
     var locationName =
-    'Kustur, Russia';
+    'Puerto San Julián, Argentina';
     
     // ============================
     // EARTH ENGINE OUTPUT
     // ============================
-    
-      var period = '1981-2010';
-  var dickinson= 'Yb1';
-  var dickinson_bordering = 'Yb2 Ygb1';
-  var koppen = 'Dfd';
-  var koppen_bordering = 'Dsd Dwd';
-  p_pet = '0.65';
-  p_pet_unrounded = '0.648';
-  annual_pet_mm = '382';
+  var period = '1981-2010';
+  var dickinson= 'Csb2';
+  var dickinson_bordering = 'Cb1 Cdb2';
+  var koppen = 'BSk';
+  var koppen_bordering = 'none';
+  p_pet = '0.25';
+  p_pet_unrounded = '0.252';
+  annual_pet_mm = '1118';
   const rawLines = `
-    1.0: -35 -45 0.3
-    2.0: -27 -41 0.3
-    3.0: -5 -27 0.3
-    4.0: 19 -4 0.3
-    5.0: 39 22 0.8
-    6.0: 59 43 1.5
-    7.0: 65 49 1.7
-    8.0: 58 43 2.0
-    9.0: 41 28 1.0
-    10.0: 11 -2 0.6
-    11.0: -20 -31 0.5
-    12.0: -32 -43 0.4
-    1.0: -37 -43 8
-    2.0: -33 -41 7
-    3.0: -20 -33 6
-    4.0: -7 -20 7
-    5.0: 4 -6 21
-    6.0: 15 6 39
-    7.0: 19 10 44
-    8.0: 14 6 50
-    9.0: 5 -2 26
-    10.0: -11 -19 15
-    11.0: -29 -35 14
-    12.0: -35 -41 10
+    1.0: 67 54 0.6
+    2.0: 66 53 0.9
+    3.0: 63 50 1.1
+    4.0: 57 46 0.9
+    5.0: 50 41 1.4
+    6.0: 44 37 1.6
+    7.0: 44 35 1.0
+    8.0: 47 37 0.8
+    9.0: 51 40 0.6
+    10.0: 56 44 0.7
+    11.0: 61 48 0.6
+    12.0: 64 51 0.8
+    1.0: 19 12 16
+    2.0: 19 12 24
+    3.0: 17 10 27
+    4.0: 14 8 23
+    5.0: 10 5 35
+    6.0: 7 3 40
+    7.0: 6 2 26
+    8.0: 8 3 21
+    9.0: 11 4 16
+    10.0: 13 7 18
+    11.0: 16 9 15
+    12.0: 18 11 20
   `;
 
     const months = ['J','F','M','A','M','J','J','A','S','O','N','D'];
@@ -263,21 +262,27 @@
         return `${coldMap[a.charAt(0)]}/${coldMap[b.charAt(0)]} boundary`;
       }
 
-      // aridity
-      if (a.charAt(1) !== b.charAt(1)) {
-        return `${aridMap[a.charAt(1)]}/${aridMap[b.charAt(1)]} boundary`;
+      const aHasArid = aridMap.hasOwnProperty(a.charAt(1));
+      const bHasArid = aridMap.hasOwnProperty(b.charAt(1));
+
+      const aArid = aHasArid ? a.charAt(1) : '';
+      const bArid = bHasArid ? b.charAt(1) : '';
+
+      const aS = aHasArid ? a.slice(2) : a.slice(1);
+      const bS = bHasArid ? b.slice(2) : b.slice(1);
+
+      // aridity (only when both sides have an aridity letter)
+      if (aHasArid && bHasArid && aArid !== bArid) {
+        return `${aridMap[aArid]}/${aridMap[bArid]} boundary`;
       }
 
       // summer
-      const aS = a.slice(2);
-      const bS = b.slice(2);
       if (aS !== bS) {
         return `${summerMap[aS]}/${summerMap[bS]} summer boundary`;
       }
 
       return 'boundary';
     }
-
     const decoded = parts.map(c =>
       `the ${boundaryText(main, c)} (<b>${main}</b> ↔ <b>${c}</b>)`
     );
