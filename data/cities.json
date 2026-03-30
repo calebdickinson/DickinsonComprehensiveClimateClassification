@@ -1852,7 +1852,9 @@
       "Seattle, Washington, United States",
       "South Lake Tahoe, California, United States"
     ],
-    "4": []
+    "4": [
+      "Yakawlang, Afghanistan"
+    ]
   },
   "Dwa2": {
     "1": [
@@ -3056,7 +3058,9 @@
     "3": [
       "Alamosa, Colorado, United States"
     ],
-    "4": []
+    "4": [
+      "Bamyan, Afghanistan"
+    ]
   },
   "Dsb2": {
     "1": [
@@ -3095,7 +3099,10 @@
       "Spokane, Washington, United States"
     ],
     "2": [],
-    "3": [],
+    "3": [
+      "Bamyan, Afghanistan",
+      "Yakawlang, Afghanistan"
+    ],
     "4": []
   },
   "Bga2": {
@@ -4195,14 +4202,26 @@
   },
   "Dmb2": {
     "1": [
+      "Bamyan, Afghanistan",
       "South Lake Tahoe, California, United States"
     ],
-    "2": [],
+    "2": [
+      "Bamyan, Afghanistan",
+      "Yakawlang, Afghanistan"
+    ],
     "3": [
       "Sanglich, Afghanistan"
     ],
     "4": [
       "Sanglich, Afghanistan"
     ]
+  },
+  "Emb2": {
+    "1": [
+      "Yakawlang, Afghanistan"
+    ],
+    "2": [],
+    "3": [],
+    "4": []
   }
 }

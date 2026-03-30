@@ -306,6 +306,14 @@
     ]
   },
 
+  "Emb2": {
+    "media": [
+      "<p>No images or videos are available for this climate.</p>",
+      "<br>",
+      "<img src='../graphs/Yakawlang1-F.png' alt='graph of Yakawlang climate in 1981-2010'>"
+    ]
+  },
+
   "Eha1": {
     "media": [
       "<a title='Jonathunder, GFDL 1.2 &lt;http://www.gnu.org/licenses/old-licenses/fdl-1.2.html&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:OgechieLakeMN.jpg'><img alt='OgechieLakeMN' src='https://upload.wikimedia.org/wikipedia/commons/d/d0/OgechieLakeMN.jpg'></a>",
@@ -603,8 +611,9 @@
       "<a title='Blake Everett Carroll, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Tunnel_Creek_Road,_Lake_Tahoe,_Nevada,_20220904,_02.jpg'><img alt='Tunnel Creek Road, Lake Tahoe, Nevada, 20220904' src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Tunnel_Creek_Road%2C_Lake_Tahoe%2C_Nevada%2C_20220904%2C_02.jpg/3840px-Tunnel_Creek_Road%2C_Lake_Tahoe%2C_Nevada%2C_20220904%2C_02.jpg'></a>",
       "<a href='https://commons.wikimedia.org/wiki/File:Tunnel_Creek_Road,_Lake_Tahoe,_Nevada,_20220904,_02.jpg'>Blake Everett Carroll</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
       "<br><br>",
-      "<img src='../graphs/SouthLakeTahoe1-F.png' alt='graph of South Lake Tahoe climate in 1981-2010'>",
-      "<img src='../graphs/Sanglich4-F.png' alt='graph of Sanglich climate in 2071-2100'>"
+      "<img class='three' src='../graphs/Bamyan1-F.png' alt='graph of Bamyan climate in 1981-2010'>",
+      "<img class='three' src='../graphs/SouthLakeTahoe1-F.png' alt='graph of South Lake Tahoe climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Sanglich4-F.png' alt='graph of Sanglich climate in 2071-2100'>"
     ]
   },
 
@@ -927,9 +936,9 @@
     ]
   },
 
-"Cvb2": {
+  "Cvb2": {
     "media": [
-      "<a title='Tomás Esparza, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:SierradeOrganos.jpg'><img alt='SierradeOrganos' src='https://upload.wikimedia.org/wikipedia/commons/4/4a/SierradeOrganos.jpg'></a>",
+      "<a title='Tomás Esparza, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:SierradeOrganos.jpg'><img alt='SierradeOrganos' src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/SierradeOrganos.jpg/960px-SierradeOrganos.jpg'></a>",
       "<a href='https://commons.wikimedia.org/wiki/File:SierradeOrganos.jpg'>Tomás Esparza</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
       "<br><br>",
       "<iframe width='1280' height='720' src='https://www.youtube.com/embed/5TQi6iAPpKs?si=VtP3i2rmxpKc5LNJ' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
