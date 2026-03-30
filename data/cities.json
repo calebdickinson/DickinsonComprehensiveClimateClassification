@@ -768,6 +768,7 @@
       "Leh, India",
       "Murmansk, Russia",
       "Nome, Alaska, United States",
+      "Sanglich, Afghanistan",
       "Yushu, Qinghai, China"
     ],
     "2": [
@@ -775,6 +776,7 @@
       "Inukjuak, Québec, Canada",
       "Nagqu, Tibet, China",
       "Nome, Alaska, United States",
+      "Sanglich, Afghanistan",
       "Ugolnye Kopi, Russia",
       "Yushu, Qinghai, China"
     ],
@@ -1841,12 +1843,14 @@
       "Bend, Oregon, United States",
       "Nanaimo, British Columbia, Canada",
       "Portland, Oregon, United States",
-      "Seattle, Washington, United States"
+      "Seattle, Washington, United States",
+      "South Lake Tahoe, California, United States"
     ],
     "3": [
       "Bellingham, Washington, United States",
       "Nanaimo, British Columbia, Canada",
-      "Seattle, Washington, United States"
+      "Seattle, Washington, United States",
+      "South Lake Tahoe, California, United States"
     ],
     "4": []
   },
@@ -2284,6 +2288,7 @@
       "Cairo, Egypt",
       "Coober Pedy, Australia",
       "Damascus, Syria",
+      "Djelfa, Algeria",
       "Las Cruces, New Mexico, United States",
       "Pecos, Texas, United States",
       "Tamanrasset, Algeria"
@@ -2402,7 +2407,8 @@
       "Portland, Oregon, United States"
     ],
     "4": [
-      "London, England, United Kingdom"
+      "London, England, United Kingdom",
+      "South Lake Tahoe, California, United States"
     ]
   },
   "Bmz2": {
@@ -2705,6 +2711,7 @@
       "Albuquerque, New Mexico, United States",
       "Baku, Azerbaijan",
       "Damascus, Syria",
+      "Djelfa, Algeria",
       "Fresno, California, United States",
       "Las Cruces, New Mexico, United States",
       "Pecos, Texas, United States",
@@ -2713,6 +2720,7 @@
     "2": [
       "Baku, Azerbaijan",
       "Damascus, Syria",
+      "Djelfa, Algeria",
       "Grand Junction, Colorado, United States",
       "Richland, Washington, United States",
       "Twin Falls, Idaho, United States",
@@ -2865,6 +2873,7 @@
     ],
     "3": [
       "Baku, Azerbaijan",
+      "Djelfa, Algeria",
       "Elko, Nevada, United States",
       "Grand Junction, Colorado, United States",
       "Hotan, China",
@@ -4182,6 +4191,18 @@
     "3": [],
     "4": [
       "Shimshal, Pakistan"
+    ]
+  },
+  "Dmb2": {
+    "1": [
+      "South Lake Tahoe, California, United States"
+    ],
+    "2": [],
+    "3": [
+      "Sanglich, Afghanistan"
+    ],
+    "4": [
+      "Sanglich, Afghanistan"
     ]
   }
 }
