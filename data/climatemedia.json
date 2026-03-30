@@ -670,6 +670,17 @@
     ]
   },
 
+  "Dma1": {
+    "media": [
+      "<a title='Amoore5000, CC0, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Farewell_Bend_Park,_Bend,_Oregon.jpg'><img alt='Farewell Bend Park, Bend, Oregon' src='https://upload.wikimedia.org/wikipedia/commons/e/e0/Farewell_Bend_Park%2C_Bend%2C_Oregon.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Farewell_Bend_Park,_Bend,_Oregon.jpg'>Amoore5000</a>, CC0, via Wikimedia Commons",
+      "<br><br>",
+      "<img class='three' src='../graphs/Kabul1-F.png' alt='graph of Kabul climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Spokane1-F.png' alt='graph of Spokane climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Bend1-F.png' alt='graph of Bend climate in 1981-2010'>"
+    ]
+  },
+
   "Dha2": {
     "media": [
       "<a title='Heath Cajandig, CC BY 2.0 &lt;https://creativecommons.org/licenses/by/2.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Great_Burr_Oak_on_a_Dramatic_Morning.jpg'><img alt='The  Big Tree in Boone County, Missouri on a dramatic morning' src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Great_Burr_Oak_on_a_Dramatic_Morning.jpg/3840px-Great_Burr_Oak_on_a_Dramatic_Morning.jpg'></a>",
