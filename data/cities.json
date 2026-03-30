@@ -702,15 +702,19 @@
       "Forks, Washington, United States",
       "La Paz, Bolivia",
       "Prince Rupert, British Columbia, Canada",
+      "Puerto Natales, Chile",
       "Punta Arenas, Chile",
+      "Río Gallegos, Argentina",
       "Stanley, Falkland Islands",
       "Tórshavn, Faroe Islands"
     ],
     "2": [
       "Attu Station, Alaska",
       "La Paz, Bolivia",
+      "Puerto Natales, Chile",
       "Punta Arenas, Chile",
       "Reykjavík, Iceland",
+      "Río Gallegos, Argentina",
       "St. Paul, Alaska, United States",
       "Stanley, Falkland Islands",
       "Tórshavn, Faroe Islands",
@@ -718,6 +722,7 @@
     ],
     "3": [
       "Attu Station, Alaska",
+      "Puerto Natales, Chile",
       "Punta Arenas, Chile",
       "St. Paul, Alaska, United States",
       "Stanley, Falkland Islands",
@@ -889,6 +894,7 @@
       "Lhasa, Tibet, China"
     ],
     "3": [
+      "Gyantse, Tibet, China",
       "Yushu, Qinghai, China"
     ],
     "4": [
@@ -2471,6 +2477,7 @@
       "Anchorage, Alaska, United States",
       "Aspen, Colorado, United States",
       "Bodø, Norway",
+      "Gyantse, Tibet, China",
       "Juneau, Alaska, United States",
       "Kodiak, Alaska, United States",
       "Petropavlovsk-Kamchatsky, Russia",
@@ -2480,6 +2487,7 @@
       "Valdez, Alaska, United States"
     ],
     "2": [
+      "Gyantse, Tibet, China",
       "Petropavlovsk-Kamchatsky, Russia",
       "Tasiilaq, Greenland",
       "Ísafjörður, Iceland"
@@ -2776,7 +2784,8 @@
       "Aspen, Colorado, United States"
     ],
     "4": [
-      "Prudhoe Bay, Alaska, United States"
+      "Prudhoe Bay, Alaska, United States",
+      "Puerto Natales, Chile"
     ]
   },
   "Aha1": {
@@ -3423,8 +3432,12 @@
     "2": [
       "Comodoro Rivadavia, Argentina"
     ],
-    "3": [],
-    "4": []
+    "3": [
+      "Puerto San Julián, Argentina"
+    ],
+    "4": [
+      "Puerto San Julián, Argentina"
+    ]
   },
   "Ega2": {
     "1": [],
@@ -3612,10 +3625,17 @@
     "4": []
   },
   "Csb2": {
-    "1": [],
-    "2": [],
-    "3": [],
+    "1": [
+      "Puerto San Julián, Argentina"
+    ],
+    "2": [
+      "Puerto San Julián, Argentina"
+    ],
+    "3": [
+      "Río Gallegos, Argentina"
+    ],
     "4": [
+      "Río Gallegos, Argentina",
       "Utqiaġvik, Alaska, United States"
     ]
   },
@@ -3712,7 +3732,9 @@
     "3": [
       "Lhasa, Tibet, China"
     ],
-    "4": []
+    "4": [
+      "Gyantse, Tibet, China"
+    ]
   },
   "Cva1": {
     "1": [],
