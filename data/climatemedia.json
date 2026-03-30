@@ -847,7 +847,14 @@
 
   "Cmb2": {
     "media": [
-      "<img src='../graphs/Seattle1-F.png' alt='graph of Seattle climate in 1981-2010'>"
+      "<a title='EncMstr, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Forest_park_wildwood_trail_in_early_summer_P2860.jpeg'><img alt='Forest park wildwood trail in early summer P2860' src='https://upload.wikimedia.org/wikipedia/commons/6/6f/Forest_park_wildwood_trail_in_early_summer_P2860.jpeg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Forest_park_wildwood_trail_in_early_summer_P2860.jpeg'>EncMstr</a>, <a href='https://creativecommons.org/licenses/by-sa/3.0'>CC BY-SA 3.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/D_BUS-cK8Qg?si=A_xlci-btB6fO4ED' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img class='three' src='../graphs/Seattle1-F.png' alt='graph of Seattle climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Concepción1-F.png' alt='graph of Concepción climate in 1981-2010'>",
+      "<img class='three' src='../graphs/UgolnyeKopi4-F.png' alt='graph of Ugolnye Kopi climate in 2071-2100'>"
     ]
   },
 

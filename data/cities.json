@@ -770,6 +770,7 @@
       "Inukjuak, Québec, Canada",
       "Nagqu, Tibet, China",
       "Nome, Alaska, United States",
+      "Ugolnye Kopi, Russia",
       "Yushu, Qinghai, China"
     ],
     "3": [
@@ -1248,7 +1249,8 @@
       "Inukjuak, Québec, Canada",
       "Iqaluit, Nunavut, Canada",
       "Kugluktuk, Nunavut, Canada",
-      "Prudhoe Bay, Alaska, United States"
+      "Prudhoe Bay, Alaska, United States",
+      "Ugolnye Kopi, Russia"
     ],
     "2": [
       "Alert, Nunavut, Canada",
@@ -2431,7 +2433,8 @@
     ],
     "2": [
       "Ittoqqortoormiit, Greenland",
-      "Qaanaaq, Greenland"
+      "Qaanaaq, Greenland",
+      "Wainwright, Alaska, United States"
     ],
     "3": [
       "Alert, Nunavut, Canada",
@@ -2487,7 +2490,9 @@
       "Nuuk, Greenland",
       "Qaqortoq, Greenland",
       "Sisimiut, Greenland",
-      "Tasiilaq, Greenland"
+      "Tasiilaq, Greenland",
+      "Ugolnye Kopi, Russia",
+      "Wainwright, Alaska, United States"
     ],
     "4": [
       "Alert, Nunavut, Canada",
@@ -2739,7 +2744,9 @@
     ],
     "2": [],
     "3": [],
-    "4": []
+    "4": [
+      "Ugolnye Kopi, Russia"
+    ]
   },
   "Bmb2": {
     "1": [
@@ -3552,7 +3559,9 @@
       "Thimphu, Bhutan"
     ],
     "3": [],
-    "4": []
+    "4": [
+      "Wainwright, Alaska, United States"
+    ]
   },
   "Cwa1": {
     "1": [
@@ -3593,7 +3602,8 @@
     "1": [
       "Qaanaaq, Greenland",
       "Station Nord, Greenland",
-      "Utqiaġvik, Alaska, United States"
+      "Utqiaġvik, Alaska, United States",
+      "Wainwright, Alaska, United States"
     ],
     "2": [
       "Station Nord, Greenland"
