@@ -326,6 +326,28 @@
     ]
   },
 
+  "Esb2": {
+    "media": [
+      "<a title='Nikitin Maxim, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Architecture_of_the_city_of_Kokshetau_in_May_2016.jpg'><img alt='Architecture of the city of Kokshetau in May 2016' src='https://upload.wikimedia.org/wikipedia/commons/9/98/Architecture_of_the_city_of_Kokshetau_in_May_2016.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Architecture_of_the_city_of_Kokshetau_in_May_2016.jpg'>Nikitin Maxim</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<img class='three' src='../graphs/Ulagan1-F.png' alt='graph of Ulagan climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Whitehorse1-F.png' alt='graph of Whitehorse climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Kokshetau1-F.png' alt='graph of Kokshetaue climate in 1981-2010'>"
+    ]
+  },
+
+  "Edb2": {
+    "media": [
+      "<a title='Hovd from the cemetery, public domain, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Hovd_from_the_cemetery.JPG'><img alt='Hovd from the cemetery' src='https://upload.wikimedia.org/wikipedia/commons/2/2d/Hovd_from_the_cemetery.JPG'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Hovd_from_the_cemetery.JPG'>Whitepolarbear</a>, public domain, via Wikimedia Commons",
+      "<br><br>",
+      "<img class='three' src='../graphs/AltaiCity1-F.png' alt='graph of Altai City climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Khovd1-F.png' alt='graph of Khovd climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Murghob4-F.png' alt='graph of Murghob climate in 2071-2100'>"
+    ]
+  },
+
   "Emb2": {
     "media": [
       "<p>No images or videos are available for this climate.</p>",
@@ -339,8 +361,22 @@
       "<a title='007master, CC0, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:%D0%A7%D0%B5%D0%BC%D0%B0%D0%BB.JPG'><img alt='Чемал' src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/%D0%A7%D0%B5%D0%BC%D0%B0%D0%BB.JPG/3840px-%D0%A7%D0%B5%D0%BC%D0%B0%D0%BB.JPG'></a>",
       "<a href='https://commons.wikimedia.org/wiki/File:%D0%A7%D0%B5%D0%BC%D0%B0%D0%BB.JPG'>007master</a>, CC0, via Wikimedia Commons",
       "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/TxMPjYQKUac?si=bFyrSOuQ1Iv28ffl' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
       "<img src='../graphs/Chemal1-F.png' alt='graph of Chemal climate in 1981-2010'>",
       "<img src='../graphs/Irkutsk1-F.png' alt='graph of Irkutsk climate in 1981-2010'>"
+    ]
+  },
+
+  "Evb2": {
+    "media": [
+      "<a title='Torbenbrinker, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:ArwaicheerWohngebiet.jpg'><img alt='ArwaicheerWohngebiet' src='https://upload.wikimedia.org/wikipedia/commons/f/ff/ArwaicheerWohngebiet.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:ArwaicheerWohngebiet.jpg'>Torbenbrinker</a>, <a href='https://creativecommons.org/licenses/by-sa/3.0'>CC BY-SA 3.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/1YCPTNnwtGc?si=bDJKa8PRxwBWRMPW' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img src='../graphs/Arvaikheer1-F.png' alt='graph of Arvaikheer climate in 1981-2010'>",
+      "<img src='../graphs/Kharkhorin1-F.png' alt='graph of Kharkhorin climate in 1981-2010'>"
     ]
   },
 

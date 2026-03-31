@@ -768,6 +768,7 @@
       "Banff, Alberta, Canada",
       "Bethel, Alaska, United States",
       "Leh, India",
+      "Murghob, Tajikistan",
       "Murmansk, Russia",
       "Nome, Alaska, United States",
       "Sanglich, Afghanistan",
@@ -776,6 +777,7 @@
     "2": [
       "Ilulissat, Greenland",
       "Inukjuak, Québec, Canada",
+      "Murghob, Tajikistan",
       "Nagqu, Tibet, China",
       "Nome, Alaska, United States",
       "Sanglich, Afghanistan",
@@ -1547,6 +1549,7 @@
     ],
     "2": [
       "Astana, Kazakhstan",
+      "Kokshetau, Kazakhstan",
       "Kyzyl, Russia",
       "Regina, Saskatchewan, Canada",
       "Saskatoon, Saskatchewan, Canada"
@@ -1565,6 +1568,7 @@
     ],
     "2": [],
     "3": [
+      "Kokshetau, Kazakhstan",
       "Kyzyl, Russia",
       "Saskatoon, Saskatchewan, Canada"
     ],
@@ -1590,6 +1594,7 @@
       "Dickinson, North Dakota, United States",
       "Fargo, North Dakota, United States",
       "Irkutsk, Russia",
+      "Kokshetau, Kazakhstan",
       "Krasnoyarsk, Russia",
       "Novosibirsk, Russia",
       "Omsk, Russia",
@@ -1793,6 +1798,7 @@
   },
   "Esb2": {
     "1": [
+      "Kokshetau, Kazakhstan",
       "Ulagan, Russia",
       "Whitehorse, Yukon, Canada"
     ],
@@ -3051,7 +3057,9 @@
       "Jiayuguan, China"
     ],
     "4": [
-      "Jiayuguan, China"
+      "Altai City, Mongolia",
+      "Jiayuguan, China",
+      "Khovd, Mongolia"
     ]
   },
   "Cgz2": {
@@ -3611,6 +3619,8 @@
     ],
     "2": [],
     "3": [
+      "Arvaikheer, Mongolia",
+      "Kharkhorin, Mongolia",
       "Ulaanbaatar, Mongolia"
     ],
     "4": []
@@ -3845,7 +3855,10 @@
       "Baotou, China",
       "Yulin, China"
     ],
-    "4": []
+    "4": [
+      "Arvaikheer, Mongolia",
+      "Kharkhorin, Mongolia"
+    ]
   },
   "Cva2": {
     "1": [
@@ -4234,8 +4247,13 @@
     "1": [
       "Bayannur, China"
     ],
-    "2": [],
-    "3": [],
+    "2": [
+      "Khovd, Mongolia"
+    ],
+    "3": [
+      "Altai City, Mongolia",
+      "Khovd, Mongolia"
+    ],
     "4": []
   },
   "Ddb2": {
@@ -4269,6 +4287,33 @@
       "Yakawlang, Afghanistan"
     ],
     "2": [],
+    "3": [],
+    "4": []
+  },
+  "Edb2": {
+    "1": [
+      "Altai City, Mongolia",
+      "Khovd, Mongolia"
+    ],
+    "2": [
+      "Altai City, Mongolia"
+    ],
+    "3": [
+      "Murghob, Tajikistan"
+    ],
+    "4": [
+      "Murghob, Tajikistan"
+    ]
+  },
+  "Evb2": {
+    "1": [
+      "Arvaikheer, Mongolia",
+      "Kharkhorin, Mongolia"
+    ],
+    "2": [
+      "Arvaikheer, Mongolia",
+      "Kharkhorin, Mongolia"
+    ],
     "3": [],
     "4": []
   }
