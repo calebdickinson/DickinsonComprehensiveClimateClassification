@@ -1708,6 +1708,7 @@
       "Bergen, Norway",
       "Berlin, Germany",
       "Bilbao, Spain",
+      "Canterbury, England, United Kingdom",
       "Cardiff, Wales, United Kingdom",
       "Copenhagen, Denmark",
       "Cork, Ireland",
@@ -1727,6 +1728,7 @@
       "Amsterdam, Netherlands",
       "Belfast, Northern Ireland, United Kingdom",
       "Bergen, Norway",
+      "Canterbury, England, United Kingdom",
       "Cardiff, Wales, United Kingdom",
       "Copenhagen, Denmark",
       "Cork, Ireland",
@@ -1848,11 +1850,13 @@
     ],
     "3": [
       "Bellingham, Washington, United States",
+      "Canterbury, England, United Kingdom",
       "Nanaimo, British Columbia, Canada",
       "Seattle, Washington, United States",
       "South Lake Tahoe, California, United States"
     ],
     "4": [
+      "Canterbury, England, United Kingdom",
       "Yakawlang, Afghanistan"
     ]
   },
