@@ -767,6 +767,8 @@
     "1": [
       "Banff, Alberta, Canada",
       "Bethel, Alaska, United States",
+      "Daroot-Korgon, Osh Region, Kyrgyzstan",
+      "Haibei, China",
       "Leh, India",
       "Murghob, Tajikistan",
       "Murmansk, Russia",
@@ -840,7 +842,9 @@
       "Grande Prairie, Alberta, Canada",
       "Jackson, Wyoming, United States"
     ],
-    "4": []
+    "4": [
+      "Atqasuk, Alaska, United States"
+    ]
   },
   "Dsa2": {
     "1": [
@@ -888,20 +892,26 @@
     "1": [
       "Calgary, Alberta, Canada"
     ],
-    "2": [],
+    "2": [
+      "Kangding, China"
+    ],
     "3": [],
     "4": []
   },
   "Dvb2": {
     "1": [
+      "Chamdo, Tibet, China",
       "Lhasa, Tibet, China"
     ],
     "2": [
       "Calgary, Alberta, Canada",
+      "Chamdo, Tibet, China",
       "Lhasa, Tibet, China"
     ],
     "3": [
+      "Chamdo, Tibet, China",
       "Gyantse, Tibet, China",
+      "Haibei, China",
       "Yushu, Qinghai, China"
     ],
     "4": [
@@ -940,7 +950,8 @@
     ],
     "3": [
       "Calgary, Alberta, Canada",
-      "Edmonton, Alberta, Canada"
+      "Edmonton, Alberta, Canada",
+      "Gunnison, Colorado, United States"
     ],
     "4": [
       "Leh, India"
@@ -1004,7 +1015,9 @@
       "Edmonton, Alberta, Canada",
       "Grande Prairie, Alberta, Canada"
     ],
-    "3": [],
+    "3": [
+      "Atqasuk, Alaska, United States"
+    ],
     "4": [
       "Taloyoak, Nunavut, Canada"
     ]
@@ -1265,6 +1278,7 @@
   },
   "Fc2": {
     "1": [
+      "Atqasuk, Alaska, United States",
       "Inukjuak, Québec, Canada",
       "Iqaluit, Nunavut, Canada",
       "Kugluktuk, Nunavut, Canada",
@@ -1293,16 +1307,17 @@
       "Kosh-Agach, Russia",
       "Labrador City, Newfoundland and Labrador, Canada",
       "Norilsk, Russia",
-      "Poker Creek–Little Gold Creek Border Crossing, Alaska, United States / Yukon, Canada",
+      "Poker Creek-Little Gold Creek Border Crossing, Alaska/Yukon",
       "Vorkuta, Russia"
     ],
     "2": [
+      "Atqasuk, Alaska, United States",
       "Baker Lake, Nunavut, Canada",
       "Chokurdakh, Russia",
       "Churchill, Manitoba, Canada",
       "Iqaluit, Nunavut, Canada",
       "Kugluktuk, Nunavut, Canada",
-      "Poker Creek–Little Gold Creek Border Crossing, Alaska, United States / Yukon, Canada",
+      "Poker Creek-Little Gold Creek Border Crossing, Alaska/Yukon",
       "Rankin Inlet, Nunavut, Canada",
       "Saskylakh, Russia"
     ],
@@ -1537,7 +1552,7 @@
     ],
     "3": [
       "Churchill, Manitoba, Canada",
-      "Poker Creek–Little Gold Creek Border Crossing, Alaska, United States / Yukon, Canada",
+      "Poker Creek-Little Gold Creek Border Crossing, Alaska/Yukon",
       "Rankin Inlet, Nunavut, Canada"
     ],
     "4": [
@@ -1635,6 +1650,7 @@
       "Cardiff, Wales, United Kingdom",
       "Copenhagen, Denmark",
       "London, England, United Kingdom",
+      "Norwich, England, United Kingdom",
       "Plymouth, England, United Kingdom",
       "St. John's, Newfoundland and Labrador, Canada",
       "Stockholm, Sweden",
@@ -1745,6 +1761,7 @@
       "Dublin, Ireland",
       "Edinburgh, Scotland, United Kingdom",
       "London, England, United Kingdom",
+      "Norwich, England, United Kingdom",
       "Paris, France",
       "Plymouth, England, United Kingdom",
       "Puerto Aysén, Chile",
@@ -1768,6 +1785,7 @@
       "Forks, Washington, United States",
       "Kodiak, Alaska, United States",
       "London, England, United Kingdom",
+      "Norwich, England, United Kingdom",
       "Plymouth, England, United Kingdom",
       "Prince Rupert, British Columbia, Canada",
       "Puerto Aysén, Chile",
@@ -1911,7 +1929,9 @@
     "3": [
       "Shenyang, China"
     ],
-    "4": []
+    "4": [
+      "Samjiyon, North Korea"
+    ]
   },
   "Cwz1": {
     "1": [],
@@ -1953,9 +1973,12 @@
       "Tongchuan, China"
     ],
     "3": [
-      "Dalian, China"
+      "Dalian, China",
+      "Heshun County, China"
     ],
-    "4": []
+    "4": [
+      "Heshun County, China"
+    ]
   },
   "Bwz1": {
     "1": [
@@ -2064,11 +2087,16 @@
   "Dwa1": {
     "1": [
       "Dalian, China",
+      "Heshun County, China",
       "Pyongyang, North Korea"
     ],
-    "2": [],
+    "2": [
+      "Heshun County, China"
+    ],
     "3": [],
-    "4": []
+    "4": [
+      "Taethaek-rodongjagu, North Korea"
+    ]
   },
   "Awz2": {
     "1": [
@@ -2107,9 +2135,12 @@
       "Irkutsk, Russia",
       "Khabarovsk, Russia"
     ],
-    "3": [],
+    "3": [
+      "Samjiyon, North Korea",
+      "Taethaek-rodongjagu, North Korea"
+    ],
     "4": [
-      "Poker Creek–Little Gold Creek Border Crossing, Alaska, United States / Yukon, Canada"
+      "Poker Creek-Little Gold Creek Border Crossing, Alaska/Yukon"
     ]
   },
   "Ewa2": {
@@ -2373,7 +2404,8 @@
       "Riga, Latvia"
     ],
     "4": [
-      "Aspen, Colorado, United States"
+      "Aspen, Colorado, United States",
+      "Norwich, England, United Kingdom"
     ]
   },
   "Cga2": {
@@ -2534,6 +2566,7 @@
       "Bodø, Norway",
       "Gyantse, Tibet, China",
       "Juneau, Alaska, United States",
+      "Kangding, China",
       "Kodiak, Alaska, United States",
       "Petropavlovsk-Kamchatsky, Russia",
       "Reykjavík, Iceland",
@@ -2543,6 +2576,7 @@
     ],
     "2": [
       "Gyantse, Tibet, China",
+      "Haibei, China",
       "Petropavlovsk-Kamchatsky, Russia",
       "Tasiilaq, Greenland",
       "Ísafjörður, Iceland"
@@ -2694,7 +2728,9 @@
     "3": [
       "Taos, New Mexico, United States"
     ],
-    "4": []
+    "4": [
+      "Gunnison, Colorado, United States"
+    ]
   },
   "Bgz1": {
     "1": [
@@ -3014,7 +3050,9 @@
       "Jiayuguan, China"
     ],
     "3": [],
-    "4": []
+    "4": [
+      "Daroot-Korgon, Osh Region, Kyrgyzstan"
+    ]
   },
   "Cdz2": {
     "1": [
@@ -3106,17 +3144,23 @@
     ],
     "2": [],
     "3": [
-      "Alamosa, Colorado, United States"
+      "Alamosa, Colorado, United States",
+      "Salida, Colorado, United States"
     ],
     "4": [
-      "Bamyan, Afghanistan"
+      "Bamyan, Afghanistan",
+      "Salida, Colorado, United States"
     ]
   },
   "Dsb2": {
     "1": [
+      "Gunnison, Colorado, United States",
       "Taos, New Mexico, United States"
     ],
-    "2": [],
+    "2": [
+      "Daroot-Korgon, Osh Region, Kyrgyzstan",
+      "Gunnison, Colorado, United States"
+    ],
     "3": [
       "Leh, India"
     ],
@@ -3215,6 +3259,7 @@
       "Chihuahua, Mexico"
     ],
     "4": [
+      "Alpine, Texas, United States",
       "Chihuahua, Mexico",
       "Gaborone, Botswana",
       "Nogales, Mexico"
@@ -3303,16 +3348,21 @@
       "Gaborone, Botswana"
     ],
     "3": [
+      "Alpine, Texas, United States",
+      "Cuauhtémoc, Mexico",
       "Gaborone, Botswana",
       "Harare, Zimbabwe",
       "Lusaka, Zambia",
-      "Nogales, Mexico"
+      "Nogales, Mexico",
+      "Welkom, South Africa"
     ],
     "4": [
+      "Cuauhtémoc, Mexico",
       "Harare, Zimbabwe",
       "Maseru, Lesotho",
       "Mexico City, Mexico",
-      "Sombrerete, Mexico"
+      "Sombrerete, Mexico",
+      "Welkom, South Africa"
     ]
   },
   "Bvz2": {
@@ -3536,9 +3586,14 @@
   "Ewb2": {
     "1": [
       "Chemal, Russia",
-      "Irkutsk, Russia"
+      "Irkutsk, Russia",
+      "Samjiyon, North Korea",
+      "Taethaek-rodongjagu, North Korea"
     ],
-    "2": [],
+    "2": [
+      "Samjiyon, North Korea",
+      "Taethaek-rodongjagu, North Korea"
+    ],
     "3": [],
     "4": []
   },
@@ -3622,9 +3677,12 @@
   "Eva1": {
     "1": [
       "Baotou, China",
-      "Tongliao, China"
+      "Tongliao, China",
+      "Ulanqab, China"
     ],
-    "2": [],
+    "2": [
+      "Ulanqab, China"
+    ],
     "3": [
       "Arvaikheer, Mongolia",
       "Kharkhorin, Mongolia",
@@ -3660,7 +3718,9 @@
       "Lijiang, China",
       "Thimphu, Bhutan"
     ],
-    "3": [],
+    "3": [
+      "Kangding, China"
+    ],
     "4": [
       "Wainwright, Alaska, United States"
     ]
@@ -3679,7 +3739,9 @@
       "Lijiang, China",
       "Thimphu, Bhutan"
     ],
-    "4": []
+    "4": [
+      "Kangding, China"
+    ]
   },
   "ZvX": {
     "1": [],
@@ -3833,23 +3895,35 @@
     ]
   },
   "Cva1": {
-    "1": [],
+    "1": [
+      "Alpine, Texas, United States",
+      "Cuauhtémoc, Mexico",
+      "Welkom, South Africa"
+    ],
     "2": [
-      "Maseru, Lesotho"
+      "Cuauhtémoc, Mexico",
+      "Maseru, Lesotho",
+      "Welkom, South Africa"
     ],
     "3": [],
     "4": [
+      "Chamdo, Tibet, China",
       "Lhasa, Tibet, China"
     ]
   },
   "Dva1": {
     "1": [
+      "Dingxi, China",
       "Lanzhou, China",
       "Yulin, China"
     ],
-    "2": [],
+    "2": [
+      "Dingxi, China"
+    ],
     "3": [],
-    "4": []
+    "4": [
+      "Haibei, China"
+    ]
   },
   "Dva2": {
     "1": [
@@ -3863,11 +3937,14 @@
     ],
     "3": [
       "Baotou, China",
+      "Dingxi, China",
+      "Ulanqab, China",
       "Yulin, China"
     ],
     "4": [
       "Arvaikheer, Mongolia",
-      "Kharkhorin, Mongolia"
+      "Kharkhorin, Mongolia",
+      "Ulanqab, China"
     ]
   },
   "Cva2": {
@@ -3876,12 +3953,15 @@
       "Yuncheng, China"
     ],
     "2": [
+      "Alpine, Texas, United States",
       "Nogales, Mexico"
     ],
     "3": [
       "Lanzhou, China"
     ],
-    "4": []
+    "4": [
+      "Dingxi, China"
+    ]
   },
   "Cvz1": {
     "1": [],
@@ -4271,10 +4351,15 @@
   },
   "Ddb2": {
     "1": [
-      "Alamosa, Colorado, United States"
+      "Alamosa, Colorado, United States",
+      "Salida, Colorado, United States"
     ],
-    "2": [],
-    "3": [],
+    "2": [
+      "Salida, Colorado, United States"
+    ],
+    "3": [
+      "Daroot-Korgon, Osh Region, Kyrgyzstan"
+    ],
     "4": [
       "Shimshal, Pakistan"
     ]
