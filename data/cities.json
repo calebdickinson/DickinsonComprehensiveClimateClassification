@@ -1586,6 +1586,7 @@
       "Astana, Kazakhstan",
       "Bismarck, North Dakota, United States",
       "Chelyabinsk, Russia",
+      "Chemal, Russia",
       "Dickinson, North Dakota, United States",
       "Fargo, North Dakota, United States",
       "Irkutsk, Russia",
@@ -1668,6 +1669,7 @@
     "3": [
       "Brainerd, Minnesota",
       "Chelyabinsk, Russia",
+      "Chemal, Russia",
       "Fargo, North Dakota, United States",
       "Green Bay, Wisconsin, United States",
       "Madison, Wisconsin, United States",
@@ -2090,6 +2092,7 @@
     ],
     "2": [
       "Blagoveshchensk, Russia",
+      "Chemal, Russia",
       "Irkutsk, Russia",
       "Khabarovsk, Russia"
     ],
@@ -3517,6 +3520,7 @@
   },
   "Ewb2": {
     "1": [
+      "Chemal, Russia",
       "Irkutsk, Russia"
     ],
     "2": [],
