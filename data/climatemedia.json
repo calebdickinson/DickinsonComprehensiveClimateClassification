@@ -692,7 +692,6 @@
     ]
   },
 
-
   "Dga2": {
     "media": [
       "<a title='English:  NPS, Public domain, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Sunset_falls_across_the_beautiful_Flint_Hills_(f0f6c731-1dd8-b71b-0b88-d326127c9973).jpg'><img alt='Sunset falls across the beautiful Flint Hills (f0f6c731-1dd8-b71b-0b88-d326127c9973)' src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Sunset_falls_across_the_beautiful_Flint_Hills_%28f0f6c731-1dd8-b71b-0b88-d326127c9973%29.jpg/2048px-Sunset_falls_across_the_beautiful_Flint_Hills_%28f0f6c731-1dd8-b71b-0b88-d326127c9973%29.jpg?20240516212133'></a>",
@@ -729,6 +728,17 @@
       "<img class='three' src='../graphs/GrandJunction1-F.png' alt='graph of Grand Junction climate in 1981-2010'>",
       "<img class='three' src='../graphs/Hami1-F.png' alt='graph of Hami climate in 1981-2010'>",
       "<img class='three' src='../graphs/Jiayuguan4-F.png' alt='graph of Jiayuguan climate in 2071-2100'>"
+    ]
+  },
+
+  "Dma2": {
+    "media": [
+      "<a title='Patrick R., CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Ann_Morrison_Park.jpg'><img alt='Ann Morrison Park' src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Ann_Morrison_Park.jpg/3840px-Ann_Morrison_Park.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Ann_Morrison_Park.jpg'>Patrick R.</a>, <a href='https://creativecommons.org/licenses/by-sa/3.0'>CC BY-SA 3.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<img class='three' src='../graphs/Boise1-F.png' alt='graph of Boise climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Kabul2-F.png' alt='graph of Kabul climate in 2011-2040'>",
+      "<img class='three' src='../graphs/Fereydunshahr4-F.png' alt='graph of Fereydunshahr climate in 2071-2100'>"
     ]
   },
 
