@@ -441,6 +441,19 @@
     ]
   },
 
+  "Ewa1": {
+    "media": [
+      "<a title='EditQ, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Xiangjiang_Park_2.jpg'><img alt='Xiangjiang Park 2' src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Xiangjiang_Park_2.jpg/3840px-Xiangjiang_Park_2.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Xiangjiang_Park_2.jpg'>EditQ</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/QHLLGLKwjRI?si=8o6ZapSZxznTisKH' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img class='three' src='../graphs/Harbin1-F.png' alt='graph of Harbin climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Shenyang1-F.png' alt='graph of Shenyang climate in 1981-2010'>",
+      "<img class='three' src='../graphs/PokerCreek-LittleGoldCreekBorderCrossing4-F.png' alt='graph of Poker Creek-Little Gold Creek Border Crossing climate in 2071-2100'>"
+    ]
+  },
+
   "Eva1": {
     "media": [
       "<a title='天王星, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:%E5%86%AC%E6%97%A5%E9%87%8C%E7%9A%84%E5%A4%A7%E9%9D%92%E5%B1%B1_-_panoramio.jpg'><img alt='冬日里的大青山 - panoramio' src='https://upload.wikimedia.org/wikipedia/commons/d/db/%E5%86%AC%E6%97%A5%E9%87%8C%E7%9A%84%E5%A4%A7%E9%9D%92%E5%B1%B1_-_panoramio.jpg'></a>",
@@ -449,8 +462,8 @@
       "<a title='霧島聖, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:%E9%B8%9F%E7%9E%B0%E4%BA%94%E5%BD%93%E5%8F%AC.JPG'><img alt='鸟瞰五当召' src='https://upload.wikimedia.org/wikipedia/commons/8/87/%E9%B8%9F%E7%9E%B0%E4%BA%94%E5%BD%93%E5%8F%AC.JPG'></a>",
       "<a href='https://commons.wikimedia.org/wiki/File:%E9%B8%9F%E7%9E%B0%E4%BA%94%E5%BD%93%E5%8F%AC.JPG'>霧島聖</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
       "<br><br>",
-      "<img class='three' src='../graphs/Baotou1-F.png' alt='graph of Baotou climate in 1981-2010'>",
       "<img class='three' src='../graphs/Tongliao1-F.png' alt='graph of Tongliao climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Baotou1-F.png' alt='graph of Baotou climate in 1981-2010'>",
       "<img class='three' src='../graphs/Undurkhangai4-F.png' alt='graph of Undurkhangai climate in 2071-2100'>"
     ]
   },
