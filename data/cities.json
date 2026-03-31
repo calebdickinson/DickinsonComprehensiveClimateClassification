@@ -200,7 +200,8 @@
       "Mount Hood summit, Oregon, United States"
     ],
     "2": [
-      "Esperanza Base, Antarctica"
+      "Esperanza Base, Antarctica",
+      "Ushakovskoye (Wrangel Island), Russia"
     ],
     "3": [
       "Casey Station, Antarctica",
@@ -733,6 +734,7 @@
     "4": [
       "Punta Arenas, Chile",
       "Stanley, Falkland Islands",
+      "Ushakovskoye (Wrangel Island), Russia",
       "Ushuaia, Argentina"
     ]
   },
@@ -1001,7 +1003,9 @@
       "Grande Prairie, Alberta, Canada"
     ],
     "3": [],
-    "4": []
+    "4": [
+      "Taloyoak, Nunavut, Canada"
+    ]
   },
   "Dhb2": {
     "1": [
@@ -1087,6 +1091,7 @@
       "Vienna, Austria"
     ],
     "2": [
+      "Arkhangelsk, Russia",
       "Bangor, Maine, United States",
       "Bathurst, New Brunswick, Canada",
       "Bella Coola, British Columbia, Canada",
@@ -1123,6 +1128,7 @@
     ],
     "3": [
       "Anchorage, Alaska, United States",
+      "Arkhangelsk, Russia",
       "Chibougamau, Québec, Canada",
       "Happy Valley–Goose Bay, Newfoundland and Labrador, Canada",
       "Helsinki, Finland",
@@ -1141,7 +1147,8 @@
       "Inukjuak, Québec, Canada",
       "Labrador City, Newfoundland and Labrador, Canada",
       "Murmansk, Russia",
-      "Petropavlovsk-Kamchatsky, Russia"
+      "Petropavlovsk-Kamchatsky, Russia",
+      "Vorkuta, Russia"
     ]
   },
   "Cha2": {
@@ -1235,6 +1242,7 @@
       "Zürich, Switzerland"
     ],
     "4": [
+      "Arkhangelsk, Russia",
       "Bathurst, New Brunswick, Canada",
       "Bella Coola, British Columbia, Canada",
       "Copenhagen, Denmark",
@@ -1264,7 +1272,9 @@
     "2": [
       "Alert, Nunavut, Canada",
       "Naujaat, Nunavut, Canada",
+      "Pevek, Russia",
       "Prudhoe Bay, Alaska, United States",
+      "Tiksi, Russia",
       "Utqiaġvik, Alaska, United States"
     ],
     "3": [
@@ -1279,17 +1289,22 @@
       "Churchill, Manitoba, Canada",
       "Inuvik, Northwest Territories, Canada",
       "Labrador City, Newfoundland and Labrador, Canada",
-      "Norilsk, Russia"
+      "Norilsk, Russia",
+      "Vorkuta, Russia"
     ],
     "2": [
       "Baker Lake, Nunavut, Canada",
+      "Chokurdakh, Russia",
       "Churchill, Manitoba, Canada",
       "Iqaluit, Nunavut, Canada",
       "Kugluktuk, Nunavut, Canada",
-      "Rankin Inlet, Nunavut, Canada"
+      "Rankin Inlet, Nunavut, Canada",
+      "Saskylakh, Russia"
     ],
     "3": [
-      "Naujaat, Nunavut, Canada"
+      "Naujaat, Nunavut, Canada",
+      "Taloyoak, Nunavut, Canada",
+      "Tiksi, Russia"
     ],
     "4": []
   },
@@ -1486,7 +1501,8 @@
     "3": [
       "Attawapiskat, Ontario, Canada",
       "Fairbanks, Alaska, United States",
-      "Labrador City, Newfoundland and Labrador, Canada"
+      "Labrador City, Newfoundland and Labrador, Canada",
+      "Vorkuta, Russia"
     ],
     "4": [
       "Rankin Inlet, Nunavut, Canada"
@@ -1494,6 +1510,7 @@
   },
   "Ehb2": {
     "1": [
+      "Arkhangelsk, Russia",
       "Bathurst, New Brunswick, Canada",
       "Chibougamau, Québec, Canada",
       "Fairbanks, Alaska, United States",
@@ -1510,7 +1527,8 @@
       "Bethel, Alaska, United States",
       "Chibougamau, Québec, Canada",
       "Happy Valley–Goose Bay, Newfoundland and Labrador, Canada",
-      "Labrador City, Newfoundland and Labrador, Canada"
+      "Labrador City, Newfoundland and Labrador, Canada",
+      "Vorkuta, Russia"
     ],
     "3": [
       "Churchill, Manitoba, Canada",
@@ -1518,7 +1536,8 @@
     ],
     "4": [
       "Ilulissat, Greenland",
-      "Naujaat, Nunavut, Canada"
+      "Naujaat, Nunavut, Canada",
+      "Tiksi, Russia"
     ]
   },
   "Esa1": {
@@ -1804,7 +1823,8 @@
       "Yellowknife, Northwest Territories, Canada"
     ],
     "4": [
-      "Baker Lake, Nunavut, Canada"
+      "Baker Lake, Nunavut, Canada",
+      "Chokurdakh, Russia"
     ]
   },
   "Fb2": {
@@ -1826,7 +1846,9 @@
     ],
     "3": [
       "Baker Lake, Nunavut, Canada",
-      "Cambridge Bay, Nunavut, Canada"
+      "Cambridge Bay, Nunavut, Canada",
+      "Chokurdakh, Russia",
+      "Saskylakh, Russia"
     ],
     "4": []
   },
@@ -2459,7 +2481,9 @@
     ],
     "3": [
       "Alert, Nunavut, Canada",
-      "Qaanaaq, Greenland"
+      "Pevek, Russia",
+      "Qaanaaq, Greenland",
+      "Ushakovskoye (Wrangel Island), Russia"
     ],
     "4": [
       "Mount Rainier summit, Washington, United States"
@@ -2521,6 +2545,7 @@
       "Alert, Nunavut, Canada",
       "Ittoqqortoormiit, Greenland",
       "Mount Hood summit, Oregon, United States",
+      "Pevek, Russia",
       "Qaanaaq, Greenland",
       "Qaqortoq, Greenland"
     ]
@@ -3571,7 +3596,9 @@
     "3": [
       "Norilsk, Russia"
     ],
-    "4": []
+    "4": [
+      "Saskylakh, Russia"
+    ]
   },
   "Eva1": {
     "1": [
@@ -3651,8 +3678,10 @@
   },
   "Fc1": {
     "1": [
+      "Pevek, Russia",
       "Qaanaaq, Greenland",
       "Station Nord, Greenland",
+      "Ushakovskoye (Wrangel Island), Russia",
       "Utqiaġvik, Alaska, United States",
       "Wainwright, Alaska, United States"
     ],
@@ -3688,10 +3717,13 @@
   "Gb1": {
     "1": [
       "Baker Lake, Nunavut, Canada",
-      "Cambridge Bay, Nunavut, Canada"
+      "Cambridge Bay, Nunavut, Canada",
+      "Chokurdakh, Russia",
+      "Saskylakh, Russia"
     ],
     "2": [
-      "Cambridge Bay, Nunavut, Canada"
+      "Cambridge Bay, Nunavut, Canada",
+      "Taloyoak, Nunavut, Canada"
     ],
     "3": [],
     "4": []
@@ -3997,7 +4029,9 @@
     "1": [
       "Eureka, Nunavut, Canada",
       "Naujaat, Nunavut, Canada",
-      "Rankin Inlet, Nunavut, Canada"
+      "Rankin Inlet, Nunavut, Canada",
+      "Taloyoak, Nunavut, Canada",
+      "Tiksi, Russia"
     ],
     "2": [
       "Eureka, Nunavut, Canada"
