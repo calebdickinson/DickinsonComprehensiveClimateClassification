@@ -1290,8 +1290,10 @@
       "Attawapiskat, Ontario, Canada",
       "Churchill, Manitoba, Canada",
       "Inuvik, Northwest Territories, Canada",
+      "Kosh-Agach, Russia",
       "Labrador City, Newfoundland and Labrador, Canada",
       "Norilsk, Russia",
+      "Poker Creek–Little Gold Creek Border Crossing, Alaska, United States / Yukon, Canada",
       "Vorkuta, Russia"
     ],
     "2": [
@@ -1300,6 +1302,7 @@
       "Churchill, Manitoba, Canada",
       "Iqaluit, Nunavut, Canada",
       "Kugluktuk, Nunavut, Canada",
+      "Poker Creek–Little Gold Creek Border Crossing, Alaska, United States / Yukon, Canada",
       "Rankin Inlet, Nunavut, Canada",
       "Saskylakh, Russia"
     ],
@@ -1534,6 +1537,7 @@
     ],
     "3": [
       "Churchill, Manitoba, Canada",
+      "Poker Creek–Little Gold Creek Border Crossing, Alaska, United States / Yukon, Canada",
       "Rankin Inlet, Nunavut, Canada"
     ],
     "4": [
@@ -1843,6 +1847,7 @@
       "Thompson, Manitoba, Canada",
       "Tynda, Russia",
       "Ulaanbaatar, Mongolia",
+      "Undurkhangai, Mongolia",
       "Ust-Ilimsk, Russia",
       "Vorogovo, Russia",
       "Yellowknife, Northwest Territories, Canada"
@@ -2103,7 +2108,9 @@
       "Khabarovsk, Russia"
     ],
     "3": [],
-    "4": []
+    "4": [
+      "Poker Creek–Little Gold Creek Border Crossing, Alaska, United States / Yukon, Canada"
+    ]
   },
   "Ewa2": {
     "1": [
@@ -3621,9 +3628,12 @@
     "3": [
       "Arvaikheer, Mongolia",
       "Kharkhorin, Mongolia",
-      "Ulaanbaatar, Mongolia"
+      "Ulaanbaatar, Mongolia",
+      "Undurkhangai, Mongolia"
     ],
-    "4": []
+    "4": [
+      "Undurkhangai, Mongolia"
+    ]
   },
   "Eva2": {
     "1": [
@@ -4252,9 +4262,12 @@
     ],
     "3": [
       "Altai City, Mongolia",
-      "Khovd, Mongolia"
+      "Khovd, Mongolia",
+      "Kosh-Agach, Russia"
     ],
-    "4": []
+    "4": [
+      "Kosh-Agach, Russia"
+    ]
   },
   "Ddb2": {
     "1": [
@@ -4296,7 +4309,8 @@
       "Khovd, Mongolia"
     ],
     "2": [
-      "Altai City, Mongolia"
+      "Altai City, Mongolia",
+      "Kosh-Agach, Russia"
     ],
     "3": [
       "Murghob, Tajikistan"
@@ -4312,7 +4326,8 @@
     ],
     "2": [
       "Arvaikheer, Mongolia",
-      "Kharkhorin, Mongolia"
+      "Kharkhorin, Mongolia",
+      "Undurkhangai, Mongolia"
     ],
     "3": [],
     "4": []

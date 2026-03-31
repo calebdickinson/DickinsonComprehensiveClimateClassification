@@ -391,7 +391,6 @@
     ]
   },
 
-
   "Ega1": {
     "media": [
       "<a title='formulanone, CC BY-SA 2.0 &lt;https://creativecommons.org/licenses/by-sa/2.0&gt;, via Wikimedia Commons' href='https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Downtown_Fargo_Aerial_-_Facing_Southeast_%2851009704407%29.jpg/1920px-Downtown_Fargo_Aerial_-_Facing_Southeast_%2851009704407%29.jpg'><img alt='Downtown Fargo Aerial - Facing Southeast (51009704407)' src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Downtown_Fargo_Aerial_-_Facing_Southeast_%2851009704407%29.jpg/1920px-Downtown_Fargo_Aerial_-_Facing_Southeast_%2851009704407%29.jpg'></a>",
@@ -428,6 +427,17 @@
       "<a href='https://commons.wikimedia.org/wiki/File:Urzhar.JPG'>Yakov Fedorov</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
       "<br><br>",
       "<img src='../graphs/Ürjar1-F.png' alt='graph of Ürjar climate in 1981-2010'>"
+    ]
+  },
+
+  "Eda1": {
+    "media": [
+      "<a title='Liuxingy, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:%E4%B9%8C%E6%8B%89%E7%89%B9%E4%B8%AD_%E6%B5%B7%E6%B5%81%E5%9B%BE%E9%95%87%E4%B9%8B%E8%A5%BF%E5%8D%97%E7%9A%84%E8%8D%89%E5%8E%9F_01.jpg'><img alt='乌拉特中 海流图镇之西南的草原 01' src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/%E4%B9%8C%E6%8B%89%E7%89%B9%E4%B8%AD_%E6%B5%B7%E6%B5%81%E5%9B%BE%E9%95%87%E4%B9%8B%E8%A5%BF%E5%8D%97%E7%9A%84%E8%8D%89%E5%8E%9F_01.jpg/3840px-%E4%B9%8C%E6%8B%89%E7%89%B9%E4%B8%AD_%E6%B5%B7%E6%B5%81%E5%9B%BE%E9%95%87%E4%B9%8B%E8%A5%BF%E5%8D%97%E7%9A%84%E8%8D%89%E5%8E%9F_01.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:%E4%B9%8C%E6%8B%89%E7%89%B9%E4%B8%AD_%E6%B5%B7%E6%B5%81%E5%9B%BE%E9%95%87%E4%B9%8B%E8%A5%BF%E5%8D%97%E7%9A%84%E8%8D%89%E5%8E%9F_01.jpg'>Liuxingy</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<img class='three' src='../graphs/Bayannur1-F.png' alt='graph of Bayannur climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Khovd2-F.png' alt='graph of Bayannur climate in 2011-2040'>",
+      "<img class='three' src='../graphs/Kosh-Agach4-F.png' alt='graph of Kosh-Agach climate in 2071-2100'>"
     ]
   },
 
