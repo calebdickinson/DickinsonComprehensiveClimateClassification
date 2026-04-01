@@ -168,6 +168,7 @@
     ],
     "3": [
       "El Tigre, Venezuela",
+      "Erode, India",
       "Luanda, Angola",
       "Tuxtla Gutiérrez, Mexico"
     ],
@@ -1650,7 +1651,6 @@
       "Cardiff, Wales, United Kingdom",
       "Copenhagen, Denmark",
       "London, England, United Kingdom",
-      "Norwich, England, United Kingdom",
       "Plymouth, England, United Kingdom",
       "St. John's, Newfoundland and Labrador, Canada",
       "Stockholm, Sweden",
@@ -1760,9 +1760,10 @@
       "Cork, Ireland",
       "Dublin, Ireland",
       "Edinburgh, Scotland, United Kingdom",
+      "Kingston upon Hull, England, United Kingdom",
       "London, England, United Kingdom",
-      "Norwich, England, United Kingdom",
       "Paris, France",
+      "Peterborough, England, United Kingdom",
       "Plymouth, England, United Kingdom",
       "Puerto Aysén, Chile",
       "Puerto Montt, Chile",
@@ -1783,9 +1784,10 @@
       "Dunedin, New Zealand",
       "Edinburgh, Scotland, United Kingdom",
       "Forks, Washington, United States",
+      "Kingston upon Hull, England, United Kingdom",
       "Kodiak, Alaska, United States",
       "London, England, United Kingdom",
-      "Norwich, England, United Kingdom",
+      "Peterborough, England, United Kingdom",
       "Plymouth, England, United Kingdom",
       "Prince Rupert, British Columbia, Canada",
       "Puerto Aysén, Chile",
@@ -2200,10 +2202,12 @@
       "Nairobi, Kenya"
     ],
     "2": [
+      "Melbourne, Australia",
       "Nairobi, Kenya"
     ],
     "3": [
-      "Hobart, Tasmania, Australia"
+      "Hobart, Tasmania, Australia",
+      "Melbourne, Australia"
     ],
     "4": [
       "Bogotá, Colombia",
@@ -2401,11 +2405,13 @@
       "Berlin, Germany",
       "Canberra, Australia",
       "Christchurch, New Zealand",
+      "Kingston upon Hull, England, United Kingdom",
+      "Peterborough, England, United Kingdom",
       "Riga, Latvia"
     ],
     "4": [
       "Aspen, Colorado, United States",
-      "Norwich, England, United Kingdom"
+      "Kingston upon Hull, England, United Kingdom"
     ]
   },
   "Cga2": {
@@ -2444,6 +2450,7 @@
       "Jackson, Wyoming, United States",
       "Minsk, Belarus",
       "Paris, France",
+      "Peterborough, England, United Kingdom",
       "Prince George, British Columbia, Canada",
       "Riga, Latvia",
       "Warsaw, Poland"
@@ -2640,10 +2647,12 @@
     "3": [],
     "4": [
       "Bangkok, Thailand",
+      "Erode, India",
       "Ho Chi Minh City, Vietnam",
       "Manila, Philippines",
       "Phnom Penh, Cambodia",
       "Sinop, Brazil",
+      "Tirunelveli, India",
       "Yangon, Myanmar"
     ]
   },
@@ -2870,7 +2879,8 @@
   "Cgb2": {
     "1": [
       "Christchurch, New Zealand",
-      "Hobart, Tasmania, Australia"
+      "Hobart, Tasmania, Australia",
+      "Melbourne, Australia"
     ],
     "2": [
       "Christchurch, New Zealand",
@@ -2921,17 +2931,23 @@
     ]
   },
   "Asz1": {
-    "1": [],
+    "1": [
+      "Erode, India",
+      "Tirunelveli, India"
+    ],
     "2": [
+      "Erode, India",
       "Jilib, Somalia",
-      "Maracaibo, Venezuela"
+      "Maracaibo, Venezuela",
+      "Tirunelveli, India"
     ],
     "3": [
       "Accra, Ghana",
       "Barranquilla, Colombia",
       "Jilib, Somalia",
       "Mogadishu, Somalia",
-      "Reynosa, Mexico"
+      "Reynosa, Mexico",
+      "Tirunelveli, India"
     ],
     "4": [
       "Accra, Ghana",
@@ -3434,7 +3450,9 @@
       "Valencia, Spain"
     ],
     "3": [],
-    "4": []
+    "4": [
+      "Melbourne, Australia"
+    ]
   },
   "Yb2": {
     "1": [
