@@ -804,7 +804,8 @@
     "1": [
       "Bozeman, Montana, United States",
       "Jackson, Wyoming, United States",
-      "Prague, Czech Republic"
+      "Prague, Czech Republic",
+      "Quesnel, British Columbia, Canada"
     ],
     "2": [
       "Aspen, Colorado, United States",
@@ -836,7 +837,8 @@
       "Donetsk, Ukraine",
       "Fargo, North Dakota, United States",
       "Jackson, Wyoming, United States",
-      "Kharkiv, Ukraine"
+      "Kharkiv, Ukraine",
+      "Quesnel, British Columbia, Canada"
     ],
     "3": [
       "Banff, Alberta, Canada",
@@ -1038,6 +1040,7 @@
       "Portland, Maine, United States",
       "Prince George, British Columbia, Canada",
       "Riga, Latvia",
+      "Saint John, New Brunswick, Canada",
       "Saint Petersburg, Russia",
       "St. John's, Newfoundland and Labrador, Canada",
       "Stockholm, Sweden",
@@ -1055,6 +1058,7 @@
       "Juneau, Alaska, United States",
       "Murmansk, Russia",
       "Prince George, British Columbia, Canada",
+      "Saint John, New Brunswick, Canada",
       "St. John's, Newfoundland and Labrador, Canada",
       "Tromsø, Norway",
       "Trondheim, Norway",
@@ -1102,6 +1106,7 @@
       "Omaha, Nebraska, United States",
       "Pittsburgh, Pennsylvania, United States",
       "Sapporo, Japan",
+      "Scranton, Pennsylvania, United States",
       "Syracuse, New York, United States",
       "Toronto, Ontario, Canada",
       "Vienna, Austria"
@@ -1253,6 +1258,7 @@
       "Pittsburgh, Pennsylvania, United States",
       "Portland, Maine, United States",
       "Sarajevo, Bosnia and Herzegovina",
+      "Scranton, Pennsylvania, United States",
       "Syracuse, New York, United States",
       "Toronto, Ontario, Canada",
       "Zürich, Switzerland"
@@ -1267,6 +1273,7 @@
       "Marquette, Michigan, United States",
       "Oslo, Norway",
       "Portland, Maine, United States",
+      "Saint John, New Brunswick, Canada",
       "Saint Petersburg, Russia",
       "Stockholm, Sweden",
       "Summerside, Prince Edward Island, Canada",
@@ -1393,7 +1400,8 @@
       "Madison, Wisconsin, United States",
       "Milwaukee, Wisconsin, United States",
       "Minneapolis, Minnesota, United States",
-      "Omaha, Nebraska, United States"
+      "Omaha, Nebraska, United States",
+      "Scranton, Pennsylvania, United States"
     ],
     "3": [
       "Almaty, Kazakhstan",
@@ -1499,6 +1507,7 @@
       "Richmond, Virginia, United States",
       "Sapporo, Japan",
       "Sarajevo, Bosnia and Herzegovina",
+      "Scranton, Pennsylvania, United States",
       "Springfield, Missouri, United States",
       "Sudbury, Ontario, Canada",
       "Syracuse, New York, United States",
@@ -1652,6 +1661,7 @@
       "Copenhagen, Denmark",
       "London, England, United Kingdom",
       "Plymouth, England, United Kingdom",
+      "Saint John, New Brunswick, Canada",
       "St. John's, Newfoundland and Labrador, Canada",
       "Stockholm, Sweden",
       "Tallinn, Estonia",
@@ -1699,6 +1709,7 @@
       "Green Bay, Wisconsin, United States",
       "Madison, Wisconsin, United States",
       "Minneapolis, Minnesota, United States",
+      "Quesnel, British Columbia, Canada",
       "Sioux Falls, South Dakota, United States",
       "Thunder Bay, Ontario, Canada",
       "Winnipeg, Manitoba, Canada",
@@ -1740,6 +1751,7 @@
       "Minneapolis, Minnesota, United States",
       "Moscow, Russia",
       "Omaha, Nebraska, United States",
+      "Quesnel, British Columbia, Canada",
       "Sioux Falls, South Dakota, United States",
       "Thunder Bay, Ontario, Canada",
       "Vienna, Austria",
@@ -2984,7 +2996,8 @@
     ],
     "4": [
       "Casper, Wyoming, United States",
-      "Grand Junction, Colorado, United States"
+      "Grand Junction, Colorado, United States",
+      "Rock Springs, Wyoming, United States"
     ]
   },
   "Dma2": {
@@ -3058,12 +3071,14 @@
   "Dda1": {
     "1": [
       "Jiayuguan, China",
+      "Rock Springs, Wyoming, United States",
       "Twin Falls, Idaho, United States",
       "Yakima, Washington, United States"
     ],
     "2": [
       "Alamosa, Colorado, United States",
-      "Jiayuguan, China"
+      "Jiayuguan, China",
+      "Rock Springs, Wyoming, United States"
     ],
     "3": [],
     "4": [
@@ -3115,7 +3130,8 @@
     ],
     "3": [
       "Bayannur, China",
-      "Jiayuguan, China"
+      "Jiayuguan, China",
+      "Rock Springs, Wyoming, United States"
     ],
     "4": [
       "Altai City, Mongolia",
