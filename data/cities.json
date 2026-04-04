@@ -985,6 +985,7 @@
       "Yerevan, Armenia"
     ],
     "3": [
+      "Alliance, Nebraska, United States",
       "Cheyenne, Wyoming, United States",
       "Denver, Colorado, United States",
       "Kelowna, British Columbia, Canada",
@@ -1358,6 +1359,7 @@
       "Yerevan, Armenia"
     ],
     "4": [
+      "Alliance, Nebraska, United States",
       "Bozeman, Montana, United States",
       "Bucharest, Romania",
       "Budapest, Hungary",
@@ -1956,6 +1958,7 @@
       "Beijing, China",
       "Fengxian, China",
       "Handan, China",
+      "Hengshui, China",
       "Jinan, China",
       "Qingdao, China",
       "Seoul, South Korea",
@@ -1964,6 +1967,7 @@
     "4": [
       "Beijing, China",
       "Dalian, China",
+      "Hengshui, China",
       "Jinan, China",
       "Pyongyang, North Korea",
       "Qingdao, China",
@@ -1981,6 +1985,7 @@
       "Chengdu, China",
       "Fengxian, China",
       "Handan, China",
+      "Hengshui, China",
       "Houma, China",
       "Jinan, China",
       "Qingdao, China",
@@ -3947,6 +3952,7 @@
   },
   "Dva1": {
     "1": [
+      "Alliance, Nebraska, United States",
       "Dingxi, China",
       "Lanzhou, China",
       "Yulin, China"
@@ -3961,17 +3967,22 @@
   },
   "Dva2": {
     "1": [
+      "Guanting Reservoir, China",
       "Handan, China",
+      "Hengshui, China",
       "Houma, China"
     ],
     "2": [
+      "Alliance, Nebraska, United States",
       "Baotou, China",
+      "Guanting Reservoir, China",
       "Lanzhou, China",
       "Yulin, China"
     ],
     "3": [
       "Baotou, China",
       "Dingxi, China",
+      "Guanting Reservoir, China",
       "Ulanqab, China",
       "Yulin, China"
     ],
@@ -4008,6 +4019,7 @@
       "Yuncheng, China"
     ],
     "4": [
+      "Guanting Reservoir, China",
       "Lanzhou, China",
       "Yulin, China"
     ]
