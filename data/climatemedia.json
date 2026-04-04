@@ -887,6 +887,20 @@
     ]
   },
 
+  "Dva2": {
+    "media": [
+      "<a title='Charlie fong, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Guantingreservoirandbridges.jpg'><img alt='Guantingreservoirandbridges' src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Guantingreservoirandbridges.jpg/3840px-Guantingreservoirandbridges.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Guantingreservoirandbridges.jpg'>Charlie fong</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<a title='Xmhaoyu, CC BY 3.0 &lt;https://creativecommons.org/licenses/by/3.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Wind_Power_at_Guanting_Resevoir.jpg'><img alt='Wind Power at Guanting Resevoir' src='https://upload.wikimedia.org/wikipedia/commons/d/d9/Wind_Power_at_Guanting_Resevoir.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Wind_Power_at_Guanting_Resevoir.jpg'>Xmhaoyu</a>, <a href='https://creativecommons.org/licenses/by/3.0'>CC BY 3.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<img class='three' src='../graphs/GuantingReservoir1-F.png' alt='graph of Guanting Reservoir climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Hengshui1-F.png' alt='graph of Hengshui climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Arvaikheer4-F.png' alt='graph of Arvaikheer climate in 2071-2100'>"
+    ]
+  },
+
   "Dhz1": {
     "media": [
       "<p>No images or videos are available for this climate.</p>",
