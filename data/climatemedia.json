@@ -1162,6 +1162,22 @@
     ]
   },
 
+  "Cga1": {
+    "media": [
+      "<a title='Georges Seguin (Okki), CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Marseille_20160827_92.jpg'><img alt='Marseille 20160827 92' src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Marseille_20160827_92.jpg/3840px-Marseille_20160827_92.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Marseille_20160827_92.jpg'>Georges Seguin (Okki)</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<a title='Alex Proimos from Sydney, Australia, CC BY 2.0 &lt;https://creativecommons.org/licenses/by/2.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Highways_into_Canberra_(6768361501).jpg'><img alt='Highways into Canberra (6768361501)' src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Highways_into_Canberra_%286768361501%29.jpg/3840px-Highways_into_Canberra_%286768361501%29.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Highways_into_Canberra_(6768361501).jpg'>Alex Proimos</a>, <a href='https://creativecommons.org/licenses/by/2.0'>CC BY 2.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/a0K6iz73HbY?si=p_hKcNLaB4qWkTVB' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img class='three' src='../graphs/Canberra1-F.png' alt='graph of Canberra climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Marseille1-F.png' alt='graph of Marseille climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Hull4-F.png' alt='graph of Hull climate in 2071-2100'>"
+    ]
+  },
+
   "Cma1": {
     "media": [
       "<a title='zeevveez from Jerusalem, Israel, CC BY 2.0 &lt;https://creativecommons.org/licenses/by/2.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Ruins_%26_Olive_Trees_(15647790520).jpg'><img alt='Ruins &amp; Olive Trees (15647790520)' src='https://upload.wikimedia.org/wikipedia/commons/2/2b/Ruins_%26_Olive_Trees_%2815647790520%29.jpg'></a>",
