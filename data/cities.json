@@ -1994,8 +1994,7 @@
       "Hengshui, China",
       "Houma, China",
       "Jinan, China",
-      "Qingdao, China",
-      "Tongchuan, China"
+      "Qingdao, China"
     ],
     "3": [
       "Dalian, China",
@@ -4012,7 +4011,6 @@
   },
   "Cva2": {
     "1": [
-      "Tongchuan, China",
       "Yuncheng, China"
     ],
     "2": [
@@ -4033,7 +4031,6 @@
     ],
     "3": [
       "Houma, China",
-      "Tongchuan, China",
       "Yuncheng, China"
     ],
     "4": [
@@ -4366,8 +4363,7 @@
     "2": [],
     "3": [],
     "4": [
-      "Houma, China",
-      "Tongchuan, China"
+      "Houma, China"
     ]
   },
   "Cwz2": {

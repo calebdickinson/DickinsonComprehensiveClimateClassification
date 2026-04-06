@@ -1318,6 +1318,28 @@
     ]
   },
 
+  "Cwa2": {
+    "media": [
+      "<a title='Colegota, CC BY-SA 2.5 ES &lt;https://creativecommons.org/licenses/by-sa/2.5/es/deed.en&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Chengdu-pandas-d10.jpg'><img alt='Chengdu-pandas-d10' src='https://upload.wikimedia.org/wikipedia/commons/5/54/Chengdu-pandas-d10.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Chengdu-pandas-d10.jpg'>Colegota</a>, <a href='https://creativecommons.org/licenses/by-sa/2.5/es/deed.en'>CC BY-SA 2.5 ES</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<img class='three' src='../graphs/Chengdu1-F.png' alt='graph of Chengdu climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Xian1-F.png' alt='graph of Xian climate in 1981-2010'>",
+      "<img class='three' src='../graphs/HeshunCounty4-F.png' alt='graph of Heshun County climate in 2071-2100'>"
+    ]
+  },
+
+  "Cva2": {
+    "media": [
+      "<a title='Li Meng, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:%E8%BF%90%E5%9F%8E%E7%9B%90%E6%B9%96-2010_-_panoramio_-_Li_Meng.jpg'><img alt='运城盐湖-2010 - panoramio - Li Meng' src='https://upload.wikimedia.org/wikipedia/commons/1/1f/%E8%BF%90%E5%9F%8E%E7%9B%90%E6%B9%96-2010_-_panoramio_-_Li_Meng.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:%E8%BF%90%E5%9F%8E%E7%9B%90%E6%B9%96-2010_-_panoramio_-_Li_Meng.jpg'>Li Meng</a>, <a href='https://creativecommons.org/licenses/by-sa/3.0'>CC BY-SA 3.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<img class='three' src='../graphs/Yuncheng1-F.png' alt='graph of Yuncheng climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Lanzhou3-F.png' alt='graph of Lanzhou climate in 2041-2070'>",
+      "<img class='three' src='../graphs/Dingxi4-F.png' alt='graph of Dingxi climate in 2071-2100'>"
+    ]
+  },
+
   "Chz1": {
     "media": [
       "<a title='凡尔礼, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:YuepingPark20170302_01.jpg'><img alt='YuepingPark20170302 01' src='https://upload.wikimedia.org/wikipedia/commons/2/28/YuepingPark20170302_01.jpg'></a>",
