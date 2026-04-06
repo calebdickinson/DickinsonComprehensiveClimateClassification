@@ -994,7 +994,8 @@
       "Kelowna, British Columbia, Canada",
       "Odesa, Ukraine",
       "Santa Fe, New Mexico, United States",
-      "Szeged, Hungary"
+      "Szeged, Hungary",
+      "Valladolid, Spain"
     ],
     "4": [
       "Calgary, Alberta, Canada",
@@ -1384,6 +1385,7 @@
       "Salt Lake City, Utah, United States",
       "Sofia, Bulgaria",
       "Tbilisi, Georgia",
+      "Valladolid, Spain",
       "Volgograd, Russia"
     ]
   },
@@ -2747,12 +2749,14 @@
     "1": [
       "Ankara, Türkiye",
       "Maseru, Lesotho",
-      "Payson, Arizona, United States"
+      "Payson, Arizona, United States",
+      "Valladolid, Spain"
     ],
     "2": [
       "Cheyenne, Wyoming, United States",
       "Santa Fe, New Mexico, United States",
-      "Taos, New Mexico, United States"
+      "Taos, New Mexico, United States",
+      "Valladolid, Spain"
     ],
     "3": [
       "Taos, New Mexico, United States"

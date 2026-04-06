@@ -1178,6 +1178,19 @@
     ]
   },
 
+  "Csa1": {
+    "media": [
+      "<a title='Martin Schärli, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Maseru_Leotho_main_south.jpg'><img alt='Maseru Leotho main south' src='https://upload.wikimedia.org/wikipedia/commons/3/36/Maseru_Leotho_main_south.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Maseru_Leotho_main_south.jpg'>Martin Schärli</a>, <a href='http://creativecommons.org/licenses/by-sa/3.0/'>CC BY-SA 3.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/gKio-8F_zm0?si=olkHXhSYreUq25sn' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img class='three' src='../graphs/Valladolid1-F.png' alt='graph of Valladolid climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Payson1-F.png' alt='graph of Payson climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Gunnison4-F.png' alt='graph of Gunnison climate in 2071-2100'>"
+    ]
+  },
+
   "Cma1": {
     "media": [
       "<a title='zeevveez from Jerusalem, Israel, CC BY 2.0 &lt;https://creativecommons.org/licenses/by/2.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Ruins_%26_Olive_Trees_(15647790520).jpg'><img alt='Ruins &amp; Olive Trees (15647790520)' src='https://upload.wikimedia.org/wikipedia/commons/2/2b/Ruins_%26_Olive_Trees_%2815647790520%29.jpg'></a>",
