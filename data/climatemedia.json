@@ -1156,6 +1156,8 @@
       "<a title='Michael Tracey, CC0, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Asheville_at_dusk_(cropped).jpg'><img alt='Asheville at dusk (cropped)' src='https://upload.wikimedia.org/wikipedia/commons/5/5f/Asheville_at_dusk_%28cropped%29.jpg'></a>",
       "<a href='https://commons.wikimedia.org/wiki/File:Asheville_at_dusk_(cropped).jpg'>Michael Tracey</a>, CC0, via Wikimedia Commons",
       "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/menXo2PmoCs?si=i6MKDwapTa6igxFq' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
       "<img class='three' src='../graphs/Venice1-F.png' alt='graph of Venice climate in 1981-2010'>",
       "<img class='three' src='../graphs/Asheville1-F.png' alt='graph of Asheville climate in 1981-2010'>",
       "<img class='three' src='../graphs/Anchorage4-F.png' alt='graph of Anchorage climate in 2071-2100'>"
@@ -1188,6 +1190,19 @@
       "<img class='three' src='../graphs/Valladolid1-F.png' alt='graph of Valladolid climate in 1981-2010'>",
       "<img class='three' src='../graphs/Payson1-F.png' alt='graph of Payson climate in 1981-2010'>",
       "<img class='three' src='../graphs/Gunnison4-F.png' alt='graph of Gunnison climate in 2071-2100'>"
+    ]
+  },
+
+  "Cda1": {
+    "media": [
+      "<a title='Graham Maclachlan, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Victoria_West,_7070,_South_Africa_-_panoramio.jpg'><img alt='Victoria West, 7070, South Africa - panoramio' src='https://upload.wikimedia.org/wikipedia/commons/9/94/Victoria_West%2C_7070%2C_South_Africa_-_panoramio.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Victoria_West,_7070,_South_Africa_-_panoramio.jpg'>Graham Maclachlan</a>, <a href='https://creativecommons.org/licenses/by-sa/3.0'>CC BY-SA 3.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/n5Lq3bRnrsk?si=A6dHkesbJlnspmrK' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img class='three' src='../graphs/VictoriaWest1-F.png' alt='graph of Victoria West climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Reno1-F.png' alt='graph of Reno climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Salida4-F.png' alt='graph of Salida climate in 2071-2100'>"
     ]
   },
 

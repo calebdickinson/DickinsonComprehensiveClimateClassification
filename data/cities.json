@@ -2312,6 +2312,7 @@
       "Lima, Peru",
       "San Diego, California, United States",
       "Sanaa, Yemen",
+      "Victoria West, South Africa",
       "Windhoek, Namibia"
     ],
     "4": [
@@ -2352,6 +2353,7 @@
       "Casablanca, Morocco",
       "Madrid, Spain",
       "Tripoli, Libya",
+      "Victoria West, South Africa",
       "Windhoek, Namibia"
     ]
   },
@@ -3184,9 +3186,12 @@
   },
   "Cda1": {
     "1": [
-      "Reno, Nevada, United States"
+      "Reno, Nevada, United States",
+      "Victoria West, South Africa"
     ],
-    "2": [],
+    "2": [
+      "Victoria West, South Africa"
+    ],
     "3": [
       "Alamosa, Colorado, United States",
       "Salida, Colorado, United States"
