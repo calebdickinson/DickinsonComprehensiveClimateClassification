@@ -1646,6 +1646,7 @@
       "Asheville, North Carolina, United States",
       "Charleston, West Virginia, United States",
       "Ljubljana, Slovenia",
+      "Lyon, France",
       "Mar del Plata, Buenos Aires, Argentina",
       "Milan, Italy",
       "Sarajevo, Bosnia and Herzegovina",
@@ -1656,6 +1657,7 @@
       "Berlin, Germany",
       "Boston, Massachusetts, United States",
       "Ljubljana, Slovenia",
+      "Lyon, France",
       "Mar del Plata, Buenos Aires, Argentina",
       "Paris, France",
       "Sarajevo, Bosnia and Herzegovina",
@@ -1739,6 +1741,7 @@
       "Ponca City, Oklahoma, United States"
     ],
     "3": [
+      "Bologna, Italy",
       "Oklahoma City, Oklahoma, United States",
       "Ponca City, Oklahoma, United States",
       "Wichita, Kansas, United States"
@@ -2440,11 +2443,13 @@
   },
   "Cga2": {
     "1": [
+      "Bologna, Italy",
       "Dallas, Texas, United States",
       "Fort Worth, Texas, United States",
       "Oklahoma City, Oklahoma, United States"
     ],
     "2": [
+      "Bologna, Italy",
       "Bucharest, Romania",
       "Marseille, France",
       "Odesa, Ukraine",
@@ -2460,6 +2465,7 @@
       "Flagstaff, Arizona, United States",
       "Kharkiv, Ukraine",
       "Kyiv, Ukraine",
+      "Lyon, France",
       "Paris, France",
       "Payson, Arizona, United States",
       "Prague, Czech Republic",
@@ -2793,6 +2799,7 @@
     ],
     "4": [
       "Brisbane, Australia",
+      "Lyon, France",
       "Milan, Italy",
       "Monterrey, Mexico",
       "Payson, Arizona, United States",
@@ -2821,6 +2828,7 @@
     ],
     "4": [
       "Abilene, Texas, United States",
+      "Bologna, Italy",
       "Tucson, Arizona, United States"
     ]
   },

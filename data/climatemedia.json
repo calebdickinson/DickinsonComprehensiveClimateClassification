@@ -1619,11 +1619,23 @@
 
   "Bhz1": {
     "media": [
-      "<p>No images or videos are available for this climate.</p>",
-      "<br>",
+      "<a title='Wisalahmad523, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Rawal_Lake_View_Point3.jpg'><img alt='Rawal Lake View Point3' src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Rawal_Lake_View_Point3.jpg/3840px-Rawal_Lake_View_Point3.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Rawal_Lake_View_Point3.jpg'>Wisalahmad523</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
       "<img class='three' src='../graphs/Islamabad1-F.png' alt='graph of Islamabad climate in 1981-2010'>",
       "<img class='three' src='../graphs/NewOrleans4-F.png' alt='graph of NewOrleans climate in 2071-2100'>",
       "<img class='three' src='../graphs/Raleigh4-F.png' alt='graph of Raleigh climate in 2071-2100'>"
+    ]
+  },
+
+  "Bgz1": {
+    "media": [
+      "<a title='chsufyan8, CC BY 3.0 &lt;https://creativecommons.org/licenses/by/3.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Hafizabad_Tehsil,_Pakistan_-_panoramio_(2).jpg'><img alt='Hafizabad Tehsil, Pakistan - panoramio (2)' src='https://upload.wikimedia.org/wikipedia/commons/0/0c/Hafizabad_Tehsil%2C_Pakistan_-_panoramio_%282%29.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Hafizabad_Tehsil,_Pakistan_-_panoramio_(2).jpg'>chsufyan8</a>, <a href='https://creativecommons.org/licenses/by/3.0'>CC BY 3.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<img class='three' src='../graphs/Hafizabad1-F.png' alt='graph of Hafizabad climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Sedona4-F.png' alt='graph of Sedona climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Milan4-F.png' alt='graph of Milan climate in 2071-2100'>"
     ]
   },
 
@@ -1668,7 +1680,7 @@
       "<a href='https://commons.wikimedia.org/wiki/File:Kohe_Sulaiman.jpg'>Asad ASAd</a>, CC0, via Wikimedia Commons",
       "<br><br>",
       "<img class='three' src='../graphs/Daraban1-F.png' alt='graph of Daraban climate in 1981-2010'>",
-      "<img class='three' src='../graphs/Abilene4-F.png' alt='graph of Abilene climate in 2071-2100'>",
+      "<img class='three' src='../graphs/Bologna4-F.png' alt='graph of Bologna climate in 2071-2100'>",
       "<img class='three' src='../graphs/Tucson4-F.png' alt='graph of Tucson climate in 2071-2100'>"
     ]
   },
