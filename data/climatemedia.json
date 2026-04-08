@@ -1567,9 +1567,17 @@
 
   "Bda1": {
     "media": [
-      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/f6gVTfmNKGc?si=tuTp86JoFoJimWF6' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>"
+      "<a title='SkyPixels, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Lutheran_Church_Luderotz.jpg'><img alt='Lutheran Church Luderotz' src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Lutheran_Church_Luderotz.jpg/3840px-Lutheran_Church_Luderotz.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Lutheran_Church_Luderotz.jpg'>SkyPixels</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/Uad-o8OEWBU?si=yJ-YKOXs-YX0oA6b' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img class='three' src='../graphs/Lima1-F.png' alt='graph of Lima climate in 1981-2010'>",
+      "<img class='three' src='../graphs/SanDiego1-F.png' alt='graph of San Diego climate in 1981-2010'>",
+      "<img class='three' src='../graphs/ComodoroRivadavia4-F.png' alt='graph of Comodoro Rivadavia climate in 2071-2100'>"
     ]
   },
+
 
   "Bma1": {
     "media": [
