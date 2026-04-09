@@ -1536,8 +1536,11 @@
       "<a title='S Molteno, Public domain, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Peninsula_Sandstone_Fynbos_-_Cape_Town_8.JPG'><img alt='Peninsula Sandstone Fynbos - Cape Town 8' src='https://upload.wikimedia.org/wikipedia/commons/4/4b/Peninsula_Sandstone_Fynbos_-_Cape_Town_8.JPG'></a>",
       "<a href='https://commons.wikimedia.org/wiki/File:Peninsula_Sandstone_Fynbos_-_Cape_Town_8.JPG'>S Molteno</a>, Public domain, via Wikimedia Commons",
       "<br><br>",
-      "<img src='../graphs/Lompoc1-F.png' alt='graph of Lompoc climate in 1981-2010'>",
-      "<img src='../graphs/CapeTown1-F.png' alt='graph of Cape Town climate in 1981-2010'>"
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/us45pRjZqvo?si=izpEmGpy8-EEUtB9' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<img class='three' src='../graphs/Lompoc1-F.png' alt='graph of Lompoc climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Albany1-F.png' alt='graph of Albany climate in 1981-2010'>",
+      "<img class='three' src='../graphs/CapeTown1-F.png' alt='graph of Cape Town climate in 1981-2010'>"
     ]
   },
 

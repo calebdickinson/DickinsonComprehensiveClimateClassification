@@ -20,6 +20,7 @@
     ],
     "3": [
       "Adelaide, Australia",
+      "Albany, Australia",
       "Bilbao, Spain",
       "Cape Town, South Africa",
       "Concepción, Chile",
@@ -29,6 +30,7 @@
       "Santa Cruz de Tenerife, Spain"
     ],
     "4": [
+      "Albany, Australia",
       "Cape Town, South Africa",
       "Concepción, Chile",
       "Valdivia, Chile"
@@ -2918,10 +2920,12 @@
   },
   "Bmb2": {
     "1": [
+      "Albany, Australia",
       "Cape Town, South Africa",
       "Lompoc, California, United States"
     ],
     "2": [
+      "Albany, Australia",
       "Concepción, Chile",
       "Lompoc, California, United States",
       "San Francisco, California, United States"
