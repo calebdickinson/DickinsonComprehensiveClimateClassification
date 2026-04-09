@@ -491,6 +491,7 @@
       "Brasília, Brasil",
       "Guadalajara, Mexico",
       "Harare, Zimbabwe",
+      "Huambo, Angola",
       "Kathmandu, Nepal",
       "Lusaka, Zambia"
     ],
@@ -499,6 +500,7 @@
       "Belo Horizonte, Brazil",
       "Córdoba, Argentina",
       "Harare, Zimbabwe",
+      "Huambo, Angola",
       "Kathmandu, Nepal",
       "Kunming, China",
       "Mexico City, Mexico",
@@ -508,6 +510,7 @@
       "Addis Ababa, Ethiopia",
       "Antananarivo, Madagascar",
       "Cilaos, Réunion, France",
+      "Huambo, Angola",
       "Johannesburg, South Africa",
       "Mawsynram, India"
     ],
@@ -569,7 +572,9 @@
       "Saint-Leu, Réunion, France",
       "San Salvador, El Salvador"
     ],
-    "4": []
+    "4": [
+      "Huambo, Angola"
+    ]
   },
   "Aha2": {
     "1": [
