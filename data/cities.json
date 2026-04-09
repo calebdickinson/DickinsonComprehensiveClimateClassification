@@ -750,6 +750,7 @@
   },
   "Bb1": {
     "1": [
+      "Ambato, Ecuador",
       "Bogotá, Colombia",
       "Quito, Ecuador"
     ],
@@ -762,14 +763,23 @@
     "4": []
   },
   "Bgb2": {
-    "1": [],
+    "1": [
+      "Ibarra, Ecuador",
+      "Lady Barron, Tasmania, Australia"
+    ],
     "2": [
-      "Bogotá, Colombia"
+      "Ambato, Ecuador",
+      "Bogotá, Colombia",
+      "Ibarra, Ecuador",
+      "Lady Barron, Tasmania, Australia"
     ],
     "3": [
-      "Bogotá, Colombia"
+      "Ambato, Ecuador",
+      "Bogotá, Colombia",
+      "Ibarra, Ecuador"
     ],
     "4": [
+      "Ambato, Ecuador",
       "La Paz, Bolivia"
     ]
   },
@@ -2241,6 +2251,7 @@
     ],
     "3": [
       "Hobart, Tasmania, Australia",
+      "Lady Barron, Tasmania, Australia",
       "Melbourne, Australia"
     ],
     "4": [
@@ -3553,7 +3564,9 @@
       "Caracas, Venezuela"
     ],
     "3": [],
-    "4": []
+    "4": [
+      "Ibarra, Ecuador"
+    ]
   },
   "Zgz1": {
     "1": [],
@@ -4493,5 +4506,33 @@
     ],
     "3": [],
     "4": []
+  },
+  "Bsa1": {
+    "1": [],
+    "2": [],
+    "3": [
+      "Huánuco, Peru"
+    ],
+    "4": [
+      "Lady Barron, Tasmania, Australia"
+    ]
+  },
+  "Bsb2": {
+    "1": [
+      "Huánuco, Peru"
+    ],
+    "2": [
+      "Huánuco, Peru"
+    ],
+    "3": [],
+    "4": []
+  },
+  "Asa1": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [
+      "Huánuco, Peru"
+    ]
   }
 }
