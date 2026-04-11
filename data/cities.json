@@ -250,14 +250,17 @@
   "Cc2": {
     "1": [
       "Attu Station, Alaska",
+      "Junín, Peru",
       "Macquarie Island Station, Australia"
     ],
     "2": [
+      "Junín, Peru",
       "Macquarie Island Station, Australia"
     ],
     "3": [
       "Bird Island Station, South Georgia",
       "Heard Island (Atlas Cove Station), Antarctica",
+      "Junín, Peru",
       "Macquarie Island Station, Australia"
     ],
     "4": [
@@ -772,7 +775,9 @@
       "Juliaca, Peru",
       "La Paz, Bolivia"
     ],
-    "4": []
+    "4": [
+      "Junín, Peru"
+    ]
   },
   "Bgb2": {
     "1": [

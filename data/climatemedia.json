@@ -1513,8 +1513,12 @@
 
   "Bb1": {
     "media": [
-      "<img src='../graphs/Quito1-F.png' alt='graph of Quito climate in 1981-2010'>",
-      "<img src='../graphs/Bogotá1-F.png' alt='graph of Bogotá climate in 1981-2010'>"
+      "<a title='Laliria2014, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Jard%C3%ADn_Bot%C3%A1nico_de_Ambato.jpg'><img alt='Jardín Botánico de Ambato' src='https://upload.wikimedia.org/wikipedia/commons/c/c1/Jard%C3%ADn_Bot%C3%A1nico_de_Ambato.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Jard%C3%ADn_Bot%C3%A1nico_de_Ambato.jpg'>Laliria2014</a>, <a href='https://creativecommons.org/licenses/by-sa/3.0'>CC BY-SA 3.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<img class='three' src='../graphs/Bogotá1-F.png' alt='graph of Bogotá climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Quito1-F.png' alt='graph of Quito climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Junín4-F.png' alt='graph of Junín climate in 2071-2100'>"
     ]
   },
 
