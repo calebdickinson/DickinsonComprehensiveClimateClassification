@@ -515,6 +515,7 @@
       "Antananarivo, Madagascar",
       "Cilaos, Réunion, France",
       "Huambo, Angola",
+      "Huehuetenango, Guatemala",
       "Johannesburg, South Africa",
       "Mawsynram, India"
     ],
@@ -2686,7 +2687,9 @@
       "Fort-de-France, Martinique",
       "Salvador, Brasil"
     ],
-    "4": []
+    "4": [
+      "Huehuetenango, Guatemala"
+    ]
   },
   "Zsz1": {
     "1": [],
@@ -3502,10 +3505,12 @@
   "Bwb2": {
     "1": [
       "Addis Ababa, Ethiopia",
+      "Huehuetenango, Guatemala",
       "Mexico City, Mexico"
     ],
     "2": [
-      "Addis Ababa, Ethiopia"
+      "Addis Ababa, Ethiopia",
+      "Huehuetenango, Guatemala"
     ],
     "3": [],
     "4": [
