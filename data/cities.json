@@ -155,7 +155,9 @@
     "3": [
       "Maputo, Mozambique"
     ],
-    "4": []
+    "4": [
+      "Mizque, Bolivia"
+    ]
   },
   "Avz1": {
     "1": [
@@ -713,7 +715,9 @@
       "Coyhaique, Chile",
       "Dunedin, New Zealand",
       "Forks, Washington, United States",
+      "Juliaca, Peru",
       "La Paz, Bolivia",
+      "Oruro, Bolivia",
       "Prince Rupert, British Columbia, Canada",
       "Puerto Natales, Chile",
       "Punta Arenas, Chile",
@@ -724,7 +728,9 @@
     ],
     "2": [
       "Attu Station, Alaska",
+      "Juliaca, Peru",
       "La Paz, Bolivia",
+      "Oruro, Bolivia",
       "Puerto Natales, Chile",
       "Punta Arenas, Chile",
       "Reykjavík, Iceland",
@@ -762,6 +768,7 @@
       "Quito, Ecuador"
     ],
     "3": [
+      "Juliaca, Peru",
       "La Paz, Bolivia"
     ],
     "4": []
@@ -3501,19 +3508,26 @@
       "Addis Ababa, Ethiopia"
     ],
     "3": [],
-    "4": []
+    "4": [
+      "Juliaca, Peru"
+    ]
   },
   "Bva1": {
     "1": [],
     "2": [
+      "Mizque, Bolivia",
       "Sombrerete, Mexico"
     ],
     "3": [
       "Maseru, Lesotho",
       "Mexico City, Mexico",
+      "Mizque, Bolivia",
+      "Pachuca, Mexico",
       "Sombrerete, Mexico"
     ],
-    "4": []
+    "4": [
+      "Pachuca, Mexico"
+    ]
   },
   "Bsa2": {
     "1": [
@@ -4546,6 +4560,21 @@
     "3": [],
     "4": [
       "Huánuco, Peru"
+    ]
+  },
+  "Bvb2": {
+    "1": [
+      "Mizque, Bolivia",
+      "Pachuca, Mexico"
+    ],
+    "2": [
+      "Pachuca, Mexico"
+    ],
+    "3": [
+      "Oruro, Bolivia"
+    ],
+    "4": [
+      "Oruro, Bolivia"
     ]
   }
 }

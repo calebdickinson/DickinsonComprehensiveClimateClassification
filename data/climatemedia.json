@@ -1583,6 +1583,20 @@
     ]
   },
 
+  "Bvb2": {
+    "media": [
+      "<a title='josma, CC BY 3.0 &lt;https://creativecommons.org/licenses/by/3.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Presa_Calderon_-_panoramio.jpg'><img alt='Presa Calderon - panoramio' src='https://upload.wikimedia.org/wikipedia/commons/a/a4/Presa_Calderon_-_panoramio.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Presa_Calderon_-_panoramio.jpg'>josma</a>, <a href='https://creativecommons.org/licenses/by/3.0'>CC BY 3.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<a title='Nils Öberg, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Aiquile_Station.JPG'><img alt='Aiquile Station' src='https://upload.wikimedia.org/wikipedia/commons/7/71/Aiquile_Station.JPG'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Aiquile_Station.JPG'>Nils Öberg</a>, <a href='https://creativecommons.org/licenses/by-sa/3.0'>CC BY-SA 3.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<img class='three' src='../graphs/Pachuca1-F.png' alt='graph of Pachuca climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Mizque1-F.png' alt='graph of Mizque climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Oruro4-F.png' alt='graph of Oruro climate in 2071-2100'>"
+    ]
+  },
+
   "Bha1": {
     "media": [
       "<a title='ElGuruCesar, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Rosedal_de_Palermo_en_Buenos_Aires_2020_by_Cesar_Perez.jpg'><img alt='Rosedal de Palermo en Buenos Aires 2020 by Cesar Perez' src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Rosedal_de_Palermo_en_Buenos_Aires_2020_by_Cesar_Perez.jpg/3840px-Rosedal_de_Palermo_en_Buenos_Aires_2020_by_Cesar_Perez.jpg'></a>",
@@ -1619,7 +1633,6 @@
       "<img class='three' src='../graphs/ComodoroRivadavia4-F.png' alt='graph of Comodoro Rivadavia climate in 2071-2100'>"
     ]
   },
-
 
   "Bma1": {
     "media": [
