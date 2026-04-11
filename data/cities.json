@@ -719,7 +719,8 @@
       "Punta Arenas, Chile",
       "Río Gallegos, Argentina",
       "Stanley, Falkland Islands",
-      "Tórshavn, Faroe Islands"
+      "Tórshavn, Faroe Islands",
+      "Uyuni, Bolivia"
     ],
     "2": [
       "Attu Station, Alaska",
@@ -731,7 +732,8 @@
       "St. Paul, Alaska, United States",
       "Stanley, Falkland Islands",
       "Tórshavn, Faroe Islands",
-      "Ushuaia, Argentina"
+      "Ushuaia, Argentina",
+      "Uyuni, Bolivia"
     ],
     "3": [
       "Attu Station, Alaska",
@@ -2890,6 +2892,7 @@
     ],
     "2": [
       "Antofagasta, Chile",
+      "La Serena, Chile",
       "Lima, Peru",
       "Lüderitz, Namibia",
       "San Diego, California, United States",
@@ -2898,10 +2901,12 @@
     "3": [
       "Antofagasta, Chile",
       "Comodoro Rivadavia, Argentina",
+      "La Serena, Chile",
       "Lüderitz, Namibia"
     ],
     "4": [
-      "Comodoro Rivadavia, Argentina"
+      "Comodoro Rivadavia, Argentina",
+      "La Serena, Chile"
     ]
   },
   "Cmb2": {
@@ -3639,11 +3644,14 @@
   },
   "Bdb2": {
     "1": [
-      "Antofagasta, Chile"
+      "Antofagasta, Chile",
+      "La Serena, Chile"
     ],
     "2": [],
     "3": [],
-    "4": []
+    "4": [
+      "Uyuni, Bolivia"
+    ]
   },
   "Cdb2": {
     "1": [
@@ -3978,7 +3986,8 @@
     ],
     "2": [],
     "3": [
-      "Lhasa, Tibet, China"
+      "Lhasa, Tibet, China",
+      "Uyuni, Bolivia"
     ],
     "4": [
       "Gyantse, Tibet, China"
