@@ -1874,6 +1874,16 @@
     ]
   },
 
+  "Aga1": {
+    "media": [
+      "<a title='Hector Bottai, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Nothura_boraquira_-_White-bellied_nothura;_Po%C3%A7%C3%B5es,_Bahia,_Brazil.jpg'><img alt='Nothura boraquira - White-bellied nothura; Poções, Bahia, Brazil' src='https://upload.wikimedia.org/wikipedia/commons/f/f3/Nothura_boraquira_-_White-bellied_nothura%3B_Po%C3%A7%C3%B5es%2C_Bahia%2C_Brazil.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Nothura_boraquira_-_White-bellied_nothura;_Po%C3%A7%C3%B5es,_Bahia,_Brazil.jpg'>Hector Bottai</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<img src='../graphs/Caracas1-F.png' alt='graph of Caracas climate in 1981-2010'>",
+      "<img src='../graphs/Ibarra4-F.png' alt='graph of Ibarra climate in 2071-2100'>"
+    ]
+  },
+
   "Awa1": {
     "media": [
       "<a title='JMRAFFi, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:World_Trade_Center_San_Salvador.jpg'><img alt='World Trade Center San Salvador' src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/World_Trade_Center_San_Salvador.jpg/3840px-World_Trade_Center_San_Salvador.jpg'></a>",
