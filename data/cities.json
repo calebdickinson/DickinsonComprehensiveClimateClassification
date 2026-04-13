@@ -2919,6 +2919,7 @@
     ],
     "3": [
       "Antofagasta, Chile",
+      "Arequipa, Peru",
       "Comodoro Rivadavia, Argentina",
       "La Serena, Chile",
       "Lüderitz, Namibia"
@@ -3007,11 +3008,13 @@
     ],
     "3": [
       "Honolulu, Hawaii, United States",
-      "La Perouse Pinnacle, Hawaii, United States"
+      "La Perouse Pinnacle, Hawaii, United States",
+      "Lānaʻi City, Hawaii, United States"
     ],
     "4": [
       "Caracas, Venezuela",
-      "Gqeberha, South Africa"
+      "Gqeberha, South Africa",
+      "Lānaʻi City, Hawaii, United States"
     ]
   },
   "Asz1": {
@@ -3405,15 +3408,18 @@
     "2": [
       "Cabo San Lucas, Mexico",
       "Dakar, Senegal",
+      "Mindelo, Cape Verde",
       "Nouakchott, Mauritania",
       "Punto Fijo, Venezuela"
     ],
     "3": [
-      "Dakar, Senegal"
+      "Dakar, Senegal",
+      "Mindelo, Cape Verde"
     ],
     "4": [
       "Lima, Peru",
       "Lüderitz, Namibia",
+      "Mindelo, Cape Verde",
       "Sanaa, Yemen",
       "Santa Cruz de Tenerife, Spain"
     ]
@@ -3698,9 +3704,12 @@
   "Bdb2": {
     "1": [
       "Antofagasta, Chile",
+      "Arequipa, Peru",
       "La Serena, Chile"
     ],
-    "2": [],
+    "2": [
+      "Arequipa, Peru"
+    ],
     "3": [],
     "4": [
       "Uyuni, Bolivia"
@@ -4601,8 +4610,12 @@
     "4": []
   },
   "Asa1": {
-    "1": [],
-    "2": [],
+    "1": [
+      "Lānaʻi City, Hawaii, United States"
+    ],
+    "2": [
+      "Lānaʻi City, Hawaii, United States"
+    ],
     "3": [],
     "4": [
       "Huánuco, Peru"
@@ -4621,6 +4634,16 @@
     ],
     "4": [
       "Oruro, Bolivia"
+    ]
+  },
+  "Ada1": {
+    "1": [
+      "Mindelo, Cape Verde"
+    ],
+    "2": [],
+    "3": [],
+    "4": [
+      "Arequipa, Peru"
     ]
   }
 }
