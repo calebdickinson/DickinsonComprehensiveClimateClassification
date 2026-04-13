@@ -1876,11 +1876,12 @@
 
   "Aga1": {
     "media": [
-      "<a title='Hector Bottai, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Nothura_boraquira_-_White-bellied_nothura;_Po%C3%A7%C3%B5es,_Bahia,_Brazil.jpg'><img alt='Nothura boraquira - White-bellied nothura; Poções, Bahia, Brazil' src='https://upload.wikimedia.org/wikipedia/commons/f/f3/Nothura_boraquira_-_White-bellied_nothura%3B_Po%C3%A7%C3%B5es%2C_Bahia%2C_Brazil.jpg'></a>",
-      "<a href='https://commons.wikimedia.org/wiki/File:Nothura_boraquira_-_White-bellied_nothura;_Po%C3%A7%C3%B5es,_Bahia,_Brazil.jpg'>Hector Bottai</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<a title='Emil Sjöblom, CC BY-SA 2.0 &lt;https://creativecommons.org/licenses/by-sa/2.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Mwanza_city-1.jpg'><img alt='Mwanza city-1' src='https://upload.wikimedia.org/wikipedia/commons/5/50/Mwanza_city-1.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Mwanza_city-1.jpg'>Emil Sjöblom</a>, <a href='https://creativecommons.org/licenses/by-sa/2.0'>CC BY-SA 2.0</a>, via Wikimedia Commons",
       "<br><br>",
-      "<img src='../graphs/Caracas1-F.png' alt='graph of Caracas climate in 1981-2010'>",
-      "<img src='../graphs/Ibarra4-F.png' alt='graph of Ibarra climate in 2071-2100'>"
+      "<img class='three' src='../graphs/Mwanza1-F.png' alt='graph of Mwanza climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Caracas1-F.png' alt='graph of Caracas climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Ibarra4-F.png' alt='graph of Ibarra climate in 2071-2100'>"
     ]
   },
 
@@ -1914,6 +1915,19 @@
       "<img class='three' src='../graphs/Manaus1-F.png' alt='graph of Manaus climate in 1981-2010'>",
       "<img class='three' src='../graphs/Kisangani1-F.png' alt='graph of Kisangani climate in 1981-2010'>",
       "<img class='three' src='../graphs/Singapore1-F.png' alt='graph of Singapore climate in 1981-2010'>"
+    ]
+  },
+
+  "Aga2": {
+    "media": [
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/LftACW7H1xc?si=QOyVqUzisY6KAxr4' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
+      "<a title='EgorovaSvetlana, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Bahamian_Pineyards_Lucayan_National_Park_of_the_Bahamas_in_Grand_Bahama.jpg'><img alt='Bahamian Pineyards Grand Bahama Lucayan National Park of the Bahamas' src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Bahamian_Pineyards_Lucayan_National_Park_of_the_Bahamas_in_Grand_Bahama.jpg/3840px-Bahamian_Pineyards_Lucayan_National_Park_of_the_Bahamas_in_Grand_Bahama.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Bahamian_Pineyards_Lucayan_National_Park_of_the_Bahamas_in_Grand_Bahama.jpg'>EgorovaSvetlana</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<img class='three' src='../graphs/KeyWest1-F.png' alt='graph of Key West climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Port-au-Prince1-F.png' alt='graph of Port-au-Prince climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Accra1-F.png' alt='graph of Accra climate in 1981-2010'>"
     ]
   },
 

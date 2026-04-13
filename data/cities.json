@@ -575,13 +575,15 @@
       "Guadalajara, Mexico",
       "Kinshasa, Democratic Republic of the Congo",
       "Monrovia, Liberia",
+      "Mwanza, Tanzania",
       "Nampula, Mozambique",
       "Saint-Denis, Réunion, France",
       "Saint-Leu, Réunion, France",
       "San Salvador, El Salvador"
     ],
     "4": [
-      "Huambo, Angola"
+      "Huambo, Angola",
+      "Mwanza, Tanzania"
     ]
   },
   "Aha2": {
@@ -2442,7 +2444,8 @@
       "San Salvador, El Salvador"
     ],
     "2": [
-      "Brasília, Brasil"
+      "Brasília, Brasil",
+      "Mwanza, Tanzania"
     ],
     "3": [],
     "4": [
@@ -3591,7 +3594,8 @@
   },
   "Aga1": {
     "1": [
-      "Caracas, Venezuela"
+      "Caracas, Venezuela",
+      "Mwanza, Tanzania"
     ],
     "2": [
       "Caracas, Venezuela"
