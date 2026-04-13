@@ -149,10 +149,12 @@
     ],
     "2": [
       "Luanda, Angola",
+      "Makindu, Kenya",
       "Mossoró, Brazil",
       "Tuxtla Gutiérrez, Mexico"
     ],
     "3": [
+      "Makindu, Kenya",
       "Maputo, Mozambique"
     ],
     "4": [
@@ -584,6 +586,7 @@
     ],
     "4": [
       "Huambo, Angola",
+      "Makindu, Kenya",
       "Mwanza, Tanzania"
     ]
   },
@@ -3009,12 +3012,12 @@
     "3": [
       "Honolulu, Hawaii, United States",
       "La Perouse Pinnacle, Hawaii, United States",
-      "Lānaʻi City, Hawaii, United States"
+      "Lāna'i City, Hawaii, United States"
     ],
     "4": [
       "Caracas, Venezuela",
       "Gqeberha, South Africa",
-      "Lānaʻi City, Hawaii, United States"
+      "Lāna'i City, Hawaii, United States"
     ]
   },
   "Asz1": {
@@ -3565,7 +3568,8 @@
       "Mizque, Bolivia",
       "Pachuca, Mexico",
       "San Luis Potosí, Mexico",
-      "Sombrerete, Mexico"
+      "Sombrerete, Mexico",
+      "Tarija, Bolivia"
     ],
     "4": [
       "Pachuca, Mexico"
@@ -4611,10 +4615,10 @@
   },
   "Asa1": {
     "1": [
-      "Lānaʻi City, Hawaii, United States"
+      "Lāna'i City, Hawaii, United States"
     ],
     "2": [
-      "Lānaʻi City, Hawaii, United States"
+      "Lāna'i City, Hawaii, United States"
     ],
     "3": [],
     "4": [
@@ -4624,10 +4628,12 @@
   "Bvb2": {
     "1": [
       "Mizque, Bolivia",
-      "Pachuca, Mexico"
+      "Pachuca, Mexico",
+      "Tarija, Bolivia"
     ],
     "2": [
-      "Pachuca, Mexico"
+      "Pachuca, Mexico",
+      "Tarija, Bolivia"
     ],
     "3": [
       "Oruro, Bolivia"
@@ -4644,6 +4650,16 @@
     "3": [],
     "4": [
       "Arequipa, Peru"
+    ]
+  },
+  "Ava1": {
+    "1": [
+      "Makindu, Kenya"
+    ],
+    "2": [],
+    "3": [],
+    "4": [
+      "Tarija, Bolivia"
     ]
   }
 }
