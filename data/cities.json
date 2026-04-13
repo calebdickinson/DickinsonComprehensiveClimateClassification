@@ -177,6 +177,7 @@
       "Tuxtla Gutiérrez, Mexico"
     ],
     "4": [
+      "Bulawayo, Zimbabwe",
       "Luanda, Angola",
       "Lusaka, Zambia",
       "Maputo, Mozambique",
@@ -3009,7 +3010,8 @@
       "La Perouse Pinnacle, Hawaii, United States"
     ],
     "4": [
-      "Caracas, Venezuela"
+      "Caracas, Venezuela",
+      "Gqeberha, South Africa"
     ]
   },
   "Asz1": {
@@ -3461,18 +3463,25 @@
     ],
     "3": [
       "Alpine, Texas, United States",
+      "Bulawayo, Zimbabwe",
       "Cuauhtémoc, Mexico",
+      "Durango, Mexico",
       "Gaborone, Botswana",
       "Harare, Zimbabwe",
       "Lusaka, Zambia",
       "Nogales, Mexico",
+      "Saltillo, Mexico",
       "Welkom, South Africa"
     ],
     "4": [
       "Cuauhtémoc, Mexico",
+      "Durango, Mexico",
       "Harare, Zimbabwe",
       "Maseru, Lesotho",
+      "Matehuala, Mexico",
       "Mexico City, Mexico",
+      "Saltillo, Mexico",
+      "San Luis Potosí, Mexico",
       "Sombrerete, Mexico",
       "Welkom, South Africa"
     ]
@@ -3530,9 +3539,18 @@
     ]
   },
   "Bva1": {
-    "1": [],
+    "1": [
+      "Bulawayo, Zimbabwe",
+      "Durango, Mexico",
+      "Saltillo, Mexico",
+      "San Luis Potosí, Mexico"
+    ],
     "2": [
+      "Bulawayo, Zimbabwe",
+      "Durango, Mexico",
       "Mizque, Bolivia",
+      "Saltillo, Mexico",
+      "San Luis Potosí, Mexico",
       "Sombrerete, Mexico"
     ],
     "3": [
@@ -3540,6 +3558,7 @@
       "Mexico City, Mexico",
       "Mizque, Bolivia",
       "Pachuca, Mexico",
+      "San Luis Potosí, Mexico",
       "Sombrerete, Mexico"
     ],
     "4": [
@@ -3554,7 +3573,9 @@
     "2": [
       "Valencia, Spain"
     ],
-    "3": [],
+    "3": [
+      "Matehuala, Mexico"
+    ],
     "4": [
       "Melbourne, Australia"
     ]
@@ -4553,9 +4574,16 @@
     "4": []
   },
   "Bsa1": {
-    "1": [],
-    "2": [],
+    "1": [
+      "Gqeberha, South Africa",
+      "Matehuala, Mexico"
+    ],
+    "2": [
+      "Gqeberha, South Africa",
+      "Matehuala, Mexico"
+    ],
     "3": [
+      "Gqeberha, South Africa",
       "Huánuco, Peru"
     ],
     "4": [
