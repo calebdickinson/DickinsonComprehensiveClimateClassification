@@ -1636,6 +1636,14 @@
     ]
   },
 
+  "Bsa1": {
+    "media": [
+      "<img class='three' src='../graphs/Gqeberha1-F.png' alt='graph of Gqeberha climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Matehuala1-F.png' alt='graph of Matehuala climate in 1981-2010'>",
+      "<img class='three' src='../graphs/LadyBarron4-F.png' alt='graph of Lady Barron climate in 2071-2100'>"
+    ]
+  },
+
   "Bda1": {
     "media": [
       "<a title='SkyPixels, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Lutheran_Church_Luderotz.jpg'><img alt='Lutheran Church Luderotz' src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Lutheran_Church_Luderotz.jpg/3840px-Lutheran_Church_Luderotz.jpg'></a>",
@@ -1659,6 +1667,22 @@
       "<img class='three' src='../graphs/Lisbon1-F.png' alt='graph of Lisbon climate in 1981-2010'>",
       "<img class='three' src='../graphs/Casablanca1-F.png' alt='graph of Casablanca climate in 1981-2010'>",
       "<img class='three' src='../graphs/LosAngeles1-F.png' alt='graph of Los Angeles climate in 1981-2010'>"
+    ]
+  },
+
+  "Bwa1": {
+    "media": [
+      "<img class='three' src='../graphs/BeloHorizonte1-F.png' alt='graph of Belo Horizonte climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Guadalajara1-F.png' alt='graph of Guadalajara climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Lijiang4-F.png' alt='graph of Lijiang climate in 2071-2100'>"
+    ]
+  },
+
+  "Bva1": {
+    "media": [
+      "<img class='three' src='../graphs/SanLuisPotosí,1-F.png' alt='graph of San Luis Potosí, climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Bulawayo1-F.png' alt='graph of Bulawayo climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Pachuca4-F.png' alt='graph of Pachuca climate in 2071-2100'>"
     ]
   },
 
@@ -1692,6 +1716,23 @@
     ]
   },
 
+  "Bsa2": {
+    "media": [
+      "<img class='three' src='../graphs/Monterrey1-F.png' alt='graph of Monterrey, climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Valencia1-F.png' alt='graph of Valencia climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Melbourne4-F.png' alt='graph of Melbourne climate in 2071-2100'>"
+    ]
+  },
+
+
+  "Bda2": {
+    "media": [
+      "<img class='three' src='../graphs/Cairo1-F.png' alt='graph of Cairo, climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Alexandria1-F.png' alt='graph of Alexandria climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Antofagasta4-F.png' alt='graph of Antofagasta climate in 2071-2100'>"
+    ]
+  },
+
   "Bma2": {
     "media": [
       "<a title='Qwerty510 at English Wikipedia, Public domain, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:RiversideCA_VictoriaAve.jpg'><img alt='RiversideCA VictoriaAve' src='https://upload.wikimedia.org/wikipedia/commons/5/52/RiversideCA_VictoriaAve.jpg'></a>",
@@ -1706,6 +1747,22 @@
       "<img class='three' src='../graphs/Vancouver4-F.png' alt='graph of Vancouver climate in 2071-2100'>",
       "<img class='three' src='../graphs/Seattle4-F.png' alt='graph of Seattle climate in 2071-2100'>",
       "<img class='three' src='../graphs/Portland4-F.png' alt='graph of Portland climate in 2071-2100'>"
+    ]
+  },
+
+  "Bwa2": {
+    "media": [
+      "<img class='three' src='../graphs/Dhaka1-F.png' alt='graph of Dhaka, climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Guangzhou1-F.png' alt='graph of Guangzhou climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Johannesburg4-F.png' alt='graph of Johannesburg climate in 2071-2100'>"
+    ]
+  },
+
+  "Bva2": {
+    "media": [
+      "<img class='three' src='../graphs/Gaborone1-F.png' alt='graph of Gaborone, climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Chihuahua1-F.png' alt='graph of Chihuahua climate in 1981-2010'>",
+      "<img class='three' src='../graphs/MexicoCity4-F.png' alt='graph of Mexico City climate in 2071-2100'>"
     ]
   },
 
@@ -1731,6 +1788,22 @@
     ]
   },
 
+  "Bsz1": {
+    "media": [
+      "<img class='three' src='../graphs/Peshawar1-F.png' alt='graph of Peshawar climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Reynosa1-F.png' alt='graph of Reynosa climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Szeged4-F.png' alt='graph of Szeged climate in 2071-2100'>"
+    ]
+  },
+
+  "Bdz1": {
+    "media": [
+      "<img class='three' src='../graphs/Karachi1-F.png' alt='graph of Karachi climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Tucson1-F.png' alt='graph of Tucson climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Madrid4-F.png' alt='graph of Madrid climate in 2071-2100'>"
+    ]
+  },
+
   "Bmz1": {
     "media": [
       "<a title='Adeeb Atwan, CC BY 3.0 &lt;https://creativecommons.org/licenses/by/3.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Mosque_-_panoramio_(24).jpg'><img alt='Mosque - panoramio (24)' src='https://upload.wikimedia.org/wikipedia/commons/7/78/Mosque_-_panoramio_%2824%29.jpg'></a>",
@@ -1743,6 +1816,22 @@
       "<img class='three' src='../graphs/Rome4-F.png' alt='graph of Rome climate in 2071-2100'>",
       "<img class='three' src='../graphs/LosAngeles4-F.png' alt='graph of Los Angeles climate in 2071-2100'>",
       "<img class='three' src='../graphs/Medford4-F.png' alt='graph of Medford climate in 2071-2100'>"
+    ]
+  },
+
+  "Bwz1": {
+    "media": [
+      "<img class='three' src='../graphs/Kolkata1-F.png' alt='graph of Kolkata climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Ahmedabad1-F.png' alt='graph of Ahmedabad climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Chengdu4-F.png' alt='graph of Chengdu climate in 2071-2100'>"
+    ]
+  },
+
+  "Bvz1": {
+    "media": [
+      "<img class='three' src='../graphs/Delhi1-F.png' alt='graph of Rome climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Lahore1-F.png' alt='graph of Lahore climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Chihuahua4-F.png' alt='graph of Chihuahua climate in 2071-2100'>"
     ]
   },
 
@@ -1975,6 +2064,22 @@
     ]
   },
 
+  "Asa2": {
+    "media": [
+      "<img class='three' src='../graphs/Mogadishu1-F.png' alt='graph of Mogadishu climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Maracaibo1-F.png' alt='graph of Maracaibo climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Caracas4-F.png' alt='graph of Caracas climate in 2071-2100'>"
+    ]
+  },
+
+  "Ada2": {
+    "media": [
+      "<img class='three' src='../graphs/Dakar1-F.png' alt='graph of Dakar climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Nouakchott1-F.png' alt='graph of Nouakchott climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Lima4-F.png' alt='graph of Lima climate in 2071-2100'>"
+    ]
+  },
+
   "Ama2": {
     "media": [
       "<a title='U.S. Fish &amp; Wildlife Service - Pacific Regions, CC BY 2.0 &lt;https://creativecommons.org/licenses/by/2.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Great_frigatebirds_and_red-footed_boobies_at_Tern_Island.jpg'><img alt='Great frigatebirds and red-footed boobies at Tern Island' src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Great_frigatebirds_and_red-footed_boobies_at_Tern_Island.jpg/3840px-Great_frigatebirds_and_red-footed_boobies_at_Tern_Island.jpg'></a>",
@@ -1996,6 +2101,14 @@
       "<img class='three' src='../graphs/Mumbai1-F.png' alt='graph of Mumbai climate in 1981-2010'>",
       "<img class='three' src='../graphs/Darwin1-F.png' alt='graph of Darwin climate in 1981-2010'>",
       "<img class='three' src='../graphs/Huambo4-F.png' alt='graph of Huambo climate in 2071-2100'>"
+    ]
+  },
+
+  "Ava2": {
+    "media": [
+      "<img class='three' src='../graphs/Luanda1-F.png' alt='graph of Luanda climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Mossoró1-F.png' alt='graph of Mossoró climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Mizque4-F.png' alt='graph of Mizque climate in 2071-2100'>"
     ]
   },
 
@@ -2022,11 +2135,43 @@
     ]
   },
 
+  "Asz1": {
+    "media": [
+      "<img class='three' src='../graphs/Erode1-F.png' alt='graph of Erode climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Tirunelveli1-F.png' alt='graph of Tirunelveli climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Mérida4-F.png' alt='graph of Mérida climate in 2071-2100'>"
+    ]
+  },
+
+  "Adz1": {
+    "media": [
+      "<img class='three' src='../graphs/Khartoum1-F.png' alt='graph of Khartoum climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Jeddah1-F.png' alt='graph of Jeddah climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Dakar4-F.png' alt='graph of Dakar climate in 2071-2100'>"
+    ]
+  },
+
   "Amz1": {
     "media": [
       "<p>No images or videos are available for this climate.</p>",
       "<br>",
       "<img src='../graphs/LaPerousePinnacle4-F.png' alt='graph of La Perouse Pinnacle climate in 2071-2100'>"
+    ]
+  },
+
+  "Awz1": {
+    "media": [
+      "<img class='three' src='../graphs/Chennai1-F.png' alt='graph of Chennai climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Bangkok1-F.png' alt='graph of Bangkok climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Dhaka4-F.png' alt='graph of Dhaka climate in 2071-2100'>"
+    ]
+  },
+
+  "Avz1": {
+    "media": [
+      "<img class='three' src='../graphs/Ouagadougou1-F.png' alt='graph of Ouagadougou climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Bamako1-F.png' alt='graph of Bamako climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Luanda4-F.png' alt='graph of Luanda climate in 2071-2100'>"
     ]
   },
 
