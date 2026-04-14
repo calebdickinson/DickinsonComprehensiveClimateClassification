@@ -1790,14 +1790,22 @@
 
   "Bsz1": {
     "media": [
-      "<img class='three' src='../graphs/Peshawar1-F.png' alt='graph of Peshawar climate in 1981-2010'>",
+      "<a title='Allymeer, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Scenery_of_Peshawar.jpg'><img alt='Scenery of Peshawar' src='https://upload.wikimedia.org/wikipedia/commons/9/91/Scenery_of_Peshawar.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Scenery_of_Peshawar.jpg'>Allymeer</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
       "<img class='three' src='../graphs/Reynosa1-F.png' alt='graph of Reynosa climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Peshawar1-F.png' alt='graph of Peshawar climate in 1981-2010'>",
       "<img class='three' src='../graphs/Szeged4-F.png' alt='graph of Szeged climate in 2071-2100'>"
     ]
   },
 
   "Bdz1": {
     "media": [
+      "<a title='WClarke, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Carnegiea_gigantea_in_Saguaro_National_Park_near_Tucson,_Arizona_during_November_(58).jpg'><img alt='Carnegiea gigantea in Saguaro National Park near Tucson, Arizona during November (58)' src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Carnegiea_gigantea_in_Saguaro_National_Park_near_Tucson%2C_Arizona_during_November_%2858%29.jpg/1920px-Carnegiea_gigantea_in_Saguaro_National_Park_near_Tucson%2C_Arizona_during_November_%2858%29.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Carnegiea_gigantea_in_Saguaro_National_Park_near_Tucson,_Arizona_during_November_(58).jpg'>WClarke</a>, <a href='https://creativecommons.org/licenses/by-sa/3.0'>CC BY-SA 3.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/Ypr8JqHomw4?si=puOm0NmeEB9uTbgz' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
       "<img class='three' src='../graphs/Karachi1-F.png' alt='graph of Karachi climate in 1981-2010'>",
       "<img class='three' src='../graphs/Tucson1-F.png' alt='graph of Tucson climate in 1981-2010'>",
       "<img class='three' src='../graphs/Madrid4-F.png' alt='graph of Madrid climate in 2071-2100'>"
@@ -1829,8 +1837,13 @@
 
   "Bvz1": {
     "media": [
-      "<img class='three' src='../graphs/Delhi1-F.png' alt='graph of Rome climate in 1981-2010'>",
+      "<a title='Srshiva2, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Amber_palace,_Jaipur.jpg'><img alt='The Amer Fort (aka Amber Fort) on a hill over Maota Lake in Rajasthan, India.' src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Amber_palace%2C_Jaipur.jpg/3840px-Amber_palace%2C_Jaipur.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Amber_palace,_Jaipur.jpg'>Srshiva2</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/79dnJ7dGi4c?si=ZjmWhRYcr2YMLxS9' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
       "<img class='three' src='../graphs/Lahore1-F.png' alt='graph of Lahore climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Delhi1-F.png' alt='graph of Rome climate in 1981-2010'>",
       "<img class='three' src='../graphs/Chihuahua4-F.png' alt='graph of Chihuahua climate in 2071-2100'>"
     ]
   },
@@ -2147,7 +2160,7 @@
     "media": [
       "<img class='three' src='../graphs/Khartoum1-F.png' alt='graph of Khartoum climate in 1981-2010'>",
       "<img class='three' src='../graphs/Jeddah1-F.png' alt='graph of Jeddah climate in 1981-2010'>",
-      "<img class='three' src='../graphs/Dakar4-F.png' alt='graph of Dakar climate in 2071-2100'>"
+      "<img class='three' src='../graphs/Nouakchott4-F.png' alt='graph of Nouakchott climate in 2071-2100'>"
     ]
   },
 
