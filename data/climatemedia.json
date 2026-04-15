@@ -1724,11 +1724,15 @@
     ]
   },
 
-
   "Bda2": {
     "media": [
+      "<a title='Ricardo Liberato, CC BY-SA 2.0 &lt;https://creativecommons.org/licenses/by-sa/2.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:All_Gizah_Pyramids.jpg'><img alt='The Pyramids of Gizah, Egypt' src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/All_Gizah_Pyramids.jpg/3840px-All_Gizah_Pyramids.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:All_Gizah_Pyramids.jpg'>Ricardo Liberato</a>, <a href='https://creativecommons.org/licenses/by-sa/2.0'>CC BY-SA 2.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/MCXnKgSr1N0?si=755_QeEUPYAjsnv3' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
       "<img class='three' src='../graphs/Cairo1-F.png' alt='graph of Cairo, climate in 1981-2010'>",
-      "<img class='three' src='../graphs/Alexandria1-F.png' alt='graph of Alexandria climate in 1981-2010'>",
+      "<img class='three' src='../graphs/CooberPedy1-F.png' alt='graph of Coober Pedy climate in 1981-2010'>",
       "<img class='three' src='../graphs/Antofagasta4-F.png' alt='graph of Antofagasta climate in 2071-2100'>"
     ]
   },
@@ -1806,8 +1810,8 @@
       "<br><br>",
       "<iframe width='1280' height='720' src='https://www.youtube.com/embed/Ypr8JqHomw4?si=puOm0NmeEB9uTbgz' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
       "<br><br>",
-      "<img class='three' src='../graphs/Karachi1-F.png' alt='graph of Karachi climate in 1981-2010'>",
       "<img class='three' src='../graphs/Tucson1-F.png' alt='graph of Tucson climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Aswan1-F.png' alt='graph of Aswan climate in 1981-2010'>",
       "<img class='three' src='../graphs/Madrid4-F.png' alt='graph of Madrid climate in 2071-2100'>"
     ]
   },
