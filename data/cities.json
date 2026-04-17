@@ -2270,11 +2270,13 @@
   },
   "Bga1": {
     "1": [
-      "Nairobi, Kenya"
+      "Nairobi, Kenya",
+      "Toowoomba, Australia"
     ],
     "2": [
       "Melbourne, Australia",
-      "Nairobi, Kenya"
+      "Nairobi, Kenya",
+      "Toowoomba, Australia"
     ],
     "3": [
       "Hobart, Tasmania, Australia",
@@ -2752,13 +2754,15 @@
     "3": [
       "Abilene, Texas, United States",
       "Carlsbad, New Mexico, United States",
-      "Laredo, Texas, United States"
+      "Laredo, Texas, United States",
+      "Roma, Australia"
     ],
     "4": [
       "Amarillo, Texas, United States",
       "Barcelona, Spain",
       "Carlsbad, New Mexico, United States",
       "Lubbock, Texas, United States",
+      "Roma, Australia",
       "Szeged, Hungary"
     ]
   },
@@ -3015,12 +3019,14 @@
     ],
     "3": [
       "Honolulu, Hawaii, United States",
+      "Jamestown, Saint Helena",
       "La Perouse Pinnacle, Hawaii, United States",
       "Lāna'i City, Hawaii, United States"
     ],
     "4": [
       "Caracas, Venezuela",
       "Gqeberha, South Africa",
+      "Jamestown, Saint Helena",
       "Lāna'i City, Hawaii, United States"
     ]
   },
@@ -3340,10 +3346,12 @@
     "3": [
       "Barcelona, Spain",
       "Brisbane, Australia",
-      "Bundaberg, Australia"
+      "Bundaberg, Australia",
+      "Toowoomba, Australia"
     ],
     "4": [
-      "Santa Rosa, Argentina"
+      "Santa Rosa, Argentina",
+      "Toowoomba, Australia"
     ]
   },
   "Ddz1": {
@@ -3582,9 +3590,11 @@
   "Bsa2": {
     "1": [
       "Monterrey, Mexico",
+      "Roma, Australia",
       "Valencia, Spain"
     ],
     "2": [
+      "Roma, Australia",
       "Valencia, Spain"
     ],
     "3": [
@@ -4593,6 +4603,7 @@
   "Bsa1": {
     "1": [
       "Gqeberha, South Africa",
+      "Jamestown, Saint Helena",
       "Matehuala, Mexico"
     ],
     "2": [
@@ -4622,6 +4633,7 @@
       "Lāna'i City, Hawaii, United States"
     ],
     "2": [
+      "Jamestown, Saint Helena",
       "Lāna'i City, Hawaii, United States"
     ],
     "3": [],
