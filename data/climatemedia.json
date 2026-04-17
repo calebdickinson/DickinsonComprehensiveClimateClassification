@@ -1768,8 +1768,18 @@
 
   "Bwa2": {
     "media": [
-      "<img class='three' src='../graphs/Dhaka1-F.png' alt='graph of Dhaka, climate in 1981-2010'>",
+      "<p>Bhawal National Park in Bangladesh during the wet season</p>",
+      "<a title='Shimul Mohammad, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Into_the_green,_Bhawal_National_Park.jpg'><img alt='Into the green, Bhawal National Park' src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Into_the_green%2C_Bhawal_National_Park.jpg/3840px-Into_the_green%2C_Bhawal_National_Park.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Into_the_green,_Bhawal_National_Park.jpg'>Shimul Mohammad</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<p>Bhawal National Park in Bangladesh during the dry season</p>",
+      "<a title='Khalid.hasan.dups, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Bhawal_National_Park.jpg'><img alt='Bhawal National Park' src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Bhawal_National_Park.jpg/3840px-Bhawal_National_Park.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Bhawal_National_Park.jpg'>Khalid.hasan.dups</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<iframe width='1280' height='720' src='https://www.youtube.com/embed/5hjhy_J221k?si=64X-E73aXoEbCeds' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+      "<br><br>",
       "<img class='three' src='../graphs/Guangzhou1-F.png' alt='graph of Guangzhou climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Dhaka1-F.png' alt='graph of Dhaka, climate in 1981-2010'>",
       "<img class='three' src='../graphs/Johannesburg4-F.png' alt='graph of Johannesburg climate in 2071-2100'>"
     ]
   },
