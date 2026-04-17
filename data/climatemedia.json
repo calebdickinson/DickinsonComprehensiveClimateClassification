@@ -2219,16 +2219,16 @@
       "<a title='Rahuljeswin, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Beautiful_Tirunelveli_under_rain_cloud_shadow_on_19-9-2015.JPG'><img alt='Beautiful Tirunelveli under rain cloud shadow on 19-9-2015' src='https://upload.wikimedia.org/wikipedia/commons/4/44/Beautiful_Tirunelveli_under_rain_cloud_shadow_on_19-9-2015.JPG'></a>",
       "<a href='https://commons.wikimedia.org/wiki/File:Beautiful_Tirunelveli_under_rain_cloud_shadow_on_19-9-2015.JPG'>Rahuljeswin</a>, <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0</a>, via Wikimedia Commons",
       "<br><br>",
-      "<img class='three' src='../graphs/Erode1-F.png' alt='graph of Erode climate in 1981-2010'>",
       "<img class='three' src='../graphs/Tirunelveli1-F.png' alt='graph of Tirunelveli climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Erode1-F.png' alt='graph of Erode climate in 1981-2010'>",
       "<img class='three' src='../graphs/Mérida4-F.png' alt='graph of Mérida climate in 2071-2100'>"
     ]
   },
 
   "Adz1": {
     "media": [
-      "<img class='three' src='../graphs/Khartoum1-F.png' alt='graph of Khartoum climate in 1981-2010'>",
       "<img class='three' src='../graphs/Jeddah1-F.png' alt='graph of Jeddah climate in 1981-2010'>",
+      "<img class='three' src='../graphs/Khartoum1-F.png' alt='graph of Khartoum climate in 1981-2010'>",
       "<img class='three' src='../graphs/Nouakchott4-F.png' alt='graph of Nouakchott climate in 2071-2100'>"
     ]
   },
@@ -2243,6 +2243,12 @@
 
   "Awz1": {
     "media": [
+      "<a title='David Sim, CC BY 2.0 &lt;https://creativecommons.org/licenses/by/2.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Tree_roots_and_temple,_Ta_Prohm,_Angkor,_Cambodia.jpg'><img alt='Tree roots and temple, Ta Prohm, Angkor, Cambodia' src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Tree_roots_and_temple%2C_Ta_Prohm%2C_Angkor%2C_Cambodia.jpg/960px-Tree_roots_and_temple%2C_Ta_Prohm%2C_Angkor%2C_Cambodia.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Tree_roots_and_temple,_Ta_Prohm,_Angkor,_Cambodia.jpg'>David Sim</a>, <a href='https://creativecommons.org/licenses/by/2.0'>CC BY 2.0</a>, via Wikimedia Commons",
+      "<br><br>",
+      "<a title='joinai, CC BY 3.0 &lt;https://creativecommons.org/licenses/by/3.0&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Tha_Kham,_Bang_Khun_Thian,_Bangkok,_Thailand_-_panoramio_(1).jpg'><img alt='Tha Kham, Bang Khun Thian, Bangkok, Thailand - panoramio (1)' src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Tha_Kham%2C_Bang_Khun_Thian%2C_Bangkok%2C_Thailand_-_panoramio_%281%29.jpg/3840px-Tha_Kham%2C_Bang_Khun_Thian%2C_Bangkok%2C_Thailand_-_panoramio_%281%29.jpg'></a>",
+      "<a href='https://commons.wikimedia.org/wiki/File:Tha_Kham,_Bang_Khun_Thian,_Bangkok,_Thailand_-_panoramio_(1).jpg'>joinai</a>, <a href='https://creativecommons.org/licenses/by/3.0'>CC BY 3.0</a>, via Wikimedia Commons",
+      "<br><br>",
       "<img class='three' src='../graphs/Chennai1-F.png' alt='graph of Chennai climate in 1981-2010'>",
       "<img class='three' src='../graphs/Bangkok1-F.png' alt='graph of Bangkok climate in 1981-2010'>",
       "<img class='three' src='../graphs/Dhaka4-F.png' alt='graph of Dhaka climate in 2071-2100'>"
