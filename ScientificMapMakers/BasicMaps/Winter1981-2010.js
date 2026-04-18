@@ -63,8 +63,8 @@ var codeColorMap = {
    8: "#C71585", // A: Equatorial
    7: "#FF0000", // B: Tropical
    6: "#FFA500", // C: Subtropical
-   5: "#88FF00", // D: Temperate
-   4: "#008800", // E: Continental
+   5: "#448800", // D: Temperate
+   4: "#004400", // E: Continental
    3: "#0000FF", // F: Subarctic
    2: "#FF10F0", // G: Arctic
    1: "#000000"  // Y: Superarctic
