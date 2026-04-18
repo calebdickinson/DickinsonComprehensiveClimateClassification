@@ -1293,7 +1293,7 @@ function runForPeriod(NORMAL_PERIOD, pt, LAT, elevation) {
     // AI / PET values
     p_pet: ee.Algorithms.If(
       petAnnAtPoint.gt(0),
-      aiAtPoint.multiply(100).round().divide(100).format('%.2f'),
+      aiAtPoint.multiply(1000).round().divide(1000).format('%.2f'),
       'N/A'
     ),
   

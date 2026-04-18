@@ -225,7 +225,9 @@
     "media": [
       "<p>No images or videos are available for this climate.</p>",
       "<br>",
-      "<img src='../graphs/4/Kustur4-F.png' alt='graph of Kustur climate in 2071-2100'>"
+      "<img class='three' src='../graphs/3/Tynda3-F.png' alt='graph of Tynda climate in 2071-2100'>",
+      "<img class='three' src='../graphs/3/Chita3-F.png' alt='graph of Chita climate in 2071-2100'>",
+      "<img class='three' src='../graphs/4/Kustur4-F.png' alt='graph of Kustur climate in 2071-2100'>"
     ]
   },
 
