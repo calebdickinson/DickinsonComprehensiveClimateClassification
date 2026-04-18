@@ -186,7 +186,7 @@ var codeColorMap = {
   2: "#FFA500", // Semiarid
   3: "#FFFF00", // Mediterranean
   4: "#FF00FF", // Monsoon
-  5: "#00FF00", // Semihumid
+  5: "#88FF00", // Semihumid
   6: "#006600", // Humid
   7: "#0000FF", // cold (hidden)
   8: "#008888", // ocean (hidden)
