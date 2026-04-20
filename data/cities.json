@@ -1200,7 +1200,7 @@
       "Anchorage, Alaska, United States",
       "Arkhangelsk, Russia",
       "Chibougamau, Québec, Canada",
-      "Happy Valley–Goose Bay, Newfoundland and Labrador, Canada",
+      "Happy Valley-Goose Bay, Newfoundland and Labrador, Canada",
       "Helsinki, Finland",
       "Juneau, Alaska, United States",
       "Minsk, Belarus",
@@ -1433,6 +1433,29 @@
       "Volgograd, Russia"
     ]
   },
+  "Eha1": {
+    "1": [
+      "Brainerd, Minnesota",
+      "Duluth, Minnesota, United States",
+      "Ottawa, Ontario, Canada"
+    ],
+    "2": [
+      "Fairbanks, Alaska, United States",
+      "Rouyn-Noranda, Québec, Canada",
+      "Thompson, Manitoba, Canada",
+      "Tomsk, Russia",
+      "Yekaterinburg, Russia"
+    ],
+    "3": [
+      "Attawapiskat, Ontario, Canada",
+      "Fairbanks, Alaska, United States",
+      "Labrador City, Newfoundland and Labrador, Canada",
+      "Vorkuta, Russia"
+    ],
+    "4": [
+      "Rankin Inlet, Nunavut, Canada"
+    ]
+  },
   "Dha2": {
     "1": [
       "Kansas City, Missouri, United States",
@@ -1473,7 +1496,7 @@
     "4": [
       "Chibougamau, Québec, Canada",
       "Fairbanks, Alaska, United States",
-      "Happy Valley–Goose Bay, Newfoundland and Labrador, Canada",
+      "Happy Valley-Goose Bay, Newfoundland and Labrador, Canada",
       "Rouyn-Noranda, Québec, Canada"
     ]
   },
@@ -1564,62 +1587,6 @@
       "Syracuse, New York, United States",
       "Tokyo, Japan",
       "Toronto, Ontario, Canada"
-    ]
-  },
-  "Eha1": {
-    "1": [
-      "Brainerd, Minnesota",
-      "Duluth, Minnesota, United States",
-      "Ottawa, Ontario, Canada"
-    ],
-    "2": [
-      "Fairbanks, Alaska, United States",
-      "Rouyn-Noranda, Québec, Canada",
-      "Thompson, Manitoba, Canada",
-      "Tomsk, Russia",
-      "Yekaterinburg, Russia"
-    ],
-    "3": [
-      "Attawapiskat, Ontario, Canada",
-      "Fairbanks, Alaska, United States",
-      "Labrador City, Newfoundland and Labrador, Canada",
-      "Vorkuta, Russia"
-    ],
-    "4": [
-      "Rankin Inlet, Nunavut, Canada"
-    ]
-  },
-  "Ehb2": {
-    "1": [
-      "Arkhangelsk, Russia",
-      "Bathurst, New Brunswick, Canada",
-      "Chibougamau, Québec, Canada",
-      "Fairbanks, Alaska, United States",
-      "Happy Valley–Goose Bay, Newfoundland and Labrador, Canada",
-      "Québec City, Québec, Canada",
-      "Rouyn-Noranda, Québec, Canada",
-      "Sudbury, Ontario, Canada",
-      "Thunder Bay, Ontario, Canada",
-      "Tomsk, Russia",
-      "Yekaterinburg, Russia"
-    ],
-    "2": [
-      "Attawapiskat, Ontario, Canada",
-      "Bethel, Alaska, United States",
-      "Chibougamau, Québec, Canada",
-      "Happy Valley–Goose Bay, Newfoundland and Labrador, Canada",
-      "Labrador City, Newfoundland and Labrador, Canada",
-      "Vorkuta, Russia"
-    ],
-    "3": [
-      "Churchill, Manitoba, Canada",
-      "Poker Creek-Little Gold Creek Border Crossing, Alaska/Yukon",
-      "Rankin Inlet, Nunavut, Canada"
-    ],
-    "4": [
-      "Ilulissat, Greenland",
-      "Naujaat, Nunavut, Canada",
-      "Tiksi, Russia"
     ]
   },
   "Esa1": {
@@ -1745,6 +1712,45 @@
       "Valdez, Alaska, United States"
     ]
   },
+  "Esb2": {
+    "1": [
+      "Kokshetau, Kazakhstan",
+      "Ulagan, Russia",
+      "Whitehorse, Yukon, Canada"
+    ],
+    "2": [
+      "Leh, India",
+      "Ulagan, Russia",
+      "Whitehorse, Yukon, Canada"
+    ],
+    "3": [],
+    "4": []
+  },
+  "Ega1": {
+    "1": [
+      "Bismarck, North Dakota, United States",
+      "Fargo, North Dakota, United States"
+    ],
+    "2": [
+      "Chelyabinsk, Russia",
+      "Hay River, Northwest Territories, Canada",
+      "Krasnoyarsk, Russia",
+      "Novosibirsk, Russia",
+      "Omsk, Russia",
+      "Winnipeg, Manitoba, Canada"
+    ],
+    "3": [
+      "Dawson City, Yukon, Canada",
+      "Hay River, Northwest Territories, Canada",
+      "Inuvik, Northwest Territories, Canada",
+      "Thompson, Manitoba, Canada",
+      "Yellowknife, Northwest Territories, Canada"
+    ],
+    "4": [
+      "Baker Lake, Nunavut, Canada",
+      "Chokurdakh, Russia"
+    ]
+  },
   "Dga2": {
     "1": [
       "Hays, Kansas, United States"
@@ -1773,6 +1779,39 @@
       "Inuvik, Northwest Territories, Canada",
       "Thompson, Manitoba, Canada",
       "Yellowknife, Northwest Territories, Canada"
+    ]
+  },
+  "Ehb2": {
+    "1": [
+      "Arkhangelsk, Russia",
+      "Bathurst, New Brunswick, Canada",
+      "Chibougamau, Québec, Canada",
+      "Fairbanks, Alaska, United States",
+      "Happy Valley-Goose Bay, Newfoundland and Labrador, Canada",
+      "Québec City, Québec, Canada",
+      "Rouyn-Noranda, Québec, Canada",
+      "Sudbury, Ontario, Canada",
+      "Thunder Bay, Ontario, Canada",
+      "Tomsk, Russia",
+      "Yekaterinburg, Russia"
+    ],
+    "2": [
+      "Attawapiskat, Ontario, Canada",
+      "Bethel, Alaska, United States",
+      "Chibougamau, Québec, Canada",
+      "Happy Valley-Goose Bay, Newfoundland and Labrador, Canada",
+      "Labrador City, Newfoundland and Labrador, Canada",
+      "Vorkuta, Russia"
+    ],
+    "3": [
+      "Churchill, Manitoba, Canada",
+      "Poker Creek-Little Gold Creek Border Crossing, Alaska/Yukon",
+      "Rankin Inlet, Nunavut, Canada"
+    ],
+    "4": [
+      "Ilulissat, Greenland",
+      "Naujaat, Nunavut, Canada",
+      "Tiksi, Russia"
     ]
   },
   "Cgz1": {
@@ -1886,45 +1925,6 @@
       "Tasiilaq, Greenland",
       "Tórshavn, Faroe Islands",
       "Ísafjörður, Iceland"
-    ]
-  },
-  "Esb2": {
-    "1": [
-      "Kokshetau, Kazakhstan",
-      "Ulagan, Russia",
-      "Whitehorse, Yukon, Canada"
-    ],
-    "2": [
-      "Leh, India",
-      "Ulagan, Russia",
-      "Whitehorse, Yukon, Canada"
-    ],
-    "3": [],
-    "4": []
-  },
-  "Ega1": {
-    "1": [
-      "Bismarck, North Dakota, United States",
-      "Fargo, North Dakota, United States"
-    ],
-    "2": [
-      "Chelyabinsk, Russia",
-      "Hay River, Northwest Territories, Canada",
-      "Krasnoyarsk, Russia",
-      "Novosibirsk, Russia",
-      "Omsk, Russia",
-      "Winnipeg, Manitoba, Canada"
-    ],
-    "3": [
-      "Dawson City, Yukon, Canada",
-      "Hay River, Northwest Territories, Canada",
-      "Inuvik, Northwest Territories, Canada",
-      "Thompson, Manitoba, Canada",
-      "Yellowknife, Northwest Territories, Canada"
-    ],
-    "4": [
-      "Baker Lake, Nunavut, Canada",
-      "Chokurdakh, Russia"
     ]
   },
   "Fb2": {
@@ -2171,32 +2171,6 @@
       "Taethaek-rodongjagu, North Korea"
     ]
   },
-  "Awz2": {
-    "1": [
-      "Nagpur, India"
-    ],
-    "2": [
-      "Nagpur, India"
-    ],
-    "3": [
-      "Ahmedabad, India",
-      "Hyderabad, India",
-      "Jabalpur, India",
-      "Jhalawar, India",
-      "Kota, India",
-      "Nagpur, India"
-    ],
-    "4": [
-      "Ahmedabad, India",
-      "Chennai, India",
-      "Guangzhou, China",
-      "Hanoi, Vietnam",
-      "Hyderabad, India",
-      "Jabalpur, India",
-      "Kano, Nigeria",
-      "Surat, India"
-    ]
-  },
   "Ewa1": {
     "1": [
       "Harbin, China",
@@ -2246,6 +2220,32 @@
       "Khabarovsk, Russia",
       "Liaoyang, China",
       "Shenyang, China"
+    ]
+  },
+  "Awz2": {
+    "1": [
+      "Nagpur, India"
+    ],
+    "2": [
+      "Nagpur, India"
+    ],
+    "3": [
+      "Ahmedabad, India",
+      "Hyderabad, India",
+      "Jabalpur, India",
+      "Jhalawar, India",
+      "Kota, India",
+      "Nagpur, India"
+    ],
+    "4": [
+      "Ahmedabad, India",
+      "Chennai, India",
+      "Guangzhou, China",
+      "Hanoi, Vietnam",
+      "Hyderabad, India",
+      "Jabalpur, India",
+      "Kano, Nigeria",
+      "Surat, India"
     ]
   },
   "Bwz2": {
