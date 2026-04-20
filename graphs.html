@@ -396,7 +396,7 @@
 
     `<br><br>` +
 
-    formatAI(pdata.p_pet_unrounded, pdata.annual_pet_mm);
+    formatAI(pdata.p_pet_unrounded, pdata.annual_pet_mm, pdata.p_pet);
   }
 
   // ============================
@@ -651,7 +651,7 @@
     return 'humid';
   }
   
-  function formatAI(aiValue, petValue) {
+  function formatAI(aiValue, petValue, aiDisplay) {
 
     // if either is N/A → print N/A
     if (aiValue === 'N/A' || petValue === 'N/A') {
@@ -671,7 +671,7 @@
     }
 
     // ----- normal output -----
-    return `UNEP Aridity Index: <b>${ai.toFixed(2)}</b> (${decodeAI(ai)})`;
+    return `UNEP Aridity Index: <b>${aiDisplay}</b> (${decodeAI(ai)})`;
   }
 
   // ======================================================
