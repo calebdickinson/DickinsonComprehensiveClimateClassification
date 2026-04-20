@@ -244,7 +244,7 @@
       }
     ).addTo(map);
 
-    const r = await fetch("data/graphs.json");
+    const r = await fetch("data/graphs.json?v=" + Date.now());
     graphsData = await r.json();
 
     buildMapFromJSON();
