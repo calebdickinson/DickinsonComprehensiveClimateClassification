@@ -80,11 +80,13 @@
       "Adelaide, Australia",
       "Bellingham, Washington, United States",
       "Bilbao, Spain",
+      "Bordeaux, France",
       "Lisbon, Portugal",
       "Lompoc, California, United States",
       "Nanaimo, British Columbia, Canada",
       "Perth, Australia",
       "Portland, Oregon, United States",
+      "Rennes, France",
       "San Diego, California, United States",
       "San Francisco, California, United States",
       "Santiago, Chile",
@@ -1654,6 +1656,7 @@
   "Cha1": {
     "1": [
       "Asheville, North Carolina, United States",
+      "Bordeaux, France",
       "Charleston, West Virginia, United States",
       "Ljubljana, Slovenia",
       "Lyon, France",
@@ -1665,11 +1668,13 @@
     ],
     "2": [
       "Berlin, Germany",
+      "Bordeaux, France",
       "Boston, Massachusetts, United States",
       "Ljubljana, Slovenia",
       "Lyon, France",
       "Mar del Plata, Buenos Aires, Argentina",
       "Paris, France",
+      "Rennes, France",
       "Sarajevo, Bosnia and Herzegovina",
       "Vancouver, British Columbia, Canada",
       "Warsaw, Poland",
@@ -1873,6 +1878,7 @@
       "Puerto Aysén, Chile",
       "Puerto Montt, Chile",
       "Queenstown, New Zealand",
+      "Rennes, France",
       "Valdivia, Chile",
       "Vancouver, British Columbia, Canada",
       "Zürich, Switzerland"
@@ -1975,6 +1981,7 @@
       "Bellingham, Washington, United States",
       "Canterbury, England, United Kingdom",
       "Nanaimo, British Columbia, Canada",
+      "Rennes, France",
       "Seattle, Washington, United States",
       "South Lake Tahoe, California, United States"
     ],
@@ -2467,7 +2474,8 @@
       "Barcelona, Spain",
       "Canberra, Australia",
       "Marseille, France",
-      "Santa Rosa, Argentina"
+      "Santa Rosa, Argentina",
+      "Toulouse, France"
     ],
     "2": [
       "Budapest, Hungary",
@@ -2476,6 +2484,7 @@
       "Prague, Czech Republic",
       "Santa Rosa, Argentina",
       "Sofia, Bulgaria",
+      "Toulouse, France",
       "Vienna, Austria"
     ],
     "3": [
@@ -2509,6 +2518,7 @@
     ],
     "3": [
       "Bishkek, Kyrgyzstan",
+      "Bordeaux, France",
       "Bucharest, Romania",
       "Budapest, Hungary",
       "Donetsk, Ukraine",
@@ -2521,6 +2531,7 @@
       "Prague, Czech Republic",
       "Santa Rosa, Argentina",
       "Sofia, Bulgaria",
+      "Toulouse, France",
       "Vienna, Austria",
       "Warsaw, Poland"
     ],
@@ -2763,7 +2774,8 @@
       "Carlsbad, New Mexico, United States",
       "Lubbock, Texas, United States",
       "Roma, Australia",
-      "Szeged, Hungary"
+      "Szeged, Hungary",
+      "Toulouse, France"
     ]
   },
   "Chz2": {
