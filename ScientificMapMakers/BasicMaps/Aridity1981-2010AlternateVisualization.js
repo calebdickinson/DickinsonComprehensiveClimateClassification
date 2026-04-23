@@ -207,4 +207,5 @@ Map.addLayer(
   true,
   0.8
 );
- 
+
+// Paste extensions here

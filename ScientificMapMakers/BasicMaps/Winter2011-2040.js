@@ -83,3 +83,5 @@ Map.addLayer(
   true,
   0.7
 );
+
+// Paste extensions here
