@@ -2633,6 +2633,7 @@
       "Alert, Nunavut, Canada",
       "Pevek, Russia",
       "Qaanaaq, Greenland",
+      "Resolute, Nunavut, Canada",
       "Ushakovskoye (Wrangel Island), Russia"
     ],
     "4": [
@@ -2699,7 +2700,8 @@
       "Mount Hood summit, Oregon, United States",
       "Pevek, Russia",
       "Qaanaaq, Greenland",
-      "Qaqortoq, Greenland"
+      "Qaqortoq, Greenland",
+      "Resolute, Nunavut, Canada"
     ]
   },
   "Aga2": {
@@ -3966,6 +3968,7 @@
       "Wainwright, Alaska, United States"
     ],
     "2": [
+      "Resolute, Nunavut, Canada",
       "Station Nord, Greenland"
     ],
     "3": [],
@@ -3988,7 +3991,8 @@
   },
   "Gc1": {
     "1": [
-      "Alert, Nunavut, Canada"
+      "Alert, Nunavut, Canada",
+      "Resolute, Nunavut, Canada"
     ],
     "2": [],
     "3": [],
