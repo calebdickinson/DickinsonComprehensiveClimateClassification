@@ -697,4 +697,9 @@ var CITIES = [
   {name: 'Jamestown, Saint Helena', lat: -15.9277, lon: -5.7161},
   {name: 'Toowoomba, Australia', lat: -27.5598, lon: 151.9507},
   {name: 'Roma, Australia', lat: -26.5667, lon: 148.7833},
+  {name: 'Toulouse, France', lat: 43.6047, lon: 1.4442},
+  {name: 'Bordeaux, France', lat: 44.8378, lon: -0.5792},
+  {name: 'Rennes, France', lat: 48.1173, lon: -1.6778},
+  {name: 'Andorra la Vella, Andorra', lat: 42.5063, lon: 1.5218},
+  {name: 'Resolute, Nunavut, Canada', lat: 74.6953, lon: -94.8297},
 ];

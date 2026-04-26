@@ -30,6 +30,8 @@ for coord_key, city_obj in graphs.items():
     if not city:
         continue
 
+    city = city.replace("'", "\\'")  # escape single quotes
+
     lat, lon = [c.strip() for c in coord_key.split(",")]
 
     lines.append(f"  {{name: '{city}', lat: {lat}, lon: {lon}}},")
