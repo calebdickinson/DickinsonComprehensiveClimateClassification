@@ -737,15 +737,6 @@ function runForPeriod(NORMAL_PERIOD, pt, LAT, elevation) {
   // remove the actual climate itself
   bordering = bordering.removeAll(ee.List([koppen]));
   
-  // convert list → printable string
-  var koppenBorderingStr = ee.String(
-    ee.Algorithms.If(
-      bordering.length().gt(0),
-      bordering.join(' '),
-      'none'
-    )
-  );
-  
   // ------------------------------------
   // Subtropical highland override
   // ------------------------------------
@@ -792,6 +783,15 @@ function runForPeriod(NORMAL_PERIOD, pt, LAT, elevation) {
       )
     );
   });
+  
+  // convert list → printable string
+  var koppenBorderingStr = ee.String(
+    ee.Algorithms.If(
+      bordering.length().gt(0),
+      bordering.join(' '),
+      'none'
+    )
+  );
   
   // ====================================
   // Dickinson climate code (POINT)

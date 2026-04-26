@@ -615,18 +615,10 @@ bordering = bordering.distinct();
 // remove the actual climate itself
 bordering = bordering.removeAll(ee.List([koppen]));
 
-// convert list → printable string
-var koppenBorderingStr = ee.String(
-  ee.Algorithms.If(
-    bordering.length().gt(0),
-    bordering.join(' '),
-    'none'
-  )
-);
-
 // ------------------------------------
 // Elevation at point (meters)
 // ------------------------------------
+
 var elevImg = ee.Image('USGS/SRTMGL1_003').rename('elev');
 
 var rawElevation = elevImg.reduceRegion({
@@ -635,14 +627,9 @@ var rawElevation = elevImg.reduceRegion({
   scale: 1000,
   maxPixels: 1e9
 }).get('elev');
-
-// STEP 1 — replace null BEFORE turning into Number
 rawElevation = ee.Algorithms.If(rawElevation, rawElevation, -5000);
-
-// STEP 2 — now it is safe forever
 rawElevation = ee.Number(rawElevation);
 
-// STEP 3 — optional range sanity
 var elevation = ee.Number(
   ee.Algorithms.If(
     rawElevation.gte(-500).and(rawElevation.lte(9000)),
@@ -654,10 +641,8 @@ var elevation = ee.Number(
 // ------------------------------------
 // Subtropical highland override
 // ------------------------------------
-
 var isHighland = elevation.gte(1500);
 
-// ONLY the climates you currently use
 var highlandEligible = ee.List([
   'Cfb',
   'Cfc',
@@ -668,7 +653,6 @@ var highlandEligible = ee.List([
 // function → is this code eligible?
 function eligibleForHighland(code) {
   code = ee.String(code);
-
   return ee.Number(
     highlandEligible
       .map(function(x){ return ee.String(x).compareTo(code).eq(0); })
@@ -688,7 +672,6 @@ koppen = ee.String(
 // ---- bordering classifications ----
 bordering = bordering.map(function(code) {
   code = ee.String(code);
-
   return ee.String(
     ee.Algorithms.If(
       isHighland.and(eligibleForHighland(code)),
@@ -697,6 +680,15 @@ bordering = bordering.map(function(code) {
     )
   );
 });
+
+// convert list → printable string
+var koppenBorderingStr = ee.String(
+  ee.Algorithms.If(
+    bordering.length().gt(0),
+    bordering.join(' '),
+    'none'
+  )
+);
 
 // ====================================
 // AI (P / PET) — numeric printout (POINT-BASED)
