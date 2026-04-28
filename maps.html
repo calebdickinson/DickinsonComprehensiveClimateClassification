@@ -119,6 +119,8 @@
     // default visible maps on page load
     window.addEventListener('DOMContentLoaded', () => {
 
+      showMap('alaska',1);
+
       showMap('winter-global',1);
       showMap('winter-australia',1);
       showMap('winter-newzealand',1);
@@ -212,7 +214,27 @@
   </nav>
   
   <main>
-    <h2 style="margin-top: -30px;">Global distribution of winter categories (projections are RCP8.5 high emissions normals)</h2>
+
+    <h2 style="margin-top: -30px;">Alaska distribution of full classifications (projections are RCP8.5 high emissions normals)</h2>
+    <p style="font-style: italic; font-size: 0.85rem; color: #555; margin: -0.5rem 0 1rem 0; text-align: center;">
+      Note: Due to the complexity of the system, only the most common climates in each map are labeled.
+    </p>
+
+    <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
+      <button id="alaska-button1" class="year-button" onclick="showMap('alaska',1)">1981 - 2010</button>
+      <button id="alaska-button2" class="year-button" onclick="showMap('alaska',2)">2011 - 2040</button>
+      <button id="alaska-button3" class="year-button" onclick="showMap('alaska',3)">2041 - 2070</button>
+      <button id="alaska-button4" class="year-button" onclick="showMap('alaska',4)">2071 - 2100</button>
+    </div>
+
+    <div class="map-block">
+      <div id="alaska1"><img src="images/map1alaska.png"></div>
+      <div id="alaska2"><img src="images/map2alaska.png"></div>
+      <div id="alaska3"><img src="images/map3alaska.png"></div>
+      <div id="alaska4"><img src="images/map4alaska.png"></div>
+    </div>
+
+    <h2>Global distribution of winter categories (projections are RCP8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin:10px 0;">
       <button id="winter-global-button1" class="year-button" onclick="showMap('winter-global',1)">1981 - 2010</button>
