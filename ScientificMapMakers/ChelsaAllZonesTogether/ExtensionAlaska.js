@@ -28,7 +28,7 @@ var alaskaMask = ee.Image()
   .paint(alaskaL1, 1)
   .selfMask();
 
-// 6) Climate overlay (already defined as discreteLand)
+// 6) Climate overlay
 var climateRGB_Alaska = combined
   .updateMask(alaskaMask)
   .visualize({
