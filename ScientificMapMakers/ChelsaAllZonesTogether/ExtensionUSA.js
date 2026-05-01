@@ -41,6 +41,7 @@ var statesRGB = ee.Image()
   
 // ---------- Climate overlay ----------
 var climateRGB = combined
+  .updateMask(oceanMask.not())
   .updateMask(stateMask)
   .visualize({
     min: Math.min.apply(null, codes),
