@@ -4,7 +4,7 @@
 
 // 1) Tall South America bounding box
 var southAmericaFull = ee.Geometry.Rectangle(
-  [-82, -56, -34, 13],   // lon_min, lat_min, lon_max, lat_max
+  [-92.5, -56, -34, 13],   // lon_min, lat_min, lon_max, lat_max
   null,
   false
 );
@@ -24,7 +24,8 @@ var southAmericaCountriesFull = [
   'Uruguay',
   'Venezuela',
   'French Guiana',
-  'Falkland Islands (Malvinas)'
+  'Falkland Islands (Malvinas)',
+  'South Georgia and the South Sandwich Islands'
 ];
 
 // 3) Admin-0 (full GAUL)
@@ -78,7 +79,7 @@ var compositeSA_Full = ee.ImageCollection([
 // 10) High-resolution tall thumbnail (safe size)
 var thumbUrlSA_Full = compositeSA_Full.getThumbURL({
   region: southAmericaFull,
-  dimensions: '2048x3072',
+  dimensions: '3145',
   format: 'png'
 });
 

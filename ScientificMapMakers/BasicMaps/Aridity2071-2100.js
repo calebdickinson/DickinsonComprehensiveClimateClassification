@@ -1,4 +1,4 @@
-// === Aridity Map (CHELSA v2.1, 2071–2100)
+// === Aridity Map (2071–2100 SSP5-8.5)
 
 var PREFIX      = 'projects/ordinal-crowbar-459807-m2/assets/';  // ends with '/'
 var PET_MEAN_ID = PREFIX + 'CHELSA_pet_penman_mean_2071-2100'; // adjust if needed
