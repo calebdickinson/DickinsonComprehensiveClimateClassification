@@ -2,17 +2,17 @@
 // California thumbnail (GAUL FULL — Level 1 + Level 2)
 // =======================================================================
 
-// 1) GAUL Level-1 (California state boundary)
+// 1) GAUL Level-1 
 var californiaL1 = ee.FeatureCollection('FAO/GAUL/2015/level1')
   .filter(ee.Filter.eq('ADM0_NAME', 'United States of America'))
   .filter(ee.Filter.eq('ADM1_NAME', 'California'));
 
-// 2) GAUL Level-2 (California counties)
+// 2) GAUL Level-2
 var californiaL2 = ee.FeatureCollection('FAO/GAUL/2015/level2')
   .filter(ee.Filter.eq('ADM0_NAME', 'United States of America'))
   .filter(ee.Filter.eq('ADM1_NAME', 'California'));
 
-// 3) Region geometry (simplified to prevent URL overflow)
+// 3) Region geometry
 var californiaRegion = californiaL1
   .geometry();
 
@@ -32,7 +32,7 @@ var climateRGB_CA = combined
     palette: palette
   });
 
-// 6) County borders (subtle gray)
+// 6) County borders
 var countiesRGB_CA = ee.Image()
   .byte()
   .paint(californiaL2, 1, 1)
@@ -41,7 +41,7 @@ var countiesRGB_CA = ee.Image()
     opacity: 0.5
   });
 
-// 7) State border (black)
+// 7) State border
 var stateRGB_CA = ee.Image()
   .byte()
   .paint(californiaL1, 1, 2)
