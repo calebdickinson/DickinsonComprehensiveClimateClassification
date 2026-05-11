@@ -107,44 +107,44 @@
 
   <script>
     var locationName =
-    'Puerto San Julián, Argentina';
+    'Lijiang, China';
     
     // ============================
     // EARTH ENGINE OUTPUT
     // ============================
   var period = '1981-2010';
-  var dickinson= 'Csb2';
-  var dickinson_bordering = 'Cb1 Cdb2';
-  var koppen = 'BSk';
-  var koppen_bordering = 'none';
-  p_pet = '0.25';
-  p_pet_unrounded = '0.252';
-  annual_pet_mm = '1118';
+  var dickinson= 'Cwb2';
+  var dickinson_bordering = 'none';
+  var koppen = 'Csb';
+  var koppen_bordering = 'Cfbh';
+  p_pet = '0.78';
+  p_pet_unrounded = '0.775';
+  annual_pet_mm = '1225';
   const rawLines = `
-    1.0: 67 54 0.6
-    2.0: 66 53 0.9
-    3.0: 63 50 1.1
-    4.0: 57 46 0.9
-    5.0: 50 41 1.4
-    6.0: 44 37 1.6
-    7.0: 44 35 1.0
-    8.0: 47 37 0.8
-    9.0: 51 40 0.6
-    10.0: 56 44 0.7
-    11.0: 61 48 0.6
-    12.0: 64 51 0.8
-    1.0: 19 12 16
-    2.0: 19 12 24
-    3.0: 17 10 27
-    4.0: 14 8 23
-    5.0: 10 5 35
-    6.0: 7 3 40
-    7.0: 6 2 26
-    8.0: 8 3 21
-    9.0: 11 4 16
-    10.0: 13 7 18
-    11.0: 16 9 15
-    12.0: 18 11 20
+    1.0: 53 31 0.3
+    2.0: 57 32 0.3
+    3.0: 62 36 0.7
+    4.0: 67 42 0.8
+    5.0: 70 49 2.6
+    6.0: 70 55 6.6
+    7.0: 69 56 9.1
+    8.0: 69 55 8.0
+    9.0: 66 53 6.0
+    10.0: 63 48 2.4
+    11.0: 58 38 0.5
+    12.0: 54 33 0.2
+    1.0: 12 -1 7
+    2.0: 14 0 8
+    3.0: 17 2 18
+    4.0: 19 6 20
+    5.0: 21 10 67
+    6.0: 21 13 166
+    7.0: 21 14 232
+    8.0: 20 13 202
+    9.0: 19 12 151
+    10.0: 17 9 62
+    11.0: 14 4 13
+    12.0: 12 0 4
   `;
 
     const months = ['J','F','M','A','M','J','J','A','S','O','N','D'];
@@ -387,7 +387,7 @@
       const parts = str.trim().split(/\s+/);
 
       const decoded = parts.map(c =>
-        `<b>${c}</b> (${decodeKoppen(c)})`
+        `<b>${stripHighland(c)}</b> (${decodeKoppen(c)})`
       );
 
       if (decoded.length === 1) return decoded[0];
@@ -573,6 +573,8 @@
     
     const data = {
     location: locationName,
+    
+  
 
     code:
       `${period} normals<br><br>` +
@@ -585,7 +587,7 @@
       `Köppen Classification: <b>${stripHighland(koppen)}</b>
       (${decodeKoppen(koppen)})` +
       (koppen_bordering !== 'none'
-        ? ` bordering on ${decodeKoppenBorderList(stripHighlandList(koppen_bordering))}`
+        ? ` bordering on ${decodeKoppenBorderList(koppen_bordering)}`
         : '') +
       `<br><br>` +
       formatAI(p_pet_unrounded, annual_pet_mm),
