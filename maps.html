@@ -238,7 +238,23 @@
     <br>
     <img src="images/regions.png" style="max-height: 50vh;">
 
-    <h2>Alaska distribution of classifications (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Global distribution of classifications (projections are SSP5-8.5 high emissions normals)</h2>
+
+    <div class="year-row" style="text-align:center; margin:10px 0;">
+      <button id="global-button1" class="year-button" onclick="showMap('global',1)">1981 - 2010</button>
+      <button id="global-button2" class="year-button" onclick="showMap('global',2)">2011 - 2040</button>
+      <button id="global-button3" class="year-button" onclick="showMap('global',3)">2041 - 2070</button>
+      <button id="global-button4" class="year-button" onclick="showMap('global',4)">2071 - 2100</button>
+    </div>
+
+    <div class="map-block">
+      <div id="global1"><img src="images/map1.png"></div>
+      <div id="global2"><img src="images/map2.png"></div>
+      <div id="global3"><img src="images/map3.png"></div>
+      <div id="global4"><img src="images/map4.png"></div>
+    </div>
+
+    <h2>Alaska distribution of classifications (projections are SSP5-8.5 high emissions normals)</h2>
     <p style="font-style: italic; font-size: 0.85rem; color: #555; margin: -0.5rem 0 1rem 0; text-align: center;">
       Note: Due to the complexity of the system, only the most common climates in each map are labeled.
     </p>
@@ -257,7 +273,7 @@
       <div id="alaska4"><img src="images/map4alaska.png"></div>
     </div>
 
-    <h2>Canada distribution of classifications (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Canada distribution of classifications (projections are SSP5-8.5 high emissions normals)</h2>
     <p style="font-style: italic; font-size: 0.85rem; color: #555; margin: -0.5rem 0 1rem 0; text-align: center;">
       Note: Due to the complexity of the system, only the most common climates in each map are labeled. The vertical line in the middle of Nunavut is a cartographic artifact, not a political boundary.
     </p>
@@ -276,7 +292,7 @@
       <div id="canada4"><img src="images/map4canada.png"></div>
     </div>
 
-    <h2>Contiguous United States distribution of classifications (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Contiguous United States distribution of classifications (projections are SSP5-8.5 high emissions normals)</h2>
     <p style="font-style: italic; font-size: 0.85rem; color: #555; margin: -0.5rem 0 1rem 0; text-align: center;">
       Note: Due to the complexity of the system, only the most common climates in each map are labeled. The vertical line in the middle of Nunavut is a cartographic artifact, not a political boundary.
     </p>
@@ -295,7 +311,7 @@
       <div id="usa4"><img src="images/map4usa.png"></div>
     </div>
 
-    <h2>Africa distribution of classifications (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Africa distribution of classifications (projections are SSP5-8.5 high emissions normals)</h2>
     <p style="font-style: italic; font-size: 0.85rem; color: #555; margin: -0.5rem 0 1rem 0; text-align: center;">
       Note: Due to the complexity of the system, only the most common climates in each map are labeled.
     </p>
@@ -314,7 +330,7 @@
       <div id="africa4"><img src="images/map4africa.png"></div>
     </div>
 
-    <h2>Greenland and Iceland distribution of classifications (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Greenland and Iceland distribution of classifications (projections are SSP5-8.5 high emissions normals)</h2>
     <p style="font-style: italic; font-size: 0.85rem; color: #555; margin: -0.5rem 0 1rem 0; text-align: center;">
       Note: Due to the complexity of the system, only the most common climates in each map are labeled.
     </p>
@@ -333,7 +349,7 @@
       <div id="arctic4"><img src="images/map4arctic.png"></div>
     </div>
 
-    <h2>Europe distribution of classifications (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Europe distribution of classifications (projections are SSP5-8.5 high emissions normals)</h2>
     <p style="font-style: italic; font-size: 0.85rem; color: #555; margin: -0.5rem 0 1rem 0; text-align: center;">
       Note: Due to the complexity of the system, only the most common climates in each map are labeled.
     </p>
@@ -352,7 +368,7 @@
       <div id="europe4"><img src="images/map4europe.png"></div>
     </div>
 
-    <h2>Global distribution of winter categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Global distribution of winter categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin:10px 0;">
       <button id="winter-global-button1" class="year-button" onclick="showMap('winter-global',1)">1981 - 2010</button>
@@ -370,7 +386,7 @@
 
     <img src="images/winterlegend.png" alt="Winter map legend" class="winter-legend">
 
-    <h2>Australia distribution of winter categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Australia distribution of winter categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="winter-australia-button1" class="year-button" onclick="showMap('winter-australia',1)">1981 - 2010</button>
@@ -388,7 +404,7 @@
 
     <img src="images/winterlegend.png" alt="Winter map legend" class="winter-legend">
 
-    <h2>New Zealand distribution of winter categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>New Zealand distribution of winter categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="winter-newzealand-button1" class="year-button" onclick="showMap('winter-newzealand',1)">1981 - 2010</button>
@@ -406,7 +422,7 @@
 
     <img src="images/winterlegend.png" alt="Winter map legend" class="winter-legend">
 
-    <h2>Hawaii distribution of winter categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Hawaii distribution of winter categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="winter-hawaii-button1" class="year-button" onclick="showMap('winter-hawaii',1)">1981 - 2010</button>
@@ -424,7 +440,7 @@
 
     <img src="images/winterlegend.png" alt="Winter map legend" class="winter-legend">
 
-    <h2>Alaska distribution of winter categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Alaska distribution of winter categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="winter-alaska-button1" class="year-button" onclick="showMap('winter-alaska',1)">1981 - 2010</button>
@@ -442,7 +458,7 @@
 
     <img src="images/winterlegend.png" alt="Winter map legend" class="winter-legend">
 
-    <h2>Canada distribution of winter categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Canada distribution of winter categories (projections are SSP5-8.5 high emissions normals)</h2>
     <p style="font-style: italic; font-size: 0.85rem; color: #555; margin: -0.5rem 0 1rem 0; text-align: center;">
       Note: The vertical line in the middle of Nunavut is a cartographic artifact, not a political boundary.
     </p>
@@ -463,7 +479,7 @@
 
     <img src="images/winterlegend.png" alt="Winter map legend" class="winter-legend">
 
-    <h2>Contiguous United States distribution of winter categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Contiguous United States distribution of winter categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="winter-usa-button1" class="year-button" onclick="showMap('winter-usa',1)">1981 - 2010</button>
@@ -481,7 +497,7 @@
 
     <img src="images/winterlegend.png" alt="Winter map legend" class="winter-legend">
 
-    <h2>Mexico, Central America & the Carribean distribution of winter categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Mexico, Central America & the Carribean distribution of winter categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="winter-mesoamerica-button1" class="year-button" onclick="showMap('winter-mesoamerica',1)">1981 - 2010</button>
@@ -499,7 +515,7 @@
 
     <img src="images/winterlegend.png" alt="Winter map legend" class="winter-legend">
 
-    <h2>South America distribution of winter categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>South America distribution of winter categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="winter-southamerica-button1" class="year-button" onclick="showMap('winter-southamerica',1)">1981 - 2010</button>
@@ -517,7 +533,7 @@
 
     <img src="images/winterlegend.png" alt="Winter map legend" class="winter-legend">
 
-    <h2>Africa distribution of winter categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Africa distribution of winter categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="winter-africa-button1" class="year-button" onclick="showMap('winter-africa',1)">1981 - 2010</button>
@@ -535,7 +551,7 @@
 
     <img src="images/winterlegend.png" alt="Winter map legend" class="winter-legend">
 
-    <h2>Greenland and Iceland distribution of winter categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Greenland and Iceland distribution of winter categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="winter-arctic-button1" class="year-button" onclick="showMap('winter-arctic',1)">1981 - 2010</button>
@@ -553,7 +569,7 @@
 
     <img src="images/winterlegend.png" alt="Winter map legend" class="winter-legend">
 
-    <h2>Europe distribution of winter categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Europe distribution of winter categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="winter-europe-button1" class="year-button" onclick="showMap('winter-europe',1)">1981 - 2010</button>
@@ -571,7 +587,7 @@
 
     <img src="images/winterlegend.png" alt="Winter map legend" class="winter-legend">
 
-    <h2>Russia distribution of winter categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Russia distribution of winter categories (projections are SSP5-8.5 high emissions normals)</h2>
     <p style="font-style: italic; font-size: 0.85rem; color: #555; margin: -0.5rem 0 1rem 0; text-align: center;">
       Note: The line visible in eastern Russia is a cartographic artifact of the International Date Line (180° meridian), not a political boundary.
     </p>
@@ -592,7 +608,7 @@
 
     <img src="images/winterlegend.png" alt="Winter map legend" class="winter-legend">
 
-    <h2>West Asia distribution of winter categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>West Asia distribution of winter categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="winter-middleeast-button1" class="year-button" onclick="showMap('winter-middleeast',1)">1981 - 2010</button>
@@ -610,7 +626,7 @@
 
     <img src="images/winterlegend.png" alt="Winter map legend" class="winter-legend">
 
-    <h2>Central Asia distribution of winter categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Central Asia distribution of winter categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="winter-centralasia-button1" class="year-button" onclick="showMap('winter-centralasia',1)">1981 - 2010</button>
@@ -628,7 +644,7 @@
 
     <img src="images/winterlegend.png" alt="Winter map legend" class="winter-legend">
 
-    <h2>East Asia distribution of winter categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>East Asia distribution of winter categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="winter-eastasia-button1" class="year-button" onclick="showMap('winter-eastasia',1)">1981 - 2010</button>
@@ -646,7 +662,7 @@
 
     <img src="images/winterlegend.png" alt="Winter map legend" class="winter-legend">
 
-    <h2>South Asia distribution of winter categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>South Asia distribution of winter categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="winter-southasia-button1" class="year-button" onclick="showMap('winter-southasia',1)">1981 - 2010</button>
@@ -664,7 +680,7 @@
 
     <img src="images/winterlegend.png" alt="Winter map legend" class="winter-legend">
 
-    <h2>Maritime Southeast Asia distribution of winter categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Maritime Southeast Asia distribution of winter categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="winter-maritime-southeastasia-button1" class="year-button" onclick="showMap('winter-maritime-southeastasia',1)">1981 - 2010</button>
@@ -682,7 +698,7 @@
 
     <img src="images/winterlegend.png" alt="Winter map legend" class="winter-legend">
 
-    <h2>Global distribution of aridity categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Global distribution of aridity categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin:10px 0;">
       <button id="aridity-global-button1" class="year-button" onclick="showMap('aridity-global',1)">1981 - 2010</button>
@@ -700,7 +716,7 @@
 
     <img src="images/ariditylegend.png" alt="Aridity map legend" class="aridity-legend">
 
-    <h2>Australia distribution of aridity categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Australia distribution of aridity categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="aridity-australia-button1" class="year-button" onclick="showMap('aridity-australia',1)">1981 - 2010</button>
@@ -718,7 +734,7 @@
 
     <img src="images/ariditylegend.png" alt="Aridity map legend" class="aridity-legend">
 
-    <h2>New Zealand distribution of aridity categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>New Zealand distribution of aridity categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="aridity-newzealand-button1" class="year-button" onclick="showMap('aridity-newzealand',1)">1981 - 2010</button>
@@ -736,7 +752,7 @@
 
     <img src="images/ariditylegend.png" alt="Aridity map legend" class="aridity-legend">
 
-    <h2>Hawaii distribution of aridity categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Hawaii distribution of aridity categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="aridity-hawaii-button1" class="year-button" onclick="showMap('aridity-hawaii',1)">1981 - 2010</button>
@@ -754,7 +770,7 @@
 
     <img src="images/ariditylegend.png" alt="Aridity map legend" class="aridity-legend">
 
-    <h2>Alaska distribution of aridity categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Alaska distribution of aridity categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="aridity-alaska-button1" class="year-button" onclick="showMap('aridity-alaska',1)">1981 - 2010</button>
@@ -772,7 +788,7 @@
 
     <img src="images/ariditylegend.png" alt="Aridity map legend" class="aridity-legend">
 
-    <h2>Canada distribution of aridity categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Canada distribution of aridity categories (projections are SSP5-8.5 high emissions normals)</h2>
     <p style="font-style: italic; font-size: 0.85rem; color: #555; margin: -0.5rem 0 1rem 0; text-align: center;">
       Note: The vertical line in the middle of Nunavut is a cartographic artifact, not a political boundary.
     </p>
@@ -792,7 +808,7 @@
     </div>
     <img src="images/ariditylegend.png" alt="Aridity map legend" class="aridity-legend">
 
-    <h2>Contiguous United States distribution of aridity categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Contiguous United States distribution of aridity categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="aridity-usa-button1" class="year-button" onclick="showMap('aridity-usa',1)">1981 - 2010</button>
@@ -810,7 +826,7 @@
 
     <img src="images/ariditylegend.png" alt="Aridity map legend" class="aridity-legend">
 
-    <h2>Mexico, Central America & the Carribean distribution of aridity categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Mexico, Central America & the Carribean distribution of aridity categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="aridity-mesoamerica-button1" class="year-button" onclick="showMap('aridity-mesoamerica',1)">1981 - 2010</button>
@@ -828,7 +844,7 @@
 
     <img src="images/ariditylegend.png" alt="Aridity map legend" class="aridity-legend">
 
-    <h2>South America distribution of aridity categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>South America distribution of aridity categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="aridity-southamerica-button1" class="year-button" onclick="showMap('aridity-southamerica',1)">1981 - 2010</button>
@@ -846,7 +862,7 @@
 
     <img src="images/ariditylegend.png" alt="Aridity map legend" class="aridity-legend">
 
-    <h2>Africa distribution of aridity categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Africa distribution of aridity categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="aridity-africa-button1" class="year-button" onclick="showMap('aridity-africa',1)">1981 - 2010</button>
@@ -864,7 +880,7 @@
 
     <img src="images/ariditylegend.png" alt="Aridity map legend" class="aridity-legend">
 
-    <h2>Greenland and Iceland distribution of aridity categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Greenland and Iceland distribution of aridity categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="aridity-arctic-button1" class="year-button" onclick="showMap('aridity-arctic',1)">1981 - 2010</button>
@@ -882,7 +898,7 @@
 
     <img src="images/ariditylegend.png" alt="Aridity map legend" class="aridity-legend">
 
-    <h2>Europe distribution of aridity categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Europe distribution of aridity categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="aridity-europe-button1" class="year-button" onclick="showMap('aridity-europe',1)">1981 - 2010</button>
@@ -900,7 +916,7 @@
 
     <img src="images/ariditylegend.png" alt="Aridity map legend" class="aridity-legend">
 
-    <h2>Russia distribution of aridity categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Russia distribution of aridity categories (projections are SSP5-8.5 high emissions normals)</h2>
     <p style="font-style: italic; font-size: 0.85rem; color: #555; margin: -0.5rem 0 1rem 0; text-align: center;">
       Note: The line visible in eastern Russia is a cartographic artifact of the International Date Line (180° meridian), not a political boundary.
     </p>
@@ -921,7 +937,7 @@
 
     <img src="images/ariditylegend.png" alt="Aridity map legend" class="aridity-legend">
 
-    <h2>West Asia distribution of aridity categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>West Asia distribution of aridity categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="aridity-middleeast-button1" class="year-button" onclick="showMap('aridity-middleeast',1)">1981 - 2010</button>
@@ -939,7 +955,7 @@
 
     <img src="images/ariditylegend.png" alt="Aridity map legend" class="aridity-legend">
 
-    <h2>Central Asia distribution of aridity categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Central Asia distribution of aridity categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="aridity-centralasia-button1" class="year-button" onclick="showMap('aridity-centralasia',1)">1981 - 2010</button>
@@ -957,7 +973,7 @@
 
     <img src="images/ariditylegend.png" alt="Aridity map legend" class="aridity-legend">
 
-    <h2>East Asia distribution of aridity categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>East Asia distribution of aridity categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="aridity-eastasia-button1" class="year-button" onclick="showMap('aridity-eastasia',1)">1981 - 2010</button>
@@ -975,7 +991,7 @@
 
     <img src="images/ariditylegend.png" alt="Aridity map legend" class="aridity-legend">
 
-    <h2>South Asia distribution of aridity categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>South Asia distribution of aridity categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="aridity-southasia-button1" class="year-button" onclick="showMap('aridity-southasia',1)">1981 - 2010</button>
@@ -993,7 +1009,7 @@
 
     <img src="images/ariditylegend.png" alt="Aridity map legend" class="aridity-legend">
 
-    <h2>Maritime Southeast Asia distribution of aridity categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Maritime Southeast Asia distribution of aridity categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="aridity-maritime-southeastasia-button1" class="year-button" onclick="showMap('aridity-maritime-southeastasia',1)">1981 - 2010</button>
@@ -1017,7 +1033,7 @@
       Therefore, It could reasonably be said that <i>places with scorching summers (z2) are hotter than Pheonix</i>, and <i>places with hyperthermal summers (X) are hotter than Death Valley</i>.
     </p>
 
-    <h2>Global distribution of summer categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Global distribution of summer categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin:10px 0;">
       <button id="summer-global-button1" class="year-button" onclick="showMap('summer-global',1)">1981 - 2010</button>
@@ -1035,7 +1051,7 @@
 
     <img src="images/summerlegend.png" alt="Summer map legend" class="summer-legend">
 
-    <h2>Australia distribution of summer categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Australia distribution of summer categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="summer-australia-button1" class="year-button" onclick="showMap('summer-australia',1)">1981 - 2010</button>
@@ -1053,7 +1069,7 @@
 
     <img src="images/summerlegend.png" alt="Summer map legend" class="summer-legend">
 
-    <h2>New Zealand distribution of summer categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>New Zealand distribution of summer categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="summer-newzealand-button1" class="year-button" onclick="showMap('summer-newzealand',1)">1981 - 2010</button>
@@ -1071,7 +1087,7 @@
 
     <img src="images/summerlegend.png" alt="Summer map legend" class="summer-legend">
 
-    <h2>Hawaii distribution of summer categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Hawaii distribution of summer categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="summer-hawaii-button1" class="year-button" onclick="showMap('summer-hawaii',1)">1981 - 2010</button>
@@ -1089,7 +1105,7 @@
 
     <img src="images/summerlegend.png" alt="Summer map legend" class="summer-legend">
 
-    <h2>Alaska distribution of summer categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Alaska distribution of summer categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="summer-alaska-button1" class="year-button" onclick="showMap('summer-alaska',1)">1981 - 2010</button>
@@ -1107,7 +1123,7 @@
 
     <img src="images/summerlegend.png" alt="Summer map legend" class="summer-legend">
 
-    <h2>Canada distribution of summer categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Canada distribution of summer categories (projections are SSP5-8.5 high emissions normals)</h2>
     <p style="font-style: italic; font-size: 0.85rem; color: #555; margin: -0.5rem 0 1rem 0; text-align: center;">
       Note: The vertical line in the middle of Nunavut is a cartographic artifact, not a political boundary.
     </p>
@@ -1128,7 +1144,7 @@
 
     <img src="images/summerlegend.png" alt="Summer map legend" class="summer-legend">
 
-    <h2>Contiguous United States distribution of summer categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Contiguous United States distribution of summer categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="summer-usa-button1" class="year-button" onclick="showMap('summer-usa',1)">1981 - 2010</button>
@@ -1146,7 +1162,7 @@
 
     <img src="images/summerlegend.png" alt="Summer map legend" class="summer-legend">
 
-    <h2>Mexico, Central America & the Carribean distribution of summer categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Mexico, Central America & the Carribean distribution of summer categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="summer-mesoamerica-button1" class="year-button" onclick="showMap('summer-mesoamerica',1)">1981 - 2010</button>
@@ -1164,7 +1180,7 @@
 
     <img src="images/summerlegend.png" alt="Summer map legend" class="summer-legend">
 
-    <h2>South America distribution of summer categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>South America distribution of summer categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="summer-southamerica-button1" class="year-button" onclick="showMap('summer-southamerica',1)">1981 - 2010</button>
@@ -1182,7 +1198,7 @@
 
     <img src="images/summerlegend.png" alt="Summer map legend" class="summer-legend">
 
-    <h2>Africa distribution of summer categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Africa distribution of summer categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="summer-africa-button1" class="year-button" onclick="showMap('summer-africa',1)">1981 - 2010</button>
@@ -1200,7 +1216,7 @@
 
     <img src="images/summerlegend.png" alt="Summer map legend" class="summer-legend">
 
-    <h2>Greenland and Iceland distribution of summer categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Greenland and Iceland distribution of summer categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="summer-arctic-button1" class="year-button" onclick="showMap('summer-arctic',1)">1981 - 2010</button>
@@ -1218,7 +1234,7 @@
 
     <img src="images/summerlegend.png" alt="Summer map legend" class="summer-legend">
 
-    <h2>Europe distribution of summer categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Europe distribution of summer categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="summer-europe-button1" class="year-button" onclick="showMap('summer-europe',1)">1981 - 2010</button>
@@ -1236,7 +1252,7 @@
 
     <img src="images/summerlegend.png" alt="Summer map legend" class="summer-legend">
 
-    <h2>Russia distribution of summer categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Russia distribution of summer categories (projections are SSP5-8.5 high emissions normals)</h2>
     <p style="font-style: italic; font-size: 0.85rem; color: #555; margin: -0.5rem 0 1rem 0; text-align: center;">
       Note: The line visible in eastern Russia is a cartographic artifact of the International Date Line (180° meridian), not a political boundary.
     </p>
@@ -1257,7 +1273,7 @@
 
     <img src="images/summerlegend.png" alt="Summer map legend" class="summer-legend">
 
-    <h2>West Asia distribution of summer categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>West Asia distribution of summer categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="summer-middleeast-button1" class="year-button" onclick="showMap('summer-middleeast',1)">1981 - 2010</button>
@@ -1275,7 +1291,7 @@
 
     <img src="images/summerlegend.png" alt="Summer map legend" class="summer-legend">
 
-    <h2>Central Asia distribution of summer categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Central Asia distribution of summer categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="summer-centralasia-button1" class="year-button" onclick="showMap('summer-centralasia',1)">1981 - 2010</button>
@@ -1293,7 +1309,7 @@
 
     <img src="images/summerlegend.png" alt="Summer map legend" class="summer-legend">
 
-    <h2> East Asia distribution of summer categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2> East Asia distribution of summer categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="summer-eastasia-button1" class="year-button" onclick="showMap('summer-eastasia',1)">1981 - 2010</button>
@@ -1311,7 +1327,7 @@
 
     <img src="images/summerlegend.png" alt="Summer map legend" class="summer-legend">
 
-    <h2> South Asia distribution of summer categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2> South Asia distribution of summer categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="summer-southasia-button1" class="year-button" onclick="showMap('summer-southasia',1)">1981 - 2010</button>
@@ -1329,7 +1345,7 @@
 
     <img src="images/summerlegend.png" alt="Summer map legend" class="summer-legend">
 
-    <h2> Maritime Southeast Asia distribution of summer categories (projections are RCP8.5 high emissions normals)</h2>
+    <h2> Maritime Southeast Asia distribution of summer categories (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="summer-maritime-southeastasia-button1" class="year-button" onclick="showMap('summer-maritime-southeastasia',1)">1981 - 2010</button>
@@ -1350,7 +1366,7 @@
     <h1>The following division of P/PET ratios is not part of my classification system but is simply provided for informational purposes.</h1><br>
     <h1>Precipitation divided by Potential Evapotranspiration (P/PET) maps are shown here for all regional locations where we have data.</h1><br>
 
-    <h2>Australia distribution of P/PET (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Australia distribution of P/PET (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="index-australia-button1" class="year-button" onclick="showMap('index-australia',1)">1981 - 2010</button>
@@ -1368,7 +1384,7 @@
 
     <img src="images/indexlegend.png" alt="P/PET map legend" class="index-legend">
 
-    <h2>New Zealand distribution of P/PET (projections are RCP8.5 high emissions normals)</h2>
+    <h2>New Zealand distribution of P/PET (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="index-newzealand-button1" class="year-button" onclick="showMap('index-newzealand',1)">1981 - 2010</button>
@@ -1386,7 +1402,7 @@
 
     <img src="images/indexlegend.png" alt="P/PET map legend" class="index-legend">
 
-    <h2>Hawaii distribution of P/PET (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Hawaii distribution of P/PET (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="index-hawaii-button1" class="year-button" onclick="showMap('index-hawaii',1)">1981 - 2010</button>
@@ -1404,7 +1420,7 @@
 
     <img src="images/indexlegend.png" alt="P/PET map legend" class="index-legend">
 
-    <h2>Alaska distribution of P/PET (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Alaska distribution of P/PET (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="index-alaska-button1" class="year-button" onclick="showMap('index-alaska',1)">1981 - 2010</button>
@@ -1422,7 +1438,7 @@
 
     <img src="images/indexlegend.png" alt="P/PET map legend" class="index-legend">
 
-    <h2>Canada distribution of P/PET (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Canada distribution of P/PET (projections are SSP5-8.5 high emissions normals)</h2>
     <p style="font-style: italic; font-size: 0.85rem; color: #555; margin: -0.5rem 0 1rem 0; text-align: center;">
       Note: The vertical line in the middle of Nunavut is a cartographic artifact, not a political boundary.
     </p>
@@ -1443,7 +1459,7 @@
 
     <img src="images/indexlegend.png" alt="P/PET map legend" class="index-legend">
 
-    <h2>Contiguous United States distribution of P/PET (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Contiguous United States distribution of P/PET (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="index-usa-button1" class="year-button" onclick="showMap('index-usa',1)">1981 - 2010</button>
@@ -1461,7 +1477,7 @@
 
     <img src="images/indexlegend.png" alt="P/PET map legend" class="index-legend">
 
-    <h2>Mexico, Central America & the Carribean distribution of P/PET (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Mexico, Central America & the Carribean distribution of P/PET (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="index-mesoamerica-button1" class="year-button" onclick="showMap('index-mesoamerica',1)">1981 - 2010</button>
@@ -1479,7 +1495,7 @@
 
     <img src="images/indexlegend.png" alt="P/PET map legend" class="index-legend">
 
-    <h2>South America distribution of P/PET (projections are RCP8.5 high emissions normals)</h2>
+    <h2>South America distribution of P/PET (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="index-southamerica-button1" class="year-button" onclick="showMap('index-southamerica',1)">1981 - 2010</button>
@@ -1497,7 +1513,7 @@
 
     <img src="images/indexlegend.png" alt="P/PET map legend" class="index-legend">
 
-    <h2>Africa distribution of P/PET (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Africa distribution of P/PET (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="index-africa-button1" class="year-button" onclick="showMap('index-africa',1)">1981 - 2010</button>
@@ -1515,7 +1531,7 @@
 
     <img src="images/indexlegend.png" alt="P/PET map legend" class="index-legend">
 
-    <h2>Europe distribution of P/PET (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Europe distribution of P/PET (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="index-europe-button1" class="year-button" onclick="showMap('index-europe',1)">1981 - 2010</button>
@@ -1533,7 +1549,7 @@
 
     <img src="images/indexlegend.png" alt="P/PET map legend" class="index-legend">
 
-    <h2>Russia distribution of P/PET (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Russia distribution of P/PET (projections are SSP5-8.5 high emissions normals)</h2>
     <p style="font-style: italic; font-size: 0.85rem; color: #555; margin: -0.5rem 0 1rem 0; text-align: center;">
       Note: The line visible in eastern Russia is a cartographic artifact of the International Date Line (180° meridian), not a political boundary.
     </p>
@@ -1554,7 +1570,7 @@
 
     <img src="images/indexlegend.png" alt="P/PET map legend" class="index-legend">
     
-    <h2>West Asia distribution of P/PET (projections are RCP8.5 high emissions normals)</h2>
+    <h2>West Asia distribution of P/PET (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="index-middleeast-button1" class="year-button" onclick="showMap('index-middleeast',1)">1981 - 2010</button>
@@ -1572,7 +1588,7 @@
 
     <img src="images/indexlegend.png" alt="P/PET map legend" class="index-legend">
 
-    <h2>Central Asia distribution of P/PET (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Central Asia distribution of P/PET (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="index-centralasia-button1" class="year-button" onclick="showMap('index-centralasia',1)">1981 - 2010</button>
@@ -1590,7 +1606,7 @@
 
     <img src="images/indexlegend.png" alt="P/PET map legend" class="index-legend">
 
-    <h2>East Asia distribution of P/PET (projections are RCP8.5 high emissions normals)</h2>
+    <h2>East Asia distribution of P/PET (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="index-eastasia-button1" class="year-button" onclick="showMap('index-eastasia',1)">1981 - 2010</button>
@@ -1608,7 +1624,7 @@
 
     <img src="images/indexlegend.png" alt="P/PET map legend" class="index-legend">
 
-    <h2>South Asia distribution of P/PET (projections are RCP8.5 high emissions normals)</h2>
+    <h2>South Asia distribution of P/PET (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="index-southasia-button1" class="year-button" onclick="showMap('index-southasia',1)">1981 - 2010</button>
@@ -1626,7 +1642,7 @@
 
     <img src="images/indexlegend.png" alt="P/PET map legend" class="index-legend">
 
-    <h2>Maritime Southeast Asia distribution of P/PET (projections are RCP8.5 high emissions normals)</h2>
+    <h2>Maritime Southeast Asia distribution of P/PET (projections are SSP5-8.5 high emissions normals)</h2>
 
     <div class="year-row" style="text-align:center; margin: 10px 0 20px 0;">
       <button id="index-maritime-southeastasia-button1" class="year-button" onclick="showMap('index-maritime-southeastasia',1)">1981 - 2010</button>
