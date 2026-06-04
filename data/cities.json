@@ -754,6 +754,7 @@
       "St. Paul, Alaska, United States",
       "Stanley, Falkland Islands",
       "Tórshavn, Faroe Islands",
+      "Unalaska, Alaska, USA",
       "Ushuaia, Argentina",
       "Uyuni, Bolivia"
     ],
@@ -1924,7 +1925,8 @@
       "Prince Rupert, British Columbia, Canada",
       "Puerto Aysén, Chile",
       "Queenstown, New Zealand",
-      "Reykjavík, Iceland"
+      "Reykjavík, Iceland",
+      "Unalaska, Alaska, USA"
     ],
     "4": [
       "Attu Station, Alaska",
@@ -1933,6 +1935,7 @@
       "St. Paul, Alaska, United States",
       "Tasiilaq, Greenland",
       "Tórshavn, Faroe Islands",
+      "Unalaska, Alaska, USA",
       "Ísafjörður, Iceland"
     ]
   },
@@ -2674,6 +2677,7 @@
       "Petropavlovsk-Kamchatsky, Russia",
       "Reykjavík, Iceland",
       "Tromsø, Norway",
+      "Unalaska, Alaska, USA",
       "Ushuaia, Argentina",
       "Valdez, Alaska, United States"
     ],
