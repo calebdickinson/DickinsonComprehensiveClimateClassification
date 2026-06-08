@@ -2,8 +2,8 @@
 // State thumbnail: climate + admin-1 + admin-2
 // =======================================================================
 
-var countryName = 'Canada';
-var stateName = 'Quebec / Québec';
+var countryName = 'United States of America';
+var stateName = 'Colorado';
 
 // 1) Admin-1 (state boundary)
 var admin1 = ee.FeatureCollection('FAO/GAUL/2015/level1')
