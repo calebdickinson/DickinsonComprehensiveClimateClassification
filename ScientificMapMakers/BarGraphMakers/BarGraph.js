@@ -11,7 +11,7 @@ var PERIODS = [
 ];
 
 var CITIES = [
-  {name: 'Kayes, Mali', lat: 14.4469, lon: -11.4443},
+{name: 'Unalaska, Alaska, USA', lat: 53.8727, lon: -166.5326},
 ];
 
 // Month numbers 1–12
@@ -1308,6 +1308,9 @@ function runForPeriod(NORMAL_PERIOD, pt, LAT, elevation) {
       petAnnAtPoint.round().format('%.0f'),
       'N/A'
     ),
+    
+    coldest_month_c: coldestMonth.multiply(10).round().divide(10).format('%.2f'),
+    warmest_month_c: warmestMonth.multiply(10).round().divide(10).format('%.2f'),
   
     // monthly data
     rawLines: rawLinesString
