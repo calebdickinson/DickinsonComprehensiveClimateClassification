@@ -240,6 +240,205 @@
       plotCities();
     </script>
 
+    <br><h1>Supplemental Figure: Precise Aridity Data of Selected Extratropical Cities in the 1981-2010 Normals</h1>
+    <h3>x-axis: % of precipitation during the 6 months of highest insolation<br><br>y-axis: precipitation divided by potential evapotranspiration</h3>
+    <div style="margin: 1rem 0;">
+    <svg id="extraFigure" viewBox="0 0 700 2070" xmlns="http://www.w3.org/2000/svg" style="width: 100%; display: block; font-family: sans-serif;">
+
+      <!-- Background -->
+      <rect x="70" y="20" width="600" height="2000" fill="#f9f9f9" stroke="#ccc" stroke-width="1"/>
+
+      <!--
+        X: 0%→x70, 100%→x670, span=600px, 6px per 1%
+        40%→x310, 80%→x550
+        Y: 5.00→y20, 0.00→y2020, span=2000px, 20px per 0.05, 400px per 1.00
+        1.00→y1620, 0.75→y1720, 0.50→y1820, 0.25→y1920, 0.00→y2020
+      -->
+
+      <!-- 0–40%, p/pet < 0.25 → Red (y=1920 to y=2020) -->
+      <rect x="70"  y="1920" width="240" height="100" fill="#ff0000" opacity="0.7"/>
+      <!-- 0–40%, p/pet >= 0.25 → Yellow (y=20 to y=1920) -->
+      <rect x="70"  y="20"   width="240" height="1900" fill="#ffff00" opacity="0.7"/>
+
+      <!-- 40–80%, p/pet < 0.25 → Red -->
+      <rect x="310" y="1920" width="240" height="100" fill="#ff0000" opacity="0.7"/>
+      <!-- 40–80%, p/pet 0.25–0.50 → Orange -->
+      <rect x="310" y="1820" width="240" height="100" fill="#ff8800" opacity="0.7"/>
+      <!-- 40–80%, p/pet 0.50–0.75 → Light Green -->
+      <rect x="310" y="1720" width="240" height="100" fill="#00ff00" opacity="0.7"/>
+      <!-- 40–80%, p/pet >= 0.75 → Green (extends to top) -->
+      <rect x="310" y="20"   width="240" height="1700" fill="#008800" opacity="0.7"/>
+
+      <!-- 80–100%, p/pet < 0.25 → Red -->
+      <rect x="550" y="1920" width="120" height="100" fill="#ff0000" opacity="0.7"/>
+      <!-- 80–100%, p/pet 0.25–0.50 → Brown -->
+      <rect x="550" y="1820" width="120" height="100" fill="#884400" opacity="0.7"/>
+      <!-- 80–100%, p/pet >= 0.50 → Purple (extends to top) -->
+      <rect x="550" y="20"   width="120" height="1800" fill="#ff00ff" opacity="0.7"/>
+
+      <!-- Axes -->
+      <line x1="70" y1="2020" x2="670" y2="2020" stroke="#222" stroke-width="2"/>
+      <line x1="70" y1="20"   x2="70"  y2="2020" stroke="#222" stroke-width="2"/>
+
+      <!-- X axis ticks and labels every 10% -->
+      <line x1="70"  y1="2020" x2="70"  y2="2028" stroke="#222" stroke-width="1.5"/>
+      <line x1="130" y1="2020" x2="130" y2="2028" stroke="#222" stroke-width="1.5"/>
+      <line x1="190" y1="2020" x2="190" y2="2028" stroke="#222" stroke-width="1.5"/>
+      <line x1="250" y1="2020" x2="250" y2="2028" stroke="#222" stroke-width="1.5"/>
+      <line x1="310" y1="2020" x2="310" y2="2028" stroke="#222" stroke-width="1.5"/>
+      <line x1="370" y1="2020" x2="370" y2="2028" stroke="#222" stroke-width="1.5"/>
+      <line x1="430" y1="2020" x2="430" y2="2028" stroke="#222" stroke-width="1.5"/>
+      <line x1="490" y1="2020" x2="490" y2="2028" stroke="#222" stroke-width="1.5"/>
+      <line x1="550" y1="2020" x2="550" y2="2028" stroke="#222" stroke-width="1.5"/>
+      <line x1="610" y1="2020" x2="610" y2="2028" stroke="#222" stroke-width="1.5"/>
+      <line x1="670" y1="2020" x2="670" y2="2028" stroke="#222" stroke-width="1.5"/>
+
+      <text x="70"  y="2042" text-anchor="middle" font-size="12" fill="#222">0%</text>
+      <text x="130" y="2042" text-anchor="middle" font-size="12" fill="#222">10%</text>
+      <text x="190" y="2042" text-anchor="middle" font-size="12" fill="#222">20%</text>
+      <text x="250" y="2042" text-anchor="middle" font-size="12" fill="#222">30%</text>
+      <text x="310" y="2042" text-anchor="middle" font-size="12" fill="#222">40%</text>
+      <text x="370" y="2042" text-anchor="middle" font-size="12" fill="#222">50%</text>
+      <text x="430" y="2042" text-anchor="middle" font-size="12" fill="#222">60%</text>
+      <text x="490" y="2042" text-anchor="middle" font-size="12" fill="#222">70%</text>
+      <text x="550" y="2042" text-anchor="middle" font-size="12" fill="#222">80%</text>
+      <text x="610" y="2042" text-anchor="middle" font-size="12" fill="#222">90%</text>
+      <text x="670" y="2042" text-anchor="middle" font-size="12" fill="#222">100%</text>
+
+      <!-- City dots and labels injected by JS -->
+      <g id="extraCityLayer"></g>
+
+    </svg>
+    </div>
+
+    <script>
+      // Y axis ticks, labels, and grid lines for extratropical chart
+      // Y: 5.00→y20, 0.00→y2020, 100 steps of 0.05, 20px each
+      const extraSvg = document.getElementById('extraFigure');
+      const extraNs = 'http://www.w3.org/2000/svg';
+
+      for (let i = 0; i <= 100; i++) {
+        const val = (5.00 - i * 0.05).toFixed(2);
+        const y = 20 + i * 20;
+
+        const tick = document.createElementNS(extraNs, 'line');
+        tick.setAttribute('x1', '62'); tick.setAttribute('x2', '70');
+        tick.setAttribute('y1', y); tick.setAttribute('y2', y);
+        tick.setAttribute('stroke', '#222'); tick.setAttribute('stroke-width', '1.5');
+        extraSvg.appendChild(tick);
+
+        const label = document.createElementNS(extraNs, 'text');
+        label.setAttribute('x', '58'); label.setAttribute('y', y + 4);
+        label.setAttribute('text-anchor', 'end'); label.setAttribute('font-size', '11');
+        label.setAttribute('fill', '#222');
+        label.textContent = val;
+        extraSvg.appendChild(label);
+
+        if (i > 0) {
+          const grid = document.createElementNS(extraNs, 'line');
+          grid.setAttribute('x1', '70'); grid.setAttribute('x2', '670');
+          grid.setAttribute('y1', y); grid.setAttribute('y2', y);
+          grid.setAttribute('stroke', '#555'); grid.setAttribute('stroke-width', '0.5');
+          grid.setAttribute('stroke-dasharray', '3,3'); grid.setAttribute('opacity', '0.35');
+          extraSvg.appendChild(grid);
+        }
+      }
+
+      // Vertical grid lines every 2% (x: 0%=70, 100%=670, 6px per 1%)
+      for (let pct = 2; pct < 100; pct += 2) {
+        if (pct === 40 || pct === 80) continue; // boundary lines handled by rects
+        const x = 70 + (pct / 100) * 600;
+        const line = document.createElementNS(extraNs, 'line');
+        line.setAttribute('x1', x); line.setAttribute('x2', x);
+        line.setAttribute('y1', '20'); line.setAttribute('y2', '2020');
+        line.setAttribute('stroke', '#555'); line.setAttribute('stroke-width', '0.5');
+        line.setAttribute('stroke-dasharray', '3,3'); line.setAttribute('opacity', '0.35');
+        extraSvg.appendChild(line);
+      }
+    </script>
+
+    <script>
+      const NORTH_CITIES = [
+        { key: "40.7128, -74.0060" },
+        { key: "37.7273, -89.2168" },
+        { key: "45.5152, -122.6784" },
+        { key: "34.0522, -118.2437" },
+        { key: "33.4484, -112.0740" },
+        { key: "25.7617, -80.1918" },
+        { key: "41.8781, -87.6298" },
+        { key: "47.6062, -122.3321" },
+        { key: "49.2827, -123.1207", humidHalo: true },
+        // Northern hemisphere — add coordinate keys here
+      ];
+
+      const SOUTH_CITIES = [
+        // Southern hemisphere — add coordinate keys here
+      ];
+
+      async function plotExtraCities() {
+        const res = await fetch('data/graphs.json');
+        const data = await res.json();
+        const layer = document.getElementById('extraCityLayer');
+        const ns = 'http://www.w3.org/2000/svg';
+
+        // Northern: Apr–Sep = indices 3,4,5,6,7,8
+        // Southern: Oct–Mar = indices 9,10,11,0,1,2
+        const hemispheres = [
+          { keys: NORTH_CITIES, indices: [3,4,5,6,7,8] },
+          { keys: SOUTH_CITIES, indices: [9,10,11,0,1,2] }
+        ];
+
+        for (const { keys, indices } of hemispheres) {
+          for (const cityEntry of keys) {
+            const key = typeof cityEntry === 'string' ? cityEntry : cityEntry.key;
+            const humidHalo = typeof cityEntry === 'object' && cityEntry.humidHalo === true;
+
+            const entry = data[key];
+            if (!entry) continue;
+            const period = entry.periods['1981-2010'];
+            if (!period) continue;
+
+            const cityName = entry.city;
+            const magnitude = parseFloat(period.p_pet_unrounded);
+
+            const lines = period.rawLines.trim().split('\n');
+            const monthlyPrecip = lines.slice(12, 24).map(line => parseFloat(line.split(':')[1].trim().split(' ')[2]));
+            const annualTotal = monthlyPrecip.reduce((a, b) => a + b, 0);
+            const summerTotal = indices.reduce((sum, i) => sum + monthlyPrecip[i], 0);
+            const frequency = (summerTotal / annualTotal) * 100;
+
+            const x = 70 + (frequency / 100) * 600;
+            const y = 20 + (5 - magnitude) * 400;
+
+            if (humidHalo) {
+              const halo = document.createElementNS(ns, 'circle');
+              halo.setAttribute('cx', x.toFixed(1)); halo.setAttribute('cy', y.toFixed(1));
+              halo.setAttribute('r', '40');
+              halo.setAttribute('fill', '#63AB5B');
+              halo.setAttribute('opacity', '1');
+              halo.setAttribute('stroke', 'none');
+              layer.appendChild(halo);
+            }
+
+            const circle = document.createElementNS(ns, 'circle');
+            circle.setAttribute('cx', x.toFixed(1)); circle.setAttribute('cy', y.toFixed(1));
+            circle.setAttribute('r', '4'); circle.setAttribute('fill', 'black');
+
+            const text = document.createElementNS(ns, 'text');
+            text.setAttribute('x', x.toFixed(1)); text.setAttribute('y', (y - 7).toFixed(1));
+            text.setAttribute('text-anchor', 'middle'); text.setAttribute('font-size', '11');
+            text.setAttribute('fill', 'black');
+            text.textContent = cityName.split(',')[0];
+
+            layer.appendChild(circle);
+            layer.appendChild(text);
+          }
+        }
+      }
+
+      plotExtraCities();
+    </script>
+
     <br><br><br>
 
   </main>
