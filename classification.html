@@ -249,7 +249,14 @@
       const CITIES = [
         "-3.1190, -60.0217",
         "10.3157, 123.8854",
-        "16.7666, -3.0026"
+        "16.7666, -3.0026",
+        "14.5995, 120.9842",
+        "-12.0464, -77.0428",
+        "12.3714, -1.5197",
+        "4.8594, 31.5713",
+        "2.0469, 45.3182",
+        "6.5244, 3.3792",
+        "-3.7172, -38.5434"
         // add more coordinate keys here
       ];
 
@@ -296,7 +303,7 @@
           text.setAttribute('text-anchor', 'middle');
           text.setAttribute('font-size', '11');
           text.setAttribute('fill', 'black');
-          text.textContent = cityName;
+          text.textContent = cityName.split(',')[0];
 
           layer.appendChild(circle);
           layer.appendChild(text);
