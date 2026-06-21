@@ -703,4 +703,5 @@ var CITIES = [
   {name: 'Andorra la Vella, Andorra', lat: 42.5063, lon: 1.5218},
   {name: 'Resolute, Nunavut, Canada', lat: 74.6953, lon: -94.8297},
   {name: 'Unalaska, Alaska, USA', lat: 53.8727, lon: -166.5326},
+  {name: 'Monterey, California, United States', lat: 36.6002, lon: -121.8947},
 ];
