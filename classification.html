@@ -111,10 +111,6 @@
         <rect x="430" y="620" width="240" height="100" fill="#884400" opacity="0.7"/>
         <rect x="430" y="720" width="240" height="100" fill="#ff0000" opacity="0.7"/>
 
-        <!-- Axes -->
-        <line x1="70" y1="820" x2="670" y2="820" stroke="#222" stroke-width="2"/>
-        <line x1="70" y1="20"  x2="70"  y2="820" stroke="#222" stroke-width="2"/>
-
         <!-- X axis ticks and labels -->
         <line x1="70"  y1="820" x2="70"  y2="828" stroke="#222" stroke-width="1.5"/>
         <line x1="190" y1="820" x2="190" y2="828" stroke="#222" stroke-width="1.5"/>
@@ -226,11 +222,11 @@
 
           const circle = document.createElementNS(ns, 'circle');
           circle.setAttribute('cx', x.toFixed(1)); circle.setAttribute('cy', y.toFixed(1));
-          circle.setAttribute('r', '4'); circle.setAttribute('fill', 'black');
+          circle.setAttribute('r', '3'); circle.setAttribute('fill', 'black');
 
           const text = document.createElementNS(ns, 'text');
-          text.setAttribute('x', x.toFixed(1)); text.setAttribute('y', (y - 7).toFixed(1));
-          text.setAttribute('text-anchor', 'middle'); text.setAttribute('font-size', '11');
+          text.setAttribute('x', x.toFixed(1)); text.setAttribute('y', (y - 5).toFixed(1));
+          text.setAttribute('text-anchor', 'middle'); text.setAttribute('font-size', '8');
           text.setAttribute('fill', 'black');
           text.textContent = cityName.split(',')[0];
 
@@ -465,11 +461,11 @@
 
             const circle = document.createElementNS(ns, 'circle');
             circle.setAttribute('cx', x.toFixed(1)); circle.setAttribute('cy', y.toFixed(1));
-            circle.setAttribute('r', '4'); circle.setAttribute('fill', 'black');
+            circle.setAttribute('r', '3'); circle.setAttribute('fill', 'black');
 
             const text = document.createElementNS(ns, 'text');
-            text.setAttribute('x', x.toFixed(1)); text.setAttribute('y', (y - 7).toFixed(1));
-            text.setAttribute('text-anchor', 'middle'); text.setAttribute('font-size', '11');
+            text.setAttribute('x', x.toFixed(1)); text.setAttribute('y', (y - 5).toFixed(1));
+            text.setAttribute('text-anchor', 'middle'); text.setAttribute('font-size', '8');
             text.setAttribute('fill', 'black');
             text.textContent = cityName.split(',')[0];
 
@@ -480,6 +476,147 @@
       }
 
       plotExtraCities();
+    </script>
+
+    <br><h1>Supplemental Figure: Hottest and Coldest Month Means of Selected Cities in the 1981-2010 Normals</h1>
+
+    <h3>x-axis: average temperature of hottest month in Celsius<br><br>y-axis: average temperature of coldest month in Celsius</h3>
+    <div style="margin: 1rem 0;">
+    <svg id="thermalFigure" viewBox="0 0 720 870" xmlns="http://www.w3.org/2000/svg" style="width: 100%; display: block; font-family: sans-serif;">
+
+      <defs>
+        <clipPath id="validArea">
+          <polygon points="70,20 140.6,20 670,549.4 670,761 70,761"/>
+        </clipPath>
+      </defs>
+
+      <rect x="70" y="20" width="600" height="741" fill="#f9f9f9" stroke="#ccc" stroke-width="1" clip-path="url(#validArea)"/>
+      <g id="thermalGridLines" clip-path="url(#validArea)"></g>
+      <g id="thermalCityLayer"></g>
+
+      <!-- Axes -->
+      <line x1="70" y1="761" x2="670" y2="761" stroke="#222" stroke-width="2"/>
+      <line x1="70" y1="20"  x2="70"  y2="761" stroke="#222" stroke-width="2"/>
+
+      <!-- Diagonal boundary line -->
+      <line x1="140.6" y1="20" x2="670" y2="549.4" stroke="#888" stroke-width="1.5" stroke-dasharray="6,3"/>
+
+    </svg>
+    </div>
+
+    <script>
+      const thermalSvg = document.getElementById('thermalFigure');
+      const thermalGrid = document.getElementById('thermalGridLines');
+      const tns = 'http://www.w3.org/2000/svg';
+      const PX_PER_DEG = 600 / 85;
+
+      function hotToX(temp) { return 70 + (50 - temp) * PX_PER_DEG; }
+      function coldToY(temp) { return 20 + (40 - temp) * PX_PER_DEG; }
+
+      // X axis ticks, labels, grid lines — hottest month 50 to -35 every 5°C
+      for (let t = 50; t >= -35; t -= 5) {
+        const x = hotToX(t);
+
+        const tick = document.createElementNS(tns, 'line');
+        tick.setAttribute('x1', x); tick.setAttribute('x2', x);
+        tick.setAttribute('y1', '761'); tick.setAttribute('y2', '769');
+        tick.setAttribute('stroke', '#222'); tick.setAttribute('stroke-width', '1.5');
+        thermalSvg.appendChild(tick);
+
+        const label = document.createElementNS(tns, 'text');
+        label.setAttribute('x', x); label.setAttribute('y', '782');
+        label.setAttribute('text-anchor', 'middle'); label.setAttribute('font-size', '11');
+        label.setAttribute('fill', '#222');
+        label.textContent = t + '°';
+        thermalSvg.appendChild(label);
+
+        if (t < 50 && t > -35) {
+          const isMajor = t >= 0 && t <= 40 && t % 5 === 0;
+          const grid = document.createElementNS(tns, 'line');
+          grid.setAttribute('x1', x); grid.setAttribute('x2', x);
+          grid.setAttribute('y1', '20'); grid.setAttribute('y2', '761');
+          grid.setAttribute('stroke', '#555');
+          grid.setAttribute('stroke-width', isMajor ? '1.5' : '0.5');
+          if (!isMajor) grid.setAttribute('stroke-dasharray', '3,3');
+          grid.setAttribute('opacity', isMajor ? '0.5' : '0.35');
+          thermalGrid.appendChild(grid);
+        }
+      }
+
+      // Y axis ticks, labels, grid lines — coldest month 40 to -65 every 5°C
+      for (let t = 40; t >= -65; t -= 5) {
+        const y = coldToY(t);
+
+        const tick = document.createElementNS(tns, 'line');
+        tick.setAttribute('x1', '62'); tick.setAttribute('x2', '70');
+        tick.setAttribute('y1', y); tick.setAttribute('y2', y);
+        tick.setAttribute('stroke', '#222'); tick.setAttribute('stroke-width', '1.5');
+        thermalSvg.appendChild(tick);
+
+        const label = document.createElementNS(tns, 'text');
+        label.setAttribute('x', '58'); label.setAttribute('y', y + 4);
+        label.setAttribute('text-anchor', 'end'); label.setAttribute('font-size', '11');
+        label.setAttribute('fill', '#222');
+        label.textContent = t + '°';
+        thermalSvg.appendChild(label);
+
+        if (t < 41 && t > -65) {
+          const isMajor = t % 10 === 0 && t >= -40;
+          const grid = document.createElementNS(tns, 'line');
+          grid.setAttribute('x1', '70'); grid.setAttribute('x2', '670');
+          grid.setAttribute('y1', y); grid.setAttribute('y2', y);
+          grid.setAttribute('stroke', '#555');
+          grid.setAttribute('stroke-width', isMajor ? '1.5' : '0.5');
+          if (!isMajor) grid.setAttribute('stroke-dasharray', '3,3');
+          grid.setAttribute('opacity', isMajor ? '0.5' : '0.35');
+          thermalGrid.appendChild(grid);
+        }
+      }
+    </script>
+
+    <script>
+      const THERMAL_CITIES = [
+        "-78.4646, 106.8326",
+        "37.7273, -89.2168"
+        // add more keys here
+      ];
+
+      async function plotThermalCities() {
+        const res = await fetch('data/graphs.json');
+        const data = await res.json();
+        const layer = document.getElementById('thermalCityLayer');
+        const ns = 'http://www.w3.org/2000/svg';
+        const PX = 600 / 85;
+
+        for (const key of THERMAL_CITIES) {
+          const entry = data[key];
+          if (!entry) continue;
+          const period = entry.periods['1981-2010'];
+          if (!period) continue;
+
+          const cityName = entry.city;
+          const coldest = parseFloat(period.coldest_month_c);
+          const warmest = parseFloat(period.warmest_month_c);
+
+          const x = 70 + (50 - warmest) * PX;
+          const y = 20 + (40 - coldest) * PX;
+
+          const circle = document.createElementNS(ns, 'circle');
+          circle.setAttribute('cx', x.toFixed(1)); circle.setAttribute('cy', y.toFixed(1));
+          circle.setAttribute('r', '3'); circle.setAttribute('fill', 'black');
+
+          const text = document.createElementNS(ns, 'text');
+          text.setAttribute('x', x.toFixed(1)); text.setAttribute('y', (y - 5).toFixed(1));
+          text.setAttribute('text-anchor', 'middle'); text.setAttribute('font-size', '8');
+          text.setAttribute('fill', 'black');
+          text.textContent = cityName.split(',')[0];
+
+          layer.appendChild(circle);
+          layer.appendChild(text);
+        }
+      }
+
+      plotThermalCities();
     </script>
 
     <br><br><br>
