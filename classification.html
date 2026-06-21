@@ -745,8 +745,41 @@
         "11.3410, 77.7172",
         "16.6200, -11.4062",
         "16.7666, -3.0026",
-        "14.4469, -11.4443"
-        
+        "14.4469, -11.4443",
+        "62.6530, 135.5663",
+        "42.9513, 89.1895",
+        { key: "-53.0333, 73.4000", period: "2011-2040" },
+        { key: "-75.0990, 123.3320", period: "2071-2100" },
+        { key: "-78.4646, 106.8326", period: "2071-2100" },
+        { key: "27.9881, 86.9250", period: "2071-2100" },
+        { key: "-74.5833, -11.2167", period: "2071-2100" },
+        { key: "-77.8419, 166.6863", period: "2071-2100" },
+        { key: "63.4641, 142.7737", period: "2071-2100" },
+        { key: "62.0355, 129.6755", period: "2071-2100" },
+        { key: "62.6530, 135.5663", period: "2011-2040" },
+        { key: "63.4641, 142.7737", period: "2041-2070" },
+        { key: "62.6530, 135.5663", period: "2071-2100" },
+        { key: "68.1695, 131.7071", period: "2071-2100" },
+        { key: "61.0256, 89.6203", period: "2071-2100" },
+        { key: "45.5799, 84.8892", period: "2071-2100" },
+        { key: "45.5799, 84.8892", period: "2011-2040" },
+        { key: "42.9513, 89.1895", period: "2071-2100" },
+        { key: "33.3152, 44.3661", period: "2071-2100" },
+        { key: "36.4636, -116.8656", period: "2071-2100" },
+        { key: "33.4484, -112.0740", period: "2071-2100" },
+        { key: "33.3152, 44.3661", period: "2071-2100" },
+        { key: "31.8974, 54.3569", period: "2071-2100" },
+        { key: "30.5085, 47.7804", period: "2071-2100" },
+        { key: "24.7136, 46.6753", period: "2071-2100" },
+        { key: "25.2048, 55.2708", period: "2071-2100" },
+        { key: "14.2410, 40.3000", period: "2071-2100" },
+        { key: "13.5116, 2.1254", period: "2071-2100" },
+        { key: "14.4469, -11.4443", period: "2071-2100" },
+        { key: "14.4896, -4.1980", period: "2071-2100" },
+        { key: "-3.1190, -60.0217", period: "2071-2100" },
+        { key: "46.4083, -105.8406", period: "2071-2100" },
+        { key: "46.2857, -119.2845", period: "2071-2100" },
+  
         // add more keys here
       ];
 
@@ -756,14 +789,20 @@
         const layer = document.getElementById('thermalCityLayer');
         const ns = 'http://www.w3.org/2000/svg';
         const PX = 600 / 85;
+        const FUTURE_PERIODS = new Set(['2011-2040', '2041-2070', '2071-2100']);
 
-        for (const key of THERMAL_CITIES) {
+        for (const item of THERMAL_CITIES) {
+          const key      = typeof item === 'string' ? item : item.key;
+          const periodId = typeof item === 'string' ? '1981-2010' : (item.period ?? '1981-2010');
+
           const entry = data[key];
           if (!entry) continue;
-          const period = entry.periods['1981-2010'];
+          const period = entry.periods[periodId];
           if (!period) continue;
 
-          const cityName = entry.city;
+          const baseName = entry.city.split(',')[0];
+          const label    = FUTURE_PERIODS.has(periodId) ? `${baseName} ${periodId}` : baseName;
+
           const coldest = parseFloat(period.coldest_month_c);
           const warmest = parseFloat(period.warmest_month_c);
 
@@ -771,14 +810,18 @@
           const y = 20 + (40 - coldest) * PX;
 
           const circle = document.createElementNS(ns, 'circle');
-          circle.setAttribute('cx', x.toFixed(1)); circle.setAttribute('cy', y.toFixed(1));
-          circle.setAttribute('r', '2'); circle.setAttribute('fill', 'black');
+          circle.setAttribute('cx', x.toFixed(1));
+          circle.setAttribute('cy', y.toFixed(1));
+          circle.setAttribute('r', '2');
+          circle.setAttribute('fill', 'black');
 
           const text = document.createElementNS(ns, 'text');
-          text.setAttribute('x', x.toFixed(1)); text.setAttribute('y', (y - 2.5).toFixed(1));
-          text.setAttribute('text-anchor', 'middle'); text.setAttribute('font-size', '5.5');
+          text.setAttribute('x', x.toFixed(1));
+          text.setAttribute('y', (y - 2.5).toFixed(1));
+          text.setAttribute('text-anchor', 'middle');
+          text.setAttribute('font-size', '5.5');
           text.setAttribute('fill', 'black');
-          text.textContent = cityName.split(',')[0];
+          text.textContent = label;
 
           layer.appendChild(circle);
           layer.appendChild(text);
