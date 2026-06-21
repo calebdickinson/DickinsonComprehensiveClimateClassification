@@ -492,7 +492,6 @@
 
       <rect x="70" y="20" width="600" height="741" fill="#f9f9f9" stroke="#ccc" stroke-width="1" clip-path="url(#validArea)"/>
       <g id="thermalGridLines" clip-path="url(#validArea)"></g>
-      <g id="thermalCityLayer"></g>
 
       <!-- Axes -->
       <line x1="70" y1="761" x2="670" y2="761" stroke="#222" stroke-width="2"/>
@@ -500,6 +499,8 @@
 
       <!-- Diagonal boundary line -->
       <line x1="140.6" y1="20" x2="670" y2="549.4" stroke="#888" stroke-width="1.5" stroke-dasharray="6,3"/>
+
+      <g id="thermalCityLayer"></g>
 
     </svg>
     </div>
@@ -530,15 +531,13 @@
         label.textContent = t + '°';
         thermalSvg.appendChild(label);
 
-        if (t < 50 && t > -35) {
-          const isMajor = t >= 0 && t <= 40 && t % 5 === 0;
+        if (t >= 0 && t <= 40 && t % 5 === 0) {
           const grid = document.createElementNS(tns, 'line');
           grid.setAttribute('x1', x); grid.setAttribute('x2', x);
           grid.setAttribute('y1', '20'); grid.setAttribute('y2', '761');
           grid.setAttribute('stroke', '#555');
-          grid.setAttribute('stroke-width', isMajor ? '1.5' : '0.5');
-          if (!isMajor) grid.setAttribute('stroke-dasharray', '3,3');
-          grid.setAttribute('opacity', isMajor ? '0.5' : '0.35');
+          grid.setAttribute('stroke-width', '1.5');
+          grid.setAttribute('opacity', '0.5');
           thermalGrid.appendChild(grid);
         }
       }
@@ -560,15 +559,13 @@
         label.textContent = t + '°';
         thermalSvg.appendChild(label);
 
-        if (t < 41 && t > -65) {
-          const isMajor = t % 10 === 0 && t >= -40;
+        if (t % 10 === 0 && t >= -40 && t < 40) {
           const grid = document.createElementNS(tns, 'line');
           grid.setAttribute('x1', '70'); grid.setAttribute('x2', '670');
           grid.setAttribute('y1', y); grid.setAttribute('y2', y);
           grid.setAttribute('stroke', '#555');
-          grid.setAttribute('stroke-width', isMajor ? '1.5' : '0.5');
-          if (!isMajor) grid.setAttribute('stroke-dasharray', '3,3');
-          grid.setAttribute('opacity', isMajor ? '0.5' : '0.35');
+          grid.setAttribute('stroke-width', '1.5');
+          grid.setAttribute('opacity', '0.5');
           thermalGrid.appendChild(grid);
         }
       }
@@ -577,7 +574,43 @@
     <script>
       const THERMAL_CITIES = [
         "-78.4646, 106.8326",
-        "37.7273, -89.2168"
+        "37.7273, -89.2168",
+        "34.0522, -118.2437",
+        "32.7157, -117.1611",
+        "63.4641, 142.7737",
+        "-75.0990, 123.3320",
+        "68.1695, 131.7071",
+        "-74.5833, -11.2167",
+        "27.9881, 86.9250",
+        "-77.8419, 166.6863",
+        "46.8523, -121.7603",
+        "-66.2818, 110.5286",
+        "-67.6027, 62.8738",
+        "-1.4692, -78.8175",
+        "-3.0758, 37.3533",
+        "-54.0099, -38.0515",
+        "-64.1500, -60.9667",
+        "52.8464, 173.1861",
+        "40.1164, -88.2434",
+        "41.8781, -87.6298",
+        "43.8260, -111.7897",
+        "45.5152, -122.6784",
+        "40.7608, -111.8910",
+        "43.0731, -89.4012",
+        "46.7867, -92.1005",
+        "44.9778, -93.2650",
+        "55.7558, 37.6173",
+        "33.4484, -112.0740",
+        "36.1699, -115.1398",
+        "36.4636, -116.8656",
+        "24.7136, 46.6753",
+        "14.2410, 40.3000",
+        "25.2048, 55.2708",
+        "10.3157, 123.8854",
+        "27.9506, -82.4572",
+        "25.7617, -80.1918",
+        "2.1150, 36.5200",
+        "40.5865, -122.3917"
         // add more keys here
       ];
 
@@ -603,11 +636,11 @@
 
           const circle = document.createElementNS(ns, 'circle');
           circle.setAttribute('cx', x.toFixed(1)); circle.setAttribute('cy', y.toFixed(1));
-          circle.setAttribute('r', '3'); circle.setAttribute('fill', 'black');
+          circle.setAttribute('r', '2'); circle.setAttribute('fill', 'black');
 
           const text = document.createElementNS(ns, 'text');
-          text.setAttribute('x', x.toFixed(1)); text.setAttribute('y', (y - 5).toFixed(1));
-          text.setAttribute('text-anchor', 'middle'); text.setAttribute('font-size', '8');
+          text.setAttribute('x', x.toFixed(1)); text.setAttribute('y', (y - 3.5).toFixed(1));
+          text.setAttribute('text-anchor', 'middle'); text.setAttribute('font-size', '6');
           text.setAttribute('fill', 'black');
           text.textContent = cityName.split(',')[0];
 
