@@ -26,6 +26,7 @@
       "Concepción, Chile",
       "Lisbon, Portugal",
       "Lompoc, California, United States",
+      "Monterey, California, United States",
       "San Francisco, California, United States",
       "Santa Cruz de Tenerife, Spain"
     ],
@@ -83,6 +84,7 @@
       "Bordeaux, France",
       "Lisbon, Portugal",
       "Lompoc, California, United States",
+      "Monterey, California, United States",
       "Nanaimo, British Columbia, Canada",
       "Perth, Australia",
       "Portland, Oregon, United States",
@@ -1134,6 +1136,7 @@
   },
   "Dha1": {
     "1": [
+      "Albany, New York, United States",
       "Almaty, Kazakhstan",
       "Bangor, Maine, United States",
       "Boston, Massachusetts, United States",
@@ -1292,6 +1295,7 @@
       "Washington, D.C., United States"
     ],
     "3": [
+      "Albany, New York, United States",
       "Asheville, North Carolina, United States",
       "Bangor, Maine, United States",
       "Bella Coola, British Columbia, Canada",
@@ -1467,6 +1471,7 @@
       "Topeka, Kansas, United States"
     ],
     "2": [
+      "Albany, New York, United States",
       "Almaty, Kazakhstan",
       "Cedar Rapids, Iowa, United States",
       "Champaign, Illinois, United States",
@@ -1557,6 +1562,7 @@
       "Washington, D.C., United States"
     ],
     "4": [
+      "Albany, New York, United States",
       "Almaty, Kazakhstan",
       "Asheville, North Carolina, United States",
       "Bangor, Maine, United States",
@@ -2980,12 +2986,14 @@
     "1": [
       "Albany, Australia",
       "Cape Town, South Africa",
-      "Lompoc, California, United States"
+      "Lompoc, California, United States",
+      "Monterey, California, United States"
     ],
     "2": [
       "Albany, Australia",
       "Concepción, Chile",
       "Lompoc, California, United States",
+      "Monterey, California, United States",
       "San Francisco, California, United States"
     ],
     "3": [
