@@ -28,7 +28,8 @@
       "Lompoc, California, United States",
       "Monterey, California, United States",
       "San Francisco, California, United States",
-      "Santa Cruz de Tenerife, Spain"
+      "Santa Cruz de Tenerife, Spain",
+      "Tillamook, Oregon, USA"
     ],
     "4": [
       "Albany, Australia",
@@ -93,6 +94,7 @@
       "San Francisco, California, United States",
       "Santiago, Chile",
       "Seattle, Washington, United States",
+      "Tillamook, Oregon, USA",
       "Vancouver, British Columbia, Canada"
     ]
   },
@@ -2974,9 +2976,12 @@
       "Nanaimo, British Columbia, Canada",
       "Portland, Oregon, United States",
       "San Francisco, California, United States",
-      "Seattle, Washington, United States"
+      "Seattle, Washington, United States",
+      "Tillamook, Oregon, USA"
     ],
-    "2": [],
+    "2": [
+      "Tillamook, Oregon, USA"
+    ],
     "3": [],
     "4": [
       "Ugolnye Kopi, Russia"
