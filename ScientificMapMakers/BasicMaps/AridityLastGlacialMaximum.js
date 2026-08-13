@@ -3,10 +3,6 @@
 var PREFIX = 'projects/ordinal-crowbar-459807-m2/assets/'; // ends with '/'
 var NODATA_U16 = 65535;
 
-// --- pr scale factor: CONFIRM this against your CHELSA_TraCE21k_pr_* asset docs ---
-// Assumed same pattern as tas (deci-units) → mm/month. Adjust if it's already mm/month (set to 1.0).
-var SCALE_PR = 0.1;
-
 var daysInMonth = [31,28,31,30,31,30,31,31,30,31,30,31];
 // FAO-56 mid-month day-of-year (non-leap), used for Ra
 var midDOY = [15,46,74,105,135,166,196,227,258,288,319,349];
@@ -54,7 +50,6 @@ for (var n = 1; n <= 12; n++) {
   var pid = PREFIX + 'CHELSA_TraCE21k_pr_' + nn + '_-200_V1-0';
   var rawPr = ee.Image(pid);
   var pr = rawPr.updateMask(rawPr.neq(NODATA_U16))
-                .multiply(SCALE_PR)
                 .rename('pr').set('month', n);
   prImgs.push(pr);
 }
@@ -123,10 +118,10 @@ var southMask = lat.lt(-23.43594);
 
 // ---------- Base aridity classes ----------
 var aridBase = ee.Image(6)       // 6 = Humid
-  .where(AI.lte(0.01), 8)        // placeholder, real oceans set later
-  .where(AI.lt(0.075), 5)        // 5 = Semihumid
-  .where(AI.lt(0.050), 2)        // 2 = Semiarid
-  .where(AI.lt(0.025), 1)        // 1 = Arid Desert
+  .where(AI.lte(0.1), 8)        // placeholder, real oceans set later
+  .where(AI.lt(0.75), 5)        // 5 = Semihumid
+  .where(AI.lt(0.50), 2)        // 2 = Semiarid
+  .where(AI.lt(0.25), 1)        // 1 = Arid Desert
   .rename('aridity');
 
 // ---------- HS ratio (Apr–Sep share) ----------
@@ -174,12 +169,12 @@ var clim = aridBase
   .rename('climateClass');
 
 // Semiarid Monsoon
-clim = clim.where(clim.eq(4).and(AI.lt(0.05)), 9);
+clim = clim.where(clim.eq(4).and(AI.lt(0.5)), 9);
 
 // Temperate rainforest with Mediterranean seasonality → reclassified Humid
 var P_driest = prMonthly.min();
 clim = clim.where(
-  clim.eq(3).and(P_driest.gte(PET_ann.divide(240))),
+  clim.eq(3).and(P_driest.gte(PET_ann.divide(24))),
   6
 );
 
