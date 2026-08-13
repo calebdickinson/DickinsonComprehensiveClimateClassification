@@ -1,11 +1,11 @@
 // ====== CONFIG ======
 var ASSET_PREFIX = 'projects/ordinal-crowbar-459807-m2/assets/';  // ends with '/'
 var NODATA_U16   = 65535;
-var SCALE_PR     = 0.1;
 var NORMAL_PERIOD = 'Last Glacial Maximum';
 
-var LAT = 45.5152;
-var LON = -122.6784;
+var LAT = -3.1190;
+var LON = -60.0217;
+
 
 var pt  = ee.Geometry.Point([LON, LAT]);
 
@@ -54,7 +54,6 @@ for (var n = 1; n <= 12; n++) {
   var rawPr = ee.Image(ASSET_PREFIX + 'CHELSA_TraCE21k_pr_' + nn + '_-200_V1-0');
   var pr = rawPr
     .updateMask(rawPr.neq(NODATA_U16))
-    .multiply(SCALE_PR)
     .rename('pr')
     .set('month', n);
   prImgs.push(pr);
