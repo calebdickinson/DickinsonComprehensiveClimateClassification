@@ -705,7 +705,7 @@ var raMonthlyEE = ee.List(raMonthly);
 
 // ====================================
 // PET — Hargreaves
-// from tasmax, tasmin, (estimated) tas, and pr
+// from tasmax, tasmin, and estimated tas
 // ====================================
 
 var petMonthlyList = months.map(function(m) {
@@ -714,24 +714,20 @@ var petMonthlyList = months.map(function(m) {
 
   var imgMax = tasmaxMonthly.filter(ee.Filter.eq('month', m)).first();
   var imgMin = tasminMonthly.filter(ee.Filter.eq('month', m)).first();
-  var imgPr  = prMonthly.filter(ee.Filter.eq('month', m)).first();
 
   var tmax = atPoint(imgMax, 'tmaxC');
   var tmin = atPoint(imgMin, 'tminC');
   var tavg = tmax.add(tmin).divide(2);   // estimated tas
-  var td   = tmax.subtract(tmin);
-  var p    = atPoint(imgPr, 'pr');
+  var td   = tmax.subtract(tmin).max(0); // guard against negative sqrt input
 
   var ra = ee.Number(raMonthlyEE.get(idx)); // MJ m-2 month-1
 
-  // ETo (mm/month) = 0.0013 * 0.408 * Ra * (Tavg+17) * (TD - 0.0123P)^0.76
-  var base = td.subtract(p.multiply(0.0123)).max(0); // guard against negative base
-
-  return ee.Number(0.0013)
+  // ETo (mm/month) = 0.0023 * 0.408 * Ra * (Tavg+17.8) * sqrt(TD)
+  return ee.Number(0.0023)
     .multiply(0.408)
     .multiply(ra)
-    .multiply(tavg.add(17))
-    .multiply(base.pow(0.76));
+    .multiply(tavg.add(17.8))
+    .multiply(td.sqrt());
 });
 
 // Annual PET (mm/year) and monthly mean, at the point
