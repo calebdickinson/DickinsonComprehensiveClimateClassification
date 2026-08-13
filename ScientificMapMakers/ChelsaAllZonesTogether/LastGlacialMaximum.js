@@ -1,12 +1,9 @@
-// === CHELSA UKESM ssp858 (1981–2010)
+// === CHELSA Last Glacial Maximum
 
 // ---------- Assets & constants ----------
 var ASSET_PREFIX = 'projects/ordinal-crowbar-459807-m2/assets/';  // ends with '/'
-var PET_MEAN_ID  = ASSET_PREFIX + 'CHELSA_pet_penman_mean_1981-2010_V2-1'; // u16 mean PET
 
 var NODATA_U16 = 65535;
-var SCALE_PR   = 0.1;  // CHELSA pr_u16: 0.1 → mm/month
-var SCALE_PET  = 0.1;  // Should be 1 for projections and 0.1 in baseline due to unit conversion mistake during preprocessing
 
 // ---------- Months helper ----------
 var months = ee.List.sequence(1, 12);
@@ -64,16 +61,15 @@ var coldestC = monthlyClim
 // Aridity not evaluated due to cold
 var coldCond = hottestC.lt(15).or(coldestC.lt(-20));
 
-// ---------- Monthly precipitation from CHELSA pr_u16 (0.1 → mm/month) ----------
+// ---------- Monthly precipitation ----------
 var prImgs = [];
 for (var n = 1; n <= 12; n++) {
   var nn  = (n < 10 ? '0' + n : '' + n);
-  var pid = ASSET_PREFIX + 'CHELSA_pr_' + nn + '_1981-2010_V2-1_u16';
+  var pid = ASSET_PREFIX + 'CHELSA_TraCE21k_pr_' + nn + '_-200_V1-0';
 
   var rawPr = ee.Image(pid);
   var pr = rawPr
     .updateMask(rawPr.neq(NODATA_U16))
-    .multiply(SCALE_PR)   // → mm/month
     .rename('pr')
     .set('month', n);
 
@@ -81,7 +77,7 @@ for (var n = 1; n <= 12; n++) {
 }
 var prMonthly = ee.ImageCollection(prImgs);
 
-// ---------- PET (mm/month) — Hargreaves, per-pixel ----------
+// ---------- PET (mm/month) — Original Hargreaves-Samani, per-pixel ----------
 var latRad = ee.Image.pixelLonLat().select('latitude').multiply(Math.PI / 180);
 var GSC = 0.0820; // MJ m-2 min-1
 
@@ -104,16 +100,14 @@ for (var pm = 1; pm <= 12; pm++) {
 
   var imgMax = ee.Image(tasmaxImgs[pm - 1]);
   var imgMin = ee.Image(tasminImgs[pm - 1]);
-  var imgPr  = ee.Image(prImgs[pm - 1]);
 
   var tavg = imgMax.add(imgMin).divide(2);
   var td   = imgMax.subtract(imgMin);
-  var base = td.subtract(imgPr.multiply(0.0123)).max(0);
 
-  var petMonth = base.pow(0.76)
-    .multiply(tavg.add(17))
+  var petMonth = td.sqrt()
+    .multiply(tavg.add(17.8))
     .multiply(ra)
-    .multiply(0.0013 * 0.408)
+    .multiply(0.0023 * 0.408)
     .rename('pet_mm_month')
     .set('month', pm);
 
@@ -141,10 +135,10 @@ var southMask = pixelLat.lt(-23.43594);
 // ---------- Base aridity classes ----------
 // Start as Humid(6); special ocean-ish guard at AI<=0.01; then SH/S/Desert
 var aridBase = ee.Image(6)       // 6 = Humid
-  .where(AI.lte(0.01), 8)        // 8 = ("ocean-ish" placeholder; real oceans set later)
-  .where(AI.lt(0.075), 5)        // 5 = Semihumid
-  .where(AI.lt(0.050), 2)        // 2 = Semiarid
-  .where(AI.lt(0.025), 1)        // 1 = Arid Desert
+  .where(AI.lte(0.1), 8)        // 8 = ("ocean-ish" placeholder; real oceans set later)
+  .where(AI.lt(0.75), 5)        // 5 = Semihumid
+  .where(AI.lt(0.50), 2)        // 2 = Semiarid
+  .where(AI.lt(0.25), 1)        // 1 = Arid Desert
   .rename('aridity');
 
 // ---------- HS ratio (Apr–Sep share) ----------
@@ -204,7 +198,7 @@ var clim = aridBase
 // -------------------------------------
 
 clim = clim.where(
-  clim.eq(4).and(AI.lt(0.05)),
+  clim.eq(4).and(AI.lt(0.5)),
   9
 );
 
@@ -217,7 +211,7 @@ clim = clim.where(
 var P_driest = prMonthly.min();
 clim = clim.where(
   clim.eq(3) // Mediterranean only
-    .and(P_driest.gte(PET_ann.divide(240))),
+    .and(P_driest.gte(PET_ann.divide(24))),
   6          // Reclassify as Humid
 );
 
