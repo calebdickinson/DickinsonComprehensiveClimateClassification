@@ -2,7 +2,7 @@
 var ASSET_PREFIX = 'projects/ordinal-crowbar-459807-m2/assets/';  // ends with '/'
 var NODATA_U16   = 65535;
 var SCALE_PR     = 0.1;
-var NORMAL_PERIOD = 'LGM';
+var NORMAL_PERIOD = 'Last Glacial Maximum';
 
 var LAT = 45.5152;
 var LON = -122.6784;
