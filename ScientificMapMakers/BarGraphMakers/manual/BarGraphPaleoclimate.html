@@ -94,7 +94,10 @@
     
     <div class="data-sources">
       <strong>Data sources:</strong>
-      This estimate of Last Glacial Maximum (LGM) climate is derived from the CHELSA-TraCE21k dataset (Karger et al., 2023), a high-resolution (1 km) downscaled transient reconstruction of temperature and precipitation since the LGM.
+  This estimate of <span id="periodLabel"></span> climate is derived from the
+  CHELSA-TraCE21k dataset (Karger et al., 2023), a high-resolution (1 km)
+  downscaled transient reconstruction of temperature and precipitation since
+  the <span id="periodAbbrev"></span>.
       <br><br>
       <strong>Note on Köppen:</strong> Isotherm used to separate temperate (C) and continental (D) climates is 0 °C.
       <br><br>
@@ -104,7 +107,7 @@
 
   <script>
     var locationName =
-    'Houston, Texas, United States';
+    'Timbuktu, Mali';
     
     // ============================
     // EARTH ENGINE OUTPUT
@@ -609,6 +612,23 @@
 
     document.getElementById('title').textContent = data.location;
     document.getElementById('subtitle').innerHTML = data.code;
+    
+    function periodLabel(p) {
+      p = (p || '').replace(/\s+/g, '');
+      if (p === "LastGlacialMaximum(20,000BP)") return "Last Glacial Maximum (LGM)";
+      if (p === "AfricanHumidPeriod(10,000BP)") return "African Humid Period (AHP)";
+      return p; // fallback: show whatever period string was passed
+    }
+
+    function periodAbbrev(p) {
+      p = (p || '').replace(/\s+/g, '');
+      if (p === "LastGlacialMaximum(20,000BP)") return "LGM";
+      if (p === "AfricanHumidPeriod(10,000BP)") return "AHP";
+      return "";
+    }
+
+    document.getElementById('periodLabel').textContent = periodLabel(period);
+    document.getElementById('periodAbbrev').textContent = periodAbbrev(period);
     
     let TEMP_MIN;
     let TEMP_MAX;
