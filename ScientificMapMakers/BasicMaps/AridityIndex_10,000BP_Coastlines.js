@@ -1,4 +1,4 @@
-// === Aridity Index Map (CHELSA TraCE21k, 21 ka BP) — Hargreaves PET ===
+// === Aridity Index Map (CHELSA TraCE21k, 10 ka BP) — Hargreaves PET ===
 
 var PREFIX = 'projects/ordinal-crowbar-459807-m2/assets/'; // ends with '/'
 var NODATA_U16 = 65535;

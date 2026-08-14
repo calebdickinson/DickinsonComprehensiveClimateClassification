@@ -1,4 +1,4 @@
-// === CHELSA Last Glacial Maximum
+// === CHELSA Last Glacial Maximum 20,000 BP
 
 // ---------- Assets & constants ----------
 var ASSET_PREFIX = 'projects/ordinal-crowbar-459807-m2/assets/';  // ends with '/'
