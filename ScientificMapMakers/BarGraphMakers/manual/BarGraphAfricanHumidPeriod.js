@@ -1,10 +1,10 @@
 // ====== CONFIG ======
 var ASSET_PREFIX = 'projects/ordinal-crowbar-459807-m2/assets/';  // ends with '/'
 var NODATA_U16   = 65535;
-var NORMAL_PERIOD = 'Last Glacial Maximum (20,000 BP)';
+var NORMAL_PERIOD = 'African Humid Period (10,000 BP)';
 
-var LAT = 29.7604;
-var LON = -95.3698;
+var LAT = 16.7666;
+var LON = -3.0026;
 
 var pt  = ee.Geometry.Point([LON, LAT]);
 
@@ -21,7 +21,7 @@ for (var m = 1; m <= 12; m++) {
   var mm = (m < 10 ? '0' + m : '' + m);
 
   // tasmax (K*0.1 → °C)
-  var rawMax = ee.Image(ASSET_PREFIX + 'CHELSA_TraCE21k_tasmax_' + mm + '_-200_V1-0');
+  var rawMax = ee.Image(ASSET_PREFIX + 'CHELSA_TraCE21k_tasmax_' + mm + '_-100_V1-0');
   var tmaxC  = rawMax
     .updateMask(rawMax.neq(NODATA_U16))
     .multiply(0.1)
@@ -31,7 +31,7 @@ for (var m = 1; m <= 12; m++) {
   tasmaxImgs.push(tmaxC);
 
   // tasmin (K*0.1 → °C)
-  var rawMin = ee.Image(ASSET_PREFIX + 'CHELSA_TraCE21k_tasmin_' + mm + '_-200_V1-0');
+  var rawMin = ee.Image(ASSET_PREFIX + 'CHELSA_TraCE21k_tasmin_' + mm + '_-100_V1-0');
   var tminC  = rawMin
     .updateMask(rawMin.neq(NODATA_U16))
     .multiply(0.1)
@@ -50,7 +50,7 @@ var tasminMonthly = ee.ImageCollection(tasminImgs);
 var prImgs = [];
 for (var n = 1; n <= 12; n++) {
   var nn = (n < 10 ? '0' + n : '' + n);
-  var rawPr = ee.Image(ASSET_PREFIX + 'CHELSA_TraCE21k_pr_' + nn + '_-200_V1-0');
+  var rawPr = ee.Image(ASSET_PREFIX + 'CHELSA_TraCE21k_pr_' + nn + '_-100_V1-0');
   var pr = rawPr
     .updateMask(rawPr.neq(NODATA_U16))
     .rename('pr')
