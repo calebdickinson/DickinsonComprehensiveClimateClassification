@@ -83,6 +83,17 @@
     border: 1px solid #333;
   }
 
+  /* --- divider row spanning the full legend width --- */
+  .legend-hr {
+    grid-column: 1 / -1;
+    width: 100%;
+    height: 3px;
+    background: #555;
+    border: none;
+    border-radius: 3px;
+    margin: 8px 0;
+  }
+
   /* --- pattern overlays, keyed by the code's first letter --- */
   .pattern-cross {
     /* Z, E: crossed diagonal grid */
@@ -135,10 +146,10 @@ const codeColorMap = {
   // Semihumid
   "Zgz2": "#AAEE66", "Zgz1": "#BBEE55",
   "Agz2": "#AAEE66", "Agz1": "#BBEE55", "Aga2": "#BBFF44", "Aga1": "#88FF00",
-  "BgX": "#AADD99", "Bgz2": "#AAEE66", "Bgz1": "#BB3355", "Bga2": "#BBFF44", "Bga1": "#88FF00", "Bgb2": "#00FF00",
+  "BgX": "#AADD99", "Bgz2": "#AAEE66", "Bgz1": "#BBEE55", "Bga2": "#BBFF44", "Bga1": "#88FF00", "Bgb2": "#00FF00",
   "Cgz2": "#AAEE66", "Cgz1": "#BBEE55", "Cga2": "#BBFF44", "Cga1": "#88FF00", "Cgb2": "#00FF00",
-  "Dgz1": "#BB3355", "Dga2": "#BBFF44", "Dga1": "#88FF00", "Dgb2": "#00FF00",
-  "Egz1": "#BB3355", "Ega2": "#BBFF44", "Ega1": "#88FF00", "Egb2": "#00FF00",
+  "Dgz1": "#BBEE55", "Dga2": "#BBFF44", "Dga1": "#88FF00", "Dgb2": "#00FF00",
+  "Egz1": "#BBEE55", "Ega2": "#BBFF44", "Ega1": "#88FF00", "Egb2": "#00FF00",
 
   // Monsoon
   "ZwX": "#FFBBFF", "Zwz2": "#FF88FF", "Zwz1": "#FF00FF",
@@ -150,8 +161,8 @@ const codeColorMap = {
 
   // Mediterranean
   "Amz2": "#AAAA00", "Amz1": "#CCCC00", "Ama2": "#EEEE00",
-  "BmX": "#880000", "Bmz2": "#AAAA00", "Bmz1": "#CCCC00", "Bma2": "#EEEE00", "Bma1": "#FFFF00", "Bmb2": "#FFFF88",
-  "CmX": "#880000", "Cmz2": "#AAAA00", "Cmz1": "#CCCC00", "Cma2": "#EEEE00", "Cma1": "#FFFF00", "Cmb2": "#FFFF88",
+  "BmX": "#888800", "Bmz2": "#AAAA00", "Bmz1": "#CCCC00", "Bma2": "#EEEE00", "Bma1": "#FFFF00", "Bmb2": "#FFFF88",
+  "CmX": "#888800", "Cmz2": "#AAAA00", "Cmz1": "#CCCC00", "Cma2": "#EEEE00", "Cma1": "#FFFF00", "Cmb2": "#FFFF88",
   "Dmz1": "#CCCC00", "Dma2": "#EEEE00", "Dma1": "#FFFF00", "Dmb2": "#FFFF88",
   "Ema2": "#EEEE00", "Ema1": "#FFFF00", "Emb2": "#FFFF88",
 
@@ -166,7 +177,7 @@ const codeColorMap = {
   // Arid
   "ZdX": "#880000", "Zdz2": "#AA0000", "Zdz1": "#DD0000",
   "AdX": "#880000", "Adz2": "#AA0000", "Adz1": "#DD0000", "Ada2": "#FF0000", "Ada1": "#FF4444",
-  "BdX1": "#880000", "Bdz2": "#AA0000", "Bdz1": "#DD0000", "Bda2": "#FF0000", "Bda1": "#FF4444", "Bdb2": "#FF8888",
+  "BdX": "#880000", "Bdz2": "#AA0000", "Bdz1": "#DD0000", "Bda2": "#FF0000", "Bda1": "#FF4444", "Bdb2": "#FF8888",
   "CdX": "#880000", "Cdz2": "#AA0000", "Cdz1": "#DD0000", "Cda2": "#FF0000", "Cda1": "#FF4444", "Cdb2": "#FF8888",
   "DdX": "#880000", "Ddz2": "#AA0000", "Ddz1": "#DD0000", "Dda2": "#FF0000", "Dda1": "#FF4444", "Ddb2": "#FF8888",
   "Edz2": "#AA0000", "Edz1": "#DD0000", "Eda2": "#FF0000", "Eda1": "#FF4444", "Edb2": "#FF8888",
@@ -184,41 +195,47 @@ const codeColorMap = {
   "Ya1": "#00AAAA", "Yb2": "#008888", "Yb1": "#558888", "YY": "#FFFFFF",
 
   // Semiarid Monsoon
-  "ZvX": "#337700", "Zvz2": "#CC6600", "Zvz1": "#AA5500",
-  "AvX": "#337700", "Avz2": "#CC6600", "Avz1": "#AA5500", "Ava2": "#884400", "Ava1": "#663300",
-  "BvX1": "#337700", "Bvz2": "#CC6600", "Bvz1": "#AA5500", "Bva2": "#884400", "Bva1": "#663300", "Bvb2": "#442200",
+  "ZvX": "#EE7700", "Zvz2": "#CC6600", "Zvz1": "#AA5500",
+  "AvX": "#EE7700", "Avz2": "#CC6600", "Avz1": "#AA5500", "Ava2": "#884400", "Ava1": "#663300",
+  "BvX": "#EE7700", "Bvz2": "#CC6600", "Bvz1": "#AA5500", "Bva2": "#884400", "Bva1": "#663300", "Bvb2": "#442200",
   "Cvz2": "#CC6600", "Cvz1": "#AA5500", "Cva2": "#884400", "Cva1": "#663300", "Cvb2": "#442200",
   "Dvz1": "#AA5500", "Dva2": "#884400", "Dva1": "#663300", "Dvb2": "#442200",
   "Evz1": "#AA5500", "Eva2": "#884400", "Eva1": "#663300", "Evb2": "#442200"
 };
 
 // Column order: Humid, Semihumid, Semiarid, Arid, Mediterranean, Monsoon, Semiarid Monsoon
+// "---" entries render as a thick full-width divider between blocks.
 const overviewData = [
-  "    ", "    ", "ZsX", "ZdX", "    ", "ZwX", "ZvX",
+  "    ", "    ", "ZsX",  "ZdX",  "    ", "ZwX",  "ZvX",
   "Zhz2", "Zgz2", "Zsz2", "Zdz2", "    ", "Zwz2", "Zvz2",
   "Zhz1", "Zgz1", "Zsz1", "Zdz1", "    ", "Zwz1", "Zvz1",
-  "    ", "    ", "    ", "    ", "    ", "    ", "    ",
-  "    ", "    ", "    ", "Adz2", "    ", "Awz2", "Avz2",
-  "    ", "Agz1", "Asz1", "Adz1", "    ", "Awz1", "Avz1",
+  "---",
+  "    ", "    ", "AsX",  "AdX",  "    ", "AwX",  "AvX",
+  "Ahz2", "Agz2", "Asz2", "Adz2", "Amz2", "Awz2", "Avz2",
+  "Ahz1", "Agz1", "Asz1", "Adz1", "Amz1", "Awz1", "Avz1",
   "Aha2", "Aga2", "Asa2", "Ada2", "Ama2", "Awa2", "Ava2",
   "Aha1", "Aga1", "Asa1", "Ada1", "    ", "Awa1", "Ava1",
-  "    ", "    ", "    ", "    ", "    ", "    ", "    ",
-  "    ", "    ", "    ", "BdX", "    ", "    ", "BvX",
-  "    ", "    ", "Bsz2", "Bdz2", "    ", "Bwz2", "Bvz2",
-  "    ", "    ", "Bsz1", "Bdz1", "    ", "Bwz1", "Bvz1",
+  "---",
+  "    ", "BgX",  "BsX",  "BdX",  "BmX",  "BwX",  "BvX",
+  "Bhz2", "Bgz2", "Bsz2", "Bdz2", "Bmz2", "Bwz2", "Bvz2",
+  "Bhz1", "Bgz1", "Bsz1", "Bdz1", "Bmz1", "Bwz1", "Bvz1",
   "Bha2", "Bga2", "Bsa2", "Bda2", "Bma2", "Bwa2", "Bva2",
   "Bha1", "Bga1", "Bsa1", "Bda1", "Bma1", "Bwa1", "Bva1",
   "Bhb2", "Bgb2", "Bsb2", "Bdb2", "Bmb2", "Bwb2", "Bvb2",
   "Bb1", "    ", "    ", "    ", "    ", "    ", "    ",
-  "    ", "    ", "    ", "Cdz2", "    ", "    ", "Cvz2",
-  "Chz1", "Cgz1", "Csz1", "Cdz1", "    ", "    ", "Cvz1",
+  "---",
+  "    ", "    ", "    ", "CdX",  "CmX",  "    ", "    ",
+  "Chz2", "Cgz2", "Csz2", "Cdz2", "Cmz2", "Cwz2", "Cvz2",
+  "Chz1", "Cgz1", "Csz1", "Cdz1", "Cmz1", "Cwz1", "Cvz1",
   "Cha2", "Cga2", "Csa2", "Cda2", "Cma2", "Cwa2", "Cva2",
   "Cha1", "Cga1", "Csa1", "Cda1", "Cma1", "Cwa1", "Cva1",
   "Chb2", "Cgb2", "Csb2", "Cdb2", "Cmb2", "Cwb2", "Cvb2",
   "Cb1", "    ", "    ", "    ", "    ", "    ", "    ",
   "Cc2", "    ", "    ", "    ", "    ", "    ", "    ",
   "Cc1", "    ", "    ", "    ", "    ", "    ", "    ",
-  "    ", "    ", "    ", "Ddz1", "    ", "    ", "Dvz1",
+  "---",
+  "    ", "    ", "Dsz2", "DdX",  "    ", "    ", "    ",
+  "Dhz1", "Dgz1", "Dsz1", "Ddz1", "Dmz1", "Dwz1", "Dvz1",
   "Dha2", "Dga2", "Dsa2", "Dda2", "Dma2", "Dwa2", "Dva2",
   "Dha1", "Dga1", "Dsa1", "Dda1", "Dma1", "Dwa1", "Dva1",
   "Dhb2", "Dgb2", "Dsb2", "Ddb2", "Dmb2", "Dwb2", "Dvb2",
@@ -226,14 +243,17 @@ const overviewData = [
   "Dc2", "    ", "    ", "    ", "    ", "    ", "    ",
   "Dc1", "    ", "    ", "    ", "    ", "    ", "    ",
   "DY" , "    ", "    ", "    ", "    ", "    ", "    ",
-  "    ", "    ", "Esa2", "Eda2", "    ", "Ewa2", "Eva2",
-  "Eha1", "Ega1", "Esa1", "Eda1", "    ", "Ewa1", "Eva1",
+  "---",
+  "    ", "    ", "    ", "Edz2", "    ", "    ", "    ",
+  "Ehz1", "Egz1", "Esz1", "Edz1", "    ", "Ewz1", "Evz1",
+  "Eha2", "Ega2", "Esa2", "Eda2", "Ema2", "Ewa2", "Eva2",
+  "Eha1", "Ega1", "Esa1", "Eda1", "Ema1", "Ewa1", "Eva1",
   "Ehb2", "Egb2", "Esb2", "Edb2", "Emb2", "Ewb2", "Evb2",
   "Eb1", "    ", "    ", "    ", "    ", "    ", "    ",
   "Ec2", "    ", "    ", "    ", "    ", "    ", "    ",
   "Ec1", "    ", "    ", "    ", "    ", "    ", "    ",
   "EY" , "    ", "    ", "    ", "    ", "    ", "    ",
-  "    ", "    ", "    ", "    ", "    ", "    ", "    ",
+  "---",
   "Fz1", "Gz1", "    ", "    ", "    ", "    ", "    ",
   "Fa2", "Ga2", "    ", "    ", "    ", "    ", "    ",
   "Fa1", "Ga1", "Ya1", "    ", "    ", "    ", "    ",
@@ -260,6 +280,15 @@ function patternClassFor(code) {
 
 overviewData.forEach(code => {
   const trimmed = code.trim();
+
+  // Divider row
+  if (trimmed === '---') {
+    const hr = document.createElement('hr');
+    hr.className = 'legend-hr';
+    overviewContainer.appendChild(hr);
+    return;
+  }
+
   if (!trimmed || !(trimmed in codeColorMap)) {
     const placeholder = document.createElement('div');
     placeholder.className = 'legend-item';
