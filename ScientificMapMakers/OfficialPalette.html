@@ -9,6 +9,7 @@
     background: #ddd;
     margin: 0;
     padding: 20px;
+    zoom: 0.8;
   }
   h1 {
     text-align: center;
@@ -61,8 +62,6 @@
     grid-template-columns: repeat(7, auto);
     grid-auto-rows: auto;
     gap: 5px 10px;
-    max-height: calc(100vh - 20px);
-    overflow-y: auto;
     background: white;
     font-family: Arial;
     padding: 10px;
@@ -117,6 +116,7 @@
     background-size: 6px 6px;
   }
 </style>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 </head>
 <body>
 
@@ -315,6 +315,25 @@ overviewData.forEach(code => {
   item.appendChild(label);
   overviewContainer.appendChild(item);
 });
+
+// ---------- AUTO EXPORT ----------
+const AUTO_EXPORT = true;
+
+if (AUTO_EXPORT) {
+  setTimeout(async () => {
+    const el = document.querySelector('.legend');
+
+    const canvas = await html2canvas(el, {
+      scale: 3,
+      backgroundColor: null
+    });
+
+    const link = document.createElement('a');
+    link.download = `climatelegend.png`;
+    link.href = canvas.toDataURL("image/png");
+    link.click();
+  }, 200);
+}
 
 </script>
 </body>
