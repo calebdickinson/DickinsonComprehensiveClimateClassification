@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Climate Classification Legend</title>
+<style>
+  body {
+    font-family: Arial;
+    background: #ddd;
+    margin: 0;
+    padding: 20px;
+  }
+  h1 {
+    text-align: center;
+  }
+  #overview-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  #categories-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  .category-box {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 12px;
+  }
+  .category-box h2 {
+    text-align: center;
+    font-size: 18px;
+    margin: 4px 0 10px;
+  }
+  .cat-grid {
+    display: grid;
+    grid-template-columns: repeat(11, 42px);
+    grid-auto-rows: 42px;
+    gap: 5px;
+  }
+  .cat-cell {
+    width: 42px;
+    height: 42px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: bold;
+  }
+  .cat-cell.blank {
+    visibility: hidden;
+  }
+
+  /* --- original overview legend --- */
+  .legend {
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    grid-auto-rows: auto;
+    gap: 5px 10px;
+    max-height: calc(100vh - 20px);
+    overflow-y: auto;
+    background: white;
+    font-family: Arial;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+  }
+  .legend-item.blank {
+    visibility: hidden;
+  }
+  .color-box {
+    width: 40px;
+    height: 20px;
+    margin-right: 10px;
+    border: 1px solid #333;
+  }
+
+  /* --- divider row spanning the full legend width --- */
+  .legend-hr {
+    grid-column: 1 / -1;
+    width: 100%;
+    height: 3px;
+    background: #555;
+    border: none;
+    border-radius: 3px;
+    margin: 8px 0;
+  }
+
+  /* --- pattern overlays, keyed by the code's first letter --- */
+  .pattern-cross {
+    /* Z, E: crossed diagonal grid */
+    background-image:
+      repeating-linear-gradient(45deg, rgba(0,0,0,0.4) 0px, rgba(0,0,0,0.4) 1px, transparent 1px, transparent 6px),
+      repeating-linear-gradient(-45deg, rgba(0,0,0,0.4) 0px, rgba(0,0,0,0.4) 1px, transparent 1px, transparent 6px);
+  }
+  .pattern-diag1 {
+    /* B, G: diagonal lines, one direction */
+    background-image:
+      repeating-linear-gradient(45deg, rgba(0,0,0,0.4) 0px, rgba(0,0,0,0.4) 1px, transparent 1px, transparent 6px);
+  }
+  .pattern-diag2 {
+    /* C, Y: diagonal lines, opposite direction */
+    background-image:
+      repeating-linear-gradient(-45deg, rgba(0,0,0,0.4) 0px, rgba(0,0,0,0.4) 1px, transparent 1px, transparent 6px);
+  }
+  .pattern-dots {
+    /* D: dotted */
+    background-image: radial-gradient(rgba(0,0,0,0.45) 1px, transparent 1.5px);
+    background-size: 6px 6px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Climate Classification Legend</h1>
+
+<div id="overview-container">
+  <div class="legend" id="overview-legend"></div>
+</div>
+
+<div id="categories-container"></div>
+
+<script>
+/* ============================================================
+   PART 1: Original combined overview legend (H/G/W/M/S/D codes)
+   ============================================================ */
+const overviewContainer = document.getElementById('overview-legend');
+
+const codeColorMap = {
+  // Humid
+  "Zhz2": "#00CC00", "Zhz1": "#00AA00",
+  "Ahz2": "#00CC00", "Ahz1": "#00AA00", "Aha2": "#008800", "Aha1": "#006600",
+  "Bhz2": "#00CC00", "Bhz1": "#00AA00", "Bha2": "#008800", "Bha1": "#006600", "Bhb2": "#004400",
+  "Chz2": "#00CC00", "Chz1": "#00AA00", "Cha2": "#008800", "Cha1": "#006600", "Chb2": "#004400",
+  "Dhz1": "#00AA00", "Dha2": "#008800", "Dha1": "#006600", "Dhb2": "#004400",
+  "Ehz1": "#00AA00", "Eha2": "#008800", "Eha1": "#006600", "Ehb2": "#004400",
+
+  // Semihumid
+  "Zgz2": "#AAEE66", "Zgz1": "#BBEE55",
+  "Agz2": "#AAEE66", "Agz1": "#BBEE55", "Aga2": "#BBFF44", "Aga1": "#88FF00",
+  "BgX": "#AADD99", "Bgz2": "#AAEE66", "Bgz1": "#BBEE55", "Bga2": "#BBFF44", "Bga1": "#88FF00", "Bgb2": "#00FF00",
+  "Cgz2": "#AAEE66", "Cgz1": "#BBEE55", "Cga2": "#BBFF44", "Cga1": "#88FF00", "Cgb2": "#00FF00",
+  "Dgz1": "#BBEE55", "Dga2": "#BBFF44", "Dga1": "#88FF00", "Dgb2": "#00FF00",
+  "Egz1": "#BBEE55", "Ega2": "#BBFF44", "Ega1": "#88FF00", "Egb2": "#00FF00",
+
+  // Monsoon
+  "ZwX": "#FFBBFF", "Zwz2": "#FF88FF", "Zwz1": "#FF00FF",
+  "AwX": "#FFBBFF", "Awz2": "#FF88FF", "Awz1": "#FF00FF", "Awa2": "#DD00DD", "Awa1": "#AA00AA",
+  "BwX": "#FFBBFF", "Bwz2": "#FF88FF", "Bwz1": "#FF00FF", "Bwa2": "#DD00DD", "Bwa1": "#AA00AA", "Bwb2": "#880088",
+  "Cwz2": "#FF88FF", "Cwz1": "#FF00FF", "Cwa2": "#DD00DD", "Cwa1": "#AA00AA", "Cwb2": "#880088",
+  "Dwz1": "#FF00FF", "Dwa2": "#DD00DD", "Dwa1": "#AA00AA", "Dwb2": "#880088",
+  "Ewz1": "#FF00FF", "Ewa2": "#DD00DD", "Ewa1": "#AA00AA", "Ewb2": "#880088",
+
+  // Mediterranean
+  "Amz2": "#AAAA00", "Amz1": "#CCCC00", "Ama2": "#EEEE00",
+  "BmX": "#888800", "Bmz2": "#AAAA00", "Bmz1": "#CCCC00", "Bma2": "#EEEE00", "Bma1": "#FFFF00", "Bmb2": "#FFFF88",
+  "CmX": "#888800", "Cmz2": "#AAAA00", "Cmz1": "#CCCC00", "Cma2": "#EEEE00", "Cma1": "#FFFF00", "Cmb2": "#FFFF88",
+  "Dmz1": "#CCCC00", "Dma2": "#EEEE00", "Dma1": "#FFFF00", "Dmb2": "#FFFF88",
+  "Ema2": "#EEEE00", "Ema1": "#FFFF00", "Emb2": "#FFFF88",
+
+  // Semiarid
+  "ZsX": "#FFDD00", "Zsz2": "#FFCC00", "Zsz1": "#FFB300",
+  "AsX": "#FFDD00", "Asz2": "#FFCC00", "Asz1": "#FFB300", "Asa2": "#FF9900", "Asa1": "#FF7700",
+  "BsX": "#FFDD00", "Bsz2": "#FFCC00", "Bsz1": "#FFB300", "Bsa2": "#FF9900", "Bsa1": "#FF7700", "Bsb2": "#EE6600",
+  "Csz2": "#FFCC00", "Csz1": "#FFB300", "Csa2": "#FF9900", "Csa1": "#FF7700", "Csb2": "#EE6600",
+  "Dsz2": "#FFCC00", "Dsz1": "#FFB300", "Dsa2": "#FF9900", "Dsa1": "#FF7700", "Dsb2": "#EE6600",
+  "Esz1": "#FFB300", "Esa2": "#FF9900", "Esa1": "#FF7700", "Esb2": "#EE6600",
+
+  // Arid
+  "ZdX": "#880000", "Zdz2": "#AA0000", "Zdz1": "#DD0000",
+  "AdX": "#880000", "Adz2": "#AA0000", "Adz1": "#DD0000", "Ada2": "#FF0000", "Ada1": "#FF4444",
+  "BdX": "#880000", "Bdz2": "#AA0000", "Bdz1": "#DD0000", "Bda2": "#FF0000", "Bda1": "#FF4444", "Bdb2": "#FF8888",
+  "CdX": "#880000", "Cdz2": "#AA0000", "Cdz1": "#DD0000", "Cda2": "#FF0000", "Cda1": "#FF4444", "Cdb2": "#FF8888",
+  "DdX": "#880000", "Ddz2": "#AA0000", "Ddz1": "#DD0000", "Dda2": "#FF0000", "Dda1": "#FF4444", "Ddb2": "#FF8888",
+  "Edz2": "#AA0000", "Edz1": "#DD0000", "Eda2": "#FF0000", "Eda1": "#FF4444", "Edb2": "#FF8888",
+
+  // Subpolar oceanic / highland
+  "Bb1": "#558888",
+  "Cb1": "#558888", "Cc2": "#888888", "Cc1": "#BBBBBB",
+  "Db1": "#558888", "Dc2": "#888888", "Dc1": "#BBBBBB", "DY": "#FFFFFF",
+  "Eb1": "#558888", "Ec2": "#888888", "Ec1": "#BBBBBB", "EY": "#FFFFFF",
+  "Fa1": "#558888",
+
+  // Polar / highland
+  "Fz1": "#00FFFF", "Fa2": "#00DDDD", "Fa1": "#00AAAA", "Fb2": "#008888", "Fb1": "#558888", "Fc2": "#888888", "Fc1": "#BBBBBB", "FY": "#FFFFFF",
+  "Gz1": "#00FFFF", "Ga2": "#00DDDD", "Ga1": "#00AAAA", "Gb2": "#008888", "Gb1": "#558888", "Gc2": "#888888", "Gc1": "#BBBBBB", "GY": "#FFFFFF",
+  "Ya1": "#00AAAA", "Yb2": "#008888", "Yb1": "#558888", "YY": "#FFFFFF",
+
+  // Semiarid Monsoon
+  "ZvX": "#EE7700", "Zvz2": "#CC6600", "Zvz1": "#AA5500",
+  "AvX": "#EE7700", "Avz2": "#CC6600", "Avz1": "#AA5500", "Ava2": "#884400", "Ava1": "#663300",
+  "BvX": "#EE7700", "Bvz2": "#CC6600", "Bvz1": "#AA5500", "Bva2": "#884400", "Bva1": "#663300", "Bvb2": "#442200",
+  "Cvz2": "#CC6600", "Cvz1": "#AA5500", "Cva2": "#884400", "Cva1": "#663300", "Cvb2": "#442200",
+  "Dvz1": "#AA5500", "Dva2": "#884400", "Dva1": "#663300", "Dvb2": "#442200",
+  "Evz1": "#AA5500", "Eva2": "#884400", "Eva1": "#663300", "Evb2": "#442200"
+};
+
+// Column order: Humid, Semihumid, Semiarid, Arid, Mediterranean, Monsoon, Semiarid Monsoon
+// "---" entries render as a thick full-width divider between blocks.
+const overviewData = [
+  "    ", "    ", "ZsX",  "ZdX",  "    ", "ZwX",  "ZvX",
+  "Zhz2", "Zgz2", "Zsz2", "Zdz2", "    ", "Zwz2", "Zvz2",
+  "Zhz1", "Zgz1", "Zsz1", "Zdz1", "    ", "Zwz1", "Zvz1",
+  "---",
+  "    ", "    ", "AsX",  "AdX",  "    ", "AwX",  "AvX",
+  "Ahz2", "Agz2", "Asz2", "Adz2", "Amz2", "Awz2", "Avz2",
+  "Ahz1", "Agz1", "Asz1", "Adz1", "Amz1", "Awz1", "Avz1",
+  "Aha2", "Aga2", "Asa2", "Ada2", "Ama2", "Awa2", "Ava2",
+  "Aha1", "Aga1", "Asa1", "Ada1", "    ", "Awa1", "Ava1",
+  "---",
+  "    ", "BgX",  "BsX",  "BdX",  "BmX",  "BwX",  "BvX",
+  "Bhz2", "Bgz2", "Bsz2", "Bdz2", "Bmz2", "Bwz2", "Bvz2",
+  "Bhz1", "Bgz1", "Bsz1", "Bdz1", "Bmz1", "Bwz1", "Bvz1",
+  "Bha2", "Bga2", "Bsa2", "Bda2", "Bma2", "Bwa2", "Bva2",
+  "Bha1", "Bga1", "Bsa1", "Bda1", "Bma1", "Bwa1", "Bva1",
+  "Bhb2", "Bgb2", "Bsb2", "Bdb2", "Bmb2", "Bwb2", "Bvb2",
+  "---",
+  "    ", "    ", "    ", "CdX",  "CmX",  "    ", "    ",
+  "Chz2", "Cgz2", "Csz2", "Cdz2", "Cmz2", "Cwz2", "Cvz2",
+  "Chz1", "Cgz1", "Csz1", "Cdz1", "Cmz1", "Cwz1", "Cvz1",
+  "Cha2", "Cga2", "Csa2", "Cda2", "Cma2", "Cwa2", "Cva2",
+  "Cha1", "Cga1", "Csa1", "Cda1", "Cma1", "Cwa1", "Cva1",
+  "Chb2", "Cgb2", "Csb2", "Cdb2", "Cmb2", "Cwb2", "Cvb2",
+  "---",
+  "    ", "    ", "Dsz2", "DdX",  "    ", "    ", "    ",
+  "Dhz1", "Dgz1", "Dsz1", "Ddz1", "Dmz1", "Dwz1", "Dvz1",
+  "Dha2", "Dga2", "Dsa2", "Dda2", "Dma2", "Dwa2", "Dva2",
+  "Dha1", "Dga1", "Dsa1", "Dda1", "Dma1", "Dwa1", "Dva1",
+  "Dhb2", "Dgb2", "Dsb2", "Ddb2", "Dmb2", "Dwb2", "Dvb2",
+  "---",
+  "    ", "    ", "    ", "Edz2", "    ", "    ", "    ",
+  "Ehz1", "Egz1", "Esz1", "Edz1", "    ", "Ewz1", "Evz1",
+  "Eha2", "Ega2", "Esa2", "Eda2", "Ema2", "Ewa2", "Eva2",
+  "Eha1", "Ega1", "Esa1", "Eda1", "Ema1", "Ewa1", "Eva1",
+  "Ehb2", "Egb2", "Esb2", "Edb2", "Emb2", "Ewb2", "Evb2",
+  "---",
+  "   ", "   ", "   ", "   ", "Fz1", "Gz1", "   ",
+  "   ", "   ", "   ", "   ", "Fa2", "Ga2", "   ",
+  "   ", "   ", "   ", "   ", "Fa1", "Ga1", "Ya1",
+  "   ", "   ", "   ", "   ", "Fb2", "Gb2", "Yb2",
+  "Bb1", "Cb1", "Db1", "Eb1", "Fb1", "Gb1", "Yb1",
+  "   ", "Cc2", "Dc2", "Ec2", "Fc2", "Gc2", "   ", 
+  "   ", "Cc1", "Dc1", "Ec1", "Fc1", "Gc1", "   ", 
+  "   ", "   ", "DY",  "EY",  "FY" , "GY" , "YY" ,
+];
+
+// First-letter -> pattern class
+function patternClassFor(code) {
+  switch (code.charAt(0)) {
+    case 'Z': return 'pattern-cross';
+    case 'B': return 'pattern-diag1';
+    case 'C': return 'pattern-diag2';
+    case 'D': return 'pattern-dots';
+    case 'E': return 'pattern-cross';
+    case 'G': return 'pattern-diag1';
+    case 'Y': return 'pattern-diag2';
+    default: return null;
+  }
+}
+
+overviewData.forEach(code => {
+  const trimmed = code.trim();
+
+  // Divider row
+  if (trimmed === '---') {
+    const hr = document.createElement('hr');
+    hr.className = 'legend-hr';
+    overviewContainer.appendChild(hr);
+    return;
+  }
+
+  if (!trimmed || !(trimmed in codeColorMap)) {
+    const placeholder = document.createElement('div');
+    placeholder.className = 'legend-item';
+    const box = document.createElement('div');
+    box.className = 'color-box';
+    box.style.visibility = 'hidden';
+    placeholder.appendChild(box);
+    overviewContainer.appendChild(placeholder);
+    return;
+  }
+  const hexColor = codeColorMap[trimmed];
+  const item = document.createElement('div');
+  item.className = 'legend-item';
+  const box = document.createElement('div');
+  box.className = 'color-box';
+  box.style.backgroundColor = hexColor;
+  const patternClass = patternClassFor(trimmed);
+  if (patternClass) {
+    box.classList.add(patternClass);
+  }
+  const label = document.createElement('span');
+  label.textContent = trimmed;
+  item.appendChild(box);
+  item.appendChild(label);
+  overviewContainer.appendChild(item);
+});
+
+</script>
+</body>
+</html>
