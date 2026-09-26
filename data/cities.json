@@ -35,7 +35,9 @@
       "Albany, Australia",
       "Cape Town, South Africa",
       "Concepción, Chile",
-      "Valdivia, Chile"
+      "Temuco, Chile",
+      "Valdivia, Chile",
+      "Valparaíso, Chile"
     ]
   },
   "Bma2": {
@@ -1891,6 +1893,7 @@
       "Puerto Montt, Chile",
       "Queenstown, New Zealand",
       "Rennes, France",
+      "Temuco, Chile",
       "Valdivia, Chile",
       "Vancouver, British Columbia, Canada",
       "Zürich, Switzerland"
@@ -2980,9 +2983,12 @@
       "Tillamook, Oregon, USA"
     ],
     "2": [
+      "Temuco, Chile",
       "Tillamook, Oregon, USA"
     ],
-    "3": [],
+    "3": [
+      "Temuco, Chile"
+    ],
     "4": [
       "Ugolnye Kopi, Russia"
     ]
@@ -2992,17 +2998,20 @@
       "Albany, Australia",
       "Cape Town, South Africa",
       "Lompoc, California, United States",
-      "Monterey, California, United States"
+      "Monterey, California, United States",
+      "Valparaíso, Chile"
     ],
     "2": [
       "Albany, Australia",
       "Concepción, Chile",
       "Lompoc, California, United States",
       "Monterey, California, United States",
-      "San Francisco, California, United States"
+      "San Francisco, California, United States",
+      "Valparaíso, Chile"
     ],
     "3": [
-      "Valdivia, Chile"
+      "Valdivia, Chile",
+      "Valparaíso, Chile"
     ],
     "4": []
   },
