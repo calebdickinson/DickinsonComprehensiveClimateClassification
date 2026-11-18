@@ -31,6 +31,9 @@
 
 \newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
 
+\newcommand{\cold}{\mathrm{cold}}
+\newcommand{\hot}{\mathrm{hot}}
+
 % =========================
 % Document
 % =========================
@@ -70,11 +73,11 @@ degradation and desertification. In contrast, the Dickinson classification is fo
 as an evenly spaced thermodynamic partition of climate state space.
 
 Let $\mathcal{C}_{\mathrm{life}}$ denote the subset of climate state space thermodynamically compatible with the persistence of life.
-Let $T_{\min}^{\mathrm{life,low}}$ and
-$T_{\min}^{\mathrm{life,high}}$ denote the lower and upper bounds,
+Let $T_{\cold}^{\mathrm{life,low}}$ and
+$T_{\cold}^{\mathrm{life,high}}$ denote the lower and upper bounds,
 respectively, of climatological coldest-month mean temperature compatible
-with life, and let $T_{\max}^{\mathrm{life,low}}$ and
-$T_{\max}^{\mathrm{life,high}}$ denote the corresponding bounds for
+with life, and let $T_{\hot}^{\mathrm{life,low}}$ and
+$T_{\hot}^{\mathrm{life,high}}$ denote the corresponding bounds for
 climatological warmest-month mean temperature.
 
 The Dickinson classification is defined only for climates satisfying
@@ -191,27 +194,27 @@ following cold-month thermal zones:
 \[
 \begin{array}{ll}
 \text{Hypercaneal (H)}        &
-50^\circ\mathrm{C} \le T_{\min,\mathrm{mean}}
-\le T_{\min}^{\mathrm{life,high}} \\
-\text{Uninhabitable (X)}      & 40 \le T_{\min,\mathrm{mean}} < 50^\circ\mathrm{C} \\
-\text{Hyperequatorial (Z)}    & 30 \le T_{\min,\mathrm{mean}} < 40^\circ\mathrm{C} \\
-\text{Equatorial (A)}         & 20 \le T_{\min,\mathrm{mean}} < 30^\circ\mathrm{C} \\
-\text{Tropical (B)}           & 10 \le T_{\min,\mathrm{mean}} < 20^\circ\mathrm{C} \\
-\text{Subtropical (C)}        & 0 \le T_{\min,\mathrm{mean}} < 10^\circ\mathrm{C} \\
-\text{Temperate (D)}          & -10 \le T_{\min,\mathrm{mean}} < 0^\circ\mathrm{C} \\
-\text{Continental (E)}        & -20 \le T_{\min,\mathrm{mean}} < -10^\circ\mathrm{C} \\
-\text{Subarctic (F)}          & -30 \le T_{\min,\mathrm{mean}} < -20^\circ\mathrm{C} \\
-\text{Arctic (G)}             & -40 \le T_{\min,\mathrm{mean}} < -30^\circ\mathrm{C} \\
+50^\circ\mathrm{C} \le T_{\cold}
+\le T_{\cold}^{\mathrm{life,high}} \\
+\text{Uninhabitable (X)}      & 40 \le T_{\cold} < 50^\circ\mathrm{C} \\
+\text{Hyperequatorial (Z)}    & 30 \le T_{\cold} < 40^\circ\mathrm{C} \\
+\text{Equatorial (A)}         & 20 \le T_{\cold} < 30^\circ\mathrm{C} \\
+\text{Tropical (B)}           & 10 \le T_{\cold} < 20^\circ\mathrm{C} \\
+\text{Subtropical (C)}        & 0 \le T_{\cold} < 10^\circ\mathrm{C} \\
+\text{Temperate (D)}          & -10 \le T_{\cold} < 0^\circ\mathrm{C} \\
+\text{Continental (E)}        & -20 \le T_{\cold} < -10^\circ\mathrm{C} \\
+\text{Subarctic (F)}          & -30 \le T_{\cold} < -20^\circ\mathrm{C} \\
+\text{Arctic (G)}             & -40 \le T_{\cold} < -30^\circ\mathrm{C} \\
 \text{Superarctic (Y)}        &
-T_{\min}^{\mathrm{life,low}}
-\le T_{\min,\mathrm{mean}} < -40^\circ\mathrm{C}
+\le T_{\cold}^{\mathrm{life,high}}
+\le T_{\cold} < -40^\circ\mathrm{C}
 \end{array}
 \]
 
 \paragraph{Note on the term ``Uninhabitable''.}
 \emph{Uninhabitable} denotes climates for which the coldest-month
 climatological mean temperature satisfies
-$40^\circ\mathrm{C} \le T_{\min,\mathrm{mean}} < 50^\circ\mathrm{C}$, implying
+$40^\circ\mathrm{C} \le T_{\cold} < 50^\circ\mathrm{C}$, implying
 that all monthly means exceed the core body temperature of humans and other
 large mammals. The term is thermodynamic in scope and does not preclude
 habitation by organisms with substantially different size, physiology, or
@@ -250,10 +253,10 @@ CHELSA BIOCLIM+ v2.1 1981--2010 temperature fields (Karger et al., 2017; Brun et
 In addition to cold-season thermal constraints, the Dickinson
 classification characterizes the intensity of the warm season using the
 climatological warmest-month mean near-surface air temperature
-($T_{\max,\mathrm{mean}}$). This metric provides a measure of summer
+($T_{\hot}$). This metric provides a measure of summer
 thermal conditions.
 
-Warm-month thermal zones are assigned based on $T_{\max,\mathrm{mean}}$ and
+Warm-month thermal zones are assigned based on $T_{\cold}$ and
 are intended to distinguish climates with similar winter conditions but
 substantially different summer heat regimes. The resulting categories span
 the full range of plausible summer thermal environments, from persistently
@@ -265,20 +268,20 @@ of the following warm-month thermal zones:
 \[
 \begin{array}{ll}
 \text{Hypercaneal Summer (H)} &
-50^\circ\mathrm{C} \le T_{\max,\mathrm{mean}}
-\le T_{\max}^{\mathrm{life,high}} \\
-\text{Hyperthermal Summer (X)}     & 40 \le T_{\max,\mathrm{mean}} < 50^\circ\mathrm{C} \\
-\text{Scorching Summer (z2)}       & 35 \le T_{\max,\mathrm{mean}} < 40^\circ\mathrm{C} \\
-\text{Very Hot Summer (z1)}        & 30 \le T_{\max,\mathrm{mean}} < 35^\circ\mathrm{C} \\
-\text{Hot Summer (a2)}             & 25 \le T_{\max,\mathrm{mean}} < 30^\circ\mathrm{C} \\
-\text{Warm Summer (a1)}            & 20 \le T_{\max,\mathrm{mean}} < 25^\circ\mathrm{C} \\
-\text{Cool Summer (b2)}            & 15 \le T_{\max,\mathrm{mean}} < 20^\circ\mathrm{C} \\
-\text{Cold Summer (b1)}            & 10 \le T_{\max,\mathrm{mean}} < 15^\circ\mathrm{C} \\
-\text{Very Cold Summer (c2)}       & 5 \le T_{\max,\mathrm{mean}} < 10^\circ\mathrm{C} \\
-\text{Freezing Summer (c1)}        & 0 \le T_{\max,\mathrm{mean}} < 5^\circ\mathrm{C} \\
+50^\circ\mathrm{C} \le T_{\hot}
+\le T_{\hot}^{\mathrm{life,high}} \\
+\text{Hyperthermal Summer (X)}     & 40 \le T_{\hot} < 50^\circ\mathrm{C} \\
+\text{Scorching Summer (z2)}       & 35 \le T_{\hot} < 40^\circ\mathrm{C} \\
+\text{Very Hot Summer (z1)}        & 30 \le T_{\hot} < 35^\circ\mathrm{C} \\
+\text{Hot Summer (a2)}             & 25 \le T_{\hot} < 30^\circ\mathrm{C} \\
+\text{Warm Summer (a1)}            & 20 \le T_{\hot} < 25^\circ\mathrm{C} \\
+\text{Cool Summer (b2)}            & 15 \le T_{\hot} < 20^\circ\mathrm{C} \\
+\text{Cold Summer (b1)}            & 10 \le T_{\hot} < 15^\circ\mathrm{C} \\
+\text{Very Cold Summer (c2)}       & 5 \le T_{\hot} < 10^\circ\mathrm{C} \\
+\text{Freezing Summer (c1)}        & 0 \le T_{\hot} < 5^\circ\mathrm{C} \\
 \text{Frigid Summer (Y)} &
-T_{\max}^{\mathrm{life,low}}
-\le T_{\max,\mathrm{mean}} < 0^\circ\mathrm{C}
+T_{\hot}^{\mathrm{life,low}}
+\le T_{\hot} < 0^\circ\mathrm{C}
 \end{array}
 \]
 
@@ -314,9 +317,9 @@ Moisture regime classification in the Dickinson system is applied only to
 climates in which aridity meaningfully structures surface–atmosphere
 interactions. Specifically, aridity diagnostics are evaluated only at
 locations where the warmest-month mean temperature
-($T_{\max,\mathrm{mean}}$) is at least $15^\circ\mathrm{C}$ and the
-coldest-month mean temperature ($T_{\min,\mathrm{mean}}$) is at
-least $-30^\circ\mathrm{C}$. Together, these constraints define a conservative thermal envelope within which aridity diagnostics exert first-order influence on climate differentiation. Outside this envelope, climates are classified exclusively on thermal grounds.
+($T_{\hot}$) is at least $15^\circ\mathrm{C}$ and the
+coldest-month mean temperature ($T_{\cold}$) is at
+least $-20^\circ\mathrm{C}$. Together, these constraints define a conservative thermal envelope within which aridity diagnostics exert first-order influence on climate differentiation. Outside this envelope, climates are classified exclusively on thermal grounds.
 Consequently, polar, subarctic, alpine, and other climates, such as cold-summer oceanic regimes analogous to
 K\"oppen's subpolar oceanic climates, receive no aridity
 classification within the Dickinson framework.
@@ -443,8 +446,8 @@ minimum monthly precipitation of at least 50\% of mean monthly PET.
 % =====================================================
 
 \node[decision] (relevance)
-{$T_{\max,\mathrm{mean}} \ge 15\,^\circ\mathrm{C}$\\
-$\text{and } T_{\min,\mathrm{mean}} \ge -30\,^\circ\mathrm{C}$?}
+{$T_{\hot} \ge 15\,^\circ\mathrm{C}$\\
+$\text{and } T_{\cold} \ge -20\,^\circ\mathrm{C}$?}
 
 \node[outcome, left=of relevance] (polar)
 {aridity not evaluated};
